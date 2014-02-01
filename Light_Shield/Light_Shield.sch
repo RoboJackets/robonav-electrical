@@ -7036,6 +7036,7 @@ Source: www.kingbright.com</description>
 <part name="LED3" library="led" deviceset="LED" device="SML0603" value="POWER_ON"/>
 <part name="LED4" library="led" deviceset="LED" device="SML0603" value="ARDUINO_ON"/>
 <part name="S1" library="SparkFun-Electromechanical" deviceset="SWITCH-MOMENTARY-2" device="PTH" value="RESET"/>
+<part name="GND4" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -7095,6 +7096,7 @@ Source: www.kingbright.com</description>
 <instance part="LED3" gate="G$1" x="287.02" y="322.58"/>
 <instance part="LED4" gate="G$1" x="353.06" y="312.42"/>
 <instance part="S1" gate="G$1" x="368.3" y="304.8" rot="R90"/>
+<instance part="GND4" gate="1" x="393.7" y="347.98"/>
 </instances>
 <busses>
 </busses>
@@ -7212,6 +7214,18 @@ Source: www.kingbright.com</description>
 <wire x1="182.88" y1="162.56" x2="182.88" y2="152.4" width="0.1524" layer="91"/>
 <label x="182.88" y="154.94" size="1.778" layer="95"/>
 <pinref part="T6" gate="G$1" pin="E"/>
+</segment>
+<segment>
+<pinref part="JP3" gate="G$1" pin="2"/>
+<wire x1="386.08" y1="365.76" x2="386.08" y2="350.52" width="0.1524" layer="91"/>
+<pinref part="GND4" gate="1" pin="GND"/>
+<wire x1="386.08" y1="350.52" x2="393.7" y2="350.52" width="0.1524" layer="91"/>
+<pinref part="JP4" gate="G$1" pin="2"/>
+<wire x1="401.32" y1="365.76" x2="401.32" y2="350.52" width="0.1524" layer="91"/>
+<wire x1="393.7" y1="350.52" x2="401.32" y2="350.52" width="0.1524" layer="91"/>
+<junction x="386.08" y="350.52"/>
+<junction x="393.7" y="350.52"/>
+<junction x="401.32" y="350.52"/>
 </segment>
 </net>
 <net name="5V" class="0">

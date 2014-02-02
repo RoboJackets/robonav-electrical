@@ -11,12 +11,12 @@
     (layer "1#Top"  (type signal))
     (layer "16#Bottom"  (type signal))
     (boundary 
-      (rect pcb  0.000000 0.000000 3.937008 3.049606)
+      (rect pcb  -0.050000 0.550000 2.250000 3.100000)
     )
-    (boundary (path signal 0 0.000000 0.000000 3.937008 0.000000))
-    (boundary (path signal 0 3.937008 0.000000 3.937008 3.049606))
-    (boundary (path signal 0 3.937008 3.049606 0.000000 3.049606))
-    (boundary (path signal 0 0.000000 3.049606 0.000000 0.000000))
+    (boundary (path signal 0 -0.050000 3.100000 2.250000 3.100000))
+    (boundary (path signal 0 2.250000 3.100000 2.250000 0.550000))
+    (boundary (path signal 0 2.250000 0.550000 -0.050000 0.550000))
+    (boundary (path signal 0 -0.050000 0.550000 -0.050000 3.100000))
     (via
        "Round1$0.024000"
     )
@@ -28,180 +28,154 @@
   (placement
     (place_control (flip_style rotate_first))
     (component "0402-CAP$SparkFun-Capacitors" 
-      (place "C1" 1.025000 2.550000 Front 0.000000)
+      (place "C1" 1.725000 2.625000 Front 180.000000)
     )
     (component "SOD123FL$diode" 
-      (place "D1" 0.500000 2.225000 Front 270.000000)
+      (place "D1" 1.350000 2.375000 Front 0.000000)
     )
     (component "SOD123FL$diode" 
-      (place "D3" 0.850000 2.400000 Front 180.000000)
+      (place "D3" 1.350000 2.575000 Front 0.000000)
     )
     (component "CREATIVE_COMMONS$SparkFun-Aesthetics" 
       (place "FRAME1" -3.100000 3.550000 Front 0.000000)
     )
     (component "MOLEX-1X2$SparkFun-Connectors" 
-      (place "JP1" 1.375000 2.850000 Front 0.000000)
+      (place "JP1" 0.875000 2.850000 Front 0.000000)
     )
     (component "MOLEX-1X2$SparkFun-Connectors" 
-      (place "JP2" 1.600000 2.850000 Front 0.000000)
+      (place "JP2" 1.100000 2.850000 Front 0.000000)
     )
     (component "MOLEX-1X2$SparkFun-Connectors" 
-      (place "JP3" 1.150000 2.850000 Front 0.000000)
+      (place "JP3" 1.550000 2.850000 Front 0.000000)
     )
     (component "MOLEX-1X2$SparkFun-Connectors" 
-      (place "JP4" 0.925000 2.850000 Front 0.000000)
+      (place "JP4" 1.325000 2.850000 Front 0.000000)
+    )
+    (component "1X12_LOCK_LONGPADS$SparkFun-Connectors" 
+      (place "JP5" 1.700000 0.750000 Front 180.000000)
     )
     (component "SML0603$led" 
-      (place "LED1" 0.700000 2.625000 Front 0.000000)
+      (place "LED1" 1.600000 2.575000 Front 180.000000)
     )
     (component "SML0603$led" 
-      (place "LED2" 0.800000 2.625000 Front 0.000000)
+      (place "LED2" 1.650000 2.475000 Front 180.000000)
     )
     (component "SML0603$led" 
-      (place "LED3" 0.800000 2.750000 Front 0.000000)
+      (place "LED3" 1.475000 2.675000 Front 0.000000)
     )
     (component "SML0603$led" 
-      (place "LED4" 0.800000 2.850000 Front 0.000000)
+      (place "LED4" 1.975000 1.475000 Front 0.000000)
     )
     (component "SOT23$transistor-npn" 
-      (place "Q1" 0.475000 1.575000 Front 0.000000)
+      (place "Q1" 0.825000 1.775000 Front 0.000000)
     )
     (component "SOT23$transistor-npn" 
-      (place "Q2" 0.725000 2.250000 Front 90.000000)
+      (place "Q2" 1.525000 2.425000 Front 0.000000)
     )
     (component "0402-RES$SparkFun-Passives" 
-      (place "R1" 1.325000 2.625000 Front 270.000000)
+      (place "R1" 1.725000 2.575000 Front 180.000000)
     )
     (component "0603-RES$SparkFun-Resistors" 
-      (place "R2" 0.675000 2.850000 Front 0.000000)
+      (place "R2" 1.850000 1.450000 Front 90.000000)
     )
     (component "0603-RES$SparkFun-Resistors" 
-      (place "R3" 0.625000 2.725000 Front 90.000000)
+      (place "R3" 1.325000 2.675000 Front 0.000000)
     )
     (component "0603-RES$SparkFun-Resistors" 
-      (place "R4" 1.225000 2.625000 Front 90.000000)
+      (place "R4" 1.575000 2.675000 Front 180.000000)
     )
     (component "0603-RES$SparkFun-Resistors" 
-      (place "R5" 0.750000 2.525000 Front 0.000000)
+      (place "R5" 1.500000 2.575000 Front 180.000000)
     )
     (component "0603-RES$SparkFun-Resistors" 
-      (place "R6" 0.925000 2.250000 Front 270.000000)
+      (place "R6" 1.475000 2.275000 Front 90.000000)
     )
     (component "0603-RES$SparkFun-Resistors" 
-      (place "R7" 0.600000 2.525000 Front 0.000000)
+      (place "R7" 1.775000 2.475000 Front 180.000000)
     )
     (component "0603-RES$SparkFun-Resistors" 
-      (place "R8" 0.925000 2.675000 Front 180.000000)
+      (place "R8" 1.325000 2.475000 Front 180.000000)
     )
     (component "0603-RES$SparkFun-Resistors" 
-      (place "R9" 1.075000 2.675000 Front 0.000000)
+      (place "R9" 1.850000 1.625000 Front 90.000000)
     )
     (component "0603-RES$SparkFun-Resistors" 
-      (place "R10" 0.300000 1.650000 Front 180.000000)
+      (place "R10" 0.375000 1.650000 Front 180.000000)
     )
     (component "0603-RES$SparkFun-Resistors" 
-      (place "R11" 0.500000 1.750000 Front 90.000000)
+      (place "R11" 1.150000 2.600000 Front 0.000000)
     )
     (component "0603-RES$SparkFun-Resistors" 
-      (place "R12" 0.300000 2.275000 Front 180.000000)
+      (place "R12" 0.375000 2.275000 Front 180.000000)
     )
     (component "0603-RES$SparkFun-Resistors" 
-      (place "R13" 0.300000 2.175000 Front 0.000000)
+      (place "R13" 0.375000 2.175000 Front 0.000000)
     )
     (component "0603-RES$SparkFun-Resistors" 
-      (place "R14" 0.300000 2.075000 Front 0.000000)
+      (place "R14" 0.375000 2.075000 Front 0.000000)
     )
     (component "0603-RES$SparkFun-Resistors" 
-      (place "R15" 0.300000 1.750000 Front 180.000000)
+      (place "R15" 0.375000 1.750000 Front 0.000000)
     )
     (component "0603-RES$SparkFun-Resistors" 
-      (place "R16" 0.300000 1.850000 Front 180.000000)
+      (place "R16" 0.375000 1.850000 Front 0.000000)
     )
     (component "0603-RES$SparkFun-Resistors" 
-      (place "R17" 0.300000 1.950000 Front 0.000000)
+      (place "R17" 0.375000 1.950000 Front 0.000000)
     )
     (component "0603-RES$SparkFun-Resistors" 
-      (place "R18" 0.300000 2.575000 Front 180.000000)
+      (place "R18" 0.375000 2.575000 Front 180.000000)
     )
     (component "0603-RES$SparkFun-Resistors" 
-      (place "R19" 0.300000 2.375000 Front 180.000000)
+      (place "R19" 0.375000 2.375000 Front 180.000000)
     )
     (component "0603-RES$SparkFun-Resistors" 
-      (place "R20" 0.300000 2.475000 Front 180.000000)
+      (place "R20" 0.375000 2.475000 Front 180.000000)
     )
     (component "0603-RES$SparkFun-Resistors" 
-      (place "R21" 0.450000 2.575000 Front 0.000000)
+      (place "R21" 1.150000 2.475000 Front 0.000000)
     )
     (component "0603-RES$SparkFun-Resistors" 
-      (place "R22" 0.450000 2.375000 Front 0.000000)
+      (place "R22" 1.150000 2.275000 Front 0.000000)
     )
     (component "0603-RES$SparkFun-Resistors" 
-      (place "R23" 0.450000 2.475000 Front 0.000000)
+      (place "R23" 1.150000 2.375000 Front 0.000000)
     )
     (component "TACTILE-PTH$SparkFun-Electromechanical" 
-      (place "S1" 0.400000 2.750000 Front 180.000000)
+      (place "S1" 1.950000 1.150000 Front 270.000000)
     )
     (component "TO220V$transistor" 
-      (place "T1" 1.475000 1.475000 Front 180.000000)
+      (place "T1" 0.975000 2.375000 Front 270.000000)
     )
     (component "TO220V$transistor" 
-      (place "T2" 1.475000 1.900000 Front 180.000000)
+      (place "T2" 1.175000 2.100000 Front 0.000000)
     )
     (component "TO220V$transistor" 
-      (place "T3" 1.475000 1.700000 Front 180.000000)
+      (place "T3" 1.700000 2.025000 Front 270.000000)
     )
     (component "TO220V$transistor" 
-      (place "T4" 0.550000 1.225000 Front 90.000000)
+      (place "T4" 0.775000 1.300000 Front 270.000000)
     )
     (component "TO220V$transistor" 
-      (place "T5" 0.750000 1.225000 Front 90.000000)
+      (place "T5" 1.025000 1.325000 Front 0.000000)
     )
     (component "TO220V$transistor" 
-      (place "T6" 0.350000 1.225000 Front 90.000000)
+      (place "T6" 0.550000 1.300000 Front 270.000000)
     )
     (component "TO220V$transistor" 
-      (place "T15" 1.225000 1.225000 Front 90.000000)
+      (place "T15" 1.475000 1.325000 Front 0.000000)
     )
     (component "TO220V$transistor" 
-      (place "T16" 1.475000 1.225000 Front 90.000000)
+      (place "T16" 1.475000 1.625000 Front 0.000000)
     )
     (component "TO220V$transistor" 
-      (place "T17" 1.000000 1.225000 Front 90.000000)
-    )
-    (component "IGVC12PINPKG$IGVC12PinCon" 
-      (place "U$3" 1.050000 0.950000 Front 180.000000)
+      (place "T17" 1.025000 1.625000 Front 0.000000)
     )
     (component "DUEMILANOVE_SHIELD$SparkFun-Boards" 
       (place "U1" 0.050000 0.650000 Front 0.000000)
     )
   )
   (library
-    (image "IGVC12PINPKG$IGVC12PinCon"
-      (keepout (circ signal 0.054000 -0.150000 0.000000))
-      (keepout (circ signal 0.054000 -0.050000 0.000000))
-      (keepout (circ signal 0.054000 0.050000 0.000000))
-      (keepout (circ signal 0.054000 0.150000 0.000000))
-      (keepout (circ signal 0.054000 0.250000 0.000000))
-      (keepout (circ signal 0.054000 0.350000 0.000000))
-      (keepout (circ signal 0.054000 0.450000 0.000000))
-      (keepout (circ signal 0.054000 0.550000 0.000000))
-      (keepout (circ signal 0.054000 -0.250000 0.000000))
-      (keepout (circ signal 0.054000 -0.350000 0.000000))
-      (keepout (circ signal 0.054000 -0.450000 0.000000))
-      (keepout (circ signal 0.054000 -0.550000 0.000000))
-      (pin "Square1" "BLUE" -0.550000 0.000000)
-      (pin "Square1" "GREEN" -0.450000 0.000000)
-      (pin "Square1" "P$9" 0.050000 0.000000)
-      (pin "Square1" "P$10" 0.150000 0.000000)
-      (pin "Square1" "P$11" 0.250000 0.000000)
-      (pin "Square1" "RED" -0.350000 0.000000)
-      (pin "Square1" "S1" -0.250000 0.000000)
-      (pin "Square1" "S2" -0.150000 0.000000)
-      (pin "Square1" "S3" -0.050000 0.000000)
-      (pin "Square1" "S4" 0.350000 0.000000)
-      (pin "Square1" "S5" 0.450000 0.000000)
-      (pin "Square1" "S6" 0.550000 0.000000)
-    )
     (image "CREATIVE_COMMONS$SparkFun-Aesthetics"
     )
     (image "DUEMILANOVE_SHIELD$SparkFun-Boards"
@@ -245,8 +219,22 @@
       (pin "Rectangle1" "1" -0.025591 0.000000)
       (pin "Rectangle1" "2" 0.025591 0.000000)
     )
+    (image "1X12_LOCK_LONGPADS$SparkFun-Connectors"
+      (pin "Oblong1" "1" 0.000000 0.005000)
+      (pin "Oblong1" "2" 0.100000 -0.005000)
+      (pin "Oblong1" "3" 0.200000 0.005000)
+      (pin "Oblong1" "4" 0.300000 -0.005000)
+      (pin "Oblong1" "5" 0.400000 0.005000)
+      (pin "Oblong1" "6" 0.500000 -0.005000)
+      (pin "Oblong1" "7" 0.600000 0.005000)
+      (pin "Oblong1" "8" 0.700000 -0.005000)
+      (pin "Oblong1" "9" 0.800000 0.005000)
+      (pin "Oblong1" "10" 0.900000 -0.005000)
+      (pin "Oblong1" "11" 1.000000 0.005000)
+      (pin "Oblong1" "12" 1.100000 -0.005000)
+    )
     (image "MOLEX-1X2$SparkFun-Connectors"
-      (pin "Square2" "1" 0.000000 0.000000)
+      (pin "Square1" "1" 0.000000 0.000000)
       (pin "Round3" "2" 0.100000 0.000000)
     )
     (image "TACTILE-PTH$SparkFun-Electromechanical"
@@ -302,10 +290,6 @@
       (shape (circle "16#Bottom" 0.040000 0 0))
       (attach off)
     )
-    (padstack "Square1" 
-      (shape (rect signal -0.023780 -0.023780 0.023780 0.023780))
-      (attach off)
-    )
     (padstack "Round2" 
       (shape (circle signal 0.074000 0 0))
       (attach off)
@@ -314,7 +298,11 @@
       (shape (rect "1#Top" -0.013780 -0.017717 0.013780 0.017717))
       (attach off)
     )
-    (padstack "Square2" 
+    (padstack "Oblong1" 
+      (shape (path signal 0.060000 0.000000 -0.030000 0.000000 0.030000))
+      (attach off)
+    )
+    (padstack "Square1" 
       (shape (rect signal -0.037000 -0.037000 0.037000 0.037000))
       (attach off)
     )
@@ -338,10 +326,6 @@
       (shape (rect "1#Top" -0.015748 -0.015748 0.015748 0.015748))
       (attach off)
     )
-    (padstack "Oblong1" 
-      (shape (path signal 0.060000 0.000000 -0.030000 0.000000 0.030000))
-      (attach off)
-    )
     (padstack "Rectangle6" 
       (shape (rect "1#Top" -0.019685 -0.027559 0.019685 0.027559))
       (attach off)
@@ -352,37 +336,37 @@
       (pins  "U1"-"D5" "R12"-"1")
     )
     (net "1S1_OUT"
-      (pins  "U$3"-"S1" "T16"-"2")
+      (pins  "T16"-"2" "JP5"-"4")
     )
     (net "1S2_CTRL"
       (pins  "U1"-"D6" "R13"-"1")
     )
     (net "1S2_OUT"
-      (pins  "U$3"-"S2" "T15"-"2")
+      (pins  "T15"-"2" "JP5"-"5")
     )
     (net "1S3_CTRL"
       (pins  "U1"-"D7" "R14"-"1")
     )
     (net "1S3_OUT"
-      (pins  "U$3"-"S3" "T17"-"2")
+      (pins  "T17"-"2" "JP5"-"6")
     )
     (net "2S1_CTRL"
       (pins  "U1"-"D8" "R17"-"1")
     )
     (net "2S1_OUT"
-      (pins  "U$3"-"S4" "T5"-"2")
+      (pins  "T5"-"2" "JP5"-"10")
     )
     (net "2S2_CTRL"
       (pins  "U1"-"D9" "R16"-"1")
     )
     (net "2S2_OUT"
-      (pins  "U$3"-"S5" "T4"-"2")
+      (pins  "T4"-"2" "JP5"-"11")
     )
     (net "2S3_CTRL"
       (pins  "U1"-"D10" "R15"-"1")
     )
     (net "2S3_OUT"
-      (pins  "U$3"-"S6" "T6"-"2")
+      (pins  "T6"-"2" "JP5"-"12")
     )
     (net "5V"
       (pins  "U1"-"5V" "R2"-"1" "R9"-"2" "S1"-"3" "R9"-"1")
@@ -397,7 +381,7 @@
       (pins  "U1"-"D4" "R19"-"2")
     )
     (net "BLUE_OUT"
-      (pins  "U$3"-"BLUE" "T2"-"2")
+      (pins  "T2"-"2" "JP5"-"1")
     )
     (net "GND"
       (pins  "R1"-"1" "C1"-"1" "Q2"-"2" "R6"-"1" "R7"-"1" "U1"-"GND@0" "R10"-"1" "Q1"-"2" "T16"-"3" "T15"-"3" "T17"-"3" "T5"-"3" "T4"-"3" "T6"-"3" "LED1"-"C" "LED3"-"C" "LED4"-"C" "S1"-"1" "JP3"-"2" "JP4"-"2")
@@ -406,7 +390,7 @@
       (pins  "U1"-"D3" "R20"-"2")
     )
     (net "GREEN_OUT"
-      (pins  "U$3"-"GREEN" "T3"-"2")
+      (pins  "T3"-"2" "JP5"-"2")
     )
     (net "N$1"
       (pins  "R1"-"2" "U1"-"A3" "C1"-"2" "R4"-"1")
@@ -466,7 +450,7 @@
       (pins  "U1"-"D2" "R18"-"2")
     )
     (net "RED_OUT"
-      (pins  "T1"-"2" "U$3"-"RED")
+      (pins  "T1"-"2" "JP5"-"3")
     )
     (net "SAFETY_LIGHT"
       (pins  "Q1"-"1" "U1"-"D12")
@@ -476,5 +460,13 @@
     )
   )
   (wiring
+    (wire
+      (poly "16#Bottom"  0.016000 -0.100000 3.100000 2.400000 3.100000 2.400000 0.500000 2.400000 0.000000 -0.300000 0.000000 -0.300000 3.100000) 
+      (net "GND")
+    )
+    (wire
+      (poly "1#Top"  0.016000 -0.300000 3.200000 2.500000 3.200000 2.500000 -0.100000 -0.400000 -0.100000 -0.400000 3.200000) 
+      (net "GND")
+    )
   )
 )

@@ -7538,13 +7538,13 @@ Source: www.kingbright.com</description>
 <part name="T6" library="transistor" deviceset="*-NPN-" device="TO220V"/>
 <part name="D1" library="diode" deviceset="SMF5.0AT1" device="" value="DIODE-ZENER-BT"/>
 <part name="D3" library="diode" deviceset="SMF5.0AT1" device="" value="BA340A"/>
-<part name="LED1" library="led" deviceset="LED" device="SML0603" value="VOLTAGE_TOO_HIGH"/>
-<part name="LED2" library="led" deviceset="LED" device="SML0603" value="VOLTAGE_TOO_LOW"/>
-<part name="LED3" library="led" deviceset="LED" device="SML0603" value="POWER_ON"/>
-<part name="LED4" library="led" deviceset="LED" device="SML0603" value="ARDUINO_ON"/>
+<part name="LED1" library="led" deviceset="LED" device="SML0603" value="High"/>
+<part name="LED2" library="led" deviceset="LED" device="SML0603" value="Low"/>
+<part name="LED3" library="led" deviceset="LED" device="SML0603" value="PWR"/>
+<part name="LED4" library="led" deviceset="LED" device="SML0603" value="USB"/>
 <part name="S1" library="SparkFun-Electromechanical" deviceset="SWITCH-MOMENTARY-2" device="PTH" value="RESET"/>
 <part name="GND4" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="JP5" library="SparkFun-Connectors" deviceset="M12" device="LOCK_LONGPADS"/>
+<part name="JP5" library="SparkFun-Connectors" deviceset="M12" device="LOCK_LONGPADS" value="Underglow"/>
 </parts>
 <sheets>
 <sheet>

@@ -1,26 +1,31 @@
-const int trigger = 3;
-const int input = A0;
-const int output = 2;
+#include <Wire.h>
 
-int freq = 0;
+const int addr = 8;
+
+const int output = 7;
+
+int f = 0;
 
 void setup() 
 {
-  pinMode(input, INPUT);
-  pinMode(output, OUTPUT);
-  attachInterrupt(1, changeFreq, CHANGE);
+  Wire.begin();
+  Wire.onReceive(receiveEvent);
 }
 
 void loop() 
 {
   digitalWrite(output, HIGH);
-  delay(freq * 1000 / 2);
+  delay(f * 1000 / 2);
   digitalWrite(output, LOW);
-  delay(freq * 1000 / 2);
+  delay(f * 1000 / 2);
 }
 
-void changeFreq()
+void receiveEvent()
 {
-  freq = analogRead(A0);
+  while (Wire.available())
+  {
+    char c = Wire.read();
+    f = f + c;
+  }
+  f = (int) f;
 }
-

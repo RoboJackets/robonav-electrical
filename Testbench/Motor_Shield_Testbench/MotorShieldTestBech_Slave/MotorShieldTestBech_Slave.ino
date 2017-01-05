@@ -1,15 +1,18 @@
-#include <Wire.h>
+#include "TinyWireS.h"
 
 const int addr = 8;
 
-const int output = 7;
+const int output = 6;
 
-int f = 0;
+uint8_t dataIn;
+uint8_t n;
+
+double f = 0.00;
 
 void setup() 
 {
-  Wire.begin();
-  Wire.onReceive(receiveEvent);
+  TinyWireS.begin(addr);
+  TinyWireS.onReceive(receiveEvent);
 }
 
 void loop() 
@@ -20,12 +23,8 @@ void loop()
   delay(f * 1000 / 2);
 }
 
-void receiveEvent()
+void receiveEvent(uint8_t num)
 {
-  while (Wire.available())
-  {
-    char c = Wire.read();
-    f = f + c;
-  }
-  f = (int) f;
+  dataIn = TinyWireS.receive();
+  f = (double)dataIn / 100;
 }

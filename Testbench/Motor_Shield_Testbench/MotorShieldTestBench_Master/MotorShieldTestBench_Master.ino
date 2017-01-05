@@ -1,20 +1,27 @@
 #include <Wire.h>
 
 const int rightDir = 19;
-const int rightSpeed = 20;
+const int rSpeed = A8;
 const int leftDir = 18;
-const int leftSpeed = 21;
+const int lSpeed = A9;
+const int led = 78;
+
+boolean consistent = true;
+
+double leftSpeed[11];
+double rightSpeed[11];
 
 const int select = 42;
 
-boolean dir = true;
+boolean dirR[11];
+boolean dirL[11];
 
 const float wheelCirc = 1.092;
 const float ticks = 6000;
 const float ticksPerM = ticks / wheelCirc;
-float desiredSpeed = 2;
-
-float f = desiredSpeed * ticksPerM; 
+const float ticksPerMile = ticksPerM * 1609.34;
+int desiredSpeedL[11] = {-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5};
+int desiredSpeedR[11] = {-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5};
 
 void setup() 
 {
@@ -23,13 +30,63 @@ void setup()
   Wire.begin();
   
   pinMode(rightDir, INPUT);
-  pinMode(rightSpeed, INPUT);
+  pinMode(rSpeed, INPUT);
   pinMode(leftDir, INPUT);
-  pinMode(leftSpeed, INPUT);
+  pinMode(lSpeed, INPUT);
 
+  pinMode(select, OUTPUT);
+  digitalWrite(select, HIGH);
 }
 
 void loop() 
 {
+  for (int i = 0; i < 11; i ++)
+  {
+    if (desiredSpeedR[i] < 0)
+    {
+      digitalWrite(select, LOW);
+    }
+    Wire.beginTransmission(7);
+    Wire.write(abs(desiredSpeedL[i] * 100 * ticksPerMile));
+    Wire.endTransmission();
+  
+    Wire.beginTransmission(8);
+    Wire.write(abs(desiredSpeedR[i] * 100 * ticksPerMile));
+    Wire.endTransmission();
+  
+    delay(1000);
 
+    dirL[i] = digitalRead(leftDir);
+    dirR[i] = digitalRead(rightDir);
+    leftSpeed[i] = analogRead(lSpeed);
+    rightSpeed[i] = analogRead(rSpeed);
+
+    digitalWrite(select, HIGH);
+  }
+
+  for (int i = 0; i < 11; i ++)
+  {
+    if (abs(leftSpeed[i] - desiredSpeedL[i]) >= 0.1)
+    {
+      consistent = false; 
+    }
+  }
+
+  if (consistent)
+  {
+    digitalWrite(led, HIGH);
+    delay(1000);
+    digitalWrite(led, LOW);
+    delay(1000);
+  }
+  else 
+  {
+    digitalWrite(led, HIGH);
+    delay(100);
+    digitalWrite(led, LOW);
+    delay(100);
+    digitalWrite(led, HIGH);
+    delay(100);
+    digitalWrite(led, LOW);
+  }
 }

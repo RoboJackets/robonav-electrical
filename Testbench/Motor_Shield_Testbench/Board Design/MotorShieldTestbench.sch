@@ -1340,6 +1340,27 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </device>
 </devices>
 </deviceset>
+<deviceset name="47KOHM" prefix="R">
+<description>&lt;h3&gt;47kΩ resistor&lt;/h3&gt;
+&lt;p&gt;A resistor is a passive two-terminal electrical component that implements electrical resistance as a circuit element. Resistors act to reduce current flow, and, at the same time, act to lower voltage levels within circuits. - Wikipedia&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="RESISTOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="-0603-1/10W-1%" package="0603">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-07871"/>
+<attribute name="VALUE" value="47k"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 <library name="SparkFun-IC-Microcontroller">
@@ -2381,6 +2402,22 @@ Commonly used for small ceramic capacitors. Like our 0.1uF (http://www.sparkfun.
 <rectangle x1="0.9517" y1="-0.8491" x2="1.7018" y2="0.8509" layer="51"/>
 <rectangle x1="-0.1999" y1="-0.4001" x2="0.1999" y2="0.4001" layer="35"/>
 </package>
+<package name="1210">
+<description>&lt;p&gt;&lt;b&gt;Generic 3225 (1210) package&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;0.2mm courtyard excess rounded to nearest 0.05mm.&lt;/p&gt;</description>
+<wire x1="-1.5365" y1="1.1865" x2="1.5365" y2="1.1865" width="0.127" layer="51"/>
+<wire x1="1.5365" y1="1.1865" x2="1.5365" y2="-1.1865" width="0.127" layer="51"/>
+<wire x1="1.5365" y1="-1.1865" x2="-1.5365" y2="-1.1865" width="0.127" layer="51"/>
+<wire x1="-1.5365" y1="-1.1865" x2="-1.5365" y2="1.1865" width="0.127" layer="51"/>
+<smd name="1" x="-1.755" y="0" dx="1.27" dy="2.06" layer="1"/>
+<smd name="2" x="1.755" y="0" dx="1.27" dy="2.06" layer="1"/>
+<text x="0" y="1.397" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-1.397" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
+<wire x1="-2.59" y1="1.45" x2="2.59" y2="1.45" width="0.0508" layer="39"/>
+<wire x1="2.59" y1="1.45" x2="2.59" y2="-1.45" width="0.0508" layer="39"/>
+<wire x1="2.59" y1="-1.45" x2="-2.59" y2="-1.45" width="0.0508" layer="39"/>
+<wire x1="-2.59" y1="-1.45" x2="-2.59" y2="1.45" width="0.0508" layer="39"/>
+</package>
 </packages>
 <symbols>
 <symbol name="CAP">
@@ -2562,6 +2599,36 @@ Commonly used for small ceramic capacitors. Like our 0.1uF (http://www.sparkfun.
 <attribute name="PROD_ID" value="CAP-08064"/>
 <attribute name="VALUE" value="1.0uF"/>
 </technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="22UF" prefix="C">
+<description>&lt;h3&gt;22µF ceramic capacitors&lt;/h3&gt;
+&lt;p&gt;A capacitor is a passive two-terminal electrical component used to store electrical energy temporarily in an electric field.&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="CAP" x="0" y="0"/>
+</gates>
+<devices>
+<device name="-0805-6.3V-20%" package="0805">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="CAP-08402"/>
+<attribute name="VALUE" value="22uF"/>
+</technology>
+</technologies>
+</device>
+<device name="-1210-16V-20%" package="1210">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
 </technologies>
 </device>
 </devices>
@@ -3614,6 +3681,12 @@ Source: www.kingbright.com</description>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
 <part name="P+6" library="supply1" deviceset="+5V" device=""/>
+<part name="R14" library="SparkFun-Resistors" deviceset="47KOHM" device="-0603-1/10W-1%" value="47k"/>
+<part name="R15" library="SparkFun-Resistors" deviceset="47KOHM" device="-0603-1/10W-1%" value="47k"/>
+<part name="C15" library="SparkFun-Capacitors" deviceset="22UF" device="-0805-6.3V-20%" value="22uF"/>
+<part name="C16" library="SparkFun-Capacitors" deviceset="22UF" device="-0805-6.3V-20%" value="22uF"/>
+<part name="GND17" library="supply1" deviceset="GND" device=""/>
+<part name="GND19" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -3703,6 +3776,12 @@ Source: www.kingbright.com</description>
 <instance part="GND5" gate="1" x="-55.88" y="109.22"/>
 <instance part="GND4" gate="1" x="-55.88" y="-35.56"/>
 <instance part="P+6" gate="1" x="-55.88" y="-10.16"/>
+<instance part="R14" gate="G$1" x="314.96" y="144.78"/>
+<instance part="R15" gate="G$1" x="358.14" y="144.78"/>
+<instance part="C15" gate="G$1" x="322.58" y="134.62"/>
+<instance part="C16" gate="G$1" x="365.76" y="134.62"/>
+<instance part="GND17" gate="1" x="322.58" y="127"/>
+<instance part="GND19" gate="1" x="365.76" y="127"/>
 </instances>
 <busses>
 </busses>
@@ -4039,6 +4118,16 @@ Source: www.kingbright.com</description>
 <pinref part="U4" gate="A" pin="GND"/>
 <wire x1="-55.88" y1="-27.94" x2="-50.8" y2="-27.94" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="C16" gate="G$1" pin="2"/>
+<pinref part="GND19" gate="1" pin="GND"/>
+<wire x1="365.76" y1="132.08" x2="365.76" y2="129.54" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C15" gate="G$1" pin="2"/>
+<pinref part="GND17" gate="1" pin="GND"/>
+<wire x1="322.58" y1="132.08" x2="322.58" y2="129.54" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="N$19" class="0">
 <segment>
@@ -4305,26 +4394,6 @@ Source: www.kingbright.com</description>
 <wire x1="342.9" y1="63.5" x2="337.82" y2="63.5" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$30" class="0">
-<segment>
-<pinref part="U1" gate="1" pin="(SCK/PCINT1)PB1"/>
-<wire x1="345.44" y1="114.3" x2="236.22" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="236.22" y1="114.3" x2="236.22" y2="106.68" width="0.1524" layer="91"/>
-<pinref part="B1" gate="G$1" pin="*D10"/>
-<wire x1="236.22" y1="106.68" x2="205.74" y2="106.68" width="0.1524" layer="91"/>
-<wire x1="345.44" y1="114.3" x2="345.44" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="345.44" y1="66.04" x2="337.82" y2="66.04" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$31" class="0">
-<segment>
-<pinref part="U1" gate="1" pin="(MOSI/PCINT2)PB2"/>
-<pinref part="B1" gate="G$1" pin="*D6"/>
-<wire x1="340.36" y1="119.38" x2="205.74" y2="119.38" width="0.1524" layer="91"/>
-<wire x1="340.36" y1="119.38" x2="340.36" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="340.36" y1="68.58" x2="337.82" y2="68.58" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$15" class="0">
 <segment>
 <pinref part="MULTIPLEXER" gate="A" pin="1Y"/>
@@ -4547,6 +4616,56 @@ Source: www.kingbright.com</description>
 <pinref part="LED3" gate="G$1" pin="A"/>
 <pinref part="R13" gate="G$1" pin="1"/>
 <wire x1="434.34" y1="114.3" x2="434.34" y2="116.84" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$48" class="0">
+<segment>
+<pinref part="R14" gate="G$1" pin="2"/>
+<pinref part="C15" gate="G$1" pin="1"/>
+<wire x1="320.04" y1="144.78" x2="322.58" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="322.58" y1="144.78" x2="322.58" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="340.36" y1="119.38" x2="332.74" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="340.36" y1="119.38" x2="340.36" y2="43.18" width="0.1524" layer="91"/>
+<pinref part="U1" gate="1" pin="(A9)PC1"/>
+<wire x1="340.36" y1="43.18" x2="337.82" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="322.58" y1="144.78" x2="332.74" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="332.74" y1="144.78" x2="332.74" y2="119.38" width="0.1524" layer="91"/>
+<junction x="322.58" y="144.78"/>
+</segment>
+</net>
+<net name="N$49" class="0">
+<segment>
+<pinref part="B1" gate="G$1" pin="*D6"/>
+<pinref part="R14" gate="G$1" pin="1"/>
+<wire x1="299.72" y1="144.78" x2="309.88" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="299.72" y1="119.38" x2="299.72" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="299.72" y1="119.38" x2="205.74" y2="119.38" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$31" class="0">
+<segment>
+<wire x1="335.28" y1="114.3" x2="236.22" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="236.22" y1="114.3" x2="236.22" y2="106.68" width="0.1524" layer="91"/>
+<pinref part="B1" gate="G$1" pin="*D10"/>
+<wire x1="236.22" y1="106.68" x2="205.74" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="335.28" y1="114.3" x2="335.28" y2="144.78" width="0.1524" layer="91"/>
+<pinref part="R15" gate="G$1" pin="1"/>
+<wire x1="335.28" y1="144.78" x2="353.06" y2="144.78" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$50" class="0">
+<segment>
+<pinref part="U1" gate="1" pin="(A8)PC0"/>
+<wire x1="345.44" y1="40.64" x2="337.82" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="345.44" y1="104.14" x2="345.44" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="381" y1="104.14" x2="345.44" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="381" y1="144.78" x2="381" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="C16" gate="G$1" pin="1"/>
+<wire x1="365.76" y1="144.78" x2="365.76" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="365.76" y1="144.78" x2="381" y2="144.78" width="0.1524" layer="91"/>
+<junction x="365.76" y="144.78"/>
+<pinref part="R15" gate="G$1" pin="2"/>
+<wire x1="363.22" y1="144.78" x2="365.76" y2="144.78" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

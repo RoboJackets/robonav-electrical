@@ -1,18 +1,20 @@
 #include "TinyWireS.h"
 
-const int addr = 8;
+const int addr = 7;
 
-const int output = 6;
+const int output = 10;
 
 uint8_t dataIn;
 uint8_t n;
 
-double f = 0.00;
+double f = 18;
 
 void setup() 
 {
   TinyWireS.begin(addr);
   TinyWireS.onReceive(receiveEvent);
+
+  pinMode(output, OUTPUT);
 }
 
 void loop() 

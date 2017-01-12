@@ -7417,14 +7417,14 @@ wire to board 2.54 mm (0.100") pitch header</description>
 </plain>
 <instances>
 <instance part="U1" gate="A" x="0" y="0"/>
-<instance part="SUPPLY1" gate="GND" x="-27.94" y="-22.86" rot="R270"/>
+<instance part="SUPPLY1" gate="GND" x="-35.56" y="-25.4"/>
 <instance part="P+2" gate="1" x="-38.1" y="22.86"/>
 <instance part="P+1" gate="1" x="71.12" y="12.7" rot="R90"/>
 <instance part="Q1" gate="G$1" x="-50.8" y="-15.24" rot="R90"/>
 <instance part="SUPPLY2" gate="GND" x="-48.26" y="25.4" rot="R180"/>
 <instance part="G1" gate="G$1" x="-10.16" y="55.88"/>
 <instance part="IC1" gate="A1" x="30.48" y="55.88"/>
-<instance part="SUPPLY3" gate="GND" x="-2.54" y="33.02"/>
+<instance part="SUPPLY3" gate="GND" x="-2.54" y="30.48"/>
 <instance part="D1" gate="1" x="10.16" y="55.88"/>
 <instance part="C2" gate="G$1" x="17.78" y="48.26"/>
 <instance part="C3" gate="G$1" x="53.34" y="48.26"/>
@@ -7458,55 +7458,6 @@ wire to board 2.54 mm (0.100") pitch header</description>
 <busses>
 </busses>
 <nets>
-<net name="VSS" class="0">
-<segment>
-<wire x1="-17.78" y1="-20.32" x2="-22.86" y2="-20.32" width="0.1524" layer="91"/>
-<wire x1="-22.86" y1="-20.32" x2="-22.86" y2="-22.86" width="0.1524" layer="91"/>
-<pinref part="SUPPLY1" gate="GND" pin="GND"/>
-<wire x1="-22.86" y1="-22.86" x2="-25.4" y2="-22.86" width="0.1524" layer="91"/>
-<junction x="-22.86" y="-22.86"/>
-<wire x1="-17.78" y1="-22.86" x2="-22.86" y2="-22.86" width="0.1524" layer="91"/>
-<pinref part="U1" gate="A" pin="GND_2"/>
-<pinref part="U1" gate="A" pin="GND"/>
-</segment>
-<segment>
-<wire x1="-48.26" y1="17.78" x2="-48.26" y2="22.86" width="0.1524" layer="91"/>
-<pinref part="SUPPLY2" gate="GND" pin="GND"/>
-<pinref part="C1" gate="G$1" pin="2"/>
-</segment>
-<segment>
-<pinref part="SUPPLY3" gate="GND" pin="GND"/>
-<wire x1="-2.54" y1="40.64" x2="-2.54" y2="35.56" width="0.1524" layer="91"/>
-<pinref part="G1" gate="G$1" pin="-"/>
-<wire x1="-22.86" y1="55.88" x2="-27.94" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="-27.94" y1="55.88" x2="-27.94" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="-27.94" y1="40.64" x2="-2.54" y2="40.64" width="0.1524" layer="91"/>
-<pinref part="IC1" gate="A1" pin="GND"/>
-<wire x1="30.48" y1="48.26" x2="30.48" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="30.48" y1="40.64" x2="17.78" y2="40.64" width="0.1524" layer="91"/>
-<junction x="-2.54" y="40.64"/>
-<pinref part="C2" gate="G$1" pin="2"/>
-<wire x1="17.78" y1="40.64" x2="-2.54" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="17.78" y1="43.18" x2="17.78" y2="40.64" width="0.1524" layer="91"/>
-<junction x="17.78" y="40.64"/>
-</segment>
-<segment>
-<pinref part="C3" gate="G$1" pin="2"/>
-<pinref part="SUPPLY4" gate="GND" pin="GND"/>
-<wire x1="53.34" y1="43.18" x2="53.34" y2="40.64" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<wire x1="-66.04" y1="-22.86" x2="-68.58" y2="-22.86" width="0.1524" layer="91"/>
-<wire x1="-68.58" y1="-22.86" x2="-68.58" y2="-15.24" width="0.1524" layer="91"/>
-<wire x1="-68.58" y1="-15.24" x2="-68.58" y2="-7.62" width="0.1524" layer="91"/>
-<wire x1="-68.58" y1="-15.24" x2="-73.66" y2="-15.24" width="0.1524" layer="91"/>
-<junction x="-68.58" y="-15.24"/>
-<pinref part="SUPPLY5" gate="GND" pin="GND"/>
-<pinref part="C5" gate="G$1" pin="2"/>
-<pinref part="C4" gate="G$1" pin="2"/>
-<wire x1="-66.04" y1="-7.62" x2="-68.58" y2="-7.62" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="VDD" class="0">
 <segment>
 <pinref part="P+1" gate="1" pin="+5V"/>
@@ -7521,6 +7472,41 @@ wire to board 2.54 mm (0.100") pitch header</description>
 <wire x1="53.34" y1="55.88" x2="53.34" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="50.8" x2="53.34" y2="55.88" width="0.1524" layer="91"/>
 <junction x="53.34" y="55.88"/>
+</segment>
+<segment>
+<pinref part="P+2" gate="1" pin="+5V"/>
+<wire x1="-38.1" y1="15.24" x2="-38.1" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="-30.48" y1="15.24" x2="-38.1" y2="15.24" width="0.1524" layer="91"/>
+<pinref part="U1" gate="A" pin="AVCC"/>
+<wire x1="-17.78" y1="12.7" x2="-30.48" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="-30.48" y1="12.7" x2="-30.48" y2="15.24" width="0.1524" layer="91"/>
+<junction x="-30.48" y="15.24"/>
+<wire x1="-17.78" y1="15.24" x2="-30.48" y2="15.24" width="0.1524" layer="91"/>
+<pinref part="U1" gate="A" pin="VCC"/>
+</segment>
+<segment>
+<wire x1="68.58" y1="35.56" x2="81.28" y2="35.56" width="0.1524" layer="91"/>
+<pinref part="X1" gate="-2" pin="S"/>
+<pinref part="P+4" gate="1" pin="+5V"/>
+</segment>
+<segment>
+<pinref part="R1" gate="G$1" pin="1"/>
+<pinref part="P+5" gate="1" pin="+5V"/>
+<wire x1="63.5" y1="-20.32" x2="58.42" y2="-20.32" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="R2" gate="G$1" pin="1"/>
+<pinref part="R4" gate="G$1" pin="1"/>
+<wire x1="58.42" y1="10.16" x2="55.88" y2="10.16" width="0.1524" layer="91"/>
+<pinref part="P+6" gate="1" pin="+5V"/>
+<wire x1="55.88" y1="10.16" x2="53.34" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="2.54" x2="55.88" y2="10.16" width="0.1524" layer="91"/>
+<junction x="55.88" y="10.16"/>
+</segment>
+<segment>
+<pinref part="JP1" gate="A" pin="2"/>
+<wire x1="53.34" y1="-35.56" x2="63.5" y2="-35.56" width="0.1524" layer="91"/>
+<pinref part="P+7" gate="1" pin="+5V"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -7589,43 +7575,6 @@ wire to board 2.54 mm (0.100") pitch header</description>
 <pinref part="U1" gate="A" pin="PB7"/>
 </segment>
 </net>
-<net name="+5V" class="0">
-<segment>
-<pinref part="P+2" gate="1" pin="+5V"/>
-<wire x1="-38.1" y1="15.24" x2="-38.1" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="-30.48" y1="15.24" x2="-38.1" y2="15.24" width="0.1524" layer="91"/>
-<pinref part="U1" gate="A" pin="AVCC"/>
-<wire x1="-17.78" y1="12.7" x2="-30.48" y2="12.7" width="0.1524" layer="91"/>
-<wire x1="-30.48" y1="12.7" x2="-30.48" y2="15.24" width="0.1524" layer="91"/>
-<junction x="-30.48" y="15.24"/>
-<wire x1="-17.78" y1="15.24" x2="-30.48" y2="15.24" width="0.1524" layer="91"/>
-<pinref part="U1" gate="A" pin="VCC"/>
-</segment>
-<segment>
-<wire x1="68.58" y1="35.56" x2="81.28" y2="35.56" width="0.1524" layer="91"/>
-<pinref part="X1" gate="-2" pin="S"/>
-<pinref part="P+4" gate="1" pin="+5V"/>
-</segment>
-<segment>
-<pinref part="R1" gate="G$1" pin="1"/>
-<pinref part="P+5" gate="1" pin="+5V"/>
-<wire x1="63.5" y1="-20.32" x2="58.42" y2="-20.32" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="R2" gate="G$1" pin="1"/>
-<pinref part="R4" gate="G$1" pin="1"/>
-<wire x1="58.42" y1="10.16" x2="55.88" y2="10.16" width="0.1524" layer="91"/>
-<pinref part="P+6" gate="1" pin="+5V"/>
-<wire x1="55.88" y1="10.16" x2="53.34" y2="10.16" width="0.1524" layer="91"/>
-<wire x1="55.88" y1="2.54" x2="55.88" y2="10.16" width="0.1524" layer="91"/>
-<junction x="55.88" y="10.16"/>
-</segment>
-<segment>
-<pinref part="JP1" gate="A" pin="2"/>
-<wire x1="53.34" y1="-35.56" x2="63.5" y2="-35.56" width="0.1524" layer="91"/>
-<pinref part="P+7" gate="1" pin="+5V"/>
-</segment>
-</net>
 <net name="GND" class="0">
 <segment>
 <pinref part="SUPPLY6" gate="GND" pin="GND"/>
@@ -7656,6 +7605,53 @@ wire to board 2.54 mm (0.100") pitch header</description>
 <pinref part="JP1" gate="A" pin="6"/>
 <wire x1="53.34" y1="-40.64" x2="63.5" y2="-40.64" width="0.1524" layer="91"/>
 <pinref part="SUPPLY11" gate="GND" pin="GND"/>
+</segment>
+<segment>
+<wire x1="-17.78" y1="-20.32" x2="-22.86" y2="-20.32" width="0.1524" layer="91"/>
+<wire x1="-22.86" y1="-20.32" x2="-22.86" y2="-22.86" width="0.1524" layer="91"/>
+<pinref part="SUPPLY1" gate="GND" pin="GND"/>
+<wire x1="-22.86" y1="-22.86" x2="-35.56" y2="-22.86" width="0.1524" layer="91"/>
+<junction x="-22.86" y="-22.86"/>
+<wire x1="-17.78" y1="-22.86" x2="-22.86" y2="-22.86" width="0.1524" layer="91"/>
+<pinref part="U1" gate="A" pin="GND_2"/>
+<pinref part="U1" gate="A" pin="GND"/>
+</segment>
+<segment>
+<wire x1="-48.26" y1="17.78" x2="-48.26" y2="22.86" width="0.1524" layer="91"/>
+<pinref part="SUPPLY2" gate="GND" pin="GND"/>
+<pinref part="C1" gate="G$1" pin="2"/>
+</segment>
+<segment>
+<pinref part="SUPPLY3" gate="GND" pin="GND"/>
+<wire x1="-2.54" y1="40.64" x2="-2.54" y2="33.02" width="0.1524" layer="91"/>
+<pinref part="G1" gate="G$1" pin="-"/>
+<wire x1="-22.86" y1="55.88" x2="-27.94" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="-27.94" y1="55.88" x2="-27.94" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="-27.94" y1="40.64" x2="-2.54" y2="40.64" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="A1" pin="GND"/>
+<wire x1="30.48" y1="48.26" x2="30.48" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="40.64" x2="17.78" y2="40.64" width="0.1524" layer="91"/>
+<junction x="-2.54" y="40.64"/>
+<pinref part="C2" gate="G$1" pin="2"/>
+<wire x1="17.78" y1="40.64" x2="-2.54" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="43.18" x2="17.78" y2="40.64" width="0.1524" layer="91"/>
+<junction x="17.78" y="40.64"/>
+</segment>
+<segment>
+<pinref part="C3" gate="G$1" pin="2"/>
+<pinref part="SUPPLY4" gate="GND" pin="GND"/>
+<wire x1="53.34" y1="43.18" x2="53.34" y2="40.64" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<wire x1="-66.04" y1="-22.86" x2="-68.58" y2="-22.86" width="0.1524" layer="91"/>
+<wire x1="-68.58" y1="-22.86" x2="-68.58" y2="-15.24" width="0.1524" layer="91"/>
+<wire x1="-68.58" y1="-15.24" x2="-68.58" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="-68.58" y1="-15.24" x2="-73.66" y2="-15.24" width="0.1524" layer="91"/>
+<junction x="-68.58" y="-15.24"/>
+<pinref part="SUPPLY5" gate="GND" pin="GND"/>
+<pinref part="C5" gate="G$1" pin="2"/>
+<pinref part="C4" gate="G$1" pin="2"/>
+<wire x1="-66.04" y1="-7.62" x2="-68.58" y2="-7.62" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="P7T11" class="0">
@@ -7791,6 +7787,15 @@ wire to board 2.54 mm (0.100") pitch header</description>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="102,1,-38.1,20.32,+5V,VDD,,,,"/>
+<approved hash="102,1,73.66,12.7,+5V,VDD,,,,"/>
+<approved hash="102,1,53.34,66.04,+5V,VDD,,,,"/>
+<approved hash="102,1,68.58,35.56,+5V,VDD,,,,"/>
+<approved hash="102,1,58.42,-20.32,+5V,VDD,,,,"/>
+<approved hash="102,1,55.88,2.54,+5V,VDD,,,,"/>
+<approved hash="102,1,63.5,-35.56,+5V,VDD,,,,"/>
+</errors>
 </schematic>
 </drawing>
 </eagle>

@@ -4,7 +4,7 @@
 LiquidCrystal lcd(12,11,7,6,5,4);
 #define encoderPinA 2
 #define encoderPinB 3
-int pi = 3.1415926;
+float pi = 3.1415926;
 int count = 0;
 volatile int encoderCount = 0;
 volatile float angle = 0;
@@ -12,8 +12,10 @@ volatile float velocity = 0;
 volatile float angle_previous = 0;
 volatile float angle_post = 0;
 
+//initializing float values and int values.
 
-// Timer 2
+
+// Timer
 
 volatile int tcnt = 131;
 volatile int t = 0;
@@ -24,8 +26,8 @@ void setup() {
   // put your setup code here, to run once:
   pinMode(encoderPinA, INPUT);
   pinMode(encoderPinB, INPUT);
-  attachInterrupt(0, doEncoderA, CHANGE);
-  attachInterrupt(1, doEncoderB, CHANGE);
+  attachInterrupt(2, doEncoderA, CHANGE);
+  attachInterrupt(3, doEncoderB, CHANGE);
   lcd.begin(16,2);
   lcd.print("Angle:");
   lcd.setCursor(0,1);
@@ -40,9 +42,10 @@ void setup() {
   TCCR2B &= ~(1<<CS21);
   TCNT2 = tcnt;
   TIMSK2 |= (1<<TOIE2);
-  Serial.begin (9600); // for debugging
+  Serial.begin (9600); //
   delay(500);
 }
+
 
 void printlcdAngle(){
   lcd.setCursor(7,0);
@@ -120,4 +123,9 @@ ISR(TIMER2_OVF_vect) {
     t = 0;
   }
 }
+
+//changes made on 1/15/2017
+//int changed to float
+//Interrrupts changed to pins 2 and 3
+//bitwise operations?
 

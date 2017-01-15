@@ -7380,7 +7380,7 @@ wire to board 2.54 mm (0.100") pitch header</description>
 <part name="SUPPLY1" library="supply2" deviceset="GND" device=""/>
 <part name="P+2" library="supply1" deviceset="+5V" device=""/>
 <part name="P+1" library="supply1" deviceset="+5V" device=""/>
-<part name="Q1" library="special" deviceset="XTAL/S" device=""/>
+<part name="Q1" library="special" deviceset="XTAL/S" device="" value="16MHz"/>
 <part name="SUPPLY2" library="supply2" deviceset="GND" device=""/>
 <part name="G1" library="battery" deviceset="AB9V" device=""/>
 <part name="IC1" library="linear" deviceset="78*" device="DT" technology="05"/>
@@ -7414,6 +7414,24 @@ wire to board 2.54 mm (0.100") pitch header</description>
 <sheets>
 <sheet>
 <plain>
+<text x="93.98" y="15.24" size="1.778" layer="91">VSS</text>
+<text x="93.98" y="12.7" size="1.778" layer="91">VDD</text>
+<text x="93.98" y="10.16" size="1.778" layer="91">V0</text>
+<text x="93.98" y="7.62" size="1.778" layer="91">RS</text>
+<text x="93.98" y="5.08" size="1.778" layer="91">R/W</text>
+<text x="93.98" y="2.54" size="1.778" layer="91">E</text>
+<text x="93.98" y="0" size="1.778" layer="91">DB</text>
+<text x="93.98" y="-2.54" size="1.778" layer="91">DB1</text>
+<text x="93.98" y="-5.08" size="1.778" layer="91">DB2</text>
+<text x="93.98" y="-7.62" size="1.778" layer="91">DB3</text>
+<text x="93.98" y="-10.16" size="1.778" layer="91">DB4</text>
+<text x="93.98" y="-12.7" size="1.778" layer="91">DB5</text>
+<text x="93.98" y="-15.24" size="1.778" layer="91">DB6</text>
+<text x="93.98" y="-17.78" size="1.778" layer="91">DB7</text>
+<text x="93.98" y="-20.32" size="1.778" layer="91">LED+</text>
+<text x="93.98" y="-22.86" size="1.778" layer="91">LED-</text>
+<text x="96.52" y="38.1" size="1.778" layer="91">Encoder Pin A</text>
+<text x="96.52" y="33.02" size="1.778" layer="91">Encoder Pin B</text>
 </plain>
 <instances>
 <instance part="U1" gate="A" x="0" y="0"/>
@@ -7549,7 +7567,7 @@ wire to board 2.54 mm (0.100") pitch header</description>
 <pinref part="C2" gate="G$1" pin="1"/>
 </segment>
 </net>
-<net name="N$10" class="0">
+<net name="CRYSTAL" class="0">
 <segment>
 <wire x1="-17.78" y1="-12.7" x2="-38.1" y2="-12.7" width="0.1524" layer="91"/>
 <wire x1="-38.1" y1="-12.7" x2="-38.1" y2="-10.16" width="0.1524" layer="91"/>
@@ -7788,6 +7806,7 @@ wire to board 2.54 mm (0.100") pitch header</description>
 </sheet>
 </sheets>
 <errors>
+<approved hash="101,1,81.28,30.48,CONNECTOR-4,S,,,,"/>
 <approved hash="102,1,-38.1,20.32,+5V,VDD,,,,"/>
 <approved hash="102,1,73.66,12.7,+5V,VDD,,,,"/>
 <approved hash="102,1,53.34,66.04,+5V,VDD,,,,"/>
@@ -7795,6 +7814,10 @@ wire to board 2.54 mm (0.100") pitch header</description>
 <approved hash="102,1,58.42,-20.32,+5V,VDD,,,,"/>
 <approved hash="102,1,55.88,2.54,+5V,VDD,,,,"/>
 <approved hash="102,1,63.5,-35.56,+5V,VDD,,,,"/>
+<approved hash="104,1,-17.78,15.24,U1,VCC,VDD,,,"/>
+<approved hash="104,1,-17.78,12.7,U1,AVCC,VDD,,,"/>
+<approved hash="113,1,49.4877,-36.6988,JP1,,,,,"/>
+<approved hash="113,1,89.1371,-2.40877,JP2,,,,,"/>
 </errors>
 </schematic>
 </drawing>

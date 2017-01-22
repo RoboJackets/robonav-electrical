@@ -1,10 +1,11 @@
 // initialize encoder
 
 #include<LiquidCrystal.h>
-LiquidCrystal lcd(12,11,7,6,5,4);
 #define encoderPinA 2
 #define encoderPinB 3
-float pi = 3.1415926;
+#define constantNum 0.015707
+LiquidCrystal lcd(12,11,7,6,5,4);
+const float pi = 3.1415926;
 int count = 0;
 volatile int encoderCount = 0;
 volatile float angle = 0;
@@ -17,7 +18,7 @@ volatile float angle_post = 0;
 
 // Timer
 
-volatile int tcnt = 131;
+const int tcnt = 131;
 volatile int t = 0;
 
 
@@ -52,7 +53,6 @@ void printlcdAngle(){
   lcd.print(angle);
   lcd.setCursor(13,0);
   lcd.print(char(223));
-  delay(500);
 }
 
 void printlcdVelo(){
@@ -64,6 +64,7 @@ void loop() {
   // put your main code here, to run repeatedly:
   printlcdAngle();
   printlcdVelo();
+  delay(1000);
 }
 
 void doEncoderA(){    //Pin0 interrupt.
@@ -85,12 +86,8 @@ else {
     encoderCount = encoderCount - 1;
   }
   }
-  angle = 0.015707*encoderCount/pi*90; //Unit is radian
-  //CPR = 100. Dependson encoder type
-  //100 * 4 = 400
-  //400/(2*pi) = counts/angle
-  //angle = counts*(2*pi/400)
-  //angle = 0.015707 * counts.
+  angle = constantNum *encoderCount; //Unit is radian. constantNum is 0.015707 The calculation is in the following.
+ //constantNum = 1 / 400 * 2 * pi
 }
 
 void doEncoderB(){    //Pin1 interrupt.
@@ -110,7 +107,7 @@ void doEncoderB(){    //Pin1 interrupt.
       encoderCount = encoderCount - 1;
     }
   }
-  angle = 0.015707*encoderCount/pi*90;  // unit: radian
+  angle = constantNum*encoderCount;  // unit: radian constantNum =0.015707
 }
 
 //----------------------------------------------------------

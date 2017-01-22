@@ -132,5 +132,7 @@ ISR(TIMER2_OVF_vect) {
 //changes made on 1/15/2017
 //int changed to float
 //Interrrupts changed to pins 2 and 3
-//bitwise operations?
+//bitwise operations
+//One disadvantage of our design is that, if we want to change the encode type(precision) , we don't have a mechanism to change that.
+//if we want to have that, we can make somthing on the PCB that coorelates with the code
 

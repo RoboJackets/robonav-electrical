@@ -4,14 +4,28 @@ const int rightDir = 19;
 const int rSpeed = A8;
 const int leftDir = 18;
 const int lSpeed = A9;
+
 const int led = 78;
+
+const int lSelect = 67;
+const int rSelect = 75;
+
+const int OA1 = 60;
+const int OA2 = 59;
+const int OA3 = 58;
+const int OA4 = 57;
+
+const int OD1 = 26;
+const int OD2 = 38;
+const int OD3 = 39;
+const int OD4 = 40;
 
 boolean consistent = true;
 
 double leftSpeed[11];
 double rightSpeed[11];
 
-const int select = 42;
+
 
 boolean dirR[11];
 boolean dirL[11];

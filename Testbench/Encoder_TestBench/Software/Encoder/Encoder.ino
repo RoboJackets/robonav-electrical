@@ -86,6 +86,11 @@ else {
   }
   }
   angle = 0.015707*encoderCount/pi*90; //Unit is radian
+  //CPR = 100. Dependson encoder type
+  //100 * 4 = 400
+  //400/(2*pi) = counts/angle
+  //angle = counts*(2*pi/400)
+  //angle = 0.015707 * counts.
 }
 
 void doEncoderB(){    //Pin1 interrupt.

@@ -7386,8 +7386,8 @@ wire to board 2.54 mm (0.100") pitch header</description>
 <part name="IC1" library="linear" deviceset="78*" device="DT" technology="05"/>
 <part name="SUPPLY3" library="supply2" deviceset="GND" device=""/>
 <part name="D1" library="diode" deviceset="1N4004" device=""/>
-<part name="C2" library="resistor" deviceset="C-US" device="C0603" value="0.33µF"/>
-<part name="C3" library="resistor" deviceset="C-US" device="C0603" value="0.1µF"/>
+<part name="C2" library="resistor" deviceset="C-US" device="C0603" value="0.33uF"/>
+<part name="C3" library="resistor" deviceset="C-US" device="C0603" value="0.1uF"/>
 <part name="P+3" library="supply1" deviceset="+5V" device=""/>
 <part name="SUPPLY4" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY5" library="supply2" deviceset="GND" device=""/>
@@ -7395,7 +7395,7 @@ wire to board 2.54 mm (0.100") pitch header</description>
 <part name="R1" library="resistor" deviceset="R-US_" device="R0603" value="220"/>
 <part name="C4" library="resistor" deviceset="C-US" device="C0603" value="22pF"/>
 <part name="C5" library="resistor" deviceset="C-US" device="C0603" value="22pF"/>
-<part name="C1" library="resistor" deviceset="C-US" device="C0603" value="0.1µF"/>
+<part name="C1" library="resistor" deviceset="C-US" device="C0603" value="0.1uF"/>
 <part name="R4" library="resistor" deviceset="R-US_" device="R0603" value="850"/>
 <part name="R2" library="resistor" deviceset="R-US_" device="R0603" value="200"/>
 <part name="X1" library="con-molex" deviceset="C-GRID-05" device="-15-91"/>

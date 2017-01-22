@@ -33,15 +33,15 @@ void setup() {
   lcd.setCursor(0,1);
   lcd.print("Velocity:");
 
-  TIMSK2 &= ~(1<<TOIE2);
-  TCCR2A &= ~((1<<WGM21) | (1<<WGM20));
-  TCCR2B &= ~(1<<WGM22);
-  ASSR &= ~(1<<AS2);
-  TIMSK2 &= ~(1<<OCIE2A);
-  TCCR2B |= (1<<CS22)  | (1<<CS20);
+  TIMSK2 &= ~(1<<TOIE2);   // TIMSK2 : Timer Interrupt Mask Register   TOIE2: Timer/Counter2 Overflow Interrupt Enable
+  TCCR2A &= ~((1<<WGM21) | (1<<WGM20));  //TCCR2A : Timer/Counter Control Register A  WGM2n: Waveform Generation Mode
+  TCCR2B &= ~(1<<WGM22);      // Timer/Counter Control Register B       WGM22:Waveform Generation Mode
+  ASSR &= ~(1<<AS2);         // ASSR: Asynchronous Status Register    AS2: Asynchronous Timer/Counter2
+  TIMSK2 &= ~(1<<OCIE2A);    // OCIEA: Timer/Counter0 Output Compare A Match Interrupt Enable
+  TCCR2B |= (1<<CS22)  | (1<<CS20);  // CS2[2:0]: Clock Select
   TCCR2B &= ~(1<<CS21);
-  TCNT2 = tcnt;
-  TIMSK2 |= (1<<TOIE2);
+  TCNT2 = tcnt;          //Timer/Counter
+  TIMSK2 |= (1<<TOIE2);     //TOIE2: Timer/Counter2 Overflow Interrupt Enable
   Serial.begin (9600); //
   delay(500);
 }

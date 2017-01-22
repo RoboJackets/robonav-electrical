@@ -1,32 +1,29 @@
 #include "TinyWireS.h"
 
-const int addr = 7;
+const byte addr = 7;
 
-const int output = 10;
+const int output = 4;
 
 uint8_t dataIn;
-uint8_t n;
 
-double f = 18;
+double f = 0;
 
 void setup() 
 {
   TinyWireS.begin(addr);
-  TinyWireS.onReceive(receiveEvent);
 
   pinMode(output, OUTPUT);
+  tone(output, 9000);
 }
 
 void loop() 
 {
-  digitalWrite(output, HIGH);
-  delay(f * 1000 / 2);
-  digitalWrite(output, LOW);
-  delay(f * 1000 / 2);
+  if (TinyWireS.available())
+  {
+    int r = TinyWireS.receive();
+    noTone(output);
+    tone(output, r * 100);
+  }
 }
 
-void receiveEvent(uint8_t num)
-{
-  dataIn = TinyWireS.receive();
-  f = (double)dataIn / 100;
-}
+

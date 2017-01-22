@@ -1,6 +1,6 @@
 #include "TinyWireS.h"
 
-const int addr = 7;
+const int addr = 8;
 
 const int output = 6;
 

@@ -1,0 +1,26 @@
+Partlist
+
+Exported from EncoderTBPCB.brd at 22/01/2017 6:40 PM
+
+EAGLE Version 7.7.0 Copyright (c) 1988-2016 CadSoft
+
+Assembly variant: 
+
+Part     Value           Package           Library                       Position (mm)         Orientation
+
+C1       0.1uF           C0603             resistor                      (10.62 12.51)         R270
+C2       0.33uF          C0603             resistor                      (21.32 41.64)         R0
+C3       0.1uF           C0603             resistor                      (28.94 41.64)         R180
+C4       22pF            C0603             resistor                      (26.67 19.05)         R270
+C5       22pF            C0603             resistor                      (24.67 24.87)         R90
+D1       1N4004          DO41-10           diode                         (12.7 38.1)           R180
+G1       AB9V            AB9V              battery                       (0 25.4)              R0
+IC1      7805DT          TO252             linear                        (26.13 48.26)         R0
+JP1                      2X03              pinhead                       (3.19 7.38)           R0
+JP2                      1X16              pinhead                       (38.1 27.94)          R270
+Q1       16MHz           QS                special                       (31.75 21.59)         R270
+R1       220             R0603             resistor                      (34.02 11.43)         R0
+R2       200             R0603             resistor                      (30.02 8.89)          R0
+R4       850             R0603             resistor                      (33.75 41.64)         R0
+U1       ATMEGA328P-PU   DIP254P762X457-28 Atmel_By_element14_Batch_1-00 (13.97 33.02)         R180
+X1       C-GRID-05-15-91 15-91-05          con-molex                     (-7.62 45.72)         R90

@@ -1,4 +1,5 @@
 # Ignore list for Eagle, a PCB layout tool
+*.lck
 
 # Backup files
 *.s#?
@@ -34,3 +35,35 @@ eagle.epf
 *.info
 
 *.eps
+
+Transcode?Report.txt
+
+#exclude datasheets
+datasheets/
+
+#exclude gerbers
+*.ger
+*.nc
+*.do
+*.GBL
+*.GBO
+*.GBP
+*.GBS
+*.GML
+*.GTL
+*.GTO
+*.GTP
+*.GTS
+
+# MATLAB autosave file
+*.asv
+
+# OS X
+.DS_Store
+
+# log files
+*.log
+
+# autorouter log files
+*.pro
+

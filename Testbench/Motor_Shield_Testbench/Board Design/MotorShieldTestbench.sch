@@ -6570,9 +6570,9 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <label x="378.46" y="144.78" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U1" gate="1" pin="PK6(ADC14/PCINT22)"/>
-<wire x1="266.7" y1="15.24" x2="256.54" y2="15.24" width="0.1524" layer="91"/>
-<label x="256.54" y="15.24" size="1.778" layer="95"/>
+<pinref part="U1" gate="1" pin="PK5(ADC13/PCINT21)"/>
+<wire x1="266.7" y1="12.7" x2="256.54" y2="12.7" width="0.1524" layer="91"/>
+<label x="256.54" y="12.7" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SCK" class="0">
@@ -6748,9 +6748,9 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <label x="175.26" y="152.4" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U1" gate="1" pin="(AD2)PA2"/>
-<wire x1="337.82" y1="91.44" x2="347.98" y2="91.44" width="0.1524" layer="91"/>
-<label x="337.82" y="91.44" size="1.778" layer="95"/>
+<pinref part="U1" gate="1" pin="PK6(ADC14/PCINT22)"/>
+<wire x1="266.7" y1="15.24" x2="256.54" y2="15.24" width="0.1524" layer="91"/>
+<label x="256.54" y="15.24" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="LWAVE" class="0">

@@ -5,7 +5,7 @@ const int rSpeed = A8;
 const int leftDir = 18;
 const int lSpeed = A9;
 
-const int led = 78;
+const int led = 1;
 
 const int lSelect = 67;
 const int rSelect = 75;
@@ -48,8 +48,8 @@ void setup()
   pinMode(leftDir, INPUT);
   pinMode(lSpeed, INPUT);
 
-  pinMode(select, OUTPUT);
-  digitalWrite(select, HIGH);
+  pinMode(lSelect, OUTPUT);
+  digitalWrite(lSelect, HIGH);
 }
 
 void loop() 
@@ -58,14 +58,14 @@ void loop()
   {
     if (desiredSpeedR[i] < 0)
     {
-      digitalWrite(select, LOW);
+      digitalWrite(lSelect, LOW);
     }
     Wire.beginTransmission(7);
-    Wire.write(abs(desiredSpeedL[i] * 100 * ticksPerMile));
+    Wire.write(2);
     Wire.endTransmission();
   
     Wire.beginTransmission(8);
-    Wire.write(abs(desiredSpeedR[i] * 100 * ticksPerMile));
+    Wire.write(2);
     Wire.endTransmission();
   
     delay(1000);
@@ -75,7 +75,7 @@ void loop()
     leftSpeed[i] = analogRead(lSpeed);
     rightSpeed[i] = analogRead(rSpeed);
 
-    digitalWrite(select, HIGH);
+    digitalWrite(lSelect, HIGH);
   }
 
   for (int i = 0; i < 11; i ++)

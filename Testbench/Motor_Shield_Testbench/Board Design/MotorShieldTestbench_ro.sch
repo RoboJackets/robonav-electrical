@@ -6692,6 +6692,11 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <wire x1="198.12" y1="38.1" x2="205.74" y2="38.1" width="0.1524" layer="91"/>
 <label x="198.12" y="38.1" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="U1" gate="1" pin="(RXD1/INT2)PD2"/>
+<wire x1="337.82" y1="22.86" x2="347.98" y2="22.86" width="0.1524" layer="91"/>
+<label x="337.82" y="22.86" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="RE2" class="0">
 <segment>
@@ -6703,6 +6708,11 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <pinref part="U8" gate="A" pin="Y"/>
 <wire x1="198.12" y1="7.62" x2="205.74" y2="7.62" width="0.1524" layer="91"/>
 <label x="198.12" y="7.62" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U1" gate="1" pin="(TXD1/INT3)PD3"/>
+<wire x1="337.82" y1="25.4" x2="347.98" y2="25.4" width="0.1524" layer="91"/>
+<label x="337.82" y="25.4" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="LE1" class="0">
@@ -6716,6 +6726,11 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <wire x1="198.12" y1="99.06" x2="205.74" y2="99.06" width="0.1524" layer="91"/>
 <label x="198.12" y="99.06" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="U1" gate="1" pin="(XCK0/AIN0)PE2"/>
+<wire x1="337.82" y1="0" x2="347.98" y2="0" width="0.1524" layer="91"/>
+<label x="337.82" y="0" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="LE2" class="0">
 <segment>
@@ -6728,6 +6743,11 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <wire x1="198.12" y1="68.58" x2="205.74" y2="68.58" width="0.1524" layer="91"/>
 <label x="198.12" y="68.58" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="U1" gate="1" pin="(OC3A/AIN1)PE3"/>
+<wire x1="337.82" y1="2.54" x2="347.98" y2="2.54" width="0.1524" layer="91"/>
+<label x="337.82" y="2.54" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="RDIR" class="0">
 <segment>
@@ -6736,9 +6756,9 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <label x="175.26" y="185.42" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U1" gate="1" pin="(AD1)PA1"/>
-<wire x1="337.82" y1="88.9" x2="347.98" y2="88.9" width="0.1524" layer="91"/>
-<label x="337.82" y="88.9" size="1.778" layer="95"/>
+<pinref part="U1" gate="1" pin="PK4(ADC12/PCINT20)"/>
+<wire x1="266.7" y1="10.16" x2="256.54" y2="10.16" width="0.1524" layer="91"/>
+<label x="256.54" y="10.16" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="LDIR" class="0">

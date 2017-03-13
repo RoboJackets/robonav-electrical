@@ -72,7 +72,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.3471839"
-     inkscape:cx="355.02836"
+     inkscape:cx="318.60776"
      inkscape:cy="503.5969"
      inkscape:document-units="cm"
      inkscape:current-layer="layer1"
@@ -110,22 +110,6 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#e6e6e6;fill-opacity:1;stroke:none;stroke-width:0.26458332;"
-       x="59.230583"
-       y="149.67522"
-       id="text4489"><tspan
-         sodipodi:role="line"
-         id="tspan4487"
-         x="59.230583"
-         y="149.67522"
-         style="fill:#e6e6e6;fill-opacity:1;stroke-width:0.26458332;">      Pyle </tspan><tspan
-         sodipodi:role="line"
-         x="59.230583"
-         y="162.90439"
-         style="fill:#e6e6e6;fill-opacity:1;stroke-width:0.26458332;"
-         id="tspan4491">24V DC to 12V DC</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#e6e6e6;fill-opacity:1;stroke:none;stroke-width:0.26458332;"
        x="151.53409"
        y="117.80494"
        id="text4495"><tspan
@@ -134,17 +118,6 @@
          x="151.53409"
          y="127.45541"
          style="stroke-width:0.26458332;fill:#e6e6e6;fill-opacity:1;" /></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#e6e6e6;fill-opacity:1;stroke:none;stroke-width:0.26458332;"
-       x="124.17376"
-       y="117.20361"
-       id="text4499"><tspan
-         sodipodi:role="line"
-         id="tspan4497"
-         x="124.17376"
-         y="117.20361"
-         style="fill:#e6e6e6;fill-opacity:1;stroke-width:0.26458332;">720 Watts</tspan></text>
     <rect
        style="fill:#e6e6e6;fill-opacity:1;stroke-width:18.90958977;stroke-miterlimit:4;stroke-dasharray:none"
        id="rect4501"
@@ -248,5 +221,41 @@
            style="fill:#000000;fill-opacity:1;stroke-width:26.50657845;stroke-miterlimit:4;stroke-dasharray:none" />
       </g>
     </g>
+    <image
+       y="140.08087"
+       x="65.341499"
+       id="image4523"
+       xlink:href="data:image/png;base64,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
+AAAAAElFTkSuQmCC
+"
+       preserveAspectRatio="none"
+       height="35.748829"
+       width="86.87381" />
   </g>
 </svg>

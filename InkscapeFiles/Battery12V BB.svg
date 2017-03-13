@@ -5,6 +5,7 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    id="svg8"
@@ -23,19 +24,19 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="2560"
-     inkscape:window-height="1351"
+     inkscape:window-width="1258"
+     inkscape:window-height="1329"
      id="namedview14"
      showgrid="false"
      units="cm"
      inkscape:document-units="cm"
      inkscape:zoom="0.71"
-     inkscape:cx="396.85039"
+     inkscape:cx="161.63912"
      inkscape:cy="335.90773"
-     inkscape:window-x="-11"
-     inkscape:window-y="-11"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="layer3" />
+     inkscape:window-x="1280"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg8" />
   <defs
      id="defs2" />
   <metadata
@@ -98,17 +99,21 @@
        width="25.308163"
        id="rect4499"
        style="opacity:0.52000002;fill:#8c8c8c;fill-opacity:1;stroke-width:0.28754774" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:68.61687469px;line-height:166.56987px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:6.66279411"
-       x="65.107368"
-       y="187.19777"
-       id="text4503"
-       transform="scale(0.86431984,1.1569791)"><tspan
-         sodipodi:role="line"
-         id="tspan4501"
-         x="65.107368"
-         y="187.19777"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:68.61687469px;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:6.66279411">12V</tspan></text>
   </g>
+  <image
+     y="151.44316"
+     x="66.10112"
+     id="image4499"
+     xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAAAxCAIAAADhgOjQAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAE8SURBVGhD7dPZEYMwDEXR1EVBrodqaIZiCBCv
+IHl9kyiM7mewjQ6E1/aIlCEpZUhKGZJShqSezFjn6XVmFvsLk1/omubVXnJVnxWW3g8pdmWkg/G3
+XoxdQpTuan4mHYqEcR+NuzM5WrQ9maTSMaLwjHQGd2SOQV0Lp8RXqxxDCsf4HOKPKDHYvIN+H/yM
+Ywr6E+9nMAMXHYOKLzHCa6LnHFWAGawi7xhWYBkZRc7R+9CikAz6+/ZxDoACyCgg9mgHQgFjlBF7
+lAOiwDC8obTBnRscGAWA4dbmX4Tt6gApRhlNhqPUgVIMMZoNR7HD/hkbdnP1M6o+aiKPNwam6GVU
+f9RE4SWeIRSeEeZiCwNfBmFigcl2iOInjPhuGAXzp/q7lCEpZUhKGZJShqSUISllSEoZklKGpJQh
+p217AxXlkuEdt3ikAAAAAElFTkSuQmCC
+"
+     preserveAspectRatio="none"
+     height="62.677681"
+     width="76.855865" />
 </svg>

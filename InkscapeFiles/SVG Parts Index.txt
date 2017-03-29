@@ -1,0 +1,20 @@
+***This file contains all parts from the current IGVC Robot***
+12V Lithium-acid Battery
+Switch
+24V Rail
+GPS power Plug
+PC battery Controller
+E-stop Solenoid
+Reciever
+Arduino
+Shunt
+Battery Controller
+Current Measure
+Motor Shields
+Encoder
+24V to 12V Converter
+Signal Light
+E-stop Light
+5V Converter
+
+

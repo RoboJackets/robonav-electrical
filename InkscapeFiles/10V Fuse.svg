@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg9875"
+   inkscape:version="0.92.1 r15371"
+   sodipodi:docname="10V Fuse.svg">
+  <defs
+     id="defs9869" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.0834071"
+     inkscape:cx="-64.285714"
+     inkscape:cy="560"
+     inkscape:document-units="mm"
+     inkscape:current-layer="g6972"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata9872">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       transform="matrix(1.0059877,0,0,0.51939113,246.35968,90.056256)"
+       id="g6972">
+      <rect
+         ry="2.1351135"
+         y="150.952"
+         x="-166.46564"
+         height="16.309931"
+         width="31.17009"
+         id="rect6955"
+         style="fill:#bd9a26;fill-opacity:1;stroke:none;stroke-width:5.3993659;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <text
+         id="text6959"
+         y="162.91261"
+         x="-151.60547"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.69999981px;line-height:19.64999962;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#f0f0f0;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="fill:#f0f0f0;fill-opacity:1;stroke-width:0.26458332"
+           y="162.91261"
+           x="-151.60547"
+           id="tspan6957"
+           sodipodi:role="line">10V</tspan></text>
+    </g>
+    <rect
+       style="fill:#8c8c8c;fill-opacity:1;stroke:none;stroke-width:4.35699987;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect8688"
+       width="7.7453794"
+       height="3.9193485"
+       x="76.126617"
+       y="170.85643"
+       ry="1.9596742" />
+    <rect
+       style="fill:#8c8c8c;fill-opacity:1;stroke:none;stroke-width:4.35699987;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect8688-7"
+       width="7.7453799"
+       height="3.9193485"
+       x="106.1266"
+       y="170.85272"
+       ry="1.9596742" />
+  </g>
+</svg>

@@ -9,11 +9,11 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="708.66138"
-   height="708.66138"
+   width="7.75cm"
+   height="15.75cm"
    id="svg2"
    version="1.1"
-   inkscape:version="0.92.0 r15299"
+   inkscape:version="0.92.1 r15371"
    sodipodi:docname="Solenoid BB.svg">
   <defs
      id="defs4" />
@@ -25,17 +25,17 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.82"
-     inkscape:cx="365.11534"
-     inkscape:cy="351.68533"
+     inkscape:cx="161.4568"
+     inkscape:cy="281.09609"
      inkscape:document-units="cm"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="cm"
-     inkscape:window-width="807"
-     inkscape:window-height="566"
-     inkscape:window-x="198"
-     inkscape:window-y="102"
-     inkscape:window-maximized="0" />
+     inkscape:window-width="2560"
+     inkscape:window-height="1351"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -44,7 +44,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -52,9 +52,10 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-343.69935)">
+     transform="translate(0,-457.0847)">
     <g
-       id="g958">
+       id="g958"
+       transform="translate(-182.92683,84.146341)">
       <rect
          y="477.97049"
          x="202.43903"
@@ -62,16 +63,14 @@
          width="251.21951"
          id="rect2993"
          style="fill:#333333;stroke-width:1.14795327" />
-      <path
+      <ellipse
          transform="matrix(0.96774194,0,0,0.94838709,8.8512975,354.6342)"
-         d="M 463.41464,140.97845 A 132.31708,94.512192 0 0 1 331.09756,235.49065 132.31708,94.512192 0 0 1 198.78049,140.97845 132.31708,94.512192 0 0 1 331.09756,46.466263 132.31708,94.512192 0 0 1 463.41464,140.97845 Z"
-         sodipodi:ry="94.512192"
-         sodipodi:rx="132.31708"
-         sodipodi:cy="140.97845"
-         sodipodi:cx="331.09756"
          id="path2995"
          style="fill:#000000"
-         sodipodi:type="arc" />
+         cx="331.09756"
+         cy="140.97845"
+         rx="132.31708"
+         ry="94.512192" />
       <ellipse
          ry="89.63414"
          rx="126.82927"
@@ -89,7 +88,7 @@
          transform="translate(0,343.69935)"
          inkscape:connector-curvature="0"
          id="path3027"
-         d="m 307.08719,412.57398 c -12.25697,-2.05249 -22.0526,-4.63442 -35.66105,-9.39951 -10.9779,-3.844 -33.20795,-14.11508 -37.4651,-17.31023 -2.24626,-1.68589 -2.55561,-5.22034 -4.99868,-57.11094 -1.43233,-30.42261 -2.41611,-55.53914 -2.18618,-55.81451 0.22993,-0.27537 6.04641,1.19179 12.92551,3.26036 58.47144,17.58259 123.97161,16.87475 184.5851,-1.99474 l 11.10203,-3.45616 0.88411,56.48983 c 0.48626,31.0694 0.58414,56.97516 0.21753,57.56835 -1.1658,1.88629 -27.76361,14.44085 -39.15937,18.4838 -21.5344,7.63991 -34.38473,9.93376 -58.53658,10.44908 -14.75818,0.3149 -25.14813,-0.0669 -31.70732,-1.16533 l 0,0 z"
+         d="m 307.08719,412.57398 c -12.25697,-2.05249 -22.0526,-4.63442 -35.66105,-9.39951 -10.9779,-3.844 -33.20795,-14.11508 -37.4651,-17.31023 -2.24626,-1.68589 -2.55561,-5.22034 -4.99868,-57.11094 -1.43233,-30.42261 -2.41611,-55.53914 -2.18618,-55.81451 0.22993,-0.27537 6.04641,1.19179 12.92551,3.26036 58.47144,17.58259 123.97161,16.87475 184.5851,-1.99474 l 11.10203,-3.45616 0.88411,56.48983 c 0.48626,31.0694 0.58414,56.97516 0.21753,57.56835 -1.1658,1.88629 -27.76361,14.44085 -39.15937,18.4838 -21.5344,7.63991 -34.38473,9.93376 -58.53658,10.44908 -14.75818,0.3149 -25.14813,-0.0669 -31.70732,-1.16533 z"
          style="fill:#ffffff" />
       <g
          transform="translate(264.3332,-188.9091)"
@@ -212,43 +211,43 @@
     <ellipse
        style="opacity:0.52000002;fill:#8c8c8c;fill-opacity:1;stroke-width:1.05409253"
        id="path879"
-       cx="418.90247"
-       cy="487.72662"
+       cx="235.97562"
+       cy="571.87299"
        rx="20.121952"
        ry="18.292685" />
     <ellipse
        style="opacity:0.52000002;fill:#8c8c8c;fill-opacity:1;stroke-width:1.05409253"
        id="path879-9"
-       cx="326.82928"
-       cy="427.97049"
+       cx="143.90244"
+       cy="512.11682"
        rx="20.121952"
        ry="18.292685" />
     <ellipse
        style="opacity:0.52000002;fill:#8c8c8c;fill-opacity:1;stroke-width:1.05409253"
        id="path879-6"
-       cx="326.82925"
-       cy="540.16559"
+       cx="143.9024"
+       cy="624.31195"
        rx="20.121952"
        ry="18.292685" />
     <ellipse
        style="opacity:0.52000002;fill:#8c8c8c;fill-opacity:1;stroke-width:1.05409253"
        id="path879-0"
-       cx="243.90244"
-       cy="487.72659"
+       cx="60.975605"
+       cy="571.87292"
        rx="20.121952"
        ry="18.292685" />
     <ellipse
        style="opacity:0.52000002;fill:#8c8c8c;fill-opacity:1;stroke-width:1.05409253"
        id="path879-6-3"
-       cx="259.75607"
-       cy="876.75098"
+       cx="76.829247"
+       cy="960.89734"
        rx="20.121952"
        ry="18.292685" />
     <ellipse
        style="opacity:0.52000002;fill:#8c8c8c;fill-opacity:1;stroke-width:1.05409253"
        id="path879-6-1"
-       cx="403.65854"
-       cy="876.75092"
+       cx="220.73169"
+       cy="960.89728"
        rx="20.121952"
        ry="18.292685" />
   </g>

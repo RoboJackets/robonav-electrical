@@ -9,12 +9,12 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="15cm"
-   height="15cm"
-   viewBox="0 0 150 150"
+   width="8cm"
+   height="11cm"
+   viewBox="0 0 80 110"
    version="1.1"
    id="svg8"
-   inkscape:version="0.92.0 r15299"
+   inkscape:version="0.92.1 r15371"
    sodipodi:docname="Motor Fuse BB.svg">
   <defs
      id="defs2" />
@@ -26,16 +26,16 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.08"
-     inkscape:cx="250.71429"
+     inkscape:cx="96.08466"
      inkscape:cy="282.69312"
      inkscape:document-units="cm"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="cm"
-     inkscape:window-width="1440"
-     inkscape:window-height="837"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:window-width="2560"
+     inkscape:window-height="1351"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata5">
@@ -53,10 +53,10 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-147.00002)">
+     transform="translate(0,-187.00002)">
     <g
        id="g4510"
-       transform="translate(-2.9398148,-1.2249228)">
+       transform="translate(-34.542824,22.53858)">
       <rect
          y="177.69255"
          x="39.6875"
@@ -81,35 +81,35 @@
        id="rect4512"
        width="8.5744591"
        height="14.45409"
-       x="42.137344"
-       y="168.13814" />
+       x="10.534337"
+       y="191.90164" />
     <rect
        style="opacity:1;fill:#8c8c8c;fill-opacity:1;stroke-width:0.26458332"
        id="rect4512-4"
        width="8.5744591"
        height="14.45409"
-       x="59.408756"
-       y="168.26064" />
+       x="27.805748"
+       y="192.02414" />
     <rect
        style="opacity:1;fill:#8c8c8c;fill-opacity:1;stroke-width:0.26458332"
        id="rect4512-5"
        width="8.5744591"
        height="14.45409"
-       x="76.557678"
-       y="168.26062" />
+       x="44.954666"
+       y="192.02412" />
     <rect
        style="opacity:1;fill:#8c8c8c;fill-opacity:1;stroke-width:0.26458332"
        id="rect4512-2"
        width="8.5744591"
        height="14.45409"
-       x="95.176506"
-       y="168.01564" />
+       x="63.573498"
+       y="191.77914" />
     <rect
        style="opacity:1;fill:#8c8c8c;fill-opacity:1;stroke-width:0.26458332"
        id="rect4512-0"
        width="8.5744591"
        height="14.45409"
-       x="67.248268"
-       y="257.43503" />
+       x="35.645256"
+       y="281.19852" />
   </g>
 </svg>

@@ -10,9 +10,9 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    id="svg8"
    version="1.1"
-   viewBox="0 0 210 297"
-   height="29.700001cm"
-   width="21cm"
+   viewBox="0 0 140 109.99999"
+   height="11cm"
+   width="14cm"
    sodipodi:docname="Battery12V BB.svg"
    inkscape:version="0.92.1 r15371">
   <sodipodi:namedview
@@ -24,18 +24,18 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1258"
-     inkscape:window-height="1329"
+     inkscape:window-width="2560"
+     inkscape:window-height="1351"
      id="namedview14"
      showgrid="false"
      units="cm"
      inkscape:document-units="cm"
      inkscape:zoom="0.71"
-     inkscape:cx="161.63912"
-     inkscape:cy="335.90773"
-     inkscape:window-x="1280"
-     inkscape:window-y="0"
-     inkscape:window-maximized="0"
+     inkscape:cx="20.089824"
+     inkscape:cy="590.22395"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
      inkscape:current-layer="svg8" />
   <defs
      id="defs2" />
@@ -47,14 +47,14 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
      style="display:inline"
      id="layer1"
-     transform="matrix(1.0797487,0,0,1.4994263,-0.37678889,35.659408)">
+     transform="matrix(1.0797487,0,0,1.4994263,-37.269393,-83.145175)">
     <rect
        y="64.922615"
        x="36.285709"
@@ -80,39 +80,33 @@
   <g
      inkscape:groupmode="layer"
      id="layer2"
-     inkscape:label="Battery Cover" />
+     inkscape:label="Battery Cover"
+     transform="translate(0,-187.00001)" />
   <g
      inkscape:groupmode="layer"
      id="layer3"
-     inkscape:label="Battery Connectors">
+     inkscape:label="Battery Connectors"
+     transform="translate(0,-187.00001)">
     <rect
        style="opacity:0.52000002;fill:#8c8c8c;fill-opacity:1;stroke-width:0.28754774"
        id="rect4497"
        width="25.308163"
        height="7.42628"
-       x="149.80634"
-       y="125.5798" />
+       x="112.91373"
+       y="193.77522" />
     <rect
-       y="125.5798"
-       x="38.802662"
+       y="193.77522"
+       x="1.9100575"
        height="7.42628"
        width="25.308163"
        id="rect4499"
        style="opacity:0.52000002;fill:#8c8c8c;fill-opacity:1;stroke-width:0.28754774" />
   </g>
   <image
-     y="151.44316"
-     x="66.10112"
+     y="32.638573"
+     x="29.208517"
      id="image4499"
-     xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAAAxCAIAAADhgOjQAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
-jwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAE8SURBVGhD7dPZEYMwDEXR1EVBrodqaIZiCBCv
-IHl9kyiM7mewjQ6E1/aIlCEpZUhKGZJShqSezFjn6XVmFvsLk1/omubVXnJVnxWW3g8pdmWkg/G3
-XoxdQpTuan4mHYqEcR+NuzM5WrQ9maTSMaLwjHQGd2SOQV0Lp8RXqxxDCsf4HOKPKDHYvIN+H/yM
-Ywr6E+9nMAMXHYOKLzHCa6LnHFWAGawi7xhWYBkZRc7R+9CikAz6+/ZxDoACyCgg9mgHQgFjlBF7
-lAOiwDC8obTBnRscGAWA4dbmX4Tt6gApRhlNhqPUgVIMMZoNR7HD/hkbdnP1M6o+aiKPNwam6GVU
-f9RE4SWeIRSeEeZiCwNfBmFigcl2iOInjPhuGAXzp/q7lCEpZUhKGZJShqSUISllSEoZklKGpJQh
-p217AxXlkuEdt3ikAAAAAElFTkSuQmCC
-"
+     xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAAAxCAIAAADhgOjQAAAAAXNSR0IArs4c6QAAAARnQU1BAACx jwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAE8SURBVGhD7dPZEYMwDEXR1EVBrodqaIZiCBCv IHl9kyiM7mewjQ6E1/aIlCEpZUhKGZJShqSezFjn6XVmFvsLk1/omubVXnJVnxWW3g8pdmWkg/G3 XoxdQpTuan4mHYqEcR+NuzM5WrQ9maTSMaLwjHQGd2SOQV0Lp8RXqxxDCsf4HOKPKDHYvIN+H/yM Ywr6E+9nMAMXHYOKLzHCa6LnHFWAGawi7xhWYBkZRc7R+9CikAz6+/ZxDoACyCgg9mgHQgFjlBF7 lAOiwDC8obTBnRscGAWA4dbmX4Tt6gApRhlNhqPUgVIMMZoNR7HD/hkbdnP1M6o+aiKPNwam6GVU f9RE4SWeIRSeEeZiCwNfBmFigcl2iOInjPhuGAXzp/q7lCEpZUhKGZJShqSUISllSEoZklKGpJQh p217AxXlkuEdt3ikAAAAAElFTkSuQmCC "
      preserveAspectRatio="none"
      height="62.677681"
      width="76.855865" />

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="11cm"
+   height="5.6999998cm"
+   viewBox="0 0 110 56.999995"
+   version="1.1"
+   id="svg4502"
+   inkscape:version="0.92.1 r15371"
+   sodipodi:docname="E-stop Push Button.svg">
+  <defs
+     id="defs4496" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="-100"
+     inkscape:cy="560"
+     inkscape:document-units="cm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="cm"
+     inkscape:window-width="2560"
+     inkscape:window-height="1351"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata4499">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-240.00012)">
+    <path
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#fcfcfc;stroke-width:1.66999996;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0;paint-order:fill markers stroke"
+       id="path5743"
+       sodipodi:type="arc"
+       sodipodi:cx="55.61565"
+       sodipodi:cy="269.02975"
+       sodipodi:rx="25.823376"
+       sodipodi:ry="25.336143"
+       sodipodi:start="0"
+       sodipodi:end="6.2828711"
+       sodipodi:open="true"
+       d="m 81.439026,269.02975 a 25.823376,25.336143 0 0 1 -25.821347,25.33615 25.823376,25.336143 0 0 1 -25.825404,-25.33216 25.823376,25.336143 0 0 1 25.81729,-25.34013 25.823376,25.336143 0 0 1 25.82946,25.32818" />
+    <rect
+       style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:#fcfcfc;stroke-width:1.66999996;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0;paint-order:fill markers stroke"
+       id="rect5745"
+       width="29.234013"
+       height="12.018426"
+       x="77.865982"
+       y="262.85812" />
+    <rect
+       style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:#fcfcfc;stroke-width:1.66999996;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0;paint-order:fill markers stroke"
+       id="rect5745-7"
+       width="29.234013"
+       height="12.018426"
+       x="4.7809486"
+       y="262.69571" />
+  </g>
+</svg>

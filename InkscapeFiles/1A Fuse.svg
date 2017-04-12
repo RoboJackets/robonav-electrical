@@ -9,15 +9,15 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="20cm"
-   height="20cm"
-   viewBox="0 0 200 200"
+   width="3.8cm"
+   height="1.1cm"
+   viewBox="0 0 37.999999 11"
    version="1.1"
-   id="svg6992"
+   id="svg9308"
    inkscape:version="0.92.1 r15371"
-   sodipodi:docname="3V Fuse.svg">
+   sodipodi:docname="1A Fuse.svg">
   <defs
-     id="defs6986" />
+     id="defs9302" />
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -25,31 +25,27 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.8352926"
-     inkscape:cx="250.50926"
-     inkscape:cy="703.55948"
+     inkscape:zoom="1.08"
+     inkscape:cx="256.88724"
+     inkscape:cy="57.458332"
      inkscape:document-units="cm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g6972"
      showgrid="false"
-     fit-margin-top="0"
-     fit-margin-left="0"
-     fit-margin-right="0"
-     fit-margin-bottom="0"
-     inkscape:window-width="1920"
-     inkscape:window-height="1017"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:window-width="2560"
+     inkscape:window-height="1351"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
      inkscape:window-maximized="1"
      units="cm" />
   <metadata
-     id="metadata6989">
+     id="metadata9305">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -57,45 +53,50 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-47.914953,83.833129)">
+     transform="translate(0,-286.00012)">
     <g
-       transform="matrix(1.0059877,0,0,0.51939113,278.14802,-151.26895)"
+       transform="matrix(1.0059877,0,0,0.51939113,293.47943,20.837446)"
        id="g6972">
       <rect
          ry="2.1351135"
-         y="150.952"
-         x="-166.46564"
+         y="513.6712"
+         x="-288.99838"
          height="16.309931"
          width="31.17009"
          id="rect6955"
-         style="fill:#520057;fill-opacity:1;stroke:none;stroke-width:5.3993659;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="fill:#19071a;fill-opacity:1;stroke:none;stroke-width:5.3993659;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <text
          id="text6959"
-         y="162.91261"
-         x="-151.60547"
+         y="525.6319"
+         x="-273.61218"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.69999981px;line-height:19.64999962;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#f0f0f0;fill-opacity:1;stroke:none;stroke-width:0.26458332"
          xml:space="preserve"><tspan
            style="fill:#f0f0f0;fill-opacity:1;stroke-width:0.26458332"
-           y="162.91261"
-           x="-151.60547"
+           y="525.6319"
+           x="-273.61218"
            id="tspan6957"
-           sodipodi:role="line">3V</tspan></text>
+           sodipodi:role="line">1A</tspan><tspan
+           style="fill:#f0f0f0;fill-opacity:1;stroke-width:0.26458332"
+           y="775.18689"
+           x="-273.61218"
+           sodipodi:role="line"
+           id="tspan4488" /></text>
     </g>
     <rect
        style="fill:#8c8c8c;fill-opacity:1;stroke:none;stroke-width:4.35699987;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect8688"
-       width="7.745379"
+       width="7.7453794"
        height="3.9193485"
-       x="107.91496"
-       y="-70.468773"
+       x="0.50909978"
+       y="290.03073"
        ry="1.9596742" />
     <rect
        style="fill:#8c8c8c;fill-opacity:1;stroke:none;stroke-width:4.35699987;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect8688-7"
-       width="7.7453794"
+       width="7.7453799"
        height="3.9193485"
-       x="137.91495"
-       y="-70.472481"
+       x="30.509087"
+       y="290.02701"
        ry="1.9596742" />
   </g>
 </svg>

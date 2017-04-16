@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="266.52921mm"
+   height="260.76459mm"
+   viewBox="0 0 266.52921 260.76459"
+   version="1.1"
+   id="svg3686"
+   sodipodi:docname="Voltage Converter.svg"
+   inkscape:version="0.92.1 r15371">
+  <defs
+     id="defs3680">
+    <linearGradient
+       id="linearGradient6872"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#050000;stop-opacity:1;"
+         offset="0"
+         id="stop6870" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient5407"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop5405" />
+    </linearGradient>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="849.94607 : -36.184705 : 1"
+       inkscape:vp_y="0 : 705.0463 : 0"
+       inkscape:vp_z="54.92278 : 52.336533 : 1"
+       inkscape:persp3d-origin="688.96701 : -164.36496 : 1"
+       id="perspective4618" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.39310892"
+     inkscape:cx="1373.9938"
+     inkscape:cy="384.32348"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer2"
+     showgrid="true"
+     inkscape:measure-start="0,0"
+     inkscape:measure-end="0,0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     objecttolerance="1"
+     gridtolerance="1"
+     guidetolerance="1"
+     inkscape:snap-text-baseline="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4782"
+       originx="99.936643"
+       originy="36.960462" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata3683">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(99.936633,-73.195851)">
+    <g
+       aria-label="24V DC to 12V DC"
+       transform="scale(0.85819996,1.1652296)"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.45618057px;line-height:56.84999847;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.5928371"
+       id="text4843" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Layer 2"
+     transform="translate(99.936633,-73.195851)">
+    <rect
+       id="rect3691"
+       width="0"
+       height="258.50909"
+       x="456.20605"
+       y="-248.81718"
+       style="stroke-width:0.26458332" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.69999981px;line-height:5.25;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="147.41072"
+       y="123.8869"
+       id="text4506"><tspan
+         sodipodi:role="line"
+         x="147.41072"
+         y="160.72649"
+         style="stroke-width:0.26458332"
+         id="tspan4508" /><tspan
+         sodipodi:role="line"
+         x="147.41072"
+         y="227.40147"
+         style="stroke-width:0.26458332"
+         id="tspan4512" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.69999981px;line-height:56.84999847;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="250.16428"
+       y="163.36523"
+       id="text4540"><tspan
+         sodipodi:role="line"
+         id="tspan4538"
+         x="250.16428"
+         y="527.86481"
+         style="stroke-width:0.26458332" /></text>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4542"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;line-height:56.84999847;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"><flowRegion
+         id="flowRegion4544"><rect
+           id="rect4546"
+           width="605.71429"
+           height="237.14285"
+           x="665.71429"
+           y="616.80542" /></flowRegion><flowPara
+         id="flowPara4548" /></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4566"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;line-height:56.84999847;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="scale(0.26458333)"><flowRegion
+         id="flowRegion4568"><rect
+           id="rect4570"
+           width="517.14288"
+           height="197.14285"
+           x="702.85712"
+           y="676.80542" /></flowRegion><flowPara
+         id="flowPara4572">ffff 2</flowPara></flowRoot>    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.69999981px;line-height:56.84999847;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="161.01785"
+       y="153.36905"
+       id="text4576"><tspan
+         sodipodi:role="line"
+         id="tspan4574"
+         x="161.01785"
+         y="517.86859"
+         style="text-align:center;text-anchor:middle;stroke-width:0.26458332" /></text>
+    <g
+       aria-label="12 V Converter"
+       transform="scale(0.84603657,1.181982)"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.43749046px;line-height:56.84999847;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.59244776"
+       id="text4580" />
+    <g
+       aria-label="PYLE"
+       transform="scale(0.8091238,1.2359048)"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:61.24830246px;line-height:56.84999847;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.27600622"
+       id="text4590" />
+    <g
+       aria-label="720 WATTS"
+       transform="scale(0.88501308,1.1299268)"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.0239563px;line-height:56.84999847;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.79216582"
+       id="text4590-6" />
+    <g
+       aria-label="PSWNV720"
+       transform="scale(0.83756127,1.1939425)"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.83915329px;line-height:56.84999847;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.89248234"
+       id="text4590-8" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot8773"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;line-height:19.64999962;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(0.26458333,0,0,0.26458333,-133.34549,119.83581)"><flowRegion
+         id="flowRegion8775"><rect
+           id="rect8777"
+           width="614.58234"
+           height="221.31271"
+           x="1623.983"
+           y="301.3548" /></flowRegion><flowPara
+         id="flowPara8779">PPppfjd</flowPara></flowRoot>    <g
+       id="g9449"
+       transform="translate(-329.52118,-28.687656)">
+      <rect
+         ry="3.5598896"
+         y="101.88351"
+         x="263.23724"
+         height="259.79865"
+         width="232.87651"
+         id="rect8769"
+         style="fill:#0f0f0f;fill-opacity:1;stroke:none;stroke-width:4.35699987;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <text
+         transform="scale(0.67412556,1.4834032)"
+         id="text8783"
+         y="152.5439"
+         x="561.52014"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.29918098px;line-height:19.64999962;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.46456623"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.29918098px;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.46456623"
+           y="152.5439"
+           x="561.52014"
+           id="tspan8781"
+           sodipodi:role="line">Pyle 24V to 12V DC</tspan><tspan
+           id="tspan8791"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.29918098px;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.46456623"
+           y="590.72278"
+           x="561.52014"
+           sodipodi:role="line" /></text>
+      <g
+         transform="translate(-374.73662,130.77227)"
+         id="g9384">
+        <rect
+           ry="1.4571568"
+           y="125.53338"
+           x="604.32117"
+           height="106.34245"
+           width="34.325729"
+           id="rect8793"
+           style="fill:#0f0f0f;fill-opacity:1;stroke:none;stroke-width:1.07021105;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <path
+           inkscape:connector-curvature="0"
+           d="m 630.17448,181.9658 c -1.73825,0.87692 -18.48598,13.64568 -18.48598,13.64568 z m 2.64215,6.83461 a 11.669142,9.4502713 0 0 1 -11.66914,9.45027 11.669142,9.4502713 0 0 1 -11.66915,-9.45027 11.669142,9.4502713 0 0 1 11.66915,-9.45028 11.669142,9.4502713 0 0 1 11.66914,9.45028 z"
+           style="fill:#8c8c8c;fill-opacity:1;stroke:#675c5f;stroke-width:3.40308189;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path4780-2-8-5-2-1" />
+        <path
+           inkscape:connector-curvature="0"
+           d="m 630.84753,156.3543 c -1.73825,0.87692 -18.48598,13.64568 -18.48598,13.64568 z m 2.64215,6.83461 a 11.669142,9.4502713 0 0 1 -11.66914,9.45027 11.669142,9.4502713 0 0 1 -11.66915,-9.45027 11.669142,9.4502713 0 0 1 11.66915,-9.45028 11.669142,9.4502713 0 0 1 11.66914,9.45028 z"
+           style="fill:#8c8c8c;fill-opacity:1;stroke:#675c5f;stroke-width:3.40308189;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path4780-2-8-5-2-1-9" />
+        <path
+           inkscape:connector-curvature="0"
+           d="m 629.50142,209.27097 c -1.73825,0.87692 -18.48598,13.64568 -18.48598,13.64568 z m 2.64215,6.83461 a 11.669142,9.4502713 0 0 1 -11.66914,9.45027 11.669142,9.4502713 0 0 1 -11.66915,-9.45027 11.669142,9.4502713 0 0 1 11.66915,-9.45028 11.669142,9.4502713 0 0 1 11.66914,9.45028 z"
+           style="fill:#8c8c8c;fill-opacity:1;stroke:#675c5f;stroke-width:3.40308189;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path4780-2-8-5-2-1-1" />
+        <path
+           inkscape:connector-curvature="0"
+           d="m 630.17448,131.41537 c -1.73825,0.87692 -18.48598,13.64568 -18.48598,13.64568 z m 2.64215,6.83461 a 11.669142,9.4502713 0 0 1 -11.66914,9.45027 11.669142,9.4502713 0 0 1 -11.66915,-9.45027 11.669142,9.4502713 0 0 1 11.66915,-9.45028 11.669142,9.4502713 0 0 1 11.66914,9.45028 z"
+           style="fill:#8c8c8c;fill-opacity:1;stroke:#675c5f;stroke-width:3.40308189;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path4780-2-8-5-2-1-94" />
+      </g>
+      <text
+         transform="scale(0.67412556,1.4834032)"
+         id="text8783-2"
+         y="185.94629"
+         x="562.87067"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.29918098px;line-height:19.64999962;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.46456623"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.29918098px;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.46456623"
+           y="185.94629"
+           x="562.87067"
+           id="tspan8781-3"
+           sodipodi:role="line">Voltage Converter</tspan><tspan
+           id="tspan8791-6"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.29918098px;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.46456623"
+           y="624.12518"
+           x="562.87067"
+           sodipodi:role="line" /></text>
+      <text
+         transform="scale(0.78356335,1.276221)"
+         id="text8783-4"
+         y="103.75249"
+         x="548.34125"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:27.54218864px;line-height:19.64999962;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.57379556"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:27.54218864px;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.57379556"
+           y="103.75249"
+           x="548.34125"
+           id="tspan8781-8"
+           sodipodi:role="line">720 Watts</tspan><tspan
+           id="tspan8791-0"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:27.54218864px;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.57379556"
+           y="644.95648"
+           x="548.34125"
+           sodipodi:role="line" /></text>
+    </g>
+  </g>
+</svg>

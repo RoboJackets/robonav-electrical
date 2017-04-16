@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="11cm"
+   height="5.6999998cm"
+   viewBox="0 0 110 56.999996"
+   version="1.1"
+   id="svg5186"
+   inkscape:version="0.92.1 r15371"
+   sodipodi:docname="Green Start button.svg">
+  <defs
+     id="defs5180" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.87885424"
+     inkscape:cx="142.74493"
+     inkscape:cy="559.81993"
+     inkscape:document-units="cm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="cm"
+     inkscape:window-width="2560"
+     inkscape:window-height="1351"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5183">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-240.00009)">
+    <path
+       style="opacity:1;fill:#008000;fill-opacity:1;stroke:#fcfcfc;stroke-width:1.66999996;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0;paint-order:fill markers stroke"
+       id="path5743"
+       sodipodi:type="arc"
+       sodipodi:cx="53.87693"
+       sodipodi:cy="269.54855"
+       sodipodi:rx="25.823376"
+       sodipodi:ry="25.336143"
+       sodipodi:start="0"
+       sodipodi:end="6.2828711"
+       sodipodi:open="true"
+       d="m 79.700306,269.54855 a 25.823376,25.336143 0 0 1 -25.821347,25.33615 25.823376,25.336143 0 0 1 -25.825404,-25.33217 25.823376,25.336143 0 0 1 25.81729,-25.34012 25.823376,25.336143 0 0 1 25.82946,25.32818" />
+    <rect
+       style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:#fcfcfc;stroke-width:1.66999996;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0;paint-order:fill markers stroke"
+       id="rect5745"
+       width="29.234011"
+       height="12.018426"
+       x="76.127266"
+       y="263.37692" />
+    <rect
+       style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:#fcfcfc;stroke-width:1.66999996;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0;paint-order:fill markers stroke"
+       id="rect5745-7"
+       width="29.234013"
+       height="12.018426"
+       x="3.0422401"
+       y="263.21451" />
+  </g>
+</svg>

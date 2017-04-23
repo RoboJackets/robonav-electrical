@@ -164,8 +164,8 @@ void loop()
   if(desiredSpeedR == 0)
     PWM_R = 0;
 
-  digitalWrite(rightDir, dirR);
-  digitalWrite(leftDir, dirL);
+  digitalWrite(rightDir, HIGH);
+  digitalWrite(leftDir, HIGH);
   analogWrite(rightSpeed, powerR);
   analogWrite(leftSpeed, powerL);
   

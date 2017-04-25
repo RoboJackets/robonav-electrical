@@ -1840,48 +1840,6 @@ wire to board 2.54 mm (0.100") pitch header</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="SparkFun-PowerSymbols">
-<description>&lt;h3&gt;SparkFun Power Symbols&lt;/h3&gt;
-This library contains power, ground, and voltage-supply symbols.
-&lt;br&gt;
-&lt;br&gt;
-We've spent an enormous amount of time creating and checking these footprints and parts, but it is &lt;b&gt; the end user's responsibility&lt;/b&gt; to ensure correctness and suitablity for a given componet or application. 
-&lt;br&gt;
-&lt;br&gt;If you enjoy using this library, please buy one of our products at &lt;a href=" www.sparkfun.com"&gt;SparkFun.com&lt;/a&gt;.
-&lt;br&gt;
-&lt;br&gt;
-&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
-&lt;br&gt;
-&lt;br&gt;
-You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
-<packages>
-</packages>
-<symbols>
-<symbol name="VCC">
-<description>&lt;h3&gt;VCC Voltage Supply&lt;/h3&gt;</description>
-<wire x1="0.762" y1="1.27" x2="0" y2="2.54" width="0.254" layer="94"/>
-<wire x1="0" y1="2.54" x2="-0.762" y2="1.27" width="0.254" layer="94"/>
-<pin name="VCC" x="0" y="0" visible="off" length="short" direction="sup" rot="R90"/>
-<text x="0" y="2.794" size="1.778" layer="96" align="bottom-center">&gt;VALUE</text>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="VCC" prefix="SUPPLY">
-<description>&lt;h3&gt;VCC Voltage Supply&lt;/h3&gt;
-&lt;p&gt;Positive voltage supply (traditionally for a BJT device, C=collector).&lt;/p&gt;</description>
-<gates>
-<gate name="G$1" symbol="VCC" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="SparkFun-Capacitors">
 <description>&lt;h3&gt;SparkFun Capacitors&lt;/h3&gt;
 This library contains capacitors. 
@@ -16647,6 +16605,90 @@ Source: www.stewartconnector.com .. si-50170.pdf</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="IGVC-Power">
+<packages>
+</packages>
+<symbols>
+<symbol name="LGND">
+<pin name="LGND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
+<wire x1="-2.54" y1="0" x2="2.54" y2="0" width="0.4064" layer="94"/>
+<wire x1="-1.27" y1="-1.27" x2="1.27" y2="-1.27" width="0.4064" layer="94"/>
+<text x="0.762" y="0.762" size="1.016" layer="94">L</text>
+</symbol>
+<symbol name="RGND">
+<pin name="RGND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
+<wire x1="-2.54" y1="0" x2="2.54" y2="0" width="0.4064" layer="94"/>
+<wire x1="-1.27" y1="-1.27" x2="1.27" y2="-1.27" width="0.4064" layer="94"/>
+<text x="0.762" y="0.762" size="1.016" layer="94">R</text>
+</symbol>
+<symbol name="L+12V">
+<pin name="L+12V" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
+<text x="-0.254" y="0.508" size="1.016" layer="94">L</text>
+<wire x1="2.54" y1="0" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="-2.54" y2="0" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="0" x2="2.54" y2="0" width="0.254" layer="94"/>
+<text x="-3.302" y="-2.794" size="1.778" layer="94" rot="R90">&gt;VALUE</text>
+</symbol>
+<symbol name="R+12V">
+<pin name="R+12V" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
+<text x="-0.508" y="0.508" size="1.016" layer="94">R</text>
+<wire x1="2.54" y1="0" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="-2.54" y2="0" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="0" x2="2.54" y2="0" width="0.254" layer="94"/>
+<text x="-3.302" y="-2.794" size="1.778" layer="94" rot="R90">&gt;VALUE</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="LGND">
+<gates>
+<gate name="G$1" symbol="LGND" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="RGND">
+<gates>
+<gate name="G$1" symbol="RGND" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="L+12V">
+<gates>
+<gate name="L+12V" symbol="L+12V" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="R+12V">
+<gates>
+<gate name="G$1" symbol="R+12V" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -16671,23 +16713,15 @@ Source: www.stewartconnector.com .. si-50170.pdf</description>
 <part name="X2" library="con-3m" deviceset="2510-" device=""/>
 <part name="X4" library="con-molex" deviceset="C-GRID-05" device="-15-91"/>
 <part name="X5" library="con-molex" deviceset="C-GRID-05" device="-15-91"/>
-<part name="SUPPLY1" library="SparkFun-PowerSymbols" deviceset="VCC" device="" value="LVCC"/>
-<part name="SUPPLY2" library="SparkFun-PowerSymbols" deviceset="VCC" device="" value="LVCC"/>
-<part name="SUPPLY4" library="SparkFun-PowerSymbols" deviceset="VCC" device="" value="LVCC"/>
-<part name="SUPPLY3" library="SparkFun-PowerSymbols" deviceset="VCC" device="" value="LVCC"/>
 <part name="R7" library="SparkFun-Resistors" deviceset="10KOHM" device="-0603-1/10W-1%" value="10k"/>
 <part name="R17" library="SparkFun-Resistors" deviceset="10KOHM" device="-0603-1/10W-1%" value="10k"/>
 <part name="R8" library="SparkFun-Resistors" deviceset="10KOHM" device="-0603-1/10W-1%" value="10k"/>
 <part name="R16" library="SparkFun-Resistors" deviceset="10KOHM" device="-0603-1/10W-1%" value="10k"/>
-<part name="GND12" library="supply1" deviceset="GND" device="" value="RGND"/>
-<part name="GND11" library="supply1" deviceset="GND" device="" value="LGND"/>
-<part name="GND20" library="supply1" deviceset="GND" device="" value="RGND"/>
-<part name="GND19" library="supply1" deviceset="GND" device="" value="LGND"/>
 <part name="+3V33" library="supply1" deviceset="+3V3" device=""/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="R6" library="SparkFun-Resistors" deviceset="47KOHM" device="-0603-1/10W-1%" value="47k"/>
 <part name="C8" library="SparkFun-Capacitors" deviceset="1.0NF/1000PF" device="-0603-50V-10%" value="1000pF"/>
-<part name="S1" library="SparkFun-Switches" deviceset="MOMENTARY-SWITCH-SPST-2" device="-SMD-5.2MM"/>
+<part name="S1" library="SparkFun-Switches" deviceset="MOMENTARY-SWITCH-SPST-2" device="-SMD-5.2MM" value="Momentary Switch 5.2mm"/>
 <part name="U1" library="SparkFun-Sensors" deviceset="MPU-9250" device="" value="9DoF IMU"/>
 <part name="+3V31" library="supply1" deviceset="+3V3" device=""/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
@@ -16710,15 +16744,15 @@ Source: www.stewartconnector.com .. si-50170.pdf</description>
 <part name="P+5" library="supply1" deviceset="+12V" device=""/>
 <part name="P+9" library="supply1" deviceset="+12V" device=""/>
 <part name="P+14" library="supply1" deviceset="+12V" device=""/>
-<part name="T2" library="transistor" deviceset="*-PNP-" device="TO220V"/>
-<part name="T3" library="transistor" deviceset="*-PNP-" device="TO220V"/>
-<part name="T4" library="transistor" deviceset="*-PNP-" device="TO220V"/>
-<part name="T6" library="transistor" deviceset="*-PNP-" device="TO220V"/>
-<part name="T7" library="transistor" deviceset="*-PNP-" device="TO220V"/>
-<part name="T9" library="transistor" deviceset="*-PNP-" device="TO220V"/>
-<part name="T8" library="transistor" deviceset="*-PNP-" device="TO220V"/>
-<part name="T10" library="transistor" deviceset="*-PNP-" device="TO220V"/>
-<part name="T5" library="transistor" deviceset="*-PNP-" device="TO220V"/>
+<part name="T2" library="transistor" deviceset="*-PNP-" device="TO220V" value="TIP41A"/>
+<part name="T3" library="transistor" deviceset="*-PNP-" device="TO220V" value="TIP41A"/>
+<part name="T4" library="transistor" deviceset="*-PNP-" device="TO220V" value="TIP41A"/>
+<part name="T6" library="transistor" deviceset="*-PNP-" device="TO220V" value="TIP41A"/>
+<part name="T7" library="transistor" deviceset="*-PNP-" device="TO220V" value="TIP41A"/>
+<part name="T9" library="transistor" deviceset="*-PNP-" device="TO220V" value="TIP41A"/>
+<part name="T8" library="transistor" deviceset="*-PNP-" device="TO220V" value="TIP41A"/>
+<part name="T10" library="transistor" deviceset="*-PNP-" device="TO220V" value="TIP41A"/>
+<part name="T5" library="transistor" deviceset="*-PNP-" device="TO220V" value="TIP41A"/>
 <part name="GND41" library="supply1" deviceset="GND" device=""/>
 <part name="GND47" library="supply1" deviceset="GND" device=""/>
 <part name="GND50" library="supply1" deviceset="GND" device=""/>
@@ -16739,16 +16773,16 @@ Source: www.stewartconnector.com .. si-50170.pdf</description>
 <part name="R46" library="SparkFun-Resistors" deviceset="3.9KOHM" device="-0603-1/10W-1%" value="536"/>
 <part name="R33" library="SparkFun-Resistors" deviceset="3.9KOHM" device="-0603-1/10W-1%" value="2700"/>
 <part name="R45" library="SparkFun-Resistors" deviceset="3.9KOHM" device="-0603-1/10W-1%" value="2700"/>
-<part name="D2" library="SparkFun-LED" deviceset="LED" device="0603"/>
-<part name="D5" library="SparkFun-LED" deviceset="LED" device="0603"/>
-<part name="D4" library="SparkFun-LED" deviceset="LED" device="0603"/>
-<part name="D6" library="SparkFun-LED" deviceset="LED" device="0603"/>
+<part name="D2" library="SparkFun-LED" deviceset="LED" device="0603" value="RED"/>
+<part name="D5" library="SparkFun-LED" deviceset="LED" device="0603" value="BLUE"/>
+<part name="D4" library="SparkFun-LED" deviceset="LED" device="0603" value="GREEN"/>
+<part name="D6" library="SparkFun-LED" deviceset="LED" device="0603" value="WHITE"/>
 <part name="GND44" library="supply1" deviceset="GND" device=""/>
 <part name="D1" library="SparkFun-DiscreteSemi" deviceset="DIODE-ZENER" device="-MM3Z3V3T1G" value="3.3V"/>
 <part name="D3" library="SparkFun-DiscreteSemi" deviceset="DIODE-ZENER" device="-MM3Z3V3T1G" value="3.3V"/>
 <part name="Q2" library="transistor-npn" deviceset="BC846*" device="SMD" technology="A"/>
 <part name="C30" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0603-25V-(+80/-20%)" value="0.1uF"/>
-<part name="J4" library="SparkFun-Connectors" deviceset="CONN_12" device="LOCK_LONGPADS"/>
+<part name="J4" library="SparkFun-Connectors" deviceset="CONN_12" device="LOCK_LONGPADS" value="Under Glow"/>
 <part name="Q3" library="SparkFun-DiscreteSemi" deviceset="MOSFET-NCH" device="-BSS138" value="220mA/50V/3.5Ω"/>
 <part name="Q5" library="SparkFun-DiscreteSemi" deviceset="MOSFET-NCH" device="-BSS138" value="220mA/50V/3.5Ω"/>
 <part name="Q4" library="SparkFun-DiscreteSemi" deviceset="MOSFET-NCH" device="-BSS138" value="220mA/50V/3.5Ω"/>
@@ -16772,9 +16806,9 @@ Source: www.stewartconnector.com .. si-50170.pdf</description>
 <part name="P+7" library="supply1" deviceset="+12V" device=""/>
 <part name="P+8" library="supply1" deviceset="+24V" device=""/>
 <part name="GND43" library="supply1" deviceset="GND" device=""/>
-<part name="J6" library="SparkFun-Connectors" deviceset="CONN_02" device="5MM"/>
-<part name="J7" library="SparkFun-Connectors" deviceset="CONN_02" device="5MM"/>
-<part name="J5" library="SparkFun-Retired" deviceset="CONN_02" device="POLAR"/>
+<part name="J6" library="SparkFun-Connectors" deviceset="CONN_02" device="5MM" value="12V"/>
+<part name="J7" library="SparkFun-Connectors" deviceset="CONN_02" device="5MM" value="24V"/>
+<part name="J5" library="SparkFun-Retired" deviceset="CONN_02" device="POLAR" value="Safety Light"/>
 <part name="X6" library="con-molex" deviceset="C-GRID-02" device="-70553"/>
 <part name="U2" library="DigiKey" deviceset="LPC1768FBD100" device=""/>
 <part name="Y1" library="SparkFun-Clocks" deviceset="CRYSTAL-32.768KHZ" device="SMD-3.2X1.5" value="32.768kHz"/>
@@ -16795,7 +16829,7 @@ Source: www.stewartconnector.com .. si-50170.pdf</description>
 <part name="C6" library="SparkFun-Capacitors" deviceset="18PF" device="-0603-50V-5%" value="18pF"/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
-<part name="J2" library="SparkFun-Connectors" deviceset="CONN_05X2" device="SHD"/>
+<part name="J2" library="SparkFun-Connectors" deviceset="CONN_05X2" device="SHD" value="Programming Port"/>
 <part name="GND18" library="supply1" deviceset="GND" device=""/>
 <part name="R3" library="SparkFun-Resistors" deviceset="1.5KOHM" device="-0603-1/10W-1%" value="1.5k"/>
 <part name="Q1" library="transistor-small-signal" deviceset="BSS84" device=""/>
@@ -16876,13 +16910,36 @@ Source: www.stewartconnector.com .. si-50170.pdf</description>
 <part name="CR1" library="LD1117" deviceset="LD1117S33TR" device=""/>
 <part name="R42" library="SparkFun-Resistors" deviceset="3.9KOHM" device="-0603-1/10W-1%" value="2700"/>
 <part name="GND45" library="supply1" deviceset="GND" device=""/>
-<part name="T1" library="transistor" deviceset="*-NPN-" device="TO220V"/>
+<part name="T1" library="transistor" deviceset="*-NPN-" device="TO220V" value="TIP41A"/>
 <part name="GND39" library="supply1" deviceset="GND" device=""/>
 <part name="R30" library="SparkFun-Resistors" deviceset="3.9KOHM" device="-0603-1/10W-1%" value="2700"/>
 <part name="P+4" library="supply1" deviceset="+12V" device=""/>
 <part name="L1" library="DigiKey" deviceset="MLZ1608N100LT000" device="" value="10uH"/>
 <part name="J1" library="DigiKey" deviceset="1981568-1" device=""/>
-<part name="MU1" library="DigiKey" deviceset="DP83848JSQ/NOPB" device=""/>
+<part name="U3" library="DigiKey" deviceset="DP83848JSQ/NOPB" device=""/>
+<part name="U$1" library="IGVC-Power" deviceset="LGND" device=""/>
+<part name="U$2" library="IGVC-Power" deviceset="LGND" device=""/>
+<part name="U$7" library="IGVC-Power" deviceset="RGND" device=""/>
+<part name="U$8" library="IGVC-Power" deviceset="RGND" device=""/>
+<part name="U$9" library="IGVC-Power" deviceset="L+12V" device=""/>
+<part name="U$10" library="IGVC-Power" deviceset="L+12V" device=""/>
+<part name="U$11" library="IGVC-Power" deviceset="R+12V" device=""/>
+<part name="U$12" library="IGVC-Power" deviceset="R+12V" device=""/>
+<part name="GND11" library="supply1" deviceset="GND" device=""/>
+<part name="GND12" library="supply1" deviceset="GND" device=""/>
+<part name="GND19" library="supply1" deviceset="GND" device=""/>
+<part name="GND20" library="supply1" deviceset="GND" device=""/>
+<part name="GND52" library="supply1" deviceset="GND" device=""/>
+<part name="GND53" library="supply1" deviceset="GND" device=""/>
+<part name="GND54" library="supply1" deviceset="GND" device=""/>
+<part name="+3V1" library="supply1" deviceset="+3V3" device=""/>
+<part name="+3V2" library="supply1" deviceset="+3V3" device=""/>
+<part name="+3V3" library="supply1" deviceset="+3V3" device=""/>
+<part name="+3V4" library="supply1" deviceset="+3V3" device=""/>
+<part name="+3V5" library="supply1" deviceset="+3V3" device=""/>
+<part name="+3V6" library="supply1" deviceset="+3V3" device=""/>
+<part name="+3V7" library="supply1" deviceset="+3V3" device=""/>
+<part name="+3V8" library="supply1" deviceset="+3V3" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -16891,6 +16948,7 @@ Source: www.stewartconnector.com .. si-50170.pdf</description>
 <text x="144.78" y="317.5" size="1.778" layer="91">Pin 13 Connected to +3V3 to make 
 PCB compatible with LPC2368</text>
 <text x="452.12" y="254" size="1.778" layer="91">Current limiting R</text>
+<text x="139.7" y="299.72" size="1.778" layer="91">Battery Voltage</text>
 </plain>
 <instances>
 <instance part="OK1" gate="A" x="142.24" y="152.4"/>
@@ -16935,18 +16993,10 @@ PCB compatible with LPC2368</text>
 <instance part="X5" gate="-3" x="447.04" y="27.94"/>
 <instance part="X5" gate="-4" x="447.04" y="25.4"/>
 <instance part="X5" gate="-5" x="447.04" y="22.86"/>
-<instance part="SUPPLY1" gate="G$1" x="152.4" y="160.02"/>
-<instance part="SUPPLY2" gate="G$1" x="152.4" y="109.22"/>
-<instance part="SUPPLY4" gate="G$1" x="203.2" y="109.22"/>
-<instance part="SUPPLY3" gate="G$1" x="203.2" y="160.02"/>
 <instance part="R7" gate="G$1" x="160.02" y="144.78" rot="R90"/>
 <instance part="R17" gate="G$1" x="210.82" y="93.98" rot="R90"/>
 <instance part="R8" gate="G$1" x="160.02" y="93.98" rot="R90"/>
 <instance part="R16" gate="G$1" x="210.82" y="144.78" rot="R90"/>
-<instance part="GND12" gate="1" x="160.02" y="83.82"/>
-<instance part="GND11" gate="1" x="160.02" y="134.62"/>
-<instance part="GND20" gate="1" x="210.82" y="83.82"/>
-<instance part="GND19" gate="1" x="210.82" y="134.62"/>
 <instance part="+3V33" gate="G$1" x="121.92" y="76.2"/>
 <instance part="GND8" gate="1" x="121.92" y="38.1"/>
 <instance part="R6" gate="G$1" x="121.92" y="63.5" rot="R90"/>
@@ -16974,7 +17024,10 @@ PCB compatible with LPC2368</text>
 <instance part="P+5" gate="1" x="449.58" y="198.12"/>
 <instance part="P+9" gate="1" x="500.38" y="198.12"/>
 <instance part="P+14" gate="1" x="548.64" y="198.12"/>
-<instance part="T2" gate="G$1" x="459.74" y="175.26"/>
+<instance part="T2" gate="G$1" x="459.74" y="175.26" smashed="yes">
+<attribute name="NAME" x="439.42" y="187.96" size="1.778" layer="95"/>
+<attribute name="VALUE" x="447.04" y="180.34" size="1.778" layer="96"/>
+</instance>
 <instance part="T3" gate="G$1" x="459.74" y="134.62"/>
 <instance part="T4" gate="G$1" x="459.74" y="96.52"/>
 <instance part="T6" gate="G$1" x="510.54" y="134.62"/>
@@ -17147,7 +17200,32 @@ PCB compatible with LPC2368</text>
 <instance part="P+4" gate="1" x="447.04" y="386.08"/>
 <instance part="L1" gate="A" x="363.22" y="243.84" rot="R90"/>
 <instance part="J1" gate="A" x="93.98" y="198.12"/>
-<instance part="MU1" gate="A" x="261.62" y="76.2"/>
+<instance part="U3" gate="A" x="261.62" y="76.2"/>
+<instance part="U$1" gate="G$1" x="160.02" y="134.62"/>
+<instance part="U$2" gate="G$1" x="210.82" y="134.62"/>
+<instance part="U$7" gate="G$1" x="160.02" y="83.82"/>
+<instance part="U$8" gate="G$1" x="210.82" y="83.82"/>
+<instance part="U$9" gate="L+12V" x="152.4" y="162.56"/>
+<instance part="U$10" gate="L+12V" x="203.2" y="162.56"/>
+<instance part="U$11" gate="G$1" x="152.4" y="111.76"/>
+<instance part="U$12" gate="G$1" x="203.2" y="111.76"/>
+<instance part="GND11" gate="1" x="104.14" y="320.04" rot="R270"/>
+<instance part="GND12" gate="1" x="104.14" y="309.88" rot="R270"/>
+<instance part="GND19" gate="1" x="104.14" y="269.24" rot="R270"/>
+<instance part="GND20" gate="1" x="104.14" y="243.84" rot="R270"/>
+<instance part="GND52" gate="1" x="297.18" y="231.14" rot="R90"/>
+<instance part="GND53" gate="1" x="297.18" y="302.26" rot="R90"/>
+<instance part="GND54" gate="1" x="304.8" y="337.82" rot="R90"/>
+<instance part="+3V1" gate="G$1" x="104.14" y="314.96" smashed="yes" rot="R90"/>
+<instance part="+3V2" gate="G$1" x="104.14" y="299.72" smashed="yes" rot="R90"/>
+<instance part="+3V3" gate="G$1" x="104.14" y="276.86" smashed="yes" rot="R90"/>
+<instance part="+3V4" gate="G$1" x="104.14" y="241.3" smashed="yes" rot="R90"/>
+<instance part="+3V5" gate="G$1" x="297.18" y="228.6" smashed="yes" rot="R270"/>
+<instance part="+3V6" gate="G$1" x="297.18" y="271.78" smashed="yes" rot="R270"/>
+<instance part="+3V7" gate="G$1" x="297.18" y="304.8" smashed="yes" rot="R270"/>
+<instance part="+3V8" gate="G$1" x="297.18" y="335.28" smashed="yes" rot="R270">
+<attribute name="VALUE" x="297.18" y="335.28" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -17295,26 +17373,31 @@ PCB compatible with LPC2368</text>
 <pinref part="U2" gate="A" pin="VREFN"/>
 <wire x1="121.92" y1="309.88" x2="106.68" y2="309.88" width="0.1524" layer="91"/>
 <label x="106.68" y="309.88" size="1.778" layer="95"/>
+<pinref part="GND12" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="U2" gate="A" pin="VSSA"/>
 <wire x1="121.92" y1="320.04" x2="106.68" y2="320.04" width="0.1524" layer="91"/>
 <label x="106.68" y="320.04" size="1.778" layer="95"/>
+<pinref part="GND11" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="U2" gate="A" pin="VSS_2"/>
 <wire x1="121.92" y1="269.24" x2="106.68" y2="269.24" width="0.1524" layer="91"/>
 <label x="106.68" y="269.24" size="1.778" layer="95"/>
+<pinref part="GND19" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="U2" gate="A" pin="VSS_3"/>
 <wire x1="121.92" y1="243.84" x2="106.68" y2="243.84" width="0.1524" layer="91"/>
 <label x="106.68" y="243.84" size="1.778" layer="95"/>
+<pinref part="GND20" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="U2" gate="A" pin="VSS_4"/>
 <wire x1="279.4" y1="231.14" x2="294.64" y2="231.14" width="0.1524" layer="91"/>
 <label x="281.94" y="231.14" size="1.778" layer="95"/>
+<pinref part="GND52" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="U2" gate="A" pin="VSS_5"/>
@@ -17325,11 +17408,13 @@ PCB compatible with LPC2368</text>
 <pinref part="U2" gate="A" pin="VSS_6"/>
 <wire x1="279.4" y1="302.26" x2="294.64" y2="302.26" width="0.1524" layer="91"/>
 <label x="281.94" y="302.26" size="1.778" layer="95"/>
+<pinref part="GND53" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="U2" gate="A" pin="VSS"/>
-<wire x1="279.4" y1="337.82" x2="294.64" y2="337.82" width="0.1524" layer="91"/>
+<wire x1="279.4" y1="337.82" x2="302.26" y2="337.82" width="0.1524" layer="91"/>
 <label x="281.94" y="337.82" size="1.778" layer="95"/>
+<pinref part="GND54" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="GND3" gate="1" pin="GND"/>
@@ -17406,12 +17491,12 @@ PCB compatible with LPC2368</text>
 <segment>
 <wire x1="264.16" y1="45.72" x2="254" y2="45.72" width="0.1524" layer="91"/>
 <label x="254" y="45.72" size="1.778" layer="95"/>
-<pinref part="MU1" gate="A" pin="AGND_2"/>
+<pinref part="U3" gate="A" pin="AGND_2"/>
 </segment>
 <segment>
 <wire x1="264.16" y1="35.56" x2="254" y2="35.56" width="0.1524" layer="91"/>
 <label x="254" y="35.56" size="1.778" layer="95"/>
-<pinref part="MU1" gate="A" pin="AGND"/>
+<pinref part="U3" gate="A" pin="AGND"/>
 </segment>
 <segment>
 <wire x1="241.3" y1="38.1" x2="236.22" y2="38.1" width="0.1524" layer="91"/>
@@ -17430,7 +17515,7 @@ PCB compatible with LPC2368</text>
 <segment>
 <wire x1="360.68" y1="45.72" x2="370.84" y2="45.72" width="0.1524" layer="91"/>
 <pinref part="GND34" gate="1" pin="GND"/>
-<pinref part="MU1" gate="A" pin="DGND"/>
+<pinref part="U3" gate="A" pin="DGND"/>
 </segment>
 <segment>
 <pinref part="GND38" gate="1" pin="GND"/>
@@ -17444,8 +17529,8 @@ PCB compatible with LPC2368</text>
 <wire x1="360.68" y1="73.66" x2="368.3" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="368.3" y1="73.66" x2="368.3" y2="76.2" width="0.1524" layer="91"/>
 <junction x="368.3" y="76.2"/>
-<pinref part="MU1" gate="A" pin="IOGND"/>
-<pinref part="MU1" gate="A" pin="DAP"/>
+<pinref part="U3" gate="A" pin="IOGND"/>
+<pinref part="U3" gate="A" pin="DAP"/>
 </segment>
 <segment>
 <pinref part="C15" gate="G$1" pin="-"/>
@@ -17658,47 +17743,6 @@ PCB compatible with LPC2368</text>
 <label x="281.94" y="269.24" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="LVCC" class="0">
-<segment>
-<pinref part="X1" gate="-1" pin="KL"/>
-<wire x1="86.36" y1="152.4" x2="96.52" y2="152.4" width="0.1524" layer="91"/>
-<label x="88.9" y="152.4" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="X1" gate="-2" pin="KL"/>
-<wire x1="86.36" y1="149.86" x2="96.52" y2="149.86" width="0.1524" layer="91"/>
-<label x="88.9" y="149.86" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="X1" gate="-5" pin="KL"/>
-<wire x1="86.36" y1="142.24" x2="96.52" y2="142.24" width="0.1524" layer="91"/>
-<label x="88.9" y="142.24" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="X1" gate="-7" pin="KL"/>
-<wire x1="86.36" y1="137.16" x2="96.52" y2="137.16" width="0.1524" layer="91"/>
-<label x="88.9" y="137.16" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="OK1" gate="A" pin="COL"/>
-<pinref part="SUPPLY1" gate="G$1" pin="VCC"/>
-<wire x1="149.86" y1="154.94" x2="152.4" y2="154.94" width="0.1524" layer="91"/>
-<wire x1="152.4" y1="154.94" x2="152.4" y2="160.02" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="OK1" gate="B" pin="COL"/>
-<pinref part="SUPPLY3" gate="G$1" pin="VCC"/>
-<wire x1="200.66" y1="154.94" x2="203.2" y2="154.94" width="0.1524" layer="91"/>
-<wire x1="203.2" y1="154.94" x2="203.2" y2="160.02" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="LVBATT" class="0">
-<segment>
-<pinref part="X1" gate="-3" pin="KL"/>
-<wire x1="86.36" y1="147.32" x2="96.52" y2="147.32" width="0.1524" layer="91"/>
-<label x="88.9" y="147.32" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="LDISABLE" class="0">
 <segment>
 <pinref part="X1" gate="-4" pin="KL"/>
@@ -17754,54 +17798,13 @@ PCB compatible with LPC2368</text>
 </segment>
 <segment>
 <pinref part="R7" gate="G$1" pin="1"/>
-<pinref part="GND11" gate="1" pin="GND"/>
 <wire x1="160.02" y1="137.16" x2="160.02" y2="139.7" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="LGND"/>
 </segment>
 <segment>
 <pinref part="R16" gate="G$1" pin="1"/>
-<pinref part="GND19" gate="1" pin="GND"/>
 <wire x1="210.82" y1="137.16" x2="210.82" y2="139.7" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="RVCC" class="0">
-<segment>
-<pinref part="X2" gate="-1" pin="KL"/>
-<wire x1="86.36" y1="116.84" x2="96.52" y2="116.84" width="0.1524" layer="91"/>
-<label x="88.9" y="116.84" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="X2" gate="-2" pin="KL"/>
-<wire x1="86.36" y1="114.3" x2="96.52" y2="114.3" width="0.1524" layer="91"/>
-<label x="88.9" y="114.3" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="X2" gate="-5" pin="KL"/>
-<wire x1="86.36" y1="106.68" x2="96.52" y2="106.68" width="0.1524" layer="91"/>
-<label x="88.9" y="106.68" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="X2" gate="-7" pin="KL"/>
-<wire x1="86.36" y1="101.6" x2="96.52" y2="101.6" width="0.1524" layer="91"/>
-<label x="88.9" y="101.6" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="OK2" gate="A" pin="COL"/>
-<pinref part="SUPPLY2" gate="G$1" pin="VCC"/>
-<wire x1="149.86" y1="104.14" x2="152.4" y2="104.14" width="0.1524" layer="91"/>
-<wire x1="152.4" y1="104.14" x2="152.4" y2="109.22" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="OK2" gate="B" pin="COL"/>
-<pinref part="SUPPLY4" gate="G$1" pin="VCC"/>
-<wire x1="200.66" y1="104.14" x2="203.2" y2="104.14" width="0.1524" layer="91"/>
-<wire x1="203.2" y1="104.14" x2="203.2" y2="109.22" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="RVBATT" class="0">
-<segment>
-<pinref part="X2" gate="-3" pin="KL"/>
-<wire x1="86.36" y1="111.76" x2="96.52" y2="111.76" width="0.1524" layer="91"/>
-<label x="88.9" y="111.76" size="1.778" layer="95"/>
+<pinref part="U$2" gate="G$1" pin="LGND"/>
 </segment>
 </net>
 <net name="RDISABLE" class="0">
@@ -17859,13 +17862,13 @@ PCB compatible with LPC2368</text>
 </segment>
 <segment>
 <pinref part="R8" gate="G$1" pin="1"/>
-<pinref part="GND12" gate="1" pin="GND"/>
 <wire x1="160.02" y1="86.36" x2="160.02" y2="88.9" width="0.1524" layer="91"/>
+<pinref part="U$7" gate="G$1" pin="RGND"/>
 </segment>
 <segment>
 <pinref part="R17" gate="G$1" pin="1"/>
-<pinref part="GND20" gate="1" pin="GND"/>
 <wire x1="210.82" y1="88.9" x2="210.82" y2="86.36" width="0.1524" layer="91"/>
+<pinref part="U$8" gate="G$1" pin="RGND"/>
 </segment>
 </net>
 <net name="LEA" class="0">
@@ -18045,7 +18048,7 @@ PCB compatible with LPC2368</text>
 <wire x1="378.46" y1="33.02" x2="388.62" y2="33.02" width="0.1524" layer="91"/>
 <junction x="378.46" y="38.1"/>
 <pinref part="C29" gate="G$1" pin="2"/>
-<pinref part="MU1" gate="A" pin="IOVDD33"/>
+<pinref part="U3" gate="A" pin="IOVDD33"/>
 </segment>
 <segment>
 <wire x1="264.16" y1="76.2" x2="251.46" y2="76.2" width="0.1524" layer="91"/>
@@ -18060,7 +18063,7 @@ PCB compatible with LPC2368</text>
 <junction x="266.7" y="93.98"/>
 <wire x1="276.86" y1="93.98" x2="276.86" y2="99.06" width="0.1524" layer="91"/>
 <pinref part="C17" gate="G$1" pin="2"/>
-<pinref part="MU1" gate="A" pin="IOVDD33_2"/>
+<pinref part="U3" gate="A" pin="IOVDD33_2"/>
 </segment>
 <segment>
 <pinref part="Y3" gate="G$1" pin="VCC"/>
@@ -18122,7 +18125,7 @@ PCB compatible with LPC2368</text>
 <wire x1="236.22" y1="12.7" x2="236.22" y2="25.4" width="0.1524" layer="91"/>
 <junction x="236.22" y="25.4"/>
 <pinref part="C11" gate="G$1" pin="1"/>
-<pinref part="MU1" gate="A" pin="AVDD33"/>
+<pinref part="U3" gate="A" pin="AVDD33"/>
 </segment>
 <segment>
 <pinref part="+3V318" gate="G$1" pin="+3V3"/>
@@ -18154,36 +18157,43 @@ PCB compatible with LPC2368</text>
 <pinref part="U2" gate="A" pin="NC"/>
 <wire x1="121.92" y1="314.96" x2="106.68" y2="314.96" width="0.1524" layer="91"/>
 <label x="106.68" y="314.96" size="1.778" layer="95"/>
+<pinref part="+3V1" gate="G$1" pin="+3V3"/>
 </segment>
 <segment>
 <pinref part="U2" gate="A" pin="VDD_2"/>
 <wire x1="121.92" y1="276.86" x2="106.68" y2="276.86" width="0.1524" layer="91"/>
 <label x="106.68" y="276.86" size="1.778" layer="95"/>
+<pinref part="+3V3" gate="G$1" pin="+3V3"/>
 </segment>
 <segment>
 <pinref part="U2" gate="A" pin="VDD_3"/>
 <wire x1="121.92" y1="241.3" x2="106.68" y2="241.3" width="0.1524" layer="91"/>
 <label x="106.68" y="241.3" size="1.778" layer="95"/>
+<pinref part="+3V4" gate="G$1" pin="+3V3"/>
 </segment>
 <segment>
 <pinref part="U2" gate="A" pin="VDD_4"/>
 <wire x1="279.4" y1="228.6" x2="294.64" y2="228.6" width="0.1524" layer="91"/>
 <label x="281.94" y="228.6" size="1.778" layer="95"/>
+<pinref part="+3V5" gate="G$1" pin="+3V3"/>
 </segment>
 <segment>
 <pinref part="U2" gate="A" pin="VDD_5"/>
 <wire x1="279.4" y1="271.78" x2="294.64" y2="271.78" width="0.1524" layer="91"/>
 <label x="281.94" y="271.78" size="1.778" layer="95"/>
+<pinref part="+3V6" gate="G$1" pin="+3V3"/>
 </segment>
 <segment>
 <pinref part="U2" gate="A" pin="VDD_6"/>
 <wire x1="279.4" y1="304.8" x2="294.64" y2="304.8" width="0.1524" layer="91"/>
 <label x="281.94" y="304.8" size="1.778" layer="95"/>
+<pinref part="+3V7" gate="G$1" pin="+3V3"/>
 </segment>
 <segment>
 <pinref part="U2" gate="A" pin="VDD"/>
 <wire x1="279.4" y1="335.28" x2="294.64" y2="335.28" width="0.1524" layer="91"/>
 <label x="281.94" y="335.28" size="1.778" layer="95"/>
+<pinref part="+3V8" gate="G$1" pin="+3V3"/>
 </segment>
 <segment>
 <pinref part="+3V314" gate="G$1" pin="+3V3"/>
@@ -18213,6 +18223,7 @@ PCB compatible with LPC2368</text>
 <pinref part="U2" gate="A" pin="VBAT"/>
 <wire x1="121.92" y1="299.72" x2="106.68" y2="299.72" width="0.1524" layer="91"/>
 <label x="106.68" y="299.72" size="1.778" layer="95"/>
+<pinref part="+3V2" gate="G$1" pin="+3V3"/>
 </segment>
 <segment>
 <pinref part="CR1" gate="A" pin="OUTPUT"/>
@@ -18801,14 +18812,15 @@ PCB compatible with LPC2368</text>
 </net>
 <net name="VDDA" class="0">
 <segment>
-<pinref part="U2" gate="A" pin="VDDA"/>
-<wire x1="121.92" y1="322.58" x2="106.68" y2="322.58" width="0.1524" layer="91"/>
-<label x="106.68" y="322.58" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="U2" gate="A" pin="VREFP"/>
-<wire x1="121.92" y1="317.5" x2="106.68" y2="317.5" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="317.5" x2="96.52" y2="317.5" width="0.1524" layer="91"/>
 <label x="106.68" y="317.5" size="1.778" layer="95"/>
+<pinref part="U2" gate="A" pin="VDDA"/>
+<wire x1="121.92" y1="322.58" x2="96.52" y2="322.58" width="0.1524" layer="91"/>
+<label x="106.68" y="322.58" size="1.778" layer="95"/>
+<wire x1="96.52" y1="317.5" x2="96.52" y2="322.58" width="0.1524" layer="91"/>
+<junction x="96.52" y="322.58"/>
+<wire x1="96.52" y1="322.58" x2="88.9" y2="322.58" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C20" gate="G$1" pin="1"/>
@@ -18994,7 +19006,7 @@ PCB compatible with LPC2368</text>
 <segment>
 <wire x1="264.16" y1="50.8" x2="254" y2="50.8" width="0.1524" layer="91"/>
 <label x="254" y="50.8" size="1.778" layer="95"/>
-<pinref part="MU1" gate="A" pin="RD-"/>
+<pinref part="U3" gate="A" pin="RD-"/>
 </segment>
 <segment>
 <wire x1="172.72" y1="35.56" x2="180.34" y2="35.56" width="0.1524" layer="91"/>
@@ -19018,7 +19030,7 @@ PCB compatible with LPC2368</text>
 <segment>
 <wire x1="264.16" y1="48.26" x2="254" y2="48.26" width="0.1524" layer="91"/>
 <label x="254" y="48.26" size="1.778" layer="95"/>
-<pinref part="MU1" gate="A" pin="RD+"/>
+<pinref part="U3" gate="A" pin="RD+"/>
 </segment>
 <segment>
 <wire x1="172.72" y1="33.02" x2="195.58" y2="33.02" width="0.1524" layer="91"/>
@@ -19039,7 +19051,7 @@ PCB compatible with LPC2368</text>
 <segment>
 <wire x1="264.16" y1="43.18" x2="254" y2="43.18" width="0.1524" layer="91"/>
 <label x="254" y="43.18" size="1.778" layer="95"/>
-<pinref part="MU1" gate="A" pin="TD-"/>
+<pinref part="U3" gate="A" pin="TD-"/>
 </segment>
 <segment>
 <wire x1="172.72" y1="30.48" x2="195.58" y2="30.48" width="0.1524" layer="91"/>
@@ -19060,7 +19072,7 @@ PCB compatible with LPC2368</text>
 <segment>
 <wire x1="264.16" y1="40.64" x2="254" y2="40.64" width="0.1524" layer="91"/>
 <label x="254" y="40.64" size="1.778" layer="95"/>
-<pinref part="MU1" gate="A" pin="TD+"/>
+<pinref part="U3" gate="A" pin="TD+"/>
 </segment>
 <segment>
 <wire x1="172.72" y1="27.94" x2="180.34" y2="27.94" width="0.1524" layer="91"/>
@@ -19085,7 +19097,7 @@ PCB compatible with LPC2368</text>
 <wire x1="248.92" y1="38.1" x2="264.16" y2="38.1" width="0.1524" layer="91"/>
 <label x="254" y="38.1" size="1.778" layer="95"/>
 <pinref part="C14" gate="G$1" pin="2"/>
-<pinref part="MU1" gate="A" pin="PFBIN1"/>
+<pinref part="U3" gate="A" pin="PFBIN1"/>
 </segment>
 <segment>
 <wire x1="360.68" y1="48.26" x2="378.46" y2="48.26" width="0.1524" layer="91"/>
@@ -19096,7 +19108,7 @@ PCB compatible with LPC2368</text>
 <wire x1="378.46" y1="45.72" x2="381" y2="45.72" width="0.1524" layer="91"/>
 <label x="391.16" y="53.34" size="1.778" layer="95"/>
 <pinref part="C28" gate="G$1" pin="1"/>
-<pinref part="MU1" gate="A" pin="PFBIN2"/>
+<pinref part="U3" gate="A" pin="PFBIN2"/>
 </segment>
 <segment>
 <wire x1="264.16" y1="30.48" x2="254" y2="30.48" width="0.1524" layer="91"/>
@@ -19108,7 +19120,7 @@ PCB compatible with LPC2368</text>
 <wire x1="243.84" y1="-2.54" x2="254" y2="-2.54" width="0.1524" layer="91"/>
 <pinref part="C12" gate="G$1" pin="1"/>
 <label x="254" y="30.48" size="1.778" layer="95"/>
-<pinref part="MU1" gate="A" pin="PFBOUT"/>
+<pinref part="U3" gate="A" pin="PFBOUT"/>
 </segment>
 </net>
 <net name="N$14" class="0">
@@ -19116,21 +19128,21 @@ PCB compatible with LPC2368</text>
 <wire x1="264.16" y1="27.94" x2="259.08" y2="27.94" width="0.1524" layer="91"/>
 <wire x1="259.08" y1="27.94" x2="259.08" y2="12.7" width="0.1524" layer="91"/>
 <pinref part="R21" gate="G$1" pin="1"/>
-<pinref part="MU1" gate="A" pin="RBIAS"/>
+<pinref part="U3" gate="A" pin="RBIAS"/>
 </segment>
 </net>
 <net name="N$16" class="0">
 <segment>
 <wire x1="360.68" y1="53.34" x2="373.38" y2="53.34" width="0.1524" layer="91"/>
 <pinref part="R25" gate="G$1" pin="1"/>
-<pinref part="MU1" gate="A" pin="RX_DV/MII_MODE"/>
+<pinref part="U3" gate="A" pin="RX_DV/MII_MODE"/>
 </segment>
 </net>
 <net name="TGT_P1.4" class="0">
 <segment>
 <wire x1="264.16" y1="71.12" x2="251.46" y2="71.12" width="0.1524" layer="91"/>
 <label x="251.46" y="71.12" size="1.778" layer="95"/>
-<pinref part="MU1" gate="A" pin="TX_EN"/>
+<pinref part="U3" gate="A" pin="TX_EN"/>
 </segment>
 <segment>
 <pinref part="U2" gate="A" pin="P1[4]/ENET_TX_EN"/>
@@ -19142,7 +19154,7 @@ PCB compatible with LPC2368</text>
 <segment>
 <wire x1="264.16" y1="68.58" x2="251.46" y2="68.58" width="0.1524" layer="91"/>
 <label x="251.46" y="68.58" size="1.778" layer="95"/>
-<pinref part="MU1" gate="A" pin="TXD_0"/>
+<pinref part="U3" gate="A" pin="TXD_0"/>
 </segment>
 <segment>
 <pinref part="U2" gate="A" pin="P1[0]/ENET_TXD0"/>
@@ -19154,7 +19166,7 @@ PCB compatible with LPC2368</text>
 <segment>
 <wire x1="264.16" y1="66.04" x2="251.46" y2="66.04" width="0.1524" layer="91"/>
 <label x="251.46" y="66.04" size="1.778" layer="95"/>
-<pinref part="MU1" gate="A" pin="TXD_1"/>
+<pinref part="U3" gate="A" pin="TXD_1"/>
 </segment>
 <segment>
 <pinref part="U2" gate="A" pin="P1[1]/ENET_TXD1"/>
@@ -19166,7 +19178,7 @@ PCB compatible with LPC2368</text>
 <segment>
 <wire x1="360.68" y1="55.88" x2="373.38" y2="55.88" width="0.1524" layer="91"/>
 <label x="360.68" y="55.88" size="1.778" layer="95"/>
-<pinref part="MU1" gate="A" pin="CRS/CRS_DV/LED_CFG"/>
+<pinref part="U3" gate="A" pin="CRS/CRS_DV/LED_CFG"/>
 </segment>
 <segment>
 <pinref part="U2" gate="A" pin="P1[8]/ENET_CRS"/>
@@ -19178,7 +19190,7 @@ PCB compatible with LPC2368</text>
 <segment>
 <wire x1="360.68" y1="58.42" x2="373.38" y2="58.42" width="0.1524" layer="91"/>
 <label x="360.68" y="58.42" size="1.778" layer="95"/>
-<pinref part="MU1" gate="A" pin="RX_ER/MDIX_EN"/>
+<pinref part="U3" gate="A" pin="RX_ER/MDIX_EN"/>
 </segment>
 <segment>
 <pinref part="U2" gate="A" pin="P1[14]/ENET_RX_ER"/>
@@ -19190,7 +19202,7 @@ PCB compatible with LPC2368</text>
 <segment>
 <wire x1="360.68" y1="63.5" x2="373.38" y2="63.5" width="0.1524" layer="91"/>
 <label x="360.68" y="63.5" size="1.778" layer="95"/>
-<pinref part="MU1" gate="A" pin="RXD_0/PHYAD1"/>
+<pinref part="U3" gate="A" pin="RXD_0/PHYAD1"/>
 </segment>
 <segment>
 <pinref part="U2" gate="A" pin="P1[9]/ENET_RXD0"/>
@@ -19202,7 +19214,7 @@ PCB compatible with LPC2368</text>
 <segment>
 <wire x1="360.68" y1="66.04" x2="373.38" y2="66.04" width="0.1524" layer="91"/>
 <label x="360.68" y="66.04" size="1.778" layer="95"/>
-<pinref part="MU1" gate="A" pin="RXD_1/PHYAD2"/>
+<pinref part="U3" gate="A" pin="RXD_1/PHYAD2"/>
 </segment>
 <segment>
 <pinref part="U2" gate="A" pin="P1[10]/ENET_RXD1"/>
@@ -19214,7 +19226,7 @@ PCB compatible with LPC2368</text>
 <segment>
 <wire x1="360.68" y1="25.4" x2="375.92" y2="25.4" width="0.1524" layer="91"/>
 <label x="360.68" y="25.4" size="1.778" layer="95"/>
-<pinref part="MU1" gate="A" pin="LED_SPEED/AN1"/>
+<pinref part="U3" gate="A" pin="LED_SPEED/AN1"/>
 </segment>
 <segment>
 <pinref part="U2" gate="A" pin="P1[26]/MCOB1/PWM1[6]/CAP0[0]"/>
@@ -19226,7 +19238,7 @@ PCB compatible with LPC2368</text>
 <segment>
 <wire x1="360.68" y1="27.94" x2="375.92" y2="27.94" width="0.1524" layer="91"/>
 <label x="360.68" y="27.94" size="1.778" layer="95"/>
-<pinref part="MU1" gate="A" pin="LED_LINK/AN0"/>
+<pinref part="U3" gate="A" pin="LED_LINK/AN0"/>
 </segment>
 <segment>
 <pinref part="U2" gate="A" pin="P1[25]/MCOA1/MAT1[1]"/>
@@ -19238,7 +19250,7 @@ PCB compatible with LPC2368</text>
 <segment>
 <wire x1="360.68" y1="30.48" x2="375.92" y2="30.48" width="0.1524" layer="91"/>
 <label x="360.68" y="30.48" size="1.778" layer="95"/>
-<pinref part="MU1" gate="A" pin="RESET_N"/>
+<pinref part="U3" gate="A" pin="RESET_N"/>
 </segment>
 <segment>
 <pinref part="U2" gate="A" pin="P1[28]/MCOA2/PCAP1[0]/MAT0[0]"/>
@@ -19250,7 +19262,7 @@ PCB compatible with LPC2368</text>
 <segment>
 <wire x1="360.68" y1="33.02" x2="375.92" y2="33.02" width="0.1524" layer="91"/>
 <label x="360.68" y="33.02" size="1.778" layer="95"/>
-<pinref part="MU1" gate="A" pin="MDIO"/>
+<pinref part="U3" gate="A" pin="MDIO"/>
 </segment>
 <segment>
 <pinref part="U2" gate="A" pin="P1[17]/ENET_MDIO"/>
@@ -19262,7 +19274,7 @@ PCB compatible with LPC2368</text>
 <segment>
 <wire x1="360.68" y1="35.56" x2="375.92" y2="35.56" width="0.1524" layer="91"/>
 <label x="360.68" y="35.56" size="1.778" layer="95"/>
-<pinref part="MU1" gate="A" pin="MDC"/>
+<pinref part="U3" gate="A" pin="MDC"/>
 </segment>
 <segment>
 <pinref part="U2" gate="A" pin="P1[16]/ENET_MDC"/>
@@ -19348,7 +19360,7 @@ PCB compatible with LPC2368</text>
 <segment>
 <wire x1="360.68" y1="43.18" x2="370.84" y2="43.18" width="0.1524" layer="91"/>
 <label x="360.68" y="43.18" size="1.778" layer="95"/>
-<pinref part="MU1" gate="A" pin="X1"/>
+<pinref part="U3" gate="A" pin="X1"/>
 </segment>
 </net>
 <net name="N$11" class="0">
@@ -19440,15 +19452,109 @@ PCB compatible with LPC2368</text>
 <junction x="454.66" y="365.76"/>
 </segment>
 </net>
+<net name="L+12V" class="0">
+<segment>
+<pinref part="OK1" gate="A" pin="COL"/>
+<wire x1="149.86" y1="154.94" x2="152.4" y2="154.94" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="154.94" x2="152.4" y2="160.02" width="0.1524" layer="91"/>
+<pinref part="U$9" gate="L+12V" pin="L+12V"/>
+</segment>
+<segment>
+<pinref part="OK1" gate="B" pin="COL"/>
+<wire x1="200.66" y1="154.94" x2="203.2" y2="154.94" width="0.1524" layer="91"/>
+<wire x1="203.2" y1="154.94" x2="203.2" y2="160.02" width="0.1524" layer="91"/>
+<pinref part="U$10" gate="L+12V" pin="L+12V"/>
+</segment>
+<segment>
+<pinref part="X1" gate="-1" pin="KL"/>
+<wire x1="86.36" y1="152.4" x2="96.52" y2="152.4" width="0.1524" layer="91"/>
+<label x="88.9" y="152.4" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="X1" gate="-2" pin="KL"/>
+<wire x1="86.36" y1="149.86" x2="96.52" y2="149.86" width="0.1524" layer="91"/>
+<label x="88.9" y="149.86" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="X1" gate="-5" pin="KL"/>
+<wire x1="86.36" y1="142.24" x2="96.52" y2="142.24" width="0.1524" layer="91"/>
+<label x="88.9" y="142.24" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="X1" gate="-7" pin="KL"/>
+<wire x1="86.36" y1="137.16" x2="96.52" y2="137.16" width="0.1524" layer="91"/>
+<label x="88.9" y="137.16" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="R+12V" class="0">
+<segment>
+<pinref part="OK2" gate="A" pin="COL"/>
+<wire x1="149.86" y1="104.14" x2="152.4" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="104.14" x2="152.4" y2="109.22" width="0.1524" layer="91"/>
+<pinref part="U$11" gate="G$1" pin="R+12V"/>
+</segment>
+<segment>
+<pinref part="OK2" gate="B" pin="COL"/>
+<wire x1="200.66" y1="104.14" x2="203.2" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="203.2" y1="104.14" x2="203.2" y2="109.22" width="0.1524" layer="91"/>
+<pinref part="U$12" gate="G$1" pin="R+12V"/>
+</segment>
+<segment>
+<pinref part="X2" gate="-2" pin="KL"/>
+<wire x1="86.36" y1="114.3" x2="96.52" y2="114.3" width="0.1524" layer="91"/>
+<label x="88.9" y="114.3" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="X2" gate="-1" pin="KL"/>
+<wire x1="86.36" y1="116.84" x2="96.52" y2="116.84" width="0.1524" layer="91"/>
+<label x="88.9" y="116.84" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="X2" gate="-5" pin="KL"/>
+<wire x1="86.36" y1="106.68" x2="96.52" y2="106.68" width="0.1524" layer="91"/>
+<label x="88.9" y="106.68" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="X2" gate="-7" pin="KL"/>
+<wire x1="86.36" y1="101.6" x2="96.52" y2="101.6" width="0.1524" layer="91"/>
+<label x="88.9" y="101.6" size="1.778" layer="95"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
 <errors>
-<approved hash="101,1,444.5,66.04,X3-2,S,,,,"/>
-<approved hash="101,1,444.5,30.48,X4-2,S,,,,"/>
+<approved hash="101,1,86.36,147.32,X1-3,KL,,,,"/>
+<approved hash="101,1,86.36,111.76,X2-3,KL,,,,"/>
+<approved hash="101,1,444.5,66.04,X4-2,S,,,,"/>
+<approved hash="101,1,444.5,30.48,X5-2,S,,,,"/>
 <approved hash="202,1,121.92,337.82,U2,!TRST,,,,"/>
+<approved hash="104,1,121.92,320.04,U2,VSSA,GND,,,"/>
+<approved hash="104,1,121.92,317.5,U2,VREFP,VDDA,,,"/>
+<approved hash="103,1,121.92,314.96,U2,NC,+3V3,,,"/>
+<approved hash="104,1,121.92,309.88,U2,VREFN,GND,,,"/>
+<approved hash="104,1,121.92,299.72,U2,VBAT,+3V3,,,"/>
+<approved hash="104,1,121.92,276.86,U2,VDD_2,+3V3,,,"/>
+<approved hash="104,1,121.92,269.24,U2,VSS_2,GND,,,"/>
+<approved hash="104,1,121.92,243.84,U2,VSS_3,GND,,,"/>
+<approved hash="104,1,121.92,241.3,U2,VDD_3,+3V3,,,"/>
+<approved hash="104,1,279.4,228.6,U2,VDD_4,+3V3,,,"/>
+<approved hash="104,1,279.4,231.14,U2,VSS_4,GND,,,"/>
+<approved hash="104,1,279.4,271.78,U2,VDD_5,+3V3,,,"/>
+<approved hash="104,1,279.4,274.32,U2,VSS_5,GND,,,"/>
+<approved hash="104,1,279.4,302.26,U2,VSS_6,GND,,,"/>
+<approved hash="104,1,279.4,304.8,U2,VDD_6,+3V3,,,"/>
+<approved hash="104,1,279.4,335.28,U2,VDD,+3V3,,,"/>
+<approved hash="104,1,279.4,337.82,U2,VSS,GND,,,"/>
+<approved hash="104,1,264.16,76.2,U3,IOVDD33_2,+3V3,,,"/>
 <approved hash="202,1,264.16,63.5,U3,TXD_2,,,,"/>
 <approved hash="202,1,264.16,60.96,U3,TXD_3,,,,"/>
+<approved hash="104,1,264.16,45.72,U3,AGND_2,GND,,,"/>
+<approved hash="104,1,264.16,35.56,U3,AGND,GND,,,"/>
+<approved hash="104,1,264.16,33.02,U3,AVDD33,+3V3,,,"/>
+<approved hash="104,1,360.68,38.1,U3,IOVDD33,+3V3,,,"/>
+<approved hash="104,1,360.68,45.72,U3,DGND,GND,,,"/>
+<approved hash="104,1,360.68,73.66,U3,IOGND,GND,,,"/>
 </errors>
 </schematic>
 </drawing>

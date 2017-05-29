@@ -8,7 +8,7 @@
 </settings>
 <grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.5" altunitdist="mm" altunit="mm"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="1" name="Top" color="4" fill="1" visible="no" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
 <layer number="3" name="Route3" color="4" fill="3" visible="no" active="yes"/>
 <layer number="4" name="Route4" color="1" fill="4" visible="no" active="yes"/>
@@ -6984,7 +6984,7 @@ Your Eurocircuits Team
 <attribute name="PROD_ID" value="RES-07856" x="17.5" y="15.5" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="R25" library="SparkFun-Resistors" package="0603" value="2.2k" x="54" y="36" smashed="yes">
-<attribute name="NAME" x="54" y="36.762" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
+<attribute name="NAME" x="54" y="34.762" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
 <attribute name="PROD_ID" value="RES-08272" x="54" y="36" size="1.778" layer="27" display="off"/>
 </element>
 <element name="R11" library="SparkFun-Resistors" package="0603" value="10k" x="5" y="23.5" smashed="yes" rot="MR180">
@@ -7887,7 +7887,6 @@ Your Eurocircuits Team
 <wire x1="47" y1="52.5" x2="47" y2="53.5" width="0.254" layer="1"/>
 <wire x1="47" y1="53.5" x2="46.5" y2="54" width="0.254" layer="1"/>
 <wire x1="42" y1="52.5" x2="47" y2="52.5" width="0.254" layer="1"/>
-<wire x1="51.15" y1="57.5" x2="50" y2="56.35" width="0.254" layer="16"/>
 <wire x1="51.15" y1="57.5" x2="51.5" y2="57.15" width="0.254" layer="16"/>
 <wire x1="51.5" y1="57.15" x2="51.5" y2="56" width="0.254" layer="16"/>
 <via x="51.5" y="56" extent="1-16" drill="0.35"/>
@@ -8106,8 +8105,8 @@ Your Eurocircuits Team
 <wire x1="55.5" y1="4.5" x2="55" y2="5" width="0.254" layer="16"/>
 <via x="55" y="5" extent="1-16" drill="0.35"/>
 <wire x1="55" y1="5" x2="54" y2="5" width="0.254" layer="1"/>
-<wire x1="3" y1="1" x2="16" y2="1" width="0.254" layer="1"/>
-<wire x1="16" y1="1" x2="38.5" y2="1" width="0.254" layer="1"/>
+<wire x1="17.5" y1="1" x2="3" y2="1" width="0.254" layer="1"/>
+<wire x1="17.5" y1="1" x2="38.5" y2="1" width="0.254" layer="1"/>
 <wire x1="38.5" y1="1" x2="39.5" y2="2" width="0.254" layer="1"/>
 <via x="41" y="2" extent="1-16" drill="0.35"/>
 <wire x1="41" y1="2" x2="42" y2="1" width="0.254" layer="16"/>
@@ -8125,9 +8124,11 @@ Your Eurocircuits Team
 <wire x1="7.707" y1="53.293" x2="8" y2="53" width="0.254" layer="1"/>
 <wire x1="5.70715" y1="53.293" x2="7.707" y2="53.293" width="0.254" layer="1"/>
 <contactref element="U$14" pad="VCC"/>
-<wire x1="17.2" y1="8.46" x2="17.2" y2="2.2" width="0.254" layer="16"/>
-<wire x1="17.2" y1="2.2" x2="16" y2="1" width="0.254" layer="16"/>
-<via x="16" y="1" extent="1-16" drill="0.35"/>
+<wire x1="17.2" y1="8.46" x2="17.2" y2="5.8" width="0.254" layer="16"/>
+<wire x1="17.2" y1="5.8" x2="18" y2="5" width="0.254" layer="16"/>
+<via x="18" y="5" extent="1-16" drill="0.35"/>
+<wire x1="18" y1="5" x2="18" y2="1.5" width="0.254" layer="1"/>
+<wire x1="18" y1="1.5" x2="17.5" y2="1" width="0.254" layer="1"/>
 </signal>
 <signal name="N$34">
 <contactref element="R27" pad="2"/>

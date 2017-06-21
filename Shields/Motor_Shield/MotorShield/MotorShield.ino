@@ -16,7 +16,7 @@ const float ticksPerRev = 400.0;
 const float gearRatio = 18.0;
 const float wheelCir = 1.092; // Meters
 const float metersPerTick = wheelCir / (ticksPerRev * gearRatio);
-const float DEADBAND = 2;
+const float DEADBAND = 0;
 
 float desiredSpeedR = 0; // m/s
 float desiredSpeedL = 0; // m/s
@@ -26,8 +26,9 @@ float actualSpeedL;
 float lastErrorL;
 float lastErrorR;
 
-float P = 20;
-float D = 10;
+float P = 2;
+// float D = 10;
+float D = 0;
 
 int PWM_L = 0;
 int PWM_R = 0;
@@ -154,16 +155,16 @@ void loop()
   if( abs(PWM_R) < DEADBAND )
     PWM_R = 0;
 
-  int dirL = PWM_L < 0;
-  int dirR = PWM_R > 0;
-
-  int powerL = dirL ? 255 + PWM_L : PWM_L;
-  int powerR = dirR ? 255 - PWM_R : -PWM_R;
+  int dirL = PWM_L > 0;
+  int dirR = PWM_R < 0;
   
   if(desiredSpeedL == 0)
     PWM_L = 0;
   if(desiredSpeedR == 0)
     PWM_R = 0;
+    
+  int powerL = dirL ? 255 + PWM_L : PWM_L;
+  int powerR = dirR ? 255 - PWM_R : -PWM_R;
 
   digitalWrite(rightDir, dirR);
   digitalWrite(leftDir, dirL);

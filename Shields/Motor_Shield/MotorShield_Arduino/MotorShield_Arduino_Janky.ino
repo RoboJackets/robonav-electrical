@@ -2,20 +2,22 @@ const int encoderRightData1 = 3;
 const int encoderRightData2 = 5;
 const int encoderLeftData1 = 2;
 const int encoderLeftData2 = 4;
-const int rightDir = 9;
-const int rightSpeed = 10;
-const int rightDisable = 11;
-const int leftDir = 7;
-const int leftSpeed = 6;
-const int leftDisable = 8;
+// left
+const int rightDir = 7;
+const int rightSpeed = 6;
+const int rightDisable = 8;
+
+// right
+const int leftDir = 9;
+const int leftSpeed = 10;
+const int leftDisable = 11;
 
 volatile int tickDataRight = 0;
 volatile int tickDataLeft = 0;
 
-const float ticksPerRev = 400.0;
-const float gearRatio = 18.0;
+const float ticksPerRev = 6000.0;
 const float wheelCir = 1.092; // Meters
-const float metersPerTick = wheelCir / (ticksPerRev * gearRatio);
+const float metersPerTick = wheelCir / ticksPerRev;
 const float DEADBAND = 2;
 
 float desiredSpeedR = 0; // m/s
@@ -165,8 +167,8 @@ void loop()
   if(desiredSpeedR == 0)
     PWM_R = 0;
 
-  digitalWrite(rightDir, dirR);
-  digitalWrite(leftDir, dirL);
+  digitalWrite(rightDir, HIGH);
+  digitalWrite(leftDir, HIGH);
   analogWrite(rightSpeed, powerR);
   analogWrite(leftSpeed, powerL);
   

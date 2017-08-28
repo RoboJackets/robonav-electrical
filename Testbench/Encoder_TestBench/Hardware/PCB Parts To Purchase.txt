@@ -1,9 +1,0 @@
-0.33 uF
-22pF * 2
-Battery Clip
-ATMega GA328P-PU
-Crystal 16MHZ
-X1 connector: Connect to Encoder
-
-
-

@@ -2,21 +2,21 @@ const int encoderRightData1 = 3;
 const int encoderRightData2 = 5;
 const int encoderLeftData1 = 2;
 const int encoderLeftData2 = 4;
-const int rightDir = 9;
-const int rightSpeed = 10;
-const int rightDisable = 11;
-const int leftDir = 7;
-const int leftSpeed = 6;
-const int leftDisable = 8;
+const int rightDir = 7;
+const int rightSpeed = 6;
+const int rightDisable = 8;
+const int leftDir = 10;
+const int leftSpeed = 9;
+const int leftDisable = 11;
 
 volatile int tickDataRight = 0;
 volatile int tickDataLeft = 0;
 
-const float ticksPerRev = 400.0;
-const float gearRatio = 18.0;
+const float ticksPerRev = 200.0;
+const float gearRatio = 32.0;
 const float wheelCir = 1.092; // Meters
 const float metersPerTick = wheelCir / (ticksPerRev * gearRatio);
-const float DEADBAND = 0;
+const float DEADBAND = 2;
 
 float desiredSpeedR = 0; // m/s
 float desiredSpeedL = 0; // m/s
@@ -26,15 +26,24 @@ float actualSpeedL;
 float lastErrorL;
 float lastErrorR;
 
-float P = 2;
-// float D = 10;
-float D = 0;
+float P_l = 8;
+float D_l = 0;
+float P_r = 8;
+float D_r = 0;
 
 int PWM_L = 0;
 int PWM_R = 0;
 
 long lastLoopTime;
 float dT_sec;
+
+double buffer_r[5] = {};
+double buffer_l[5] = {};
+int index = 0;
+double result_r = 0;
+double result_l = 0;
+
+int powerL = 0;
 
 // Serial comm vars
 #define uchar unsigned char
@@ -94,7 +103,7 @@ void loop()
   {
     if(Serial.read() == '$')
     {
-      desiredSpeedL = -1*Serial.parseFloat();
+      powerL = -1*Serial.parseInt();
       desiredSpeedR = -1*Serial.parseFloat();
       lastCmdTime = millis();
       gotCommand = true;
@@ -110,6 +119,7 @@ void loop()
     Serial.print(dT_sec);
     Serial.print('\n');
   }
+  
   //Serial.println(tickDataLeft);
   if( millis() - lastCmdTime > 500)
   {
@@ -122,7 +132,7 @@ void loop()
 
   dT_sec = (float)( millis() - lastLoopTime ) / 1000.0;
   lastLoopTime = millis();
-  actualSpeedL = ( metersPerTick * tickDataLeft ) / dT_sec;
+  //actualSpeedL = ( metersPerTick * tickDataLeft ) / dT_sec;
   actualSpeedR = ( metersPerTick * tickDataRight ) / dT_sec;
 
   tickDataLeft = 0;
@@ -134,44 +144,58 @@ void loop()
 
   delay(50);
 
-  float ErrorL = desiredSpeedL - actualSpeedL;
+  //float ErrorL = desiredSpeedL - actualSpeedL;
   float ErrorR = desiredSpeedR - actualSpeedR;
 
-  float dErrorL = ErrorL - lastErrorL;
+  //float dErrorL = ErrorL - lastErrorL;
   float dErrorR = ErrorR - lastErrorR;
 
-  int dPWM_L = (int)( P * ErrorL + D * dErrorL );
-  int dPWM_R = (int)( P * ErrorR + D * dErrorR );
+  //int dPWM_L = (int)( P_l * ErrorL + D_l * dErrorL );
+  int dPWM_R = (int)( P_r * ErrorR + D_r * dErrorR );
 
-  PWM_L += dPWM_L;
-  PWM_R += dPWM_R;
+  //PWM_L += dPWM_L;
+  PWM_R -= dPWM_R;
 
-  PWM_L = min(255, max(-255, PWM_L) );
+  //PWM_L = min(255, max(-255, PWM_L) );
   PWM_R = min(255, max(-255, PWM_R) );
-
+  
   // Deadband
-  if( abs(PWM_L) < DEADBAND )
-    PWM_L = 0;
+  //if( abs(PWM_L) < DEADBAND )
+  //  PWM_L = 0;
   if( abs(PWM_R) < DEADBAND )
     PWM_R = 0;
 
-  int dirL = PWM_L > 0;
-  int dirR = PWM_R < 0;
+  int dirL = 1;
+  //int dirL = PWM_L < 0;
+  int dirR = PWM_R > 0;
+
+  //int powerL = dirL ? 255 + PWM_L : PWM_L;
+  int powerR = dirR ? 255 - PWM_R : -PWM_R;
   
-  if(desiredSpeedL == 0)
-    PWM_L = 0;
+  //if(desiredSpeedL == 0)
+  //  PWM_L = 0;
   if(desiredSpeedR == 0)
     PWM_R = 0;
-    
-  int powerL = dirL ? 255 + PWM_L : PWM_L;
-  int powerR = dirR ? 255 - PWM_R : -PWM_R;
 
+  buffer_r[index++] = powerR;
+  //buffer_l[index] = powerL;
+  
+  for (int i = 0; i < 5; i++) {
+    result_r = result_r + buffer_r[i];
+    result_l = result_l +  buffer_l[i];
+  }
+  
+  //powerR = result_r / 5.0;
+  //powerL = result_l / 5.0;
+
+  index = index % 5;
+  
   digitalWrite(rightDir, dirR);
   digitalWrite(leftDir, dirL);
   analogWrite(rightSpeed, powerR);
   analogWrite(leftSpeed, powerL);
   
-  lastErrorL = ErrorL;
+  //lastErrorL = ErrorL;
   lastErrorR = ErrorR;
 }
 

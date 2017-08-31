@@ -119,7 +119,7 @@ void loop()
     Serial.print(dT_sec);
     Serial.print('\n');
   }
-  
+/*
   //Serial.println(tickDataLeft);
   if( millis() - lastCmdTime > 500)
   {
@@ -129,10 +129,10 @@ void loop()
     PWM_L = 0;
     PWM_R = 0;
   }
-
+*/
   dT_sec = (float)( millis() - lastLoopTime ) / 1000.0;
   lastLoopTime = millis();
-  //actualSpeedL = ( metersPerTick * tickDataLeft ) / dT_sec;
+  actualSpeedL = ( metersPerTick * tickDataLeft ) / dT_sec;
   actualSpeedR = ( metersPerTick * tickDataRight ) / dT_sec;
 
   tickDataLeft = 0;
@@ -144,41 +144,42 @@ void loop()
 
   delay(50);
 
-  //float ErrorL = desiredSpeedL - actualSpeedL;
+  float ErrorL = desiredSpeedL - actualSpeedL;
   float ErrorR = desiredSpeedR - actualSpeedR;
 
-  //float dErrorL = ErrorL - lastErrorL;
+  float dErrorL = ErrorL - lastErrorL;
   float dErrorR = ErrorR - lastErrorR;
 
-  //int dPWM_L = (int)( P_l * ErrorL + D_l * dErrorL );
+  int dPWM_L = (int)( P_l * ErrorL + D_l * dErrorL );
   int dPWM_R = (int)( P_r * ErrorR + D_r * dErrorR );
 
-  //PWM_L += dPWM_L;
+  PWM_L += dPWM_L;
   PWM_R -= dPWM_R;
 
-  //PWM_L = min(255, max(-255, PWM_L) );
+  PWM_L = min(255, max(-255, PWM_L) );
   PWM_R = min(255, max(-255, PWM_R) );
   
   // Deadband
-  //if( abs(PWM_L) < DEADBAND )
-  //  PWM_L = 0;
+  if( abs(PWM_L) < DEADBAND )
+    PWM_L = 0;
   if( abs(PWM_R) < DEADBAND )
     PWM_R = 0;
 
   int dirL = 1;
   //int dirL = PWM_L < 0;
-  int dirR = PWM_R > 0;
+  int dirR = 1;
+  //int dirR = PWM_R > 0;
 
-  //int powerL = dirL ? 255 + PWM_L : PWM_L;
+  int powerL = dirL ? 255 + PWM_L : PWM_L;
   int powerR = dirR ? 255 - PWM_R : -PWM_R;
   
-  //if(desiredSpeedL == 0)
-  //  PWM_L = 0;
+  if(desiredSpeedL == 0)
+    PWM_L = 0;
   if(desiredSpeedR == 0)
     PWM_R = 0;
 
   buffer_r[index++] = powerR;
-  //buffer_l[index] = powerL;
+  buffer_l[index] = powerL;
   
   for (int i = 0; i < 5; i++) {
     result_r = result_r + buffer_r[i];
@@ -186,8 +187,10 @@ void loop()
   }
   
   //powerR = result_r / 5.0;
+  powerR = 120;
   //powerL = result_l / 5.0;
-
+  powerL = 120;
+  
   index = index % 5;
   
   digitalWrite(rightDir, dirR);
@@ -195,7 +198,7 @@ void loop()
   analogWrite(rightSpeed, powerR);
   analogWrite(leftSpeed, powerL);
   
-  //lastErrorL = ErrorL;
+  lastErrorL = ErrorL;
   lastErrorR = ErrorR;
 }
 

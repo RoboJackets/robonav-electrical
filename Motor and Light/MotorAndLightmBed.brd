@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.2.1">
+<eagle version="8.3.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
+<setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.5" altunitdist="mm" altunit="mm"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="no" active="yes"/>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
 <layer number="3" name="Route3" color="4" fill="3" visible="no" active="yes"/>
 <layer number="4" name="Route4" color="1" fill="4" visible="no" active="yes"/>
@@ -7954,8 +7955,6 @@ Your Eurocircuits Team
 <wire x1="31.5" y1="29" x2="31.5" y2="32" width="0.254" layer="16"/>
 <wire x1="31.5" y1="32" x2="32" y2="32.5" width="0.254" layer="16"/>
 <via x="32" y="32.5" extent="1-16" drill="0.35"/>
-<wire x1="32" y1="32.5" x2="32" y2="35" width="0.254" layer="1"/>
-<wire x1="32" y1="35" x2="32.398" y2="35.398" width="0.254" layer="1"/>
 <wire x1="37.62" y1="36.5" x2="36.5" y2="36.5" width="0.254" layer="1"/>
 <wire x1="36.5" y1="36.5" x2="36" y2="37" width="0.254" layer="1"/>
 <via x="36" y="37" extent="1-16" drill="0.35"/>
@@ -9679,11 +9678,8 @@ Your Eurocircuits Team
 <wire x1="34.368" y1="33.2617875" x2="34.7382125" y2="33.632" width="0.254" layer="1"/>
 <wire x1="34.368" y1="32.9742125" x2="34.368" y2="33.2617875" width="0.254" layer="1"/>
 <wire x1="33.7617875" y1="32.368" x2="34.368" y2="32.9742125" width="0.254" layer="1"/>
-<wire x1="34.7382125" y1="33.632" x2="35.368" y2="33.632" width="0.254" layer="1"/>
-<wire x1="35.368" y1="33.632" x2="35.368" y2="33.44800625" width="0.254" layer="1"/>
-<wire x1="35.368" y1="33.44800625" x2="36.4167" y2="32.39930625" width="0.254" layer="1"/>
-<wire x1="36.4167" y1="32.39930625" x2="36.4167" y2="17.5833" width="0.254" layer="1"/>
-<wire x1="36.4167" y1="17.5833" x2="39" y2="15" width="0.254" layer="1"/>
+<wire x1="35.368" y1="33.632" x2="34.7382125" y2="33.632" width="0.254" layer="1"/>
+<wire x1="39" y1="15" x2="36.4167" y2="17.5833" width="0.254" layer="1"/>
 <wire x1="38.5" y1="5.5" x2="37" y2="5.5" width="0.254" layer="16"/>
 <wire x1="37" y1="5.5" x2="36.5" y2="6" width="0.254" layer="16"/>
 <wire x1="36.5" y1="6" x2="36.5" y2="7.5" width="0.254" layer="16"/>
@@ -9699,6 +9695,8 @@ Your Eurocircuits Team
 <wire x1="27.464328125" y1="18.964328125" x2="27.464328125" y2="12.964328125" width="0.254" layer="16"/>
 <wire x1="17.81600625" y1="21" x2="25.42865625" y2="21" width="0.254" layer="16"/>
 <wire x1="27.464328125" y1="12.964328125" x2="29.83265625" y2="10.596" width="0.254" layer="16"/>
+<wire x1="36.4167" y1="32.5833" x2="35.368" y2="33.632" width="0.254" layer="1"/>
+<wire x1="36.4167" y1="17.5833" x2="36.4167" y2="32.5833" width="0.254" layer="1"/>
 </signal>
 <signal name="TGT_RXD">
 <contactref element="U2" pad="99"/>

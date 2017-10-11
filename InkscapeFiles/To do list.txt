@@ -1,4 +1,0 @@
-1. Design/Draft info light to overall.fzz
-2. Design light shield
-3. Design motor shield
-4. Design Safety light on

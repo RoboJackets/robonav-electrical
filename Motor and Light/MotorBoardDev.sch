@@ -16020,14 +16020,14 @@ the board as a slave</text>
 </net>
 <net name="D+" class="0">
 <segment>
-<pinref part="A1" gate="G$1" pin="P$31"/>
-<wire x1="177.8" y1="114.3" x2="193.04" y2="114.3" width="0.1524" layer="91"/>
-<label x="193.04" y="114.3" size="1.27" layer="95" xref="yes"/>
-</segment>
-<segment>
 <pinref part="X3" gate="G$1" pin="3"/>
 <wire x1="243.84" y1="68.58" x2="231.14" y2="68.58" width="0.1524" layer="91"/>
 <label x="231.14" y="68.58" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="A1" gate="G$1" pin="P$31"/>
+<wire x1="177.8" y1="114.3" x2="193.04" y2="114.3" width="0.1524" layer="91"/>
+<label x="193.04" y="114.3" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="ID" class="0">

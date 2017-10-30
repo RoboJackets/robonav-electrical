@@ -122,7 +122,7 @@ void loop()
     Serial.print(dT_sec);
     Serial.print('\n');
   }
-  /*
+
   //Serial.println(tickDataLeft);
   if( millis() - lastCmdTime > 500)
   {
@@ -132,7 +132,7 @@ void loop()
     PWM_L = 0;
     PWM_R = 0;
   }
-  */
+
   dT_sec = (float)( millis() - lastLoopTime ) / 1000.0;
   lastLoopTime = millis();
   actualSpeedL = ( metersPerTick * tickDataLeft ) / dT_sec;

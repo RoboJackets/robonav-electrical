@@ -47,16 +47,16 @@ void loop() {
 
 void doEncoderA() {
   if (digitalRead(encoder0PinA) == digitalRead(encoder0PinB)) {
-	  encoder0Pos = encoder0Pos - 1;
+	encoder0Pos = encoder0Pos - 1;
   } else {
-	  encoder0Pos = encoder0Pos + 1;
+	encoder0Pos = encoder0Pos + 1;
   }
 }
 
 void doEncoderB() {
   if (digitalRead(encoder0PinA) == digitalRead(encoder0PinB)) {
-	  encoder0Pos = encoder0Pos + 1;
+	encoder0Pos = encoder0Pos + 1;
   } else {
-	  encoder0Pos = encoder0Pos - 1;
+	encoder0Pos = encoder0Pos - 1;
   }
 }

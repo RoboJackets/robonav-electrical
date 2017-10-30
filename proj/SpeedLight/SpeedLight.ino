@@ -10,11 +10,11 @@
 #define errorThreshold 20
 #define cpr 200 // Cycles per revolution of encoder disk
 
-long targetSpeed = 40; // Target angulary velocity / setpoint in degrees per second
+int targetSpeed = 40; // Target angulary velocity / setpoint in degrees per second
 
-volatile signed long encoder0Pos = 0; // Delta of encoder position since last loop iteration
-signed long oldTime = 0; // Time in ms from last loop iteration
-signed long dps = 0; // Angular velocity in degrees per second
+volatile long encoder0Pos = 0; // Delta of encoder position since last loop iteration
+long oldTime = 0; // Time in ms from last loop iteration
+int dps = 0; // Angular velocity in degrees per second
 
 void setup() {
   pinMode(encoder0PinA, INPUT);

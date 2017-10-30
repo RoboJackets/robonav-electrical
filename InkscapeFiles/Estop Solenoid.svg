@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="12cm"
+   height="16cm"
+   viewBox="0 0 120 160"
+   version="1.1"
+   id="svg5830"
+   inkscape:version="0.92.1 r15371"
+   sodipodi:docname="Estop Solenoid.svg">
+  <defs
+     id="defs5824" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="809.5553"
+     inkscape:cy="222.0082"
+     inkscape:document-units="mm"
+     inkscape:current-layer="g7599"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     units="cm" />
+  <metadata
+     id="metadata5827">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-137.00001)" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Layer 2"
+     transform="translate(0,-137.00001)">
+    <g
+       id="g6952"
+       transform="translate(0.75595242,12.85119)">
+      <g
+         id="g7599"
+         transform="translate(22.678571,71.059524)">
+        <g
+           id="g7635">
+          <g
+             id="g7625">
+            <g
+               transform="matrix(-0.01179012,-0.6595778,0.64878562,-0.00580384,-54.491539,207.14328)"
+               id="g6974">
+              <rect
+                 ry="2.2678576"
+                 y="-216.959"
+                 x="53.80595"
+                 height="205.61905"
+                 width="174.625"
+                 id="rect6941"
+                 style="fill:#ececec;fill-opacity:1;stroke:none;stroke-width:4.35699987;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                 transform="rotate(90.720791)" />
+              <path
+                 inkscape:connector-curvature="0"
+                 d="m 191.81768,139.86892 -0.0856,6.80302 c -0.0158,1.2563 -1.03991,2.25496 -2.29621,2.23916 l -24.94445,-0.31383 c -1.25629,-0.0158 -2.25496,-1.03991 -2.23915,-2.29621 l 0.0856,-6.80302 c 0.0158,-1.25629 1.03992,-2.25495 2.29621,-2.23915 l 24.94445,0.31383 c 1.25629,0.0158 2.25496,1.03991 2.23915,2.2962 z m -26.86027,-28.31036 -0.78931,62.73907 c -0.0158,1.25629 -1.03992,2.25496 -2.29621,2.23915 l -111.1162,-1.39794 c -1.256291,-0.0158 -2.254946,-1.03991 -2.239141,-2.29621 l 0.78931,-62.73907 c 0.01581,-1.25629 1.03991,-2.25495 2.2962,-2.23915 l 111.116201,1.39794 c 1.25629,0.0158 2.25495,1.03991 2.23915,2.29621 z"
+                 style="fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:4.35699987;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                 id="rect6934" />
+            </g>
+            <text
+               id="text6978"
+               y="28.754539"
+               x="-181.52209"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.65711975px;line-height:57.84999847;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#f9f9f9;fill-opacity:1;stroke:none;stroke-width:0.1508925"
+               xml:space="preserve"
+               transform="matrix(-0.00510985,-0.74083752,1.3500138,0.02756925,0,0)"><tspan
+                 style="fill:#f9f9f9;stroke-width:0.1508925"
+                 y="28.754539"
+                 x="-181.52209"
+                 id="tspan6976"
+                 sodipodi:role="line">E-Stop Solenoid</tspan></text>
+            <rect
+               ry="1.5937868"
+               y="24.084051"
+               x="-63.576595"
+               height="24.969328"
+               width="10.661854"
+               id="rect6932"
+               style="fill:#8c8c8c;fill-opacity:1;stroke:none;stroke-width:2.22521567;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+               transform="matrix(-0.00812363,-0.999967,0.99999419,-0.00340957,0,0)" />
+            <rect
+               ry="1.5937868"
+               y="23.642469"
+               x="-210.99068"
+               height="24.969328"
+               width="10.661853"
+               id="rect6932-0"
+               style="fill:#8c8c8c;fill-opacity:1;stroke:none;stroke-width:2.22521567;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+               transform="matrix(-0.00812363,-0.999967,0.99999419,-0.00340957,0,0)" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

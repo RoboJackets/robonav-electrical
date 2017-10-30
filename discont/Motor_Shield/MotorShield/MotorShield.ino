@@ -95,6 +95,9 @@ void setup()
   Serial.println();
   Serial.flush();
   Serial.println("Ready");
+
+  setPwmFrequency(6, 1);
+  setPwmFrequency(9, 1);
 }
 
 boolean gotCommand = false;
@@ -122,8 +125,7 @@ void loop()
     Serial.print(dT_sec);
     Serial.print('\n');
   }
-
-  //Serial.println(tickDataLeft);
+  
   if( millis() - lastCmdTime > 500)
   {
     Serial.println("TIMEOUT");
@@ -132,7 +134,7 @@ void loop()
     PWM_L = 0;
     PWM_R = 0;
   }
-
+  `*/
   dT_sec = (float)( millis() - lastLoopTime ) / 1000.0;
   lastLoopTime = millis();
   actualSpeedL = ( metersPerTick * tickDataLeft ) / dT_sec;

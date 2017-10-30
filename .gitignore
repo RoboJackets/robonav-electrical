@@ -59,7 +59,8 @@ datasheets/
 *.asv
 
 # OS X
-.DS_Store
+*.DS_Store
+*.un~
 
 # log files
 *.log

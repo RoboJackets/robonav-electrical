@@ -1,6 +1,6 @@
 /*
  * Indicator Light for Motor Speed Setpoint:
- * Measures angular velocity of encoder in degrees per second (averaged over every 250ms)
+ * Measures angular velocity of encoder in degrees per second (moving average over every 250ms)
  * and compares to arbitrary speed setpoint value. Lights up LED when difference is larger than arbitrary threshold.
  */
 
@@ -8,19 +8,17 @@
 #define encoder0PinB  3
 #define ledPin 13
 #define errorThreshold 20
+#define cpr 200 // Cycles per revolution of encoder disk
 
 long targetSpeed = 40; // Target angulary velocity / setpoint in degrees per second
 
-volatile signed long encoder0Pos = 0;
-signed long encoder0PosPrev = 0;
-signed long oldTime = 0;
-signed long newTime = 0;
-signed long dps = 0; // Angulary velocity in degrees per second
+volatile signed long encoder0Pos = 0; // Delta of encoder position since last loop iteration
+signed long oldTime = 0; // Time in ms from last loop iteration
+signed long dps = 0; // Angular velocity in degrees per second
 
 void setup() {
   pinMode(encoder0PinA, INPUT);
   pinMode(encoder0PinB, INPUT);
-
   pinMode(ledPin, OUTPUT);
 
   attachInterrupt(digitalPinToInterrupt(encoder0PinA), doEncoderA, CHANGE);
@@ -28,12 +26,13 @@ void setup() {
 
   oldTime = millis();
   
-  Serial.begin (9600);
+  Serial.begin(9600);
 }
 
 void loop() {
-  newTime = millis();
-  dps = ((encoder0Pos - encoder0PosPrev) * 360 * 1000 / 800) / (newTime - oldTime);
+  // Divide delta of position by 4*cpr (because 4X decoding of quadrature encoder)
+  // and multiply by 360 for change in degrees, divide by delta time, & convert from ms^-1 to s^-1.
+  dps = ((encoder0Pos) * 360 * 1000 / (4*cpr)) / (millis() - oldTime);
   Serial.println(dps);
   if (abs(dps - targetSpeed) > errorThreshold) {
     digitalWrite(ledPin, HIGH);
@@ -41,60 +40,23 @@ void loop() {
     digitalWrite(ledPin, LOW);
     Serial.println("CONGRATS");
   }
-  oldTime = newTime;
-  encoder0PosPrev = encoder0Pos;
+  oldTime = millis();
+  encoder0Pos = 0;
   delay(250);
 }
 
 void doEncoderA() {
-  // look for a low-to-high on channel A
-  if (digitalRead(encoder0PinA) == HIGH) {
-
-    // check channel B to see which way encoder is turning
-    if (digitalRead(encoder0PinB) == LOW) {
-      encoder0Pos = encoder0Pos + 1;         // CW
-    }
-    else {
-      encoder0Pos = encoder0Pos - 1;         // CCW
-    }
+  if (digitalRead(encoder0PinA) == digitalRead(encoder0PinB)) {
+	  encoder0Pos = encoder0Pos - 1;
+  } else {
+	  encoder0Pos = encoder0Pos + 1;
   }
-
-  else   // must be a high-to-low edge on channel A
-  {
-    // check channel B to see which way encoder is turning
-    if (digitalRead(encoder0PinB) == HIGH) {
-      encoder0Pos = encoder0Pos + 1;          // CW
-    }
-    else {
-      encoder0Pos = encoder0Pos - 1;          // CCW
-    }
-  }
-  //Serial.println (encoder0Pos, DEC);
-  // use for debugging - remember to comment out
 }
 
 void doEncoderB() {
-  // look for a low-to-high on channel B
-  if (digitalRead(encoder0PinB) == HIGH) {
-
-    // check channel A to see which way encoder is turning
-    if (digitalRead(encoder0PinA) == HIGH) {
-      encoder0Pos = encoder0Pos + 1;         // CW
-    }
-    else {
-      encoder0Pos = encoder0Pos - 1;         // CCW
-    }
-  }
-
-  // Look for a high-to-low on channel B
-
-  else {
-    // check channel B to see which way encoder is turning
-    if (digitalRead(encoder0PinA) == LOW) {
-      encoder0Pos = encoder0Pos + 1;          // CW
-    }
-    else {
-      encoder0Pos = encoder0Pos - 1;          // CCW
-    }
+  if (digitalRead(encoder0PinA) == digitalRead(encoder0PinB)) {
+	  encoder0Pos = encoder0Pos + 1;
+  } else {
+	  encoder0Pos = encoder0Pos - 1;
   }
 }

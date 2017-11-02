@@ -2,12 +2,11 @@ const int encoderRightData1 = 3;
 const int encoderRightData2 = 5;
 const int encoderLeftData1 = 2;
 const int encoderLeftData2 = 4;
-const int rightForwardSpeed = 7; //BLi
+const int rightForwardSpeed = 11; //BLi
 const int rightBackwardSpeed = 6; //HLi
 const int rightDisable = 8;
 const int leftForwardSpeed = 10;
 const int leftBackwardSpeed = 9;
-const int leftDisable = 11;
 
 volatile int tickDataRight = 0;
 volatile int tickDataLeft = 0;
@@ -79,7 +78,6 @@ void setup()
   pinMode(rightDisable, OUTPUT);
   pinMode(leftForwardSpeed, OUTPUT);
   pinMode(leftBackwardSpeed, OUTPUT);
-  pinMode(leftDisable, OUTPUT);
   attachInterrupt(1, tickRight, CHANGE);
   attachInterrupt(0, tickLeft, CHANGE);
 
@@ -168,13 +166,13 @@ void loop()
   if( abs(PWM_R) < 0 )
 	PWM_R = 0;
 
-  if(PWM_L < 0) {
+  /*if(PWM_L < 0) {
 	analogWrite(leftForwardSpeed, 0);
 	analogWrite(leftBackwardSpeed, -PWM_L);
   } else {
 	analogWrite(leftForwardSpeed, PWM_L);
 	analogWrite(leftBackwardSpeed, 0);
-  }
+  }*/
 
   /*if(PWM_R < 0) {
 	analogWrite(rightForwardSpeed, 0);
@@ -183,8 +181,11 @@ void loop()
 	analogWrite(rightForwardSpeed, 255);
 	analogWrite(rightBackwardSpeed, 0);
   }*/
-  analogWrite(rightForwardSpeed, 100);
+  
+  analogWrite(rightForwardSpeed, 255);
   analogWrite(rightBackwardSpeed, 0);
+  analogWrite(leftForwardSpeed, 255);
+  analogWrite(leftBackwardSpeed, 0);
 
   lastErrorL = ErrorL;
   lastErrorR = ErrorR;

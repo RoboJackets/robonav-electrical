@@ -1,3 +1,5 @@
+#include "PWM.h"
+
 const int encoderRightData1 = 3;
 const int encoderRightData2 = 5;
 const int encoderLeftData1 = 2;
@@ -99,7 +101,7 @@ boolean gotCommand = false;
 
 void loop()
 {
-  /*gotCommand = false;
+  gotCommand = false;
   while(Serial.available())
   {
 	if(Serial.read() == '$')
@@ -128,16 +130,7 @@ void loop()
 	desiredSpeedR = 0;
 	PWM_L = 0;
 	PWM_R = 0;
-  }*/
-    Serial.print('$');
-  Serial.print(actualSpeedL);
-  Serial.print(',');
-  Serial.print(actualSpeedR);
-  Serial.print(',');
-  Serial.print(dT_sec);
-  Serial.print('\n');
-  desiredSpeedL = 1.0;
-  desiredSpeedR = 1.0;
+  }
 
   dT_sec = (float)( millis() - lastLoopTime ) / 1000.0;
   lastLoopTime = millis();
@@ -170,27 +163,22 @@ void loop()
   if( abs(PWM_R) < 0 )
 	PWM_R = 0;
 
-  /*if(PWM_L < 0) {
-	analogWrite(leftForwardSpeed, 0);
-	analogWrite(leftBackwardSpeed, -PWM_L);
+  if(PWM_L < 0) {
+	//pwmWrite(leftForwardSpeed, 0);
+	//pwmWrite(leftBackwardSpeed, -PWM_L);
   } else {
-	analogWrite(leftForwardSpeed, PWM_L);
-	analogWrite(leftBackwardSpeed, 0);
-  }*/
+	pwmWrite(leftForwardSpeed, PWM_L);
+	//pwmWrite(leftBackwardSpeed, 0);
+  }
 
-  /*if(PWM_R < 0) {
-	analogWrite(rightForwardSpeed, 0);
-	analogWrite(rightBackwardSpeed, 255);
+  if(PWM_R < 0) {
+	//pwmWrite(rightForwardSpeed, 0);
+	//pwmWrite(rightBackwardSpeed, -PWM_R);
   } else {
-	analogWrite(rightForwardSpeed, 255);
-	analogWrite(rightBackwardSpeed, 0);
-  }*/
+	//pwmWrite(rightForwardSpeed, PWM_R);
+	//pwmWrite(rightBackwardSpeed, 0);
+  }
   
-  analogWrite(rightForwardSpeed, 255);
-  analogWrite(rightBackwardSpeed, 0);
-  analogWrite(leftForwardSpeed, 255);
-  analogWrite(leftBackwardSpeed, 0);
-
   lastErrorL = ErrorL;
   lastErrorR = ErrorR;
 }
@@ -219,65 +207,3 @@ void tickLeft()
   }
 }
 
-/**
- * Divides a given PWM pin frequency by a divisor.
- *
- * The resulting frequency is equal to the base frequency divided by
- * the given divisor:
- *   - Base frequencies:
- *      o The base frequency for pins 3, 9, 10, and 11 is 31250 Hz.
- *      o The base frequency for pins 5 and 6 is 62500 Hz.
- *   - Divisors:
- *      o The divisors available on pins 5, 6, 9 and 10 are: 1, 8, 64,
- *        256, and 1024.
- *      o The divisors available on pins 3 and 11 are: 1, 8, 32, 64,
- *        128, 256, and 1024.
- *
- * PWM frequencies are tied together in pairs of pins. If one in a
- * pair is changed, the other is also changed to match:
- *   - Pins 5 and 6 are paired on timer0
- *   - Pins 9 and 10 are paired on timer1
- *   - Pins 3 and 11 are paired on timer2
- *
- * Note that this function will have side effects on anything else
- * that uses timers:
- *   - Changes on pins 3, 5, 6, or 11 may cause the delay() and
- *     millis() functions to stop working. Other timing-related
- *     functions may also be affected.
- *   - Changes on pins 9 or 10 will cause the Servo library to function
- *     incorrectly.
- *
- * Thanks to macegr of the Arduino forums for his documentation of the
- * PWM frequency divisors. His post can be viewed at:
- *   http://forum.arduino.cc/index.php?topic=16612#msg121031
- */
-void setPwmFrequency(int pin, int divisor) {
-  byte mode;
-  if(pin == 5 || pin == 6 || pin == 9 || pin == 10) {
-	switch(divisor) {
-	  case 1: mode = 0x01; break;
-	  case 8: mode = 0x02; break;
-	  case 64: mode = 0x03; break;
-	  case 256: mode = 0x04; break;
-	  case 1024: mode = 0x05; break;
-	  default: return;
-	}
-	if(pin == 5 || pin == 6) {
-	  TCCR0B = TCCR0B & 0b11111000 | mode;
-	} else {
-	  TCCR1B = TCCR1B & 0b11111000 | mode;
-	}
-  } else if(pin == 3 || pin == 11) {
-	switch(divisor) {
-	  case 1: mode = 0x01; break;
-	  case 8: mode = 0x02; break;
-	  case 32: mode = 0x03; break;
-	  case 64: mode = 0x04; break;
-	  case 128: mode = 0x05; break;
-	  case 256: mode = 0x06; break;
-	  case 1024: mode = 0x07; break;
-	  default: return;
-	}
-	TCCR2B = TCCR2B & 0b11111000 | mode;
-  }
-}

@@ -6298,7 +6298,7 @@ Your Eurocircuits Team
 <element name="R30" library="SparkFun-Resistors" package="0603" value="2700" x="-61.77" y="-16.585">
 <attribute name="PROD_ID" value="RES-08701" x="-61.77" y="-16.585" size="1.778" layer="27" display="off"/>
 </element>
-<element name="R4" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="" x="-70.425" y="-20.625"/>
+<element name="R4" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="2.7k" x="-70.425" y="-20.625"/>
 <element name="J3" library="RoboJackets-Connectors" package="B2PS-CENTERED" value="B2PS-VH(LF)(SN)" x="-65" y="-72">
 <attribute name="DIGIKEY" value="455-1648-ND" x="-65" y="-72" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="B2PS-VH(LF)(SN)" x="-65" y="-72" size="1.778" layer="27" display="off"/>
@@ -6463,9 +6463,11 @@ Your Eurocircuits Team
 <contactref element="U3" pad="9"/>
 <contactref element="U4" pad="2"/>
 <contactref element="U$9" pad="2"/>
+<contactref element="J2" pad="1"/>
+<wire x1="-71.6806" y1="-116.275" x2="-91.98" y2="-129.5" width="0" layer="19" extent="1-1"/>
 <wire x1="-66.98" y1="-97" x2="-71.6806" y2="-116.275" width="0" layer="19" extent="1-1"/>
 <wire x1="-66.98" y1="-72" x2="-66.98" y2="-97" width="0" layer="19" extent="1-1"/>
-<wire x1="-106.5" y1="-155.306" x2="-71.6806" y2="-116.275" width="0" layer="19" extent="1-1"/>
+<wire x1="-106.5" y1="-155.306" x2="-91.98" y2="-129.5" width="0" layer="19" extent="1-1"/>
 <wire x1="-98.5" y1="-166" x2="-106.5" y2="-155.306" width="0" layer="19" extent="1-1"/>
 <wire x1="-18.2138" y1="-7.56" x2="-66.98" y2="-72" width="0" layer="19" extent="1-1"/>
 <wire x1="-13.2862" y1="-7.56" x2="-18.2138" y2="-7.56" width="0" layer="19" extent="1-1"/>

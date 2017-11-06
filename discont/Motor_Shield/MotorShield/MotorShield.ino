@@ -11,7 +11,7 @@ const int leftBackwardSpeed = 9;
 volatile int tickDataRight = 0;
 volatile int tickDataLeft = 0;
 
-const float ticksPerRev = 200.0;
+const float ticksPerRev = 48.0;
 const float gearRatio = 32.0;
 const float wheelCir = 1.092; // Meters
 const float metersPerTick = wheelCir / (ticksPerRev * gearRatio);
@@ -78,8 +78,8 @@ void setup()
   pinMode(rightDisable, OUTPUT);
   pinMode(leftForwardSpeed, OUTPUT);
   pinMode(leftBackwardSpeed, OUTPUT);
-  attachInterrupt(1, tickRight, CHANGE);
-  attachInterrupt(0, tickLeft, CHANGE);
+  attachInterrupt(digitalPinToInterrupt(3), tickRight, CHANGE);
+  attachInterrupt(digitalPinToInterrupt(2), tickLeft, CHANGE);
 
   delay(1000);
 
@@ -93,9 +93,6 @@ void setup()
   Serial.println();
   Serial.flush();
   Serial.println("Ready");
-
-  setPwmFrequency(6, 1);
-  setPwmFrequency(9, 1);
 }
 
 boolean gotCommand = false;
@@ -132,6 +129,13 @@ void loop()
 	PWM_L = 0;
 	PWM_R = 0;
   }*/
+    Serial.print('$');
+  Serial.print(actualSpeedL);
+  Serial.print(',');
+  Serial.print(actualSpeedR);
+  Serial.print(',');
+  Serial.print(dT_sec);
+  Serial.print('\n');
   desiredSpeedL = 1.0;
   desiredSpeedR = 1.0;
 

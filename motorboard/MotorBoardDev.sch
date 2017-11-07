@@ -15982,6 +15982,7 @@ In this library you will find integrated circuits (ICs) that are directly involv
 <part name="P+7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="U4" library="RoboJackets-PowerICs" deviceset="TLV70233" device="DBVR"/>
 <part name="U$9" library="MotorBoardDev" deviceset="R-78E5.0-1.0" device=""/>
+<part name="R6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="100"/>
 </parts>
 <sheets>
 <sheet>
@@ -16003,7 +16004,8 @@ In this library you will find integrated circuits (ICs) that are directly involv
 <instance part="P+14" gate="1" x="238.76" y="83.82"/>
 <instance part="GND16" gate="1" x="238.76" y="58.42"/>
 <instance part="D5" gate="G$1" x="45.72" y="58.42"/>
-<instance part="GND13" gate="1" x="45.72" y="45.72"/>
+<instance part="GND13" gate="1" x="45.72" y="35.56"/>
+<instance part="R6" gate="G$1" x="45.72" y="45.72" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -16029,9 +16031,9 @@ In this library you will find integrated circuits (ICs) that are directly involv
 <wire x1="238.76" y1="63.5" x2="238.76" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="D5" gate="G$1" pin="C"/>
-<wire x1="45.72" y1="53.34" x2="45.72" y2="48.26" width="0.1524" layer="91"/>
+<pinref part="R6" gate="G$1" pin="1"/>
 <pinref part="GND13" gate="1" pin="GND"/>
+<wire x1="45.72" y1="38.1" x2="45.72" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SDA" class="0">
@@ -16046,13 +16048,6 @@ In this library you will find integrated circuits (ICs) that are directly involv
 <wire x1="101.6" y1="114.3" x2="86.36" y2="114.3" width="0.1524" layer="91"/>
 <pinref part="A1" gate="G$1" pin="P$10"/>
 <label x="86.36" y="114.3" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
-<net name="BATTIN" class="0">
-<segment>
-<wire x1="101.6" y1="88.9" x2="86.36" y2="88.9" width="0.1524" layer="91"/>
-<pinref part="A1" gate="G$1" pin="P$20"/>
-<label x="86.36" y="88.9" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="ETH_LED1" class="0">
@@ -16200,28 +16195,7 @@ In this library you will find integrated circuits (ICs) that are directly involv
 <label x="86.36" y="104.14" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="TD_P" class="0">
-<segment>
-<wire x1="177.8" y1="119.38" x2="193.04" y2="119.38" width="0.1524" layer="91"/>
-<pinref part="A1" gate="G$1" pin="P$33"/>
-<label x="193.04" y="119.38" size="1.27" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="TD_N" class="0">
-<segment>
-<wire x1="177.8" y1="121.92" x2="193.04" y2="121.92" width="0.1524" layer="91"/>
-<pinref part="A1" gate="G$1" pin="P$34"/>
-<label x="193.04" y="121.92" size="1.27" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="RD_P" class="0">
-<segment>
-<wire x1="177.8" y1="124.46" x2="193.04" y2="124.46" width="0.1524" layer="91"/>
-<pinref part="A1" gate="G$1" pin="P$35"/>
-<label x="193.04" y="124.46" size="1.27" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="RD_N" class="0">
+<net name="RD-" class="0">
 <segment>
 <wire x1="177.8" y1="127" x2="193.04" y2="127" width="0.1524" layer="91"/>
 <pinref part="A1" gate="G$1" pin="P$36"/>
@@ -16253,18 +16227,11 @@ In this library you will find integrated circuits (ICs) that are directly involv
 <label x="193.04" y="111.76" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="BLUE_3V3" class="0">
+<net name="GREEN_3V3" class="0">
 <segment>
 <pinref part="A1" gate="G$1" pin="P$29"/>
 <wire x1="177.8" y1="109.22" x2="193.04" y2="109.22" width="0.1524" layer="91"/>
 <label x="193.04" y="109.22" size="1.27" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="GREEN_3V3" class="0">
-<segment>
-<pinref part="A1" gate="G$1" pin="P$28"/>
-<wire x1="177.8" y1="106.68" x2="193.04" y2="106.68" width="0.1524" layer="91"/>
-<label x="193.04" y="106.68" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="SAFETY_LIGHT_3V3" class="0">
@@ -16279,6 +16246,48 @@ In this library you will find integrated circuits (ICs) that are directly involv
 <pinref part="A1" gate="G$1" pin="P$27"/>
 <wire x1="177.8" y1="104.14" x2="193.04" y2="104.14" width="0.1524" layer="91"/>
 <label x="193.04" y="104.14" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="N$3" class="0">
+<segment>
+<pinref part="D5" gate="G$1" pin="C"/>
+<pinref part="R6" gate="G$1" pin="2"/>
+<wire x1="45.72" y1="50.8" x2="45.72" y2="53.34" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="BATTIN" class="0">
+<segment>
+<pinref part="A1" gate="G$1" pin="P$20"/>
+<wire x1="101.6" y1="88.9" x2="86.36" y2="88.9" width="0.1524" layer="91"/>
+<label x="86.36" y="88.9" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="BLUE_3V3" class="0">
+<segment>
+<pinref part="A1" gate="G$1" pin="P$28"/>
+<wire x1="177.8" y1="106.68" x2="193.04" y2="106.68" width="0.1524" layer="91"/>
+<label x="193.04" y="106.68" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="RD+" class="0">
+<segment>
+<wire x1="177.8" y1="124.46" x2="193.04" y2="124.46" width="0.1524" layer="91"/>
+<pinref part="A1" gate="G$1" pin="P$35"/>
+<label x="193.04" y="124.46" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="TD_N" class="0">
+<segment>
+<wire x1="177.8" y1="121.92" x2="193.04" y2="121.92" width="0.1524" layer="91"/>
+<pinref part="A1" gate="G$1" pin="P$34"/>
+<label x="193.04" y="121.92" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="TD_P" class="0">
+<segment>
+<wire x1="177.8" y1="119.38" x2="193.04" y2="119.38" width="0.1524" layer="91"/>
+<pinref part="A1" gate="G$1" pin="P$33"/>
+<label x="193.04" y="119.38" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 </nets>
@@ -17416,14 +17425,14 @@ Transistor here can take 4A</text>
 <pinref part="U3" gate="A" pin="VCCA"/>
 </segment>
 </net>
-<net name="RD_N" class="0">
+<net name="RD-" class="0">
 <segment>
 <pinref part="X5" gate="G$1" pin="RD-"/>
 <wire x1="172.72" y1="97.155" x2="165.1" y2="97.155" width="0.1524" layer="91"/>
 <label x="165.1" y="97.155" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="RD_P" class="0">
+<net name="RD+" class="0">
 <segment>
 <pinref part="X5" gate="G$1" pin="RD+"/>
 <wire x1="172.72" y1="102.235" x2="165.1" y2="102.235" width="0.1524" layer="91"/>
@@ -17458,32 +17467,18 @@ Transistor here can take 4A</text>
 <label x="165.1" y="84.455" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="LEA" class="0">
+<net name="LEB" class="0">
 <segment>
 <pinref part="U1" gate="A" pin="A1"/>
 <wire x1="35.56" y1="114.3" x2="27.305" y2="114.3" width="0.1524" layer="91"/>
 <label x="27.305" y="114.3" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="LEB" class="0">
-<segment>
-<pinref part="U1" gate="A" pin="A2"/>
-<wire x1="35.56" y1="111.76" x2="27.305" y2="111.76" width="0.1524" layer="91"/>
-<label x="27.305" y="111.76" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
-<net name="REA" class="0">
+<net name="REB" class="0">
 <segment>
 <pinref part="U1" gate="A" pin="A3"/>
 <wire x1="35.56" y1="109.22" x2="27.305" y2="109.22" width="0.1524" layer="91"/>
 <label x="27.305" y="109.22" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
-<net name="REB" class="0">
-<segment>
-<pinref part="U1" gate="A" pin="A4"/>
-<wire x1="35.56" y1="106.68" x2="27.305" y2="106.68" width="0.1524" layer="91"/>
-<label x="27.305" y="106.68" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="+5V" class="0">
@@ -17524,30 +17519,16 @@ Transistor here can take 4A</text>
 </net>
 <net name="LEB3" class="0">
 <segment>
-<pinref part="U1" gate="A" pin="B2"/>
-<wire x1="91.44" y1="111.76" x2="99.06" y2="111.76" width="0.1524" layer="91"/>
-<label x="99.06" y="111.76" size="1.27" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="LEA3" class="0">
-<segment>
 <pinref part="U1" gate="A" pin="B1"/>
 <wire x1="91.44" y1="114.3" x2="99.06" y2="114.3" width="0.1524" layer="91"/>
 <label x="99.06" y="114.3" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="REA3" class="0">
+<net name="REB3" class="0">
 <segment>
 <pinref part="U1" gate="A" pin="B3"/>
 <wire x1="91.44" y1="109.22" x2="99.06" y2="109.22" width="0.1524" layer="91"/>
 <label x="99.06" y="109.22" size="1.27" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="REB3" class="0">
-<segment>
-<pinref part="U1" gate="A" pin="B4"/>
-<wire x1="91.44" y1="106.68" x2="99.06" y2="106.68" width="0.1524" layer="91"/>
-<label x="99.06" y="106.68" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="FRONT_LIGHT" class="0">
@@ -17646,6 +17627,34 @@ Transistor here can take 4A</text>
 <pinref part="U3" gate="A" pin="B5"/>
 <wire x1="88.9" y1="40.64" x2="93.98" y2="40.64" width="0.1524" layer="91"/>
 <label x="93.98" y="40.64" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="REA" class="0">
+<segment>
+<pinref part="U1" gate="A" pin="A4"/>
+<wire x1="35.56" y1="106.68" x2="27.305" y2="106.68" width="0.1524" layer="91"/>
+<label x="27.305" y="106.68" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="REA3" class="0">
+<segment>
+<pinref part="U1" gate="A" pin="B4"/>
+<wire x1="91.44" y1="106.68" x2="99.06" y2="106.68" width="0.1524" layer="91"/>
+<label x="99.06" y="106.68" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="LEA3" class="0">
+<segment>
+<pinref part="U1" gate="A" pin="B2"/>
+<wire x1="91.44" y1="111.76" x2="99.06" y2="111.76" width="0.1524" layer="91"/>
+<label x="99.06" y="111.76" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="LEA" class="0">
+<segment>
+<pinref part="U1" gate="A" pin="A2"/>
+<wire x1="35.56" y1="111.76" x2="27.305" y2="111.76" width="0.1524" layer="91"/>
+<label x="27.305" y="111.76" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>

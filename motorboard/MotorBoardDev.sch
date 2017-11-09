@@ -15983,6 +15983,8 @@ In this library you will find integrated circuits (ICs) that are directly involv
 <part name="U4" library="RoboJackets-PowerICs" deviceset="TLV70233" device="DBVR"/>
 <part name="U$9" library="MotorBoardDev" deviceset="R-78E5.0-1.0" device=""/>
 <part name="R6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="100"/>
+<part name="J5" library="RoboJackets-Connectors" deviceset="B2P?-VH(LF)(SN)" device="S"/>
+<part name="GND2" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -16288,6 +16290,13 @@ In this library you will find integrated circuits (ICs) that are directly involv
 <wire x1="177.8" y1="119.38" x2="193.04" y2="119.38" width="0.1524" layer="91"/>
 <pinref part="A1" gate="G$1" pin="P$33"/>
 <label x="193.04" y="119.38" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="ESTOP" class="0">
+<segment>
+<pinref part="A1" gate="G$1" pin="P$18"/>
+<wire x1="101.6" y1="93.98" x2="86.36" y2="93.98" width="0.1524" layer="91"/>
+<label x="86.36" y="93.98" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>
@@ -17206,16 +17215,19 @@ Transistor here can take 4A</text>
 <wire x1="271.78" y1="208.28" x2="271.78" y2="114.3" width="0.1524" layer="103" style="shortdash"/>
 <wire x1="271.78" y1="114.3" x2="205.74" y2="114.3" width="0.1524" layer="103" style="shortdash"/>
 <wire x1="205.74" y1="114.3" x2="205.74" y2="208.28" width="0.1524" layer="103" style="shortdash"/>
-<text x="213.36" y="66.04" size="1.778" layer="97">The inverter is gone</text>
-<text x="213.36" y="63.5" size="1.778" layer="97">Put it bak on</text>
 <text x="215.9" y="203.2" size="1.778" layer="97">Buck converter</text>
 <text x="9.525" y="135.255" size="2.54" layer="97">This is Bidirectional</text>
 <wire x1="121.285" y1="139.7" x2="203.2" y2="139.7" width="0.1524" layer="103" style="shortdash"/>
-<wire x1="203.2" y1="139.7" x2="203.2" y2="48.895" width="0.1524" layer="103" style="shortdash"/>
-<wire x1="203.2" y1="48.895" x2="121.285" y2="48.895" width="0.1524" layer="103" style="shortdash"/>
-<wire x1="121.285" y1="48.895" x2="121.285" y2="139.7" width="0.1524" layer="103" style="shortdash"/>
+<wire x1="203.2" y1="139.7" x2="203.2" y2="48.26" width="0.1524" layer="103" style="shortdash"/>
+<wire x1="203.2" y1="48.26" x2="121.285" y2="48.26" width="0.1524" layer="103" style="shortdash"/>
+<wire x1="121.285" y1="48.26" x2="121.285" y2="139.7" width="0.1524" layer="103" style="shortdash"/>
 <text x="10.16" y="203.2" size="1.778" layer="91">Updated</text>
 <text x="9.525" y="132.08" size="2.54" layer="91">Also a shit ton of shift registers</text>
+<wire x1="205.74" y1="111.76" x2="271.78" y2="111.76" width="0.1524" layer="103" style="shortdash"/>
+<wire x1="271.78" y1="111.76" x2="271.78" y2="48.26" width="0.1524" layer="103" style="shortdash"/>
+<wire x1="271.78" y1="48.26" x2="205.74" y2="48.26" width="0.1524" layer="103" style="shortdash"/>
+<wire x1="205.74" y1="48.26" x2="205.74" y2="111.76" width="0.1524" layer="103" style="shortdash"/>
+<text x="240.03" y="50.8" size="2.54" layer="103" font="vector">Estop Stuatus</text>
 </plain>
 <instances>
 <instance part="FRAME4" gate="G$1" x="0" y="0"/>
@@ -17238,11 +17250,11 @@ Transistor here can take 4A</text>
 <instance part="GND34" gate="1" x="256.54" y="170.18"/>
 <instance part="P+17" gate="1" x="220.98" y="198.12"/>
 <instance part="P+22" gate="1" x="256.54" y="198.12"/>
-<instance part="C13" gate="G$1" x="220.98" y="129.54"/>
-<instance part="C14" gate="G$1" x="256.54" y="129.54"/>
-<instance part="+3V10" gate="G$1" x="256.54" y="144.78"/>
-<instance part="GND35" gate="1" x="220.98" y="116.84"/>
-<instance part="GND37" gate="1" x="256.54" y="116.84"/>
+<instance part="C13" gate="G$1" x="220.98" y="137.16"/>
+<instance part="C14" gate="G$1" x="256.54" y="137.16"/>
+<instance part="+3V10" gate="G$1" x="256.54" y="152.4"/>
+<instance part="GND35" gate="1" x="220.98" y="124.46"/>
+<instance part="GND37" gate="1" x="256.54" y="124.46"/>
 <instance part="P+2" gate="1" x="154.94" y="197.485"/>
 <instance part="GND17" gate="1" x="154.94" y="160.655"/>
 <instance part="GND24" gate="1" x="139.7" y="74.295"/>
@@ -17260,9 +17272,11 @@ Transistor here can take 4A</text>
 <instance part="GND7" gate="1" x="20.32" y="25.4"/>
 <instance part="U3" gate="A" x="30.48" y="53.34"/>
 <instance part="U$8" gate="A" x="154.94" y="182.88"/>
-<instance part="P+7" gate="1" x="220.98" y="144.78"/>
-<instance part="U4" gate="G$1" x="238.76" y="132.08"/>
+<instance part="P+7" gate="1" x="220.98" y="152.4"/>
+<instance part="U4" gate="G$1" x="238.76" y="139.7"/>
 <instance part="U$9" gate="G$1" x="238.76" y="185.42"/>
+<instance part="J5" gate="G$1" x="243.84" y="83.82" rot="R180"/>
+<instance part="GND2" gate="1" x="233.68" y="74.295"/>
 </instances>
 <busses>
 </busses>
@@ -17315,17 +17329,17 @@ Transistor here can take 4A</text>
 <segment>
 <pinref part="C13" gate="G$1" pin="2"/>
 <pinref part="GND35" gate="1" pin="GND"/>
-<wire x1="220.98" y1="124.46" x2="220.98" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="220.98" y1="132.08" x2="220.98" y2="129.54" width="0.1524" layer="91"/>
 <pinref part="U4" gate="G$1" pin="GND"/>
-<wire x1="220.98" y1="121.92" x2="220.98" y2="119.38" width="0.1524" layer="91"/>
-<wire x1="226.06" y1="134.62" x2="226.06" y2="121.92" width="0.1524" layer="91"/>
-<wire x1="226.06" y1="121.92" x2="220.98" y2="121.92" width="0.1524" layer="91"/>
-<junction x="220.98" y="121.92"/>
+<wire x1="220.98" y1="129.54" x2="220.98" y2="127" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="142.24" x2="226.06" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="129.54" x2="220.98" y2="129.54" width="0.1524" layer="91"/>
+<junction x="220.98" y="129.54"/>
 </segment>
 <segment>
 <pinref part="C14" gate="G$1" pin="2"/>
 <pinref part="GND37" gate="1" pin="GND"/>
-<wire x1="256.54" y1="119.38" x2="256.54" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="127" x2="256.54" y2="132.08" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="X4" gate="-2" pin="S"/>
@@ -17370,6 +17384,12 @@ Transistor here can take 4A</text>
 <wire x1="104.14" y1="30.48" x2="104.14" y2="35.56" width="0.1524" layer="91"/>
 <wire x1="104.14" y1="35.56" x2="88.9" y2="35.56" width="0.1524" layer="91"/>
 <pinref part="U3" gate="A" pin="GND"/>
+</segment>
+<segment>
+<pinref part="J5" gate="G$1" pin="1"/>
+<wire x1="238.76" y1="81.28" x2="233.68" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="233.68" y1="81.28" x2="233.68" y2="76.835" width="0.1524" layer="91"/>
+<pinref part="GND2" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="+12V" class="0">
@@ -17417,11 +17437,11 @@ Transistor here can take 4A</text>
 <segment>
 <pinref part="+3V10" gate="G$1" pin="+3V3"/>
 <pinref part="C14" gate="G$1" pin="1"/>
-<wire x1="256.54" y1="132.08" x2="256.54" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="139.7" x2="256.54" y2="147.32" width="0.1524" layer="91"/>
 <pinref part="U4" gate="G$1" pin="VOUT"/>
-<wire x1="256.54" y1="139.7" x2="256.54" y2="142.24" width="0.1524" layer="91"/>
-<wire x1="251.46" y1="139.7" x2="256.54" y2="139.7" width="0.1524" layer="91"/>
-<junction x="256.54" y="139.7"/>
+<wire x1="256.54" y1="147.32" x2="256.54" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="251.46" y1="147.32" x2="256.54" y2="147.32" width="0.1524" layer="91"/>
+<junction x="256.54" y="147.32"/>
 </segment>
 <segment>
 <wire x1="33.02" y1="50.8" x2="20.32" y2="50.8" width="0.1524" layer="91"/>
@@ -17503,16 +17523,16 @@ Transistor here can take 4A</text>
 </segment>
 <segment>
 <pinref part="C13" gate="G$1" pin="1"/>
-<wire x1="220.98" y1="142.24" x2="220.98" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="220.98" y1="149.86" x2="220.98" y2="147.32" width="0.1524" layer="91"/>
 <pinref part="P+7" gate="1" pin="+5V"/>
 <pinref part="U4" gate="G$1" pin="VIN"/>
-<wire x1="220.98" y1="139.7" x2="220.98" y2="137.16" width="0.1524" layer="91"/>
-<wire x1="220.98" y1="137.16" x2="220.98" y2="132.08" width="0.1524" layer="91"/>
-<wire x1="226.06" y1="139.7" x2="220.98" y2="139.7" width="0.1524" layer="91"/>
-<junction x="220.98" y="139.7"/>
+<wire x1="220.98" y1="147.32" x2="220.98" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="220.98" y1="144.78" x2="220.98" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="147.32" x2="220.98" y2="147.32" width="0.1524" layer="91"/>
+<junction x="220.98" y="147.32"/>
 <pinref part="U4" gate="G$1" pin="EN"/>
-<wire x1="226.06" y1="137.16" x2="220.98" y2="137.16" width="0.1524" layer="91"/>
-<junction x="220.98" y="137.16"/>
+<wire x1="226.06" y1="144.78" x2="220.98" y2="144.78" width="0.1524" layer="91"/>
+<junction x="220.98" y="144.78"/>
 </segment>
 <segment>
 <pinref part="U1" gate="A" pin="VCCB"/>
@@ -17666,6 +17686,13 @@ Transistor here can take 4A</text>
 <pinref part="U1" gate="A" pin="B4"/>
 <wire x1="91.44" y1="106.68" x2="99.06" y2="106.68" width="0.1524" layer="91"/>
 <label x="99.06" y="106.68" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="ESTOP" class="0">
+<segment>
+<pinref part="J5" gate="G$1" pin="2"/>
+<wire x1="238.76" y1="86.36" x2="228.6" y2="86.36" width="0.1524" layer="91"/>
+<label x="228.6" y="86.36" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>

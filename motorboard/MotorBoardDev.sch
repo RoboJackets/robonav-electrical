@@ -75,7 +75,7 @@
 <layer number="93" name="Pins" color="2" fill="1" visible="no" active="yes"/>
 <layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="96" name="Values" color="7" fill="1" visible="no" active="yes"/>
+<layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="99" name="SpiceOrder" color="7" fill="1" visible="yes" active="yes"/>
@@ -16195,7 +16195,7 @@ In this library you will find integrated circuits (ICs) that are directly involv
 <label x="86.36" y="104.14" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="RD-" class="0">
+<net name="RD_N" class="0">
 <segment>
 <wire x1="177.8" y1="127" x2="193.04" y2="127" width="0.1524" layer="91"/>
 <pinref part="A1" gate="G$1" pin="P$36"/>
@@ -16269,7 +16269,7 @@ In this library you will find integrated circuits (ICs) that are directly involv
 <label x="193.04" y="106.68" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="RD+" class="0">
+<net name="RD_P" class="0">
 <segment>
 <wire x1="177.8" y1="124.46" x2="193.04" y2="124.46" width="0.1524" layer="91"/>
 <pinref part="A1" gate="G$1" pin="P$35"/>
@@ -16903,9 +16903,18 @@ Transistor here can take 4A</text>
 <instance part="R30" gate="G$1" x="205.74" y="101.6" rot="R180"/>
 <instance part="GND8" gate="1" x="208.28" y="157.48"/>
 <instance part="GND11" gate="1" x="208.28" y="172.72"/>
-<instance part="Q1" gate="G$1" x="50.8" y="149.86"/>
-<instance part="Q2" gate="G$1" x="99.06" y="149.86"/>
-<instance part="Q3" gate="G$1" x="144.78" y="149.86"/>
+<instance part="Q1" gate="G$1" x="50.8" y="149.86" smashed="yes">
+<attribute name="VALUE" x="35.56" y="144.78" size="1.778" layer="96"/>
+<attribute name="NAME" x="53.34" y="152.4" size="1.778" layer="95"/>
+</instance>
+<instance part="Q2" gate="G$1" x="99.06" y="149.86" smashed="yes">
+<attribute name="VALUE" x="83.82" y="144.78" size="1.778" layer="96"/>
+<attribute name="NAME" x="101.6" y="152.4" size="1.778" layer="95"/>
+</instance>
+<instance part="Q3" gate="G$1" x="144.78" y="149.86" smashed="yes">
+<attribute name="VALUE" x="129.54" y="144.78" size="1.778" layer="96"/>
+<attribute name="NAME" x="147.32" y="152.4" size="1.778" layer="95"/>
+</instance>
 <instance part="J2" gate="G$1" x="246.38" y="88.9" rot="R180"/>
 <instance part="Q4" gate="A" x="226.06" y="99.06"/>
 </instances>
@@ -17186,7 +17195,7 @@ Transistor here can take 4A</text>
 <wire x1="118.11" y1="139.7" x2="118.11" y2="5.08" width="0.1524" layer="103" style="shortdash"/>
 <wire x1="118.11" y1="5.08" x2="7.62" y2="5.08" width="0.1524" layer="103" style="shortdash"/>
 <wire x1="7.62" y1="5.08" x2="7.62" y2="139.7" width="0.1524" layer="103" style="shortdash"/>
-<text x="168.91" y="146.05" size="2.54" layer="103" font="vector">E-Stop Status</text>
+<text x="176.53" y="146.05" size="2.54" layer="103" font="vector">Flood Light</text>
 <text x="168.91" y="50.8" size="2.54" layer="103" font="vector">Ethernet Header</text>
 <wire x1="104.14" y1="208.28" x2="203.2" y2="208.28" width="0.1524" layer="103" style="shortdash"/>
 <wire x1="203.2" y1="208.28" x2="203.2" y2="142.24" width="0.1524" layer="103" style="shortdash"/>
@@ -17248,7 +17257,7 @@ Transistor here can take 4A</text>
 <instance part="GND15" gate="1" x="104.14" y="27.94"/>
 <instance part="J3" gate="G$1" x="43.18" y="179.07" rot="R180"/>
 <instance part="J4" gate="G$1" x="70.485" y="179.07" rot="R180"/>
-<instance part="GND7" gate="1" x="20.32" y="27.94"/>
+<instance part="GND7" gate="1" x="20.32" y="25.4"/>
 <instance part="U3" gate="A" x="30.48" y="53.34"/>
 <instance part="U$8" gate="A" x="154.94" y="182.88"/>
 <instance part="P+7" gate="1" x="220.98" y="144.78"/>
@@ -17352,13 +17361,15 @@ Transistor here can take 4A</text>
 </segment>
 <segment>
 <pinref part="GND7" gate="1" pin="GND"/>
-<wire x1="20.32" y1="30.48" x2="20.32" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="20.32" y1="35.56" x2="33.02" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="27.94" x2="20.32" y2="35.56" width="0.1524" layer="91"/>
+<pinref part="U3" gate="A" pin="OE"/>
+<wire x1="33.02" y1="35.56" x2="20.32" y2="35.56" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND15" gate="1" pin="GND"/>
 <wire x1="104.14" y1="30.48" x2="104.14" y2="35.56" width="0.1524" layer="91"/>
 <wire x1="104.14" y1="35.56" x2="88.9" y2="35.56" width="0.1524" layer="91"/>
+<pinref part="U3" gate="A" pin="GND"/>
 </segment>
 </net>
 <net name="+12V" class="0">
@@ -17425,14 +17436,14 @@ Transistor here can take 4A</text>
 <wire x1="27.94" y1="116.84" x2="35.56" y2="116.84" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="RD-" class="0">
+<net name="RD_N" class="0">
 <segment>
 <pinref part="X5" gate="G$1" pin="RD-"/>
 <wire x1="172.72" y1="97.155" x2="165.1" y2="97.155" width="0.1524" layer="91"/>
 <label x="165.1" y="97.155" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="RD+" class="0">
+<net name="RD_P" class="0">
 <segment>
 <pinref part="X5" gate="G$1" pin="RD+"/>
 <wire x1="172.72" y1="102.235" x2="165.1" y2="102.235" width="0.1524" layer="91"/>

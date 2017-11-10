@@ -15098,13 +15098,6 @@ In this library you will find integrated circuits (ICs) that are directly involv
 <pinref part="R3" gate="G$1" pin="2"/>
 </segment>
 </net>
-<net name="REB3" class="0">
-<segment>
-<wire x1="101.6" y1="106.68" x2="86.36" y2="106.68" width="0.1524" layer="91"/>
-<pinref part="A1" gate="G$1" pin="P$13"/>
-<label x="86.36" y="106.68" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
 <net name="RBLI_CTRL" class="0">
 <segment>
 <wire x1="177.8" y1="101.6" x2="193.04" y2="101.6" width="0.1524" layer="91"/>
@@ -15171,13 +15164,6 @@ In this library you will find integrated circuits (ICs) that are directly involv
 <label x="86.36" y="111.76" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="LEB3" class="0">
-<segment>
-<wire x1="101.6" y1="101.6" x2="86.36" y2="101.6" width="0.1524" layer="91"/>
-<pinref part="A1" gate="G$1" pin="P$15"/>
-<label x="86.36" y="101.6" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
 <net name="D_N" class="0">
 <segment>
 <pinref part="A1" gate="G$1" pin="P$32"/>
@@ -15215,20 +15201,6 @@ In this library you will find integrated circuits (ICs) that are directly involv
 <label x="40.64" y="66.04" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="REA3" class="0">
-<segment>
-<wire x1="101.6" y1="109.22" x2="86.36" y2="109.22" width="0.1524" layer="91"/>
-<pinref part="A1" gate="G$1" pin="P$12"/>
-<label x="86.36" y="109.22" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
-<net name="LEA3" class="0">
-<segment>
-<wire x1="101.6" y1="104.14" x2="86.36" y2="104.14" width="0.1524" layer="91"/>
-<pinref part="A1" gate="G$1" pin="P$14"/>
-<label x="86.36" y="104.14" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
 <net name="RD_N" class="0">
 <segment>
 <wire x1="177.8" y1="127" x2="193.04" y2="127" width="0.1524" layer="91"/>
@@ -15256,16 +15228,16 @@ In this library you will find integrated circuits (ICs) that are directly involv
 </net>
 <net name="RED_3V3" class="0">
 <segment>
-<pinref part="A1" gate="G$1" pin="P$30"/>
-<wire x1="177.8" y1="111.76" x2="193.04" y2="111.76" width="0.1524" layer="91"/>
-<label x="193.04" y="111.76" size="1.27" layer="95" xref="yes"/>
+<wire x1="101.6" y1="109.22" x2="86.36" y2="109.22" width="0.1524" layer="91"/>
+<pinref part="A1" gate="G$1" pin="P$12"/>
+<label x="86.36" y="109.22" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="GREEN_3V3" class="0">
 <segment>
-<pinref part="A1" gate="G$1" pin="P$29"/>
-<wire x1="177.8" y1="109.22" x2="193.04" y2="109.22" width="0.1524" layer="91"/>
-<label x="193.04" y="109.22" size="1.27" layer="95" xref="yes"/>
+<wire x1="101.6" y1="106.68" x2="86.36" y2="106.68" width="0.1524" layer="91"/>
+<pinref part="A1" gate="G$1" pin="P$13"/>
+<label x="86.36" y="106.68" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="SAFETY_LIGHT_3V3" class="0">
@@ -15277,9 +15249,9 @@ In this library you will find integrated circuits (ICs) that are directly involv
 </net>
 <net name="FRONT_LIGHT_3V3" class="0">
 <segment>
-<pinref part="A1" gate="G$1" pin="P$27"/>
-<wire x1="177.8" y1="104.14" x2="193.04" y2="104.14" width="0.1524" layer="91"/>
-<label x="193.04" y="104.14" size="1.27" layer="95" xref="yes"/>
+<wire x1="101.6" y1="101.6" x2="86.36" y2="101.6" width="0.1524" layer="91"/>
+<pinref part="A1" gate="G$1" pin="P$15"/>
+<label x="86.36" y="101.6" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="INDI_LED_R" class="0">
@@ -15298,9 +15270,9 @@ In this library you will find integrated circuits (ICs) that are directly involv
 </net>
 <net name="BLUE_3V3" class="0">
 <segment>
-<pinref part="A1" gate="G$1" pin="P$28"/>
-<wire x1="177.8" y1="106.68" x2="193.04" y2="106.68" width="0.1524" layer="91"/>
-<label x="193.04" y="106.68" size="1.27" layer="95" xref="yes"/>
+<wire x1="101.6" y1="104.14" x2="86.36" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="A1" gate="G$1" pin="P$14"/>
+<label x="86.36" y="104.14" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="RD_P" class="0">
@@ -15329,6 +15301,34 @@ In this library you will find integrated circuits (ICs) that are directly involv
 <pinref part="A1" gate="G$1" pin="P$18"/>
 <wire x1="101.6" y1="93.98" x2="86.36" y2="93.98" width="0.1524" layer="91"/>
 <label x="86.36" y="93.98" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="REA3" class="0">
+<segment>
+<pinref part="A1" gate="G$1" pin="P$30"/>
+<wire x1="177.8" y1="111.76" x2="193.04" y2="111.76" width="0.1524" layer="91"/>
+<label x="193.04" y="111.76" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="REB3" class="0">
+<segment>
+<pinref part="A1" gate="G$1" pin="P$29"/>
+<wire x1="177.8" y1="109.22" x2="193.04" y2="109.22" width="0.1524" layer="91"/>
+<label x="193.04" y="109.22" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="LEA3" class="0">
+<segment>
+<pinref part="A1" gate="G$1" pin="P$28"/>
+<wire x1="177.8" y1="106.68" x2="193.04" y2="106.68" width="0.1524" layer="91"/>
+<label x="193.04" y="106.68" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="LEB3" class="0">
+<segment>
+<pinref part="A1" gate="G$1" pin="P$27"/>
+<wire x1="177.8" y1="104.14" x2="193.04" y2="104.14" width="0.1524" layer="91"/>
+<label x="193.04" y="104.14" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 </nets>

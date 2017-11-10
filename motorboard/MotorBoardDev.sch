@@ -15010,19 +15010,22 @@ In this library you will find integrated circuits (ICs) that are directly involv
 <part name="R25" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="2.7k"/>
 <part name="R22" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="4.7k"/>
 <part name="R23" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="510"/>
-<part name="R21" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="51"/>
+<part name="R21" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="100"/>
 <part name="R19" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="200"/>
 <part name="R18" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="1k"/>
 <part name="R16" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="1.8k"/>
 <part name="C4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1uF"/>
 <part name="C6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1uF"/>
 <part name="C5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1uF"/>
+<part name="PS11" library="IGVC-Power" deviceset="L+12V" device=""/>
 </parts>
 <sheets>
 <sheet>
 <description>mBed Breakout</description>
 <plain>
 <text x="111.76" y="78.74" size="1.778" layer="91">RGB are currently connected to normal digital pins</text>
+<text x="30.48" y="182.88" size="1.778" layer="97">Change Everything to I/O</text>
+<text x="187.96" y="68.58" size="1.778" layer="97">put them on the last pade</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
@@ -15367,6 +15370,11 @@ so not using it</text>
 <text x="180.34" y="139.7" size="1.778" layer="91">Review the connection of DISABLE
 even tho it physically works</text>
 <text x="10.16" y="83.82" size="1.778" layer="91">Checked, both device and package</text>
+<text x="185.42" y="187.96" size="1.778" layer="97">DO the rest</text>
+<text x="185.42" y="193.04" size="1.778" layer="97">Also LGND</text>
+<text x="200.66" y="193.04" size="1.778" layer="97">mk it clear for datapin</text>
+<text x="198.12" y="55.88" size="1.778" layer="97">5V and GND</text>
+<text x="154.94" y="48.26" size="1.778" layer="97">Specific explanation for Schematics go on schematics</text>
 </plain>
 <instances>
 <instance part="FRAME2" gate="G$1" x="0" y="0"/>
@@ -15441,6 +15449,7 @@ even tho it physically works</text>
 <instance part="R11" gate="G$1" x="124.46" y="40.64" rot="R90"/>
 <instance part="C2" gate="G$1" x="25.4" y="53.34"/>
 <instance part="C3" gate="G$1" x="53.34" y="35.56"/>
+<instance part="PS11" gate="L+12V" x="193.04" y="182.88"/>
 </instances>
 <busses>
 </busses>
@@ -15748,8 +15757,9 @@ even tho it physically works</text>
 </segment>
 <segment>
 <pinref part="X3" gate="-7" pin="KL"/>
-<wire x1="220.98" y1="180.34" x2="210.82" y2="180.34" width="0.1524" layer="91"/>
 <label x="210.82" y="180.34" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="PS11" gate="L+12V" pin="L+12V"/>
+<wire x1="193.04" y1="180.34" x2="220.98" y2="180.34" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="PS1" gate="L+12V" pin="L+12V"/>
@@ -15911,6 +15921,10 @@ to be PWM</text>
 <text x="165.1" y="129.54" size="1.27" layer="91">This is the gigantic Yellow light on the top
 power rating as 1.2A average, 3A peak.
 Transistor here can take 4A</text>
+<text x="73.66" y="114.3" size="1.778" layer="97">Probably just switch to 
+TC4427ACOA713</text>
+<text x="116.84" y="55.88" size="1.778" layer="97">24 * (510) / (510 + 4700) = 2.35</text>
+<text x="200.66" y="86.36" size="1.778" layer="97">Use gate driver</text>
 </plain>
 <instances>
 <instance part="FRAME3" gate="G$1" x="0" y="0"/>
@@ -16254,12 +16268,13 @@ Transistor here can take 4A</text>
 <wire x1="203.2" y1="48.26" x2="121.285" y2="48.26" width="0.1524" layer="103" style="shortdash"/>
 <wire x1="121.285" y1="48.26" x2="121.285" y2="139.7" width="0.1524" layer="103" style="shortdash"/>
 <text x="10.16" y="203.2" size="1.778" layer="91">Updated</text>
-<text x="9.525" y="132.08" size="2.54" layer="91">Also a shit ton of shift registers</text>
 <wire x1="205.74" y1="111.76" x2="271.78" y2="111.76" width="0.1524" layer="103" style="shortdash"/>
 <wire x1="271.78" y1="111.76" x2="271.78" y2="48.26" width="0.1524" layer="103" style="shortdash"/>
 <wire x1="271.78" y1="48.26" x2="205.74" y2="48.26" width="0.1524" layer="103" style="shortdash"/>
 <wire x1="205.74" y1="48.26" x2="205.74" y2="111.76" width="0.1524" layer="103" style="shortdash"/>
 <text x="240.03" y="50.8" size="2.54" layer="103" font="vector">Estop Stuatus</text>
+<text x="137.16" y="172.72" size="1.778" layer="97">Gate driver</text>
+<text x="68.58" y="30.48" size="1.778" layer="97">this can go</text>
 </plain>
 <instances>
 <instance part="FRAME4" gate="G$1" x="0" y="0"/>
@@ -16453,8 +16468,6 @@ Transistor here can take 4A</text>
 <wire x1="144.78" y1="107.315" x2="144.78" y2="104.775" width="0.1524" layer="91"/>
 <wire x1="144.78" y1="104.775" x2="134.62" y2="104.775" width="0.1524" layer="91"/>
 <wire x1="134.62" y1="104.775" x2="134.62" y2="99.06" width="0.1524" layer="91"/>
-<wire x1="134.62" y1="99.06" x2="134.62" y2="99.695" width="0.1524" layer="91"/>
-<wire x1="144.78" y1="99.695" x2="144.78" y2="99.06" width="0.1524" layer="91"/>
 <junction x="144.78" y="104.775"/>
 <pinref part="X7" gate="G$1" pin="TCT"/>
 <wire x1="144.78" y1="99.06" x2="144.78" y2="104.775" width="0.1524" layer="91"/>

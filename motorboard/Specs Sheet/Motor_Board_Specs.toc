@@ -1,0 +1,15 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}Overview}{2}
+\contentsline {section}{\numberline {2}Design of the board}{3}
+\contentsline {subsection}{\numberline {2.1}Controlling Unit}{3}
+\contentsline {subsection}{\numberline {2.2}Motor Control Circuit}{3}
+\contentsline {subsection}{\numberline {2.3}Light Control Circuit}{4}
+\contentsline {subsection}{\numberline {2.4}Power System}{5}
+\contentsline {subsection}{\numberline {2.5}Board Layout}{6}
+\contentsline {section}{\numberline {3}Function of the Board}{7}
+\contentsline {subsection}{\numberline {3.1}Controlling the board}{7}
+\contentsline {subsection}{\numberline {3.2}Interacting with Peripheral Devices}{8}
+\contentsline {section}{\numberline {4}Miscellaneous}{9}
+\contentsline {subsection}{\numberline {4.1}Legacy Interfaces}{9}
+\contentsline {subsection}{\numberline {4.2}Expected Future Usage}{10}
+\contentsline {section}{\numberline {5}Special Regards}{11}

@@ -21,17 +21,18 @@
 
 void setup(){
 //  attachInterrupt(2,RISING);
-  pinMode(2,INPUT);
-  pinMode(3,INPUT);
-  Serial.begin(9600);
-  _delay_us(1000);
-  Serial.write((uint8_t)127);
+//  pinMode(2,INPUT);
+  pinMode(6,OUTPUT);
+//  Serial.begin(9600);
+//  _delay_us(1000);
+//  Serial.write((uint8_t)127);
 }
 
 void loop(){
-  if (digitalRead(2) == HIGH){
-      Serial.write((uint8_t)64);
-  } else if (digitalRead(3) == HIGH) {
-      Serial.write((uint8_t)127);
-  }
+  analogWrite(6,125);
+//  if (digitalRead(2) == HIGH){
+//      Serial.write((uint8_t)64);
+//  } else if (digitalRead(3) == HIGH) {
+//      Serial.write((uint8_t)127);
+//  }
 }

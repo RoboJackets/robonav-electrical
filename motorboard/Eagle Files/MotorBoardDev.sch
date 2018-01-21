@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.4.2">
+<eagle version="8.5.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -15878,6 +15878,9 @@ Transistor here can take 4A</text>
 <wire x1="7.62" y1="2.54" x2="7.62" y2="44.45" width="0.1524" layer="103" style="shortdash"/>
 <text x="64.77" y="5.08" size="2.54" layer="103" font="vector">Sawtooth Motor Controller</text>
 <text x="64.77" y="20.32" size="1.27" layer="103">add level shifter for motor control</text>
+<text x="73.66" y="119.38" size="1.778" layer="97">For future design, make sure the level
+shifters can shift fast enough</text>
+<text x="73.66" y="116.84" size="1.778" layer="97">Such as for high speed serial comm</text>
 </plain>
 <instances>
 <instance part="FRAME4" gate="G$1" x="0" y="0"/>

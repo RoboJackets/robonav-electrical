@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.5.2">
+<eagle version="8.3.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -373,13 +373,6 @@ In this library the device names are the same as the pin names of the symbols, t
 <packages>
 </packages>
 <symbols>
-<symbol name="+05V" urn="urn:adsk.eagle:symbol:26987/1" library_version="1">
-<wire x1="-0.635" y1="1.27" x2="0.635" y2="1.27" width="0.1524" layer="94"/>
-<wire x1="0" y1="0.635" x2="0" y2="1.905" width="0.1524" layer="94"/>
-<circle x="0" y="1.27" radius="1.27" width="0.254" layer="94"/>
-<text x="-1.905" y="3.175" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="+5V" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
-</symbol>
 <symbol name="GND" urn="urn:adsk.eagle:symbol:26990/1" library_version="1">
 <wire x1="-1.27" y1="0" x2="1.27" y2="0" width="0.254" layer="94"/>
 <wire x1="1.27" y1="0" x2="0" y2="-1.27" width="0.254" layer="94"/>
@@ -389,19 +382,6 @@ In this library the device names are the same as the pin names of the symbols, t
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="+5V" urn="urn:adsk.eagle:component:27032/1" prefix="SUPPLY" library_version="1">
-<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
-<gates>
-<gate name="+5V" symbol="+05V" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="GND" urn="urn:adsk.eagle:component:27037/1" prefix="SUPPLY" library_version="1">
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
@@ -17908,6 +17888,40 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/2/LDL1117S33R.p
 </deviceset>
 </devicesets>
 </library>
+<library name="supply1" urn="urn:adsk.eagle:library:371">
+<description>&lt;b&gt;Supply Symbols&lt;/b&gt;&lt;p&gt;
+ GND, VCC, 0V, +5V, -5V, etc.&lt;p&gt;
+ Please keep in mind, that these devices are necessary for the
+ automatic wiring of the supply signals.&lt;p&gt;
+ The pin name defined in the symbol is identical to the net which is to be wired automatically.&lt;p&gt;
+ In this library the device names are the same as the pin names of the symbols, therefore the correct signal names appear next to the supply symbols in the schematic.&lt;p&gt;
+ &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+</packages>
+<symbols>
+<symbol name="+3V3" urn="urn:adsk.eagle:symbol:26950/1" library_version="1">
+<wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
+<text x="-2.54" y="-5.08" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<pin name="+3V3" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="+3V3" urn="urn:adsk.eagle:component:26981/1" prefix="+3V3" library_version="1">
+<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
+<gates>
+<gate name="G$1" symbol="+3V3" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -17918,33 +17932,33 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/2/LDL1117S33R.p
 </class>
 </classes>
 <parts>
-<part name="SUPPLY34" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+5V" device=""/>
+<part name="SUPPLY34" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="SUPPLY35" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY21" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="SUPPLY23" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+5V" device=""/>
+<part name="SUPPLY23" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="10k"/>
 <part name="C7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="4.7uF"/>
-<part name="SUPPLY22" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+5V" device=""/>
-<part name="SUPPLY27" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+5V" device=""/>
+<part name="SUPPLY22" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
+<part name="SUPPLY27" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="SUPPLY28" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY6" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="C3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1uF"/>
 <part name="C2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1uF"/>
-<part name="SUPPLY5" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+5V" device=""/>
+<part name="SUPPLY5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="X1" library="lcd-buzzer" deviceset="2X3SHROUDED" device=""/>
 <part name="U4" library="lcd-buzzer" deviceset="ATMEGA328P-*" device="AUR"/>
 <part name="D2" library="SparkFun-LED" deviceset="LED-YELLOW" device="0603" value="Green"/>
 <part name="R5" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:26057/1" value="300"/>
 <part name="SUPPLY2" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="SUPPLY3" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+5V" device=""/>
+<part name="SUPPLY3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="FRAME2" library="RoboJackets-Frames" deviceset="FRAME_A_L" device=""/>
 <part name="X2" library="con-phoenix-350" library_urn="urn:adsk.eagle:library:174" deviceset="1751248" device="" package3d_urn="urn:adsk.eagle:package:9395/1"/>
 <part name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="1uF"/>
 <part name="JP1" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-2X4" device="" package3d_urn="urn:adsk.eagle:package:22461/2"/>
 <part name="SUPPLY4" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="SUPPLY7" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+5V" device=""/>
+<part name="SUPPLY7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="X3" library="con-phoenix-350" library_urn="urn:adsk.eagle:library:174" deviceset="1751248" device="" package3d_urn="urn:adsk.eagle:package:9395/1"/>
-<part name="SUPPLY8" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+5V" device=""/>
+<part name="SUPPLY8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="R1" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:26057/1" value="300"/>
 <part name="SUPPLY9" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="D1" library="SparkFun-LED" deviceset="LED-YELLOW" device="0603" value="Blue"/>
@@ -17996,25 +18010,25 @@ Connector</text>
 <text x="-55.88" y="132.08" size="5.08" layer="103" font="vector">Reset Button</text>
 </plain>
 <instances>
-<instance part="SUPPLY34" gate="+5V" x="43.18" y="124.46"/>
+<instance part="SUPPLY34" gate="G$1" x="43.18" y="124.46"/>
 <instance part="SUPPLY35" gate="GND" x="43.18" y="99.06"/>
 <instance part="SUPPLY21" gate="GND" x="76.2" y="22.86"/>
-<instance part="SUPPLY23" gate="+5V" x="83.82" y="20.32"/>
+<instance part="SUPPLY23" gate="G$1" x="83.82" y="20.32"/>
 <instance part="R2" gate="G$1" x="76.2" y="53.34" rot="R90"/>
 <instance part="C7" gate="G$1" x="43.18" y="114.3"/>
-<instance part="SUPPLY22" gate="+5V" x="76.2" y="63.5"/>
-<instance part="SUPPLY27" gate="+5V" x="67.31" y="177.8"/>
+<instance part="SUPPLY22" gate="G$1" x="76.2" y="63.5"/>
+<instance part="SUPPLY27" gate="G$1" x="67.31" y="177.8"/>
 <instance part="SUPPLY28" gate="GND" x="67.31" y="162.56"/>
 <instance part="SUPPLY6" gate="GND" x="-40.64" y="38.1"/>
 <instance part="C3" gate="G$1" x="-40.64" y="52.07"/>
 <instance part="C2" gate="G$1" x="-50.8" y="52.07"/>
-<instance part="SUPPLY5" gate="+5V" x="-40.64" y="60.96"/>
+<instance part="SUPPLY5" gate="G$1" x="-40.64" y="60.96"/>
 <instance part="X1" gate="G$1" x="53.34" y="170.18"/>
 <instance part="U4" gate="G$1" x="27.94" y="35.56"/>
 <instance part="D2" gate="G$1" x="142.24" y="63.5" rot="MR270"/>
 <instance part="R5" gate="G$1" x="154.94" y="63.5" rot="R180"/>
 <instance part="SUPPLY2" gate="GND" x="162.56" y="58.42"/>
-<instance part="SUPPLY3" gate="+5V" x="132.08" y="68.58"/>
+<instance part="SUPPLY3" gate="G$1" x="132.08" y="68.58"/>
 <instance part="FRAME2" gate="G$1" x="-71.12" y="-5.08"/>
 <instance part="FRAME2" gate="G$2" x="101.6" y="-5.08"/>
 <instance part="X2" gate="-1" x="132.08" y="119.38"/>
@@ -18022,10 +18036,10 @@ Connector</text>
 <instance part="C1" gate="G$1" x="127" y="116.84"/>
 <instance part="JP1" gate="A" x="-35.56" y="170.18"/>
 <instance part="SUPPLY4" gate="GND" x="-21.59" y="165.1"/>
-<instance part="SUPPLY7" gate="+5V" x="-52.07" y="162.56"/>
+<instance part="SUPPLY7" gate="G$1" x="-52.07" y="162.56"/>
 <instance part="X3" gate="-1" x="144.78" y="182.88"/>
 <instance part="X3" gate="-2" x="144.78" y="162.56"/>
-<instance part="SUPPLY8" gate="+5V" x="113.03" y="185.42"/>
+<instance part="SUPPLY8" gate="G$1" x="113.03" y="185.42"/>
 <instance part="R1" gate="G$1" x="124.46" y="182.88"/>
 <instance part="SUPPLY9" gate="GND" x="128.27" y="160.02"/>
 <instance part="D1" gate="G$1" x="137.16" y="180.34" rot="MR0"/>
@@ -18039,9 +18053,9 @@ Connector</text>
 <busses>
 </busses>
 <nets>
-<net name="+5V" class="0">
+<net name="+3.3V" class="0">
 <segment>
-<pinref part="SUPPLY34" gate="+5V" pin="+5V"/>
+<pinref part="SUPPLY34" gate="G$1" pin="+3V3"/>
 <wire x1="43.18" y1="116.84" x2="43.18" y2="119.38" width="0.1524" layer="91"/>
 <pinref part="C7" gate="G$1" pin="1"/>
 <wire x1="43.18" y1="119.38" x2="43.18" y2="121.92" width="0.1524" layer="91"/>
@@ -18059,24 +18073,24 @@ Connector</text>
 <junction x="53.34" y="119.38"/>
 </segment>
 <segment>
-<pinref part="SUPPLY22" gate="+5V" pin="+5V"/>
+<pinref part="SUPPLY22" gate="G$1" pin="+3V3"/>
 <pinref part="R2" gate="G$1" pin="2"/>
 <wire x1="76.2" y1="60.96" x2="76.2" y2="58.42" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="SUPPLY23" gate="+5V" pin="+5V"/>
+<pinref part="SUPPLY23" gate="G$1" pin="+3V3"/>
 <wire x1="68.58" y1="17.78" x2="83.82" y2="17.78" width="0.1524" layer="91"/>
 <pinref part="U4" gate="G$1" pin="AVCC"/>
 </segment>
 <segment>
-<pinref part="SUPPLY27" gate="+5V" pin="+5V"/>
+<pinref part="SUPPLY27" gate="G$1" pin="+3V3"/>
 <wire x1="63.5" y1="172.72" x2="67.31" y2="172.72" width="0.1524" layer="91"/>
 <wire x1="67.31" y1="172.72" x2="67.31" y2="175.26" width="0.1524" layer="91"/>
 <pinref part="X1" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <pinref part="C2" gate="G$1" pin="1"/>
-<pinref part="SUPPLY5" gate="+5V" pin="+5V"/>
+<pinref part="SUPPLY5" gate="G$1" pin="+3V3"/>
 <wire x1="-50.8" y1="54.61" x2="-50.8" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="-50.8" y1="58.42" x2="-40.64" y2="58.42" width="0.1524" layer="91"/>
 <pinref part="C3" gate="G$1" pin="1"/>
@@ -18095,19 +18109,19 @@ Connector</text>
 <segment>
 <pinref part="D2" gate="G$1" pin="A"/>
 <wire x1="139.7" y1="63.5" x2="132.08" y2="63.5" width="0.1524" layer="91"/>
-<pinref part="SUPPLY3" gate="+5V" pin="+5V"/>
+<pinref part="SUPPLY3" gate="G$1" pin="+3V3"/>
 <wire x1="132.08" y1="66.04" x2="132.08" y2="63.5" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="JP1" gate="A" pin="7"/>
 <wire x1="-38.1" y1="167.64" x2="-45.72" y2="167.64" width="0.1524" layer="91"/>
-<pinref part="SUPPLY7" gate="+5V" pin="+5V"/>
+<pinref part="SUPPLY7" gate="G$1" pin="+3V3"/>
 <wire x1="-45.72" y1="167.64" x2="-45.72" y2="160.02" width="0.1524" layer="91"/>
 <wire x1="-45.72" y1="160.02" x2="-52.07" y2="160.02" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R1" gate="G$1" pin="1"/>
-<pinref part="SUPPLY8" gate="+5V" pin="+5V"/>
+<pinref part="SUPPLY8" gate="G$1" pin="+3V3"/>
 <wire x1="119.38" y1="182.88" x2="113.03" y2="182.88" width="0.1524" layer="91"/>
 </segment>
 </net>

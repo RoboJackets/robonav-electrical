@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.5.2">
+<eagle version="8.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -209,6 +209,16 @@ Converter</text>
 <wire x1="8.1" y1="13.3" x2="9.8" y2="13.3" width="0.5" layer="103"/>
 <wire x1="9.8" y1="13.3" x2="9.8" y2="21.3" width="0.5" layer="103"/>
 <wire x1="9.8" y1="21.3" x2="8.1" y2="21.3" width="0.5" layer="103"/>
+<text x="5.5" y="56.8" size="1.5" layer="25" font="vector" ratio="10">+</text>
+<text x="6.6" y="60.7" size="1.5" layer="25" font="vector" ratio="10" rot="R90">-</text>
+<text x="6.3" y="18.6" size="1.5" layer="25" font="vector" ratio="10" rot="R90">-</text>
+<text x="5.2" y="14.7" size="1.5" layer="25" font="vector" ratio="10">+</text>
+<text x="6.5" y="7.4" size="1.5" layer="25" font="vector" ratio="10" rot="R90">-</text>
+<text x="21.6" y="74.1" size="1.5" layer="25" font="vector" ratio="10">-</text>
+<text x="17.2" y="74" size="1.5" layer="25" font="vector" ratio="10">S1</text>
+<text x="6.6" y="76.5" size="1.5" layer="25" font="vector" ratio="10" rot="R90">-</text>
+<text x="6.6" y="72.8" size="1.5" layer="25" font="vector" ratio="10" rot="R90">+</text>
+<text x="6.5" y="3.7" size="1.5" layer="25" font="vector" ratio="10" rot="R90">+</text>
 </plain>
 <libraries>
 <library name="MotorBoardDev">
@@ -20858,13 +20868,9 @@ Your Eurocircuits Team
 <wire x1="22.8" y1="62.4" x2="23.2" y2="62" width="0.2" layer="1"/>
 <via x="23.2" y="62" extent="1-16" drill="0.35"/>
 <contactref element="U2" pad="9"/>
-<contactref element="U2" pad="8"/>
 <wire x1="47.8694" y1="24.125" x2="49.575" y2="24.125" width="0.3" layer="1"/>
 <wire x1="49.575" y1="24.125" x2="49.8" y2="24.35" width="0.3" layer="1"/>
 <via x="49.8" y="24.35" extent="1-16" drill="0.35"/>
-<wire x1="42.2306" y1="24.125" x2="43.125" y2="24.125" width="0.3" layer="1"/>
-<wire x1="43.125" y1="24.125" x2="43.6" y2="23.65" width="0.3" layer="1"/>
-<via x="43.6" y="23.65" extent="1-16" drill="0.35"/>
 <wire x1="72.155" y1="43.58" x2="74.58" y2="43.58" width="0.3" layer="1"/>
 <wire x1="48.56" y1="70.83" x2="48.56" y2="70.94" width="0.5" layer="1"/>
 <wire x1="48.56" y1="70.94" x2="47.45" y2="72.05" width="0.5" layer="1"/>

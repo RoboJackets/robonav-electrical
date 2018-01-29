@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.5.2">
+<eagle version="8.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -14558,7 +14558,6 @@ In this library you will find integrated circuits (ICs) that are directly involv
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+13" library="supply1" deviceset="+5V" device=""/>
 <part name="+3V37" library="supply1" deviceset="+3V3" device=""/>
-<part name="GND17" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND19" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="PS9" library="IGVC-Power" deviceset="LGND" device=""/>
 <part name="PS10" library="IGVC-Power" deviceset="RGND" device=""/>
@@ -15911,7 +15910,6 @@ shifters can shift fast enough</text>
 <instance part="GND21" gate="1" x="139.7" y="74.295"/>
 <instance part="P+13" gate="1" x="99.06" y="106.68" rot="MR0"/>
 <instance part="+3V37" gate="G$1" x="30.48" y="106.68" rot="MR0"/>
-<instance part="GND17" gate="1" x="35.56" y="78.74"/>
 <instance part="GND19" gate="1" x="93.98" y="78.74"/>
 <instance part="R26" gate="G$1" x="139.7" y="185.42"/>
 <instance part="J3" gate="G$1" x="43.18" y="179.07" rot="R180"/>
@@ -16012,12 +16010,6 @@ shifters can shift fast enough</text>
 <pinref part="C6" gate="G$1" pin="2"/>
 <wire x1="144.78" y1="91.44" x2="144.78" y2="86.995" width="0.1524" layer="91"/>
 <pinref part="C5" gate="G$1" pin="2"/>
-</segment>
-<segment>
-<pinref part="GND17" gate="1" pin="GND"/>
-<wire x1="35.56" y1="81.28" x2="35.56" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="83.82" x2="43.18" y2="83.82" width="0.1524" layer="91"/>
-<pinref part="U2" gate="A" pin="OE"/>
 </segment>
 <segment>
 <pinref part="GND19" gate="1" pin="GND"/>

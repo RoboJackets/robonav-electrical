@@ -1,19 +1,17 @@
 #include "globals.h"
+
 class Motor{
-    enum Side {LEFT,RIGHT}_side;
     public:
     // Constructor
-    Motor(Side);
+    Motor();
     // ~Motor();
-    void setSpeed(int); // -64 to 63;
-    int getSpeed();
+    void setLeftSpeed(int); // -64 to 63;
+    int getLeftSpeed();
+    void setRightSpeed(int); // -64 to 63;
+    int getRightSpeed();
     void stop();
-    void setEncoder(Side);
-    Side getEncoderSide();
-    Side getMotorSide();
 
     private:
-    Side motorSide;
-    Side encoderSide;
-    int currentSpeed;
+    int leftSpeed;
+    int rightSpeed;
 };

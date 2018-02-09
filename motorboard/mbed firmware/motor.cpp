@@ -1,39 +1,38 @@
 #include "motor.h"
 
-Motor::Motor(Side _side) {
-    this->motorSide = _side;
+Motor::Motor() {
     Serial saberToothMC(p13,NC);
-    setEncoder(_side);
-    currentSpeed = 0;
-    setSpeed(0);
+    stop();
+}
+void Motor::setLeftSpeed(int speedL) {
+    if (speedL > 127) {
+        speedL = 127;
+    } else if (speedL < 0) {
+        speedL = 0;
+    }
+    saberToothMC.putc(speedL);
+    leftSpeed = speedL;
 }
 
-void Motor::setSpeed(int _speed) {
-    _speed += getMotorSide() == LEFT ? 64 : 192;
-   saberToothMC.putc(_speed);
-    currentSpeed = _speed;
+int Motor::getLeftSpeed() {
+    return leftSpeed;
+}
+void Motor::setRightSpeed(int speedR) {
+    if (speedR > 127) {
+        speedR = 127;
+    } else if (speedR < 0) {
+        speedR = 0;
+    }
+    speedR += 128;
+    saberToothMC.putc(speedR);
+    leftSpeed = speedR;
 }
 
-int Motor::getSpeed() {
-    return currentSpeed -= getMotorSide() == LEFT ? 64 : 192;
+int Motor::getRightSpeed() {
+    return rightSpeed;
 }
 
 void Motor::stop() {
-    if (getMotorSide() == LEFT) {
-       saberToothMC.putc(64);
-    } else {
-       saberToothMC.putc(192);
-    }
-}
-
-void Motor::setEncoder(Side _side) {
-    encoderSide = _side;
-}
-
-Motor::Side Motor::getMotorSide(){
-    return motorSide;
-}
-
-Motor::Side Motor::getEncoderSide(){
-    return encoderSide;
+    saberToothMC.putc(64);
+    saberToothMC.putc(192);
 }

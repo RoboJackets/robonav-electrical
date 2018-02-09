@@ -11,6 +11,7 @@ extern DigitalOut myLED4;
 extern DigitalOut boardLED;
 
 extern USBSerial serialNUC;
+extern Serial saberToothMC;
 
 extern const double wheelCircum;
 extern const double gearRatio;

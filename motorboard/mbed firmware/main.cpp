@@ -1,3 +1,4 @@
+// #define _GLIBCXX_USE_C99 1
 #include "mbed.h"
 #include "globals.h"
 #include "motor.h"
@@ -11,8 +12,7 @@ DigitalOut myLED3(LED3);
 DigitalOut myLED4(LED4);
 DigitalOut boardLED(p8);
 
-void parseCommand(string);
-void testSerial();
+void parseCommand(char*);
 
 string msg;
 long lastCmdTime = 0;
@@ -27,68 +27,75 @@ int rightSpeed = 0;
 
 Timer t;
 Motor meow;
-char buffer[10];
+uint8_t buffer[128];
 
 int main(){
+    myLED1 = 1;
     wait(1);
     saberToothMC.baud(38400);
-    serialNUC.printf("ready\n");
     t.reset();
     bool gotCommand = false;
     t.start();
-    // while(true){
-    //     testSerial();
-    // }
 
+    serialNUC.printf("Ready");
+    string str;
     while(true){
+        myLED1 = 0;
         while (serialNUC.available()) {
             if(serialNUC.readable()) {
                 serialNUC.scanf("%s",&buffer);
                 if(buffer[0] == '~') {
-                    // serialNUC.printf("Message: %s %s\n",buffer, string(buffer));
                 } else {
-                    msg = string(buffer);
-                    serialNUC.printf("%s\n",msg);
-                    parseCommand(msg);
+                    parseCommand((char*)buffer);
                     gotCommand = true;
                     lastCmdTime = t.read_ms();
+                    serialNUC.printf("left: %f, right: %f\n\r",desiredSpeedL,desiredSpeedR);
                 }
-                serialNUC.printf("left: %d, right: %d\n",desiredSpeedL,desiredSpeedR);
             }
         }
-    }
 
-    // if (gotCommand) {
-    //     serialNUC.printf("$%s,%s,$d\n",actualSpeedL,actualSpeedR,dT_sec);
-    // }
+        if (gotCommand) {
+            serialNUC.printf("$%f,%f,%f\n\r",actualSpeedL,actualSpeedR,dT_sec);
+            gotCommand = false;
+        }
+
+        myLED1 = 1;
+        wait(0.1);
 
     // if (t.read_ms() - lastCmdTime > 500) {
     //     serialNUC.printf("TIMEOUT");
     // }
 
-    // meow.setLeftSpeed(leftSpeed);
-    // meow.setRightSpeed(rightSpeed);
-}
-
-void parseCommand(string cmd) {
-    int commaIndex = cmd.find(",");
-    int dolrIndex = cmd.find("$");
-    if (commaIndex == -1 || dolrIndex == -1) {
-        serialNUC.printf("Invalid Command Format\n");
+        meow.setLeftSpeed(leftSpeed);
+        meow.setRightSpeed(rightSpeed);
     }
-
-    desiredSpeedL = atoi(cmd.substr(1,commaIndex - 1).c_str());
-    desiredSpeedR = atoi(cmd.substr(commaIndex + 1).c_str());
 }
 
-void testSerial() {
-    myLED1 = 0;
-    while (serialNUC.available()){
-        if(serialNUC.readable()) {
-            serialNUC.scanf("%s",&buffer);
-            if(buffer[0] != '~') {
-                serialNUC.printf("Message: %s %s\n",buffer, string(buffer));
+void parseCommand(char* cmd) {
+    if (cmd[0] != '$' || cmd[5] != ',' && cmd[4] != ',') {
+        serialNUC.printf("Invalid Format\n\r");
+    } else {
+        if (cmd[1] == '-') {
+            desiredSpeedL = (float) cmd[2] - 48 + ((float)cmd[4] - 48)/10;
+            desiredSpeedL = 0 - desiredSpeedL;
+
+            if (cmd[6] == '-'){
+                desiredSpeedR = (float) cmd[7] - 48 + ((float)cmd[9] - 48)/10;
+                desiredSpeedR = 0 - desiredSpeedR;
+            } else {
+                desiredSpeedR = (float) cmd[6] - 48 + ((float)cmd[8] - 48)/10;
+            }
+
+        } else {
+            desiredSpeedL = (float) cmd[1] - 48 + ((float)cmd[3] - 48)/10;
+
+            if (cmd[5] == '-'){
+                desiredSpeedR = (float) cmd[6] - 48 + ((float)cmd[8] - 48)/10;
+                desiredSpeedR = 0 - desiredSpeedR;
+            } else {
+                desiredSpeedR = (float) cmd[5] - 48 + ((float)cmd[7] - 48)/10;
             }
         }
+
     }
 }

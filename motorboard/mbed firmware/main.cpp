@@ -3,6 +3,7 @@
 #include "globals.h"
 #include "motor.h"
 #include <string>
+#include "testBench.h"
 
 /*
 If Stuff went wrong, go USBSerial.h, line 141, uncomment 141 and comment 142
@@ -24,8 +25,6 @@ DigitalIn encoderRightPinB(p27);
 
 // function prototypes
 void parseCommand(char*);
-void encoderCheck();
-void serialCheck();
 void tickLeft();
 void tickRight();
 
@@ -216,35 +215,3 @@ void tickLeft() {
         tickDataLeft--;
 }
 
-void encoderCheck() {
-    // bool LEA = encoderLeftPinA.is_connected();
-    bool LEB = encoderLeftPinB.is_connected();
-    // bool REA = encoderRightPinA.is_connected();
-    bool REB = encoderRightPinB.is_connected();
-    // if (!LEA) {
-    //     serialNUC.printf("Left Encoder Channel A poor connection or disconnected\n\r");
-    // }
-
-    if (!LEB) {
-        serialNUC.printf("Left Encoder poor connection or disconnected\n\r");
-    }
-
-    // if (!REA) {
-    //     serialNUC.printf("Right Encoder Channel A poor connection or disconnected\n\r");
-    // }
-
-    if (!REB) {
-        serialNUC.printf("Right Encoder poor connection or disconnected\n\r");
-    }
-
-    // if (LEA && LEB && REA && REB) {
-    if (LEB && REB) {
-        serialNUC.printf("Encoder ready\n\r");
-    }
-
-}
-
-void serialCheck() {
-    // To be implemented
-    return;
-}

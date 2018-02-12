@@ -138,7 +138,8 @@ public:
      */
     void attach(void (*fptr)(void)) {
         if(fptr != NULL) {
-            rx.attach(fptr);
+            // rx.attach(fptr);
+            rx = fptr;
         }
     }
 

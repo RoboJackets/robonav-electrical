@@ -9,6 +9,11 @@ extern DigitalOut myLED2;
 extern DigitalOut myLED3;
 extern DigitalOut myLED4;
 extern DigitalOut boardLED;
+extern InterruptIn encoderLeftPinA;
+extern DigitalIn encoderLeftPinB;
+extern InterruptIn encoderRightPinA;
+extern DigitalIn encoderRightPinB;
+
 
 extern USBSerial serialNUC;
 extern Serial saberToothMC;

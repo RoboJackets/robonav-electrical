@@ -84,7 +84,7 @@ void loop()
           digitalWrite(BTN_LED, LOW);
         }
     }
-    Serial.println(" ");
+    Serial.print("\n");
   }
   SPI_RW_Reg(WRITE_REG+STATUS,status);                             // clear RX_DR or TX_DS or MAX_RT interrupt flag
   delay(25);
@@ -98,9 +98,9 @@ void loop()
 //**************************************************
 void init_io(void)
 {
-  digitalWrite(IRQ, 0);
-  digitalWrite(CE, 0);			// chip enable
-  digitalWrite(CSN, 1);                 // Spi disable	
+  digitalWrite(IRQ, LOW);
+  digitalWrite(CE, LOW);			// chip enable
+  digitalWrite(CSN, HIGH);                 // Spi disable	
 }
 
 /************************************************************************
@@ -127,10 +127,10 @@ unsigned char SPI_RW_Reg(unsigned char reg, unsigned char value)
 {
   unsigned char status;
 
-  digitalWrite(CSN, 0);                   // CSN low, init SPI transaction
+  digitalWrite(CSN, LOW);                   // CSN low, init SPI transaction
   SPI_RW(reg);                            // select register
   SPI_RW(value);                          // ..and write value to it..
-  digitalWrite(CSN, 1);                   // CSN high again
+  digitalWrite(CSN, HIGH);                   // CSN high again
 
   return(status);                   // return nRF24L01 status unsigned char
 }
@@ -146,10 +146,10 @@ unsigned char SPI_Read(unsigned char reg)
 {
   unsigned char reg_val;
 
-  digitalWrite(CSN, 0);                // CSN low, initialize SPI communication...
+  digitalWrite(CSN, LOW);                // CSN low, initialize SPI communication...
   SPI_RW(reg);                         // Select register to read from..
   reg_val = SPI_RW(0);                 // ..then read register value
-  digitalWrite(CSN, 1);                // CSN high, terminate SPI communication
+  digitalWrite(CSN, HIGH);                // CSN high, terminate SPI communication
 
   return(reg_val);                     // return register value
 }
@@ -166,7 +166,7 @@ unsigned char SPI_Read_Buf(unsigned char reg, unsigned char *pBuf, unsigned char
 {
   unsigned char sstatus,i;
 
-  digitalWrite(CSN, 0);                   // Set CSN low, init SPI tranaction
+  digitalWrite(CSN, LOW);                   // Set CSN low, init SPI tranaction
   sstatus = SPI_RW(reg);       	    // Select register to write to and read status unsigned char
 
   for(i=0;i<bytes;i++)
@@ -174,7 +174,7 @@ unsigned char SPI_Read_Buf(unsigned char reg, unsigned char *pBuf, unsigned char
     pBuf[i] = SPI_RW(0);    // Perform SPI_RW to read unsigned char from nRF24L01
   }
 
-  digitalWrite(CSN, 1);                   // Set CSN high again
+  digitalWrite(CSN, HIGH);                   // Set CSN high again
 
   return(sstatus);                  // return nRF24L01 status unsigned char
 }
@@ -191,20 +191,20 @@ unsigned char SPI_Write_Buf(unsigned char reg, unsigned char *pBuf, unsigned cha
 {
   unsigned char sstatus,i;
 
-  digitalWrite(CSN, 0);                   // Set CSN low, init SPI tranaction
+  digitalWrite(CSN, LOW);                   // Set CSN low, init SPI tranaction
   sstatus = SPI_RW(reg);             // Select register to write to and read status unsigned char
   for(i=0;i<bytes; i++)             // then write all unsigned char in buffer(*pBuf)
   {
     SPI_RW(*pBuf++);
   }
-  digitalWrite(CSN, 1);                   // Set CSN high again
+  digitalWrite(CSN, HIGH);                   // Set CSN high again
   return(sstatus);                  // return nRF24L01 status unsigned char
 }
 /**************************************************/
 
 void RX_Mode(void)
 {
-  digitalWrite(CE, 0);
+  digitalWrite(CE, LOW);
   
   SPI_Write_Buf(WRITE_REG + RX_ADDR_P0, TX_ADDRESS, TX_ADR_WIDTH); // Use the same address on the RX device as the TX device
   SPI_RW_Reg(WRITE_REG + EN_AA, 0x01);      // Enable Auto.Ack:Pipe0
@@ -213,7 +213,7 @@ void RX_Mode(void)
   SPI_RW_Reg(WRITE_REG + RX_PW_P0, TX_PLOAD_WIDTH); // Select same RX payload width as TX Payload width
   SPI_RW_Reg(WRITE_REG + RF_SETUP, 0x07);   // TX_PWR:0dBm, Datarate:2Mbps, LNA:HCURR
   SPI_RW_Reg(WRITE_REG + CONFIG, 0x0f);     // Set PWR_UP bit, enable CRC(2 unsigned chars) & Prim:RX. RX_DR enabled..
-  digitalWrite(CE, 1);                             // Set CE pin high to enable RX device
+  digitalWrite(CE, HIGH);                             // Set CE pin high to enable RX device
   //  This device is now ready to receive one packet of 16 unsigned chars payload from a TX device sending to address
   //  '3443101001', with auto acknowledgment, retransmit count of 10, RF channel 40 and datarate = 2Mbps.
 }

@@ -3,16 +3,19 @@
 #include "globals.h"
 #include "motor.h"
 #include <string>
-#include "testBench.h"
+#include "MPU9250.h"
 
 /*
 If Stuff went wrong, go USBSerial.h, line 141, uncomment 141 and comment 142
 */
 
+// Light shield stuff, estop
 
 // Hardware definition
 Serial saberToothMC(p13,NC);
 USBSerial serialNUC;
+MPU9250 imu;
+
 DigitalOut myLED1(LED1);
 DigitalOut myLED2(LED2);
 DigitalOut myLED3(LED3);
@@ -27,6 +30,8 @@ DigitalIn encoderRightPinB(p27);
 void parseCommand(char*);
 void tickLeft();
 void tickRight();
+void imuCheck();
+void printAcce();
 
 // Serial Comm time
 long lastCmdTime = 0;
@@ -69,6 +74,7 @@ Timer t;
 Motor meow;
 
 int main(){
+    wait(2);
     myLED1 = 1;
     saberToothMC.baud(38400);
     wait(1);
@@ -215,3 +221,30 @@ void tickLeft() {
         tickDataLeft--;
 }
 
+void imuCheck()
+{
+    serialNUC.printf("Initializing IMU\n\r");
+    imu.initMPU9250();
+    serialNUC.printf("Initialization complete\n\r");
+    int count = 0;
+    while (count < 50)
+    {
+        int16_t tempValue = imu.readTempData();
+        serialNUC.printf("Temperature is %d\n\r", tempValue);
+        wait(0.5);
+        count++;
+    }
+    serialNUC.printf("Temp Check Complete\n\r");
+}
+
+void printAcce() {
+    int count = 0;
+    int16_t acceleration[3];
+    while (count < 50) {
+        imu.readAccelData(&acceleration[0]);
+        serialNUC.printf("%d\t%d\t%d\n\r",acceleration[0],acceleration[1],acceleration[2]);
+        count++;
+        wait(0.5);
+    }
+    serialNUC.printf("Temp Check Complete\n\r");
+}

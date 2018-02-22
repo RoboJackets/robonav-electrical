@@ -14,7 +14,6 @@ extern DigitalIn encoderLeftPinB;
 extern InterruptIn encoderRightPinA;
 extern DigitalIn encoderRightPinB;
 
-
 extern USBSerial serialNUC;
 extern Serial saberToothMC;
 

@@ -3,6 +3,7 @@
 
 #include "mbed.h"
 #include "USBSerial.h"
+#include "MPU9250.h"
 
 extern DigitalOut myLED1;
 extern DigitalOut myLED2;
@@ -16,11 +17,8 @@ extern DigitalIn encoderRightPinB;
 
 extern USBSerial serialNUC;
 extern Serial saberToothMC;
-
-extern const double wheelCircum;
-extern const double gearRatio;
-extern const int ticksPerRev;
-extern const double metersPerTick;
+extern I2C i2c;
+extern MPU9250 imu;
 
 
 #endif

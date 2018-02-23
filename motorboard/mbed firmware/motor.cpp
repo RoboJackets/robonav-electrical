@@ -1,7 +1,8 @@
 #include "motor.h"
+#include "globals.h"
 
 Motor::Motor() {
-    Serial saberToothMC(p13,NC);
+    // Serial saberToothMC(p13,NC); 
     stop();
 }
 // I will scale from -256 to 255 to 0 to 127

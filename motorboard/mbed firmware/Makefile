@@ -43,14 +43,14 @@ PROJECT := IGVC_motorboard
 ###############################################################################
 # Objects and Paths
 
-OBJECTS += USBDevice/USBAudio/USBAudio.o
+# OBJECTS += USBDevice/USBAudio/USBAudio.o
 OBJECTS += USBDevice/USBDevice/USBDevice.o
-OBJECTS += USBDevice/USBHID/USBHID.o
-OBJECTS += USBDevice/USBHID/USBKeyboard.o
-OBJECTS += USBDevice/USBHID/USBMouse.o
-OBJECTS += USBDevice/USBHID/USBMouseKeyboard.o
-OBJECTS += USBDevice/USBMIDI/USBMIDI.o
-OBJECTS += USBDevice/USBMSD/USBMSD.o
+# OBJECTS += USBDevice/USBHID/USBHID.o
+# OBJECTS += USBDevice/USBHID/USBKeyboard.o
+# OBJECTS += USBDevice/USBHID/USBMouse.o
+# OBJECTS += USBDevice/USBHID/USBMouseKeyboard.o
+# OBJECTS += USBDevice/USBMIDI/USBMIDI.o
+# OBJECTS += USBDevice/USBMSD/USBMSD.o
 OBJECTS += USBDevice/USBSerial/USBCDC.o
 OBJECTS += USBDevice/USBSerial/USBSerial.o
 OBJECTS += USBDevice/targets/TARGET_NXP/USBHAL_LPC11U.o
@@ -58,6 +58,8 @@ OBJECTS += USBDevice/targets/TARGET_NXP/USBHAL_LPC17.o
 OBJECTS += USBDevice/targets/TARGET_NXP/USBHAL_LPC40.o
 OBJECTS += main.o
 OBJECTS += motor.o
+OBJECTS += testBench.o
+OBJECTS += MPU9250.o
 
  SYS_OBJECTS += mbed/TARGET_LPC1768/TOOLCHAIN_GCC_ARM/CRP.o
  SYS_OBJECTS += mbed/TARGET_LPC1768/TOOLCHAIN_GCC_ARM/analogin_api.o

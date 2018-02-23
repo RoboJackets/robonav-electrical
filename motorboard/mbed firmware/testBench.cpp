@@ -1,4 +1,5 @@
 #include "testBench.h"
+#include "globals.h"
 
 void encoderCheck()
 {
@@ -35,4 +36,32 @@ void serialCheck()
 {
     // To be implemented
     return;
+}
+
+void imuTempCheck() {
+    serialNUC.printf("Initializing IMU\n\r");
+    imu.initMPU9250();
+    serialNUC.printf("Initialization complete\n\r");
+    int count = 0;
+    while (count < 50)
+    {
+        int16_t tempValue = imu.readTempData();
+        serialNUC.printf("Temperature is %d\n\r", tempValue);
+        wait(0.5);
+        count++;
+    }
+    serialNUC.printf("Temp Check Complete\n\r");
+}
+
+void imuAcceCheck() {
+    int count = 0;
+    int16_t acceleration[3];
+    while (count < 50)
+    {
+        imu.readAccelData(&acceleration[0]);
+        serialNUC.printf("%d\t%d\t%d\n\r", acceleration[0], acceleration[1], acceleration[2]);
+        count++;
+        wait(0.5);
+    }
+    serialNUC.printf("Temp Check Complete\n\r");
 }

@@ -4,6 +4,11 @@
 MPU9250::MPU9250(int in) {
     int num = in;
     num--;
+    initMPU9250();
+    getAres();
+    getGres();
+    getMres();
+    calibrateMPU9250(gyroBias,accelBias);
     // The constructor to distinguish between declaration and initialization
     // in globals.h
 }
@@ -77,7 +82,7 @@ void MPU9250::getGres()
     }
 }
 
-void MPU9250::getAres()
+float MPU9250::getAres()
 {
     switch (Ascale)
     {
@@ -97,27 +102,37 @@ void MPU9250::getAres()
         aRes = 16.0 / 32768.0;
         break;
     }
+    return aRes;
 }
 
-void MPU9250::readAccelData(int16_t *destination)
+void MPU9250::readAccelData(float *destination)
 {
     uint8_t rawData[6];                                                  // x/y/z accel register data stored here
     readBytes(MPU9250_ADDRESS, ACCEL_XOUT_H, 6, &rawData[0]);            // Read the six raw data registers into data array
     destination[0] = (int16_t)(((int16_t)rawData[0] << 8) | rawData[1]); // Turn the MSB and LSB into a signed 16-bit value
     destination[1] = (int16_t)(((int16_t)rawData[2] << 8) | rawData[3]);
     destination[2] = (int16_t)(((int16_t)rawData[4] << 8) | rawData[5]);
+
+    destination[0] = destination[0] * aRes - accelBias[0];
+    destination[1] = destination[1] * aRes - accelBias[1];
+    destination[2] = destination[2] * aRes - accelBias[2];
+    
 }
 
-void MPU9250::readGyroData(int16_t *destination)
+void MPU9250::readGyroData(float *destination)
 {
     uint8_t rawData[6];                                                  // x/y/z gyro register data stored here
     readBytes(MPU9250_ADDRESS, GYRO_XOUT_H, 6, &rawData[0]);             // Read the six raw data registers sequentially into data array
     destination[0] = (int16_t)(((int16_t)rawData[0] << 8) | rawData[1]); // Turn the MSB and LSB into a signed 16-bit value
     destination[1] = (int16_t)(((int16_t)rawData[2] << 8) | rawData[3]);
     destination[2] = (int16_t)(((int16_t)rawData[4] << 8) | rawData[5]);
+
+    destination[0] = (float)destination[0]*gRes - gyroBias[0];
+    destination[1] = (float)destination[1]*gRes - gyroBias[1];
+    destination[2] = (float)destination[2]*gRes - gyroBias[2];
 }
 
-void MPU9250::readMagData(int16_t *destination)
+void MPU9250::readMagData(float *destination)
 {
     uint8_t rawData[7]; // x/y/z gyro register data, ST2 register stored here, must read ST2 at end of data acquisition
     if (readByte(AK8963_ADDRESS, AK8963_ST1) & 0x01)
@@ -129,6 +144,8 @@ void MPU9250::readMagData(int16_t *destination)
             destination[0] = (int16_t)(((int16_t)rawData[1] << 8) | rawData[0]); // Turn the MSB and LSB into a signed 16-bit value
             destination[1] = (int16_t)(((int16_t)rawData[3] << 8) | rawData[2]); // Data stored as little Endian
             destination[2] = (int16_t)(((int16_t)rawData[5] << 8) | rawData[4]);
+
+            destination[0] = (float)destination[0] * mRes * magCalibration[0] - magbias[0];
         }
     }
 }
@@ -443,7 +460,7 @@ void MPU9250::calibrateMPU9250(float *dest1, float *dest2)
     data[5] = (accel_bias_reg[2]) & 0xFF;
     data[5] = data[5] | mask_bit[2]; // preserve temperature compensation bit when writing back to accelerometer bias registers
 
-    // Apparently this is not working for the acceleration biases in the MPU-9250
+    // Apparently this is not working for the destination biases in the MPU-9250
     // Are we handling the temperature correction bit properly?
     // Push accelerometer biases to hardware registers
     /*  writeByte(MPU9250_ADDRESS, XA_OFFSET_H, data[0]);

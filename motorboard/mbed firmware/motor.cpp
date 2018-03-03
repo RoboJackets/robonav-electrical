@@ -7,12 +7,13 @@ Motor::Motor() {
 }
 // I will scale from -256 to 255 to 0 to 127
 void Motor::setLeftSpeed(int speedL) {
-    speedL = (speedL + 256) / 4;
+    speedL = (speedL + 255) / 4;
     if (speedL > 127) {
         speedL = 127;
     } else if (speedL < 0) {
         speedL = 0;
     }
+    speedL += 128;
     saberToothMC.putc(speedL);
     leftSpeed = speedL;
 }
@@ -27,7 +28,6 @@ void Motor::setRightSpeed(int speedR) {
     } else if (speedR < 0) {
         speedR = 0;
     }
-    speedR += 128;
     saberToothMC.putc(speedR);
     leftSpeed = speedR;
 }

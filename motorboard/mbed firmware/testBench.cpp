@@ -1,6 +1,7 @@
 #include "testBench.h"
 #include "globals.h"
 
+/*
 void encoderCheck()
 {
     // bool LEA = encoderLeftPinA.is_connected();
@@ -31,10 +32,11 @@ void encoderCheck()
         serialNUC.printf("Encoder ready\n\r");
     }
 }
+*/
 
 void serialCheck()
 {
-    // To be implemented
+    serialNUC.printf("Program Initiated");
     return;
 }
 
@@ -43,10 +45,12 @@ void imuTempCheck() {
     imu.initMPU9250();
     serialNUC.printf("Initialization complete\n\r");
     int count = 0;
+    float tempValue;
     while (count < 50)
     {
-        int16_t tempValue = imu.readTempData();
-        serialNUC.printf("Temperature is %d\n\r", tempValue);
+        tempValue = imu.readTempData();
+        tempValue = (tempValue) / 333.87f + 21.0f;
+        serialNUC.printf("Temperature is %f\n\r", tempValue);
         wait(0.5);
         count++;
     }
@@ -55,13 +59,28 @@ void imuTempCheck() {
 
 void imuAcceCheck() {
     int count = 0;
-    int16_t acceleration[3];
+    float acceleration[3];
+    float accelBias[3];
+    float gyroBias[3];
+    float aRes = imu.getAres();
+    imu.resetMPU9250(); // Reset registers to default in preparation for device calibration
+    imu.calibrateMPU9250(gyroBias, accelBias);
     while (count < 50)
     {
         imu.readAccelData(&acceleration[0]);
-        serialNUC.printf("%d\t%d\t%d\n\r", acceleration[0], acceleration[1], acceleration[2]);
+        acceleration[0] = acceleration[0] * aRes - accelBias[0];
+        acceleration[1] = acceleration[1] * aRes - accelBias[1];
+        acceleration[2] = acceleration[2] * aRes - accelBias[2];
+        serialNUC.printf("%f\t%f\t%f\n\r", acceleration[0], acceleration[1], acceleration[2]);
         count++;
         wait(0.5);
     }
-    serialNUC.printf("Temp Check Complete\n\r");
+    serialNUC.printf("Grav Check Complete\n\r");
+}
+
+void batteryVoltageCheck() {
+    for (int i = 0; i < 50; i++) {
+        serialNUC.printf("%f\n\r", battery.read());
+        wait(0.5);
+    }
 }

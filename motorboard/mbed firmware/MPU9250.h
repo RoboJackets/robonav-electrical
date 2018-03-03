@@ -206,13 +206,13 @@ class MPU9250
 
     void getGres();
 
-    void getAres();
+    float getAres();
 
-    void readAccelData(int16_t *);
+    void readAccelData(float *);
 
-    void readGyroData(int16_t *);
+    void readGyroData(float *);
 
-    void readMagData(int16_t *);
+    void readMagData(float *);
 
     int16_t readTempData();
 

@@ -173,7 +173,7 @@ void pidLoop() {
                 {
                     parseCommand((char *)buffer);
                     gotCommand = true;
-                    lastCmdTime = t.read_ms();
+                    lastCmdTime = timer.read_ms();
                     serialNUC.printf("left: %f, right: %f\n\r", desiredSpeedL, desiredSpeedR);
                 }
             }
@@ -185,7 +185,7 @@ void pidLoop() {
             // gotCommand = false;
         }
 
-        if (t.read_ms() - lastCmdTime > 500)
+        if (timer.read_ms() - lastCmdTime > 500)
         {
             serialNUC.printf("TIMEOUT");
             desiredSpeedL = 0;
@@ -194,8 +194,8 @@ void pidLoop() {
             PWM_R = 0;
         }
 
-        dT_sec = (float)(t.read_ms() - lastLoopTime) / 1000.0;
-        lastLoopTime = t.read_ms();
+        dT_sec = (float)(timer.read_ms() - lastLoopTime) / 1000.0;
+        lastLoopTime = timer.read_ms();
         actualSpeedL = (metersPerTick * tickDataLeft) / dT_sec;
         actualSpeedR = (metersPerTick * tickDataRight) / dT_sec;
 
@@ -221,9 +221,13 @@ void pidLoop() {
 
         // Deadband
         if (abs(PWM_L) < 0.15)
+        {
             PWM_L = 0;
+        }
         if (abs(PWM_R) < 0.15)
+        {
             PWM_R = 0;
+        }
 
         // if(PWM_L < 0) {
         // analogWrite(leftForwardSpeed, 0);
@@ -241,8 +245,8 @@ void pidLoop() {
         // analogWrite(rightBackwardSpeed, 0);
         // }
 
-        meow.setLeftSpeed(PWM_L);
-        meow.setRightSpeed(PWM_R);
+        motor.setLeftSpeed(PWM_L);
+        motor.setRightSpeed(PWM_R);
 
         /* Be aware that this motor board does not interface with the motor 
         controller with PWM. "PWM" here are mere residue from old arduino code

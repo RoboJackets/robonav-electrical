@@ -13,8 +13,8 @@ Serial saberToothMC(p13, NC);
 USBSerial serialNUC;
 I2C i2c(I2C_SDA1, I2C_SCL1);
 MPU9250 imu(5);
-Timer t;
-Motor meow;
+Timer timer;
+Motor motor;
 
 DigitalOut myLED1(LED1);
 DigitalOut myLED2(LED2);
@@ -27,7 +27,8 @@ InterruptIn encoderRightPinA(p28);
 DigitalIn encoderRightPinB(p27);
 
 // function prototypes
-void parseCommand(char *);
+void parseCommand(char*);
+float parseSpeed(char*, short*);
 void tickLeft();
 void tickRight();
 void pidLoop();
@@ -78,12 +79,12 @@ int main()
     // Program started
     saberToothMC.baud(38400);
     wait(0.5);
-    t.reset();
+    timer.reset();
     encoderLeftPinA.rise(&tickLeft);
     encoderLeftPinA.fall(&tickLeft);
     encoderRightPinA.rise(&tickRight);
     encoderRightPinA.fall(&tickRight);
-    t.start();
+    timer.start();
     myLED1 = 0;
     
     imuTempCheck();
@@ -93,58 +94,69 @@ int main()
 
 void parseCommand(char *cmd)
 {
-    if (cmd[0] != '$' || (cmd[5] != ',' && cmd[4] != ','))
+    short index = 0;
+    if (cmd[index] != '$')
     {
-        serialNUC.printf("Invalid Format\n\r");
+      serialNUC.printf("Invalid Format: cmd must start with '$'\n\r");
+      return;
     }
-    else
+    ++index;
+
+    desiredSpeedL = parseSpeed(cmd, &index);
+
+    if (cmd[index] != ',')
     {
-        if (cmd[1] == '-')
-        {
-            desiredSpeedL = (float)cmd[2] - 48 + ((float)cmd[4] - 48) / 10;
-            desiredSpeedL = 0 - desiredSpeedL;
-
-            if (cmd[6] == '-')
-            {
-                desiredSpeedR = (float)cmd[7] - 48 + ((float)cmd[9] - 48) / 10;
-                desiredSpeedR = 0 - desiredSpeedR;
-            }
-            else
-            {
-                desiredSpeedR = (float)cmd[6] - 48 + ((float)cmd[8] - 48) / 10;
-            }
-        }
-        else
-        {
-            desiredSpeedL = (float)cmd[1] - 48 + ((float)cmd[3] - 48) / 10;
-
-            if (cmd[5] == '-')
-            {
-                desiredSpeedR = (float)cmd[6] - 48 + ((float)cmd[8] - 48) / 10;
-                desiredSpeedR = 0 - desiredSpeedR;
-            }
-            else
-            {
-                desiredSpeedR = (float)cmd[5] - 48 + ((float)cmd[7] - 48) / 10;
-            }
-        }
+      serialNUC.printf("Invalid Format: values must be comma-separated\n\r");
+      return;
     }
+    ++index;
+
+    desiredSpeedR = parseSpeed(cmd, &index);
+}
+
+float parseSpeed(char* cmd, short* index)
+{
+    short sign = 1;
+    if (cmd[*index] == '-')
+    {
+      sign = -1;
+      ++(*index);
+    }
+    float value = (float) cmd[*index] - 48; // converting char to units digit
+
+    if (cmd[*index + 1] != '.')
+    {
+      serialNUC.printf("Invalid Format: speed must be float\n\r");
+      *index += 3; // attempt to skip past invalid term
+      return 0;
+    }
+    value += ((float) cmd[*index + 2] - 48) / 10; // converting char to tenths digit
+    *index += 3;
+    return sign * value;
 }
 
 void tickRight()
 {
     if (encoderRightPinA.read() == encoderRightPinB.read())
-        tickDataRight++;
+    {
+        ++tickDataRight;
+    }
     else
-        tickDataRight--;
+    {
+        --tickDataRight;
+    }
 }
 
 void tickLeft()
 {
     if (encoderLeftPinA.read() == encoderLeftPinB.read())
-        tickDataLeft++;
+    {
+        ++tickDataLeft;
+    }
     else
-        tickDataLeft--;
+    {
+        --tickDataLeft;
+    }
 }
 
 void pidLoop() {
@@ -157,10 +169,7 @@ void pidLoop() {
             if (serialNUC.readable())
             {
                 serialNUC.scanf("%s", &buffer);
-                if (buffer[0] == '~')
-                {
-                }
-                else
+                if (buffer[0] != '~')
                 {
                     parseCommand((char *)buffer);
                     gotCommand = true;

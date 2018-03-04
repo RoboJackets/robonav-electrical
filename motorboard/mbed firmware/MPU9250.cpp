@@ -146,6 +146,8 @@ void MPU9250::readMagData(float *destination)
             destination[2] = (int16_t)(((int16_t)rawData[5] << 8) | rawData[4]);
 
             destination[0] = (float)destination[0] * mRes * magCalibration[0] - magbias[0];
+            destination[1] = (float)destination[1] * mRes * magCalibration[1] - magbias[1];
+            destination[2] = (float)destination[2] * mRes * magCalibration[2] - magbias[2];
         }
     }
 }

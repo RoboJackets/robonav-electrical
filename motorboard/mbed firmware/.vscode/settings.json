@@ -3,6 +3,9 @@
         "iosfwd": "cpp",
         "iostream": "cpp",
         "stdexcept": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "algorithm": "cpp",
+        "chrono": "cpp",
+        "limits": "cpp"
     }
 }

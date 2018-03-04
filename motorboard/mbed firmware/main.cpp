@@ -110,11 +110,11 @@ int main()
                     parseCommand((char *)buffer);
                     gotCommand = true;
                     lastCmdTime = timer.read_ms();
-                    serialNUC.printf("Debug: Motor cmd Recognized\n\r");
-                    serialNUC.printf("Echo Left %f, Right %f\n\r", desiredSpeedL, desiredSpeedR);
+                    // serialNUC.printf("Debug: Motor cmd Recognized\n\r");
+                    // serialNUC.printf("Echo Left %f, Right %f\n\r", desiredSpeedL, desiredSpeedR);
                 } else if (commandType == '#') {
                     nonMotorCommand = true;
-                    serialNUC.printf("Debug: NonMotor cmd Recognized\n\r");
+                    // serialNUC.printf("Debug: NonMotor cmd Recognized\n\r");
                 }
 
                 if (nonMotorCommand)
@@ -124,7 +124,7 @@ int main()
                     case 'L':
                         eStopOutput = (int)((int)(buffer[2]) - 48);
                         eStopLight = (eStopOutput == 1) ? 1 : 0;
-                        serialNUC.printf("Debug: E Stop cmd: %d\n\r", eStopOutput);
+                        // serialNUC.printf("Debug: E Stop cmd: %d\n\r", eStopOutput);
                         break;
                     case 'P':
                         parsePID((char*)buffer);
@@ -136,7 +136,7 @@ int main()
                     nonMotorCommand = false;
                 }
             }
-
+        }
         
 
         // if (timer.read_ms() - lastCmdTime > 500) {
@@ -169,7 +169,7 @@ int main()
         serialNUC.printf("#I%f,%f,%f,%f,%f,%f,%f,%f,%f\n\r", accel[0], accel[1], accel[2],
                          gyro[0], gyro[1], gyro[2], magne[0], magne[1], magne[2]);
         serialNUC.printf("#V%f\n\r",battery.read() * 3.3 * 521 / 51);
-        }
+        
     }
 }
 
@@ -207,7 +207,7 @@ float parseSpeed(char* cmd, short* index)
 
     if (cmd[*index + 1] != '.')
     {
-      serialNUC.printf("Invalid Format: speed must be float\n\r");
+      serialNUC.printf("#EInvalid Format: speed must be float\n\r");
       *index += 3; // attempt to skip past invalid term
       return 0;
     }
@@ -222,8 +222,9 @@ void parsePID(char *cmd) {
     int commaIndex[4];
     commaIndex[0] = 1;
     int comma = 1;
+    int i;
     // Find location of ',' and '.'
-    for (int i = 0; i < 128; i++) {
+    for (i = 0; i < 80; i++) {
         if (cmd[i] == ',') {
             commaIndex[comma] = i;
             ++comma;
@@ -234,13 +235,22 @@ void parsePID(char *cmd) {
             ++dot;
         }
 
-        if (dot == 3 && comma == 2) {
+        if (dot == 3 && comma == 3) {
             i = 130;
         }
     }
 
-    serialNUC.printf("Comma Index: %d,%d,%d,%d\n\r", commaIndex[0], commaIndex[1], commaIndex[2], commaIndex[3]);
-    serialNUC.printf("dot Index: %d,%d,%d,%d\n\r", dotIndex[0], dotIndex[1], dotIndex[2], dotIndex[3]);
+    if (i != 130) {
+        serialNUC.printf("#EPID format invalid\n\r");
+        P_l = 0;
+        D_l = 0;
+        P_r = 0;
+        D_r = 0;
+        return;
+    }
+
+    // serialNUC.printf("Comma Index: %d,%d,%d,%d\n\r", commaIndex[0], commaIndex[1], commaIndex[2], commaIndex[3]);
+    // serialNUC.printf("dot Index: %d,%d,%d,%d\n\r", dotIndex[0], dotIndex[1], dotIndex[2], dotIndex[3]);
 
     P_l = parseFloat(commaIndex[0], dotIndex[0], cmd);
     D_l = parseFloat(commaIndex[1], dotIndex[1], cmd);
@@ -256,7 +266,7 @@ float parseFloat(int preStart, int decimalPoint, char* cmd) {
         result += (int)(cmd[i] - 48) * pow(10,j);
     }
 
-    for (int i = decimalPoint + 1; i < decimalPoint + 3 && cmd[i] != 44 && cmd[i] != 0; i++)
+    for (int i = decimalPoint + 1; i < decimalPoint + 3 && cmd[i] != ',' && cmd[i] != 0; i++)
     {
         result += (float)((int)(cmd[i] - 48)) * (1 / (float)(pow(10, i - decimalPoint)));
     }

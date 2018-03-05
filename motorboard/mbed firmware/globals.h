@@ -18,7 +18,7 @@ extern DigitalIn encoderLeftPinB;
 extern InterruptIn encoderRightPinA;
 extern DigitalIn encoderRightPinB;
 
-extern USBSerial serialNUC;
+// extern USBSerial serialNUC;
 extern Serial saberToothMC;
 extern I2C i2c;
 extern MPU9250 imu;

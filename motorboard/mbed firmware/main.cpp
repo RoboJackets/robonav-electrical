@@ -1,8 +1,9 @@
 // #define _GLIBCXX_USE_C99 1
 #include "mbed.h"
-#include "globals.h"
+// #include "globals.h"
 #include "motor.h"
-#include "testBench.h"
+// #include "testBench.h"
+#include "USBSerial.h"
 #include "MPU9250.h"
 #include <string>
 
@@ -10,9 +11,10 @@
 
 // Hardware definition
 Serial saberToothMC(p13, NC);
-USBSerial serialNUC;
+Serial serialNUC(USBTX,USBRX);
+// USBSerial serialNUC;
 I2C i2c(I2C_SDA1, I2C_SCL1);
-MPU9250 imu(5);
+// MPU9250 imu(5);
 Timer timer;
 Motor motor;
 
@@ -89,6 +91,10 @@ int main()
 {
     wait(0.5);
     myLED1 = 1;
+    // wait(5);
+    // myLED1 = 0;
+    // wait(5);
+
     // Program started
     saberToothMC.baud(38400);
     encoderLeftPinA.rise(&tickLeft);
@@ -101,7 +107,7 @@ int main()
     myLED1 = 0;
 
     while (true) {
-        while (serialNUC.available()) {
+        // while (serialNUC.available()) {
             if (serialNUC.readable()) {
                 serialNUC.scanf("%s", &buffer);
                 commandType = buffer[0];
@@ -136,16 +142,16 @@ int main()
                     nonMotorCommand = false;
                 }
             }
-        }
+        // }
         
 
-        // if (timer.read_ms() - lastCmdTime > 500) {
-        //     serialNUC.printf("#ETIMEOUT\n\r");
-        //     desiredSpeedL = 0;
-        //     desiredSpeedR = 0;
-        //     PWM_L = 0;
-        //     PWM_R = 0;
-        // }
+        if (timer.read_ms() - lastCmdTime > 750) {
+            serialNUC.printf("#ETIMEOUT\n\r");
+            desiredSpeedL = 0;
+            desiredSpeedR = 0;
+            PWM_L = 0;
+            PWM_R = 0;
+        }
 
         // State Machine for Estop
         if (eStopStatus.read() == 1) {
@@ -161,13 +167,13 @@ int main()
 
         pid();
 
-        imu.readAccelData(accel);
-        imu.readGyroData(gyro);
-        imu.readMagData(magne);
+        // imu.readAccelData(accel);
+        // imu.readGyroData(gyro);
+        // imu.readMagData(magne);
         
         serialNUC.printf("$%f,%f,%f,%d\n\r", actualSpeedL, actualSpeedR, dT_sec, 1);
-        serialNUC.printf("#I%f,%f,%f,%f,%f,%f,%f,%f,%f\n\r", accel[0], accel[1], accel[2],
-                         gyro[0], gyro[1], gyro[2], magne[0], magne[1], magne[2]);
+        // serialNUC.printf("#I%f,%f,%f,%f,%f,%f,%f,%f,%f\n\r", accel[0], accel[1], accel[2],
+                        //  gyro[0], gyro[1], gyro[2], magne[0], magne[1], magne[2]);
         serialNUC.printf("#V%f\n\r",battery.read() * 3.3 * 521 / 51);
         
     }
@@ -235,19 +241,19 @@ void parsePID(char *cmd) {
             ++dot;
         }
 
-        if (dot == 3 && comma == 3) {
-            i = 130;
-        }
+        // if (dot == 3 && comma == 2) {
+        //     i = 130;
+        // }
     }
 
-    if (i != 130) {
-        serialNUC.printf("#EPID format invalid\n\r");
-        P_l = 0;
-        D_l = 0;
-        P_r = 0;
-        D_r = 0;
-        return;
-    }
+    // if (i != 130) {
+    //     serialNUC.printf("#EPID format invalid\n\r");
+    //     P_l = 0;
+    //     D_l = 0;
+    //     P_r = 0;
+    //     D_r = 0;
+    //     return;
+    // }
 
     // serialNUC.printf("Comma Index: %d,%d,%d,%d\n\r", commaIndex[0], commaIndex[1], commaIndex[2], commaIndex[3]);
     // serialNUC.printf("dot Index: %d,%d,%d,%d\n\r", dotIndex[0], dotIndex[1], dotIndex[2], dotIndex[3]);

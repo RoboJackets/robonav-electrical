@@ -1,8 +1,8 @@
 #include "motor.h"
-#include "globals.h"
 
 Motor::Motor() {
-    // Serial saberToothMC(p13,NC); 
+    saberToothMC = new Serial(p13, NC);
+    saberToothMC->baud(38400);
     stop();
 }
 // I will scale from -256 to 255 to 0 to 127
@@ -14,7 +14,7 @@ void Motor::setLeftSpeed(int speedL) {
         speedL = 0;
     }
     speedL += 128;
-    saberToothMC.putc(speedL);
+    saberToothMC->putc(speedL);
     leftSpeed = speedL;
 }
 
@@ -28,7 +28,7 @@ void Motor::setRightSpeed(int speedR) {
     } else if (speedR < 0) {
         speedR = 0;
     }
-    saberToothMC.putc(speedR);
+    saberToothMC->putc(speedR);
     leftSpeed = speedR;
 }
 
@@ -37,6 +37,6 @@ int Motor::getRightSpeed() {
 }
 
 void Motor::stop() {
-    saberToothMC.putc(64);
-    saberToothMC.putc(192);
+    saberToothMC->putc(64);
+    saberToothMC->putc(192);
 }

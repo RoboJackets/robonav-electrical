@@ -1,9 +1,7 @@
 #include "MPU9250.h"
-#include "globals.h"
 
-MPU9250::MPU9250(int in) {
-    int num = in;
-    num--;
+MPU9250::MPU9250() {
+    i2c = new I2C(I2C_SDA1, I2C_SCL1);
     initMPU9250();
     getAres();
     getGres();
@@ -18,7 +16,7 @@ void MPU9250::writeByte(uint8_t address, uint8_t subAddress, uint8_t data)
     char data_write[2];
     data_write[0] = subAddress;
     data_write[1] = data;
-    i2c.write(address, data_write, 2, 0);
+    i2c->write(address, data_write, 2, 0);
 }
 
 char MPU9250::readByte(uint8_t address, uint8_t subAddress)
@@ -27,8 +25,8 @@ char MPU9250::readByte(uint8_t address, uint8_t subAddress)
     char data_write[1];
     data_write[0] = subAddress;
 
-    i2c.write(address, data_write, 1, 1); // no stop
-    i2c.read(address, data, 1, 0);
+    i2c->write(address, data_write, 1, 1); // no stop
+    i2c->read(address, data, 1, 0);
     return data[0];
 }
 
@@ -37,8 +35,8 @@ void MPU9250::readBytes(uint8_t address, uint8_t subAddress, uint8_t count, uint
     char data[14];
     char data_write[1];
     data_write[0] = subAddress;
-    i2c.write(address, data_write, 1, 1); // no stop
-    i2c.read(address, data, count, 0);
+    i2c->write(address, data_write, 1, 1); // no stop
+    i2c->read(address, data, count, 0);
     for (int ii = 0; ii < count; ii++)
     {
         dest[ii] = data[ii];

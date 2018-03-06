@@ -1,20 +1,13 @@
 // #define _GLIBCXX_USE_C99 1
 #include "mbed.h"
-// #include "globals.h"
 #include "motor.h"
-// #include "testBench.h"
 #include "USBSerial.h"
 #include "MPU9250.h"
 #include <string>
 
-// Light shield stuff, estop
-
 // Hardware definition
-Serial saberToothMC(p13, NC);
-Serial serialNUC(USBTX,USBRX);
-// USBSerial serialNUC;
-I2C i2c(I2C_SDA1, I2C_SCL1);
-// MPU9250 imu(5);
+USBSerial serialNUC;
+MPU9250 imu;
 Timer timer;
 Motor motor;
 
@@ -96,7 +89,6 @@ int main()
     // wait(5);
 
     // Program started
-    saberToothMC.baud(38400);
     encoderLeftPinA.rise(&tickLeft);
     encoderLeftPinA.fall(&tickLeft);
     encoderRightPinA.rise(&tickRight);
@@ -306,11 +298,6 @@ void tickLeft()
 
 void pid()
 {
-
-    // if (gotCommand) {
-    //     serialNUC.printf("#%f,%f,%f\n\r", actualSpeedL, actualSpeedR, dT_sec);
-    //     gotCommand = false;
-    // }
     dT_sec = (float)(timer.read_ms() - lastLoopTime) / 1000.0;
     if (timer.read() >= 1700) {
         timer.reset();
@@ -358,83 +345,3 @@ void pid()
     lastErrorL = ErrorL;
     lastErrorR = ErrorR;
 }
-
-/*
-void pidLoop() {
-
-    while (true) // PID and loop
-    {
-        myLED1 = 0;
-        while (serialNUC.available())
-        {
-            if (serialNUC.readable())
-            {
-                serialNUC.scanf("%s", &buffer);
-                if (buffer[0] != '~')
-                {
-                    parseCommand((char *)buffer);
-                    gotCommand = true;
-                    lastCmdTime = timer.read_ms();
-                    serialNUC.printf("left: %f, right: %f\n\r", desiredSpeedL, desiredSpeedR);
-                }
-            }
-        }
-
-        if (gotCommand)
-        {
-            serialNUC.printf("$%f,%f,%f\n\r", actualSpeedL, actualSpeedR, dT_sec);
-            // gotCommand = false;
-        }
-
-        if (timer.read_ms() - lastCmdTime > 500)
-        {
-            serialNUC.printf("TIMEOUT");
-            desiredSpeedL = 0;
-            desiredSpeedR = 0;
-            PWM_L = 0;
-            PWM_R = 0;
-        }
-
-        dT_sec = (float)(timer.read_ms() - lastLoopTime) / 1000.0;
-        lastLoopTime = timer.read_ms();
-        actualSpeedL = (metersPerTick * tickDataLeft) / dT_sec;
-        actualSpeedR = (metersPerTick * tickDataRight) / dT_sec;
-
-        tickDataLeft = 0;
-        tickDataRight = 0;
-
-        wait_ms(50);
-
-        ErrorL = desiredSpeedL - actualSpeedL;
-        ErrorR = desiredSpeedR - actualSpeedR;
-
-        dErrorL = ErrorL - lastErrorL;
-        dErrorR = ErrorR - lastErrorR;
-
-        dPWM_L = (int)(P_l * ErrorL + D_l * dErrorL);
-        dPWM_R = (int)(P_r * ErrorR + D_r * dErrorR);
-
-        PWM_L += dPWM_L;
-        PWM_R += dPWM_R;
-
-        PWM_L = min(255, max(-255, PWM_L));
-        PWM_R = min(255, max(-255, PWM_R));
-
-        // Deadband
-        if (abs(PWM_L) < 0.15)
-        {
-            PWM_L = 0;
-        }
-        if (abs(PWM_R) < 0.15)
-        {
-            PWM_R = 0;
-        }
-
-        motor.setLeftSpeed(PWM_L);
-        motor.setRightSpeed(PWM_R);
-
-        lastErrorL = ErrorL;
-        lastErrorR = ErrorR;
-    }
-}
-*/

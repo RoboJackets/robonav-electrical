@@ -128,10 +128,11 @@ int main()
                     switch (buffer[1])
                     {
                     case 'L':
+                        // This is for Estop Light Pattern … nothing to do with actual Estop Status
                         eStopOutput = (int)((int)(buffer[2]) - 48);
                         eStopLight = (eStopOutput == 1) ? 1 : 0;
                         if (DEBUG) {
-                            serialNUC.printf("Debug: E Stop cmd: %d\n", eStopOutput);
+                            serialNUC.printf("Debug: E Stop Light cmd: %d\n", eStopOutput);
                         }
                         break;
                     case 'P':
@@ -143,7 +144,6 @@ int main()
                         serialNUC.printf("#D%2.2f,%2.2f\n",D_l,D_r);
                         break;
                     default:
-
                         serialNUC.printf("#Invalid Command\n");
                     }
                     nonMotorCommand = false;
@@ -178,11 +178,10 @@ int main()
         // imu.readGyroData(gyro);
         // imu.readMagData(magne);
         
-        serialNUC.printf("$%2.2f,%2.2f,%2.2f,%d\n\r", actualSpeedL, actualSpeedR, dT_sec, 1);
+        serialNUC.printf("$%1.2f,%1.2f\n\r", actualSpeedL, actualSpeedR, dT_sec);
         // serialNUC.printf("#I%f,%f,%f,%f,%f,%f,%f,%f,%f\n\r", accel[0], accel[1], accel[2],
                         //  gyro[0], gyro[1], gyro[2], magne[0], magne[1], magne[2]);
-        serialNUC.printf("#V%2.2f\n\r",battery.read() * 3.3 * 521 / 51);
-        
+        serialNUC.printf("#V%2.2f,%1.2f,%d\n\r", battery.read() * 3.3 * 521 / 51, dT_sec, estop);
     }
 }
 

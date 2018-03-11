@@ -103,7 +103,6 @@ int main()
   myLED1 = 0;
 
   while (true) {
-    serialNUC.printf("Debug: Motor cmd Recognized\n\r");
     if (serialNUC.readable()) {
       serialNUC.scanf("%s", &buffer);
       commandType = buffer[0];
@@ -144,7 +143,7 @@ int main()
               serialNUC.printf("#D%2.2f,%2.2f\n",D_l,D_r);
               break;
             default:
-              serialNUC.printf("#Invalid Command\n");
+              serialNUC.printf("#EInvalid Command\n");
             }
           nonMotorCommand = false;
         }
@@ -159,16 +158,14 @@ int main()
       PWM_R = 0;
     }
 
-    // State Machine for Estop
-    if (eStopStatus.read() == 1) {
-      desiredSpeedL = 0;
-      desiredSpeedR = 0;
-      if (estop == 1) {
+    // Estop logic
+    if (eStopStatus.read()) {
+		// If get 5V, since inverted, meaning disabled on motors
         estop = 0;
-      }
-    } else if (eStopStatus.read() == 0 && estop == 0) {
-      estop = 1;
-      // Estop = 1 = enabled
+		desiredSpeedL = 0;
+		desiredSpeedR = 0;
+	} else {
+    	estop = 1;
     }
 
     pid();
@@ -177,10 +174,10 @@ int main()
     // imu.readGyroData(gyro);
     // imu.readMagData(magne);
 
-    serialNUC.printf("$%1.2f,%1.2f\n\r", actualSpeedL, actualSpeedR, dT_sec);
+    serialNUC.printf("$%1.2f,%1.2f,%1.3f\n\r", actualSpeedL, actualSpeedR, dT_sec);
     // serialNUC.printf("#I%f,%f,%f,%f,%f,%f,%f,%f,%f\n\r", accel[0], accel[1], accel[2],
     //  gyro[0], gyro[1], gyro[2], magne[0], magne[1], magne[2]);
-    serialNUC.printf("#V%2.2f,%1.2f,%d\n\r", battery.read() * 3.3 * 521 / 51, dT_sec, estop);
+    serialNUC.printf("#V%2.2f,%d\n\r", battery.read() * 3.3 * 521 / 51, estop);
   }
 }
 
@@ -272,7 +269,7 @@ float parseFloat(int preStart, int decimalPoint, char* cmd) {
     result += (float)((int)(cmd[i] - 48)) * (1 / (float)(pow(10, i - decimalPoint)));
   }
 
-  return result;x
+  return result;
 }
 
 void parseNonMotor(char* cmd) {

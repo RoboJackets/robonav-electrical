@@ -43,14 +43,14 @@ PROJECT := IGVC_motorboard
 ###############################################################################
 # Objects and Paths
 
-# OBJECTS += USBDevice/USBAudio/USBAudio.o
+OBJECTS += USBDevice/USBAudio/USBAudio.o
 OBJECTS += USBDevice/USBDevice/USBDevice.o
-# OBJECTS += USBDevice/USBHID/USBHID.o
-# OBJECTS += USBDevice/USBHID/USBKeyboard.o
-# OBJECTS += USBDevice/USBHID/USBMouse.o
-# OBJECTS += USBDevice/USBHID/USBMouseKeyboard.o
-# OBJECTS += USBDevice/USBMIDI/USBMIDI.o
-# OBJECTS += USBDevice/USBMSD/USBMSD.o
+OBJECTS += USBDevice/USBHID/USBHID.o
+OBJECTS += USBDevice/USBHID/USBKeyboard.o
+OBJECTS += USBDevice/USBHID/USBMouse.o
+OBJECTS += USBDevice/USBHID/USBMouseKeyboard.o
+OBJECTS += USBDevice/USBMIDI/USBMIDI.o
+OBJECTS += USBDevice/USBMSD/USBMSD.o
 OBJECTS += USBDevice/USBSerial/USBCDC.o
 OBJECTS += USBDevice/USBSerial/USBSerial.o
 OBJECTS += USBDevice/targets/TARGET_NXP/USBHAL_LPC11U.o
@@ -115,7 +115,7 @@ LINKER_SCRIPT ?= ../mbed/TARGET_LPC1768/TOOLCHAIN_GCC_ARM/LPC1768.ld
 
 AS      = 'arm-none-eabi-gcc' '-x' 'assembler-with-cpp' '-c' '-Wall' '-Wextra' '-Wno-unused-parameter' '-Wno-missing-field-initializers' '-fmessage-length=0' '-fno-exceptions' '-fno-builtin' '-ffunction-sections' '-fdata-sections' '-funsigned-char' '-MMD' '-fno-delete-null-pointer-checks' '-fomit-frame-pointer' '-Os' '-mcpu=cortex-m3' '-mthumb'
 CC      = 'arm-none-eabi-gcc' '-std=gnu99' '-c' '-Wall' '-Wextra' '-Wno-unused-parameter' '-Wno-missing-field-initializers' '-fmessage-length=0' '-fno-exceptions' '-fno-builtin' '-ffunction-sections' '-fdata-sections' '-funsigned-char' '-MMD' '-fno-delete-null-pointer-checks' '-fomit-frame-pointer' '-Os' '-mcpu=cortex-m3' '-mthumb'
-CPP     = 'arm-none-eabi-g++' '-std=gnu++14' '-fno-rtti' '-Wvla' '-c' '-Wall' '-Wextra' '-Wno-unused-parameter' '-Wno-missing-field-initializers' '-fmessage-length=0' '-fno-exceptions' '-fno-builtin' '-ffunction-sections' '-fdata-sections' '-funsigned-char' '-MMD' '-fno-delete-null-pointer-checks' '-fomit-frame-pointer' '-Os' '-mcpu=cortex-m3' '-mthumb'
+CPP     = 'arm-none-eabi-g++' '-std=gnu++11' '-fno-rtti' '-Wvla' '-c' '-Wall' '-Wextra' '-Wno-unused-parameter' '-Wno-missing-field-initializers' '-fmessage-length=0' '-fno-exceptions' '-fno-builtin' '-ffunction-sections' '-fdata-sections' '-funsigned-char' '-MMD' '-fno-delete-null-pointer-checks' '-fomit-frame-pointer' '-Os' '-mcpu=cortex-m3' '-mthumb'
 LD      = 'arm-none-eabi-gcc'
 ELF2BIN = 'arm-none-eabi-objcopy'
 PREPROC = 'arm-none-eabi-cpp' '-E' '-P' '-Wl,--gc-sections' '-Wl,--wrap,main' '-Wl,--wrap,_malloc_r' '-Wl,--wrap,_free_r' '-Wl,--wrap,_realloc_r' '-Wl,--wrap,_memalign_r' '-Wl,--wrap,_calloc_r' '-Wl,--wrap,exit' '-Wl,--wrap,atexit' '-Wl,-n' '-mcpu=cortex-m3' '-mthumb'

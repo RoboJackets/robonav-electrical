@@ -5,10 +5,11 @@
 #include "MPU9250.h"
 #include <string>
 #define DEBUG false
+#define TIMEOUT false
 
 // Hardware definition
-USBSerial serialNUC;
-MPU9250 imu;
+USBSerial serialNUC(0x1f00, 0x2012, 0x0001, true);
+// MPU9250 imu;
 Timer timer;
 Motor motor;
 
@@ -19,7 +20,9 @@ DigitalOut myLED3(LED3);
 DigitalOut myLED4(LED4);
 DigitalOut boardLED(p8);
 DigitalOut eStopLight(p12);
+// DigitalOut mebug(p13);
 DigitalIn eStopStatus(p18);
+
 InterruptIn encoderLeftPinA(p26);
 DigitalIn encoderLeftPinB(p25);
 InterruptIn encoderRightPinA(p28);
@@ -57,9 +60,9 @@ float dT_sec = 0;
 float lastErrorL;
 float lastErrorR;
 float P_l = 8;
-float D_l = 0;
+float D_l = 2;
 float P_r = 8;
-float D_r = 0;
+float D_r = 2;
 float accel[3];
 float gyro[3];
 float magne[3];
@@ -77,7 +80,7 @@ volatile int tickDataLeft = 0;
 const double wheelCircum = 1.092;
 const double gearRatio = 32.0;
 const int ticksPerRev = 48;
-const double metersPerTick = wheelCircum * (ticksPerRev * gearRatio);
+const double metersPerTick = wheelCircum / (ticksPerRev * gearRatio);
 
 bool gotCommand = false;
 bool nonMotorCommand = false;
@@ -87,16 +90,14 @@ char commandType;
 int main()
 {
     wait(0.5);
+    // mebug = 1;
     myLED1 = 1;
-    // wait(5);
-    // myLED1 = 0;
-    // wait(5);
 
     // Program started
     encoderLeftPinA.rise(&tickLeft);
-    encoderLeftPinA.fall(&tickLeft);
+    // encoderLeftPinA.fall(&tickLeft);
     encoderRightPinA.rise(&tickRight);
-    encoderRightPinA.fall(&tickRight);
+    // encoderRightPinA.fall(&tickRight);
     timer.reset();
     timer.start();
     wait(0.5);
@@ -112,13 +113,13 @@ int main()
             gotCommand = true;
             lastCmdTime = timer.read_ms();
             if (DEBUG) {
-            serialNUC.printf("Debug: Motor cmd Recognized\n\r");
-            serialNUC.printf("Echo Left %f, Right %f\n\r", desiredSpeedL, desiredSpeedR);
+                serialNUC.printf("Debug: Motor cmd Recognized\n\r");
+                serialNUC.printf("Echo Left %f, Right %f\n\r", desiredSpeedL, desiredSpeedR);
             }
         } else if (commandType == '#') {
             nonMotorCommand = true;
             if (DEBUG) {
-            serialNUC.printf("Debug: NonMotor cmd Recognized\n\r");
+                serialNUC.printf("Debug: NonMotor cmd Recognized\n\r");
             }
         }
 
@@ -146,13 +147,15 @@ int main()
         }
     }
 
-
-    if (timer.read_ms() - lastCmdTime > 750) {
-        serialNUC.printf("#ETIMEOUT\n\r");
-        desiredSpeedL = 0;
-        desiredSpeedR = 0;
-        PWM_L = 0;
-        PWM_R = 0;
+    if (!TIMEOUT) {
+        if (timer.read_ms() - lastCmdTime > 7500) {
+            serialNUC.printf("#ETIMEOUT\n\r");
+            desiredSpeedL = 0;
+            desiredSpeedR = 0;
+            motor.stop();
+            // PWM_L = 0;
+            // PWM_R = 0;
+        }
     }
 
     // Estop logic
@@ -161,6 +164,7 @@ int main()
         estop = 0;
         desiredSpeedL = 0;
         desiredSpeedR = 0;
+        motor.stop();
     } else {
           estop = 1;
     }
@@ -358,8 +362,14 @@ void pid()
         PWM_R = 0;
     }
 
+    // PWM_L = 255;
+    // PWM_R = 255;
     motor.setLeftSpeed(PWM_L);
     motor.setRightSpeed(PWM_R);
+
+    if (DEBUG) {
+        serialNUC.printf("PWM_L: %d, PWM_R: %d\n",PWM_L, PWM_R);
+    }
 
     /*
         Be aware that this motor board does not interface with the motor

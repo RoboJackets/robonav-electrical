@@ -12,6 +12,7 @@ USBSerial serialNUC(0x1f00, 0x2012, 0x0001, true);
 // MPU9250 imu;
 Timer timer;
 Motor motor;
+// Serial serial(p13,NC,9600);
 
 // mbed Pin definition
 DigitalOut myLED1(LED1);
@@ -102,6 +103,8 @@ int main()
     timer.start();
     wait(0.5);
     myLED1 = 0;
+    // mebug = 1;
+    // motor.setLeftSpeed(240);
 
     while (true) {
         if (serialNUC.readable()) {

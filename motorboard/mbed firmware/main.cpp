@@ -1,27 +1,26 @@
 // #define _GLIBCXX_USE_C99 1
 #include "mbed.h"
-#include "motor.h"
+// #include "motor.h"
 #include "USBSerial.h"
 #include "MPU9250.h"
 #include <string>
 #define DEBUG false
-#define TIMEOUT false
+#define TIMEOUT true
 
 // Hardware definition
 USBSerial serialNUC(0x1f00, 0x2012, 0x0001, true);
 // MPU9250 imu;
 Timer timer;
-Motor motor;
-// Serial serial(p13,NC,9600);
+// Motor motor;
 
 // mbed Pin definition
 DigitalOut myLED1(LED1);
-DigitalOut myLED2(LED2);
-DigitalOut myLED3(LED3);
-DigitalOut myLED4(LED4);
-DigitalOut boardLED(p8);
+// DigitalOut myLED2(LED2);
+// DigitalOut myLED3(LED3);
+// DigitalOut myLED4(LED4);
+// DigitalOut boardLED(p8);
 DigitalOut eStopLight(p12);
-// DigitalOut mebug(p13);
+DigitalOut mebug(p13);
 DigitalIn eStopStatus(p18);
 
 InterruptIn encoderLeftPinA(p26);
@@ -43,6 +42,10 @@ void parseP(char*);
 void parseD(char*);
 void parseNonMotor(char*);
 
+void setLeftSpeed(int);
+void setRightSpeed(int);
+void bothMotorStop();
+
 // Serial Comm
 long lastCmdTime = 0;
 long lastLoopTime = 0;
@@ -58,12 +61,12 @@ float ErrorR = 0;
 float dErrorL = 0;
 float dErrorR = 0;
 float dT_sec = 0;
-float lastErrorL;
-float lastErrorR;
-float P_l = 8;
-float D_l = 2;
-float P_r = 8;
-float D_r = 2;
+float lastErrorL = 0;
+float lastErrorR = 0;
+float P_l = 4;
+float D_l = 10;
+float P_r = 4;
+float D_r = 10;
 float accel[3];
 float gyro[3];
 float magne[3];
@@ -102,10 +105,11 @@ int main()
     timer.reset();
     timer.start();
     wait(0.5);
+    mebug = 1;
+    // Serial serial(p13, NC, 9600);
     myLED1 = 0;
-    // mebug = 1;
     // motor.setLeftSpeed(240);
-
+// }
     while (true) {
         if (serialNUC.readable()) {
         serialNUC.scanf("%s", &buffer);
@@ -116,13 +120,13 @@ int main()
             gotCommand = true;
             lastCmdTime = timer.read_ms();
             if (DEBUG) {
-                serialNUC.printf("Debug: Motor cmd Recognized\n\r");
-                serialNUC.printf("Echo Left %f, Right %f\n\r", desiredSpeedL, desiredSpeedR);
+                serialNUC.printf("Debug: Motor cmd Recognized\r\n");
+                serialNUC.printf("Echo Left %f, Right %f\r\n", desiredSpeedL, desiredSpeedR);
             }
         } else if (commandType == '#') {
             nonMotorCommand = true;
             if (DEBUG) {
-                serialNUC.printf("Debug: NonMotor cmd Recognized\n\r");
+                serialNUC.printf("Debug: NonMotor cmd Recognized\r\n");
             }
         }
 
@@ -137,14 +141,14 @@ int main()
                     break;
                 case 'P':
                     parseNonMotor((char*)buffer);
-                    serialNUC.printf("#P%2.2f,%2.2f\n",P_l,P_r);
+                    serialNUC.printf("#P%2.2f,%2.2f\r\n",P_l,P_r);
                     break;
                 case 'D':
                     parseNonMotor((char *)buffer);
-                    serialNUC.printf("#D%2.2f,%2.2f\n",D_l,D_r);
+                    serialNUC.printf("#D%2.2f,%2.2f\r\n",D_l,D_r);
                     break;
                 default:
-                    serialNUC.printf("#EInvalid Command\n");
+                    serialNUC.printf("#EInvalid Command\r\n");
             }
             nonMotorCommand = false;
         }
@@ -152,12 +156,12 @@ int main()
 
     if (!TIMEOUT) {
         if (timer.read_ms() - lastCmdTime > 7500) {
-            serialNUC.printf("#ETIMEOUT\n\r");
+            serialNUC.printf("#ETIMEOUT\r\n");
             desiredSpeedL = 0;
             desiredSpeedR = 0;
-            motor.stop();
-            // PWM_L = 0;
-            // PWM_R = 0;
+            bothMotorStop();
+            PWM_L = 0;
+            PWM_R = 0;
         }
     }
 
@@ -167,7 +171,9 @@ int main()
         estop = 0;
         desiredSpeedL = 0;
         desiredSpeedR = 0;
-        motor.stop();
+        PWM_L = 0;
+        PWM_R = 0;
+        bothMotorStop();
     } else {
           estop = 1;
     }
@@ -178,11 +184,13 @@ int main()
     // imu.readGyroData(gyro);
     // imu.readMagData(magne);
 
-    serialNUC.printf("$%1.2f,%1.2f,%1.3f\n\r", actualSpeedL, actualSpeedR, dT_sec);
+    serialNUC.printf("$%1.2f,%1.2f,%1.3f\r\n", actualSpeedL, actualSpeedR, dT_sec);
+    wait_ms(25);
     // serialNUC.printf("#I%f,%f,%f,%f,%f,%f,%f,%f,%f\n\r", accel[0], accel[1], accel[2],
     //  gyro[0], gyro[1], gyro[2], magne[0], magne[1], magne[2]);
-    serialNUC.printf("#V%2.2f,%d\n\r", battery.read() * 3.3 * 521 / 51, estop);
-  }
+    serialNUC.printf("#V%2.2f,%d\r\n", battery.read() * 3.3 * 521 / 51, estop);
+    wait_ms(25);
+    }
 }
 
 void parseCommand(char *cmd)
@@ -318,21 +326,23 @@ void tickLeft()
 {
     if (encoderLeftPinA.read() == encoderLeftPinB.read())
     {
-        ++tickDataLeft;
+        --tickDataLeft;
     }
     else
     {
-        --tickDataLeft;
+        ++tickDataLeft;
     }
 }
 
 void pid()
 {
     dT_sec = (float)(timer.read_ms() - lastLoopTime) / 1000.0;
+
     if (timer.read() >= 1700) {
         timer.reset();
         lastLoopTime = 0;
     }
+
     lastLoopTime = timer.read_ms();
     actualSpeedL = (metersPerTick * tickDataLeft) / dT_sec;
     actualSpeedR = (metersPerTick * tickDataRight) / dT_sec;
@@ -340,16 +350,18 @@ void pid()
     tickDataLeft = 0;
     tickDataRight = 0;
 
-    wait_ms(50);
-
     ErrorL = desiredSpeedL - actualSpeedL;
     ErrorR = desiredSpeedR - actualSpeedR;
 
+    // serialNUC.printf("ErrorL: %1.2f, ErrorR: %1.2f \r\n", ErrorL, ErrorR);
+
     dErrorL = ErrorL - lastErrorL;
     dErrorR = ErrorR - lastErrorR;
-
+ 
     dPWM_L = (int)(P_l * ErrorL + D_l * dErrorL);
     dPWM_R = (int)(P_r * ErrorR + D_r * dErrorR);
+
+    // serialNUC.printf("dpwmL: %d, dpwmR:%d \r\n",dPWM_L, dPWM_R);
 
     PWM_L += dPWM_L;
     PWM_R += dPWM_R;
@@ -358,17 +370,17 @@ void pid()
     PWM_R = min(255, max(-255, PWM_R));
 
     // Deadband
-    if (abs(PWM_L) < 0.15) {
+    if (abs(PWM_L) < 2) {
         PWM_L = 0;
     }
-    if (abs(PWM_R) < 0.15) {
+    if (abs(PWM_R) < 2) {
         PWM_R = 0;
     }
 
     // PWM_L = 255;
     // PWM_R = 255;
-    motor.setLeftSpeed(PWM_L);
-    motor.setRightSpeed(PWM_R);
+    setLeftSpeed(PWM_L);
+    setRightSpeed(PWM_R);
 
     if (DEBUG) {
         serialNUC.printf("PWM_L: %d, PWM_R: %d\n",PWM_L, PWM_R);
@@ -382,4 +394,38 @@ void pid()
 
     lastErrorL = ErrorL;
     lastErrorR = ErrorR;
+}
+
+void bothMotorStop() {
+    Serial serial(p13, NC, 9600);
+    serial.putc(0);
+}
+
+void setLeftSpeed(int c) {
+    Serial serial(p13, NC, 9600);
+    c = (c + 255) / 4 + 1;
+    if (c > 127)
+    {
+        c = 127;
+    }
+    else if (c < 0)
+    {
+        c = 0;
+    }
+    c += 128;
+    serial.putc(c);
+}
+
+void setRightSpeed(int c) {
+    Serial serial(p13, NC, 9600);
+    c = (c + 255) / 4 + 1;
+    if (c > 127)
+    {
+        c = 127;
+    }
+    else if (c < 1)
+    {
+        c = 1;
+    }
+    serial.putc(c);
 }

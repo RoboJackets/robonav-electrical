@@ -13,7 +13,7 @@ class Motor{
     void stop();
 
     private:
-    Serial* saberToothMC;
+    Serial saberToothMC;
     int leftSpeed;
     int rightSpeed;
 };

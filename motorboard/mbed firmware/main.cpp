@@ -1,8 +1,17 @@
+// #include "mbed.h"
+
+// Serial serial(p13, NC);
+
+// int main() {
+//     serial.putc(127);
+//     serial.putc(255);
+// }
+
 // #define _GLIBCXX_USE_C99 1
 #include "mbed.h"
 // #include "motor.h"
 #include "USBSerial.h"
-#include "MPU9250.h"
+// #include "MPU9250.h"
 #include <string>
 #define DEBUG false
 #define TIMEOUT true
@@ -11,16 +20,15 @@
 USBSerial serialNUC(0x1f00, 0x2012, 0x0001, true);
 // MPU9250 imu;
 Timer timer;
-// Motor motor;
+Serial serial(p13, NC, 9600);
 
 // mbed Pin definition
 DigitalOut myLED1(LED1);
-// DigitalOut myLED2(LED2);
-// DigitalOut myLED3(LED3);
-// DigitalOut myLED4(LED4);
-// DigitalOut boardLED(p8);
+DigitalOut myLED2(LED2);
+DigitalOut myLED3(LED3);
+DigitalOut myLED4(LED4);
+DigitalOut boardLED(p8);
 DigitalOut eStopLight(p12);
-DigitalOut mebug(p13);
 DigitalIn eStopStatus(p18);
 
 InterruptIn encoderLeftPinA(p26);
@@ -94,7 +102,6 @@ char commandType;
 int main()
 {
     wait(0.5);
-    // mebug = 1;
     myLED1 = 1;
 
     // Program started
@@ -105,11 +112,13 @@ int main()
     timer.reset();
     timer.start();
     wait(0.5);
-    mebug = 1;
-    // Serial serial(p13, NC, 9600);
+    // mebug = 1;
+    serial.putc(255);
+    serial.putc(127);
+    wait(2);
+    serial.putc(0);
     myLED1 = 0;
-    // motor.setLeftSpeed(240);
-// }
+
     while (true) {
         if (serialNUC.readable()) {
         serialNUC.scanf("%s", &buffer);
@@ -185,11 +194,11 @@ int main()
     // imu.readMagData(magne);
 
     serialNUC.printf("$%1.2f,%1.2f,%1.3f\r\n", actualSpeedL, actualSpeedR, dT_sec);
-    wait_ms(25);
+    wait_ms(23);
     // serialNUC.printf("#I%f,%f,%f,%f,%f,%f,%f,%f,%f\n\r", accel[0], accel[1], accel[2],
     //  gyro[0], gyro[1], gyro[2], magne[0], magne[1], magne[2]);
     serialNUC.printf("#V%2.2f,%d\r\n", battery.read() * 3.3 * 521 / 51, estop);
-    wait_ms(25);
+    wait_ms(23);
     }
 }
 
@@ -397,12 +406,10 @@ void pid()
 }
 
 void bothMotorStop() {
-    Serial serial(p13, NC, 9600);
     serial.putc(0);
 }
 
 void setLeftSpeed(int c) {
-    Serial serial(p13, NC, 9600);
     c = (c + 255) / 4 + 1;
     if (c > 127)
     {
@@ -417,7 +424,6 @@ void setLeftSpeed(int c) {
 }
 
 void setRightSpeed(int c) {
-    Serial serial(p13, NC, 9600);
     c = (c + 255) / 4 + 1;
     if (c > 127)
     {

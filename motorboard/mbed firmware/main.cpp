@@ -113,10 +113,10 @@ int main()
     timer.start();
     wait(0.5);
     // mebug = 1;
-    serial.putc(255);
-    serial.putc(127);
-    wait(2);
-    serial.putc(0);
+    // serial.putc(255);
+    // serial.putc(127);
+    // wait(2);
+    // serial.putc(0);
     myLED1 = 0;
 
     while (true) {

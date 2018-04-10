@@ -3,8 +3,8 @@
 // Serial serial(p13, NC);
 
 // int main() {
-//     serial.putc(127);
-//     serial.putc(255);
+//     serial.putc(0);
+//     // serial.putc(255);
 // }
 
 // #define _GLIBCXX_USE_C99 1
@@ -31,24 +31,23 @@ DigitalOut boardLED(p8);
 DigitalOut eStopLight(p12);
 DigitalIn eStopStatus(p18);
 
-InterruptIn encoderLeftPinA(p26);
-DigitalIn encoderLeftPinB(p25);
-InterruptIn encoderRightPinA(p28);
-DigitalIn encoderRightPinB(p27);
+InterruptIn encoderLeftPinA(p28);
+DigitalIn encoderLeftPinB(p27);
+InterruptIn encoderRightPinA(p26);
+DigitalIn encoderRightPinB(p25);
 AnalogIn battery(p20);
 
 // function prototypes
-void parseCommand(char*);
-float parseSpeed(char*, short*);
+void parseCommand(char *);
+float parseSpeed(char *, short *);
 void tickLeft();
 void tickRight();
 void pidLoop();
-void parsePID(char*);
 void pid();
-float parseFloat(int,int,char*);
-void parseP(char*);
-void parseD(char*);
-void parseNonMotor(char*);
+float parseFloat(int, int, char *);
+void parseP(char *);
+void parseD(char *);
+void parseNonMotor(char *);
 
 void setLeftSpeed(int);
 void setRightSpeed(int);
@@ -56,7 +55,7 @@ void bothMotorStop();
 
 // Serial Comm
 long lastCmdTime = 0;
-long lastLoopTime = 0;
+int lastLoopTime = 0;
 uint8_t buffer[128];
 
 // PID variable definition
@@ -71,10 +70,10 @@ float dErrorR = 0;
 float dT_sec = 0;
 float lastErrorL = 0;
 float lastErrorR = 0;
-float P_l = 4;
-float D_l = 10;
-float P_r = 4;
-float D_r = 10;
+float P_l = 8;
+float D_l = 0;
+float P_r = 8;
+float D_r = 0;
 float accel[3];
 float gyro[3];
 float magne[3];
@@ -115,32 +114,41 @@ int main()
     // mebug = 1;
     // serial.putc(255);
     // serial.putc(127);
-    // wait(2);
+    // wait(5);
     // serial.putc(0);
     myLED1 = 0;
 
-    while (true) {
-        if (serialNUC.readable()) {
-        serialNUC.scanf("%s", &buffer);
-        commandType = buffer[0];
+    while (true)
+    {
+        if (serialNUC.readable())
+        {
+            serialNUC.scanf("%s", &buffer);
+            commandType = buffer[0];
 
-        if (commandType == '$') {
-            parseCommand((char *)buffer);
-            gotCommand = true;
-            lastCmdTime = timer.read_ms();
-            if (DEBUG) {
-                serialNUC.printf("Debug: Motor cmd Recognized\r\n");
-                serialNUC.printf("Echo Left %f, Right %f\r\n", desiredSpeedL, desiredSpeedR);
+            if (commandType == '$')
+            {
+                parseCommand((char *)buffer);
+                gotCommand = true;
+                lastCmdTime = timer.read_ms();
+                if (DEBUG)
+                {
+                    serialNUC.printf("Debug: Motor cmd Recognized\r\n");
+                    serialNUC.printf("Echo Left %f, Right %f\r\n", desiredSpeedL, desiredSpeedR);
+                }
             }
-        } else if (commandType == '#') {
-            nonMotorCommand = true;
-            if (DEBUG) {
-                serialNUC.printf("Debug: NonMotor cmd Recognized\r\n");
+            else if (commandType == '#')
+            {
+                nonMotorCommand = true;
+                if (DEBUG)
+                {
+                    serialNUC.printf("Debug: NonMotor cmd Recognized\r\n");
+                }
             }
-        }
 
-        if (nonMotorCommand) {
-            switch (buffer[1]) {
+            if (nonMotorCommand)
+            {
+                switch (buffer[1])
+                {
                 case 'L':
                     // This is for Estop Light Pattern … nothing to do with actual Estop Status
                     eStopOutput = (int)((int)(buffer[2]) - 48);
@@ -149,63 +157,73 @@ int main()
                         serialNUC.printf("Debug: E Stop Light cmd: %d\n", eStopOutput);
                     break;
                 case 'P':
-                    parseNonMotor((char*)buffer);
-                    serialNUC.printf("#P%2.2f,%2.2f\r\n",P_l,P_r);
+                    parseNonMotor((char *)buffer);
+                    serialNUC.printf("#P%2.2f,%2.2f\r\n", P_l, P_r);
                     break;
                 case 'D':
                     parseNonMotor((char *)buffer);
-                    serialNUC.printf("#D%2.2f,%2.2f\r\n",D_l,D_r);
+                    serialNUC.printf("#D%2.2f,%2.2f\r\n", D_l, D_r);
                     break;
                 default:
                     serialNUC.printf("#EInvalid Command\r\n");
+                }
+                nonMotorCommand = false;
             }
-            nonMotorCommand = false;
         }
-    }
 
-    if (!TIMEOUT) {
-        if (timer.read_ms() - lastCmdTime > 7500) {
-            serialNUC.printf("#ETIMEOUT\r\n");
+        if (!TIMEOUT)
+        {
+            if (timer.read_ms() - lastCmdTime > 500)
+            {
+                serialNUC.printf("#ETIMEOUT\r\n");
+                desiredSpeedL = 0;
+                desiredSpeedR = 0;
+                PWM_L = 0;
+                PWM_R = 0;
+                bothMotorStop();
+            }
+        }
+        
+
+        // Estop logic
+        if (eStopStatus.read())
+        {
+            // If get 5V, since inverted, meaning disabled on motors
+            estop = 0;
             desiredSpeedL = 0;
             desiredSpeedR = 0;
-            bothMotorStop();
             PWM_L = 0;
             PWM_R = 0;
+            bothMotorStop();
         }
-    }
+        else
+        {
+            estop = 1;
+        }
 
-    // Estop logic
-    if (eStopStatus.read()) {
-        // If get 5V, since inverted, meaning disabled on motors
-        estop = 0;
-        desiredSpeedL = 0;
-        desiredSpeedR = 0;
-        PWM_L = 0;
-        PWM_R = 0;
-        bothMotorStop();
-    } else {
-          estop = 1;
-    }
+        // desiredSpeedL = 1.0;
+        // desiredSpeedR = 1.0;
+        pid();
 
-    pid();
+        // imu.readAccelData(accel);
+        // imu.readGyroData(gyro);
+        // imu.readMagData(magne);
 
-    // imu.readAccelData(accel);
-    // imu.readGyroData(gyro);
-    // imu.readMagData(magne);
+        serialNUC.printf("$%1.2f,%1.2f,%1.3f\r\n", actualSpeedL, actualSpeedR, dT_sec);
+        wait_ms(13);
+        // serialNUC.printf("#I%f,%f,%f,%f,%f,%f,%f,%f,%f\n\r", accel[0], accel[1], accel[2],
+        //  gyro[0], gyro[1], gyro[2], magne[0], magne[1], magne[2]);
+        serialNUC.printf("#V%2.2f,%d\r\n", battery.read() * 3.3 * 521 / 51, estop);
+        wait_ms(13);
 
-    serialNUC.printf("$%1.2f,%1.2f,%1.3f\r\n", actualSpeedL, actualSpeedR, dT_sec);
-    wait_ms(23);
-    // serialNUC.printf("#I%f,%f,%f,%f,%f,%f,%f,%f,%f\n\r", accel[0], accel[1], accel[2],
-    //  gyro[0], gyro[1], gyro[2], magne[0], magne[1], magne[2]);
-    serialNUC.printf("#V%2.2f,%d\r\n", battery.read() * 3.3 * 521 / 51, estop);
-    wait_ms(23);
     }
 }
 
 void parseCommand(char *cmd)
 {
     short index = 0;
-    if (cmd[index] != '$') {
+    if (cmd[index] != '$')
+    {
         serialNUC.printf("Invalid Format: cmd must start with '$'\n\r");
         return;
     }
@@ -213,7 +231,8 @@ void parseCommand(char *cmd)
 
     desiredSpeedL = parseSpeed(cmd, &index);
 
-    if (cmd[index] != ',') {
+    if (cmd[index] != ',')
+    {
         serialNUC.printf("Invalid Format: values must be comma-separated\n\r");
         return;
     }
@@ -222,57 +241,33 @@ void parseCommand(char *cmd)
     desiredSpeedR = parseSpeed(cmd, &index);
 }
 
-float parseSpeed(char* cmd, short* index) {
+float parseSpeed(char *cmd, short *index)
+{
     short sign = 1;
-    if (cmd[*index] == '-') {
+    if (cmd[*index] == '-')
+    {
         sign = -1;
         ++(*index);
     }
-    float value = (float) cmd[*index] - 48; // converting char to units digit
+    float value = (float)cmd[*index] - 48; // converting char to units digit
 
-    if (cmd[*index + 1] != '.') {
+    if (cmd[*index + 1] != '.')
+    {
         serialNUC.printf("#EInvalid Format: speed must be float\n\r");
         *index += 3; // attempt to skip past invalid term
         return 0;
     }
-    value += ((float) cmd[*index + 2] - 48) / 10; // converting char to tenths digit
+    value += ((float)cmd[*index + 2] - 48) / 10; // converting char to tenths digit
     *index += 3;
     return sign * value;
 }
 
-// Parse PID is no longer used due to length limit of Serial communication
-void parsePID(char *cmd) {
-    int dotIndex[4];
-    int dot = 0;
-    int commaIndex[4];
-    commaIndex[0] = 1;
-    int comma = 1;
-    int i;
-    // Find location of ',' and '.'
-    for (i = 0; i < 80; i++) {
-        if (cmd[i] == ',') {
-        commaIndex[comma] = i;
-        ++comma;
-        }
-
-        if (cmd[i] == '.') {
-        dotIndex[dot] = i;
-        ++dot;
-        }
-    }
-
-    P_l = parseFloat(commaIndex[0], dotIndex[0], cmd);
-    D_l = parseFloat(commaIndex[1], dotIndex[1], cmd);
-    P_r = parseFloat(commaIndex[2], dotIndex[2], cmd);
-    D_r = parseFloat(commaIndex[3], dotIndex[3], cmd);
-
-}
-
-float parseFloat(int preStart, int decimalPoint, char* cmd) {
+float parseFloat(int preStart, int decimalPoint, char *cmd)
+{
     float result = 0;
 
     for (int i = decimalPoint - 1, j = 0; i > preStart; i--, j++)
-        result += (int)(cmd[i] - 48) * pow(10,j);
+        result += (int)(cmd[i] - 48) * pow(10, j);
 
     for (int i = decimalPoint + 1; i < decimalPoint + 3 && cmd[i] != ',' && cmd[i] != 0; i++)
         result += (float)((int)(cmd[i] - 48)) * (1 / (float)(pow(10, i - decimalPoint)));
@@ -280,31 +275,37 @@ float parseFloat(int preStart, int decimalPoint, char* cmd) {
     return result;
 }
 
-void parseNonMotor(char* cmd) {
+void parseNonMotor(char *cmd)
+{
     int dotIndex[2];
     int dotCount = 0;
     int commaIndex = 0;
     int commaCount = 0;
 
-    for (int i = 0; i < 16; i++) {
-        if (cmd[i] == '.') {
-        dotIndex[dotCount] = i;
-        dotCount++;
+    for (int i = 0; i < 16; i++)
+    {
+        if (cmd[i] == '.')
+        {
+            dotIndex[dotCount] = i;
+            dotCount++;
         }
 
-        if (cmd[i] == ',') {
-        commaIndex = i;
-        commaCount++;
+        if (cmd[i] == ',')
+        {
+            commaIndex = i;
+            commaCount++;
         }
 
-        if (dotCount == 2 && commaCount == 1) {
-        i = 25;
+        if (dotCount == 2 && commaCount == 1)
+        {
+            i = 25;
         }
     }
 
     float val1 = parseFloat(1, dotIndex[0], cmd);
     float val2 = parseFloat(commaIndex, dotIndex[1], cmd);
-    switch (cmd[1]) {
+    switch (cmd[1])
+    {
     case 'P':
         P_l = val1;
         P_r = val2;
@@ -316,18 +317,17 @@ void parseNonMotor(char* cmd) {
     default:
         serialNUC.printf("#EFormat Error from mbed Parse Command");
     }
-
 }
 
 void tickRight()
 {
     if (encoderRightPinA.read() == encoderRightPinB.read())
     {
-        ++tickDataRight;
+        --tickDataRight;
     }
     else
     {
-        --tickDataRight;
+        ++tickDataRight;
     }
 }
 
@@ -347,10 +347,11 @@ void pid()
 {
     dT_sec = (float)(timer.read_ms() - lastLoopTime) / 1000.0;
 
-    if (timer.read() >= 1700) {
-        timer.reset();
-        lastLoopTime = 0;
-    }
+    // if (timer.read() >= 1700)
+    // {
+    //     timer.reset();
+    //     lastLoopTime = 0;
+    // }
 
     lastLoopTime = timer.read_ms();
     actualSpeedL = (metersPerTick * tickDataLeft) / dT_sec;
@@ -359,6 +360,8 @@ void pid()
     tickDataLeft = 0;
     tickDataRight = 0;
 
+    wait_ms(20);
+
     ErrorL = desiredSpeedL - actualSpeedL;
     ErrorR = desiredSpeedR - actualSpeedR;
 
@@ -366,9 +369,9 @@ void pid()
 
     dErrorL = ErrorL - lastErrorL;
     dErrorR = ErrorR - lastErrorR;
- 
-    dPWM_L = (int)(P_l * ErrorL + D_l * dErrorL);
-    dPWM_R = (int)(P_r * ErrorR + D_r * dErrorR);
+
+    dPWM_L = (int)ceil((P_l * ErrorL + D_l * dErrorL));
+    dPWM_R = (int)ceil((P_r * ErrorR + D_r * dErrorR));
 
     // serialNUC.printf("dpwmL: %d, dpwmR:%d \r\n",dPWM_L, dPWM_R);
 
@@ -379,20 +382,28 @@ void pid()
     PWM_R = min(255, max(-255, PWM_R));
 
     // Deadband
-    if (abs(PWM_L) < 2) {
+    if (abs(actualSpeedL) < 0.16 && abs(desiredSpeedL) < 0.16)
+    {
         PWM_L = 0;
     }
-    if (abs(PWM_R) < 2) {
+    if (abs(actualSpeedR) < 0.16 && abs(desiredSpeedR) < 0.16)
+    {
         PWM_R = 0;
     }
 
     // PWM_L = 255;
     // PWM_R = 255;
+    
     setLeftSpeed(PWM_L);
     setRightSpeed(PWM_R);
 
-    if (DEBUG) {
-        serialNUC.printf("PWM_L: %d, PWM_R: %d\n",PWM_L, PWM_R);
+
+    // setLeftSpeed(desiredSpeedL / 2.17 * 255);
+    // setRightSpeed(desiredSpeedR / 2.17 * 255);
+
+    if (DEBUG)
+    {
+        serialNUC.printf("PWM_L: %d, PWM_R: %d\n", PWM_L, PWM_R);
     }
 
     /*
@@ -400,17 +411,18 @@ void pid()
         controller with PWM. "PWM" here are mere residue from old arduino code
         -255 to 255 values are handled in motor.cpp file, mapped to 0 to 127.
     */
-
     lastErrorL = ErrorL;
     lastErrorR = ErrorR;
 }
 
-void bothMotorStop() {
+void bothMotorStop()
+{
     serial.putc(0);
 }
 
-void setLeftSpeed(int c) {
-    c = (c + 255) / 4 + 1;
+void setLeftSpeed(int c)
+{
+    c = (c + 250) / 4 + 1;
     if (c > 127)
     {
         c = 127;
@@ -420,11 +432,12 @@ void setLeftSpeed(int c) {
         c = 0;
     }
     c += 128;
-    serial.putc(c);
+    serial.putc(static_cast<char>(c));
 }
 
-void setRightSpeed(int c) {
-    c = (c + 255) / 4 + 1;
+void setRightSpeed(int c)
+{
+    c = (c + 250) / 4 + 1;
     if (c > 127)
     {
         c = 127;
@@ -433,5 +446,5 @@ void setRightSpeed(int c) {
     {
         c = 1;
     }
-    serial.putc(c);
+    serial.putc(static_cast<char>(c));
 }

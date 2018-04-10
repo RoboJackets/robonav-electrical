@@ -3,7 +3,7 @@
 #include <fstream>
 using namespace std;
 
-int dT_sec = 50;
+double dT_sec = 0.05;
 double desiredSpeedL = 1.2;
 double desiredSpeedR = 1.2;
 double actualSpeedL = 0.0;
@@ -13,13 +13,17 @@ double ErrorL = 0;
 double ErrorR = 0;
 double dErrorL = 0;
 double dErrorR = 0;
+double iErrorL = 0;
+double iErrorR = 0;
 double lastErrorL = 0;
 double lastErrorR = 0;
 
-int P_l = 8;
-int P_r = 8;
+int P_l = 6;
+int P_r = 6;
 int D_l = 16;
 int D_r = 16;
+int I_l = 0;
+int I_r = 0;
 
 int PWM_L = 0;
 int PWM_R = 0;
@@ -52,32 +56,26 @@ int main() {
 void pid() {
 
     actualSpeedL = speedL();
-    cout << "actualspeedL: " << actualSpeedL << endl;
     actualSpeedR = speedR();
-    cout << "actualspeedR: " << actualSpeedR << endl;
 
     ErrorL = desiredSpeedL - actualSpeedL;
     ErrorR = desiredSpeedR - actualSpeedR;
-    cout << "ErrorL: " << ErrorL << endl;
-    cout << "ErrorR: " << ErrorR << endl;
 
     // serialNUC.printf("ErrorL: %1.2f, ErrorR: %1.2f \r\n", ErrorL, ErrorR);
 
     dErrorL = ErrorL - lastErrorL;
     dErrorR = ErrorR - lastErrorR;
-    cout << "dErrorL: " << dErrorL << endl;
-    cout << "dErrorR: " << dErrorR << endl;
 
-    dPWM_L = (int)ceil((P_l * ErrorL + D_l * dErrorL));
-    dPWM_R = (int)ceil((P_r * ErrorR + D_r * dErrorR));
-    cout << "dPWM_L: " << dPWM_L << endl;
-    cout << "dPWM_R: " << dPWM_R << endl;
+    iErrorL = ErrorL * dT_sec;
+    iErrorR = ErrorR * dT_sec;
+
+    dPWM_L = (int)ceil((P_l * ErrorL + D_l * dErrorL + I_l * iErrorL));
+    dPWM_R = (int)ceil((P_r * ErrorR + D_r * dErrorR + I_r * iErrorR));
 
     // serialNUC.printf("dpwmL: %d, dpwmR:%d \r\n",dPWM_L, dPWM_R);
 
     PWM_L += dPWM_L;
     PWM_R += dPWM_R;
-    
 
     PWM_L = min(255, max(-255, PWM_L));
     PWM_R = min(255, max(-255, PWM_R));
@@ -86,8 +84,7 @@ void pid() {
 
     lastErrorL = ErrorL;
     lastErrorR = ErrorR;
-
-    cout << "EoC" << endl;
+    
     // EoC as end of one cycle
 }
 

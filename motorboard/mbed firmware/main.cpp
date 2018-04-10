@@ -67,6 +67,8 @@ float ErrorL = 0;
 float ErrorR = 0;
 float dErrorL = 0;
 float dErrorR = 0;
+float iErrorL = 0;
+float iErrorR = 0;
 float dT_sec = 0;
 float lastErrorL = 0;
 float lastErrorR = 0;
@@ -74,6 +76,8 @@ float P_l = 8;
 float D_l = 0;
 float P_r = 8;
 float D_r = 0;
+float I_l = 0;
+float I_r = 0;
 float accel[3];
 float gyro[3];
 float magne[3];
@@ -370,8 +374,11 @@ void pid()
     dErrorL = ErrorL - lastErrorL;
     dErrorR = ErrorR - lastErrorR;
 
-    dPWM_L = (int)ceil((P_l * ErrorL + D_l * dErrorL));
-    dPWM_R = (int)ceil((P_r * ErrorR + D_r * dErrorR));
+    iErrorL = ErrorL * dT_sec;
+    iErrorR = ErrorR * dT_sec;
+
+    dPWM_L = (int)ceil((P_l * ErrorL + D_l * dErrorL + I_l * iErrorL));
+    dPWM_R = (int)ceil((P_r * ErrorR + D_r * dErrorR + I_r * iErrorR));
 
     // serialNUC.printf("dpwmL: %d, dpwmR:%d \r\n",dPWM_L, dPWM_R);
 

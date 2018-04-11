@@ -168,6 +168,10 @@ int main()
                     parseNonMotor((char *)buffer);
                     serialNUC.printf("#D%2.2f,%2.2f\r\n", D_l, D_r);
                     break;
+                case 'I':
+                    parseNonMotor((char *)buffer);
+                    serialNUC.printf("#I%2.2f,%2.2f\r\n", I_l, I_r);
+                    break;
                 default:
                     serialNUC.printf("#EInvalid Command\r\n");
                 }
@@ -317,6 +321,10 @@ void parseNonMotor(char *cmd)
     case 'D':
         D_l = val1;
         D_r = val2;
+        break;
+    case 'I':
+        I_l = val1;
+        I_r = val2;
         break;
     default:
         serialNUC.printf("#EFormat Error from mbed Parse Command");

@@ -187,7 +187,7 @@ int main()
                 bothMotorStop();
             }
         }
-        
+
 
         // Estop logic
         if (eStopStatus.read())
@@ -327,11 +327,11 @@ void tickRight()
 {
     if (encoderRightPinA.read() == encoderRightPinB.read())
     {
-        --tickDataRight;
+        ++tickDataRight;
     }
     else
     {
-        ++tickDataRight;
+        --tickDataRight;
     }
 }
 
@@ -339,11 +339,11 @@ void tickLeft()
 {
     if (encoderLeftPinA.read() == encoderLeftPinB.read())
     {
-        --tickDataLeft;
+        ++tickDataLeft;
     }
     else
     {
-        ++tickDataLeft;
+        --tickDataLeft;
     }
 }
 
@@ -351,11 +351,11 @@ void pid()
 {
     dT_sec = (float)(timer.read_ms() - lastLoopTime) / 1000.0;
 
-    // if (timer.read() >= 1700)
-    // {
-    //     timer.reset();
-    //     lastLoopTime = 0;
-    // }
+    if (timer.read() >= 1700)
+    {
+        timer.reset();
+        lastLoopTime = 0;
+    }
 
     lastLoopTime = timer.read_ms();
     actualSpeedL = (metersPerTick * tickDataLeft) / dT_sec;
@@ -363,8 +363,6 @@ void pid()
 
     tickDataLeft = 0;
     tickDataRight = 0;
-
-    wait_ms(20);
 
     ErrorL = desiredSpeedL - actualSpeedL;
     ErrorR = desiredSpeedR - actualSpeedR;
@@ -377,8 +375,8 @@ void pid()
     iErrorL = ErrorL * dT_sec;
     iErrorR = ErrorR * dT_sec;
 
-    dPWM_L = (int)ceil((P_l * ErrorL + D_l * dErrorL + I_l * iErrorL));
-    dPWM_R = (int)ceil((P_r * ErrorR + D_r * dErrorR + I_r * iErrorR));
+    dPWM_L = -(int)ceil((P_l * ErrorL + D_l * dErrorL + I_l * iErrorL));
+    dPWM_R = -(int)ceil((P_r * ErrorR + D_r * dErrorR + I_r * iErrorR));
 
     // serialNUC.printf("dpwmL: %d, dpwmR:%d \r\n",dPWM_L, dPWM_R);
 
@@ -400,7 +398,7 @@ void pid()
 
     // PWM_L = 255;
     // PWM_R = 255;
-    
+
     setLeftSpeed(PWM_L);
     setRightSpeed(PWM_R);
 
@@ -420,6 +418,8 @@ void pid()
     */
     lastErrorL = ErrorL;
     lastErrorR = ErrorR;
+
+    wait_ms(20);
 }
 
 void bothMotorStop()

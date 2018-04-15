@@ -50,7 +50,6 @@ long millisElapsed = 0; // milliseconds since last read bit
 
 void setup() 
 {
-  Serial.begin(9600);
   pinMode(CE,  OUTPUT);
   pinMode(CSN, OUTPUT);
   pinMode(IRQ, INPUT);
@@ -58,9 +57,6 @@ void setup()
   delay(50);
   init_io();                        // Initialize IO port
   unsigned char sstatus=SPI_Read(STATUS);
-  Serial.println("*******************RX_Mode Start****************************");
-  Serial.print("status = ");    
-  Serial.println(sstatus,HEX);     // There is read the mode’s status register, the default value should be ‘E’
   RX_Mode();                        // set RX mode
   pinMode(OUT_PIN, OUTPUT);
   pinMode(BTN_LED, OUTPUT);

@@ -50,7 +50,6 @@ bool isToggling = false;
 
 void setup() 
 {
-  Serial.begin(9600);
   pinMode(CE,  OUTPUT);
   pinMode(CSN, OUTPUT);
   pinMode(IRQ, INPUT);
@@ -58,9 +57,6 @@ void setup()
   delay(50);
   init_io();                        // Initialize IO port
   unsigned char sstatus=SPI_Read(STATUS);
-  Serial.println("*******************TX_Mode Start****************************");
-  Serial.print("status = ");    
-  Serial.println(sstatus,HEX);     // There is read the mode’s status register, the default value should be ‘E’
   TX_Mode();                       // set TX mode
   pinMode(IN_PIN, INPUT);
   digitalWrite(IN_PIN, HIGH);
@@ -96,7 +92,7 @@ void loop()
     SPI_Write_Buf(WR_TX_PLOAD,tx_buf,TX_PLOAD_WIDTH);      // disable standy-mode
   }
   SPI_RW_Reg(WRITE_REG+STATUS,sstatus);                     // clear RX_DR or TX_DS or MAX_RT interrupt flag
-  delay(200);
+  delay(50);
 }
 
 //**************************************************

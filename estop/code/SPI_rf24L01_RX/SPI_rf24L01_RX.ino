@@ -13,18 +13,18 @@
 **   CLK - to digital pin 13  (SCK pin)                             **
 *********************************************************************/
 
-
 #include <SPI.h>
 #include "API.h"
 
 //***************************************************
 
+#define TIMEOUT  3000 // timeout duration for automatic estop shutdown, in milliseconds
 #define OUT_PIN 9 // estop on/off out pin
 #define BTN_LED 5 // estop on/off status LED
-#define CON_LED 6 // radio connection status LED
-#define CE       8             
+#define WIRELESS_LED 6 // radio connection status LED
+#define CE       20             
 // CE_BIT:   Digital Input     Chip Enable Activates RX or TX mode
-#define CSN      9
+#define CSN      21
 // CSN BIT:  Digital Input     SPI Chip Select
 #define IRQ      10
 // IRQ BIT:  Digital Output    Maskable interrupt pin
@@ -44,6 +44,10 @@ unsigned char tx_buf[TX_PLOAD_WIDTH] = {0};
 
 //***************************************************
 
+long millisElapsed = 0; // milliseconds since last read bit
+
+//***************************************************
+
 void setup() 
 {
   Serial.begin(9600);
@@ -60,31 +64,35 @@ void setup()
   RX_Mode();                        // set RX mode
   pinMode(OUT_PIN, OUTPUT);
   pinMode(BTN_LED, OUTPUT);
-  pinMode(CON_LED, OUTPUT);
+  pinMode(WIRELESS_LED, OUTPUT);
 }
 
 void loop() 
 {
-  digitalWrite(CON_LED, LOW);
-  unsigned char status = SPI_Read(STATUS);                         // read register STATUS's value
+  millisElapsed += 25;
+  if (millisElapsed >= TIMEOUT) {
+    digitalWrite(OUT_PIN, LOW);
+    digitalWrite(BTN_LED, LOW);
+  }
+  digitalWrite(WIRELESS_LED, LOW);
+  unsigned char status = SPI_Read(STATUS);    
+  // read register STATUS's value
   if(status&RX_DR)                                                 // if receive data ready (TX_DS) interrupt
   {
-    digitalWrite(CON_LED, HIGH);
+    millisElapsed = 0;
+    digitalWrite(WIRELESS_LED, HIGH);
     SPI_Read_Buf(RD_RX_PLOAD, rx_buf, TX_PLOAD_WIDTH);             // read playload to rx_buf
     SPI_RW_Reg(FLUSH_RX,0);                                        // clear RX_FIFO
     for(int i=0; i<TX_PLOAD_WIDTH; i++)
     {
-        Serial.print(" ");
-        Serial.print((int)rx_buf[i]);                              // print rx_buf
         if ((int)rx_buf[i] == 1){
           digitalWrite(OUT_PIN, HIGH);
           digitalWrite(BTN_LED, HIGH);
-        } else{
+        } else if ((int)rx_buf[i] == 0){
           digitalWrite(OUT_PIN, LOW);
           digitalWrite(BTN_LED, LOW);
         }
     }
-    Serial.print("\n");
   }
   SPI_RW_Reg(WRITE_REG+STATUS,status);                             // clear RX_DR or TX_DS or MAX_RT interrupt flag
   delay(25);

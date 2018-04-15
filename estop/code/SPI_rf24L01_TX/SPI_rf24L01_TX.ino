@@ -20,10 +20,10 @@
 
 #define IN_PIN 8 // estop button in pin
 #define BTN_LED 5 // estop on/off status LED
-//#define CON_LED 6 // radio connection status LED
-#define CE       8
+#define WIRELESS_LED 6 // radio connection status LED
+#define CE       20
 // CE_BIT:   Digital Input     Chip Enable Activates RX or TX mode
-#define CSN      9
+#define CSN      21
 // CSN BIT:  Digital Input     SPI Chip Select
 #define IRQ      10
 // IRQ BIT:  Digital Output    Maskable interrupt pin
@@ -40,6 +40,11 @@ unsigned char TX_ADDRESS[TX_ADR_WIDTH]  =
 
 unsigned char rx_buf[TX_PLOAD_WIDTH] = {0}; // initialize value
 unsigned char tx_buf[TX_PLOAD_WIDTH] = {0};
+
+//***************************************************
+
+int estopStatus = 0;
+bool isToggling = false;
 
 //***************************************************
 
@@ -60,13 +65,25 @@ void setup()
   pinMode(IN_PIN, INPUT);
   digitalWrite(IN_PIN, HIGH);
   pinMode(BTN_LED, OUTPUT);
+  pinMode(WIRELESS_LED, OUTPUT);
 }
 
 void loop() 
 {
   int k = !digitalRead(IN_PIN);
-  digitalWrite(BTN_LED, k);
-  tx_buf[0] = k;
+  if (k == 1) {
+    digitalWrite(WIRELESS_LED, HIGH);
+    if (!isToggling) {
+      isToggling = true;
+      estopStatus = !estopStatus;
+    }
+  } else if (k == 0 && isToggling) {
+    isToggling = false;
+    digitalWrite(WIRELESS_LED, LOW);
+  }
+  
+  digitalWrite(BTN_LED, estopStatus);
+  tx_buf[0] = estopStatus;
   unsigned char sstatus = SPI_Read(STATUS);                   // read register STATUS's value
   if(sstatus&TX_DS)                                           // if receive data ready (TX_DS) interrupt
   {
@@ -79,7 +96,7 @@ void loop()
     SPI_Write_Buf(WR_TX_PLOAD,tx_buf,TX_PLOAD_WIDTH);      // disable standy-mode
   }
   SPI_RW_Reg(WRITE_REG+STATUS,sstatus);                     // clear RX_DR or TX_DS or MAX_RT interrupt flag
-  delay(50);
+  delay(200);
 }
 
 //**************************************************

@@ -44,7 +44,6 @@ unsigned char tx_buf[TX_PLOAD_WIDTH] = {0};
 //***************************************************
 
 int estopStatus = 0;
-bool isToggling = false;
 
 //***************************************************
 
@@ -67,14 +66,10 @@ void setup()
 void loop() 
 {
   int k = !digitalRead(IN_PIN);
-  if (k == 1) {
+  if (k != estopStatus) {
     digitalWrite(WIRELESS_LED, HIGH);
-    if (!isToggling) {
-      isToggling = true;
-      estopStatus = !estopStatus;
-    }
-  } else if (k == 0 && isToggling) {
-    isToggling = false;
+    estopStatus = k;
+  } else {
     digitalWrite(WIRELESS_LED, LOW);
   }
   

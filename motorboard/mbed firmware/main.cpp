@@ -153,13 +153,6 @@ int main()
             {
                 switch (buffer[1])
                 {
-                case 'L':
-                    // This is for Estop Light Pattern … nothing to do with actual Estop Status
-                    eStopOutput = (int)((int)(buffer[2]) - 48);
-                    eStopLight = (eStopOutput == 1) ? 1 : 0;
-                    if (DEBUG)
-                        serialNUC.printf("Debug: E Stop Light cmd: %d\n", eStopOutput);
-                    break;
                 case 'P':
                     parseNonMotor((char *)buffer);
                     serialNUC.printf("#P%2.2f,%2.2f\r\n", P_l, P_r);
@@ -203,10 +196,12 @@ int main()
             PWM_L = 0;
             PWM_R = 0;
             bothMotorStop();
+            eStopLight = 1;
         }
         else
         {
             estop = 1;
+            eStopLight = 0;
         }
 
         // desiredSpeedL = 1.0;

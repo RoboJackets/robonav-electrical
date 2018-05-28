@@ -185,6 +185,11 @@ int main()
             }
         }
 
+        if (timer.read_ms() > pow(2, 20))
+        {
+            timer.reset();
+            lastCmdTime = 0;
+        }
 
         // Estop logic
         if (eStopStatus.read())

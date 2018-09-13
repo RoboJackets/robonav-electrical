@@ -121,29 +121,24 @@ int main() {
                 }
             }
 
-            if (nonMotorCommand) {
-                switch (buffer[1]) {
-                case 'L':
-                    // This is for Estop Light Pattern … nothing to do with actual Estop Status
-                    eStopOutput = (int)((int)(buffer[2]) - 48);
-                    eStopLight = (eStopOutput == 1) ? 1 : 0;
-                    if (DEBUG)
-                        serialNUC.printf("Debug: E Stop Light cmd: %d\n", eStopOutput);
-                    break;
-                case 'P':
-                    parseNonMotor((char *)buffer);
-                    serialNUC.printf("#P%2.2f,%2.2f\r\n", P_l, P_r);
-                    break;
-                case 'D':
-                    parseNonMotor((char *)buffer);
-                    serialNUC.printf("#D%2.2f,%2.2f\r\n", D_l, D_r);
-                    break;
-                case 'I':
-                    parseNonMotor((char *)buffer);
-                    serialNUC.printf("#I%2.2f,%2.2f\r\n", I_l, I_r);
-                    break;
-                default:
-                    serialNUC.printf("#EInvalid Command\r\n");
+            if (nonMotorCommand)
+            {
+                switch (buffer[1])
+                {
+                    case 'P':
+                        parseNonMotor((char *)buffer);
+                        serialNUC.printf("#P%2.2f,%2.2f\r\n", P_l, P_r);
+                        break;
+                    case 'D':
+                        parseNonMotor((char *)buffer);
+                        serialNUC.printf("#D%2.2f,%2.2f\r\n", D_l, D_r);
+                        break;
+                    case 'I':
+                        parseNonMotor((char *)buffer);
+                        serialNUC.printf("#I%2.2f,%2.2f\r\n", I_l, I_r);
+                        break;
+                    default:
+                        serialNUC.printf("#EInvalid Command\r\n");
                 }
                 nonMotorCommand = false;
             }
@@ -160,6 +155,11 @@ int main() {
             }
         }
 
+        if (timer.read_ms() > pow(2, 20))
+        {
+            timer.reset();
+            lastCmdTime = 0;
+        }
 
         // Estop logic
         if (eStopStatus.read()) {
@@ -170,9 +170,11 @@ int main() {
             PWM_L = 0;
             PWM_R = 0;
             bothMotorStop();
+            eStopLight = 1;
         }
         else {
             estop = 1;
+            eStopLight = 0;
         }
 
         pid();

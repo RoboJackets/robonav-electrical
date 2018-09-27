@@ -2588,6 +2588,14 @@ Source: www.stewartconnector.com .. si-50170.pdf</description>
 <text x="-2.54" y="-5.08" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
 <pin name="+12V" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
 </symbol>
+<symbol name="+24V" urn="urn:adsk.eagle:symbol:26935/1" library_version="1">
+<wire x1="1.27" y1="-0.635" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="-1.27" y2="-0.635" width="0.254" layer="94"/>
+<wire x1="1.27" y1="-0.635" x2="0" y2="1.27" width="0.254" layer="94"/>
+<wire x1="0" y1="1.27" x2="-1.27" y2="-0.635" width="0.254" layer="94"/>
+<text x="-2.54" y="-5.08" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<pin name="+24V" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="GND" urn="urn:adsk.eagle:component:26954/1" prefix="GND" library_version="1">
@@ -2633,6 +2641,19 @@ Source: www.stewartconnector.com .. si-50170.pdf</description>
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
 <gate name="1" symbol="+12V" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="+24V" urn="urn:adsk.eagle:component:26964/1" prefix="P+" library_version="1">
+<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
+<gates>
+<gate name="1" symbol="+24V" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -15165,7 +15186,7 @@ In this library you will find integrated circuits (ICs) that are directly involv
 <part name="GND20" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="U$18" library="IGVC-Regulator" deviceset="MIS29301-12" device=""/>
 <part name="GND34" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="P+9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+12V" device=""/>
+<part name="P+9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+24V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -16489,14 +16510,6 @@ Transistor here can take 4A</text>
 <label x="12.7" y="175.26" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="+12V" class="0">
-<segment>
-<pinref part="U$18" gate="G$1" pin="IN"/>
-<pinref part="P+9" gate="1" pin="+12V"/>
-<wire x1="132.08" y1="185.42" x2="129.54" y2="185.42" width="0.1524" layer="91"/>
-<wire x1="129.54" y1="185.42" x2="129.54" y2="190.5" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="SAFETY_LIGHT_EN" class="0">
 <segment>
 <pinref part="U$18" gate="G$1" pin="EN"/>
@@ -16511,6 +16524,14 @@ Transistor here can take 4A</text>
 <wire x1="152.4" y1="165.1" x2="152.4" y2="152.4" width="0.1524" layer="91"/>
 <wire x1="152.4" y1="152.4" x2="127" y2="152.4" width="0.1524" layer="91"/>
 <label x="119.38" y="152.4" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="+24V" class="0">
+<segment>
+<pinref part="U$18" gate="G$1" pin="IN"/>
+<wire x1="132.08" y1="185.42" x2="129.54" y2="185.42" width="0.1524" layer="91"/>
+<wire x1="129.54" y1="185.42" x2="129.54" y2="190.5" width="0.1524" layer="91"/>
+<pinref part="P+9" gate="1" pin="+24V"/>
 </segment>
 </net>
 </nets>

@@ -1,4 +1,5 @@
 // #include "globals.h"
+#include "mbed.h"
 
 class Motor{
     public:
@@ -12,6 +13,7 @@ class Motor{
     void stop();
 
     private:
+    Serial saberToothMC;
     int leftSpeed;
     int rightSpeed;
 };

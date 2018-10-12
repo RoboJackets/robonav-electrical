@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.2.0">
+<eagle version="9.1.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -13345,6 +13345,17 @@ In this library you will find integrated circuits (ICs) that are directly involv
 <smd name="P$9" x="-2.7" y="0.95" dx="1.27" dy="0.8" layer="1"/>
 <smd name="P$10" x="-2.7" y="1.95" dx="1.27" dy="0.8" layer="1"/>
 </package>
+<package name="SOT-23-5">
+<smd name="P$1" x="0" y="1.9" dx="1.1" dy="0.6" layer="1"/>
+<smd name="P$2" x="0" y="0.95" dx="1.1" dy="0.6" layer="1"/>
+<smd name="P$3" x="0" y="0" dx="1.1" dy="0.6" layer="1"/>
+<smd name="P$4" x="2.6" y="0" dx="1.1" dy="0.6" layer="1"/>
+<smd name="P$5" x="2.6" y="1.9" dx="1.1" dy="0.6" layer="1"/>
+<wire x1="0.254" y1="2.54" x2="0.254" y2="-0.635" width="0.127" layer="49"/>
+<wire x1="0.254" y1="-0.635" x2="2.286" y2="-0.635" width="0.127" layer="49"/>
+<wire x1="2.286" y1="-0.635" x2="2.286" y2="2.54" width="0.127" layer="49"/>
+<wire x1="2.286" y1="2.54" x2="0.254" y2="2.54" width="0.127" layer="49"/>
+</package>
 </packages>
 <symbols>
 <symbol name="ACS711">
@@ -13361,6 +13372,19 @@ In this library you will find integrated circuits (ICs) that are directly involv
 <pin name="IP-" x="-5" y="7.5" length="middle"/>
 <pin name="IP+" x="-5" y="20" length="middle"/>
 </symbol>
+<symbol name="IMA198">
+<wire x1="0" y1="0" x2="0" y2="10.16" width="0.254" layer="94"/>
+<wire x1="0" y1="10.16" x2="15.24" y2="10.16" width="0.254" layer="94"/>
+<wire x1="15.24" y1="10.16" x2="15.24" y2="0" width="0.254" layer="94"/>
+<wire x1="15.24" y1="0" x2="0" y2="0" width="0.254" layer="94"/>
+<pin name="V+" x="-5.08" y="2.54" length="middle"/>
+<pin name="GND" x="-5.08" y="5.08" length="middle"/>
+<pin name="OUT" x="-5.08" y="7.62" length="middle"/>
+<pin name="VIN-" x="20.32" y="7.62" length="middle" rot="R180"/>
+<pin name="VIN+" x="20.32" y="2.54" length="middle" rot="R180"/>
+<text x="0" y="10.668" size="1.27" layer="94">&gt;NAME</text>
+<text x="0" y="-1.778" size="1.27" layer="94">&gt;VALUE</text>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="ACS711">
@@ -13376,6 +13400,25 @@ In this library you will find integrated circuits (ICs) that are directly involv
 <connect gate="G$1" pin="IP-" pad="P$9"/>
 <connect gate="G$1" pin="VCC" pad="P$8"/>
 <connect gate="G$1" pin="VIOUT" pad="P$7"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="IMA198">
+<gates>
+<gate name="G$1" symbol="IMA198" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOT-23-5">
+<connects>
+<connect gate="G$1" pin="GND" pad="P$2"/>
+<connect gate="G$1" pin="OUT" pad="P$1"/>
+<connect gate="G$1" pin="V+" pad="P$3"/>
+<connect gate="G$1" pin="VIN+" pad="P$4"/>
+<connect gate="G$1" pin="VIN-" pad="P$5"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -13783,6 +13826,12 @@ In this library you will find integrated circuits (ICs) that are directly involv
 <part name="U$27" library="IGVC-Discrete" deviceset="S10M-TP" device=""/>
 <part name="U$28" library="IGVC-Discrete" deviceset="S10M-TP" device=""/>
 <part name="P+20" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+24V" device=""/>
+<part name="U$29" library="IGVC-Sensor" deviceset="IMA198" device=""/>
+<part name="U$30" library="IGVC-Sensor" deviceset="IMA198" device=""/>
+<part name="GND13" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="P+5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
+<part name="P+7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
+<part name="GND14" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -14085,6 +14134,11 @@ In this library you will find integrated circuits (ICs) that are directly involv
 <wire x1="7.62" y1="78.74" x2="7.62" y2="120.65" width="0.1524" layer="103" style="shortdash"/>
 <text x="64.77" y="81.28" size="2.54" layer="103" font="vector">Sawtooth Motor Controller</text>
 <text x="64.77" y="96.52" size="1.27" layer="103">add level shifter for motor control</text>
+<wire x1="160.02" y1="162.56" x2="271.78" y2="162.56" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="271.78" y1="162.56" x2="271.78" y2="96.52" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="271.78" y1="96.52" x2="160.02" y2="96.52" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="160.02" y1="96.52" x2="160.02" y2="162.56" width="0.1524" layer="97" style="shortdash"/>
+<text x="228.6" y="99.06" size="1.778" layer="97" font="vector">Encoder Continuity Sensors</text>
 </plain>
 <instances>
 <instance part="FRAME2" gate="G$1" x="0" y="0"/>
@@ -14176,6 +14230,12 @@ In this library you will find integrated circuits (ICs) that are directly involv
 <instance part="GND16" gate="1" x="38.1" y="91.44">
 <attribute name="VALUE" x="35.56" y="88.9" size="1.778" layer="96"/>
 </instance>
+<instance part="U$29" gate="G$1" x="210.82" y="139.7"/>
+<instance part="U$30" gate="G$1" x="210.82" y="109.22"/>
+<instance part="GND13" gate="1" x="203.2" y="134.62"/>
+<instance part="P+5" gate="1" x="198.12" y="157.48"/>
+<instance part="P+7" gate="1" x="198.12" y="127"/>
+<instance part="GND14" gate="1" x="203.2" y="104.14"/>
 </instances>
 <busses>
 </busses>
@@ -14223,6 +14283,19 @@ In this library you will find integrated circuits (ICs) that are directly involv
 <pinref part="J6" gate="G$1" pin="1"/>
 <wire x1="38.1" y1="93.98" x2="38.1" y2="97.79" width="0.1524" layer="91"/>
 <wire x1="38.1" y1="97.79" x2="43.18" y2="97.79" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U$29" gate="G$1" pin="GND"/>
+<pinref part="GND13" gate="1" pin="GND"/>
+<wire x1="205.74" y1="144.78" x2="203.2" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="203.2" y1="144.78" x2="203.2" y2="137.16" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U$30" gate="G$1" pin="GND"/>
+<wire x1="205.74" y1="114.3" x2="203.2" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="203.2" y1="114.3" x2="203.2" y2="109.22" width="0.1524" layer="91"/>
+<pinref part="GND14" gate="1" pin="GND"/>
+<wire x1="203.2" y1="109.22" x2="203.2" y2="106.68" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
@@ -14336,12 +14409,62 @@ In this library you will find integrated circuits (ICs) that are directly involv
 <wire x1="236.22" y1="190.5" x2="243.84" y2="190.5" width="0.1524" layer="91"/>
 <label x="243.84" y="190.5" size="1.27" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U$29" gate="G$1" pin="V+"/>
+<pinref part="P+5" gate="1" pin="+5V"/>
+<wire x1="205.74" y1="142.24" x2="198.12" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="142.24" x2="198.12" y2="154.94" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U$30" gate="G$1" pin="V+"/>
+<pinref part="P+7" gate="1" pin="+5V"/>
+<wire x1="205.74" y1="111.76" x2="198.12" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="111.76" x2="198.12" y2="124.46" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U$29" gate="G$1" pin="VIN+"/>
+<wire x1="231.14" y1="142.24" x2="254" y2="142.24" width="0.1524" layer="91"/>
+<label x="238.76" y="142.24" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$30" gate="G$1" pin="VIN+"/>
+<wire x1="231.14" y1="111.76" x2="254" y2="111.76" width="0.1524" layer="91"/>
+<label x="238.76" y="111.76" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="MOTOR_CTRL" class="0">
 <segment>
 <pinref part="J6" gate="G$1" pin="2"/>
 <wire x1="43.18" y1="102.87" x2="35.56" y2="102.87" width="0.1524" layer="91"/>
 <label x="35.56" y="102.87" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="ENCODER1_SENSE" class="0">
+<segment>
+<pinref part="U$29" gate="G$1" pin="OUT"/>
+<wire x1="205.74" y1="147.32" x2="172.72" y2="147.32" width="0.1524" layer="91"/>
+<label x="172.72" y="147.32" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="ENCODER2_SENSE" class="0">
+<segment>
+<pinref part="U$30" gate="G$1" pin="OUT"/>
+<wire x1="205.74" y1="116.84" x2="172.72" y2="116.84" width="0.1524" layer="91"/>
+<label x="172.72" y="116.84" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="+5V_ENCODER1" class="0">
+<segment>
+<pinref part="U$29" gate="G$1" pin="VIN-"/>
+<wire x1="231.14" y1="147.32" x2="254" y2="147.32" width="0.1524" layer="91"/>
+<label x="238.76" y="147.32" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="+5V_ENDODER2" class="0">
+<segment>
+<pinref part="U$30" gate="G$1" pin="VIN-"/>
+<wire x1="231.14" y1="116.84" x2="254" y2="116.84" width="0.1524" layer="91"/>
+<label x="238.76" y="116.84" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>

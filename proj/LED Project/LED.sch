@@ -3145,20 +3145,9 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <wire x1="96.52" y1="-5.08" x2="96.52" y2="-7.62" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="R1" gate="G$1" pin="2"/>
-<pinref part="R2" gate="G$1" pin="1"/>
-<pinref part="D1" gate="G$1" pin="C"/>
-<wire x1="96.52" y1="7.62" x2="96.52" y2="5.08" width="0.1524" layer="91"/>
-<pinref part="GND1" gate="1" pin="GND"/>
-<wire x1="106.68" y1="-7.62" x2="106.68" y2="-5.08" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="R2" gate="G$1" pin="2"/>
 <pinref part="R3" gate="G$1" pin="1"/>
 <pinref part="GND2" gate="1" pin="GND"/>
 <wire x1="116.84" y1="-7.62" x2="116.84" y2="-5.08" width="0.1524" layer="91"/>
-<pinref part="D2" gate="G$1" pin="C"/>
-<wire x1="106.68" y1="10.16" x2="106.68" y2="5.08" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C2" gate="G$1" pin="1"/>
@@ -3197,6 +3186,11 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <wire x1="40.64" y1="7.62" x2="33.02" y2="7.62" width="0.1524" layer="91"/>
 <pinref part="GND6" gate="1" pin="GND"/>
 <wire x1="33.02" y1="7.62" x2="33.02" y2="2.54" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="R2" gate="G$1" pin="1"/>
+<pinref part="GND1" gate="1" pin="GND"/>
+<wire x1="106.68" y1="-5.08" x2="106.68" y2="-7.62" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -3411,6 +3405,20 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <wire x1="22.86" y1="60.96" x2="22.86" y2="55.88" width="0.1524" layer="91"/>
 <junction x="22.86" y="55.88"/>
 <label x="27.94" y="66.04" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$9" class="0">
+<segment>
+<pinref part="R1" gate="G$1" pin="2"/>
+<pinref part="D1" gate="G$1" pin="C"/>
+<wire x1="96.52" y1="7.62" x2="96.52" y2="5.08" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$12" class="0">
+<segment>
+<pinref part="D2" gate="G$1" pin="C"/>
+<pinref part="R2" gate="G$1" pin="2"/>
+<wire x1="106.68" y1="10.16" x2="106.68" y2="5.08" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

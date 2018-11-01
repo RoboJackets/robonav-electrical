@@ -1,12 +1,12 @@
 #include "mbed.h"
-#include "USBSerial.h"
+#include "EthernetInterface.h"
 #include <string>
 #include <stdlib.h>
 #define DEBUG false
 #define TIMEOUT true
+#define ECHO_SERVER_PORT 7
 
 // Hardware definition
-USBSerial serialNUC(0x1f00, 0x2012, 0x0001, true);
 Timer timer;
 Serial serial(p13, NC, 9600);
 
@@ -38,7 +38,9 @@ void bothMotorStop();
 // Serial Comm
 long lastCmdTime = 0;
 int lastLoopTime = 0;
-uint8_t buffer[128];
+char buffer[256];
+char returnbuffer[256];
+int retMsgLength = 0;
 
 // PID variable definition
 float desiredSpeedL = 0;
@@ -87,10 +89,20 @@ char commandType;
 int main() {
     wait(0.5);
     myLED1 = 1;
-
     // Set interrupt function
     encoderLeftPinA.rise(&tickLeft);;
     encoderRightPinA.rise(&tickRight);
+
+    printf("setting up ethernet interface...\r\n");
+    EthernetInterface eth;
+    char *ip = "192.168.1.20";
+    int res = eth.init(ip, 0, 0);
+    eth.connect(1000);
+    printf("result code is %d\r\n", res);
+    printf("Server IP Address is: %s\r\n", eth.getIPAddress());
+    TCPSocketServer server;
+    server.bind(ECHO_SERVER_PORT);
+    server.listen();
 
     timer.reset();
     timer.start();
@@ -100,8 +112,18 @@ int main() {
     // Ready to go
 
     while (true) {
-        if (serialNUC.readable()) {
-            serialNUC.scanf("%s", &buffer);
+        // if (serialNUC.readable()) {
+        //     serialNUC.scanf("%s", &buffer);
+        //     commandType = buffer[0];
+        printf("Wait for new connection...\r\n");
+        TCPSocketConnection client;
+        server.accept(client);
+        printf("accepted new client\r\n");
+        client.set_blocking(false, 1500); // Timeout after (1.5)s
+        printf("Connection from: %s\r\n", client.get_address());
+
+        while (true) {
+            int n = client.receive(buffer, sizeof(buffer));
             commandType = buffer[0];
 
             if (commandType == '$') {
@@ -109,16 +131,9 @@ int main() {
                 parseCommand((char *)buffer);
                 gotCommand = true;
                 lastCmdTime = timer.read_ms();
-                if (DEBUG) {
-                    serialNUC.printf("Debug: Motor cmd Recognized\r\n");
-                    serialNUC.printf("Echo Left %f, Right %f\r\n", desiredSpeedL, desiredSpeedR);
-                }
             }
             else if (commandType == '#') {
                 nonMotorCommand = true;
-                if (DEBUG) {
-                    serialNUC.printf("Debug: NonMotor cmd Recognized\r\n");
-                }
             }
 
             if (nonMotorCommand)
@@ -127,61 +142,76 @@ int main() {
                 {
                     case 'P':
                         parseNonMotor((char *)buffer);
-                        serialNUC.printf("#P%2.2f,%2.2f\r\n", P_l, P_r);
+                        retMsgLength = sprintf(returnbuffer, "#P%2.2f,%2.2f\r\n", P_l, P_r);
+                        client.send_all(returnbuffer, retMsgLength);
                         break;
                     case 'D':
                         parseNonMotor((char *)buffer);
-                        serialNUC.printf("#D%2.2f,%2.2f\r\n", D_l, D_r);
+                        retMsgLength = sprintf(returnbuffer, "#D%2.2f,%2.2f\r\n", D_l, D_r);
+                        client.send_all(returnbuffer, retMsgLength);
                         break;
                     case 'I':
                         parseNonMotor((char *)buffer);
-                        serialNUC.printf("#I%2.2f,%2.2f\r\n", I_l, I_r);
+                        retMsgLength = sprintf(returnbuffer, "#I%2.2f,%2.2f\r\n", I_l, I_r);
+                        client.send_all(returnbuffer, retMsgLength);
                         break;
                     default:
-                        serialNUC.printf("#EInvalid Command\r\n");
+                        retMsgLength = sprintf(returnbuffer, "#EInvalid Command\r\n");
+                        client.send_all(returnbuffer, retMsgLength);
                 }
                 nonMotorCommand = false;
             }
-        }
 
-        if (!TIMEOUT) {
-            if (timer.read_ms() - lastCmdTime > 500) {
-                serialNUC.printf("#ETIMEOUT\r\n");
+            if (!TIMEOUT) {
+                if (timer.read_ms() - lastCmdTime > 500) {
+                    retMsgLength = sprintf(returnbuffer, "#ETIMEOUT\r\n");
+                    client.send_all(returnbuffer, retMsgLength);
+                    // serialNUC.printf("#ETIMEOUT\r\n");
+                    desiredSpeedL = 0;
+                    desiredSpeedR = 0;
+                    PWM_L = 0;
+                    PWM_R = 0;
+                    bothMotorStop();
+                    break;
+                }
+            }
+
+            if (timer.read_ms() > pow(2, 20))
+            {
+                timer.reset();
+                lastCmdTime = 0;
+            }
+
+            // Estop logic
+            if (eStopStatus.read()) {
+                // If get 5V, since inverted, meaning disabled on motors
+                estop = 0;
                 desiredSpeedL = 0;
                 desiredSpeedR = 0;
                 PWM_L = 0;
                 PWM_R = 0;
                 bothMotorStop();
+                eStopLight = 1;
             }
-        }
+            else {
+                estop = 1;
+                eStopLight = 0;
+            }
 
-        if (timer.read_ms() > pow(2, 20))
-        {
-            timer.reset();
-            lastCmdTime = 0;
+            pid();
+            retMsgLength = sprintf(returnbuffer, "$%1.2f,%1.2f,%1.3f\r\n", actualSpeedL, actualSpeedR, dT_sec);
+            client.send_all(returnbuffer, retMsgLength);
+            // serialNUC.printf("$%1.2f,%1.2f,%1.3f\r\n", actualSpeedL, actualSpeedR, dT_sec);
+            wait_ms(10);
+            retMsgLength = sprintf(returnbuffer, "#V%2.2f,%d\r\n", battery.read() * 3.3 * 521 / 51, estop);
+            client.send_all(returnbuffer, retMsgLength);
+            // serialNUC.printf("#V%2.2f,%d\r\n", battery.read() * 3.3 * 521 / 51, estop);
+            wait_ms(10);
+            // memset(buffer);
+            // memset(returnbuffer);
+            if (n <= 0) break;
         }
-
-        // Estop logic
-        if (eStopStatus.read()) {
-            // If get 5V, since inverted, meaning disabled on motors
-            estop = 0;
-            desiredSpeedL = 0;
-            desiredSpeedR = 0;
-            PWM_L = 0;
-            PWM_R = 0;
-            bothMotorStop();
-            eStopLight = 1;
-        }
-        else {
-            estop = 1;
-            eStopLight = 0;
-        }
-
-        pid();
-        serialNUC.printf("$%1.2f,%1.2f,%1.3f\r\n", actualSpeedL, actualSpeedR, dT_sec);
-        wait_ms(13);
-        serialNUC.printf("#V%2.2f,%d\r\n", battery.read() * 3.3 * 521 / 51, estop);
-        wait_ms(13);
+        client.close();
 
     }
 }
@@ -189,7 +219,9 @@ int main() {
 void parseCommand(char *cmd) { 
     short index = 0;
     if (cmd[index++] != '$') {
-        serialNUC.printf("#EInvalid motor format $");
+        // retMsgLength = sprintf(returnbuffer, "#EInvalid motor format $");
+        // client.send_all(returnbuffer, retMsgLength);
+        // serialNUC.printf("#EInvalid motor format $");
         return;
     }
     desiredSpeedL = atof(&cmd[index++]);
@@ -198,7 +230,9 @@ void parseCommand(char *cmd) {
     if (index < 50) {
         desiredSpeedR = atof(&cmd[index]);
     } else {
-        serialNUC.printf("#EInvalid motor format ','");
+        // retMsgLength = sprintf(returnbuffer, "#EInvalid motor format ','");
+        // client.send_all(returnbuffer, retMsgLength);
+        // serialNUC.printf("#EInvalid motor format ','");
         return;
     }
 }
@@ -225,7 +259,10 @@ void parseNonMotor(char *cmd) {
         I_r = val2;
         break;
     default:
-        serialNUC.printf("#EFormat Error from mbed Parse Command");
+        // serialNUC.printf("#EFormat Error from mbed Parse Command");
+        // retMsgLength = sprintf(returnbuffer, "#EFormat Error from mbed Parse Command");
+        // client.send_all(returnbuffer, retMsgLength);
+        return;
     }
 }
 
@@ -303,7 +340,9 @@ void pid() {
     // setRightSpeed(desiredSpeedR / 2.17 * 255);
 
     if (DEBUG) {
-        serialNUC.printf("PWM_L: %d, PWM_R: %d\n", PWM_L, PWM_R);
+        // retMsgLength = sprintf(returnbuffer, "PWM_L: %d, PWM_R: %d\n", PWM_L, PWM_R);
+        // client.send_all(returnbuffer, retMsgLength);
+        // serialNUC.printf("PWM_L: %d, PWM_R: %d\n", PWM_L, PWM_R);
     }
 
     /*

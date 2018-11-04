@@ -38,7 +38,7 @@ void bothMotorStop();
 // Serial Comm
 long lastCmdTime = 0;
 int lastLoopTime = 0;
-char buffer[256];
+// char buffer[256];
 char returnbuffer[256];
 int retMsgLength = 0;
 
@@ -87,12 +87,6 @@ int estop = 1;
 char commandType;
 
 int main() {
-    wait(0.5);
-    myLED1 = 1;
-    // Set interrupt function
-    encoderLeftPinA.rise(&tickLeft);;
-    encoderRightPinA.rise(&tickRight);
-
     printf("setting up ethernet interface...\r\n");
     EthernetInterface eth;
     char *ip = "192.168.1.20";
@@ -104,35 +98,44 @@ int main() {
     server.bind(ECHO_SERVER_PORT);
     server.listen();
 
-    timer.reset();
-    timer.start();
+    myLED1 = 1;
+    // Set interrupt function
+    encoderLeftPinA.rise(&tickLeft);
+    encoderRightPinA.rise(&tickRight);
 
     wait(0.5);
     myLED1 = 0;
-    // Ready to go
 
-    while (true) {
-        // if (serialNUC.readable()) {
-        //     serialNUC.scanf("%s", &buffer);
-        //     commandType = buffer[0];
+    timer.reset();
+    timer.start();
+    
+    while (true)
+    {
         printf("Wait for new connection...\r\n");
         TCPSocketConnection client;
         server.accept(client);
         printf("accepted new client\r\n");
         client.set_blocking(false, 1500); // Timeout after (1.5)s
-        printf("Connection from: %s\r\n", client.get_address());
 
-        while (true) {
+        printf("Connection from: %s\r\n", client.get_address());
+        char buffer[256];
+        while (true)
+        {
             int n = client.receive(buffer, sizeof(buffer));
+            if (n <= 0)
+                break;
+
             commandType = buffer[0];
 
-            if (commandType == '$') {
+            if (commandType == '$')
+            {
                 // Give value to desiredSpeedL and desiredSpeedR
                 parseCommand((char *)buffer);
                 gotCommand = true;
                 lastCmdTime = timer.read_ms();
             }
-            else if (commandType == '#') {
+            else if (commandType == '#')
+            {
                 nonMotorCommand = true;
             }
 
@@ -140,30 +143,32 @@ int main() {
             {
                 switch (buffer[1])
                 {
-                    case 'P':
-                        parseNonMotor((char *)buffer);
-                        retMsgLength = sprintf(returnbuffer, "#P%2.2f,%2.2f\r\n", P_l, P_r);
-                        client.send_all(returnbuffer, retMsgLength);
-                        break;
-                    case 'D':
-                        parseNonMotor((char *)buffer);
-                        retMsgLength = sprintf(returnbuffer, "#D%2.2f,%2.2f\r\n", D_l, D_r);
-                        client.send_all(returnbuffer, retMsgLength);
-                        break;
-                    case 'I':
-                        parseNonMotor((char *)buffer);
-                        retMsgLength = sprintf(returnbuffer, "#I%2.2f,%2.2f\r\n", I_l, I_r);
-                        client.send_all(returnbuffer, retMsgLength);
-                        break;
-                    default:
-                        retMsgLength = sprintf(returnbuffer, "#EInvalid Command\r\n");
-                        client.send_all(returnbuffer, retMsgLength);
+                case 'P':
+                    parseNonMotor((char *)buffer);
+                    retMsgLength = sprintf(returnbuffer, "#P%2.2f,%2.2f\r\n", P_l, P_r);
+                    client.send_all(returnbuffer, retMsgLength);
+                    break;
+                case 'D':
+                    parseNonMotor((char *)buffer);
+                    retMsgLength = sprintf(returnbuffer, "#D%2.2f,%2.2f\r\n", D_l, D_r);
+                    client.send_all(returnbuffer, retMsgLength);
+                    break;
+                case 'I':
+                    parseNonMotor((char *)buffer);
+                    retMsgLength = sprintf(returnbuffer, "#I%2.2f,%2.2f\r\n", I_l, I_r);
+                    client.send_all(returnbuffer, retMsgLength);
+                    break;
+                default:
+                    retMsgLength = sprintf(returnbuffer, "#EInvalid Command\r\n");
+                    client.send_all(returnbuffer, retMsgLength);
                 }
                 nonMotorCommand = false;
             }
 
-            if (!TIMEOUT) {
-                if (timer.read_ms() - lastCmdTime > 500) {
+            if (!TIMEOUT)
+            {
+                if (timer.read_ms() - lastCmdTime > 500)
+                {
                     retMsgLength = sprintf(returnbuffer, "#ETIMEOUT\r\n");
                     client.send_all(returnbuffer, retMsgLength);
                     // serialNUC.printf("#ETIMEOUT\r\n");
@@ -183,7 +188,8 @@ int main() {
             }
 
             // Estop logic
-            if (eStopStatus.read()) {
+            if (eStopStatus.read())
+            {
                 // If get 5V, since inverted, meaning disabled on motors
                 estop = 0;
                 desiredSpeedL = 0;
@@ -193,7 +199,8 @@ int main() {
                 bothMotorStop();
                 eStopLight = 1;
             }
-            else {
+            else
+            {
                 estop = 1;
                 eStopLight = 0;
             }
@@ -201,18 +208,23 @@ int main() {
             pid();
             retMsgLength = sprintf(returnbuffer, "$%1.2f,%1.2f,%1.3f\r\n", actualSpeedL, actualSpeedR, dT_sec);
             client.send_all(returnbuffer, retMsgLength);
+            if (n <= 0)
+                break;
             // serialNUC.printf("$%1.2f,%1.2f,%1.3f\r\n", actualSpeedL, actualSpeedR, dT_sec);
             wait_ms(10);
             retMsgLength = sprintf(returnbuffer, "#V%2.2f,%d\r\n", battery.read() * 3.3 * 521 / 51, estop);
             client.send_all(returnbuffer, retMsgLength);
+            if (n <= 0)
+                break;
             // serialNUC.printf("#V%2.2f,%d\r\n", battery.read() * 3.3 * 521 / 51, estop);
             wait_ms(10);
-            // memset(buffer);
-            // memset(returnbuffer);
-            if (n <= 0) break;
-        }
-        client.close();
 
+            // Echo received message back to client
+            if (n <= 0)
+                break;
+        }
+
+        client.close();
     }
 }
 

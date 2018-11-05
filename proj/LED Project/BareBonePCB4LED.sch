@@ -3821,9 +3821,9 @@ Specifications:
 </classes>
 <parts>
 <part name="U1" library="SparkFun-IC-Microcontroller" library_urn="urn:adsk.eagle:library:525" deviceset="ATMEGA328P_MLF" device="MLF32" package3d_urn="urn:adsk.eagle:package:38946/1"/>
-<part name="BT1" library="SparkFun-Batteries" library_urn="urn:adsk.eagle:library:508" deviceset="BATTERY" device="-9V" package3d_urn="urn:adsk.eagle:package:37219/1"/>
-<part name="J2" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_03" device="" package3d_urn="urn:adsk.eagle:package:38063/1"/>
-<part name="J1" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_03" device="" package3d_urn="urn:adsk.eagle:package:38063/1"/>
+<part name="BAT" library="SparkFun-Batteries" library_urn="urn:adsk.eagle:library:508" deviceset="BATTERY" device="-9V" package3d_urn="urn:adsk.eagle:package:37219/1"/>
+<part name="NP1" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_03" device="" package3d_urn="urn:adsk.eagle:package:38063/1"/>
+<part name="NP2" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_03" device="" package3d_urn="urn:adsk.eagle:package:38063/1"/>
 <part name="J3" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="AVR_SPI_PROG_3X2" device="NS" package3d_urn="urn:adsk.eagle:package:38013/1"/>
 <part name="R1" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="470OHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="470"/>
 <part name="R2" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="470OHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="470"/>
@@ -3833,7 +3833,7 @@ Specifications:
 <part name="C1" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="0.22UF" device="-0603-25V-10%" package3d_urn="urn:adsk.eagle:package:37414/1" value="0.22uF"/>
 <part name="C2" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="0.22UF" device="-0603-25V-10%" package3d_urn="urn:adsk.eagle:package:37414/1" value="0.22uF"/>
 <part name="GND" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND2" device=""/>
-<part name="U2" library="SparkFun-IC-Power" library_urn="urn:adsk.eagle:library:526" deviceset="R-78E5.0-1.0" device="" package3d_urn="urn:adsk.eagle:package:39086/1"/>
+<part name="VR" library="SparkFun-IC-Power" library_urn="urn:adsk.eagle:library:526" deviceset="R-78E5.0-1.0" device="" package3d_urn="urn:adsk.eagle:package:39086/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -3841,9 +3841,9 @@ Specifications:
 </plain>
 <instances>
 <instance part="U1" gate="U$1" x="77.47" y="55.88"/>
-<instance part="BT1" gate="G$1" x="5.08" y="54.61" rot="R270"/>
-<instance part="J2" gate="J$1" x="91.44" y="91.44"/>
-<instance part="J1" gate="J$1" x="91.44" y="104.14"/>
+<instance part="BAT" gate="G$1" x="5.08" y="54.61" rot="R270"/>
+<instance part="NP1" gate="J$1" x="91.44" y="91.44"/>
+<instance part="NP2" gate="J$1" x="91.44" y="104.14"/>
 <instance part="J3" gate="G$1" x="137.16" y="50.8"/>
 <instance part="R1" gate="G$1" x="104.14" y="86.36" rot="R90"/>
 <instance part="R2" gate="G$1" x="111.76" y="88.9" rot="R90"/>
@@ -3853,7 +3853,7 @@ Specifications:
 <instance part="C1" gate="G$1" x="27.94" y="43.18"/>
 <instance part="C2" gate="G$1" x="43.18" y="43.18"/>
 <instance part="GND" gate="G$1" x="5.08" y="43.18"/>
-<instance part="U2" gate="G$1" x="5.08" y="81.28" rot="R270"/>
+<instance part="VR" gate="G$1" x="5.08" y="81.28" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -3893,15 +3893,25 @@ Specifications:
 <label x="12.7" y="88.9" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="BT1" gate="G$1" pin="-"/>
+<pinref part="BAT" gate="G$1" pin="-"/>
 <wire x1="5.08" y1="49.53" x2="5.08" y2="45.72" width="0.1524" layer="91"/>
 <pinref part="GND" gate="G$1" pin="3.3V"/>
 <label x="7.62" y="48.26" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U2" gate="G$1" pin="GND"/>
+<pinref part="VR" gate="G$1" pin="GND"/>
 <wire x1="-2.54" y1="81.28" x2="-7.62" y2="81.28" width="0.1524" layer="91"/>
 <label x="-10.16" y="81.28" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="NP1" gate="J$1" pin="1"/>
+<wire x1="99.06" y1="88.9" x2="101.6" y2="88.9" width="0.1524" layer="91"/>
+<label x="99.06" y="88.9" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="NP2" gate="J$1" pin="1"/>
+<wire x1="99.06" y1="101.6" x2="101.6" y2="101.6" width="0.1524" layer="91"/>
+<label x="99.06" y="101.6" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -3921,59 +3931,34 @@ Specifications:
 <label x="149.86" y="53.34" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U2" gate="G$1" pin="IN"/>
+<pinref part="VR" gate="G$1" pin="IN"/>
 <wire x1="5.08" y1="88.9" x2="5.08" y2="93.98" width="0.1524" layer="91"/>
 <label x="2.54" y="93.98" size="1.778" layer="95"/>
 </segment>
-</net>
-<net name="N$1" class="0">
 <segment>
-<pinref part="U1" gate="U$1" pin="PC0(ADC0)"/>
-<wire x1="102.87" y1="81.28" x2="102.87" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="102.87" y1="88.9" x2="99.06" y2="88.9" width="0.1524" layer="91"/>
-<pinref part="J2" gate="J$1" pin="1"/>
+<pinref part="NP1" gate="J$1" pin="3"/>
+<wire x1="99.06" y1="93.98" x2="101.6" y2="93.98" width="0.1524" layer="91"/>
+<label x="99.06" y="93.98" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="NP2" gate="J$1" pin="3"/>
+<wire x1="99.06" y1="106.68" x2="101.6" y2="106.68" width="0.1524" layer="91"/>
+<label x="99.06" y="106.68" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$2" class="0">
 <segment>
 <wire x1="104.14" y1="91.44" x2="99.06" y2="91.44" width="0.1524" layer="91"/>
-<pinref part="J2" gate="J$1" pin="2"/>
+<pinref part="NP1" gate="J$1" pin="2"/>
 <pinref part="R1" gate="G$1" pin="2"/>
-</segment>
-</net>
-<net name="N$3" class="0">
-<segment>
-<pinref part="U1" gate="U$1" pin="PC2(ADC2)"/>
-<wire x1="102.87" y1="76.2" x2="106.68" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="106.68" y1="76.2" x2="106.68" y2="93.98" width="0.1524" layer="91"/>
-<pinref part="J2" gate="J$1" pin="3"/>
-<wire x1="106.68" y1="93.98" x2="99.06" y2="93.98" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$4" class="0">
-<segment>
-<pinref part="U1" gate="U$1" pin="PC3(ADC3)"/>
-<wire x1="102.87" y1="73.66" x2="109.22" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="109.22" y1="73.66" x2="109.22" y2="101.6" width="0.1524" layer="91"/>
-<pinref part="J1" gate="J$1" pin="1"/>
-<wire x1="109.22" y1="101.6" x2="99.06" y2="101.6" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$5" class="0">
 <segment>
-<pinref part="J1" gate="J$1" pin="2"/>
+<pinref part="NP2" gate="J$1" pin="2"/>
 <wire x1="99.06" y1="104.14" x2="111.76" y2="104.14" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="2"/>
 <wire x1="111.76" y1="93.98" x2="111.76" y2="104.14" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$6" class="0">
-<segment>
-<pinref part="U1" gate="U$1" pin="PC5(ADC5/SCL)"/>
-<wire x1="102.87" y1="68.58" x2="114.3" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="114.3" y1="68.58" x2="114.3" y2="106.68" width="0.1524" layer="91"/>
-<pinref part="J1" gate="J$1" pin="3"/>
-<wire x1="114.3" y1="106.68" x2="99.06" y2="106.68" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="MISO" class="0">
@@ -4092,19 +4077,26 @@ Specifications:
 <wire x1="5.08" y1="63.5" x2="12.7" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="D1" gate="G$1" pin="A"/>
 <wire x1="12.7" y1="66.04" x2="12.7" y2="63.5" width="0.1524" layer="91"/>
-<pinref part="BT1" gate="G$1" pin="+"/>
+<pinref part="BAT" gate="G$1" pin="+"/>
 <wire x1="5.08" y1="59.69" x2="5.08" y2="63.5" width="0.1524" layer="91"/>
 <junction x="5.08" y="63.5"/>
-<pinref part="U2" gate="G$1" pin="OUT"/>
+<pinref part="VR" gate="G$1" pin="OUT"/>
 </segment>
 </net>
 </nets>
 </sheet>
 </sheets>
 <errors>
+<approved hash="102,1,5.08,45.72,3.3V,GND,,,,"/>
+<approved hash="104,1,5.08,49.53,BT1,-,GND,,,"/>
+<approved hash="104,1,5.08,59.69,BT1,+,9V,,,"/>
+<approved hash="106,1,102.87,58.42,RX,,,,,"/>
+<approved hash="106,1,102.87,55.88,TX,,,,,"/>
 <approved hash="113,1,78.74,53.6677,U1,,,,,"/>
-<approved hash="113,1,95.8427,92.8726,J2,,,,,"/>
-<approved hash="113,1,95.8427,105.573,J1,,,,,"/>
+<approved hash="113,1,6.48208,54.61,BT1,,,,,"/>
+<approved hash="113,1,95.8427,92.8421,J2,,,,,"/>
+<approved hash="113,1,95.8427,105.542,J1,,,,,"/>
+<approved hash="115,1,52.705,81.28,RST,,,,,"/>
 </errors>
 </schematic>
 </drawing>

@@ -942,11 +942,19 @@ design rules under a new name.</description>
 <vertex x="106.68" y="1.27"/>
 <vertex x="50.8" y="1.27"/>
 </polygon>
+<wire x1="70.04" y1="17.53" x2="67.441" y2="17.53" width="0.35" layer="1"/>
+<wire x1="67.441" y1="17.53" x2="67.437" y2="17.526" width="0.35" layer="1"/>
+<via x="67.437" y="17.526" extent="1-16" drill="0.35"/>
+<wire x1="62.715" y1="25.4" x2="64.77" y2="25.4" width="0.35" layer="1"/>
+<via x="64.77" y="25.4" extent="1-16" drill="0.35"/>
+<wire x1="69.43" y1="3.81" x2="69.43" y2="5.041" width="0.35" layer="1"/>
+<wire x1="69.43" y1="5.041" x2="70.104" y2="5.715" width="0.35" layer="1"/>
+<wire x1="70.104" y1="5.715" x2="70.358" y2="5.715" width="0.35" layer="1"/>
+<via x="70.358" y="5.715" extent="1-16" drill="0.35"/>
+<wire x1="71.54" y1="3.81" x2="71.54" y2="4.914" width="0.35" layer="1"/>
+<wire x1="70.739" y1="5.715" x2="70.358" y2="5.715" width="0.35" layer="1"/>
+<wire x1="71.54" y1="4.914" x2="70.739" y2="5.715" width="0.35" layer="1"/>
 <wire x1="70.04" y1="17.53" x2="70.04" y2="18.53" width="0" layer="19" extent="1-1"/>
-<wire x1="62.23" y1="17.78" x2="70.04" y2="17.53" width="0" layer="19" extent="1-1"/>
-<wire x1="62.715" y1="25.4" x2="62.23" y2="17.78" width="0" layer="19" extent="1-1"/>
-<wire x1="69.43" y1="3.81" x2="70.04" y2="17.53" width="0" layer="19" extent="1-1"/>
-<wire x1="71.54" y1="3.81" x2="69.43" y2="3.81" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="VCC">
 <contactref element="U1" pad="4"/>
@@ -963,9 +971,29 @@ design rules under a new name.</description>
 </polygon>
 <wire x1="70.04" y1="17.03" x2="69.354" y2="17.03" width="0.3048" layer="1"/>
 <wire x1="69.354" y1="17.03" x2="69.342" y2="17.018" width="0.3048" layer="1"/>
-<wire x1="70.04" y1="18.03" x2="70.036" y2="18.034" width="0.3048" layer="1"/>
-<wire x1="70.036" y1="18.034" x2="69.342" y2="18.034" width="0.3048" layer="1"/>
-<wire x1="78.74" y1="11.43" x2="70.04" y2="17.03" width="0" layer="19" extent="1-1"/>
+<wire x1="78.74" y1="11.43" x2="76.2" y2="13.97" width="0.1524" layer="1"/>
+<via x="76.2" y="13.97" extent="1-16" drill="0.35"/>
+<wire x1="76.2" y1="13.97" x2="71.12" y2="13.97" width="0.1524" layer="16"/>
+<via x="71.12" y="13.97" extent="1-16" drill="0.35"/>
+<wire x1="71.12" y1="13.97" x2="70.04" y2="15.05" width="0.35" layer="1"/>
+<wire x1="74.1174" y1="3.1743875" x2="73.9256125" y2="2.9826" width="0.35" layer="1"/>
+<wire x1="70.04" y1="17.0276" x2="70.0198" y2="17.0074" width="0.35" layer="1"/>
+<wire x1="70.04" y1="15.05" x2="70.04" y2="13.02561875" width="0.35" layer="1"/>
+<wire x1="73.9256125" y1="2.9826" x2="67.0443875" y2="2.9826" width="0.35" layer="1"/>
+<wire x1="67.0443875" y1="2.9826" x2="66.1571" y2="3.8698875" width="0.35" layer="1"/>
+<wire x1="66.1571" y1="3.8698875" x2="66.1571" y2="13.71371875" width="0.35" layer="1"/>
+<wire x1="66.1571" y1="13.71371875" x2="69.45078125" y2="17.0074" width="0.35" layer="1"/>
+<wire x1="69.45078125" y1="17.0074" x2="70.0198" y2="17.0074" width="0.35" layer="1"/>
+<wire x1="70.04" y1="13.02561875" x2="74.1174" y2="8.94821875" width="0.35" layer="1"/>
+<wire x1="74.1174" y1="8.94821875" x2="74.1174" y2="3.1743875" width="0.35" layer="1"/>
+<wire x1="70.04" y1="17.03" x2="68.719" y2="17.03" width="0.35" layer="1"/>
+<wire x1="68.719" y1="17.03" x2="68.707" y2="17.018" width="0.35" layer="1"/>
+<wire x1="69.85" y1="18.034" x2="69.342" y2="18.034" width="0.35" layer="1"/>
+<wire x1="69.85" y1="18.034" x2="70.036" y2="18.034" width="0.35" layer="1"/>
+<wire x1="70.036" y1="18.034" x2="70.0376" y2="18.0324" width="0.35" layer="1"/>
+<wire x1="70.0376" y1="18.0324" x2="70.04" y2="18.0324" width="0.35" layer="1"/>
+<wire x1="70.036" y1="18.034" x2="70.04" y2="18.03" width="0" layer="19" extent="1-1"/>
+<wire x1="70.04" y1="17.0276" x2="70.04" y2="18.03" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$2">
 <contactref element="NP1" pad="2"/>
@@ -1084,6 +1112,12 @@ design rules under a new name.</description>
 <mfgpreviewcolor name="coppercolor" color="0xFFFFBF00"/>
 <mfgpreviewcolor name="substratecolor" color="0xFF786E46"/>
 </mfgpreviewcolors>
+<errors>
+<approved hash="21,19,f6d2f4d0f4d0f6d2"/>
+<approved hash="21,19,f21ef01cf01cf21e"/>
+<approved hash="21,19,f8fbf8fbfaf9f8f9"/>
+<approved hash="21,19,f6d1f4d3f4d3f6d1"/>
+</errors>
 </board>
 </drawing>
 <compatibility>

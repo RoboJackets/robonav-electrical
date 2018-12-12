@@ -1,6 +1,7 @@
 #include "mbed.h"
 #include "EthernetInterface.h"
 #include <string>
+#include <iostream>
 #include <stdlib.h>
 #define DEBUG false
 #define TIMEOUT true
@@ -87,13 +88,15 @@ int estop = 1;
 char commandType;
 
 int main() {
-    printf("setting up ethernet interface...\r\n");
+    printf("Setting up ethernet interface...\r\n");
     EthernetInterface eth;
-    char *ip = "192.168.1.20";
-    int res = eth.init(ip, 0, 0);
-    eth.connect(1000);
+    char *ip = "192.168.1.20"; // server ip address
+    int res = eth.init(ip, 0, 0); // initialize the interface
+    eth.connect(1000); // connect with a timoeout of 1s
     printf("result code is %d\r\n", res);
     printf("Server IP Address is: %s\r\n", eth.getIPAddress());
+
+    // Instantiate a TCP Socket Server and bind it to the specified port
     TCPSocketServer server;
     server.bind(ECHO_SERVER_PORT);
     server.listen();
@@ -108,9 +111,10 @@ int main() {
 
     timer.reset();
     timer.start();
-    
+
     while (true)
     {
+        // wait for a new TCP Connection
         printf("Wait for new connection...\r\n");
         TCPSocketConnection client;
         server.accept(client);
@@ -121,15 +125,33 @@ int main() {
         char buffer[256];
         while (true)
         {
-            int n = client.receive(buffer, sizeof(buffer));
-            if (n <= 0)
-                break;
+            int n = client.receive(buffer, sizeof(buffer)-1);
 
+            if (n <= 0)
+            {
+              printf("Received empty buffer: [");
+              printf(buffer);
+              printf("] -- ");
+              printf("bytes Recieved: ");
+              std::cout << n << std::endl;
+            }
+            else
+            {
+              printf("Received Command of size: ");
+              std::cout << n << " bytes" << std::endl;
+            }
+            /**
+            Perform action depending on message received.
+
+            Command Types (denoted by first letter of buffer):
+            '$' -> motor command
+            '#' -> set PID values
+            */
             commandType = buffer[0];
 
             if (commandType == '$')
             {
-                // Give value to desiredSpeedL and desiredSpeedR
+                // Execute motor command
                 parseCommand((char *)buffer);
                 gotCommand = true;
                 lastCmdTime = timer.read_ms();
@@ -145,41 +167,41 @@ int main() {
                 {
                 case 'P':
                     parseNonMotor((char *)buffer);
-                    retMsgLength = sprintf(returnbuffer, "#P%2.2f,%2.2f\r\n", P_l, P_r);
+                    retMsgLength = sprintf(returnbuffer, "#P%2.2f,%2.2f\n", P_l, P_r);
                     client.send_all(returnbuffer, retMsgLength);
                     break;
                 case 'D':
                     parseNonMotor((char *)buffer);
-                    retMsgLength = sprintf(returnbuffer, "#D%2.2f,%2.2f\r\n", D_l, D_r);
+                    retMsgLength = sprintf(returnbuffer, "#D%2.2f,%2.2f\n", D_l, D_r);
                     client.send_all(returnbuffer, retMsgLength);
                     break;
                 case 'I':
                     parseNonMotor((char *)buffer);
-                    retMsgLength = sprintf(returnbuffer, "#I%2.2f,%2.2f\r\n", I_l, I_r);
+                    retMsgLength = sprintf(returnbuffer, "#I%2.2f,%2.2f\n", I_l, I_r);
                     client.send_all(returnbuffer, retMsgLength);
                     break;
                 default:
-                    retMsgLength = sprintf(returnbuffer, "#EInvalid Command\r\n");
+                    retMsgLength = sprintf(returnbuffer, "#EInvalid Command\n");
                     client.send_all(returnbuffer, retMsgLength);
                 }
                 nonMotorCommand = false;
             }
 
-            if (!TIMEOUT)
-            {
-                if (timer.read_ms() - lastCmdTime > 500)
-                {
-                    retMsgLength = sprintf(returnbuffer, "#ETIMEOUT\r\n");
-                    client.send_all(returnbuffer, retMsgLength);
-                    // serialNUC.printf("#ETIMEOUT\r\n");
-                    desiredSpeedL = 0;
-                    desiredSpeedR = 0;
-                    PWM_L = 0;
-                    PWM_R = 0;
-                    bothMotorStop();
-                    break;
-                }
-            }
+            // if (!TIMEOUT)
+            // {
+            //     if (timer.read_ms() - lastCmdTime > 500)
+            //     {
+            //         retMsgLength = sprintf(returnbuffer, "#ETIMEOUT\r\n");
+            //         client.send_all(returnbuffer, retMsgLength);
+            //         // serialNUC.printf("#ETIMEOUT\r\n");
+            //         desiredSpeedL = 0;
+            //         desiredSpeedR = 0;
+            //         PWM_L = 0;
+            //         PWM_R = 0;
+            //         bothMotorStop();
+            //         break;
+            //     }
+            // }
 
             if (timer.read_ms() > pow(2, 20))
             {
@@ -208,27 +230,29 @@ int main() {
             pid();
             retMsgLength = sprintf(returnbuffer, "$%1.2f,%1.2f,%1.3f\r\n", actualSpeedL, actualSpeedR, dT_sec);
             client.send_all(returnbuffer, retMsgLength);
-            if (n <= 0)
-                break;
+            // if (n <= 0)
+            //     break;
             // serialNUC.printf("$%1.2f,%1.2f,%1.3f\r\n", actualSpeedL, actualSpeedR, dT_sec);
             wait_ms(10);
             retMsgLength = sprintf(returnbuffer, "#V%2.2f,%d\r\n", battery.read() * 3.3 * 521 / 51, estop);
             client.send_all(returnbuffer, retMsgLength);
-            if (n <= 0)
-                break;
+            // if (n <= 0)
+            //     break;
             // serialNUC.printf("#V%2.2f,%d\r\n", battery.read() * 3.3 * 521 / 51, estop);
             wait_ms(10);
 
             // Echo received message back to client
-            if (n <= 0)
-                break;
+            // if (n <= 0)
+            //     break;
+
+            memset(buffer, 0, sizeof buffer);
         }
 
-        client.close();
+        // client.close();
     }
 }
 
-void parseCommand(char *cmd) { 
+void parseCommand(char *cmd) {
     short index = 0;
     if (cmd[index++] != '$') {
         // retMsgLength = sprintf(returnbuffer, "#EInvalid motor format $");

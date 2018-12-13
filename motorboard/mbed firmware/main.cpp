@@ -1,11 +1,18 @@
 #include "mbed.h"
 #include "EthernetInterface.h"
+
 #include <string>
+#include <cstring>
 #include <iostream>
 #include <stdlib.h>
-#define DEBUG false
+
+#define DEBUG true
+
 #define TIMEOUT true
+#define TIMEOUT_MS 500
+
 #define ECHO_SERVER_PORT 7
+#define BUFFER_SIZE 300
 
 // Hardware definition
 Timer timer;
@@ -31,7 +38,7 @@ void parseCommand(char *);
 void tickLeft();
 void tickRight();
 void pid();
-void parseNonMotor(char *);
+std::string parseNonMotor(char *);
 void setLeftSpeed(int);
 void setRightSpeed(int);
 void bothMotorStop();
@@ -40,7 +47,7 @@ void bothMotorStop();
 long lastCmdTime = 0;
 int lastLoopTime = 0;
 // char buffer[256];
-char returnbuffer[256];
+char returnbuffer[BUFFER_SIZE];
 int retMsgLength = 0;
 
 // PID variable definition
@@ -119,90 +126,54 @@ int main() {
         TCPSocketConnection client;
         server.accept(client);
         printf("accepted new client\r\n");
-        client.set_blocking(false, 1500); // Timeout after (1.5)s
+        client.set_blocking(false, TIMEOUT_MS); // Timeout after (1.5)s
 
         printf("Connection from: %s\r\n", client.get_address());
-        char buffer[256];
+        char buffer[BUFFER_SIZE];
         while (true)
         {
             int n = client.receive(buffer, sizeof(buffer)-1);
 
             if (n <= 0)
             {
-              printf("Received empty buffer: [");
-              printf(buffer);
-              printf("] -- ");
-              printf("bytes Recieved: ");
-              std::cout << n << std::endl;
+              if (DEBUG)
+              {
+                  printf("Received empty buffer: [");
+                  printf(buffer);
+                  printf("] -- ");
+                  printf("bytes Recieved: %d", n);
+              }
             }
             else
             {
-              printf("Received Command of size: ");
-              std::cout << n << " bytes" << std::endl;
+              printf("Received Command of size: %d", n);
             }
+
+            commandType = buffer[0];
             /**
             Perform action depending on message received.
 
             Command Types (denoted by first letter of buffer):
             '$' -> motor command
             '#' -> set PID values
+            '0' -> empty buffer read (only useful for debugging)
             */
-            commandType = buffer[0];
 
-            if (commandType == '$')
+            if (DEBUG) { printf(" -- Type: %c\r\n", ((n > 0) ? commandType : '0')); }
+
+            if (commandType == '$') // motor command
             {
-                // Execute motor command
                 parseCommand((char *)buffer);
                 gotCommand = true;
                 lastCmdTime = timer.read_ms();
             }
-            else if (commandType == '#')
+            else if (commandType == '#') // PID assignment
             {
-                nonMotorCommand = true;
+                std::string retString = parseNonMotor((char *)buffer);
+                client.send_all(const_cast<char*>(retString.c_str()), strlen(const_cast<char*>(retString.c_str())));
             }
 
-            if (nonMotorCommand)
-            {
-                switch (buffer[1])
-                {
-                case 'P':
-                    parseNonMotor((char *)buffer);
-                    retMsgLength = sprintf(returnbuffer, "#P%2.2f,%2.2f\n", P_l, P_r);
-                    client.send_all(returnbuffer, retMsgLength);
-                    break;
-                case 'D':
-                    parseNonMotor((char *)buffer);
-                    retMsgLength = sprintf(returnbuffer, "#D%2.2f,%2.2f\n", D_l, D_r);
-                    client.send_all(returnbuffer, retMsgLength);
-                    break;
-                case 'I':
-                    parseNonMotor((char *)buffer);
-                    retMsgLength = sprintf(returnbuffer, "#I%2.2f,%2.2f\n", I_l, I_r);
-                    client.send_all(returnbuffer, retMsgLength);
-                    break;
-                default:
-                    retMsgLength = sprintf(returnbuffer, "#EInvalid Command\n");
-                    client.send_all(returnbuffer, retMsgLength);
-                }
-                nonMotorCommand = false;
-            }
-
-            // if (!TIMEOUT)
-            // {
-            //     if (timer.read_ms() - lastCmdTime > 500)
-            //     {
-            //         retMsgLength = sprintf(returnbuffer, "#ETIMEOUT\r\n");
-            //         client.send_all(returnbuffer, retMsgLength);
-            //         // serialNUC.printf("#ETIMEOUT\r\n");
-            //         desiredSpeedL = 0;
-            //         desiredSpeedR = 0;
-            //         PWM_L = 0;
-            //         PWM_R = 0;
-            //         bothMotorStop();
-            //         break;
-            //     }
-            // }
-
+            // reset timer
             if (timer.read_ms() > pow(2, 20))
             {
                 timer.reset();
@@ -228,24 +199,21 @@ int main() {
             }
 
             pid();
+
             retMsgLength = sprintf(returnbuffer, "$%1.2f,%1.2f,%1.3f\r\n", actualSpeedL, actualSpeedR, dT_sec);
             client.send_all(returnbuffer, retMsgLength);
-            // if (n <= 0)
-            //     break;
-            // serialNUC.printf("$%1.2f,%1.2f,%1.3f\r\n", actualSpeedL, actualSpeedR, dT_sec);
+            if (DEBUG) { printf("Time Elapsed: %1.3f\r\n", dT_sec); }
+            if (DEBUG) { printf("Actual Speed: L: %1.2f R: %1.2f\r\n", actualSpeedL, actualSpeedR); }
+            if (DEBUG) { printf("Desired Speed: L: %1.2f R: %1.2f\r\n", desiredSpeedL, desiredSpeedR); }
             wait_ms(10);
+
             retMsgLength = sprintf(returnbuffer, "#V%2.2f,%d\r\n", battery.read() * 3.3 * 521 / 51, estop);
             client.send_all(returnbuffer, retMsgLength);
-            // if (n <= 0)
-            //     break;
-            // serialNUC.printf("#V%2.2f,%d\r\n", battery.read() * 3.3 * 521 / 51, estop);
+            if (DEBUG) { printf("Battery,ESTOP: "); printf(returnbuffer); }
             wait_ms(10);
 
-            // Echo received message back to client
-            // if (n <= 0)
-            //     break;
-
-            memset(buffer, 0, sizeof buffer);
+            // reset the buffer to receive the next packet
+            memset(buffer, 0, sizeof(buffer));
         }
 
         // client.close();
@@ -273,13 +241,16 @@ void parseCommand(char *cmd) {
     }
 }
 
-void parseNonMotor(char *cmd) {
+std::string parseNonMotor(char *cmd) {
     short index = 1;
     char preceeding = cmd[index++];
+
     float val1 = atof(&cmd[2]);
     while (cmd[index++] != ',' && index < 30) {}
-
     float val2 = atof(&cmd[index]);
+
+    sprintf(returnbuffer, "#%c%2.2f,%2.2f\n", preceeding, val1, val2);
+    std::string retString(returnbuffer);
 
     switch (preceeding) {
     case 'P':
@@ -295,11 +266,10 @@ void parseNonMotor(char *cmd) {
         I_r = val2;
         break;
     default:
-        // serialNUC.printf("#EFormat Error from mbed Parse Command");
-        // retMsgLength = sprintf(returnbuffer, "#EFormat Error from mbed Parse Command");
-        // client.send_all(returnbuffer, retMsgLength);
-        return;
+        break;
     }
+
+    return retString;
 }
 
 void tickRight() {
@@ -366,19 +336,12 @@ void pid() {
         PWM_R = 0;
     }
 
-    // PWM_L = 255;
-    // PWM_R = 255;
-
     setLeftSpeed(PWM_L);
     setRightSpeed(PWM_R);
 
-    // setLeftSpeed(desiredSpeedL / 2.17 * 255);
-    // setRightSpeed(desiredSpeedR / 2.17 * 255);
-
     if (DEBUG) {
-        // retMsgLength = sprintf(returnbuffer, "PWM_L: %d, PWM_R: %d\n", PWM_L, PWM_R);
-        // client.send_all(returnbuffer, retMsgLength);
-        // serialNUC.printf("PWM_L: %d, PWM_R: %d\n", PWM_L, PWM_R);
+        sprintf(returnbuffer, "PWM_L: %d, PWM_R: %d\n", PWM_L, PWM_R);
+        printf(returnbuffer);
     }
 
     /*
@@ -390,7 +353,7 @@ void pid() {
     lastErrorL = ErrorL;
     lastErrorR = ErrorR;
 
-    wait_ms(20);
+    wait_ms(10);
 }
 
 

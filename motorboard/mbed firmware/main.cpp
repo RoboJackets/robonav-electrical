@@ -1,5 +1,5 @@
 #include "mbed.h"
-#include "EthernetInterface.h"
+#include "EthernetInterface.h" // mbed ethernet interface library
 
 #include <string>
 #include <cstring>
@@ -9,7 +9,7 @@
 #define DEBUG true
 
 #define TIMEOUT true
-#define TIMEOUT_MS 500
+#define TIMEOUT_MS 150
 
 #define ECHO_SERVER_PORT 7
 #define BUFFER_SIZE 300
@@ -99,7 +99,7 @@ int main() {
     EthernetInterface eth;
     char *ip = "192.168.1.20"; // server ip address
     int res = eth.init(ip, 0, 0); // initialize the interface
-    eth.connect(1000); // connect with a timoeout of 1s
+    eth.connect(1000); // bring the interface up with a timeout of 1s
     printf("result code is %d\r\n", res);
     printf("Server IP Address is: %s\r\n", eth.getIPAddress());
 
@@ -109,6 +109,7 @@ int main() {
     server.listen();
 
     myLED1 = 1;
+
     // Set interrupt function
     encoderLeftPinA.rise(&tickLeft);
     encoderRightPinA.rise(&tickRight);
@@ -126,37 +127,44 @@ int main() {
         TCPSocketConnection client;
         server.accept(client);
         printf("accepted new client\r\n");
-        client.set_blocking(false, TIMEOUT_MS); // Timeout after (1.5)s
+        client.set_blocking(false, TIMEOUT_MS); // Timeout after TIMEOUT_MS
 
         printf("Connection from: %s\r\n", client.get_address());
+
+        // buffer to be received from client. Must be cleared after each loop
+        // or bad things happen!
         char buffer[BUFFER_SIZE];
         while (true)
         {
+            // read the buffer. n is the number of bytes in the buffer
             int n = client.receive(buffer, sizeof(buffer)-1);
 
+            // buffer is empty (client did not write to it)
             if (n <= 0)
             {
-              if (DEBUG)
-              {
-                  printf("Received empty buffer: [");
-                  printf(buffer);
-                  printf("] -- ");
-                  printf("bytes Recieved: %d", n);
-              }
+                commandType = 'X';
+
+                if (DEBUG)
+                {
+                    printf("Received empty buffer: [");
+                    printf(buffer);
+                    printf("] -- ");
+                    printf("bytes Recieved: %d", n);
+                }
             }
             else
             {
-              printf("Received Command of size: %d", n);
+                commandType = buffer[0];
+                printf("Received Command of size: %d", n);
             }
 
-            commandType = buffer[0];
             /**
             Perform action depending on message received.
 
             Command Types (denoted by first letter of buffer):
             '$' -> motor command
             '#' -> set PID values
-            '0' -> empty buffer read (only useful for debugging)
+            'X' -> empty buffer read (only useful for debugging)
             */
 
             if (DEBUG) { printf(" -- Type: %c\r\n", ((n > 0) ? commandType : '0')); }
@@ -169,6 +177,9 @@ int main() {
             }
             else if (commandType == '#') // PID assignment
             {
+                // assign PID values and return string containing the values
+                // assigned. This is used by the client to validate that the PID
+                // values were received.
                 std::string retString = parseNonMotor((char *)buffer);
                 client.send_all(const_cast<char*>(retString.c_str()), strlen(const_cast<char*>(retString.c_str())));
             }
@@ -200,13 +211,14 @@ int main() {
 
             pid();
 
+            // send return message containing the actual motor speeds and elapsed time
             retMsgLength = sprintf(returnbuffer, "$%1.2f,%1.2f,%1.3f\r\n", actualSpeedL, actualSpeedR, dT_sec);
             client.send_all(returnbuffer, retMsgLength);
             if (DEBUG) { printf("Time Elapsed: %1.3f\r\n", dT_sec); }
             if (DEBUG) { printf("Actual Speed: L: %1.2f R: %1.2f\r\n", actualSpeedL, actualSpeedR); }
             if (DEBUG) { printf("Desired Speed: L: %1.2f R: %1.2f\r\n", desiredSpeedL, desiredSpeedR); }
             wait_ms(10);
-
+            // send return message containing the battery voltage and estop status
             retMsgLength = sprintf(returnbuffer, "#V%2.2f,%d\r\n", battery.read() * 3.3 * 521 / 51, estop);
             client.send_all(returnbuffer, retMsgLength);
             if (DEBUG) { printf("Battery,ESTOP: "); printf(returnbuffer); }

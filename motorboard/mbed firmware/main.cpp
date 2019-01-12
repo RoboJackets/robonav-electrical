@@ -9,7 +9,7 @@
 #define DEBUG true
 
 #define TIMEOUT true
-#define TIMEOUT_MS 150
+#define TIMEOUT_MS 50
 
 #define ECHO_SERVER_PORT 7
 #define BUFFER_SIZE 300
@@ -46,7 +46,8 @@ void bothMotorStop();
 // Serial Comm
 long lastCmdTime = 0;
 int lastLoopTime = 0;
-// char buffer[256];
+
+// return Ethernet message
 char returnbuffer[BUFFER_SIZE];
 int retMsgLength = 0;
 
@@ -83,12 +84,13 @@ int eStopOutput;
 volatile int tickDataRight = 0;
 volatile int tickDataLeft = 0;
 
-// Constant Definition
+// Constant Definitions
 const double wheelCircum = 1.092;
 const double gearRatio = 32.0;
 const int ticksPerRev = 48;
 const double metersPerTick = wheelCircum / (ticksPerRev * gearRatio);
 
+// motor controller logic
 bool gotCommand = false;
 bool nonMotorCommand = false;
 int estop = 1;
@@ -127,11 +129,12 @@ int main() {
         TCPSocketConnection client;
         server.accept(client);
         printf("accepted new client\r\n");
-        client.set_blocking(false, TIMEOUT_MS); // Timeout after TIMEOUT_MS
+         // Set calls to non-blocking, timeout after TIMEOUT_MS
+        client.set_blocking(false, TIMEOUT_MS);
 
         printf("Connection from: %s\r\n", client.get_address());
 
-        // buffer to be received from client. Must be cleared after each loop
+        // buffer to recieve client data with. Must be cleared after each loop
         // or bad things happen!
         char buffer[BUFFER_SIZE];
         while (true)
@@ -167,7 +170,7 @@ int main() {
             'X' -> empty buffer read (only useful for debugging)
             */
 
-            if (DEBUG) { printf(" -- Type: %c\r\n", ((n > 0) ? commandType : '0')); }
+            if (DEBUG) { printf(" -- Type: %c\r\n", commandType); }
 
             if (commandType == '$') // motor command
             {
@@ -217,11 +220,16 @@ int main() {
             if (DEBUG) { printf("Time Elapsed: %1.3f\r\n", dT_sec); }
             if (DEBUG) { printf("Actual Speed: L: %1.2f R: %1.2f\r\n", actualSpeedL, actualSpeedR); }
             if (DEBUG) { printf("Desired Speed: L: %1.2f R: %1.2f\r\n", desiredSpeedL, desiredSpeedR); }
+
+            memset(returnbuffer, 0, sizeof(returnbuffer));
             wait_ms(10);
+
             // send return message containing the battery voltage and estop status
             retMsgLength = sprintf(returnbuffer, "#V%2.2f,%d\r\n", battery.read() * 3.3 * 521 / 51, estop);
             client.send_all(returnbuffer, retMsgLength);
             if (DEBUG) { printf("Battery,ESTOP: "); printf(returnbuffer); }
+            if (DEBUG) { printf("==============================\n"); }
+            memset(returnbuffer, 0, sizeof(returnbuffer));
             wait_ms(10);
 
             // reset the buffer to receive the next packet

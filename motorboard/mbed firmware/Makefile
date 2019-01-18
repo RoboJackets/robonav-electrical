@@ -31,7 +31,10 @@ VPATH = ..
 
 PROJECT := firmware
 
-
+CSRC = mbed-libs/nanopb/protos/igvc.pb.c  # The compiled protocol definition
+CSRC += mbed-libs/nanopb/pb_encode.c  # The nanopb encoder
+CSRC += mbed-libs/nanopb/pb_decode.c  # The nanopb decoder
+CSRC += mbed-libs/nanopb/pb_common.c  # The nanopb common parts
 
 OBJECTS += main.o
 OBJECTS += mbed-libs/mbed-rtos/rtx/TARGET_CORTEX_M/rt_MemBox.o
@@ -121,6 +124,10 @@ OBJECTS += mbed-libs/EthernetInterface/Socket/Endpoint.o
 OBJECTS += mbed-libs/EthernetInterface/Socket/TCPSocketServer.o
 OBJECTS += mbed-libs/EthernetInterface/Socket/UDPSocket.o
 OBJECTS += mbed-libs/EthernetInterface/Socket/TCPSocketConnection.o
+# OBJECTS += mbed-libs/nanopb/protos/igvc.pb.o
+# OBJECTS += mbed-libs/nanopb/pb_encode.o
+# OBJECTS += mbed-libs/nanopb/pb_decode.o
+# OBJECTS += mbed-libs/nanopb/pb_common.o
 
 INCLUDE_PATHS += -I../
 INCLUDE_PATHS += -I../carwars/mbed/ethernet
@@ -235,6 +242,8 @@ INCLUDE_PATHS += -I../mbed-libs/mbed/TARGET_LPC1768/TOOLCHAIN_GCC_ARM
 INCLUDE_PATHS += -I../mbed-libs/mbed/drivers
 INCLUDE_PATHS += -I../mbed-libs/mbed/hal
 INCLUDE_PATHS += -I../mbed-libs/mbed/platform
+INCLUDE_PATHS += -I../mbed-libs/nanopb
+INCLUDE_PATHS += -I../mbed-libs/nanopb/protos
 
 SYS_OBJECTS += mbed-libs/mbed/TARGET_LPC1768/TOOLCHAIN_GCC_ARM/analogin_api.o
 SYS_OBJECTS += mbed-libs/mbed/TARGET_LPC1768/TOOLCHAIN_GCC_ARM/analogout_api.o
@@ -258,8 +267,8 @@ SYS_OBJECTS += mbed-libs/mbed/TARGET_LPC1768/TOOLCHAIN_GCC_ARM/startup_LPC17xx.o
 SYS_OBJECTS += mbed-libs/mbed/TARGET_LPC1768/TOOLCHAIN_GCC_ARM/system_LPC17xx.o
 SYS_OBJECTS += mbed-libs/mbed/TARGET_LPC1768/TOOLCHAIN_GCC_ARM/us_ticker.o
 
-LIBRARY_PATHS := -L../mbed-libs/mbed/TARGET_LPC1768/TOOLCHAIN_GCC_ARM 
-LIBRARIES := -l:libmbed.a 
+LIBRARY_PATHS := -L../mbed-libs/mbed/TARGET_LPC1768/TOOLCHAIN_GCC_ARM
+LIBRARIES := -l:libmbed.a
 LINKER_SCRIPT ?= ../mbed-libs/mbed/TARGET_LPC1768/TOOLCHAIN_GCC_ARM/LPC1768.ld
 
 
@@ -375,7 +384,7 @@ ASM_FLAGS += -D__CORTEX_M3
 ASM_FLAGS += -DARM_MATH_CM3
 
 
-LD_FLAGS :=-Wl,--gc-sections -Wl,--wrap,main -Wl,--wrap,_memalign_r -Wl,--wrap,exit -Wl,--wrap,atexit -Wl,-n -mcpu=cortex-m3 -mthumb 
+LD_FLAGS :=-Wl,--gc-sections -Wl,--wrap,main -Wl,--wrap,_memalign_r -Wl,--wrap,exit -Wl,--wrap,atexit -Wl,-n -mcpu=cortex-m3 -mthumb
 LD_SYS_LIBS :=-Wl,--start-group -lstdc++ -lsupc++ -lm -lc -lgcc -lnosys -Wl,--end-group
 
 
@@ -416,14 +425,14 @@ $(PROJECT).link_script.ld: $(LINKER_SCRIPT)
 
 
 
-$(PROJECT).elf: $(OBJECTS) $(SYS_OBJECTS) $(PROJECT).link_script.ld 
+$(PROJECT).elf: $(OBJECTS) $(SYS_OBJECTS) $(PROJECT).link_script.ld
 	+@echo "link: $(notdir $@)"
 	@$(LD) $(LD_FLAGS) -T $(filter %.ld, $^) $(LIBRARY_PATHS) --output $@ $(filter %.o, $^) $(LIBRARIES) $(LD_SYS_LIBS)
 
 
 $(PROJECT).bin: $(PROJECT).elf
 	$(ELF2BIN) -O binary $< $@
-	+@echo "===== bin file ready to flash: $(OBJDIR)/$@ =====" 
+	+@echo "===== bin file ready to flash: $(OBJDIR)/$@ ====="
 
 $(PROJECT).hex: $(PROJECT).elf
 	$(ELF2BIN) -O ihex $< $@
@@ -433,4 +442,3 @@ $(PROJECT).hex: $(PROJECT).elf
 DEPS = $(OBJECTS:.o=.d) $(SYS_OBJECTS:.o=.d)
 -include $(DEPS)
 endif
-

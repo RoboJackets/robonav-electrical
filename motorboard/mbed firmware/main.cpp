@@ -6,13 +6,17 @@
 #include <iostream>
 #include <stdlib.h>
 
+#include <pb_encode.h>
+#include <pb_decode.h>
+#include "igvc.pb.h"
+
 #define DEBUG true
 
 #define TIMEOUT true
 #define TIMEOUT_MS 50
 
 #define ECHO_SERVER_PORT 7
-#define BUFFER_SIZE 300
+#define BUFFER_SIZE 256
 
 // Hardware definition
 Timer timer;
@@ -122,11 +126,17 @@ int main() {
     timer.reset();
     timer.start();
 
+    TCPSocketConnection client;
+
+    // buffer to recieve client data with. Must be cleared after each loop
+    // or bad things happen!
+    char buffer[BUFFER_SIZE];
+
     while (true)
     {
         // wait for a new TCP Connection
         printf("Wait for new connection...\r\n");
-        TCPSocketConnection client;
+
         server.accept(client);
         printf("accepted new client\r\n");
          // Set calls to non-blocking, timeout after TIMEOUT_MS
@@ -134,26 +144,31 @@ int main() {
 
         printf("Connection from: %s\r\n", client.get_address());
 
-        // buffer to recieve client data with. Must be cleared after each loop
-        // or bad things happen!
-        char buffer[BUFFER_SIZE];
+
         while (true)
         {
+            // reset the buffer to receive the next packet
+            memset(buffer, 0, sizeof(buffer));
             // read the buffer. n is the number of bytes in the buffer
             int n = client.receive(buffer, sizeof(buffer)-1);
 
             // buffer is empty (client did not write to it)
-            if (n <= 0)
+            if (n < 0)
             {
-                commandType = 'X';
-
                 if (DEBUG)
                 {
                     printf("Received empty buffer: [");
                     printf(buffer);
                     printf("] -- ");
-                    printf("bytes Recieved: %d", n);
+                    printf("bytes Recieved: %d\n", n);
                 }
+                wait_ms(20);
+                continue;
+            }
+            else if (n == 0)
+            {
+                printf("Client Closed Connection\n");
+                break;
             }
             else
             {
@@ -231,12 +246,9 @@ int main() {
             if (DEBUG) { printf("==============================\n"); }
             memset(returnbuffer, 0, sizeof(returnbuffer));
             wait_ms(10);
-
-            // reset the buffer to receive the next packet
-            memset(buffer, 0, sizeof(buffer));
         }
 
-        // client.close();
+        client.close();
     }
 }
 

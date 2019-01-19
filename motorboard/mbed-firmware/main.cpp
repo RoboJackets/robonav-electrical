@@ -1,31 +1,31 @@
+/* mbed libraries */
 #include "mbed.h"
 #include "EthernetInterface.h" // mbed ethernet interface library
 
+/* std library imports */
 #include <string>
 #include <cstring>
-#include <iostream>
 #include <stdlib.h>
 
-/* nanopb files */
+#define DEBUG false
+
+/* nanopb src files */
 #include <pb_encode.h>
 #include <pb_decode.h>
 #include <pb_common.h>
 #include "igvc.pb.h" // compiled .proto pb definition
 
-#define DEBUG true
-
-#define TIMEOUT true
-#define TIMEOUT_MS 50
-
+/* ethernet setup variables */
 #define ECHO_SERVER_PORT 7
 #define BUFFER_SIZE 256
 #define MAX_MESSAGES 1 // backlog of messages the server should hold
+#define TIMEOUT_MS 50 // timeout for blocking read operations
 
-// Hardware definition
+/* hardware definitions */
 Timer timer;
 Serial serial(p13, NC, 9600);
 
-// mbed Pin definition
+/* mbed pin definitions */
 DigitalOut myLED1(LED1);
 DigitalOut myLED2(LED2);
 DigitalOut myLED3(LED3);
@@ -40,7 +40,7 @@ InterruptIn encoderRightPinA(p26);
 DigitalIn encoderRightPinB(p25);
 AnalogIn battery(p20);
 
-// function prototypes
+/* function prototypes */
 void parseRequest(const RequestMessage &req);
 void tickLeft();
 void tickRight();
@@ -49,19 +49,17 @@ void setLeftSpeed(int);
 void setRightSpeed(int);
 void bothMotorStop();
 
-// Serial Comm
-long lastCmdTime = 0;
-int lastLoopTime = 0;
-
-// PID variable definition
+/* desired motor speed (as specified by the client) */
 float desiredSpeedL = 0;
 float desiredSpeedR = 0;
 
-// motor speeds
+/* actual motor speeds */
 float actualSpeedL = 0;
 float actualSpeedR = 0;
 
-// pid calculation values
+/* PID calculation values */
+long lastCmdTime = 0;
+int lastLoopTime = 0;
 float ErrorL = 0;
 float ErrorR = 0;
 float dErrorL = 0;
@@ -72,17 +70,13 @@ float dT_sec = 0;
 float lastErrorL = 0;
 float lastErrorR = 0;
 
-// pid values
-float P_l = 8;
+/* PID constants */
+float P_l = 0;
 float D_l = 0;
-float P_r = 8;
+float P_r = 0;
 float D_r = 0;
 float I_l = 0;
 float I_r = 0;
-
-float accel[3];
-float gyro[3];
-float magne[3];
 
 int dPWM_L = 0;
 int dPWM_R = 0;
@@ -90,31 +84,29 @@ int PWM_L = 0;
 int PWM_R = 0;
 int eStopOutput;
 
-// Encoder values
+/* encoder values */
 volatile int tickDataRight = 0;
 volatile int tickDataLeft = 0;
 
-// Constant Definitions
+/* calculation constants */
 const double wheelCircum = 1.092;
 const double gearRatio = 32.0;
 const int ticksPerRev = 48;
 const double metersPerTick = wheelCircum / (ticksPerRev * gearRatio);
 
-// motor controller logic
-bool gotCommand = false;
-bool nonMotorCommand = false;
+/* estop logic */
 int estop = 1;
 
 int main() {
+    /* Open the server (mbed) via the EthernetInterface class */
     printf("Setting up ethernet interface...\r\n");
     EthernetInterface eth;
     char *ip = "192.168.1.20"; // server ip address
     int res = eth.init(ip, 0, 0); // initialize the interface
-    eth.connect(1000); // bring the interface up with a timeout of 1s
-    printf("result code is %d\r\n", res);
+    eth.connect(1000);
     printf("Server IP Address is: %s\r\n", eth.getIPAddress());
 
-    // Instantiate a TCP Socket Server and bind it to the specified port
+    /* Instantiate a TCP Socket to function as the server and bind it to the specified port */
     TCPSocketServer server;
     server.bind(ECHO_SERVER_PORT);
     server.listen(MAX_MESSAGES);
@@ -131,40 +123,32 @@ int main() {
     timer.reset();
     timer.start();
 
+    /* Instantiage a TCP socket to serve as the client */
     TCPSocketConnection client;
-
-    // buffer to recieve client data with. Must be cleared after each loop
-    // or bad things happen!
-    char buffer[BUFFER_SIZE];
 
     while (true)
     {
-        // wait for a new TCP Connection
+        /* wait for a new TCP Connection */
         printf("Waiting for new connection...\r\n");
         server.accept(client);
         printf("accepted new client\r\n");
-         // Set calls to non-blocking, timeout after TIMEOUT_MS
-        client.set_blocking(false, TIMEOUT_MS);
+        client.set_blocking(false, TIMEOUT_MS); // Set calls to non-blocking, timeout after TIMEOUT_MS
         printf("Connection from: %s\r\n", client.get_address());
 
         while (true)
         {
-            // reset the buffer to receive the next packet
-            memset(buffer, 0, sizeof(buffer));
+            /* read data into the buffer. This call blocks until data is read */
+            char buffer[BUFFER_SIZE];
             int n = client.receive(buffer, sizeof(buffer)-1);
 
-            /**
+            /*
             n represents the response message for the read() command.
             - if n == 0 then the client closed the connection
             - otherwise, n is the number of bytes read
             */
-
             if (n < 0)
             {
-                if (DEBUG)
-                {
-                    printf("Received empty buffer\n");
-                }
+                if (DEBUG) { printf("Received empty buffer\n"); }
                 wait_ms(10);
                 continue;
             }
@@ -175,7 +159,7 @@ int main() {
             }
             else
             {
-                printf("Received Request of size: %d\n", n);
+                if (DEBUG) { printf("Received Request of size: %d\n", n); }
             }
 
             /* protobuf message to hold request from client */
@@ -197,14 +181,14 @@ int main() {
 
             parseRequest(request);
 
-            // reset timer
+            /* reset the timer */
             if (timer.read_ms() > pow(2, 20))
             {
                 timer.reset();
                 lastCmdTime = 0;
             }
 
-            // Estop logic
+            /* estop logic */
             if (eStopStatus.read())
             {
                 // If get 5V, since inverted, meaning disabled on motors
@@ -222,9 +206,10 @@ int main() {
                 eStopLight = 0;
             }
 
-            pid(); // update motor velocities with PID
+            /* update motor velocities with PID */
+            pid();
 
-            // protocol buffer to hold response message
+            /* protocol buffer to hold response message */
             ResponseMessage response = ResponseMessage_init_zero;
 
             /* This is the buffer where we will store the response message. */
@@ -264,8 +249,7 @@ int main() {
             ostatus = pb_encode(&ostream, ResponseMessage_fields, &response);
             response_length = ostream.bytes_written;
 
-            printf("Sending message of length: %zu\n", response_length);
-
+            if (DEBUG) { printf("Sending message of length: %zu\n", response_length); }
 
             /* Then just check for any errors.. */
             if (!ostatus)
@@ -282,11 +266,16 @@ int main() {
     }
 }
 
+/*
+Update global variables using most recent client request.
+
+@param[in] req RequestMessage protobuf with desired values
+*/
 void parseRequest(const RequestMessage &req)
 {
+    /* request contains PID values */
     if (req.has_p_l)
     {
-        /* request contains PID values */
         P_l = req.p_l;
         P_r = req.p_r;
         D_l = req.d_l;
@@ -294,10 +283,10 @@ void parseRequest(const RequestMessage &req)
         I_l = req.i_l;
         I_r = req.i_r;
     }
-
+    /* request contains motor velocities */
     if (req.has_speed_l)
     {
-        /* request contains motor velocities */
+
         desiredSpeedL = req.speed_l;
         desiredSpeedR = req.speed_r;
     }

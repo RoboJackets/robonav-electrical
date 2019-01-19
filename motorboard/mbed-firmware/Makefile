@@ -31,7 +31,8 @@ VPATH = ..
 
 PROJECT := firmware
 
-CSRC = mbed-libs/nanopb/protos/igvc.pb.c  # The compiled protocol definition
+# files for igvc protobuf and nanopb src files
+CSRC = mbed-libs/nanopb/igvc/igvc.pb.c  # The compiled protocol definition
 CSRC += mbed-libs/nanopb/pb_encode.c  # The nanopb encoder
 CSRC += mbed-libs/nanopb/pb_decode.c  # The nanopb decoder
 CSRC += mbed-libs/nanopb/pb_common.c  # The nanopb common parts
@@ -124,7 +125,7 @@ OBJECTS += mbed-libs/EthernetInterface/Socket/Endpoint.o
 OBJECTS += mbed-libs/EthernetInterface/Socket/TCPSocketServer.o
 OBJECTS += mbed-libs/EthernetInterface/Socket/UDPSocket.o
 OBJECTS += mbed-libs/EthernetInterface/Socket/TCPSocketConnection.o
-OBJECTS += mbed-libs/nanopb/protos/igvc.pb.o
+OBJECTS += mbed-libs/nanopb/igvc/igvc.pb.o
 OBJECTS += mbed-libs/nanopb/pb_encode.o
 OBJECTS += mbed-libs/nanopb/pb_decode.o
 OBJECTS += mbed-libs/nanopb/pb_common.o
@@ -243,7 +244,7 @@ INCLUDE_PATHS += -I../mbed-libs/mbed/drivers
 INCLUDE_PATHS += -I../mbed-libs/mbed/hal
 INCLUDE_PATHS += -I../mbed-libs/mbed/platform
 INCLUDE_PATHS += -I../mbed-libs/nanopb
-INCLUDE_PATHS += -I../mbed-libs/nanopb/protos
+INCLUDE_PATHS += -I../mbed-libs/nanopb/igvc
 
 SYS_OBJECTS += mbed-libs/mbed/TARGET_LPC1768/TOOLCHAIN_GCC_ARM/analogin_api.o
 SYS_OBJECTS += mbed-libs/mbed/TARGET_LPC1768/TOOLCHAIN_GCC_ARM/analogout_api.o

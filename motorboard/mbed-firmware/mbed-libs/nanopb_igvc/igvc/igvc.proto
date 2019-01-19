@@ -1,0 +1,33 @@
+/* IGVC protobuf definition */
+
+syntax = "proto2";
+
+/* ResponseMessage filled out by mbed (server) and sent to the ros node (client) */
+message ResponseMessage {
+    optional float p_l = 1;
+    optional float p_r = 2;
+    optional float i_l = 3;
+    optional float i_r = 4;
+    optional float d_l = 5;
+    optional float d_r = 6;
+
+    optional float speed_l = 7;
+    optional float speed_r = 8;
+    optional float dt_sec = 9;
+
+    optional float voltage = 10;
+    optional bool estop = 11;
+}
+
+/* RequestMessage filled out by ros node and sent to the mbed */
+message RequestMessage {
+    optional float p_l = 1;
+    optional float p_r = 2;
+    optional float i_l = 3;
+    optional float i_r = 4;
+    optional float d_l = 5;
+    optional float d_r = 6;
+
+    optional float speed_l = 7 [default = 0];
+    optional float speed_r = 8 [default = 0];
+}

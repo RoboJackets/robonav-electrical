@@ -124,10 +124,10 @@ OBJECTS += mbed-libs/EthernetInterface/Socket/Endpoint.o
 OBJECTS += mbed-libs/EthernetInterface/Socket/TCPSocketServer.o
 OBJECTS += mbed-libs/EthernetInterface/Socket/UDPSocket.o
 OBJECTS += mbed-libs/EthernetInterface/Socket/TCPSocketConnection.o
-# OBJECTS += mbed-libs/nanopb/protos/igvc.pb.o
-# OBJECTS += mbed-libs/nanopb/pb_encode.o
-# OBJECTS += mbed-libs/nanopb/pb_decode.o
-# OBJECTS += mbed-libs/nanopb/pb_common.o
+OBJECTS += mbed-libs/nanopb/protos/igvc.pb.o
+OBJECTS += mbed-libs/nanopb/pb_encode.o
+OBJECTS += mbed-libs/nanopb/pb_decode.o
+OBJECTS += mbed-libs/nanopb/pb_common.o
 
 INCLUDE_PATHS += -I../
 INCLUDE_PATHS += -I../carwars/mbed/ethernet

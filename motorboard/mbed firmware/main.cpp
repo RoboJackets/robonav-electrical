@@ -6,9 +6,11 @@
 #include <iostream>
 #include <stdlib.h>
 
+/* nanopb files */
 #include <pb_encode.h>
 #include <pb_decode.h>
-#include "igvc.pb.h"
+#include <pb_common.h>
+#include "igvc.pb.h" // compiled .proto pb definition
 
 #define DEBUG true
 
@@ -17,6 +19,7 @@
 
 #define ECHO_SERVER_PORT 7
 #define BUFFER_SIZE 256
+#define MAX_MESSAGES 1 // backlog of messages the server should hold
 
 // Hardware definition
 Timer timer;
@@ -38,11 +41,10 @@ DigitalIn encoderRightPinB(p25);
 AnalogIn battery(p20);
 
 // function prototypes
-void parseCommand(char *);
+void parseRequest(const RequestMessage &req);
 void tickLeft();
 void tickRight();
 void pid();
-std::string parseNonMotor(char *);
 void setLeftSpeed(int);
 void setRightSpeed(int);
 void bothMotorStop();
@@ -51,15 +53,15 @@ void bothMotorStop();
 long lastCmdTime = 0;
 int lastLoopTime = 0;
 
-// return Ethernet message
-char returnbuffer[BUFFER_SIZE];
-int retMsgLength = 0;
-
 // PID variable definition
 float desiredSpeedL = 0;
 float desiredSpeedR = 0;
+
+// motor speeds
 float actualSpeedL = 0;
 float actualSpeedR = 0;
+
+// pid calculation values
 float ErrorL = 0;
 float ErrorR = 0;
 float dErrorL = 0;
@@ -69,15 +71,19 @@ float iErrorR = 0;
 float dT_sec = 0;
 float lastErrorL = 0;
 float lastErrorR = 0;
+
+// pid values
 float P_l = 8;
 float D_l = 0;
 float P_r = 8;
 float D_r = 0;
 float I_l = 0;
 float I_r = 0;
+
 float accel[3];
 float gyro[3];
 float magne[3];
+
 int dPWM_L = 0;
 int dPWM_R = 0;
 int PWM_L = 0;
@@ -98,7 +104,6 @@ const double metersPerTick = wheelCircum / (ticksPerRev * gearRatio);
 bool gotCommand = false;
 bool nonMotorCommand = false;
 int estop = 1;
-char commandType;
 
 int main() {
     printf("Setting up ethernet interface...\r\n");
@@ -112,7 +117,7 @@ int main() {
     // Instantiate a TCP Socket Server and bind it to the specified port
     TCPSocketServer server;
     server.bind(ECHO_SERVER_PORT);
-    server.listen();
+    server.listen(MAX_MESSAGES);
 
     myLED1 = 1;
 
@@ -135,34 +140,32 @@ int main() {
     while (true)
     {
         // wait for a new TCP Connection
-        printf("Wait for new connection...\r\n");
-
+        printf("Waiting for new connection...\r\n");
         server.accept(client);
         printf("accepted new client\r\n");
          // Set calls to non-blocking, timeout after TIMEOUT_MS
         client.set_blocking(false, TIMEOUT_MS);
-
         printf("Connection from: %s\r\n", client.get_address());
-
 
         while (true)
         {
             // reset the buffer to receive the next packet
             memset(buffer, 0, sizeof(buffer));
-            // read the buffer. n is the number of bytes in the buffer
             int n = client.receive(buffer, sizeof(buffer)-1);
 
-            // buffer is empty (client did not write to it)
+            /**
+            n represents the response message for the read() command.
+            - if n == 0 then the client closed the connection
+            - otherwise, n is the number of bytes read
+            */
+
             if (n < 0)
             {
                 if (DEBUG)
                 {
-                    printf("Received empty buffer: [");
-                    printf(buffer);
-                    printf("] -- ");
-                    printf("bytes Recieved: %d\n", n);
+                    printf("Received empty buffer\n");
                 }
-                wait_ms(20);
+                wait_ms(10);
                 continue;
             }
             else if (n == 0)
@@ -172,35 +175,27 @@ int main() {
             }
             else
             {
-                commandType = buffer[0];
-                printf("Received Command of size: %d", n);
+                printf("Received Request of size: %d\n", n);
             }
 
-            /**
-            Perform action depending on message received.
+            /* protobuf message to hold request from client */
+            RequestMessage request = RequestMessage_init_zero;
+            bool istatus;
 
-            Command Types (denoted by first letter of buffer):
-            '$' -> motor command
-            '#' -> set PID values
-            'X' -> empty buffer read (only useful for debugging)
-            */
+            /* Create a stream that reads from the buffer. */
+            pb_istream_t istream = pb_istream_from_buffer(reinterpret_cast<uint8_t*>(buffer), n);
 
-            if (DEBUG) { printf(" -- Type: %c\r\n", commandType); }
+            /* decode the message */
+            istatus = pb_decode(&istream, RequestMessage_fields, &request);
 
-            if (commandType == '$') // motor command
+            /* check for any errors.. */
+            if (!istatus)
             {
-                parseCommand((char *)buffer);
-                gotCommand = true;
-                lastCmdTime = timer.read_ms();
+                printf("Decoding failed: %s\n", PB_GET_ERROR(&istream));
+                return 1;
             }
-            else if (commandType == '#') // PID assignment
-            {
-                // assign PID values and return string containing the values
-                // assigned. This is used by the client to validate that the PID
-                // values were received.
-                std::string retString = parseNonMotor((char *)buffer);
-                client.send_all(const_cast<char*>(retString.c_str()), strlen(const_cast<char*>(retString.c_str())));
-            }
+
+            parseRequest(request);
 
             // reset timer
             if (timer.read_ms() > pow(2, 20))
@@ -227,81 +222,85 @@ int main() {
                 eStopLight = 0;
             }
 
-            pid();
+            pid(); // update motor velocities with PID
 
-            // send return message containing the actual motor speeds and elapsed time
-            retMsgLength = sprintf(returnbuffer, "$%1.2f,%1.2f,%1.3f\r\n", actualSpeedL, actualSpeedR, dT_sec);
-            client.send_all(returnbuffer, retMsgLength);
-            if (DEBUG) { printf("Time Elapsed: %1.3f\r\n", dT_sec); }
-            if (DEBUG) { printf("Actual Speed: L: %1.2f R: %1.2f\r\n", actualSpeedL, actualSpeedR); }
-            if (DEBUG) { printf("Desired Speed: L: %1.2f R: %1.2f\r\n", desiredSpeedL, desiredSpeedR); }
+            // protocol buffer to hold response message
+            ResponseMessage response = ResponseMessage_init_zero;
 
-            memset(returnbuffer, 0, sizeof(returnbuffer));
-            wait_ms(10);
+            /* This is the buffer where we will store the response message. */
+            uint8_t responsebuffer[256];
+            size_t response_length;
+            bool ostatus;
 
-            // send return message containing the battery voltage and estop status
-            retMsgLength = sprintf(returnbuffer, "#V%2.2f,%d\r\n", battery.read() * 3.3 * 521 / 51, estop);
-            client.send_all(returnbuffer, retMsgLength);
-            if (DEBUG) { printf("Battery,ESTOP: "); printf(returnbuffer); }
-            if (DEBUG) { printf("==============================\n"); }
-            memset(returnbuffer, 0, sizeof(returnbuffer));
-            wait_ms(10);
+            /* Create a stream that will write to our buffer. */
+            pb_ostream_t ostream = pb_ostream_from_buffer(responsebuffer, sizeof(responsebuffer));
+
+            /* Fill in the message fields */
+            response.has_p_l     = true;
+            response.has_p_r     = true;
+            response.has_i_l     = true;
+            response.has_i_r     = true;
+            response.has_d_l     = true;
+            response.has_d_r     = true;
+            response.has_speed_l = true;
+            response.has_speed_r = true;
+            response.has_dt_sec  = true;
+            response.has_voltage = true;
+            response.has_estop   = true;
+
+            response.p_l     = static_cast<float>(P_l);
+            response.p_r     = static_cast<float>(P_r);
+            response.i_l     = static_cast<float>(I_l);
+            response.i_r     = static_cast<float>(I_r);
+            response.d_l     = static_cast<float>(D_l);
+            response.d_r     = static_cast<float>(D_r);
+            response.speed_l = static_cast<float>(actualSpeedL);
+            response.speed_r = static_cast<float>(actualSpeedR);
+            response.dt_sec  = static_cast<float>(dT_sec);
+            response.voltage = static_cast<float>(battery.read() * 3.3 * 521 / 51);
+            response.estop   = static_cast<bool>(estop);
+
+            /* encode the message */
+            ostatus = pb_encode(&ostream, ResponseMessage_fields, &response);
+            response_length = ostream.bytes_written;
+
+            printf("Sending message of length: %zu\n", response_length);
+
+
+            /* Then just check for any errors.. */
+            if (!ostatus)
+            {
+                printf("Encoding failed: %s\n", PB_GET_ERROR(&ostream));
+                return 1;
+            }
+
+            client.send_all(reinterpret_cast<char*>(responsebuffer), response_length);
+
         }
 
         client.close();
     }
 }
 
-void parseCommand(char *cmd) {
-    short index = 0;
-    if (cmd[index++] != '$') {
-        // retMsgLength = sprintf(returnbuffer, "#EInvalid motor format $");
-        // client.send_all(returnbuffer, retMsgLength);
-        // serialNUC.printf("#EInvalid motor format $");
-        return;
-    }
-    desiredSpeedL = atof(&cmd[index++]);
-    while (cmd[index++] != ',' && index < 30) {}
-
-    if (index < 50) {
-        desiredSpeedR = atof(&cmd[index]);
-    } else {
-        // retMsgLength = sprintf(returnbuffer, "#EInvalid motor format ','");
-        // client.send_all(returnbuffer, retMsgLength);
-        // serialNUC.printf("#EInvalid motor format ','");
-        return;
-    }
-}
-
-std::string parseNonMotor(char *cmd) {
-    short index = 1;
-    char preceeding = cmd[index++];
-
-    float val1 = atof(&cmd[2]);
-    while (cmd[index++] != ',' && index < 30) {}
-    float val2 = atof(&cmd[index]);
-
-    sprintf(returnbuffer, "#%c%2.2f,%2.2f\n", preceeding, val1, val2);
-    std::string retString(returnbuffer);
-
-    switch (preceeding) {
-    case 'P':
-        P_l = val1;
-        P_r = val2;
-        break;
-    case 'D':
-        D_l = val1;
-        D_r = val2;
-        break;
-    case 'I':
-        I_l = val1;
-        I_r = val2;
-        break;
-    default:
-        break;
+void parseRequest(const RequestMessage &req)
+{
+    if (req.has_p_l)
+    {
+        /* request contains PID values */
+        P_l = req.p_l;
+        P_r = req.p_r;
+        D_l = req.d_l;
+        D_r = req.d_r;
+        I_l = req.i_l;
+        I_r = req.i_r;
     }
 
-    return retString;
+    if (req.has_speed_l)
+    {
+        /* request contains motor velocities */
+        desiredSpeedL = req.speed_l;
+        desiredSpeedR = req.speed_r;
+    }
 }
 
 void tickRight() {
@@ -340,8 +339,6 @@ void pid() {
     ErrorL = desiredSpeedL - actualSpeedL;
     ErrorR = desiredSpeedR - actualSpeedR;
 
-    // serialNUC.printf("ErrorL: %1.2f, ErrorR: %1.2f \r\n", ErrorL, ErrorR);
-
     dErrorL = ErrorL - lastErrorL;
     dErrorR = ErrorR - lastErrorR;
 
@@ -350,8 +347,6 @@ void pid() {
 
     dPWM_L = -(int)ceil((P_l * ErrorL + D_l * dErrorL + I_l * iErrorL));
     dPWM_R = -(int)ceil((P_r * ErrorR + D_r * dErrorR + I_r * iErrorR));
-
-    // serialNUC.printf("dpwmL: %d, dpwmR:%d \r\n",dPWM_L, dPWM_R);
 
     PWM_L += dPWM_L;
     PWM_R += dPWM_R;
@@ -371,11 +366,6 @@ void pid() {
     setLeftSpeed(PWM_L);
     setRightSpeed(PWM_R);
 
-    if (DEBUG) {
-        sprintf(returnbuffer, "PWM_L: %d, PWM_R: %d\n", PWM_L, PWM_R);
-        printf(returnbuffer);
-    }
-
     /*
         Be aware that this motor board does not interface with the motor
         controller with PWM. "PWM" here are mere residue from old arduino code
@@ -384,8 +374,6 @@ void pid() {
 
     lastErrorL = ErrorL;
     lastErrorR = ErrorR;
-
-    wait_ms(10);
 }
 
 

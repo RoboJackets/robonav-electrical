@@ -1,0 +1,3 @@
+[submodule "motorboard/mbed-firmware/mbed-libs/nanopb"]
+	path = motorboard/mbed-firmware/mbed-libs/nanopb
+	url = https://github.com/nanopb/nanopb.git

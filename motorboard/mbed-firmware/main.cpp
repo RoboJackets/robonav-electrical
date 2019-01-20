@@ -286,7 +286,6 @@ void parseRequest(const RequestMessage &req)
     /* request contains motor velocities */
     if (req.has_speed_l)
     {
-
         desiredSpeedL = req.speed_l;
         desiredSpeedR = req.speed_r;
     }

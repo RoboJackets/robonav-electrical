@@ -13895,7 +13895,7 @@ Source: http://eshop.phoenixcontact.com .. 1751277.pdf</description>
 <part name="GND19" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="1k"/>
 <part name="GND20" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="U$18" library="IGVC-Regulator" deviceset="MIS29301-12" device=""/>
+<part name="T4" library="IGVC-Regulator" deviceset="MIS29301-12" device=""/>
 <part name="GND34" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+24V" device=""/>
 <part name="U$19" library="IGVC-Sensor" deviceset="ACS711" device=""/>
@@ -13916,11 +13916,11 @@ Source: http://eshop.phoenixcontact.com .. 1751277.pdf</description>
 <part name="GND35" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="1k"/>
 <part name="GND36" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="U$23" library="IGVC-Regulator" deviceset="MIS29301-12" device=""/>
+<part name="T3" library="IGVC-Regulator" deviceset="MIS29301-12" device=""/>
 <part name="GND37" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+13" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+24V" device=""/>
 <part name="U$24" library="IGVC-Misc" deviceset="FUSE_HOLDER" device=""/>
-<part name="U$25" library="IGVC-Discrete" deviceset="BUK9226" device=""/>
+<part name="T2" library="IGVC-Discrete" deviceset="BUK9226" device=""/>
 <part name="P+14" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+24V" device=""/>
 <part name="C17" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1uF"/>
 <part name="C18" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="10uF"/>
@@ -13929,9 +13929,9 @@ Source: http://eshop.phoenixcontact.com .. 1751277.pdf</description>
 <part name="C20" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="10uF"/>
 <part name="GND39" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="FRAME7" library="RoboJackets-Frames" deviceset="FRAME_A_L" device=""/>
-<part name="U$26" library="IGVC-Discrete" deviceset="S10M-TP" device=""/>
-<part name="U$27" library="IGVC-Discrete" deviceset="S10M-TP" device=""/>
-<part name="U$28" library="IGVC-Discrete" deviceset="S10M-TP" device=""/>
+<part name="D6" library="IGVC-Discrete" deviceset="S10M-TP" device=""/>
+<part name="D7" library="IGVC-Discrete" deviceset="S10M-TP" device=""/>
+<part name="D8" library="IGVC-Discrete" deviceset="S10M-TP" device=""/>
 <part name="P+20" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+24V" device=""/>
 <part name="U$29" library="IGVC-Sensor" deviceset="IMA198" device=""/>
 <part name="U$30" library="IGVC-Sensor" deviceset="IMA198" device=""/>
@@ -14819,7 +14819,7 @@ Transistor here can take 4A</text>
 <instance part="GND20" gate="1" x="81.28" y="152.4" smashed="yes">
 <attribute name="VALUE" x="78.74" y="149.86" size="1.778" layer="96"/>
 </instance>
-<instance part="U$18" gate="G$1" x="137.16" y="170.18" smashed="yes">
+<instance part="T4" gate="G$1" x="137.16" y="170.18" smashed="yes">
 <attribute name="NAME" x="137.16" y="188.468" size="1.27" layer="94"/>
 <attribute name="VALUE" x="137.16" y="167.64" size="1.27" layer="94"/>
 </instance>
@@ -14893,7 +14893,7 @@ Transistor here can take 4A</text>
 <instance part="GND36" gate="1" x="185.42" y="81.28" smashed="yes">
 <attribute name="VALUE" x="182.88" y="78.74" size="1.778" layer="96"/>
 </instance>
-<instance part="U$23" gate="G$1" x="223.52" y="99.06" smashed="yes">
+<instance part="T3" gate="G$1" x="223.52" y="99.06" smashed="yes">
 <attribute name="NAME" x="223.52" y="117.348" size="1.27" layer="94"/>
 <attribute name="VALUE" x="223.52" y="96.52" size="1.27" layer="94"/>
 </instance>
@@ -14907,7 +14907,7 @@ Transistor here can take 4A</text>
 <attribute name="NAME" x="232.41" y="163.957" size="1.778" layer="95"/>
 <attribute name="VALUE" x="232.41" y="159.639" size="1.778" layer="96"/>
 </instance>
-<instance part="U$25" gate="G$1" x="60.96" y="50.8" smashed="yes">
+<instance part="T2" gate="G$1" x="60.96" y="50.8" smashed="yes">
 <attribute name="VALUE" x="49.53" y="54.61" size="1.778" layer="96" rot="MR180"/>
 <attribute name="NAME" x="49.53" y="52.07" size="1.778" layer="95" rot="MR180"/>
 </instance>
@@ -15044,7 +15044,7 @@ Transistor here can take 4A</text>
 <wire x1="81.28" y1="157.44" x2="81.28" y2="154.94" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$18" gate="G$1" pin="GND"/>
+<pinref part="T4" gate="G$1" pin="GND"/>
 <pinref part="GND34" gate="1" pin="GND"/>
 <wire x1="132.08" y1="172.72" x2="129.54" y2="172.72" width="0.1524" layer="91"/>
 <wire x1="129.54" y1="172.72" x2="129.54" y2="170.18" width="0.1524" layer="91"/>
@@ -15085,7 +15085,7 @@ Transistor here can take 4A</text>
 <wire x1="185.42" y1="86.32" x2="185.42" y2="83.82" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$23" gate="G$1" pin="GND"/>
+<pinref part="T3" gate="G$1" pin="GND"/>
 <pinref part="GND37" gate="1" pin="GND"/>
 <wire x1="218.44" y1="101.6" x2="215.9" y2="101.6" width="0.1524" layer="91"/>
 <wire x1="215.9" y1="101.6" x2="215.9" y2="99.06" width="0.1524" layer="91"/>
@@ -15154,7 +15154,7 @@ Transistor here can take 4A</text>
 </net>
 <net name="SAFETY_LIGHT_EN" class="0">
 <segment>
-<pinref part="U$18" gate="G$1" pin="EN"/>
+<pinref part="T4" gate="G$1" pin="EN"/>
 <wire x1="149.86" y1="165.1" x2="149.86" y2="157.48" width="0.1524" layer="91"/>
 <wire x1="149.86" y1="157.48" x2="127" y2="157.48" width="0.1524" layer="91"/>
 <label x="119.38" y="157.48" size="1.778" layer="95"/>
@@ -15167,7 +15167,7 @@ Transistor here can take 4A</text>
 </net>
 <net name="SAFETY_LIGHT_FLG" class="0">
 <segment>
-<pinref part="U$18" gate="G$1" pin="FLG"/>
+<pinref part="T4" gate="G$1" pin="FLG"/>
 <wire x1="152.4" y1="165.1" x2="152.4" y2="152.4" width="0.1524" layer="91"/>
 <wire x1="152.4" y1="152.4" x2="127" y2="152.4" width="0.1524" layer="91"/>
 <label x="119.38" y="152.4" size="1.778" layer="95"/>
@@ -15180,7 +15180,7 @@ Transistor here can take 4A</text>
 </net>
 <net name="+24V" class="0">
 <segment>
-<pinref part="U$18" gate="G$1" pin="IN"/>
+<pinref part="T4" gate="G$1" pin="IN"/>
 <wire x1="132.08" y1="185.42" x2="129.54" y2="185.42" width="0.1524" layer="91"/>
 <wire x1="129.54" y1="185.42" x2="129.54" y2="190.5" width="0.1524" layer="91"/>
 <pinref part="P+9" gate="1" pin="+24V"/>
@@ -15189,7 +15189,7 @@ Transistor here can take 4A</text>
 <junction x="129.54" y="185.42"/>
 </segment>
 <segment>
-<pinref part="U$23" gate="G$1" pin="IN"/>
+<pinref part="T3" gate="G$1" pin="IN"/>
 <wire x1="218.44" y1="114.3" x2="215.9" y2="114.3" width="0.1524" layer="91"/>
 <wire x1="215.9" y1="114.3" x2="215.9" y2="119.38" width="0.1524" layer="91"/>
 <pinref part="P+13" gate="1" pin="+24V"/>
@@ -15199,7 +15199,7 @@ Transistor here can take 4A</text>
 </segment>
 <segment>
 <pinref part="P+14" gate="1" pin="+24V"/>
-<pinref part="U$25" gate="G$1" pin="D"/>
+<pinref part="T2" gate="G$1" pin="D"/>
 <wire x1="63.5" y1="60.96" x2="63.5" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -15247,7 +15247,7 @@ Transistor here can take 4A</text>
 </net>
 <net name="+12V_SAFETY_FUSE" class="0">
 <segment>
-<pinref part="U$18" gate="G$1" pin="OUT"/>
+<pinref part="T4" gate="G$1" pin="OUT"/>
 <wire x1="160.02" y1="185.42" x2="170.18" y2="185.42" width="0.1524" layer="91"/>
 <label x="162.56" y="185.42" size="1.778" layer="95"/>
 <pinref part="C20" gate="G$1" pin="1"/>
@@ -15281,7 +15281,7 @@ Transistor here can take 4A</text>
 </net>
 <net name="+12V_FAN_FUSE" class="0">
 <segment>
-<pinref part="U$23" gate="G$1" pin="OUT"/>
+<pinref part="T3" gate="G$1" pin="OUT"/>
 <wire x1="246.38" y1="114.3" x2="254" y2="114.3" width="0.1524" layer="91"/>
 <label x="248.92" y="114.3" size="1.778" layer="95"/>
 <pinref part="C18" gate="G$1" pin="1"/>
@@ -15299,7 +15299,7 @@ Transistor here can take 4A</text>
 </net>
 <net name="FAN_EN" class="0">
 <segment>
-<pinref part="U$23" gate="G$1" pin="EN"/>
+<pinref part="T3" gate="G$1" pin="EN"/>
 <wire x1="236.22" y1="93.98" x2="236.22" y2="86.36" width="0.1524" layer="91"/>
 <wire x1="236.22" y1="86.36" x2="213.36" y2="86.36" width="0.1524" layer="91"/>
 <label x="210.82" y="86.36" size="1.778" layer="95"/>
@@ -15312,7 +15312,7 @@ Transistor here can take 4A</text>
 </net>
 <net name="FAN_FLG" class="0">
 <segment>
-<pinref part="U$23" gate="G$1" pin="FLG"/>
+<pinref part="T3" gate="G$1" pin="FLG"/>
 <wire x1="238.76" y1="93.98" x2="238.76" y2="81.28" width="0.1524" layer="91"/>
 <wire x1="238.76" y1="81.28" x2="213.36" y2="81.28" width="0.1524" layer="91"/>
 <label x="210.82" y="81.28" size="1.778" layer="95"/>
@@ -15351,7 +15351,7 @@ Transistor here can take 4A</text>
 </net>
 <net name="FLOOD_LIGHT_EN" class="0">
 <segment>
-<pinref part="U$25" gate="G$1" pin="G"/>
+<pinref part="T2" gate="G$1" pin="G"/>
 <wire x1="58.42" y1="48.26" x2="43.18" y2="48.26" width="0.1524" layer="91"/>
 <label x="33.02" y="48.26" size="1.778" layer="95"/>
 </segment>
@@ -15363,7 +15363,7 @@ Transistor here can take 4A</text>
 </net>
 <net name="+24V_FLOOD_FUSE" class="0">
 <segment>
-<pinref part="U$25" gate="G$1" pin="S"/>
+<pinref part="T2" gate="G$1" pin="S"/>
 <wire x1="63.5" y1="45.72" x2="63.5" y2="40.64" width="0.1524" layer="91"/>
 <wire x1="63.5" y1="40.64" x2="78.74" y2="40.64" width="0.1524" layer="91"/>
 <label x="66.04" y="40.64" size="1.778" layer="95"/>
@@ -15403,15 +15403,15 @@ Transistor here can take 4A</text>
 <attribute name="REVISION" x="245.11" y="6.35" size="2.54" layer="94"/>
 <attribute name="SCH_DESC" x="173.99" y="6.35" size="2.54" layer="94"/>
 </instance>
-<instance part="U$26" gate="G$1" x="40.64" y="195.58" smashed="yes">
+<instance part="D6" gate="G$1" x="40.64" y="195.58" smashed="yes">
 <attribute name="NAME" x="38.3286" y="198.2216" size="1.778" layer="95"/>
 <attribute name="VALUE" x="38.0746" y="191.0842" size="1.778" layer="96"/>
 </instance>
-<instance part="U$27" gate="G$1" x="40.64" y="180.34" smashed="yes">
+<instance part="D7" gate="G$1" x="40.64" y="180.34" smashed="yes">
 <attribute name="NAME" x="38.3286" y="182.9816" size="1.778" layer="95"/>
 <attribute name="VALUE" x="38.0746" y="175.8442" size="1.778" layer="96"/>
 </instance>
-<instance part="U$28" gate="G$1" x="40.64" y="162.56" smashed="yes">
+<instance part="D8" gate="G$1" x="40.64" y="162.56" smashed="yes">
 <attribute name="NAME" x="38.3286" y="165.2016" size="1.778" layer="95"/>
 <attribute name="VALUE" x="38.0746" y="158.0642" size="1.778" layer="96"/>
 </instance>
@@ -15451,7 +15451,7 @@ Transistor here can take 4A</text>
 <nets>
 <net name="DIODE_TO_RED" class="0">
 <segment>
-<pinref part="U$26" gate="G$1" pin="C"/>
+<pinref part="D6" gate="G$1" pin="C"/>
 <wire x1="43.18" y1="195.58" x2="58.42" y2="195.58" width="0.1524" layer="91"/>
 <label x="50.8" y="195.58" size="1.778" layer="95"/>
 </segment>
@@ -15463,7 +15463,7 @@ Transistor here can take 4A</text>
 </net>
 <net name="DIODE_TO_INTER" class="0">
 <segment>
-<pinref part="U$27" gate="G$1" pin="C"/>
+<pinref part="D7" gate="G$1" pin="C"/>
 <wire x1="43.18" y1="180.34" x2="58.42" y2="180.34" width="0.1524" layer="91"/>
 <label x="50.8" y="180.34" size="1.778" layer="95"/>
 </segment>
@@ -15475,7 +15475,7 @@ Transistor here can take 4A</text>
 </net>
 <net name="SOLENOID_TRIG" class="0">
 <segment>
-<pinref part="U$28" gate="G$1" pin="C"/>
+<pinref part="D8" gate="G$1" pin="C"/>
 <wire x1="43.18" y1="162.56" x2="58.42" y2="162.56" width="0.1524" layer="91"/>
 <label x="50.8" y="162.56" size="1.778" layer="95"/>
 </segment>
@@ -15487,7 +15487,7 @@ Transistor here can take 4A</text>
 </net>
 <net name="+24V" class="0">
 <segment>
-<pinref part="U$26" gate="G$1" pin="A"/>
+<pinref part="D6" gate="G$1" pin="A"/>
 <pinref part="P+20" gate="1" pin="+24V"/>
 <wire x1="38.1" y1="195.58" x2="33.02" y2="195.58" width="0.1524" layer="91"/>
 <wire x1="33.02" y1="195.58" x2="33.02" y2="200.66" width="0.1524" layer="91"/>
@@ -15495,7 +15495,7 @@ Transistor here can take 4A</text>
 </net>
 <net name="SOLENOID_TO_DIODE" class="0">
 <segment>
-<pinref part="U$27" gate="G$1" pin="A"/>
+<pinref part="D7" gate="G$1" pin="A"/>
 <wire x1="38.1" y1="180.34" x2="20.32" y2="180.34" width="0.1524" layer="91"/>
 <label x="10.16" y="180.34" size="1.778" layer="95"/>
 </segment>
@@ -15507,7 +15507,7 @@ Transistor here can take 4A</text>
 </net>
 <net name="SOLENOID_TRIG_GND" class="0">
 <segment>
-<pinref part="U$28" gate="G$1" pin="A"/>
+<pinref part="D8" gate="G$1" pin="A"/>
 <wire x1="38.1" y1="162.56" x2="20.32" y2="162.56" width="0.1524" layer="91"/>
 <label x="10.16" y="162.56" size="1.778" layer="95"/>
 </segment>

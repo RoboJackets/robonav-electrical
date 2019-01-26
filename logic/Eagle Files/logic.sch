@@ -13702,7 +13702,6 @@ In this library you will find integrated circuits (ICs) that are directly involv
 <sheet>
 <description>mBed Breakout</description>
 <plain>
-<text x="30.48" y="182.88" size="1.778" layer="97">Change Everything to I/O</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0" smashed="yes"/>
@@ -15233,14 +15232,15 @@ Transistor here can take 4A</text>
 <text x="10.16" y="203.2" size="1.778" layer="91">Updated</text>
 <text x="165.1" y="157.48" size="1.27" layer="103" font="vector">Pin 4 left empty intentionally</text>
 <wire x1="104.14" y1="208.28" x2="149.86" y2="208.28" width="0.1524" layer="103" style="shortdash"/>
-<wire x1="149.86" y1="208.28" x2="203.2" y2="208.28" width="0.1524" layer="103" style="shortdash"/>
+<wire x1="152.4" y1="208.28" x2="203.2" y2="208.28" width="0.1524" layer="103" style="shortdash"/>
 <wire x1="203.2" y1="208.28" x2="203.2" y2="142.24" width="0.1524" layer="103" style="shortdash"/>
-<wire x1="203.2" y1="142.24" x2="149.86" y2="142.24" width="0.1524" layer="103" style="shortdash"/>
+<wire x1="203.2" y1="142.24" x2="152.4" y2="142.24" width="0.1524" layer="103" style="shortdash"/>
 <wire x1="149.86" y1="142.24" x2="104.14" y2="142.24" width="0.1524" layer="103" style="shortdash"/>
 <wire x1="104.14" y1="142.24" x2="104.14" y2="208.28" width="0.1524" layer="103" style="shortdash"/>
 <wire x1="149.86" y1="208.28" x2="149.86" y2="142.24" width="0.1524" layer="103" style="shortdash"/>
 <text x="109.22" y="144.78" size="2.54" layer="103" font="vector">mbed Indicator LED</text>
 <text x="172.72" y="144.78" size="2.54" layer="103" font="vector">USBSerial Port</text>
+<wire x1="152.4" y1="208.28" x2="152.4" y2="142.24" width="0.1524" layer="103" style="shortdash"/>
 </plain>
 <instances>
 <instance part="FRAME4" gate="G$1" x="0" y="0" smashed="yes"/>

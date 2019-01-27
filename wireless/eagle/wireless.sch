@@ -17890,6 +17890,41 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <label x="132.08" y="104.14" size="1.778" layer="95"/>
 </segment>
 </net>
+<net name="FLOOD_LIGHT_EN" class="0">
+<segment>
+<pinref part="U1" gate="1" pin="PH6(OC2B)"/>
+<wire x1="58.42" y1="45.72" x2="38.1" y2="45.72" width="0.1524" layer="91"/>
+<label x="33.02" y="45.72" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="FAN_FLG" class="0">
+<segment>
+<pinref part="U1" gate="1" pin="PH5(OC4C)"/>
+<wire x1="58.42" y1="43.18" x2="38.1" y2="43.18" width="0.1524" layer="91"/>
+<label x="33.02" y="43.18" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="FAN_EN" class="0">
+<segment>
+<pinref part="U1" gate="1" pin="PH4(OC4B)"/>
+<wire x1="58.42" y1="40.64" x2="38.1" y2="40.64" width="0.1524" layer="91"/>
+<label x="33.02" y="40.64" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="SAFETY_LIGHT_EN" class="0">
+<segment>
+<pinref part="U1" gate="1" pin="PH3(OC4A)"/>
+<wire x1="58.42" y1="38.1" x2="38.1" y2="38.1" width="0.1524" layer="91"/>
+<label x="33.02" y="38.1" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="SAFETY_LIGHT_FLG" class="0">
+<segment>
+<pinref part="U1" gate="1" pin="PH2(XCK2)"/>
+<wire x1="58.42" y1="35.56" x2="38.1" y2="35.56" width="0.1524" layer="91"/>
+<label x="33.02" y="35.56" size="1.778" layer="95"/>
+</segment>
+</net>
 </nets>
 </sheet>
 <sheet>
@@ -18034,34 +18069,39 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <label x="25.4" y="154.94" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$7" class="0">
+<net name="SAFETY_LIGHT_FLG" class="0">
 <segment>
 <pinref part="X3" gate="-6" pin="S"/>
 <wire x1="43.18" y1="111.76" x2="27.94" y2="111.76" width="0.1524" layer="91"/>
+<label x="20.32" y="111.76" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$8" class="0">
+<net name="SAFETY_LIGHT_EN" class="0">
 <segment>
 <pinref part="X3" gate="-5" pin="S"/>
 <wire x1="43.18" y1="114.3" x2="27.94" y2="114.3" width="0.1524" layer="91"/>
+<label x="20.32" y="114.3" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$9" class="0">
+<net name="FAN_EN" class="0">
 <segment>
 <pinref part="X3" gate="-4" pin="S"/>
 <wire x1="43.18" y1="116.84" x2="27.94" y2="116.84" width="0.1524" layer="91"/>
+<label x="20.32" y="116.84" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$11" class="0">
+<net name="FAN_FLG" class="0">
 <segment>
 <pinref part="X3" gate="-3" pin="S"/>
 <wire x1="43.18" y1="119.38" x2="27.94" y2="119.38" width="0.1524" layer="91"/>
+<label x="20.32" y="119.38" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$12" class="0">
+<net name="FLOOD_LIGHT_EN" class="0">
 <segment>
 <pinref part="X3" gate="-2" pin="S"/>
 <wire x1="43.18" y1="121.92" x2="27.94" y2="121.92" width="0.1524" layer="91"/>
+<label x="20.32" y="121.92" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>

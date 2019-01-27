@@ -48,6 +48,7 @@ void pid();
 void setLeftSpeed(int);
 void setRightSpeed(int);
 void bothMotorStop();
+void triggerEstop();
 
 /* desired motor speed (as specified by the client) */
 float desiredSpeedL = 0;
@@ -191,14 +192,7 @@ int main() {
             /* estop logic */
             if (eStopStatus.read())
             {
-                // If get 5V, since inverted, meaning disabled on motors
-                estop = 0;
-                desiredSpeedL = 0;
-                desiredSpeedR = 0;
-                PWM_L = 0;
-                PWM_R = 0;
-                bothMotorStop();
-                eStopLight = 1;
+                triggerEstop();
             }
             else
             {
@@ -262,8 +256,21 @@ int main() {
 
         }
 
+        triggerEstop();
         client.close();
     }
+}
+
+void triggerEstop()
+{
+    // If get 5V, since inverted, meaning disabled on motors
+    estop = 0;
+    desiredSpeedL = 0;
+    desiredSpeedR = 0;
+    PWM_L = 0;
+    PWM_R = 0;
+    bothMotorStop();
+    eStopLight = 1;
 }
 
 /*

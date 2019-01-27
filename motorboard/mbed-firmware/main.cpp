@@ -135,7 +135,7 @@ int main() {
         printf("accepted new client\r\n");
         client.set_blocking(false, TIMEOUT_MS); // Set calls to non-blocking, timeout after TIMEOUT_MS
         printf("Connection from: %s\r\n", client.get_address());
-
+	estop = 1;
         while (true)
         {
             /* read data into the buffer. This call blocks until data is read */

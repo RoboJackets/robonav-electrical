@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.1.3">
+<eagle version="9.2.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -8,34 +8,34 @@
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
-<layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
-<layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
-<layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
-<layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
-<layer number="6" name="Route6" color="1" fill="8" visible="no" active="no"/>
-<layer number="7" name="Route7" color="4" fill="8" visible="no" active="no"/>
-<layer number="8" name="Route8" color="1" fill="2" visible="no" active="no"/>
-<layer number="9" name="Route9" color="4" fill="2" visible="no" active="no"/>
-<layer number="10" name="Route10" color="1" fill="7" visible="no" active="no"/>
-<layer number="11" name="Route11" color="4" fill="7" visible="no" active="no"/>
-<layer number="12" name="Route12" color="1" fill="5" visible="no" active="no"/>
-<layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
-<layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
-<layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
-<layer number="20" name="Dimension" color="15" fill="1" visible="no" active="no"/>
-<layer number="21" name="tPlace" color="15" fill="1" visible="no" active="no"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
+<layer number="2" name="Route2" color="16" fill="1" visible="yes" active="no"/>
+<layer number="3" name="Route3" color="17" fill="1" visible="yes" active="no"/>
+<layer number="4" name="Route4" color="18" fill="1" visible="yes" active="no"/>
+<layer number="5" name="Route5" color="19" fill="1" visible="yes" active="no"/>
+<layer number="6" name="Route6" color="25" fill="1" visible="yes" active="no"/>
+<layer number="7" name="Route7" color="26" fill="1" visible="yes" active="no"/>
+<layer number="8" name="Route8" color="27" fill="1" visible="yes" active="no"/>
+<layer number="9" name="Route9" color="28" fill="1" visible="yes" active="no"/>
+<layer number="10" name="Route10" color="29" fill="1" visible="yes" active="no"/>
+<layer number="11" name="Route11" color="30" fill="1" visible="yes" active="no"/>
+<layer number="12" name="Route12" color="20" fill="1" visible="yes" active="no"/>
+<layer number="13" name="Route13" color="21" fill="1" visible="yes" active="no"/>
+<layer number="14" name="Route14" color="22" fill="1" visible="yes" active="no"/>
+<layer number="15" name="Route15" color="23" fill="1" visible="yes" active="no"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
+<layer number="20" name="Dimension" color="24" fill="1" visible="yes" active="no"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="no"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="no"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
@@ -44,8 +44,8 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="no"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
@@ -53,19 +53,19 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
-<layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="14" fill="1" visible="no" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
-<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
-<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
-<layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
-<layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
-<layer number="59" name="tCarbon" color="7" fill="1" visible="no" active="no"/>
-<layer number="60" name="bCarbon" color="7" fill="1" visible="no" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
+<layer number="50" name="dxf" color="7" fill="1" visible="yes" active="no"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
+<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="yes" active="no"/>
+<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="yes" active="no"/>
+<layer number="56" name="wert" color="7" fill="1" visible="yes" active="no"/>
+<layer number="57" name="tCAD" color="7" fill="1" visible="yes" active="no"/>
+<layer number="59" name="tCarbon" color="7" fill="1" visible="yes" active="no"/>
+<layer number="60" name="bCarbon" color="7" fill="1" visible="yes" active="no"/>
 <layer number="88" name="SimResults" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="89" name="SimProbes" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
@@ -7949,6 +7949,47 @@ Source: AVX .. aphvc.pdf</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="IGVC-Misc">
+<packages>
+<package name="FUSE_HOLDER">
+<pad name="P$1" x="0" y="0" drill="1.6"/>
+<pad name="P$2" x="0" y="3.4" drill="1.6"/>
+<pad name="P$3" x="9.92" y="3.4" drill="1.6"/>
+<pad name="P$4" x="9.92" y="0" drill="1.6"/>
+</package>
+</packages>
+<symbols>
+<symbol name="FUSE">
+<wire x1="-3.81" y1="-0.762" x2="3.81" y2="-0.762" width="0.254" layer="94"/>
+<wire x1="3.81" y1="0.762" x2="-3.81" y2="0.762" width="0.254" layer="94"/>
+<wire x1="3.81" y1="-0.762" x2="3.81" y2="0.762" width="0.254" layer="94"/>
+<wire x1="-3.81" y1="0.762" x2="-3.81" y2="-0.762" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="0" x2="2.54" y2="0" width="0.1524" layer="94"/>
+<text x="-3.81" y="1.397" size="1.778" layer="95">&gt;NAME</text>
+<text x="-3.81" y="-2.921" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
+<pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="FUSE_HOLDER">
+<gates>
+<gate name="G$1" symbol="FUSE" x="5.08" y="2.54"/>
+</gates>
+<devices>
+<device name="" package="FUSE_HOLDER">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1 P$2"/>
+<connect gate="G$1" pin="2" pad="P$3 P$4" route="any"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -7960,7 +8001,9 @@ Source: AVX .. aphvc.pdf</description>
 </classes>
 <parts>
 <part name="U2" library="SparkFun-IC-Microcontroller" library_urn="urn:adsk.eagle:library:525" deviceset="ATMEGA328P_MLF" device="MLF32" package3d_urn="urn:adsk.eagle:package:38946/1" value="ATMEGA328P_MLF"/>
-<part name="J2" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_03" device="" package3d_urn="urn:adsk.eagle:package:38063/1"/>
+<part name="J2" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_03" device="" package3d_urn="urn:adsk.eagle:package:38063/1">
+<attribute name="SPICEPREFIX" value="J"/>
+</part>
 <part name="J1" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_03" device="" package3d_urn="urn:adsk.eagle:package:38063/1"/>
 <part name="J3" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="AVR_SPI_PROG_3X2" device="NS" package3d_urn="urn:adsk.eagle:package:38013/1"/>
 <part name="R3" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="470OHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="400"/>
@@ -7969,7 +8012,7 @@ Source: AVX .. aphvc.pdf</description>
 <part name="D1" library="SparkFun-LED" library_urn="urn:adsk.eagle:library:529" deviceset="LED-GREEN" device="0603" package3d_urn="urn:adsk.eagle:package:39354/1" value="GREEN"/>
 <part name="C1" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="0.22UF" device="-0603-25V-10%" package3d_urn="urn:adsk.eagle:package:37414/1" value="0.22uF"/>
 <part name="C2" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="0.22UF" device="-0603-25V-10%" package3d_urn="urn:adsk.eagle:package:37414/1" value="0.22uF"/>
-<part name="U1" library="SparkFun-IC-Power" library_urn="urn:adsk.eagle:library:526" deviceset="R-78E5.0-1.0" device="" package3d_urn="urn:adsk.eagle:package:39086/1"/>
+<part name="5V_REGULATOR" library="SparkFun-IC-Power" library_urn="urn:adsk.eagle:library:526" deviceset="R-78E5.0-1.0" device="" package3d_urn="urn:adsk.eagle:package:39086/1"/>
 <part name="S1" library="SparkFun-Switches" library_urn="urn:adsk.eagle:library:535" deviceset="MOMENTARY-SWITCH-SPST" device="-PTH-6.0MM-KIT" package3d_urn="urn:adsk.eagle:package:40170/1"/>
 <part name="R1" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="470OHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="200"/>
 <part name="R2" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="470OHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="10k"/>
@@ -7991,6 +8034,7 @@ Source: AVX .. aphvc.pdf</description>
 <part name="GND8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="C5" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="1000UF" device="-RADIAL-5MM-25V-20%" package3d_urn="urn:adsk.eagle:package:37412/1" value="10uF"/>
 <part name="C6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="10uF"/>
+<part name="FUSE" library="IGVC-Misc" deviceset="FUSE_HOLDER" device="" value="3.6A"/>
 </parts>
 <sheets>
 <sheet>
@@ -8011,7 +8055,7 @@ Source: AVX .. aphvc.pdf</description>
 </instance>
 <instance part="J3" gate="G$1" x="78.74" y="10.16" smashed="yes">
 <attribute name="NAME" x="73.66" y="15.748" size="1.778" layer="95" font="vector"/>
-<attribute name="VALUE" x="73.66" y="2.794" size="1.778" layer="96" font="vector"/>
+<attribute name="VALUE" x="66.04" y="0.254" size="1.778" layer="96" font="vector"/>
 </instance>
 <instance part="R3" gate="G$1" x="86.36" y="109.22" smashed="yes" rot="R180">
 <attribute name="NAME" x="86.36" y="107.696" size="1.778" layer="95" font="vector" rot="R180" align="bottom-center"/>
@@ -8025,9 +8069,9 @@ Source: AVX .. aphvc.pdf</description>
 <attribute name="NAME" x="46.736" y="52.832" size="1.778" layer="95" font="vector" align="bottom-center"/>
 <attribute name="VALUE" x="37.592" y="54.356" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
-<instance part="D1" gate="G$1" x="-7.62" y="30.48" smashed="yes">
-<attribute name="NAME" x="-11.303" y="27.432" size="1.778" layer="95" font="vector" rot="R90"/>
-<attribute name="VALUE" x="-5.715" y="25.908" size="1.778" layer="96" font="vector" rot="R90" align="top-left"/>
+<instance part="D1" gate="G$1" x="-7.62" y="27.94" smashed="yes">
+<attribute name="NAME" x="-3.683" y="24.892" size="1.778" layer="95" font="vector" rot="R90"/>
+<attribute name="VALUE" x="-5.715" y="23.368" size="1.778" layer="96" font="vector" rot="R90" align="top-left"/>
 </instance>
 <instance part="C1" gate="G$1" x="35.56" y="60.96" smashed="yes" rot="R270">
 <attribute name="NAME" x="33.782" y="61.341" size="1.778" layer="95" font="vector"/>
@@ -8037,23 +8081,23 @@ Source: AVX .. aphvc.pdf</description>
 <attribute name="NAME" x="33.274" y="46.101" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="33.528" y="41.529" size="1.778" layer="96" font="vector"/>
 </instance>
-<instance part="U1" gate="G$1" x="15.24" y="35.56" smashed="yes" rot="MR0">
-<attribute name="NAME" x="12.7" y="27.94" size="1.778" layer="95" rot="MR0"/>
+<instance part="5V_REGULATOR" gate="G$1" x="15.24" y="35.56" smashed="yes" rot="MR0">
+<attribute name="NAME" x="25.654" y="38.862" size="1.778" layer="95" rot="MR0"/>
 </instance>
 <instance part="S1" gate="G$1" x="38.1" y="81.28" smashed="yes" rot="R270">
 <attribute name="NAME" x="39.624" y="81.28" size="1.778" layer="95" font="vector" rot="R270" align="bottom-center"/>
 </instance>
-<instance part="R1" gate="G$1" x="-7.62" y="17.78" smashed="yes" rot="R270">
-<attribute name="NAME" x="-6.096" y="17.78" size="1.778" layer="95" font="vector" rot="R270" align="bottom-center"/>
-<attribute name="VALUE" x="-9.144" y="17.78" size="1.778" layer="96" font="vector" rot="R270" align="top-center"/>
+<instance part="R1" gate="G$1" x="-7.62" y="15.24" smashed="yes" rot="R270">
+<attribute name="NAME" x="-6.096" y="15.24" size="1.778" layer="95" font="vector" rot="R270" align="bottom-center"/>
+<attribute name="VALUE" x="-9.144" y="15.24" size="1.778" layer="96" font="vector" rot="R270" align="top-center"/>
 </instance>
 <instance part="R2" gate="G$1" x="38.1" y="96.52" smashed="yes" rot="R270">
 <attribute name="NAME" x="39.624" y="96.52" size="1.778" layer="95" font="vector" rot="R270" align="bottom-center"/>
 <attribute name="VALUE" x="36.576" y="96.52" size="1.778" layer="96" font="vector" rot="R270" align="top-center"/>
 </instance>
-<instance part="C3" gate="G$1" x="-35.56" y="33.02" smashed="yes">
-<attribute name="NAME" x="-34.544" y="33.655" size="1.778" layer="95" font="vector"/>
-<attribute name="VALUE" x="-34.544" y="28.829" size="1.778" layer="96" font="vector"/>
+<instance part="C3" gate="G$1" x="-20.32" y="33.02" smashed="yes">
+<attribute name="NAME" x="-19.304" y="33.655" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="-19.304" y="28.829" size="1.778" layer="96" font="vector"/>
 </instance>
 <instance part="SUPPLY1" gate="G$1" x="73.66" y="96.52" smashed="yes">
 <attribute name="VALUE" x="73.66" y="99.314" size="1.778" layer="96" align="bottom-center"/>
@@ -8064,17 +8108,17 @@ Source: AVX .. aphvc.pdf</description>
 <instance part="SUPPLY3" gate="G$1" x="38.1" y="106.68" smashed="yes">
 <attribute name="VALUE" x="38.1" y="109.474" size="1.778" layer="96" align="bottom-center"/>
 </instance>
-<instance part="SUPPLY4" gate="G$1" x="48.26" y="73.66" smashed="yes" rot="R90">
-<attribute name="VALUE" x="45.466" y="73.66" size="1.778" layer="96" rot="R90" align="bottom-center"/>
+<instance part="SUPPLY4" gate="G$1" x="48.26" y="73.66" smashed="yes">
+<attribute name="VALUE" x="48.26" y="76.454" size="1.778" layer="96" align="bottom-center"/>
 </instance>
-<instance part="SUPPLY5" gate="G$1" x="-17.78" y="40.64" smashed="yes">
-<attribute name="VALUE" x="-17.78" y="43.434" size="1.778" layer="96" align="bottom-center"/>
+<instance part="SUPPLY5" gate="G$1" x="-10.16" y="38.1" smashed="yes">
+<attribute name="VALUE" x="-10.16" y="40.894" size="1.778" layer="96" align="bottom-center"/>
 </instance>
-<instance part="GND6" gate="1" x="-7.62" y="7.62" smashed="yes">
-<attribute name="VALUE" x="-10.16" y="5.08" size="1.778" layer="96"/>
+<instance part="GND6" gate="1" x="-7.62" y="5.08" smashed="yes">
+<attribute name="VALUE" x="-10.16" y="2.54" size="1.778" layer="96"/>
 </instance>
-<instance part="GND2" gate="1" x="-35.56" y="22.86" smashed="yes">
-<attribute name="VALUE" x="-38.1" y="20.32" size="1.778" layer="96"/>
+<instance part="GND2" gate="1" x="-20.32" y="22.86" smashed="yes">
+<attribute name="VALUE" x="-22.86" y="20.32" size="1.778" layer="96"/>
 </instance>
 <instance part="GND3" gate="1" x="15.24" y="15.24" smashed="yes">
 <attribute name="VALUE" x="12.7" y="12.7" size="1.778" layer="96"/>
@@ -8094,18 +8138,25 @@ Source: AVX .. aphvc.pdf</description>
 <instance part="GND1" gate="1" x="43.18" y="27.94" smashed="yes" rot="R270">
 <attribute name="VALUE" x="40.64" y="30.48" size="1.778" layer="96" rot="R270"/>
 </instance>
-<instance part="C4" gate="G$1" x="48.26" y="66.04" smashed="yes" rot="R270">
-<attribute name="NAME" x="43.942" y="66.167" size="1.778" layer="95" font="vector"/>
-<attribute name="VALUE" x="44.958" y="61.849" size="1.778" layer="96" font="vector"/>
+<instance part="C4" gate="G$1" x="48.26" y="68.58" smashed="yes" rot="R270">
+<attribute name="NAME" x="43.942" y="68.707" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="44.958" y="64.389" size="1.778" layer="96" font="vector"/>
 </instance>
-<instance part="GND8" gate="1" x="40.64" y="63.5" smashed="yes">
-<attribute name="VALUE" x="37.846" y="63.5" size="1.778" layer="96"/>
+<instance part="GND8" gate="1" x="40.64" y="66.04" smashed="yes">
+<attribute name="VALUE" x="37.846" y="66.04" size="1.778" layer="96"/>
 </instance>
 <instance part="C5" gate="G$1" x="27.94" y="25.4" smashed="yes">
 <attribute name="NAME" x="28.956" y="26.035" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="28.956" y="21.209" size="1.778" layer="96" font="vector"/>
 </instance>
-<instance part="C6" gate="G$1" x="2.54" y="25.4"/>
+<instance part="C6" gate="G$1" x="2.54" y="25.4" smashed="yes">
+<attribute name="NAME" x="3.556" y="26.035" size="1.778" layer="95"/>
+<attribute name="VALUE" x="3.556" y="21.209" size="1.778" layer="96"/>
+</instance>
+<instance part="FUSE" gate="G$1" x="-2.54" y="35.56" smashed="yes">
+<attribute name="NAME" x="-6.35" y="36.957" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-6.35" y="32.639" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -8145,9 +8196,9 @@ Source: AVX .. aphvc.pdf</description>
 <label x="91.44" y="5.08" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
-<wire x1="-7.62" y1="12.7" x2="-7.62" y2="10.16" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="2"/>
 <pinref part="GND6" gate="1" pin="GND"/>
+<wire x1="-7.62" y1="7.62" x2="-7.62" y2="10.16" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="S1" gate="G$1" pin="2"/>
@@ -8166,12 +8217,12 @@ Source: AVX .. aphvc.pdf</description>
 </segment>
 <segment>
 <pinref part="C3" gate="G$1" pin="-"/>
-<wire x1="-35.56" y1="27.94" x2="-35.56" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="-20.32" y1="27.94" x2="-20.32" y2="25.4" width="0.1524" layer="91"/>
 <pinref part="GND2" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="GND3" gate="1" pin="GND"/>
-<pinref part="U1" gate="G$1" pin="GND"/>
+<pinref part="5V_REGULATOR" gate="G$1" pin="GND"/>
 <wire x1="15.24" y1="17.78" x2="15.24" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="15.24" y1="20.32" x2="15.24" y2="27.94" width="0.1524" layer="91"/>
 <junction x="15.24" y="20.32"/>
@@ -8182,7 +8233,7 @@ Source: AVX .. aphvc.pdf</description>
 </segment>
 <segment>
 <pinref part="C4" gate="G$1" pin="-"/>
-<wire x1="43.18" y1="66.04" x2="40.64" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="68.58" x2="40.64" y2="68.58" width="0.1524" layer="91"/>
 <pinref part="GND8" gate="1" pin="GND"/>
 </segment>
 </net>
@@ -8221,12 +8272,17 @@ Source: AVX .. aphvc.pdf</description>
 <pinref part="J2" gate="J$1" pin="3"/>
 </segment>
 <segment>
+<wire x1="-10.16" y1="35.56" x2="-20.32" y2="35.56" width="0.1524" layer="91"/>
+<pinref part="C3" gate="G$1" pin="+"/>
 <pinref part="D1" gate="G$1" pin="A"/>
-<wire x1="-7.62" y1="35.56" x2="-7.62" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="-7.62" y1="35.56" x2="-17.78" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="-7.62" y1="35.56" x2="-7.62" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="-7.62" y1="35.56" x2="-10.16" y2="35.56" width="0.1524" layer="91"/>
 <pinref part="SUPPLY5" gate="G$1" pin="VCC"/>
-<wire x1="-25.4" y1="35.56" x2="-17.78" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="-17.78" y1="35.56" x2="-17.78" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="-10.16" y1="35.56" x2="-10.16" y2="38.1" width="0.1524" layer="91"/>
+<pinref part="FUSE" gate="G$1" pin="1"/>
+<junction x="-7.62" y="35.56"/>
+<label x="-15.24" y="35.56" size="1.778" layer="95" rot="R90" xref="yes"/>
+<junction x="-10.16" y="35.56"/>
 </segment>
 </net>
 <net name="MISO" class="0">
@@ -8301,8 +8357,8 @@ Source: AVX .. aphvc.pdf</description>
 <net name="N$10" class="0">
 <segment>
 <pinref part="D1" gate="G$1" pin="C"/>
-<wire x1="-7.62" y1="22.86" x2="-7.62" y2="25.4" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="1"/>
+<wire x1="-7.62" y1="20.32" x2="-7.62" y2="22.86" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="XTAL1" class="0">
@@ -8371,7 +8427,7 @@ Source: AVX .. aphvc.pdf</description>
 </net>
 <net name="9V" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="IN"/>
+<pinref part="5V_REGULATOR" gate="G$1" pin="IN"/>
 <wire x1="22.86" y1="35.56" x2="27.94" y2="35.56" width="0.1524" layer="91"/>
 <label x="31.75" y="35.56" size="1.778" layer="95" ratio="1" xref="yes"/>
 <wire x1="27.94" y1="35.56" x2="31.75" y2="35.56" width="0.1524" layer="91"/>
@@ -8384,35 +8440,25 @@ Source: AVX .. aphvc.pdf</description>
 <segment>
 <pinref part="C4" gate="G$1" pin="+"/>
 <pinref part="U2" gate="U$1" pin="AREF"/>
-<wire x1="50.8" y1="66.04" x2="54.61" y2="66.04" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$2" class="0">
-<segment>
-<wire x1="-25.4" y1="35.56" x2="-35.56" y2="35.56" width="0.1524" layer="91"/>
-<pinref part="C3" gate="G$1" pin="+"/>
+<wire x1="50.8" y1="68.58" x2="54.61" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$5" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="OUT"/>
+<pinref part="5V_REGULATOR" gate="G$1" pin="OUT"/>
 <wire x1="7.62" y1="35.56" x2="2.54" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="2.54" y1="35.56" x2="-7.62" y2="35.56" width="0.1524" layer="91"/>
 <wire x1="2.54" y1="35.56" x2="2.54" y2="27.94" width="0.1524" layer="91"/>
 <junction x="2.54" y="35.56"/>
 <pinref part="C6" gate="G$1" pin="1"/>
+<pinref part="FUSE" gate="G$1" pin="2"/>
 </segment>
 </net>
 </nets>
 </sheet>
 </sheets>
 <errors>
-<approved hash="209,1,5.08,40.64,9V,,,,,"/>
-<approved hash="106,1,5.08,40.64,9V,,,,,"/>
 <approved hash="106,1,102.87,58.42,RX,,,,,"/>
 <approved hash="106,1,102.87,55.88,TX,,,,,"/>
-<approved hash="113,1,67.9027,110.653,J2,,,,,"/>
-<approved hash="113,1,67.9027,95.4126,J1,,,,,"/>
 </errors>
 </schematic>
 </drawing>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.1.3">
+<eagle version="9.2.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -6975,9 +6975,9 @@ In this library you will find frames that can be used to help organize a schemat
 <wire x1="7.62" y1="137.16" x2="-45.72" y2="137.16" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="-45.72" y1="137.16" x2="-45.72" y2="162.56" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="-45.72" y1="134.62" x2="7.62" y2="134.62" width="0.1524" layer="97" style="shortdash"/>
-<wire x1="7.62" y1="134.62" x2="7.62" y2="81.28" width="0.1524" layer="97" style="shortdash"/>
-<wire x1="7.62" y1="81.28" x2="-45.72" y2="81.28" width="0.1524" layer="97" style="shortdash"/>
-<wire x1="-45.72" y1="81.28" x2="-45.72" y2="134.62" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="7.62" y1="134.62" x2="7.62" y2="76.2" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="7.62" y1="76.2" x2="-45.72" y2="76.2" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="-45.72" y1="76.2" x2="-45.72" y2="134.62" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="10.16" y1="200.66" x2="71.12" y2="200.66" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="71.12" y1="200.66" x2="71.12" y2="165.1" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="71.12" y1="165.1" x2="10.16" y2="165.1" width="0.1524" layer="97" style="shortdash"/>
@@ -6986,8 +6986,10 @@ In this library you will find frames that can be used to help organize a schemat
 <wire x1="99.06" y1="162.56" x2="99.06" y2="81.28" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="99.06" y1="81.28" x2="10.16" y2="81.28" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="10.16" y1="81.28" x2="10.16" y2="162.56" width="0.1524" layer="97" style="shortdash"/>
-<text x="-43.18" y="167.64" size="1.778" layer="97">Max Amps : 1.8A per Strip, 3.6A max</text>
-<text x="-43.18" y="83.82" size="1.778" layer="97">30 Lights / Meter Neopixel Strips</text>
+<text x="-43.18" y="167.64" size="1.778" layer="97">Max Amps : 1.8A per Strip, 3.6A max draw</text>
+<text x="-43.18" y="86.36" size="1.778" layer="97">30 Lights / Meter Neopixel Strips</text>
+<text x="-43.18" y="78.74" size="1.778" layer="97">Pin 2 = Data Signal ; 400 Ohm resistor 
+from NeoPixel Data Sheet</text>
 </plain>
 <instances>
 <instance part="U2" gate="U$1" x="57.15" y="127" smashed="yes">
@@ -7076,8 +7078,12 @@ In this library you will find frames that can be used to help organize a schemat
 <attribute name="NAME" x="-21.59" y="191.897" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-21.59" y="187.579" size="1.778" layer="96"/>
 </instance>
-<instance part="FRAME1" gate="G$1" x="-50.8" y="-10.16"/>
-<instance part="FRAME1" gate="G$2" x="121.92" y="-10.16"/>
+<instance part="FRAME1" gate="G$1" x="-50.8" y="-10.16" smashed="yes"/>
+<instance part="FRAME1" gate="G$2" x="121.92" y="-10.16" smashed="yes">
+<attribute name="LAST_DATE_TIME" x="134.62" y="-8.89" size="2.54" layer="94" font="vector"/>
+<attribute name="SHEET" x="208.28" y="-8.89" size="2.54" layer="94" font="vector"/>
+<attribute name="DRAWING_NAME" x="137.16" y="8.89" size="2.54" layer="94" font="vector"/>
+</instance>
 <instance part="D2" gate="G$1" x="-7.62" y="127" smashed="yes" rot="R270">
 <attribute name="NAME" x="-10.668" y="130.683" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="-12.192" y="125.095" size="1.778" layer="96" font="vector" align="top-left"/>
@@ -7202,12 +7208,11 @@ In this library you will find frames that can be used to help organize a schemat
 <segment>
 <wire x1="-30.48" y1="190.5" x2="-35.56" y2="190.5" width="0.1524" layer="91"/>
 <pinref part="C3" gate="G$1" pin="+"/>
-<wire x1="-22.86" y1="190.5" x2="-25.4" y2="190.5" width="0.1524" layer="91"/>
 <pinref part="SUPPLY5" gate="G$1" pin="VCC"/>
+<wire x1="-22.86" y1="190.5" x2="-25.4" y2="190.5" width="0.1524" layer="91"/>
 <wire x1="-25.4" y1="190.5" x2="-30.48" y2="190.5" width="0.1524" layer="91"/>
 <wire x1="-30.48" y1="190.5" x2="-30.48" y2="193.04" width="0.1524" layer="91"/>
 <pinref part="FUSE" gate="G$1" pin="1"/>
-<label x="-25.4" y="190.5" size="1.778" layer="95" rot="R90" xref="yes"/>
 <junction x="-30.48" y="190.5"/>
 <pinref part="D1" gate="G$1" pin="A"/>
 <wire x1="-25.4" y1="182.88" x2="-25.4" y2="190.5" width="0.1524" layer="91"/>
@@ -7415,6 +7420,10 @@ In this library you will find frames that can be used to help organize a schemat
 </schematic>
 </drawing>
 <compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
 <note version="8.2" severity="warning">
 Since Version 8.2, EAGLE supports online libraries. The ids
 of those online libraries will not be understood (or retained)

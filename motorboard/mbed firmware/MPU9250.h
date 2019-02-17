@@ -194,7 +194,7 @@ class MPU9250
     //===================================================================================================================
     //====== Set of useful function to access acceleratio, gyroscope, and temperature data
     //===================================================================================================================
-    MPU9250(int);
+    MPU9250();
     
     void writeByte(uint8_t , uint8_t , uint8_t );
 
@@ -235,7 +235,7 @@ class MPU9250
       uint8_t Mscale = MFS_16BITS; // MFS_14BITS or MFS_16BITS, 14-bit or 16-bit magnetometer resolution
       uint8_t Mmode = 0x06;        // Either 8 Hz 0x02) or 100 Hz (0x06) magnetometer data ODR
       float aRes, gRes, mRes;      // scale resolutions per LSB for the sensors
-
+      I2C* i2c;
       // Pin definitions
       int intPin = 12; // These can be changed, 2 and 3 are the Arduinos ext int pins
 

@@ -1,5 +1,4 @@
 #include "testBench.h"
-#include "globals.h"
 
 /*
 void encoderCheck()

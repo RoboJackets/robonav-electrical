@@ -21947,7 +21947,6 @@ Created by Upverter.com</description>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
 <part name="X3" library="IGVC-Connector" deviceset="S3B-EH(LF)(SN)" device=""/>
 <part name="X6" library="IGVC-Connector" deviceset="S6B-EH(LF)(SN)" device=""/>
-<part name="GND10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
 <part name="X4" library="IGVC-Connector" deviceset="B6B-EH-A(LF)(SN)" device=""/>
 <part name="X8" library="IGVC-Connector" deviceset="B6B-EH-A(LF)(SN)" device=""/>
@@ -22004,18 +22003,18 @@ about how this works!</text>
 <instance part="GND3" gate="1" x="93.98" y="139.7" smashed="yes">
 <attribute name="VALUE" x="91.44" y="137.16" size="1.778" layer="96"/>
 </instance>
-<instance part="C1" gate="G$1" x="50.8" y="129.54" smashed="yes">
-<attribute name="NAME" x="51.816" y="130.175" size="1.778" layer="95"/>
-<attribute name="VALUE" x="51.816" y="125.349" size="1.778" layer="96"/>
+<instance part="C1" gate="G$1" x="68.58" y="129.54" smashed="yes">
+<attribute name="NAME" x="69.596" y="130.175" size="1.778" layer="95"/>
+<attribute name="VALUE" x="69.596" y="125.349" size="1.778" layer="96"/>
 </instance>
-<instance part="GND2" gate="1" x="50.8" y="119.38" smashed="yes">
-<attribute name="VALUE" x="48.26" y="116.84" size="1.778" layer="96"/>
+<instance part="GND2" gate="1" x="68.58" y="119.38" smashed="yes">
+<attribute name="VALUE" x="66.04" y="116.84" size="1.778" layer="96"/>
 </instance>
 <instance part="A1" gate="G$1" x="139.7" y="114.3" smashed="yes">
 <attribute name="NAME" x="106.68" y="140.97" size="1.778" layer="95"/>
 </instance>
-<instance part="SUPPLY1" gate="+5V" x="50.8" y="139.7" smashed="yes">
-<attribute name="VALUE" x="48.895" y="142.875" size="1.778" layer="96"/>
+<instance part="SUPPLY1" gate="+5V" x="68.58" y="139.7" smashed="yes">
+<attribute name="VALUE" x="66.675" y="142.875" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -22033,16 +22032,16 @@ about how this works!</text>
 <segment>
 <pinref part="C1" gate="G$1" pin="2"/>
 <pinref part="GND2" gate="1" pin="GND"/>
-<wire x1="50.8" y1="124.46" x2="50.8" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="124.46" x2="68.58" y2="121.92" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+5V" class="0">
 <segment>
 <pinref part="C1" gate="G$1" pin="1"/>
-<wire x1="50.8" y1="137.16" x2="50.8" y2="134.62" width="0.1524" layer="91"/>
-<wire x1="50.8" y1="134.62" x2="50.8" y2="132.08" width="0.1524" layer="91"/>
-<wire x1="101.6" y1="134.62" x2="50.8" y2="134.62" width="0.1524" layer="91"/>
-<junction x="50.8" y="134.62"/>
+<wire x1="68.58" y1="137.16" x2="68.58" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="134.62" x2="68.58" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="134.62" x2="68.58" y2="134.62" width="0.1524" layer="91"/>
+<junction x="68.58" y="134.62"/>
 <pinref part="A1" gate="G$1" pin="P$2"/>
 <pinref part="SUPPLY1" gate="+5V" pin="+5V"/>
 </segment>
@@ -22201,6 +22200,13 @@ about how this works!</text>
 <label x="193.04" y="91.44" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
+<net name="CON_CONNECTED" class="0">
+<segment>
+<pinref part="A1" gate="G$1" pin="P$21"/>
+<wire x1="177.8" y1="88.9" x2="193.04" y2="88.9" width="0.1524" layer="91"/>
+<label x="193.04" y="88.9" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
 </nets>
 </sheet>
 <sheet>
@@ -22238,8 +22244,8 @@ Connectors:
 EHR-4;455-1002-ND;
 EHR-3;455-1001-ND
 Or reference from digikey page</text>
-<text x="45.72" y="43.18" size="1.27" layer="97">RPM Signal is sensor output from fan
-and is not used</text>
+<text x="45.72" y="43.18" size="1.27" layer="97">RPM Signal (X-2) is sensor output
+from fan and is not used</text>
 <text x="88.9" y="200.66" size="1.27" layer="97">One line Serial, see Sabertooth MC 
 datasheet</text>
 <wire x1="121.92" y1="162.56" x2="121.92" y2="119.38" width="0.1524" layer="103" style="shortdash"/>
@@ -22321,9 +22327,6 @@ datasheet</text>
 <attribute name="VALUE" x="165.1" y="193.04" size="1.778" layer="96"/>
 <attribute name="NAME" x="165.1" y="177.8" size="1.778" layer="95"/>
 </instance>
-<instance part="GND10" gate="1" x="149.86" y="177.8" smashed="yes">
-<attribute name="VALUE" x="147.32" y="175.26" size="1.778" layer="96"/>
-</instance>
 <instance part="X10" gate="G$1" x="53.34" y="20.32" smashed="yes">
 <attribute name="VALUE" x="53.34" y="33.02" size="1.778" layer="96"/>
 <attribute name="NAME" x="53.34" y="17.78" size="1.778" layer="95"/>
@@ -22376,12 +22379,6 @@ datasheet</text>
 <wire x1="50.8" y1="68.58" x2="50.8" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="GND14" gate="1" pin="GND"/>
 <wire x1="50.8" y1="63.5" x2="50.8" y2="60.96" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="X6" gate="G$1" pin="X-4"/>
-<wire x1="160.02" y1="182.88" x2="149.86" y2="182.88" width="0.1524" layer="91"/>
-<wire x1="149.86" y1="182.88" x2="149.86" y2="180.34" width="0.1524" layer="91"/>
-<pinref part="GND10" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="X10" gate="G$1" pin="X-4"/>
@@ -22529,18 +22526,18 @@ datasheet</text>
 <pinref part="SUPPLY20" gate="+24V" pin="+24V"/>
 </segment>
 </net>
-<net name="RPM_SIGNAL" class="0">
-<segment>
-<pinref part="X10" gate="G$1" pin="X-2"/>
-<wire x1="48.26" y1="27.94" x2="38.1" y2="27.94" width="0.1524" layer="91"/>
-<label x="38.1" y="27.94" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
 <net name="ESTOP" class="0">
 <segment>
 <pinref part="J5" gate="G$1" pin="2"/>
 <wire x1="154.94" y1="142.24" x2="149.86" y2="142.24" width="0.1524" layer="91"/>
 <label x="149.86" y="142.24" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="CON_CONNECTED" class="0">
+<segment>
+<pinref part="X6" gate="G$1" pin="X-4"/>
+<wire x1="160.02" y1="182.88" x2="149.86" y2="182.88" width="0.1524" layer="91"/>
+<label x="149.86" y="182.88" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>
@@ -22561,13 +22558,13 @@ datasheet</text>
 <text x="165.1" y="129.54" size="1.27" layer="97">This is the gigantic Yellow light on the top
 power rating as 1.2A average, 3A peak.
 Transistor here can take 4A</text>
-<text x="119.38" y="83.82" size="1.778" layer="97">24 * (510) / (510 + 4700) = 2.35</text>
+<text x="116.84" y="83.82" size="1.778" layer="97">24 * (510) / (510 + 4700) = 2.35</text>
 <wire x1="162.56" y1="139.7" x2="271.78" y2="139.7" width="0.1524" layer="103" style="shortdash"/>
 <wire x1="271.78" y1="139.7" x2="271.78" y2="187.96" width="0.1524" layer="103" style="shortdash"/>
 <wire x1="271.78" y1="187.96" x2="162.56" y2="187.96" width="0.1524" layer="103" style="shortdash"/>
 <wire x1="162.56" y1="187.96" x2="162.56" y2="139.7" width="0.1524" layer="103" style="shortdash"/>
 <text x="219.202" y="141.224" size="2.54" layer="103" font="vector">Safety Light Gate Driver</text>
-<text x="119.38" y="71.12" size="1.778" layer="97">Do you wonder what does this equation
+<text x="116.84" y="71.12" size="1.778" layer="97">Do you wonder what does this equation
 mean? Go to RoboJackets IGVC 
 Electrical Github Repo Logic Board
 Spec Sheet to learn more!</text>
@@ -23059,18 +23056,6 @@ connected when in I2C</text>
 <busses>
 </busses>
 <nets>
-<net name="N$4" class="0">
-<segment>
-<wire x1="73.66" y1="190.5" x2="66.04" y2="190.5" width="0.1524" layer="91"/>
-<pinref part="X4" gate="G$1" pin="PWR_EN"/>
-</segment>
-</net>
-<net name="N$5" class="0">
-<segment>
-<wire x1="66.04" y1="187.96" x2="73.66" y2="187.96" width="0.1524" layer="91"/>
-<pinref part="X4" gate="G$1" pin="MODE"/>
-</segment>
-</net>
 <net name="SCL" class="0">
 <segment>
 <wire x1="58.42" y1="185.42" x2="60.96" y2="185.42" width="0.1524" layer="91"/>
@@ -23275,30 +23260,6 @@ connected when in I2C</text>
 <wire x1="15.24" y1="55.88" x2="15.24" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="15.24" y1="58.42" x2="35.56" y2="58.42" width="0.1524" layer="91"/>
 <junction x="35.56" y="58.42"/>
-</segment>
-</net>
-<net name="N$3" class="0">
-<segment>
-<wire x1="73.66" y1="147.32" x2="66.04" y2="147.32" width="0.1524" layer="91"/>
-<pinref part="X8" gate="G$1" pin="PWR_EN"/>
-</segment>
-</net>
-<net name="N$6" class="0">
-<segment>
-<wire x1="66.04" y1="144.78" x2="73.66" y2="144.78" width="0.1524" layer="91"/>
-<pinref part="X8" gate="G$1" pin="MODE"/>
-</segment>
-</net>
-<net name="N$7" class="0">
-<segment>
-<wire x1="73.66" y1="106.68" x2="66.04" y2="106.68" width="0.1524" layer="91"/>
-<pinref part="X9" gate="G$1" pin="PWR_EN"/>
-</segment>
-</net>
-<net name="N$8" class="0">
-<segment>
-<wire x1="66.04" y1="104.14" x2="73.66" y2="104.14" width="0.1524" layer="91"/>
-<pinref part="X9" gate="G$1" pin="MODE"/>
 </segment>
 </net>
 <net name="RD_N" class="0">
@@ -23558,16 +23519,16 @@ Power to Logic for Fan</text>
 <attribute name="VALUE" x="33.02" y="109.22" size="1.778" layer="96"/>
 <attribute name="NAME" x="33.02" y="124.46" size="1.778" layer="95" align="top-left"/>
 </instance>
-<instance part="D1" gate="G$1" x="137.16" y="180.34" smashed="yes">
-<attribute name="NAME" x="133.731" y="175.768" size="1.778" layer="95" font="vector" rot="R90"/>
-<attribute name="VALUE" x="139.065" y="175.768" size="1.778" layer="96" font="vector" rot="R90" align="top-left"/>
+<instance part="D1" gate="G$1" x="137.16" y="170.18" smashed="yes">
+<attribute name="NAME" x="133.731" y="165.608" size="1.778" layer="95" font="vector" rot="R90"/>
+<attribute name="VALUE" x="139.065" y="165.608" size="1.778" layer="96" font="vector" rot="R90" align="top-left"/>
 </instance>
 <instance part="GND1" gate="1" x="137.16" y="157.48" smashed="yes">
 <attribute name="VALUE" x="134.62" y="154.94" size="1.778" layer="96"/>
 </instance>
-<instance part="R1" gate="G$1" x="137.16" y="167.64" smashed="yes" rot="R90">
-<attribute name="NAME" x="135.6614" y="163.83" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="140.462" y="163.83" size="1.778" layer="96" rot="R90"/>
+<instance part="R1" gate="G$1" x="137.16" y="180.34" smashed="yes" rot="R90">
+<attribute name="NAME" x="135.6614" y="176.53" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="140.462" y="176.53" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="SUPPLY10" gate="+12V" x="20.32" y="187.96" smashed="yes">
 <attribute name="VALUE" x="17.78" y="191.135" size="1.778" layer="96"/>
@@ -23648,9 +23609,9 @@ Power to Logic for Fan</text>
 <wire x1="58.42" y1="53.34" x2="58.42" y2="58.42" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="R1" gate="G$1" pin="1"/>
+<pinref part="D1" gate="G$1" pin="C"/>
 <pinref part="GND1" gate="1" pin="GND"/>
-<wire x1="137.16" y1="160.02" x2="137.16" y2="162.56" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="165.1" x2="137.16" y2="160.02" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+12V" class="0">
@@ -23702,17 +23663,10 @@ Power to Logic for Fan</text>
 </net>
 <net name="INDICATOR_LED" class="0">
 <segment>
-<pinref part="D1" gate="G$1" pin="A"/>
-<wire x1="137.16" y1="182.88" x2="137.16" y2="187.96" width="0.1524" layer="91"/>
 <wire x1="137.16" y1="187.96" x2="132.08" y2="187.96" width="0.1524" layer="91"/>
 <label x="132.08" y="187.96" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
-<net name="INDI_LED_R" class="0">
-<segment>
-<pinref part="D1" gate="G$1" pin="C"/>
 <pinref part="R1" gate="G$1" pin="2"/>
-<wire x1="137.16" y1="172.72" x2="137.16" y2="175.26" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="185.42" x2="137.16" y2="187.96" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+3.3V" class="0">
@@ -23734,18 +23688,19 @@ Power to Logic for Fan</text>
 <pinref part="SUPPLY21" gate="+24V" pin="+24V"/>
 </segment>
 </net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="D1" gate="G$1" pin="A"/>
+<pinref part="R1" gate="G$1" pin="1"/>
+<wire x1="137.16" y1="172.72" x2="137.16" y2="175.26" width="0.1524" layer="91"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
 <errors>
 <approved hash="101,2,83.82,139.7,X5-2,S,,,,"/>
 <approved hash="101,2,43.18,139.7,X2-2,S,,,,"/>
-<approved hash="106,4,73.66,147.32,N$3,,,,,"/>
-<approved hash="106,4,73.66,190.5,N$4,,,,,"/>
-<approved hash="106,4,73.66,187.96,N$5,,,,,"/>
-<approved hash="106,4,73.66,144.78,N$6,,,,,"/>
-<approved hash="106,4,73.66,106.68,N$7,,,,,"/>
-<approved hash="106,4,73.66,104.14,N$8,,,,,"/>
 <approved hash="106,2,48.26,27.94,RPM_SIGNAL,,,,,"/>
 </errors>
 </schematic>

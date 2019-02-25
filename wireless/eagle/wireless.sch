@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.2.2">
+<eagle version="9.1.3">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -95,7 +95,10 @@
 <layer number="114" name="Badge_Outline" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="115" name="ReferenceISLANDS" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="116" name="Patch_BOT" color="9" fill="4" visible="yes" active="yes"/>
+<layer number="117" name="BACKMAAT1" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="118" name="Rect_Pads" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="119" name="KAP_TEKEN" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="120" name="KAP_MAAT1" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="121" name="_tsilk" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="122" name="_bsilk" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="123" name="tTestmark" color="7" fill="1" visible="yes" active="yes"/>
@@ -105,6 +108,7 @@
 <layer number="127" name="_tValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="128" name="_bValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="129" name="Mask" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="130" name="SMDSTROOK" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="131" name="tAdjust" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="132" name="bAdjust" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="144" name="Drill_legend" color="7" fill="1" visible="yes" active="yes"/>
@@ -12799,6 +12803,12 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <text x="-2.54" y="-5.08" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
 <pin name="+5V" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
 </symbol>
+<symbol name="+3V3" urn="urn:adsk.eagle:symbol:26950/1" library_version="1">
+<wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
+<text x="-2.54" y="-5.08" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<pin name="+3V3" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="GND" urn="urn:adsk.eagle:component:26954/1" prefix="GND" library_version="1">
@@ -12818,6 +12828,19 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
 <gate name="1" symbol="+5V" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="+3V3" urn="urn:adsk.eagle:component:26981/1" prefix="+3V3" library_version="1">
+<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
+<gates>
+<gate name="G$1" symbol="+3V3" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -19167,6 +19190,215 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 </deviceset>
 </devicesets>
 </library>
+<library name="supply2" urn="urn:adsk.eagle:library:372">
+<description>&lt;b&gt;Supply Symbols&lt;/b&gt;&lt;p&gt;
+GND, VCC, 0V, +5V, -5V, etc.&lt;p&gt;
+Please keep in mind, that these devices are necessary for the
+automatic wiring of the supply signals.&lt;p&gt;
+The pin name defined in the symbol is identical to the net which is to be wired automatically.&lt;p&gt;
+In this library the device names are the same as the pin names of the symbols, therefore the correct signal names appear next to the supply symbols in the schematic.&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+</packages>
+<symbols>
+<symbol name="GND" urn="urn:adsk.eagle:symbol:26990/1" library_version="1">
+<wire x1="-1.27" y1="0" x2="1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="1.27" y1="0" x2="0" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.27" x2="-1.27" y2="0" width="0.254" layer="94"/>
+<text x="-1.905" y="-3.175" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="GND" urn="urn:adsk.eagle:component:27037/1" prefix="SUPPLY" library_version="1">
+<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
+<gates>
+<gate name="GND" symbol="GND" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+<library name="pinhead" urn="urn:adsk.eagle:library:325">
+<description>&lt;b&gt;Pin Header Connectors&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="2X04" urn="urn:adsk.eagle:footprint:22351/1" library_version="3">
+<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
+<wire x1="-5.08" y1="-1.905" x2="-4.445" y2="-2.54" width="0.1524" layer="21"/>
+<wire x1="-3.175" y1="-2.54" x2="-2.54" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="-2.54" y1="-1.905" x2="-1.905" y2="-2.54" width="0.1524" layer="21"/>
+<wire x1="-0.635" y1="-2.54" x2="0" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="0" y1="-1.905" x2="0.635" y2="-2.54" width="0.1524" layer="21"/>
+<wire x1="1.905" y1="-2.54" x2="2.54" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="-5.08" y1="-1.905" x2="-5.08" y2="1.905" width="0.1524" layer="21"/>
+<wire x1="-5.08" y1="1.905" x2="-4.445" y2="2.54" width="0.1524" layer="21"/>
+<wire x1="-4.445" y1="2.54" x2="-3.175" y2="2.54" width="0.1524" layer="21"/>
+<wire x1="-3.175" y1="2.54" x2="-2.54" y2="1.905" width="0.1524" layer="21"/>
+<wire x1="-2.54" y1="1.905" x2="-1.905" y2="2.54" width="0.1524" layer="21"/>
+<wire x1="-1.905" y1="2.54" x2="-0.635" y2="2.54" width="0.1524" layer="21"/>
+<wire x1="-0.635" y1="2.54" x2="0" y2="1.905" width="0.1524" layer="21"/>
+<wire x1="0" y1="1.905" x2="0.635" y2="2.54" width="0.1524" layer="21"/>
+<wire x1="0.635" y1="2.54" x2="1.905" y2="2.54" width="0.1524" layer="21"/>
+<wire x1="1.905" y1="2.54" x2="2.54" y2="1.905" width="0.1524" layer="21"/>
+<wire x1="-2.54" y1="1.905" x2="-2.54" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="0" y1="1.905" x2="0" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="2.54" y1="1.905" x2="2.54" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="0.635" y1="-2.54" x2="1.905" y2="-2.54" width="0.1524" layer="21"/>
+<wire x1="-1.905" y1="-2.54" x2="-0.635" y2="-2.54" width="0.1524" layer="21"/>
+<wire x1="-4.445" y1="-2.54" x2="-3.175" y2="-2.54" width="0.1524" layer="21"/>
+<wire x1="2.54" y1="-1.905" x2="3.175" y2="-2.54" width="0.1524" layer="21"/>
+<wire x1="4.445" y1="-2.54" x2="5.08" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="2.54" y1="1.905" x2="3.175" y2="2.54" width="0.1524" layer="21"/>
+<wire x1="3.175" y1="2.54" x2="4.445" y2="2.54" width="0.1524" layer="21"/>
+<wire x1="4.445" y1="2.54" x2="5.08" y2="1.905" width="0.1524" layer="21"/>
+<wire x1="5.08" y1="1.905" x2="5.08" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="3.175" y1="-2.54" x2="4.445" y2="-2.54" width="0.1524" layer="21"/>
+<pad name="1" x="-3.81" y="-1.27" drill="1.016" shape="octagon"/>
+<pad name="2" x="-3.81" y="1.27" drill="1.016" shape="octagon"/>
+<pad name="3" x="-1.27" y="-1.27" drill="1.016" shape="octagon"/>
+<pad name="4" x="-1.27" y="1.27" drill="1.016" shape="octagon"/>
+<pad name="5" x="1.27" y="-1.27" drill="1.016" shape="octagon"/>
+<pad name="6" x="1.27" y="1.27" drill="1.016" shape="octagon"/>
+<pad name="7" x="3.81" y="-1.27" drill="1.016" shape="octagon"/>
+<pad name="8" x="3.81" y="1.27" drill="1.016" shape="octagon"/>
+<text x="-5.08" y="3.175" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-5.08" y="-4.445" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-4.064" y1="-1.524" x2="-3.556" y2="-1.016" layer="51"/>
+<rectangle x1="-4.064" y1="1.016" x2="-3.556" y2="1.524" layer="51"/>
+<rectangle x1="-1.524" y1="1.016" x2="-1.016" y2="1.524" layer="51"/>
+<rectangle x1="-1.524" y1="-1.524" x2="-1.016" y2="-1.016" layer="51"/>
+<rectangle x1="1.016" y1="1.016" x2="1.524" y2="1.524" layer="51"/>
+<rectangle x1="1.016" y1="-1.524" x2="1.524" y2="-1.016" layer="51"/>
+<rectangle x1="3.556" y1="1.016" x2="4.064" y2="1.524" layer="51"/>
+<rectangle x1="3.556" y1="-1.524" x2="4.064" y2="-1.016" layer="51"/>
+</package>
+<package name="2X04/90" urn="urn:adsk.eagle:footprint:22352/1" library_version="3">
+<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
+<wire x1="-5.08" y1="-1.905" x2="-2.54" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="-2.54" y1="-1.905" x2="-2.54" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="-2.54" y1="0.635" x2="-5.08" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="-5.08" y1="0.635" x2="-5.08" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="-3.81" y1="6.985" x2="-3.81" y2="1.27" width="0.762" layer="21"/>
+<wire x1="-2.54" y1="-1.905" x2="0" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="0" y1="-1.905" x2="0" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="0" y1="0.635" x2="-2.54" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="6.985" x2="-1.27" y2="1.27" width="0.762" layer="21"/>
+<wire x1="0" y1="-1.905" x2="2.54" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="2.54" y1="-1.905" x2="2.54" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="2.54" y1="0.635" x2="0" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="6.985" x2="1.27" y2="1.27" width="0.762" layer="21"/>
+<wire x1="2.54" y1="-1.905" x2="5.08" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="5.08" y1="-1.905" x2="5.08" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="5.08" y1="0.635" x2="2.54" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="3.81" y1="6.985" x2="3.81" y2="1.27" width="0.762" layer="21"/>
+<pad name="2" x="-3.81" y="-3.81" drill="1.016" shape="octagon"/>
+<pad name="4" x="-1.27" y="-3.81" drill="1.016" shape="octagon"/>
+<pad name="6" x="1.27" y="-3.81" drill="1.016" shape="octagon"/>
+<pad name="8" x="3.81" y="-3.81" drill="1.016" shape="octagon"/>
+<pad name="1" x="-3.81" y="-6.35" drill="1.016" shape="octagon"/>
+<pad name="3" x="-1.27" y="-6.35" drill="1.016" shape="octagon"/>
+<pad name="5" x="1.27" y="-6.35" drill="1.016" shape="octagon"/>
+<pad name="7" x="3.81" y="-6.35" drill="1.016" shape="octagon"/>
+<text x="-5.715" y="-3.81" size="1.27" layer="25" ratio="10" rot="R90">&gt;NAME</text>
+<text x="6.985" y="-3.81" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
+<rectangle x1="-4.191" y1="0.635" x2="-3.429" y2="1.143" layer="21"/>
+<rectangle x1="-1.651" y1="0.635" x2="-0.889" y2="1.143" layer="21"/>
+<rectangle x1="0.889" y1="0.635" x2="1.651" y2="1.143" layer="21"/>
+<rectangle x1="3.429" y1="0.635" x2="4.191" y2="1.143" layer="21"/>
+<rectangle x1="-4.191" y1="-2.921" x2="-3.429" y2="-1.905" layer="21"/>
+<rectangle x1="-1.651" y1="-2.921" x2="-0.889" y2="-1.905" layer="21"/>
+<rectangle x1="-4.191" y1="-5.461" x2="-3.429" y2="-4.699" layer="21"/>
+<rectangle x1="-4.191" y1="-4.699" x2="-3.429" y2="-2.921" layer="51"/>
+<rectangle x1="-1.651" y1="-4.699" x2="-0.889" y2="-2.921" layer="51"/>
+<rectangle x1="-1.651" y1="-5.461" x2="-0.889" y2="-4.699" layer="21"/>
+<rectangle x1="0.889" y1="-2.921" x2="1.651" y2="-1.905" layer="21"/>
+<rectangle x1="3.429" y1="-2.921" x2="4.191" y2="-1.905" layer="21"/>
+<rectangle x1="0.889" y1="-5.461" x2="1.651" y2="-4.699" layer="21"/>
+<rectangle x1="0.889" y1="-4.699" x2="1.651" y2="-2.921" layer="51"/>
+<rectangle x1="3.429" y1="-4.699" x2="4.191" y2="-2.921" layer="51"/>
+<rectangle x1="3.429" y1="-5.461" x2="4.191" y2="-4.699" layer="21"/>
+</package>
+</packages>
+<packages3d>
+<package3d name="2X04" urn="urn:adsk.eagle:package:22461/2" type="model" library_version="3">
+<description>PIN HEADER</description>
+</package3d>
+<package3d name="2X04/90" urn="urn:adsk.eagle:package:22465/2" type="model" library_version="3">
+<description>PIN HEADER</description>
+</package3d>
+</packages3d>
+<symbols>
+<symbol name="PINH2X4" urn="urn:adsk.eagle:symbol:22350/1" library_version="3">
+<wire x1="-6.35" y1="-5.08" x2="8.89" y2="-5.08" width="0.4064" layer="94"/>
+<wire x1="8.89" y1="-5.08" x2="8.89" y2="7.62" width="0.4064" layer="94"/>
+<wire x1="8.89" y1="7.62" x2="-6.35" y2="7.62" width="0.4064" layer="94"/>
+<wire x1="-6.35" y1="7.62" x2="-6.35" y2="-5.08" width="0.4064" layer="94"/>
+<text x="-6.35" y="8.255" size="1.778" layer="95">&gt;NAME</text>
+<text x="-6.35" y="-7.62" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="1" x="-2.54" y="5.08" visible="pad" length="short" direction="pas" function="dot"/>
+<pin name="2" x="5.08" y="5.08" visible="pad" length="short" direction="pas" function="dot" rot="R180"/>
+<pin name="3" x="-2.54" y="2.54" visible="pad" length="short" direction="pas" function="dot"/>
+<pin name="4" x="5.08" y="2.54" visible="pad" length="short" direction="pas" function="dot" rot="R180"/>
+<pin name="5" x="-2.54" y="0" visible="pad" length="short" direction="pas" function="dot"/>
+<pin name="6" x="5.08" y="0" visible="pad" length="short" direction="pas" function="dot" rot="R180"/>
+<pin name="7" x="-2.54" y="-2.54" visible="pad" length="short" direction="pas" function="dot"/>
+<pin name="8" x="5.08" y="-2.54" visible="pad" length="short" direction="pas" function="dot" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="PINHD-2X4" urn="urn:adsk.eagle:component:22527/3" prefix="JP" uservalue="yes" library_version="3">
+<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
+<gates>
+<gate name="A" symbol="PINH2X4" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="2X04">
+<connects>
+<connect gate="A" pin="1" pad="1"/>
+<connect gate="A" pin="2" pad="2"/>
+<connect gate="A" pin="3" pad="3"/>
+<connect gate="A" pin="4" pad="4"/>
+<connect gate="A" pin="5" pad="5"/>
+<connect gate="A" pin="6" pad="6"/>
+<connect gate="A" pin="7" pad="7"/>
+<connect gate="A" pin="8" pad="8"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:22461/2"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="/90" package="2X04/90">
+<connects>
+<connect gate="A" pin="1" pad="1"/>
+<connect gate="A" pin="2" pad="2"/>
+<connect gate="A" pin="3" pad="3"/>
+<connect gate="A" pin="4" pad="4"/>
+<connect gate="A" pin="5" pad="5"/>
+<connect gate="A" pin="6" pad="6"/>
+<connect gate="A" pin="7" pad="7"/>
+<connect gate="A" pin="8" pad="8"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:22465/2"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -19266,6 +19498,9 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <part name="GND23" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="X3" library="IGVC-Connector" deviceset="S6B-EH(LF)(SN)" device=""/>
 <part name="P+11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device="" value="+5V"/>
+<part name="JP1" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-2X4" device="" package3d_urn="urn:adsk.eagle:package:22461/2"/>
+<part name="SUPPLY4" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="SUPPLY7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -19658,7 +19893,7 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <description>Connectors</description>
 <plain>
 <text x="10.16" y="101.6" size="1.778" layer="97">Logic Board Serial Connector</text>
-<text x="2.54" y="43.18" size="1.778" layer="97">Check this -&gt;</text>
+<text x="10.16" y="40.64" size="1.778" layer="97">Check this -&gt;</text>
 <wire x1="154.94" y1="205.74" x2="266.7" y2="205.74" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="266.7" y1="205.74" x2="266.7" y2="127" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="266.7" y1="127" x2="154.94" y2="127" width="0.1524" layer="97" style="shortdash"/>
@@ -19668,6 +19903,31 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <wire x1="78.74" y1="99.06" x2="78.74" y2="134.62" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="78.74" y1="134.62" x2="7.62" y2="134.62" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="7.62" y1="134.62" x2="7.62" y2="99.06" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="147.32" y1="205.74" x2="147.32" y2="152.4" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="147.32" y1="152.4" x2="83.82" y2="152.4" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="83.82" y1="152.4" x2="83.82" y2="205.74" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="83.82" y1="205.74" x2="147.32" y2="205.74" width="0.1524" layer="97" style="shortdash"/>
+<text x="86.36" y="154.94" size="1.778" layer="97">MicroSD Card</text>
+<wire x1="7.62" y1="63.5" x2="99.06" y2="63.5" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="99.06" y1="63.5" x2="99.06" y2="7.62" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="99.06" y1="7.62" x2="7.62" y2="7.62" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="7.62" y1="7.62" x2="7.62" y2="63.5" width="0.1524" layer="97" style="shortdash"/>
+<text x="12.7" y="12.7" size="1.778" layer="97">Temperature Sensor</text>
+<wire x1="68.58" y1="66.04" x2="68.58" y2="96.52" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="68.58" y1="96.52" x2="7.62" y2="96.52" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="7.62" y1="96.52" x2="7.62" y2="66.04" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="7.62" y1="66.04" x2="68.58" y2="66.04" width="0.1524" layer="97" style="shortdash"/>
+<text x="10.16" y="68.58" size="1.778" layer="97">Current Sensor Connector</text>
+<wire x1="139.7" y1="99.06" x2="139.7" y2="134.62" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="139.7" y1="134.62" x2="81.28" y2="134.62" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="81.28" y1="134.62" x2="81.28" y2="99.06" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="81.28" y1="99.06" x2="139.7" y2="99.06" width="0.1524" layer="97" style="shortdash"/>
+<text x="83.82" y="101.6" size="1.778" layer="97">Fan Connector</text>
+<wire x1="200.66" y1="121.92" x2="200.66" y2="83.82" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="200.66" y1="83.82" x2="256.54" y2="83.82" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="256.54" y1="83.82" x2="256.54" y2="121.92" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="256.54" y1="121.92" x2="200.66" y2="121.92" width="0.1524" layer="97" style="shortdash"/>
+<text x="205.74" y="86.36" size="1.778" layer="97">Radio Header</text>
 </plain>
 <instances>
 <instance part="FRAME2" gate="G$1" x="0" y="0" smashed="yes"/>
@@ -19728,27 +19988,27 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <instance part="GND14" gate="1" x="33.02" y="111.76" smashed="yes">
 <attribute name="VALUE" x="30.48" y="109.22" size="1.778" layer="96"/>
 </instance>
-<instance part="U2" gate="G$1" x="45.72" y="45.72" smashed="yes">
-<attribute name="NAME" x="35.5538" y="59.0631" size="1.786590625" layer="95"/>
-<attribute name="VALUE" x="35.5517" y="30.4676" size="1.782940625" layer="96"/>
+<instance part="U2" gate="G$1" x="53.34" y="43.18" smashed="yes">
+<attribute name="NAME" x="43.1738" y="56.5231" size="1.786590625" layer="95"/>
+<attribute name="VALUE" x="43.1717" y="27.9276" size="1.782940625" layer="96"/>
 </instance>
-<instance part="GND16" gate="1" x="63.5" y="30.48" smashed="yes">
-<attribute name="VALUE" x="60.96" y="27.94" size="1.778" layer="96"/>
+<instance part="GND16" gate="1" x="71.12" y="27.94" smashed="yes">
+<attribute name="VALUE" x="68.58" y="25.4" size="1.778" layer="96"/>
 </instance>
-<instance part="C11" gate="G$1" x="63.5" y="48.26" smashed="yes">
-<attribute name="NAME" x="64.516" y="48.895" size="1.778" layer="95"/>
-<attribute name="VALUE" x="64.516" y="44.069" size="1.778" layer="96"/>
+<instance part="C11" gate="G$1" x="71.12" y="45.72" smashed="yes">
+<attribute name="NAME" x="72.136" y="46.355" size="1.778" layer="95"/>
+<attribute name="VALUE" x="72.136" y="41.529" size="1.778" layer="96"/>
 </instance>
-<instance part="C12" gate="G$1" x="73.66" y="53.34" smashed="yes">
-<attribute name="NAME" x="74.676" y="53.975" size="1.778" layer="95"/>
-<attribute name="VALUE" x="74.676" y="49.149" size="1.778" layer="96"/>
+<instance part="C12" gate="G$1" x="81.28" y="50.8" smashed="yes">
+<attribute name="NAME" x="82.296" y="51.435" size="1.778" layer="95"/>
+<attribute name="VALUE" x="82.296" y="46.609" size="1.778" layer="96"/>
 </instance>
 <instance part="J4" gate="G$1" x="116.84" y="182.88" smashed="yes">
 <attribute name="NAME" x="116.84" y="201.2256" size="2.548" layer="95"/>
 <attribute name="VALUE" x="116.84" y="161.985" size="2.548159375" layer="96"/>
 </instance>
-<instance part="+3V3" gate="1" x="68.58" y="60.96" smashed="yes">
-<attribute name="VALUE" x="66.04" y="55.88" size="1.778" layer="96" rot="R90"/>
+<instance part="+3V3" gate="1" x="76.2" y="58.42" smashed="yes">
+<attribute name="VALUE" x="73.66" y="53.34" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="+3V1" gate="1" x="96.52" y="195.58" smashed="yes">
 <attribute name="VALUE" x="93.98" y="190.5" size="1.778" layer="96" rot="R90"/>
@@ -19800,12 +20060,15 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <attribute name="VALUE" x="33.02" y="73.66" size="1.778" layer="96"/>
 </instance>
 <instance part="X3" gate="G$1" x="114.3" y="111.76" smashed="yes">
-<attribute name="VALUE" x="114.3" y="124.46" size="1.778" layer="96"/>
+<attribute name="VALUE" x="114.3" y="127" size="1.778" layer="96"/>
 <attribute name="NAME" x="114.3" y="109.22" size="1.778" layer="95"/>
 </instance>
 <instance part="P+11" gate="1" x="106.68" y="114.3" smashed="yes">
 <attribute name="VALUE" x="109.22" y="116.84" size="1.778" layer="96" rot="R180"/>
 </instance>
+<instance part="JP1" gate="A" x="226.06" y="106.68"/>
+<instance part="SUPPLY4" gate="GND" x="240.03" y="101.6"/>
+<instance part="SUPPLY7" gate="G$1" x="209.55" y="99.06"/>
 </instances>
 <busses>
 </busses>
@@ -19883,16 +20146,16 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 </segment>
 <segment>
 <pinref part="U2" gate="G$1" pin="GND"/>
-<wire x1="60.96" y1="35.56" x2="63.5" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="63.5" y1="35.56" x2="63.5" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="33.02" x2="71.12" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="33.02" x2="71.12" y2="30.48" width="0.1524" layer="91"/>
 <pinref part="GND16" gate="1" pin="GND"/>
 <pinref part="C11" gate="G$1" pin="2"/>
-<wire x1="63.5" y1="43.18" x2="63.5" y2="35.56" width="0.1524" layer="91"/>
-<junction x="63.5" y="35.56"/>
+<wire x1="71.12" y1="40.64" x2="71.12" y2="33.02" width="0.1524" layer="91"/>
+<junction x="71.12" y="33.02"/>
 <pinref part="C12" gate="G$1" pin="2"/>
-<wire x1="73.66" y1="48.26" x2="73.66" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="73.66" y1="35.56" x2="63.5" y2="35.56" width="0.1524" layer="91"/>
-<junction x="63.5" y="35.56"/>
+<wire x1="81.28" y1="45.72" x2="81.28" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="33.02" x2="71.12" y2="33.02" width="0.1524" layer="91"/>
+<junction x="71.12" y="33.02"/>
 </segment>
 <segment>
 <pinref part="J4" gate="G$1" pin="VSS"/>
@@ -19935,6 +20198,11 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <wire x1="35.56" y1="81.28" x2="35.56" y2="78.74" width="0.1524" layer="91"/>
 <pinref part="GND23" gate="1" pin="GND"/>
 </segment>
+<segment>
+<pinref part="JP1" gate="A" pin="8"/>
+<wire x1="231.14" y1="104.14" x2="240.03" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="SUPPLY4" gate="GND" pin="GND"/>
+</segment>
 </net>
 <net name="MAIN_CURR" class="0">
 <segment>
@@ -19960,12 +20228,12 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <net name="+3V3" class="0">
 <segment>
 <pinref part="U2" gate="G$1" pin="VDD"/>
-<wire x1="60.96" y1="53.34" x2="63.5" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="68.58" y1="53.34" x2="63.5" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="63.5" y1="53.34" x2="63.5" y2="50.8" width="0.1524" layer="91"/>
-<junction x="63.5" y="53.34"/>
+<wire x1="68.58" y1="50.8" x2="71.12" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="50.8" x2="71.12" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="50.8" x2="71.12" y2="48.26" width="0.1524" layer="91"/>
+<junction x="71.12" y="50.8"/>
 <pinref part="C11" gate="G$1" pin="1"/>
-<wire x1="68.58" y1="53.34" x2="68.58" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="50.8" x2="76.2" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="+3V3" gate="1" pin="+5V"/>
 </segment>
 <segment>
@@ -19998,18 +20266,18 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 </segment>
 <segment>
 <pinref part="U2" gate="G$1" pin="CSB"/>
-<wire x1="30.48" y1="48.26" x2="17.78" y2="48.26" width="0.1524" layer="91"/>
-<label x="17.78" y="48.26" size="1.778" layer="95"/>
+<wire x1="38.1" y1="45.72" x2="25.4" y2="45.72" width="0.1524" layer="91"/>
+<label x="25.4" y="45.72" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VDDIO" class="0">
 <segment>
 <pinref part="U2" gate="G$1" pin="VDDIO"/>
-<wire x1="60.96" y1="55.88" x2="73.66" y2="55.88" width="0.1524" layer="91"/>
-<label x="73.66" y="55.88" size="1.778" layer="95"/>
+<wire x1="68.58" y1="53.34" x2="81.28" y2="53.34" width="0.1524" layer="91"/>
+<label x="81.28" y="53.34" size="1.778" layer="95"/>
 <pinref part="C12" gate="G$1" pin="1"/>
-<wire x1="73.66" y1="55.88" x2="78.74" y2="55.88" width="0.1524" layer="91"/>
-<junction x="73.66" y="55.88"/>
+<wire x1="81.28" y1="53.34" x2="86.36" y2="53.34" width="0.1524" layer="91"/>
+<junction x="81.28" y="53.34"/>
 </segment>
 </net>
 <net name="LOGIC_TX_3V3" class="0">
@@ -20029,6 +20297,7 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <pinref part="X4" gate="G$1" pin="RX"/>
 <label x="15.24" y="121.92" size="1.778" layer="95"/>
 <wire x1="35.56" y1="121.92" x2="15.24" y2="121.92" width="0.1524" layer="91"/>
+<label x="15.24" y="121.92" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U4" gate="A" pin="A1"/>
@@ -20039,8 +20308,8 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <net name="SCK1_3V3" class="0">
 <segment>
 <pinref part="U2" gate="G$1" pin="SCK"/>
-<wire x1="30.48" y1="45.72" x2="17.78" y2="45.72" width="0.1524" layer="91"/>
-<label x="17.78" y="45.72" size="1.778" layer="95"/>
+<wire x1="38.1" y1="43.18" x2="25.4" y2="43.18" width="0.1524" layer="91"/>
+<label x="25.4" y="43.18" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="J4" gate="G$1" pin="CLK"/>
@@ -20056,8 +20325,8 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <net name="MOSI1_3V3" class="0">
 <segment>
 <pinref part="U2" gate="G$1" pin="SDI"/>
-<wire x1="30.48" y1="43.18" x2="17.78" y2="43.18" width="0.1524" layer="91"/>
-<label x="17.78" y="43.18" size="1.778" layer="95"/>
+<wire x1="38.1" y1="40.64" x2="25.4" y2="40.64" width="0.1524" layer="91"/>
+<label x="25.4" y="40.64" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="J4" gate="G$1" pin="CMD"/>
@@ -20073,8 +20342,8 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <net name="MISO1_3V3" class="0">
 <segment>
 <pinref part="U2" gate="G$1" pin="SDO"/>
-<wire x1="30.48" y1="40.64" x2="17.78" y2="40.64" width="0.1524" layer="91"/>
-<label x="17.78" y="40.64" size="1.778" layer="95"/>
+<wire x1="38.1" y1="38.1" x2="25.4" y2="38.1" width="0.1524" layer="91"/>
+<label x="25.4" y="38.1" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="J4" gate="G$1" pin="DAT0"/>
@@ -20168,6 +20437,58 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <wire x1="109.22" y1="116.84" x2="83.82" y2="116.84" width="0.1524" layer="91"/>
 </segment>
 </net>
+<net name="+3.3V" class="0">
+<segment>
+<pinref part="JP1" gate="A" pin="7"/>
+<wire x1="223.52" y1="104.14" x2="215.9" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="SUPPLY7" gate="G$1" pin="+3V3"/>
+<wire x1="215.9" y1="104.14" x2="215.9" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="215.9" y1="96.52" x2="209.55" y2="96.52" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="MISO" class="0">
+<segment>
+<pinref part="JP1" gate="A" pin="2"/>
+<wire x1="231.14" y1="111.76" x2="238.76" y2="111.76" width="0.1524" layer="91"/>
+<label x="238.76" y="111.76" size="1.27" layer="95" font="vector" xref="yes"/>
+<label x="238.76" y="111.76" size="1.27" layer="95" font="vector" xref="yes"/>
+</segment>
+</net>
+<net name="MOSI" class="0">
+<segment>
+<pinref part="JP1" gate="A" pin="3"/>
+<wire x1="223.52" y1="109.22" x2="215.9" y2="109.22" width="0.1524" layer="91"/>
+<label x="215.9" y="109.22" size="1.27" layer="95" font="vector" rot="MR0" xref="yes"/>
+</segment>
+</net>
+<net name="SCK" class="0">
+<segment>
+<pinref part="JP1" gate="A" pin="4"/>
+<wire x1="231.14" y1="109.22" x2="238.76" y2="109.22" width="0.1524" layer="91"/>
+<label x="238.76" y="109.22" size="1.27" layer="95" font="vector" xref="yes"/>
+</segment>
+</net>
+<net name="CE" class="0">
+<segment>
+<pinref part="JP1" gate="A" pin="6"/>
+<wire x1="231.14" y1="106.68" x2="238.76" y2="106.68" width="0.1524" layer="91"/>
+<label x="238.76" y="106.68" size="1.27" layer="95" font="vector" xref="yes"/>
+</segment>
+</net>
+<net name="CSN" class="0">
+<segment>
+<pinref part="JP1" gate="A" pin="5"/>
+<wire x1="223.52" y1="106.68" x2="215.9" y2="106.68" width="0.1524" layer="91"/>
+<label x="215.9" y="106.68" size="1.27" layer="95" font="vector" rot="MR0" xref="yes"/>
+</segment>
+</net>
+<net name="IRQ" class="0">
+<segment>
+<pinref part="JP1" gate="A" pin="1"/>
+<wire x1="223.52" y1="111.76" x2="215.9" y2="111.76" width="0.1524" layer="91"/>
+<label x="215.9" y="111.76" size="1.27" layer="95" font="vector" rot="MR0" xref="yes"/>
+</segment>
+</net>
 </nets>
 </sheet>
 <sheet>
@@ -20189,15 +20510,15 @@ The library has been designed by&lt;a href="https://www.facebook.com/groups/eagl
 <wire x1="71.12" y1="200.66" x2="71.12" y2="165.1" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="71.12" y1="165.1" x2="17.78" y2="165.1" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="17.78" y1="165.1" x2="17.78" y2="200.66" width="0.1524" layer="97" style="shortdash"/>
-<wire x1="17.78" y1="160.02" x2="137.16" y2="160.02" width="0.1524" layer="97" style="shortdash"/>
-<wire x1="137.16" y1="160.02" x2="137.16" y2="81.28" width="0.1524" layer="97" style="shortdash"/>
-<wire x1="137.16" y1="81.28" x2="17.78" y2="81.28" width="0.1524" layer="97" style="shortdash"/>
-<wire x1="17.78" y1="81.28" x2="17.78" y2="160.02" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="17.78" y1="162.56" x2="137.16" y2="162.56" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="137.16" y1="162.56" x2="137.16" y2="76.2" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="137.16" y1="76.2" x2="17.78" y2="76.2" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="17.78" y1="76.2" x2="17.78" y2="162.56" width="0.1524" layer="97" style="shortdash"/>
 <text x="-43.18" y="167.64" size="1.778" layer="97">Max Amps : 1.8A per Strip, 3.6A max draw</text>
 <text x="-43.18" y="86.36" size="1.778" layer="97">30 Lights / Meter Neopixel Strips</text>
 <text x="-43.18" y="78.74" size="1.778" layer="97">Pin 2 = Data Signal ; 400 Ohm resistor 
 from NeoPixel Data Sheet</text>
-<text x="25.4" y="76.2" size="1.778" layer="97">535-9041-ND &lt;- Crystal Part ID</text>
+<text x="22.86" y="78.74" size="1.778" layer="97">535-9041-ND &lt;- Crystal Part ID</text>
 </plain>
 <instances>
 <instance part="J2" gate="J$1" x="-33.02" y="119.38" smashed="yes">

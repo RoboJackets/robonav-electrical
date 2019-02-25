@@ -21895,7 +21895,7 @@ Created by Upverter.com</description>
 <part name="Q4" library="MotorBoardDev" deviceset="STT4P3LLH6" device=""/>
 <part name="U4" library="RoboJackets-PowerICs" deviceset="TLV70233" device="DBVR"/>
 <part name="T1" library="MotorBoardDev" deviceset="R-78E5.0-1.0" device=""/>
-<part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="100"/>
+<part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="800"/>
 <part name="R25" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="100"/>
 <part name="R21" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="800"/>
 <part name="R19" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="1k"/>
@@ -21925,7 +21925,7 @@ Created by Upverter.com</description>
 <part name="SUPPLY13" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+5V" device=""/>
 <part name="SUPPLY14" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+12V" device=""/>
 <part name="SUPPLY15" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+5V" device=""/>
-<part name="SUPPLY16" library="RoboJackets-Supplies" deviceset="+3.3V" device=""/>
+<part name="+3V3" library="RoboJackets-Supplies" deviceset="+3.3V" device="" value="+3V3"/>
 <part name="SUPPLY17" library="RoboJackets-Supplies" deviceset="+3.3V" device=""/>
 <part name="SUPPLY18" library="RoboJackets-Supplies" deviceset="+3.3V" device=""/>
 <part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="1M"/>
@@ -21989,6 +21989,7 @@ Left/Right Encoder (Pin) A/B</text>
 <text x="36.068" y="102.108" size="1.27" layer="97">This is a one line Serial ----------------&gt;
 Go to IGVC Github Repo to learn more
 about how this works!</text>
+<text x="81.28" y="160.02" size="17.78" layer="97">Power Symbol</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0" smashed="yes"/>
@@ -22253,6 +22254,10 @@ datasheet</text>
 <wire x1="190.5" y1="119.38" x2="190.5" y2="162.56" width="0.1524" layer="103" style="shortdash"/>
 <wire x1="190.5" y1="162.56" x2="121.92" y2="162.56" width="0.1524" layer="103" style="shortdash"/>
 <text x="162.56" y="121.92" size="2.54" layer="103" font="vector">Estop Status</text>
+<text x="0" y="218.44" size="17.78" layer="97">UnconnetedPin usage expl.</text>
+<text x="101.6" y="241.3" size="17.78" layer="97">led on con</text>
+<text x="-5.08" y="269.24" size="17.78" layer="97">Swap USB Serial and Diag Serial
+combine connector</text>
 </plain>
 <instances>
 <instance part="FRAME2" gate="G$1" x="0" y="0" smashed="yes"/>
@@ -22536,8 +22541,11 @@ datasheet</text>
 <net name="CON_CONNECTED" class="0">
 <segment>
 <pinref part="X6" gate="G$1" pin="X-4"/>
-<wire x1="160.02" y1="182.88" x2="149.86" y2="182.88" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="182.88" x2="154.94" y2="182.88" width="0.1524" layer="91"/>
 <label x="149.86" y="182.88" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="154.94" y1="182.88" x2="149.86" y2="182.88" width="0.1524" layer="91"/>
+<wire x1="154.94" y1="182.88" x2="154.94" y2="175.26" width="0.1524" layer="91"/>
+<junction x="154.94" y="182.88"/>
 </segment>
 </net>
 </nets>
@@ -22646,7 +22654,7 @@ mosfet-gate-resistor</text>
 <instance part="SUPPLY6" gate="+5V" x="68.58" y="66.04" smashed="yes">
 <attribute name="VALUE" x="66.675" y="69.215" size="1.778" layer="96"/>
 </instance>
-<instance part="SUPPLY16" gate="P" x="86.36" y="66.04" smashed="yes">
+<instance part="+3V3" gate="P" x="86.36" y="66.04" smashed="yes">
 <attribute name="VALUE" x="84.455" y="69.215" size="1.778" layer="96"/>
 </instance>
 <instance part="R2" gate="G$1" x="200.66" y="91.44" smashed="yes" rot="R90">
@@ -22821,7 +22829,7 @@ mosfet-gate-resistor</text>
 <segment>
 <wire x1="86.36" y1="63.5" x2="86.36" y2="58.42" width="0.1524" layer="91"/>
 <pinref part="R21" gate="G$1" pin="2"/>
-<pinref part="SUPPLY16" gate="P" pin="+3.3V"/>
+<pinref part="+3V3" gate="P" pin="+3.3V"/>
 </segment>
 </net>
 <net name="+24V" class="0">
@@ -22903,6 +22911,9 @@ https://www.digikey.com/product-detail/en/jst-sales-america-inc/SEH-001T-P0.6/45
 <text x="127" y="5.08" size="2.54" layer="103" font="vector">CAN Bus controller</text>
 <text x="81.28" y="203.2" size="1.27" layer="97">Mode and PW_EN Defaulted to be not
 connected when in I2C</text>
+<text x="2.54" y="218.44" size="17.78" layer="97">Level Shifter for I2C and CAN
+But also how CAN works</text>
+<text x="5.08" y="274.32" size="17.78" layer="97">VI/O and Split</text>
 </plain>
 <instances>
 <instance part="FRAME5" gate="G$1" x="0" y="0" smashed="yes"/>
@@ -23034,12 +23045,12 @@ connected when in I2C</text>
 <attribute name="NAME" x="136.1186" y="49.53" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="131.318" y="49.53" size="1.778" layer="96" rot="R270"/>
 </instance>
-<instance part="C3" gate="G$1" x="142.24" y="38.1" smashed="yes" rot="R90">
-<attribute name="NAME" x="141.605" y="39.116" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="146.431" y="39.116" size="1.778" layer="96" rot="R90"/>
+<instance part="C3" gate="G$1" x="147.32" y="35.56" smashed="yes">
+<attribute name="NAME" x="148.336" y="36.195" size="1.778" layer="95"/>
+<attribute name="VALUE" x="148.336" y="31.369" size="1.778" layer="96"/>
 </instance>
-<instance part="GND20" gate="1" x="152.4" y="38.1" smashed="yes" rot="R90">
-<attribute name="VALUE" x="154.94" y="35.56" size="1.778" layer="96" rot="R90"/>
+<instance part="GND20" gate="1" x="147.32" y="25.4" smashed="yes">
+<attribute name="VALUE" x="144.78" y="22.86" size="1.778" layer="96"/>
 </instance>
 <instance part="X11" gate="G$1" x="63.5" y="17.78" smashed="yes">
 <attribute name="VALUE" x="63.5" y="33.02" size="1.778" layer="96"/>
@@ -23186,7 +23197,7 @@ connected when in I2C</text>
 <segment>
 <pinref part="C3" gate="G$1" pin="2"/>
 <pinref part="GND20" gate="1" pin="GND"/>
-<wire x1="149.86" y1="38.1" x2="147.32" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="147.32" y1="27.94" x2="147.32" y2="30.48" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="X11" gate="G$1" pin="GND"/>
@@ -23424,7 +23435,7 @@ connected when in I2C</text>
 <wire x1="129.54" y1="38.1" x2="134.62" y2="38.1" width="0.1524" layer="91"/>
 <junction x="134.62" y="38.1"/>
 <pinref part="C3" gate="G$1" pin="1"/>
-<wire x1="139.7" y1="38.1" x2="134.62" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="147.32" y1="38.1" x2="134.62" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
@@ -23458,6 +23469,7 @@ Power to Logic
 Logic to Diagnostic
 24V:
 Power to Logic for Fan</text>
+<text x="2.54" y="218.44" size="17.78" layer="97">Label 12V Conns</text>
 </plain>
 <instances>
 <instance part="FRAME4" gate="G$1" x="0" y="0" smashed="yes"/>
@@ -23701,7 +23713,6 @@ Power to Logic for Fan</text>
 <errors>
 <approved hash="101,2,83.82,139.7,X5-2,S,,,,"/>
 <approved hash="101,2,43.18,139.7,X2-2,S,,,,"/>
-<approved hash="106,2,48.26,27.94,RPM_SIGNAL,,,,,"/>
 </errors>
 </schematic>
 </drawing>

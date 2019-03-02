@@ -759,7 +759,7 @@ Created by Upverter.com</description>
 <pin name="VSS" x="-5.08" y="10.16" length="middle" direction="pas"/>
 <pin name="VDD" x="-5.08" y="7.62" length="middle" direction="pas"/>
 <pin name="RXD" x="-5.08" y="5.08" length="middle" direction="pas"/>
-<pin name="SPLIT" x="30.48" y="5.08" length="middle" direction="pas" rot="R180"/>
+<pin name="VI/O" x="30.48" y="5.08" length="middle" direction="pas" rot="R180"/>
 <pin name="CANL" x="30.48" y="7.62" length="middle" direction="pas" rot="R180"/>
 <pin name="CANH" x="30.48" y="10.16" length="middle" direction="pas" rot="R180"/>
 <pin name="STBY" x="30.48" y="12.7" length="middle" direction="pas" rot="R180"/>
@@ -1345,7 +1345,7 @@ Created by Upverter.com</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="MCP2561-I/SN" prefix="U">
+<deviceset name="MCP2562-I/SN" prefix="U">
 <gates>
 <gate name="A" symbol="MCP2551-I/SN" x="0" y="0"/>
 </gates>
@@ -1355,10 +1355,10 @@ Created by Upverter.com</description>
 <connect gate="A" pin="CANH" pad="7"/>
 <connect gate="A" pin="CANL" pad="6"/>
 <connect gate="A" pin="RXD" pad="4"/>
-<connect gate="A" pin="SPLIT" pad="5"/>
 <connect gate="A" pin="STBY" pad="8"/>
 <connect gate="A" pin="TXD" pad="1"/>
 <connect gate="A" pin="VDD" pad="3"/>
+<connect gate="A" pin="VI/O" pad="5"/>
 <connect gate="A" pin="VSS" pad="2"/>
 </connects>
 <technologies>

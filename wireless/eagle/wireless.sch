@@ -19406,6 +19406,7 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 <wire x1="147.32" y1="88.9" x2="83.82" y2="88.9" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="83.82" y1="88.9" x2="83.82" y2="134.62" width="0.1524" layer="97" style="shortdash"/>
 <text x="86.36" y="91.44" size="1.778" layer="97">Logic Board Connector</text>
+<text x="269.24" y="109.22" size="1.778" layer="97">Label voltage</text>
 </plain>
 <instances>
 <instance part="U4" gate="A" x="177.8" y="185.42" smashed="yes">
@@ -20184,6 +20185,7 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 <text x="-43.18" y="55.88" size="1.778" layer="97">Pin 2 = Data Signal ; 400 Ohm resistor 
 from NeoPixel Data Sheet</text>
 <text x="-40.64" y="116.84" size="1.778" layer="97">535-9041-ND &lt;- Crystal Part ID</text>
+<text x="83.82" y="132.08" size="1.778" layer="97">make switch same as from other chip</text>
 </plain>
 <instances>
 <instance part="J2" gate="J$1" x="-33.02" y="96.52" smashed="yes">

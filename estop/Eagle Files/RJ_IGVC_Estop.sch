@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.1.3">
+<eagle version="9.3.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -19988,8 +19988,13 @@ Connector</text>
 <instance part="P+2" gate="1" x="551.18" y="350.52" smashed="yes">
 <attribute name="VALUE" x="548.64" y="345.44" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="X6" gate="G$1" x="660.4" y="317.5"/>
-<instance part="P+1" gate="1" x="652.78" y="340.36"/>
+<instance part="X6" gate="G$1" x="660.4" y="317.5" smashed="yes">
+<attribute name="VALUE" x="660.4" y="335.28" size="1.778" layer="96"/>
+<attribute name="NAME" x="660.4" y="314.96" size="1.778" layer="95"/>
+</instance>
+<instance part="P+1" gate="1" x="652.78" y="340.36" smashed="yes">
+<attribute name="VALUE" x="650.24" y="335.28" size="1.778" layer="96" rot="R90"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -20444,20 +20449,6 @@ Connector</text>
 <wire x1="426.72" y1="279.4" x2="431.8" y2="279.4" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="DIODE_TO_RED" class="0">
-<segment>
-<wire x1="655.32" y1="330.2" x2="645.16" y2="330.2" width="0.1524" layer="91"/>
-<label x="645.16" y="330.2" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="X6" gate="G$1" pin="X-2"/>
-</segment>
-</net>
-<net name="DIODE_TO_INTER" class="0">
-<segment>
-<wire x1="655.32" y1="327.66" x2="645.16" y2="327.66" width="0.1524" layer="91"/>
-<label x="645.16" y="327.66" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="X6" gate="G$1" pin="X-3"/>
-</segment>
-</net>
 <net name="SOLENOID_TRIG" class="0">
 <segment>
 <pinref part="D14" gate="G$1" pin="C"/>
@@ -20494,13 +20485,6 @@ Connector</text>
 <pinref part="X6" gate="G$1" pin="X-6"/>
 </segment>
 </net>
-<net name="ESTOP" class="0">
-<segment>
-<pinref part="U4" gate="G$1" pin="(PCINT2/SS/OC1B)_PB2"/>
-<wire x1="309.88" y1="233.68" x2="307.34" y2="233.68" width="0.1524" layer="91"/>
-<label x="307.34" y="233.68" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
 <net name="+24V" class="0">
 <segment>
 <pinref part="P+2" gate="1" pin="+24V"/>
@@ -20521,12 +20505,22 @@ Connector</text>
 <wire x1="561.34" y1="342.9" x2="576.58" y2="342.9" width="0.1524" layer="91"/>
 <label x="576.58" y="342.9" size="1.778" layer="95" xref="yes"/>
 </segment>
+<segment>
+<wire x1="655.32" y1="330.2" x2="645.16" y2="330.2" width="0.1524" layer="91"/>
+<label x="645.16" y="330.2" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="X6" gate="G$1" pin="X-2"/>
+</segment>
 </net>
 <net name="MOTOR_POWER" class="0">
 <segment>
 <pinref part="D13" gate="G$1" pin="C"/>
 <wire x1="566.42" y1="327.66" x2="576.58" y2="327.66" width="0.1524" layer="91"/>
 <label x="576.58" y="327.66" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<wire x1="655.32" y1="327.66" x2="645.16" y2="327.66" width="0.1524" layer="91"/>
+<label x="645.16" y="327.66" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="X6" gate="G$1" pin="X-3"/>
 </segment>
 </net>
 </nets>

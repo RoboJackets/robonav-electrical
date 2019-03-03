@@ -20222,12 +20222,12 @@ from NeoPixel Data Sheet</text>
 <instance part="GND11" gate="1" x="53.34" y="124.46" smashed="yes">
 <attribute name="VALUE" x="53.34" y="121.92" size="1.778" layer="96"/>
 </instance>
-<instance part="C10" gate="G$1" x="55.88" y="177.8" smashed="yes" rot="R90">
-<attribute name="NAME" x="60.198" y="177.673" size="1.778" layer="95" font="vector" rot="R180"/>
-<attribute name="VALUE" x="59.182" y="181.991" size="1.778" layer="96" font="vector" rot="R180"/>
+<instance part="C10" gate="G$1" x="66.04" y="175.26" smashed="yes">
+<attribute name="NAME" x="63.373" y="173.482" size="1.778" layer="95" font="vector" rot="R90"/>
+<attribute name="VALUE" x="70.231" y="171.958" size="1.778" layer="96" font="vector" rot="R90"/>
 </instance>
-<instance part="GND12" gate="1" x="63.5" y="175.26" smashed="yes">
-<attribute name="VALUE" x="60.706" y="175.26" size="1.778" layer="96"/>
+<instance part="GND12" gate="1" x="66.04" y="165.1" smashed="yes">
+<attribute name="VALUE" x="63.246" y="162.56" size="1.778" layer="96"/>
 </instance>
 <instance part="FUSE" gate="G$1" x="104.14" y="190.5" smashed="yes">
 <attribute name="NAME" x="100.33" y="191.897" size="1.778" layer="95"/>
@@ -20299,7 +20299,7 @@ from NeoPixel Data Sheet</text>
 </segment>
 <segment>
 <pinref part="C10" gate="G$1" pin="-"/>
-<wire x1="60.96" y1="177.8" x2="63.5" y2="177.8" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="170.18" x2="66.04" y2="167.64" width="0.1524" layer="91"/>
 <pinref part="GND12" gate="1" pin="GND"/>
 </segment>
 <segment>
@@ -20460,7 +20460,7 @@ from NeoPixel Data Sheet</text>
 <net name="N$23" class="0">
 <segment>
 <pinref part="C10" gate="G$1" pin="+"/>
-<wire x1="53.34" y1="177.8" x2="50.8" y2="177.8" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="177.8" x2="50.8" y2="177.8" width="0.1524" layer="91"/>
 <pinref part="U3" gate="G$1" pin="AREF"/>
 </segment>
 </net>

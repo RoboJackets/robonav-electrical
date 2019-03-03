@@ -24779,6 +24779,16 @@ Diagnostic Brd
 <errors>
 <approved hash="101,2,83.82,139.7,X5-2,S,,,,"/>
 <approved hash="101,2,43.18,139.7,X2-2,S,,,,"/>
+<approved hash="102,2,22.86,35.56,VCC,+24V,,,,"/>
+<approved hash="102,3,27.94,63.5,VCC,+24V,,,,"/>
+<approved hash="102,3,104.14,63.5,VCC,+24V,,,,"/>
+<approved hash="102,3,205.74,124.46,V+,+12V,,,,"/>
+<approved hash="102,3,71.12,149.86,V+,+12V,,,,"/>
+<approved hash="102,3,48.26,63.5,V+,+12V,,,,"/>
+<approved hash="102,5,20.32,185.42,V+,+12V,,,,"/>
+<approved hash="102,5,48.26,185.42,V+,+12V,,,,"/>
+<approved hash="102,5,71.12,185.42,VCC,+24V,,,,"/>
+<approved hash="102,5,22.86,121.92,V+,+12V,,,,"/>
 </errors>
 </schematic>
 </drawing>

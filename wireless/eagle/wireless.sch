@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.2.2">
+<eagle version="9.3.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -19349,7 +19349,7 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 <pinref part="U1" gate="1" pin="PK6(ADC14/PCINT22)"/>
 </segment>
 </net>
-<net name="FAN_PWM1" class="0">
+<net name="FAN_PWM" class="0">
 <segment>
 <wire x1="134.62" y1="88.9" x2="129.54" y2="88.9" width="0.1524" layer="91"/>
 <pinref part="U1" gate="1" pin="(CLKO/ICP3/INT7)PE7"/>
@@ -20545,26 +20545,6 @@ from NeoPixel Data Sheet</text>
 </nets>
 </sheet>
 </sheets>
-<errors>
-<approved hash="102,2,38.1,162.56,+5V,+12V,,,,"/>
-<approved hash="102,2,180.34,195.58,+5V,+3V3,,,,"/>
-<approved hash="104,1,58.42,160.02,U1,AGND,GND,,,"/>
-<approved hash="104,1,58.42,162.56,U1,AVCC,+5V,,,"/>
-<approved hash="104,1,58.42,139.7,U1,GND1,GND,,,"/>
-<approved hash="104,1,58.42,137.16,U1,GND2,GND,,,"/>
-<approved hash="104,1,58.42,134.62,U1,GND3,GND,,,"/>
-<approved hash="104,1,58.42,152.4,U1,VCC,+5V,,,"/>
-<approved hash="104,1,58.42,149.86,U1,VCC1,+5V,,,"/>
-<approved hash="104,1,58.42,147.32,U1,VCC2,+5V,,,"/>
-<approved hash="104,1,58.42,144.78,U1,VCC3,+5V,,,"/>
-<approved hash="104,1,213.36,190.5,ISP1,VCC,+5V,,,"/>
-<approved hash="104,3,114.3,144.78,U3,VCC,+5V_FUSE,,,"/>
-<approved hash="104,3,114.3,142.24,U3,AVCC,+5V_FUSE,,,"/>
-<approved hash="104,3,114.3,139.7,U3,AREF,N$23,,,"/>
-<approved hash="104,2,185.42,185.42,U4,VCCA,+3V3,,,"/>
-<approved hash="104,2,241.3,185.42,U4,VCCB,+5V,,,"/>
-<approved hash="113,1,51.8566,187.96,S1,,,,,"/>
-</errors>
 </schematic>
 </drawing>
 <compatibility>

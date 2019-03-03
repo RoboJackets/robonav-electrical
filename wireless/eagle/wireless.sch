@@ -19252,9 +19252,9 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 </net>
 <net name="CURRENT_SENSOR" class="0">
 <segment>
-<label x="139.7" y="134.62" size="1.27" layer="95" xref="yes"/>
-<pinref part="U1" gate="1" pin="(A15)PC7"/>
-<wire x1="129.54" y1="134.62" x2="139.7" y2="134.62" width="0.1524" layer="91"/>
+<label x="48.26" y="88.9" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="58.42" y1="88.9" x2="48.26" y2="88.9" width="0.1524" layer="91"/>
+<pinref part="U1" gate="1" pin="PK5(ADC13/PCINT21)"/>
 </segment>
 </net>
 <net name="LED_RX_5V" class="0">
@@ -19323,9 +19323,9 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 </net>
 <net name="IRQ_5V" class="0">
 <segment>
-<pinref part="U1" gate="1" pin="PH6(OC2B)"/>
-<wire x1="58.42" y1="45.72" x2="50.8" y2="45.72" width="0.1524" layer="91"/>
-<label x="50.8" y="45.72" size="1.27" layer="95" rot="MR0" xref="yes"/>
+<wire x1="58.42" y1="68.58" x2="50.8" y2="68.58" width="0.1524" layer="91"/>
+<label x="50.8" y="68.58" size="1.27" layer="95" rot="MR0" xref="yes"/>
+<pinref part="U1" gate="1" pin="PJ6(PCINT15)"/>
 </segment>
 </net>
 <net name="CON_CONNECTED" class="0">
@@ -19333,6 +19333,27 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 <pinref part="U1" gate="1" pin="(AD5)PA5"/>
 <wire x1="129.54" y1="175.26" x2="139.7" y2="175.26" width="0.1524" layer="91"/>
 <label x="139.7" y="175.26" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="ENCODER_SENSE1" class="0">
+<segment>
+<label x="48.26" y="93.98" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="58.42" y1="93.98" x2="48.26" y2="93.98" width="0.1524" layer="91"/>
+<pinref part="U1" gate="1" pin="PK7(ADC15/PCINT23)"/>
+</segment>
+</net>
+<net name="ENCODER_SENSE2" class="0">
+<segment>
+<label x="48.26" y="91.44" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="58.42" y1="91.44" x2="48.26" y2="91.44" width="0.1524" layer="91"/>
+<pinref part="U1" gate="1" pin="PK6(ADC14/PCINT22)"/>
+</segment>
+</net>
+<net name="FAN_PWM1" class="0">
+<segment>
+<wire x1="134.62" y1="88.9" x2="129.54" y2="88.9" width="0.1524" layer="91"/>
+<pinref part="U1" gate="1" pin="(CLKO/ICP3/INT7)PE7"/>
+<label x="134.62" y="88.9" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 </nets>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.3.0">
+<eagle version="9.1.3">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -19271,11 +19271,6 @@ by exp-lbrs.ulp</description>
 <text x="-2.54" y="-5.08" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
 <pin name="+3V3" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
 </symbol>
-<symbol name="GND" urn="urn:adsk.eagle:symbol:26925/1" library_version="1">
-<wire x1="-1.905" y1="0" x2="1.905" y2="0" width="0.254" layer="94"/>
-<text x="-2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
-</symbol>
 <symbol name="+24V" urn="urn:adsk.eagle:symbol:26935/1" library_version="1">
 <wire x1="1.27" y1="-0.635" x2="0" y2="0" width="0.254" layer="94"/>
 <wire x1="0" y1="0" x2="-1.27" y2="-0.635" width="0.254" layer="94"/>
@@ -19290,19 +19285,6 @@ by exp-lbrs.ulp</description>
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
 <gate name="G$1" symbol="+3V3" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="GND" urn="urn:adsk.eagle:component:26954/1" prefix="GND" library_version="1">
-<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
-<gates>
-<gate name="1" symbol="GND" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -19532,114 +19514,6 @@ by exp-lbrs.ulp</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="RoboJackets-Connectors">
-<description>&lt;img src="http://www.robojackets.org/wp-content/themes/RoboJackets-3.0/img/banner.png" width="600"&gt;
-&lt;hr&gt;
-&lt;h1&gt;RoboJackets EAGLE Libraries - Connectors&lt;/h1&gt;&lt;/br&gt;
-&lt;p&gt;
-In this library you will find all the connectors used on any of our boards.
-&lt;/p&gt;</description>
-<packages>
-<package name="B2P">
-<wire x1="6.9" y1="4.85" x2="-2.9" y2="4.85" width="0.127" layer="21"/>
-<wire x1="-2.9" y1="4.85" x2="-2.9" y2="-4.85" width="0.127" layer="21"/>
-<wire x1="-2.9" y1="-4.85" x2="6.9" y2="-4.85" width="0.127" layer="21"/>
-<wire x1="6.9" y1="-4.85" x2="6.9" y2="4.85" width="0.127" layer="21"/>
-<pad name="2" x="3.98" y="0" drill="1.65" rot="R180"/>
-<pad name="1" x="0.02" y="0" drill="1.65" shape="square" rot="R180"/>
-<text x="2" y="5.35" size="1" layer="25" font="vector" ratio="10" align="bottom-center">&gt;NAME</text>
-</package>
-<package name="B2PS-CENTERED">
-<wire x1="-4" y1="0" x2="-4" y2="-4" width="0.2" layer="21"/>
-<wire x1="4" y1="-4" x2="4" y2="0" width="0.2" layer="21"/>
-<wire x1="-4" y1="-4" x2="-4" y2="-7.2" width="0.2" layer="21"/>
-<pad name="2" x="1.98" y="0" drill="1.65" rot="R180"/>
-<pad name="1" x="-1.98" y="0" drill="1.65" shape="square" rot="R180"/>
-<text x="0" y="1.85" size="1" layer="25" font="vector" ratio="10" align="bottom-center">&gt;NAME</text>
-<wire x1="4" y1="-7.2" x2="4" y2="-4" width="0.2" layer="21"/>
-<wire x1="-4" y1="-4" x2="4" y2="-4" width="0.2" layer="21"/>
-<wire x1="-4" y1="-7.2" x2="4" y2="-7.2" width="0.2" layer="21"/>
-</package>
-</packages>
-<symbols>
-<symbol name="2-PIN_CONN">
-<circle x="-0.762" y="2.54" radius="0.762" width="0.254" layer="94"/>
-<circle x="-0.762" y="-2.54" radius="0.762" width="0.254" layer="94"/>
-<text x="-5.08" y="7.62" size="1.778" layer="95" font="vector" align="top-left">&gt;NAME</text>
-<text x="-5.08" y="-7.62" size="1.778" layer="96" font="vector">&gt;VALUE</text>
-<pin name="1" x="5.08" y="2.54" visible="pin" length="middle" rot="R180"/>
-<pin name="2" x="5.08" y="-2.54" visible="pin" length="middle" rot="R180"/>
-<wire x1="-5.08" y1="5.08" x2="-5.08" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="-5.08" x2="2.54" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="2.54" y1="-5.08" x2="2.54" y2="5.08" width="0.254" layer="94"/>
-<wire x1="2.54" y1="5.08" x2="-5.08" y2="5.08" width="0.254" layer="94"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="B2P?-VH(LF)(SN)" prefix="J">
-<description>&lt;h1&gt;
-Power Connector
-&lt;/h1&gt;&lt;br/&gt;
-
-&lt;img src="http://media.digikey.com/photos/JST%20Photos/B2PS-VH_sml.jpg" width="130"&gt;
-
-&lt;table&gt;
-&lt;tr&gt;
-&lt;td&gt;
-&lt;b&gt;Brand: &lt;/b&gt;
-&lt;/td&gt;&lt;td&gt;
-&lt;a href="https://www.jst.com/"&gt;JST Sales America Inc.&lt;/a&gt;
-&lt;/td&gt;
-&lt;/tr&gt;&lt;tr&gt;
-&lt;td&gt;
-&lt;b&gt;Series:&lt;/b&gt;
-&lt;/td&gt;
-&lt;td&gt;
-&lt;a href="http://www.digikey.com/product-search/en?FV=fff40016,fff802f3,ffec0e9d"&gt;VH&lt;/a&gt;
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;
-&lt;b&gt;Distributor:&lt;/b&gt;
-&lt;/td&gt;
-&lt;td&gt;
-&lt;a href="http://www.digikey.com/product-detail/en/B2PS-VH%28LF%29%28SN%29/455-1648-ND/926555"&gt;Digi-Key&lt;/a&gt;
-&lt;/td&gt;
-
-&lt;/tr&gt;
-&lt;/table&gt;&lt;br/&gt;</description>
-<gates>
-<gate name="G$1" symbol="2-PIN_CONN" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="B2P">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="PINS" value="2"/>
-<attribute name="PIN_PITCH" value="3.96 mm"/>
-</technology>
-</technologies>
-</device>
-<device name="S" package="B2PS-CENTERED">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="DIGIKEY" value="455-1648-ND" constant="no"/>
-<attribute name="MPN" value="B2PS-VH(LF)(SN)" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="IGVC-Discrete">
 <packages>
 <package name="SMC" urn="urn:adsk.eagle:footprint:43198/1">
@@ -19814,8 +19688,6 @@ Power Connector
 <part name="D13" library="IGVC-Discrete" deviceset="S10M-TP" device=""/>
 <part name="D14" library="IGVC-Discrete" deviceset="S10M-TP" device=""/>
 <part name="P+2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+24V" device=""/>
-<part name="J2" library="RoboJackets-Connectors" deviceset="B2P?-VH(LF)(SN)" device="S"/>
-<part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="X6" library="IGVC-Connector" deviceset="B6B-EH-A(LF)(SN)" device=""/>
 <part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+24V" device=""/>
 </parts>
@@ -19890,21 +19762,21 @@ Connector</text>
 <text x="647.7" y="243.84" size="1.778" layer="91">Wireless Connector:
 - ENCODER1_SENSE
 - ENCODER2_SENSE</text>
-<wire x1="520.7" y1="358.14" x2="520.7" y2="292.1" width="0.1524" layer="103" style="shortdash"/>
+<wire x1="520.7" y1="360.68" x2="520.7" y2="292.1" width="0.1524" layer="103" style="shortdash"/>
 <wire x1="520.7" y1="292.1" x2="604.52" y2="292.1" width="0.1524" layer="103" style="shortdash"/>
-<wire x1="604.52" y1="292.1" x2="604.52" y2="358.14" width="0.1524" layer="103" style="shortdash"/>
-<wire x1="604.52" y1="358.14" x2="520.7" y2="358.14" width="0.1524" layer="103" style="shortdash"/>
-<wire x1="520.7" y1="289.56" x2="520.7" y2="233.68" width="0.1524" layer="103" style="shortdash"/>
-<wire x1="520.7" y1="233.68" x2="604.52" y2="233.68" width="0.1524" layer="103" style="shortdash"/>
-<wire x1="604.52" y1="233.68" x2="604.52" y2="289.56" width="0.1524" layer="103" style="shortdash"/>
-<wire x1="604.52" y1="289.56" x2="520.7" y2="289.56" width="0.1524" layer="103" style="shortdash"/>
+<wire x1="604.52" y1="292.1" x2="604.52" y2="360.68" width="0.1524" layer="103" style="shortdash"/>
+<wire x1="604.52" y1="360.68" x2="520.7" y2="360.68" width="0.1524" layer="103" style="shortdash"/>
 <wire x1="607.06" y1="358.14" x2="607.06" y2="292.1" width="0.1524" layer="103" style="shortdash"/>
 <wire x1="607.06" y1="292.1" x2="693.42" y2="292.1" width="0.1524" layer="103" style="shortdash"/>
 <wire x1="693.42" y1="292.1" x2="693.42" y2="358.14" width="0.1524" layer="103" style="shortdash"/>
 <wire x1="693.42" y1="358.14" x2="607.06" y2="358.14" width="0.1524" layer="103" style="shortdash"/>
-<text x="548.64" y="294.64" size="2.54" layer="103" font="vector">Diode Magic Diode Holders</text>
-<text x="566.42" y="236.22" size="2.54" layer="103" font="vector">Estop Status Port</text>
-<text x="635" y="294.64" size="2.54" layer="103" font="vector">Diode Magic Control Signal</text>
+<text x="543.56" y="355.6" size="2.54" layer="103" font="vector">Diode Magic Diode Holders</text>
+<text x="629.92" y="353.06" size="2.54" layer="103" font="vector">Diode Magic Control Signal</text>
+<text x="627.38" y="335.28" size="1.778" layer="97">fix this too</text>
+<text x="660.4" y="396.24" size="1.778" layer="97">don't need this connector</text>
+<text x="647.7" y="401.32" size="1.778" layer="97">name solenoid trig</text>
+<text x="632.46" y="314.96" size="1.778" layer="97">ground</text>
+<text x="629.92" y="312.42" size="1.778" layer="97">just ground</text>
 </plain>
 <instances>
 <instance part="SUPPLY34" gate="G$1" x="363.22" y="337.82" smashed="yes">
@@ -20105,23 +19977,16 @@ Connector</text>
 <attribute name="NAME" x="556.4886" y="345.5416" size="1.778" layer="95"/>
 <attribute name="VALUE" x="556.2346" y="338.4042" size="1.778" layer="96"/>
 </instance>
-<instance part="D13" gate="G$1" x="558.8" y="327.66" smashed="yes">
-<attribute name="NAME" x="556.4886" y="330.3016" size="1.778" layer="95"/>
-<attribute name="VALUE" x="556.2346" y="323.1642" size="1.778" layer="96"/>
+<instance part="D13" gate="G$1" x="563.88" y="327.66" smashed="yes">
+<attribute name="NAME" x="561.5686" y="330.3016" size="1.778" layer="95"/>
+<attribute name="VALUE" x="561.3146" y="323.1642" size="1.778" layer="96"/>
 </instance>
-<instance part="D14" gate="G$1" x="558.8" y="309.88" smashed="yes">
-<attribute name="NAME" x="556.4886" y="312.5216" size="1.778" layer="95"/>
-<attribute name="VALUE" x="556.2346" y="305.3842" size="1.778" layer="96"/>
+<instance part="D14" gate="G$1" x="563.88" y="309.88" smashed="yes">
+<attribute name="NAME" x="561.5686" y="312.5216" size="1.778" layer="95"/>
+<attribute name="VALUE" x="561.3146" y="305.3842" size="1.778" layer="96"/>
 </instance>
 <instance part="P+2" gate="1" x="551.18" y="350.52" smashed="yes">
 <attribute name="VALUE" x="548.64" y="345.44" size="1.778" layer="96" rot="R90"/>
-</instance>
-<instance part="J2" gate="G$1" x="568.96" y="269.24" smashed="yes" rot="R180">
-<attribute name="NAME" x="574.04" y="261.62" size="1.778" layer="95" font="vector" rot="R180" align="top-left"/>
-<attribute name="VALUE" x="574.04" y="276.86" size="1.778" layer="96" font="vector" rot="R180"/>
-</instance>
-<instance part="GND1" gate="1" x="556.26" y="259.08" smashed="yes">
-<attribute name="VALUE" x="553.72" y="256.54" size="1.778" layer="96"/>
 </instance>
 <instance part="X6" gate="G$1" x="660.4" y="317.5"/>
 <instance part="P+1" gate="1" x="652.78" y="340.36"/>
@@ -20244,12 +20109,6 @@ Connector</text>
 <pinref part="SUPPLY4" gate="GND" pin="GND"/>
 <wire x1="289.56" y1="381" x2="306.07" y2="381" width="0.1524" layer="91"/>
 <wire x1="306.07" y1="381" x2="306.07" y2="375.92" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="GND1" gate="1" pin="GND"/>
-<wire x1="556.26" y1="261.62" x2="556.26" y2="266.7" width="0.1524" layer="91"/>
-<pinref part="J2" gate="G$1" pin="1"/>
-<wire x1="556.26" y1="266.7" x2="563.88" y2="266.7" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="MISO" class="0">
@@ -20587,22 +20446,12 @@ Connector</text>
 </net>
 <net name="DIODE_TO_RED" class="0">
 <segment>
-<pinref part="D12" gate="G$1" pin="C"/>
-<wire x1="561.34" y1="342.9" x2="576.58" y2="342.9" width="0.1524" layer="91"/>
-<label x="568.96" y="342.9" size="1.778" layer="95"/>
-</segment>
-<segment>
 <wire x1="655.32" y1="330.2" x2="645.16" y2="330.2" width="0.1524" layer="91"/>
 <label x="645.16" y="330.2" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="X6" gate="G$1" pin="X-2"/>
 </segment>
 </net>
 <net name="DIODE_TO_INTER" class="0">
-<segment>
-<pinref part="D13" gate="G$1" pin="C"/>
-<wire x1="561.34" y1="327.66" x2="576.58" y2="327.66" width="0.1524" layer="91"/>
-<label x="568.96" y="327.66" size="1.778" layer="95"/>
-</segment>
 <segment>
 <wire x1="655.32" y1="327.66" x2="645.16" y2="327.66" width="0.1524" layer="91"/>
 <label x="645.16" y="327.66" size="1.27" layer="95" rot="R180" xref="yes"/>
@@ -20612,8 +20461,8 @@ Connector</text>
 <net name="SOLENOID_TRIG" class="0">
 <segment>
 <pinref part="D14" gate="G$1" pin="C"/>
-<wire x1="561.34" y1="309.88" x2="576.58" y2="309.88" width="0.1524" layer="91"/>
-<label x="568.96" y="309.88" size="1.778" layer="95"/>
+<wire x1="566.42" y1="309.88" x2="576.58" y2="309.88" width="0.1524" layer="91"/>
+<label x="576.58" y="309.88" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
 <wire x1="655.32" y1="322.58" x2="645.16" y2="322.58" width="0.1524" layer="91"/>
@@ -20624,8 +20473,8 @@ Connector</text>
 <net name="SOLENOID_TO_DIODE" class="0">
 <segment>
 <pinref part="D13" gate="G$1" pin="A"/>
-<wire x1="556.26" y1="327.66" x2="538.48" y2="327.66" width="0.1524" layer="91"/>
-<label x="528.32" y="327.66" size="1.778" layer="95"/>
+<wire x1="561.34" y1="327.66" x2="553.72" y2="327.66" width="0.1524" layer="91"/>
+<label x="553.72" y="327.66" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <wire x1="655.32" y1="325.12" x2="645.16" y2="325.12" width="0.1524" layer="91"/>
@@ -20636,8 +20485,8 @@ Connector</text>
 <net name="SOLENOID_TRIG_GND" class="0">
 <segment>
 <pinref part="D14" gate="G$1" pin="A"/>
-<wire x1="556.26" y1="309.88" x2="538.48" y2="309.88" width="0.1524" layer="91"/>
-<label x="528.32" y="309.88" size="1.778" layer="95"/>
+<wire x1="561.34" y1="309.88" x2="553.72" y2="309.88" width="0.1524" layer="91"/>
+<label x="553.72" y="309.88" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <wire x1="655.32" y1="320.04" x2="645.16" y2="320.04" width="0.1524" layer="91"/>
@@ -20646,11 +20495,6 @@ Connector</text>
 </segment>
 </net>
 <net name="ESTOP" class="0">
-<segment>
-<pinref part="J2" gate="G$1" pin="2"/>
-<wire x1="563.88" y1="271.78" x2="551.18" y2="271.78" width="0.1524" layer="91"/>
-<label x="551.18" y="271.78" size="1.778" layer="95" rot="R180" xref="yes"/>
-</segment>
 <segment>
 <pinref part="U4" gate="G$1" pin="(PCINT2/SS/OC1B)_PB2"/>
 <wire x1="309.88" y1="233.68" x2="307.34" y2="233.68" width="0.1524" layer="91"/>
@@ -20669,6 +20513,20 @@ Connector</text>
 <wire x1="652.78" y1="337.82" x2="652.78" y2="332.74" width="0.1524" layer="91"/>
 <pinref part="X6" gate="G$1" pin="X-1"/>
 <wire x1="652.78" y1="332.74" x2="655.32" y2="332.74" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="DIODE_TO_GREEN" class="0">
+<segment>
+<pinref part="D12" gate="G$1" pin="C"/>
+<wire x1="561.34" y1="342.9" x2="576.58" y2="342.9" width="0.1524" layer="91"/>
+<label x="576.58" y="342.9" size="1.778" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="MOTOR_POWER" class="0">
+<segment>
+<pinref part="D13" gate="G$1" pin="C"/>
+<wire x1="566.42" y1="327.66" x2="576.58" y2="327.66" width="0.1524" layer="91"/>
+<label x="576.58" y="327.66" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 </nets>

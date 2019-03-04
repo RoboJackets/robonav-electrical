@@ -8133,6 +8133,7 @@ In this library you will find frames that can be used to help organize a schemat
 </library>
 </libraries>
 <attributes>
+<attribute name="TEAM" value="IGVC"/>
 </attributes>
 <variantdefs>
 </variantdefs>
@@ -8158,7 +8159,9 @@ In this library you will find frames that can be used to help organize a schemat
 <part name="U4" library="IGVC-Connector" deviceset="641737-1" device="" value="COMPUTER"/>
 <part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="FRAME1" library="RoboJackets-Frames" deviceset="FRAME_A_L" device=""/>
+<part name="FRAME1" library="RoboJackets-Frames" deviceset="FRAME_A_L" device="">
+<attribute name="TEAM" value=""/>
+</part>
 </parts>
 <sheets>
 <sheet>
@@ -8232,6 +8235,7 @@ In this library you will find frames that can be used to help organize a schemat
 <attribute name="LAST_DATE_TIME" x="137.16" y="-69.85" size="2.54" layer="94" font="vector"/>
 <attribute name="SHEET" x="210.82" y="-69.85" size="2.54" layer="94" font="vector"/>
 <attribute name="DRAWING_NAME" x="139.7" y="-52.07" size="2.54" layer="94" font="vector"/>
+<attribute name="TEAM" x="125.73" y="-36.83" size="3.048" layer="94" ratio="10" align="top-left"/>
 </instance>
 </instances>
 <busses>

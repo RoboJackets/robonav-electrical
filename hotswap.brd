@@ -1617,7 +1617,7 @@ design rules under a new name.</description>
 <signal name="N$1">
 <contactref element="U$5" pad="S"/>
 <contactref element="U$4" pad="S"/>
-<polygon width="0.254" layer="1">
+<polygon width="0.254" layer="1" thermals="no">
 <vertex x="25.4" y="17.78"/>
 <vertex x="25.4" y="10.16"/>
 <vertex x="29.21" y="10.16"/>

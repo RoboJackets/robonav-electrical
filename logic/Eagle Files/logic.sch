@@ -22879,9 +22879,9 @@ Created by Upverter.com</description>
 <part name="T1" library="MotorBoardDev" deviceset="R-78E5.0-1.0" device=""/>
 <part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="800"/>
 <part name="R25" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="100"/>
-<part name="R21" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="800"/>
+<part name="R21" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="1k"/>
 <part name="R19" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="1k"/>
-<part name="R18" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="2k"/>
+<part name="R18" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="2.2k"/>
 <part name="C6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1uF"/>
 <part name="C5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1uF"/>
 <part name="A1" library="MotorBoardDev" deviceset="SPARKFUN-BOARDS_MBED_NXP_LPC1768" device="" value="MBED1768"/>
@@ -22912,7 +22912,7 @@ Created by Upverter.com</description>
 <part name="R11" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="120"/>
 <part name="X11" library="IGVC-Connector" deviceset="S3B-EH(LF)(SN)" device=""/>
 <part name="GND22" library="supply1" deviceset="GND" device=""/>
-<part name="R12" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="4k"/>
+<part name="R12" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="4.7k"/>
 <part name="D2" library="SparkFun-LED" library_urn="urn:adsk.eagle:library:529" deviceset="LED-BLUE" device="0603" package3d_urn="urn:adsk.eagle:package:39354/1" value="GREEN"/>
 <part name="C4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1uF"/>
 <part name="R13" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="4.7k"/>
@@ -23246,6 +23246,13 @@ datasheet</text>
 <wire x1="190.5" y1="152.4" x2="121.92" y2="152.4" width="0.1524" layer="103" style="shortdash"/>
 <text x="162.56" y="121.92" size="2.54" layer="103" font="vector">Estop Status</text>
 <text x="68.58" y="157.48" size="1.778" layer="97">Encoder Pin left unconnnected intentionallly</text>
+<text x="99.06" y="111.76" size="1.778" layer="94">tldr, put caps</text>
+<text x="45.72" y="39.37" size="1.27" layer="97">If PWM is floating,
+FAN goes full speed</text>
+<text x="78.74" y="30.48" size="1.27" layer="97">Read PWM by low passing it and then
+read it as analog voltage level</text>
+<text x="167.64" y="149.86" size="1.27" layer="97">Overkill</text>
+<text x="167.64" y="147.32" size="1.27" layer="97">over spec-ed</text>
 </plain>
 <instances>
 <instance part="FRAME2" gate="G$1" x="0" y="0" smashed="yes"/>
@@ -23633,6 +23640,8 @@ electronics.stackexchange.com/
 questions/68748/question-about-
 mosfet-gate-resistor</text>
 <text x="149.86" y="99.06" size="1.778" layer="97">http://ww1.microchip.com/downloads/en/DeviceDoc/20001423J.pdf</text>
+<text x="12.7" y="142.24" size="2.54" layer="97">Probably too big Resistor</text>
+<text x="116.84" y="66.04" size="2.54" layer="97">Write intellectual stuff here</text>
 </plain>
 <instances>
 <instance part="FRAME3" gate="G$1" x="0" y="0" smashed="yes"/>
@@ -23965,6 +23974,17 @@ connected when in I2C</text>
 handbook/CAN</text>
 <text x="78.74" y="194.564" size="1.27" layer="97">Other Design Specifications, see D.6
 section on this sheet</text>
+<text x="233.68" y="193.04" size="2.54" layer="97">Current limit resistor ?
+Built-in transformer ?</text>
+<text x="121.92" y="132.08" size="2.54" layer="97">Large Resistor to pull up to VCCA</text>
+<text x="12.7" y="203.2" size="2.54" layer="97">Probably don't parallel them</text>
+<text x="30.48" y="198.12" size="2.54" layer="97">resistors I mean</text>
+<text x="12.7" y="193.04" size="2.54" layer="97">Ryo: definitely</text>
+<text x="63.5" y="160.02" size="2.54" layer="97">Reset upon power dies</text>
+<text x="38.1" y="129.54" size="2.54" layer="97">using power enable to fire up one at a time</text>
+<text x="38.1" y="124.46" size="2.54" layer="97">and change stuff</text>
+<text x="58.42" y="119.38" size="2.54" layer="97">deadband of 10cm</text>
+<text x="-12.7" y="185.42" size="2.54" layer="97">Check capacitor if eists</text>
 </plain>
 <instances>
 <instance part="FRAME5" gate="G$1" x="0" y="0" smashed="yes"/>
@@ -24119,7 +24139,7 @@ section on this sheet</text>
 <busses>
 </busses>
 <nets>
-<net name="SCL" class="0">
+<net name="SCL_5V" class="0">
 <segment>
 <wire x1="58.42" y1="175.26" x2="60.96" y2="175.26" width="0.1524" layer="91"/>
 <label x="58.42" y="175.26" size="1.27" layer="95" rot="R180" xref="yes"/>
@@ -24150,7 +24170,7 @@ section on this sheet</text>
 <pinref part="U6" gate="A" pin="B1"/>
 </segment>
 </net>
-<net name="SDA" class="0">
+<net name="SDA_5V" class="0">
 <segment>
 <label x="43.18" y="172.72" size="1.27" layer="95" rot="R180" xref="yes"/>
 <wire x1="43.18" y1="172.72" x2="45.72" y2="172.72" width="0.1524" layer="91"/>
@@ -24536,6 +24556,11 @@ Logic Board
 Diagnostic Brd
              ||
              V</text>
+<text x="68.58" y="195.58" size="2.54" layer="97">make this 24V</text>
+<text x="48.26" y="162.56" size="2.54" layer="97">make different connector for 24V</text>
+<text x="12.7" y="129.54" size="2.54" layer="97">Capacitor voltage rating</text>
+<text x="81.28" y="91.44" size="2.54" layer="97">THERE WILL BE FIRE</text>
+<text x="78.74" y="96.52" size="2.54" layer="97">Specify related electrical caracteristics</text>
 </plain>
 <instances>
 <instance part="FRAME4" gate="G$1" x="0" y="0" smashed="yes"/>

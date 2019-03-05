@@ -23251,7 +23251,7 @@ Created by Upverter.com</description>
 <part name="P+18" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="R10" library="IGVC-Discrete" deviceset="ERJ-L06KF50MV" device="RC0805N-L"/>
 <part name="C12" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1uF"/>
-<part name="C13" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2"/>
+<part name="C13" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1uF"/>
 <part name="U2" library="IGVC-IC" deviceset="TXB0106PWR" device="PW16-M"/>
 <part name="GND14" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND34" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -23357,13 +23357,6 @@ unequal 5V outputs</text>
 <label x="86.36" y="111.76" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="BATTIN" class="0">
-<segment>
-<pinref part="A1" gate="G$1" pin="P$15"/>
-<wire x1="101.6" y1="101.6" x2="86.36" y2="101.6" width="0.1524" layer="91"/>
-<label x="86.36" y="101.6" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
 <net name="RD_P" class="0">
 <segment>
 <wire x1="177.8" y1="124.46" x2="193.04" y2="124.46" width="0.1524" layer="91"/>
@@ -23387,9 +23380,9 @@ unequal 5V outputs</text>
 </net>
 <net name="ESTOP" class="0">
 <segment>
-<pinref part="A1" gate="G$1" pin="P$14"/>
-<wire x1="101.6" y1="104.14" x2="86.36" y2="104.14" width="0.1524" layer="91"/>
-<label x="86.36" y="104.14" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="A1" gate="G$1" pin="P$15"/>
+<wire x1="101.6" y1="101.6" x2="86.36" y2="101.6" width="0.1524" layer="91"/>
+<label x="86.36" y="101.6" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="REA" class="0">
@@ -23515,11 +23508,18 @@ unequal 5V outputs</text>
 <label x="86.36" y="93.98" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="LVL_SHIFT_OE" class="0">
+<net name="BATTIN" class="0">
 <segment>
 <pinref part="A1" gate="G$1" pin="P$19"/>
 <wire x1="101.6" y1="91.44" x2="86.36" y2="91.44" width="0.1524" layer="91"/>
 <label x="86.36" y="91.44" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="LVL_SHIFT_OE" class="0">
+<segment>
+<pinref part="A1" gate="G$1" pin="P$14"/>
+<wire x1="101.6" y1="104.14" x2="86.36" y2="104.14" width="0.1524" layer="91"/>
+<label x="86.36" y="104.14" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>
@@ -24503,9 +24503,9 @@ section on this sheet</text>
 <pinref part="X9" gate="G$1" pin="X-4"/>
 </segment>
 <segment>
-<wire x1="170.18" y1="106.68" x2="172.72" y2="106.68" width="0.1524" layer="91"/>
-<label x="172.72" y="106.68" size="1.27" layer="95" xref="yes"/>
-<pinref part="U2" gate="A" pin="B1"/>
+<pinref part="U2" gate="A" pin="B4"/>
+<wire x1="170.18" y1="99.06" x2="172.72" y2="99.06" width="0.1524" layer="91"/>
+<label x="172.72" y="99.06" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="SDA_5V" class="0">
@@ -24528,9 +24528,9 @@ section on this sheet</text>
 <pinref part="X9" gate="G$1" pin="X-5"/>
 </segment>
 <segment>
-<wire x1="170.18" y1="104.14" x2="172.72" y2="104.14" width="0.1524" layer="91"/>
-<label x="172.72" y="104.14" size="1.27" layer="95" xref="yes"/>
-<pinref part="U2" gate="A" pin="B2"/>
+<pinref part="U2" gate="A" pin="B5"/>
+<wire x1="170.18" y1="96.52" x2="172.72" y2="96.52" width="0.1524" layer="91"/>
+<label x="172.72" y="96.52" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -24847,20 +24847,6 @@ section on this sheet</text>
 <wire x1="170.18" y1="111.76" x2="175.26" y2="111.76" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="SCL_3V3" class="0">
-<segment>
-<wire x1="134.62" y1="106.68" x2="132.08" y2="106.68" width="0.1524" layer="91"/>
-<label x="132.08" y="106.68" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="U2" gate="A" pin="A1"/>
-</segment>
-</net>
-<net name="SDA_3V3" class="0">
-<segment>
-<wire x1="134.62" y1="104.14" x2="132.08" y2="104.14" width="0.1524" layer="91"/>
-<label x="132.08" y="104.14" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="U2" gate="A" pin="A2"/>
-</segment>
-</net>
 <net name="LIDAR_EN_3_5V" class="0">
 <segment>
 <pinref part="X9" gate="G$1" pin="X-2"/>
@@ -24872,9 +24858,9 @@ section on this sheet</text>
 <junction x="33.02" y="106.68"/>
 </segment>
 <segment>
-<pinref part="U2" gate="A" pin="B5"/>
-<wire x1="170.18" y1="96.52" x2="172.72" y2="96.52" width="0.1524" layer="91"/>
-<label x="172.72" y="96.52" size="1.27" layer="95" xref="yes"/>
+<wire x1="170.18" y1="106.68" x2="172.72" y2="106.68" width="0.1524" layer="91"/>
+<label x="172.72" y="106.68" size="1.27" layer="95" xref="yes"/>
+<pinref part="U2" gate="A" pin="B1"/>
 </segment>
 </net>
 <net name="LIDAR_EN_2_5V" class="0">
@@ -24888,9 +24874,9 @@ section on this sheet</text>
 <junction x="33.02" y="144.78"/>
 </segment>
 <segment>
-<pinref part="U2" gate="A" pin="B4"/>
-<wire x1="170.18" y1="99.06" x2="172.72" y2="99.06" width="0.1524" layer="91"/>
-<label x="172.72" y="99.06" size="1.27" layer="95" xref="yes"/>
+<wire x1="170.18" y1="104.14" x2="172.72" y2="104.14" width="0.1524" layer="91"/>
+<label x="172.72" y="104.14" size="1.27" layer="95" xref="yes"/>
+<pinref part="U2" gate="A" pin="B2"/>
 </segment>
 </net>
 <net name="LIDAR_EN_1_5V" class="0">
@@ -24910,25 +24896,18 @@ section on this sheet</text>
 <label x="172.72" y="101.6" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="LIDAR_EN_1_3V3" class="0">
-<segment>
-<pinref part="U2" gate="A" pin="A3"/>
-<wire x1="134.62" y1="101.6" x2="132.08" y2="101.6" width="0.1524" layer="91"/>
-<label x="132.08" y="101.6" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
 <net name="LIDAR_EN_2_3V3" class="0">
 <segment>
-<pinref part="U2" gate="A" pin="A4"/>
-<wire x1="134.62" y1="99.06" x2="132.08" y2="99.06" width="0.1524" layer="91"/>
-<label x="132.08" y="99.06" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="134.62" y1="104.14" x2="132.08" y2="104.14" width="0.1524" layer="91"/>
+<label x="132.08" y="104.14" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="U2" gate="A" pin="A2"/>
 </segment>
 </net>
 <net name="LIDAR_EN_3_3V3" class="0">
 <segment>
-<pinref part="U2" gate="A" pin="A5"/>
-<wire x1="134.62" y1="96.52" x2="132.08" y2="96.52" width="0.1524" layer="91"/>
-<label x="132.08" y="96.52" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="134.62" y1="106.68" x2="132.08" y2="106.68" width="0.1524" layer="91"/>
+<label x="132.08" y="106.68" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="U2" gate="A" pin="A1"/>
 </segment>
 </net>
 <net name="LVL_SHIFT_OE" class="0">
@@ -24940,6 +24919,27 @@ section on this sheet</text>
 <wire x1="127" y1="109.22" x2="124.46" y2="109.22" width="0.1524" layer="91"/>
 <junction x="127" y="109.22"/>
 <label x="124.46" y="109.22" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="SCL_3V3" class="0">
+<segment>
+<pinref part="U2" gate="A" pin="A4"/>
+<wire x1="134.62" y1="99.06" x2="132.08" y2="99.06" width="0.1524" layer="91"/>
+<label x="132.08" y="99.06" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="SDA_3V3" class="0">
+<segment>
+<pinref part="U2" gate="A" pin="A5"/>
+<wire x1="134.62" y1="96.52" x2="132.08" y2="96.52" width="0.1524" layer="91"/>
+<label x="132.08" y="96.52" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="LIDAR_EN_1_3V3" class="0">
+<segment>
+<pinref part="U2" gate="A" pin="A3"/>
+<wire x1="134.62" y1="101.6" x2="132.08" y2="101.6" width="0.1524" layer="91"/>
+<label x="132.08" y="101.6" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>
@@ -25212,7 +25212,7 @@ Diagnostic Brd
 <wire x1="75.565" y1="173.99" x2="71.12" y2="173.99" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="VCC" class="0">
+<net name="+24V" class="0">
 <segment>
 <pinref part="J1" gate="A" pin="X-1"/>
 <pinref part="P+8" gate="VCC" pin="VCC"/>

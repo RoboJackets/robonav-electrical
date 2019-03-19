@@ -70,8 +70,10 @@ float iErrorR = 0;
 float dT_sec = 0;
 float lastErrorL = 0;
 float lastErrorR = 0;
-float actual_speed_last_l;
-float actual_speed_last_r;
+float actual_speed_last_l = 0;
+float actual_speed_last_r = 0;
+float low_passed_pv_l = 0;
+float low_passed_pv_r = 0;
 
 /* PID constants */
 float P_l = 0;
@@ -322,6 +324,8 @@ void tickLeft() {
 // Changes to before
 // 1: Derivative on PV
 // 2: Corrected integral
+// 3: Low pass on Derivative
+// 4: Clamping on Integral
 // TODO: Feed forward
 void pid() {
     dT_sec = (float)(timer.read_ms() - lastLoopTime) / 1000.0;
@@ -341,13 +345,24 @@ void pid() {
     ErrorL = desiredSpeedL - actualSpeedL;
     ErrorR = desiredSpeedR - actualSpeedR;
 
+    // low pass PV
+    // TODO: Make alpha a parameter
+    constexpr float alpha = 0.75;
+    low_passed_pv_l = alpha * (actual_speed_last_l - actualSpeedL)/dT_sec + (1 - alpha) * low_passed_pv_l;
+    low_passed_pv_r = alpha * (actual_speed_last_r - actualSpeedR)/dT_sec + (1 - alpha) * low_passed_pv_r;
+
     // dPV/dt
-    dErrorL = (actual_speed_last_l - actualSpeedL)/dT_sec;
-    dErrorR = (actual_speed_last_r - actualSpeedR)/dT_sec;
+    dErrorL = low_passed_pv_l;
+    dErrorR = low_passed_pv_r;
 
     // sum of Error dt
     iErrorL += ErrorL * dT_sec;
     iErrorR += ErrorR * dT_sec;
+
+    // TODO: make clamping a parameter
+    constexpr float i_clamp = 255;
+    iErrorL = min(i_clamp, max(-i_clamp, iErrorL));
+    iErrorR = min(i_clamp, max(-i_clamp, iErrorR));
 
     dPWM_L = -(int)ceil((P_l * ErrorL + D_l * dErrorL + I_l * iErrorL));
     dPWM_R = -(int)ceil((P_r * ErrorR + D_r * dErrorR + I_r * iErrorR));

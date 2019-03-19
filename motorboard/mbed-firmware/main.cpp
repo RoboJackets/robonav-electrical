@@ -70,6 +70,8 @@ float iErrorR = 0;
 float dT_sec = 0;
 float lastErrorL = 0;
 float lastErrorR = 0;
+float actual_speed_last_l;
+float actual_speed_last_r;
 
 /* PID constants */
 float P_l = 0;
@@ -316,6 +318,11 @@ void tickLeft() {
     }
 }
 
+// https://en.wikipedia.org/wiki/PID_controller#Discrete_implementation but with e(t) on velocity, not position
+// Changes to before
+// 1: Derivative on PV
+// 2: Corrected integral
+// TODO: Feed forward
 void pid() {
     dT_sec = (float)(timer.read_ms() - lastLoopTime) / 1000.0;
 
@@ -334,11 +341,13 @@ void pid() {
     ErrorL = desiredSpeedL - actualSpeedL;
     ErrorR = desiredSpeedR - actualSpeedR;
 
-    dErrorL = ErrorL - lastErrorL;
-    dErrorR = ErrorR - lastErrorR;
+    // dPV/dt
+    dErrorL = (actual_speed_last_l - actualSpeedL)/dT_sec;
+    dErrorR = (actual_speed_last_r - actualSpeedR)/dT_sec;
 
-    iErrorL = ErrorL * dT_sec;
-    iErrorR = ErrorR * dT_sec;
+    // sum of Error dt
+    iErrorL += ErrorL * dT_sec;
+    iErrorR += ErrorR * dT_sec;
 
     dPWM_L = -(int)ceil((P_l * ErrorL + D_l * dErrorL + I_l * iErrorL));
     dPWM_R = -(int)ceil((P_r * ErrorR + D_r * dErrorR + I_r * iErrorR));
@@ -369,8 +378,9 @@ void pid() {
 
     lastErrorL = ErrorL;
     lastErrorR = ErrorR;
+    actual_speed_last_l = actualSpeedL;
+    actual_speed_last_r = actualSpeedR;
 }
-
 
 void bothMotorStop() {
     serial.putc(0);

@@ -389,7 +389,7 @@ void pid() {
     PWM_L = -static_cast<int>(round(feedforward_left + feedback_left));
     PWM_R = -static_cast<int>(round(feedforward_right + feedback_right));
 
-    // Map from 1 - 127, since
+    // Map from 1 - 127, since 0 causes both motors to stop
     PWM_L = min(63, max(-63, PWM_L)) + 64;
     PWM_R = min(63, max(-63, PWM_R)) + 64;
 

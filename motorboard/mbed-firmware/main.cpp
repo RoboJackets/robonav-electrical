@@ -40,13 +40,17 @@ InterruptIn encoderRightPinA(p26);
 DigitalIn encoderRightPinB(p25);
 AnalogIn battery(p20);
 
+struct SpeedPair {
+  unsigned char left;
+  unsigned char right;
+};
+
 /* function prototypes */
 void parseRequest(const RequestMessage &req);
 void tickLeft();
 void tickRight();
 void pid();
-void setLeftSpeed(int);
-void setRightSpeed(int);
+void setSpeeds(SpeedPair speed);
 void bothMotorStop();
 void triggerEstop();
 
@@ -70,8 +74,10 @@ float iErrorR = 0;
 float dT_sec = 0;
 float lastErrorL = 0;
 float lastErrorR = 0;
-float actual_speed_last_l;
-float actual_speed_last_r;
+float actual_speed_last_l = 0;
+float actual_speed_last_r = 0;
+float low_passed_pv_l = 0;
+float low_passed_pv_r = 0;
 
 /* PID constants */
 float P_l = 0;
@@ -322,8 +328,11 @@ void tickLeft() {
 // Changes to before
 // 1: Derivative on PV
 // 2: Corrected integral
-// TODO: Feed forward
+// 3: Low pass on Derivative
+// 4: Clamping on Integral
+// 5: Feed forward
 void pid() {
+    // 1: Calculate dt
     dT_sec = (float)(timer.read_ms() - lastLoopTime) / 1000.0;
 
     if (timer.read() >= 1700) {
@@ -332,43 +341,68 @@ void pid() {
     }
 
     lastLoopTime = timer.read_ms();
+
+    // 2: Convert encoder values into velocity
     actualSpeedL = (metersPerTick * tickDataLeft) / dT_sec;
     actualSpeedR = (metersPerTick * tickDataRight) / dT_sec;
 
     tickDataLeft = 0;
     tickDataRight = 0;
 
+    // 3: Calculate error
     ErrorL = desiredSpeedL - actualSpeedL;
     ErrorR = desiredSpeedR - actualSpeedR;
 
-    // dPV/dt
-    dErrorL = (actual_speed_last_l - actualSpeedL)/dT_sec;
-    dErrorR = (actual_speed_last_r - actualSpeedR)/dT_sec;
+    // 4: Calculate Derivative Error
+    // TODO: Make alpha a parameter
+    float alpha = 0.75;
+    low_passed_pv_l = alpha * (actual_speed_last_l - actualSpeedL)/dT_sec + (1 - alpha) * low_passed_pv_l;
+    low_passed_pv_r = alpha * (actual_speed_last_r - actualSpeedR)/dT_sec + (1 - alpha) * low_passed_pv_r;
 
-    // sum of Error dt
+    dErrorL = low_passed_pv_l;
+    dErrorR = low_passed_pv_r;
+
+    // 5: Calculate Integral Error
+    // 5a: Calculate Error
     iErrorL += ErrorL * dT_sec;
     iErrorR += ErrorR * dT_sec;
 
-    dPWM_L = -(int)ceil((P_l * ErrorL + D_l * dErrorL + I_l * iErrorL));
-    dPWM_R = -(int)ceil((P_r * ErrorR + D_r * dErrorR + I_r * iErrorR));
+    // 5b: Perform clamping
+    // TODO: make clamping a parameter
+    float i_clamp = 255;
+    iErrorL = min(i_clamp, max(-i_clamp, iErrorL));
+    iErrorR = min(i_clamp, max(-i_clamp, iErrorR));
 
-    PWM_L += dPWM_L;
-    PWM_R += dPWM_R;
+    // 6: Sum P, I and D terms
+    float feedback_left = P_l * ErrorL + D_l * dErrorL + I_l * iErrorL;
+    float feedback_right = P_r * ErrorR + D_r * dErrorR + I_r * iErrorR;
 
-    PWM_L = min(255, max(-255, PWM_L));
-    PWM_R = min(255, max(-255, PWM_R));
+    // 7: Calculate feedforward
+    // TODO: Make Kv a parameter
+    float Kv_left = 30.511;
+    float Kv_right = 31.476;
 
-    // Deadband
+    float feedforward_left = Kv_left * desiredSpeedL;
+    float feedforward_right = Kv_right * desiredSpeedR;
+
+    // Apparently motor commands are inverted somehow
+    PWM_L = -static_cast<int>(round(feedforward_left + feedback_left));
+    PWM_R = -static_cast<int>(round(feedforward_right + feedback_right));
+
+    // Map from 1 - 127, since 0 causes both motors to stop
+    PWM_L = min(63, max(-63, PWM_L)) + 64;
+    PWM_R = min(63, max(-63, PWM_R)) + 64;
+
+    // 8: Deadband
     if (abs(actualSpeedL) < 0.16 && abs(desiredSpeedL) < 0.16) {
-        PWM_L = 0;
+        PWM_L = 64;
     }
 
     if (abs(actualSpeedR) < 0.16 && abs(desiredSpeedR) < 0.16) {
-        PWM_R = 0;
+        PWM_R = 64;
     }
 
-    setLeftSpeed(PWM_L);
-    setRightSpeed(PWM_R);
+    setSpeeds({static_cast<unsigned char>(PWM_L), static_cast<unsigned char>(PWM_R)});
 
     /*
         Be aware that this motor board does not interface with the motor
@@ -386,29 +420,15 @@ void bothMotorStop() {
     serial.putc(0);
 }
 
-void setLeftSpeed(int c) {
-    c = (c + 250) / 4 + 1;
-    if (c > 127)
-    {
-        c = 127;
-    }
-    else if (c < 0)
-    {
-        c = 0;
-    }
-    c += 128;
-    serial.putc(static_cast<char>(c));
-}
 
-void setRightSpeed(int c) {
-    c = (c + 250) / 4 + 1;
-    if (c > 127)
-    {
-        c = 127;
-    }
-    else if (c < 1)
-    {
-        c = 1;
-    }
-    serial.putc(static_cast<char>(c));
+/**
+ * Sets speed for both motors. Right motor is 0 - 127, Left motor is 128 - 255
+ * @param c
+ */
+void setSpeeds(SpeedPair speed) {
+    // Right motor
+    serial.putc(speed.right);
+
+    // Left motor
+    serial.putc(static_cast<char>(128) + speed.left);
 }

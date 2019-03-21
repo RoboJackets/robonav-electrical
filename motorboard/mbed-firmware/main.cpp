@@ -355,7 +355,7 @@ void pid() {
 
     // 4: Calculate Derivative Error
     // TODO: Make alpha a parameter
-    constexpr float alpha = 0.75;
+    float alpha = 0.75;
     low_passed_pv_l = alpha * (actual_speed_last_l - actualSpeedL)/dT_sec + (1 - alpha) * low_passed_pv_l;
     low_passed_pv_r = alpha * (actual_speed_last_r - actualSpeedR)/dT_sec + (1 - alpha) * low_passed_pv_r;
 
@@ -369,7 +369,7 @@ void pid() {
 
     // 5b: Perform clamping
     // TODO: make clamping a parameter
-    constexpr float i_clamp = 255;
+    float i_clamp = 255;
     iErrorL = min(i_clamp, max(-i_clamp, iErrorL));
     iErrorR = min(i_clamp, max(-i_clamp, iErrorR));
 
@@ -379,8 +379,8 @@ void pid() {
 
     // 7: Calculate feedforward
     // TODO: Make Kv a parameter
-    constexpr float Kv_left = 30.511;
-    constexpr float Kv_right = 31.476;
+    float Kv_left = 30.511;
+    float Kv_right = 31.476;
 
     float feedforward_left = Kv_left * desiredSpeedL;
     float feedforward_right = Kv_right * desiredSpeedR;

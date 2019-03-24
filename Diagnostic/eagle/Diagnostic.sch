@@ -18708,15 +18708,6 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 <junction x="241.3" y="200.66"/>
 </segment>
 <segment>
-<wire x1="162.56" y1="116.84" x2="162.56" y2="119.38" width="0.1524" layer="91"/>
-<pinref part="C15" gate="G$1" pin="1"/>
-<wire x1="162.56" y1="119.38" x2="162.56" y2="121.92" width="0.1524" layer="91"/>
-<junction x="162.56" y="119.38"/>
-<pinref part="T2" gate="A" pin="OUTPUT"/>
-<wire x1="162.56" y1="119.38" x2="180.34" y2="119.38" width="0.1524" layer="91"/>
-<pinref part="P+5" gate="1" pin="+5V"/>
-</segment>
-<segment>
 <pinref part="U6" gate="A" pin="VCCB"/>
 <wire x1="363.22" y1="182.88" x2="368.3" y2="182.88" width="0.1524" layer="91"/>
 <wire x1="368.3" y1="182.88" x2="368.3" y2="200.66" width="0.1524" layer="91"/>
@@ -18967,6 +18958,15 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 <pinref part="C18" gate="G$1" pin="1"/>
 <wire x1="302.26" y1="200.66" x2="297.18" y2="200.66" width="0.1524" layer="91"/>
 <junction x="302.26" y="200.66"/>
+</segment>
+<segment>
+<wire x1="162.56" y1="116.84" x2="162.56" y2="119.38" width="0.1524" layer="91"/>
+<pinref part="C15" gate="G$1" pin="1"/>
+<wire x1="162.56" y1="119.38" x2="162.56" y2="121.92" width="0.1524" layer="91"/>
+<junction x="162.56" y="119.38"/>
+<pinref part="T2" gate="A" pin="OUTPUT"/>
+<wire x1="162.56" y1="119.38" x2="180.34" y2="119.38" width="0.1524" layer="91"/>
+<pinref part="P+5" gate="1" pin="+5V"/>
 </segment>
 </net>
 <net name="SS1_3V3" class="0">

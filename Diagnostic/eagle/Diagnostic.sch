@@ -18983,27 +18983,27 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 </net>
 <net name="LOGIC_TX_3V3" class="0">
 <segment>
-<pinref part="U4" gate="A" pin="A2"/>
-<label x="172.72" y="180.34" size="1.27" layer="95" rot="R180" xref="yes"/>
-<wire x1="180.34" y1="180.34" x2="172.72" y2="180.34" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <label x="109.22" y="119.38" size="1.27" layer="95" rot="R180" xref="yes"/>
 <wire x1="114.3" y1="119.38" x2="109.22" y2="119.38" width="0.1524" layer="91"/>
 <pinref part="X1" gate="G$1" pin="X-4"/>
 </segment>
+<segment>
+<label x="299.72" y="185.42" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="307.34" y1="185.42" x2="299.72" y2="185.42" width="0.1524" layer="91"/>
+<pinref part="U6" gate="A" pin="A1"/>
+</segment>
 </net>
 <net name="LOGIC_RX_3V3" class="0">
-<segment>
-<pinref part="U4" gate="A" pin="A1"/>
-<label x="172.72" y="185.42" size="1.27" layer="95" rot="R180" xref="yes"/>
-<wire x1="180.34" y1="185.42" x2="172.72" y2="185.42" width="0.1524" layer="91"/>
-</segment>
 <segment>
 <label x="109.22" y="116.84" size="1.27" layer="95" rot="R180" xref="yes"/>
 <wire x1="114.3" y1="116.84" x2="109.22" y2="116.84" width="0.1524" layer="91"/>
 <label x="109.22" y="116.84" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="X1" gate="G$1" pin="X-5"/>
+</segment>
+<segment>
+<label x="299.72" y="180.34" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="307.34" y1="180.34" x2="299.72" y2="180.34" width="0.1524" layer="91"/>
+<pinref part="U6" gate="A" pin="A2"/>
 </segment>
 </net>
 <net name="SCK1_3V3" class="0">
@@ -19074,16 +19074,16 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 </net>
 <net name="LOGIC_RX_5V" class="0">
 <segment>
-<pinref part="U4" gate="A" pin="B1"/>
-<label x="243.84" y="185.42" size="1.27" layer="95" xref="yes"/>
-<wire x1="236.22" y1="185.42" x2="243.84" y2="185.42" width="0.1524" layer="91"/>
+<label x="370.84" y="180.34" size="1.27" layer="95" xref="yes"/>
+<wire x1="363.22" y1="180.34" x2="370.84" y2="180.34" width="0.1524" layer="91"/>
+<pinref part="U6" gate="A" pin="B2"/>
 </segment>
 </net>
 <net name="LOGIC_TX_5V" class="0">
 <segment>
-<pinref part="U4" gate="A" pin="B2"/>
-<label x="243.84" y="180.34" size="1.27" layer="95" xref="yes"/>
-<wire x1="236.22" y1="180.34" x2="243.84" y2="180.34" width="0.1524" layer="91"/>
+<label x="370.84" y="185.42" size="1.27" layer="95" xref="yes"/>
+<wire x1="363.22" y1="185.42" x2="370.84" y2="185.42" width="0.1524" layer="91"/>
+<pinref part="U6" gate="A" pin="B1"/>
 </segment>
 </net>
 <net name="MOSI1_5V" class="0">

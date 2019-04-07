@@ -18717,11 +18717,6 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 <junction x="368.3" y="200.66"/>
 </segment>
 <segment>
-<wire x1="15.24" y1="203.2" x2="15.24" y2="198.12" width="0.1524" layer="91"/>
-<pinref part="+3V2" gate="1" pin="+5V"/>
-<pinref part="C3" gate="G$1" pin="1"/>
-</segment>
-<segment>
 <pinref part="XAL6030-332MEB" gate="A" pin="2"/>
 <wire x1="281.94" y1="71.12" x2="287.02" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="287.02" y1="71.12" x2="299.72" y2="71.12" width="0.1524" layer="91"/>
@@ -18967,6 +18962,11 @@ Source: http://eshop.phoenixcontact.com .. 1751248.pdf</description>
 <pinref part="T2" gate="A" pin="OUTPUT"/>
 <wire x1="162.56" y1="119.38" x2="180.34" y2="119.38" width="0.1524" layer="91"/>
 <pinref part="P+5" gate="1" pin="+5V"/>
+</segment>
+<segment>
+<wire x1="15.24" y1="203.2" x2="15.24" y2="198.12" width="0.1524" layer="91"/>
+<pinref part="+3V2" gate="1" pin="+5V"/>
+<pinref part="C3" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="SS1_3V3" class="0">

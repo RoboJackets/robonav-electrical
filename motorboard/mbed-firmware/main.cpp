@@ -34,11 +34,11 @@ DigitalOut boardLED(p8);
 DigitalOut eStopLight(p12);
 DigitalIn eStopStatus(p18);
 
-InterruptIn encoderLeftPinA(p28);
-DigitalIn encoderLeftPinB(p27);
+InterruptIn encoderLeftPinA(p24);
+DigitalIn encoderLeftPinB(p23);
 InterruptIn encoderRightPinA(p26);
 DigitalIn encoderRightPinB(p25);
-AnalogIn battery(p20);
+AnalogIn battery(p19);
 
 struct SpeedPair {
   unsigned char left;

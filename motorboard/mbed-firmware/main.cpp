@@ -47,6 +47,7 @@ struct SpeedPair {
 
 /* function prototypes */
 void parseRequest(const RequestMessage &req);
+bool sendResponse(TCPSocketConnection &client);
 void tickLeft();
 void tickRight();
 void pid();
@@ -143,7 +144,8 @@ int main() {
         printf("accepted new client\r\n");
         client.set_blocking(false, TIMEOUT_MS); // Set calls to non-blocking, timeout after TIMEOUT_MS
         printf("Connection from: %s\r\n", client.get_address());
-	estop = 1;
+        estop = 1;
+
         while (true)
         {
             /* read data into the buffer. This call blocks until data is read */
@@ -211,62 +213,71 @@ int main() {
             /* update motor velocities with PID */
             pid();
 
-            /* protocol buffer to hold response message */
-            ResponseMessage response = ResponseMessage_init_zero;
-
-            /* This is the buffer where we will store the response message. */
-            uint8_t responsebuffer[256];
-            size_t response_length;
-            bool ostatus;
-
-            /* Create a stream that will write to our buffer. */
-            pb_ostream_t ostream = pb_ostream_from_buffer(responsebuffer, sizeof(responsebuffer));
-
-            /* Fill in the message fields */
-            response.has_p_l     = true;
-            response.has_p_r     = true;
-            response.has_i_l     = true;
-            response.has_i_r     = true;
-            response.has_d_l     = true;
-            response.has_d_r     = true;
-            response.has_speed_l = true;
-            response.has_speed_r = true;
-            response.has_dt_sec  = true;
-            response.has_voltage = true;
-            response.has_estop   = true;
-
-            response.p_l     = static_cast<float>(P_l);
-            response.p_r     = static_cast<float>(P_r);
-            response.i_l     = static_cast<float>(I_l);
-            response.i_r     = static_cast<float>(I_r);
-            response.d_l     = static_cast<float>(D_l);
-            response.d_r     = static_cast<float>(D_r);
-            response.speed_l = static_cast<float>(actualSpeedL);
-            response.speed_r = static_cast<float>(actualSpeedR);
-            response.dt_sec  = static_cast<float>(dT_sec);
-            response.voltage = static_cast<float>(battery.read() * 3.3 * 521 / 51);
-            response.estop   = static_cast<bool>(estop);
-
-            /* encode the message */
-            ostatus = pb_encode(&ostream, ResponseMessage_fields, &response);
-            response_length = ostream.bytes_written;
-
-            if (DEBUG) { printf("Sending message of length: %zu\n", response_length); }
-
-            /* Then just check for any errors.. */
-            if (!ostatus)
+            if (!sendResponse(client))
             {
-                printf("Encoding failed: %s\n", PB_GET_ERROR(&ostream));
-                return 1;
+              return 1;
             }
-
-            client.send_all(reinterpret_cast<char*>(responsebuffer), response_length);
-
         }
 
         triggerEstop();
         client.close();
     }
+}
+
+bool sendResponse(TCPSocketConnection &client)
+{
+  /* protocol buffer to hold response message */
+  ResponseMessage response = ResponseMessage_init_zero;
+
+  /* This is the buffer where we will store the response message. */
+  uint8_t responsebuffer[256];
+  size_t response_length;
+  bool ostatus;
+
+  /* Create a stream that will write to our buffer. */
+  pb_ostream_t ostream = pb_ostream_from_buffer(responsebuffer, sizeof(responsebuffer));
+
+
+  /* Fill in the message fields */
+  response.has_p_l     = true;
+  response.has_p_r     = true;
+  response.has_i_l     = true;
+  response.has_i_r     = true;
+  response.has_d_l     = true;
+  response.has_d_r     = true;
+  response.has_speed_l = true;
+  response.has_speed_r = true;
+  response.has_dt_sec  = true;
+  response.has_voltage = true;
+  response.has_estop   = true;
+
+  response.p_l     = static_cast<float>(P_l);
+  response.p_r     = static_cast<float>(P_r);
+  response.i_l     = static_cast<float>(I_l);
+  response.i_r     = static_cast<float>(I_r);
+  response.d_l     = static_cast<float>(D_l);
+  response.d_r     = static_cast<float>(D_r);
+  response.speed_l = static_cast<float>(actualSpeedL);
+  response.speed_r = static_cast<float>(actualSpeedR);
+  response.dt_sec  = static_cast<float>(dT_sec);
+  response.voltage = static_cast<float>(battery.read() * 3.3 * 521 / 51);
+  response.estop   = static_cast<bool>(estop);
+
+  /* encode the message */
+  ostatus = pb_encode(&ostream, ResponseMessage_fields, &response);
+  response_length = ostream.bytes_written;
+
+  if (DEBUG) { printf("Sending message of length: %zu\n", response_length); }
+
+  /* Then just check for any errors.. */
+  if (!ostatus)
+  {
+    printf("Encoding failed: %s\n", PB_GET_ERROR(&ostream));
+    return false;
+  }
+
+  client.send_all(reinterpret_cast<char*>(responsebuffer), response_length);
+  return true;
 }
 
 void triggerEstop()
@@ -277,6 +288,8 @@ void triggerEstop()
     desiredSpeedR = 0;
     PWM_L = 0;
     PWM_R = 0;
+    iErrorL = 0;
+    iErrorR = 0;
     bothMotorStop();
     eStopLight = 1;
 }

@@ -87,6 +87,8 @@ float P_r = 0;
 float D_r = 0;
 float I_l = 0;
 float I_r = 0;
+float Kv_l = 0;
+float Kv_r = 0;
 
 int dPWM_L = 0;
 int dPWM_R = 0;
@@ -251,17 +253,24 @@ bool sendResponse(TCPSocketConnection &client)
   response.has_voltage = true;
   response.has_estop   = true;
 
+  response.has_kv_l   = true;
+  response.has_kv_r   = true;
+
   response.p_l     = static_cast<float>(P_l);
   response.p_r     = static_cast<float>(P_r);
   response.i_l     = static_cast<float>(I_l);
   response.i_r     = static_cast<float>(I_r);
   response.d_l     = static_cast<float>(D_l);
   response.d_r     = static_cast<float>(D_r);
+
   response.speed_l = static_cast<float>(actualSpeedL);
   response.speed_r = static_cast<float>(actualSpeedR);
   response.dt_sec  = static_cast<float>(dT_sec);
   response.voltage = static_cast<float>(battery.read() * 3.3 * 521 / 51);
   response.estop   = static_cast<bool>(estop);
+
+  response.kv_l     = static_cast<float>(Kv_l);
+  response.kv_r     = static_cast<float>(Kv_r);
 
   /* encode the message */
   ostatus = pb_encode(&ostream, ResponseMessage_fields, &response);
@@ -310,6 +319,8 @@ void parseRequest(const RequestMessage &req)
         D_r = req.d_r;
         I_l = req.i_l;
         I_r = req.i_r;
+        Kv_l = req.kv_l;
+        Kv_r = req.kv_r;
     }
     /* request contains motor velocities */
     if (req.has_speed_l)
@@ -391,12 +402,8 @@ void pid() {
     float feedback_right = P_r * ErrorR + D_r * dErrorR + I_r * iErrorR;
 
     // 7: Calculate feedforward
-    // TODO: Make Kv a parameter
-    float Kv_left = 30.511;
-    float Kv_right = 31.476;
-
-    float feedforward_left = Kv_left * desiredSpeedL;
-    float feedforward_right = Kv_right * desiredSpeedR;
+    float feedforward_left = Kv_l * desiredSpeedL;
+    float feedforward_right = Kv_r * desiredSpeedR;
 
     // Apparently motor commands are inverted somehow
     PWM_L = -static_cast<int>(round(feedforward_left + feedback_left));

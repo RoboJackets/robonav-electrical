@@ -17,6 +17,9 @@ message ResponseMessage {
 
     optional float voltage = 10;
     optional bool estop = 11;
+
+    optional float kv_l = 12;
+    optional float kv_r = 13;
 }
 
 /* RequestMessage filled out by ros node and sent to the mbed */
@@ -30,4 +33,7 @@ message RequestMessage {
 
     optional float speed_l = 7 [default = 0];
     optional float speed_r = 8 [default = 0];
+
+    optional float kv_l = 9;
+    optional float kv_r = 10;
 }

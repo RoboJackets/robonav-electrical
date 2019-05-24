@@ -32,6 +32,10 @@ typedef struct _RequestMessage {
     float speed_l;
     bool has_speed_r;
     float speed_r;
+    bool has_kv_l;
+    float kv_l;
+    bool has_kv_r;
+    float kv_r;
 /* @@protoc_insertion_point(struct:RequestMessage) */
 } RequestMessage;
 
@@ -58,6 +62,10 @@ typedef struct _ResponseMessage {
     float voltage;
     bool has_estop;
     bool estop;
+    bool has_kv_l;
+    float kv_l;
+    bool has_kv_r;
+    float kv_r;
 /* @@protoc_insertion_point(struct:ResponseMessage) */
 } ResponseMessage;
 
@@ -66,10 +74,10 @@ extern const float RequestMessage_speed_l_default;
 extern const float RequestMessage_speed_r_default;
 
 /* Initializer values for message structs */
-#define ResponseMessage_init_default             {false, 0, false, 0, false, 0, false, 0, false, 0, false, 0, false, 0, false, 0, false, 0, false, 0, false, 0}
-#define RequestMessage_init_default              {false, 0, false, 0, false, 0, false, 0, false, 0, false, 0, false, 0, false, 0}
-#define ResponseMessage_init_zero                {false, 0, false, 0, false, 0, false, 0, false, 0, false, 0, false, 0, false, 0, false, 0, false, 0, false, 0}
-#define RequestMessage_init_zero                 {false, 0, false, 0, false, 0, false, 0, false, 0, false, 0, false, 0, false, 0}
+#define ResponseMessage_init_default             {false, 0, false, 0, false, 0, false, 0, false, 0, false, 0, false, 0, false, 0, false, 0, false, 0, false, 0, false, 0, false, 0}
+#define RequestMessage_init_default              {false, 0, false, 0, false, 0, false, 0, false, 0, false, 0, false, 0, false, 0, false, 0, false, 0}
+#define ResponseMessage_init_zero                {false, 0, false, 0, false, 0, false, 0, false, 0, false, 0, false, 0, false, 0, false, 0, false, 0, false, 0, false, 0, false, 0}
+#define RequestMessage_init_zero                 {false, 0, false, 0, false, 0, false, 0, false, 0, false, 0, false, 0, false, 0, false, 0, false, 0}
 
 /* Field tags (for use in manual encoding/decoding) */
 #define RequestMessage_p_l_tag                   1
@@ -80,6 +88,8 @@ extern const float RequestMessage_speed_r_default;
 #define RequestMessage_d_r_tag                   6
 #define RequestMessage_speed_l_tag               7
 #define RequestMessage_speed_r_tag               8
+#define RequestMessage_kv_l_tag                  9
+#define RequestMessage_kv_r_tag                  10
 #define ResponseMessage_p_l_tag                  1
 #define ResponseMessage_p_r_tag                  2
 #define ResponseMessage_i_l_tag                  3
@@ -91,14 +101,16 @@ extern const float RequestMessage_speed_r_default;
 #define ResponseMessage_dt_sec_tag               9
 #define ResponseMessage_voltage_tag              10
 #define ResponseMessage_estop_tag                11
+#define ResponseMessage_kv_l_tag                 12
+#define ResponseMessage_kv_r_tag                 13
 
 /* Struct field encoding specification for nanopb */
-extern const pb_field_t ResponseMessage_fields[12];
-extern const pb_field_t RequestMessage_fields[9];
+extern const pb_field_t ResponseMessage_fields[14];
+extern const pb_field_t RequestMessage_fields[11];
 
 /* Maximum encoded size of messages (where known) */
-#define ResponseMessage_size                     52
-#define RequestMessage_size                      40
+#define ResponseMessage_size                     62
+#define RequestMessage_size                      50
 
 /* Message IDs (where set with "msgid" option) */
 #ifdef PB_MSGID

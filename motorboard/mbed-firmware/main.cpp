@@ -202,7 +202,7 @@ int main() {
             }
 
             /* estop logic */
-            if (eStopStatus.read())
+            if (!eStopStatus.read())
             {
                 triggerEstop();
             }

@@ -31,7 +31,7 @@ DigitalOut myLED2(LED2);
 DigitalOut myLED3(LED3);
 DigitalOut myLED4(LED4);
 DigitalOut boardLED(p8);
-DigitalOut eStopLight(p12);
+DigitalOut eStopLight(p11);
 DigitalIn eStopStatus(p15);
 
 InterruptIn encoderLeftPinA(p24);

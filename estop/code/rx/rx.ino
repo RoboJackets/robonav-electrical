@@ -78,5 +78,5 @@ void loop()
   digitalWrite(btn_led, LOW);
   */
   Serial.println(button_state);
-  delay(100);
+  delay(25);
  } 

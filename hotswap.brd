@@ -165,7 +165,7 @@
 <text x="41.91" y="35.56" size="1.778" layer="25" rot="R270">COMPUTER
 </text>
 <text x="33.02" y="52.07" size="1.778" layer="25">RoboJackets IGVC
-Hotswap Board v.0.1</text>
+Hotswap Board v.1.0</text>
 </plain>
 <libraries>
 <library name="rcl" urn="urn:adsk.eagle:library:334">

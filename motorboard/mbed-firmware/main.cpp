@@ -110,6 +110,10 @@ const double metersPerTick = wheelCircum / (ticksPerRev * gearRatio);
 int estop = 1;
 
 int main() {
+//    /* Read PCON register */
+    printf("PCON: 0x%x\n", *((unsigned int *)0x400FC180));
+    *(unsigned int*) 0x400fc180 |= 0xf;
+
     /* Open the server (mbed) via the EthernetInterface class */
     printf("Setting up ethernet interface...\r\n");
     EthernetInterface eth;
@@ -140,13 +144,18 @@ int main() {
 
     while (true)
     {
+        myLED2 = 1;
         /* wait for a new TCP Connection */
         printf("Waiting for new connection...\r\n");
         server.accept(client);
+        myLED2 = 0;
+
         printf("accepted new client\r\n");
         client.set_blocking(false, TIMEOUT_MS); // Set calls to non-blocking, timeout after TIMEOUT_MS
         printf("Connection from: %s\r\n", client.get_address());
         estop = 1;
+
+        myLED3 = 1;
 
         while (true)
         {
@@ -189,7 +198,7 @@ int main() {
             if (!istatus)
             {
                 printf("Decoding failed: %s\n", PB_GET_ERROR(&istream));
-                return 1;
+                continue;
             }
 
             parseRequest(request);
@@ -217,10 +226,12 @@ int main() {
 
             if (!sendResponse(client))
             {
-              return 1;
+              printf("Couldn't send response to client!\r\n");
+              continue;
             }
         }
-
+        myLED3 = 0;
+        printf("Closing rip..\r\n");
         triggerEstop();
         client.close();
     }
@@ -393,7 +404,7 @@ void pid() {
 
     // 5b: Perform clamping
     // TODO: make clamping a parameter
-    float i_clamp = 255;
+    float i_clamp = 60 / I_l;
     iErrorL = min(i_clamp, max(-i_clamp, iErrorL));
     iErrorR = min(i_clamp, max(-i_clamp, iErrorR));
 

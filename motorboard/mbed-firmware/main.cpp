@@ -155,8 +155,6 @@ int main() {
         printf("Connection from: %s\r\n", client.get_address());
         estop = 1;
 
-        myLED3 = 1;
-
         while (true)
         {
             /* read data into the buffer. This call blocks until data is read */
@@ -230,7 +228,6 @@ int main() {
               continue;
             }
         }
-        myLED3 = 0;
         printf("Closing rip..\r\n");
         triggerEstop();
         client.close();
@@ -431,6 +428,20 @@ void pid() {
 
     if (abs(actualSpeedR) < 0.16 && abs(desiredSpeedR) < 0.16) {
         PWM_R = 64;
+    }
+
+    if (PWM_L < 40 && PWM_R < 40)
+    {
+      myLED4 = 1;
+      PWM_L = 64;
+      PWM_R = 64;
+    }
+
+    if (actualSpeedL < -0.5 && actualSpeedR < -0.5)
+    {
+      myLED3 = 1;
+      PWM_L = 64;
+      PWM_R = 64;
     }
 
     setSpeeds({static_cast<unsigned char>(PWM_L), static_cast<unsigned char>(PWM_R)});

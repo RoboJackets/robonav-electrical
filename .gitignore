@@ -68,3 +68,8 @@ datasheets/
 # autorouter log files
 *.pro
 
+# LaTeX Temp Files
+*.aux
+*.out
+*.synctex.gz
+*.toc

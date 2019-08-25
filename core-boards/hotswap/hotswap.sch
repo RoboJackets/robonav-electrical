@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.3.0">
+<eagle version="9.4.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -11511,9 +11511,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <attribute name="NAME" x="61.3536" y="47.2335" size="2.0862" layer="95" ratio="6" rot="SR0"/>
 <attribute name="VALUE" x="60.7431" y="44.69681875" size="2.08856875" layer="96" ratio="6" rot="SR0"/>
 </instance>
-<instance part="Q2" gate="G$1" x="114.3" y="73.66" smashed="yes" rot="R90">
-<attribute name="NAME" x="118.11" y="81.28" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="123.19" y="83.82" size="1.778" layer="96" rot="R180"/>
+<instance part="Q2" gate="G$1" x="114.3" y="73.66" smashed="yes" rot="MR90">
+<attribute name="NAME" x="110.49" y="81.28" size="1.778" layer="95" rot="MR180"/>
+<attribute name="VALUE" x="105.41" y="83.82" size="1.778" layer="96" rot="MR180"/>
 </instance>
 <instance part="Q1" gate="G$1" x="93.98" y="0" smashed="yes" rot="R270">
 <attribute name="NAME" x="92.71" y="-7.62" size="1.778" layer="95"/>
@@ -11683,9 +11683,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <net name="N$4" class="0">
 <segment>
 <pinref part="U1" gate="A" pin="G1"/>
+<wire x1="93.98" y1="38.1" x2="116.84" y2="38.1" width="0.1524" layer="91"/>
 <pinref part="Q2" gate="G$1" pin="G"/>
-<wire x1="93.98" y1="38.1" x2="111.76" y2="38.1" width="0.1524" layer="91"/>
-<wire x1="111.76" y1="38.1" x2="111.76" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="71.12" x2="116.84" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$9" class="0">
@@ -11699,15 +11699,12 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <net name="VCC_WALL" class="0">
 <segment>
 <pinref part="P+2" gate="VCC" pin="VCC"/>
-<pinref part="Q2" gate="G$1" pin="S"/>
-<wire x1="109.22" y1="76.2" x2="99.06" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="20.32" y1="76.2" x2="35.56" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="35.56" y1="76.2" x2="99.06" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="99.06" y1="76.2" x2="99.06" y2="71.12" width="0.1524" layer="91"/>
 <pinref part="U1" gate="A" pin="V1"/>
 <wire x1="99.06" y1="71.12" x2="99.06" y2="35.56" width="0.1524" layer="91"/>
 <wire x1="99.06" y1="35.56" x2="93.98" y2="35.56" width="0.1524" layer="91"/>
-<junction x="99.06" y="76.2"/>
 <pinref part="U1" gate="A" pin="E1"/>
 <wire x1="38.1" y1="35.56" x2="35.56" y2="35.56" width="0.1524" layer="91"/>
 <wire x1="35.56" y1="35.56" x2="35.56" y2="76.2" width="0.1524" layer="91"/>
@@ -11733,6 +11730,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="J1" gate="A" pin="2"/>
 <wire x1="7.62" y1="88.9" x2="15.24" y2="88.9" width="0.1524" layer="91"/>
 <wire x1="15.24" y1="88.9" x2="15.24" y2="86.36" width="0.1524" layer="91"/>
+<pinref part="Q2" gate="G$1" pin="D"/>
+<wire x1="109.22" y1="76.2" x2="99.06" y2="76.2" width="0.1524" layer="91"/>
+<junction x="99.06" y="76.2"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -11746,8 +11746,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <segment>
 <pinref part="U1" gate="A" pin="VS"/>
 <wire x1="93.98" y1="33.02" x2="119.38" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="119.38" y1="33.02" x2="119.38" y2="76.2" width="0.1524" layer="91"/>
-<pinref part="Q2" gate="G$1" pin="D"/>
 <junction x="119.38" y="33.02"/>
 <wire x1="119.38" y1="33.02" x2="137.16" y2="33.02" width="0.1524" layer="91"/>
 <pinref part="P+3" gate="VCC" pin="VCC"/>
@@ -11767,6 +11765,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="Q3" gate="G$1" pin="D"/>
 <wire x1="119.38" y1="33.02" x2="119.38" y2="-2.54" width="0.1524" layer="91"/>
 <junction x="119.38" y="-2.54"/>
+<pinref part="Q2" gate="G$1" pin="S"/>
+<wire x1="119.38" y1="76.2" x2="119.38" y2="33.02" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VCC_BATT" class="0">

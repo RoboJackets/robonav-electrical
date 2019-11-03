@@ -811,6 +811,40 @@ current output</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="supply1" urn="urn:adsk.eagle:library:371">
+<description>&lt;b&gt;Supply Symbols&lt;/b&gt;&lt;p&gt;
+ GND, VCC, 0V, +5V, -5V, etc.&lt;p&gt;
+ Please keep in mind, that these devices are necessary for the
+ automatic wiring of the supply signals.&lt;p&gt;
+ The pin name defined in the symbol is identical to the net which is to be wired automatically.&lt;p&gt;
+ In this library the device names are the same as the pin names of the symbols, therefore the correct signal names appear next to the supply symbols in the schematic.&lt;p&gt;
+ &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+</packages>
+<symbols>
+<symbol name="AGND" urn="urn:adsk.eagle:symbol:26949/1" library_version="1">
+<wire x1="-1.905" y1="0" x2="1.905" y2="0" width="0.254" layer="94"/>
+<wire x1="-1.0922" y1="-0.508" x2="1.0922" y2="-0.508" width="0.254" layer="94"/>
+<text x="-2.54" y="-5.08" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<pin name="AGND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="AGND" urn="urn:adsk.eagle:component:26977/1" prefix="AGND" library_version="1">
+<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
+<gates>
+<gate name="VR1" symbol="AGND" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -828,6 +862,8 @@ current output</description>
 <part name="J2" library="RoboJackets-Connectors" deviceset="4-PIN_2MM-*" device="H"/>
 <part name="TEMP-SENSOR-ONBOARD" library="linear" library_urn="urn:adsk.eagle:library:262" deviceset="AD590ZR" device="" package3d_urn="urn:adsk.eagle:package:16416/2"/>
 <part name="TEMP-PROBE" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="22-23-2031" device="" package3d_urn="urn:adsk.eagle:package:8078634/1"/>
+<part name="AGND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="AGND" device=""/>
+<part name="AGND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="AGND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -849,7 +885,7 @@ current output</description>
 </instance>
 <instance part="J2" gate="G$1" x="25.4" y="-68.58" smashed="yes" rot="R90">
 <attribute name="NAME" x="20.32" y="-73.66" size="1.778" layer="95" font="vector" rot="R90" align="top-left"/>
-<attribute name="VALUE" x="38.1" y="-73.66" size="1.778" layer="96" font="vector" rot="R90"/>
+<attribute name="VALUE" x="38.1" y="-71.12" size="1.778" layer="96" font="vector" rot="R90"/>
 </instance>
 <instance part="TEMP-SENSOR-ONBOARD" gate="A" x="91.44" y="-7.62" smashed="yes">
 <attribute name="NAME" x="95.25" y="-7.62" size="1.778" layer="95"/>
@@ -865,6 +901,12 @@ current output</description>
 <instance part="TEMP-PROBE" gate="-3" x="78.74" y="38.1" smashed="yes">
 <attribute name="NAME" x="81.28" y="37.338" size="1.524" layer="95"/>
 </instance>
+<instance part="AGND1" gate="VR1" x="-40.64" y="12.7" smashed="yes">
+<attribute name="VALUE" x="-43.18" y="7.62" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="AGND2" gate="VR1" x="-96.52" y="53.34" smashed="yes">
+<attribute name="VALUE" x="-99.06" y="48.26" size="1.778" layer="96" rot="R90"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -875,34 +917,20 @@ current output</description>
 <wire x1="-134.62" y1="91.44" x2="-134.62" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="VOLTAGE-REGULATOR" gate="A" pin="IN"/>
 <wire x1="-134.62" y1="66.04" x2="-104.14" y2="66.04" width="0.1524" layer="91"/>
+<label x="-109.22" y="66.04" size="1.27" layer="95" font="vector"/>
 </segment>
 <segment>
 <pinref part="J1" gate="G$1" pin="2"/>
-<wire x1="-33.02" y1="-63.5" x2="-33.02" y2="-53.34" width="0.1524" layer="91"/>
-<label x="-40.64" y="-53.34" size="1.778" layer="95"/>
+<wire x1="-33.02" y1="-63.5" x2="-33.02" y2="-60.96" width="0.1524" layer="91"/>
+<label x="-33.02" y="-60.96" size="1.27" layer="95" font="vector" rot="R90" xref="yes"/>
 </segment>
 <segment>
 <pinref part="J2" gate="G$1" pin="2"/>
-<wire x1="27.94" y1="-63.5" x2="27.94" y2="-53.34" width="0.1524" layer="91"/>
-<label x="20.32" y="-53.34" size="1.778" layer="95"/>
+<wire x1="27.94" y1="-63.5" x2="27.94" y2="-60.96" width="0.1524" layer="91"/>
+<label x="27.94" y="-60.96" size="1.27" layer="95" font="vector" rot="R90" xref="yes"/>
 </segment>
 </net>
 <net name="GND" class="0">
-<segment>
-<pinref part="J1" gate="G$1" pin="1"/>
-<wire x1="-35.56" y1="-63.5" x2="-35.56" y2="-58.42" width="0.1524" layer="91"/>
-<label x="-43.18" y="-58.42" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="J2" gate="G$1" pin="1"/>
-<wire x1="25.4" y1="-63.5" x2="25.4" y2="-58.42" width="0.1524" layer="91"/>
-<label x="17.78" y="-58.42" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="TEMP-SENSOR-ONBOARD" gate="A" pin="CAN"/>
-<wire x1="86.36" y1="-7.62" x2="86.36" y2="0" width="0.1524" layer="91"/>
-<label x="81.28" y="0" size="1.778" layer="95"/>
-</segment>
 <segment>
 <pinref part="ATMEGA328" gate="G$1" pin="GND2"/>
 <wire x1="-35.56" y1="10.16" x2="-38.1" y2="10.16" width="0.1524" layer="91"/>
@@ -911,17 +939,27 @@ current output</description>
 <wire x1="-38.1" y1="10.16" x2="-38.1" y2="15.24" width="0.1524" layer="91"/>
 <wire x1="-38.1" y1="15.24" x2="-40.64" y2="15.24" width="0.1524" layer="91"/>
 <junction x="-38.1" y="15.24"/>
-<label x="-43.18" y="15.24" size="1.778" layer="95"/>
+<pinref part="AGND1" gate="VR1" pin="AGND"/>
 </segment>
 <segment>
 <pinref part="VOLTAGE-REGULATOR" gate="A" pin="GND"/>
 <wire x1="-96.52" y1="58.42" x2="-96.52" y2="55.88" width="0.1524" layer="91"/>
-<label x="-96.52" y="55.88" size="1.778" layer="95"/>
+<pinref part="AGND2" gate="VR1" pin="AGND"/>
 </segment>
 <segment>
 <pinref part="TEMP-PROBE" gate="-3" pin="S"/>
 <wire x1="76.2" y1="38.1" x2="71.12" y2="38.1" width="0.1524" layer="91"/>
 <label x="71.12" y="38.1" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="J1" gate="G$1" pin="1"/>
+<wire x1="-35.56" y1="-63.5" x2="-35.56" y2="-60.96" width="0.1524" layer="91"/>
+<label x="-35.56" y="-60.96" size="1.27" layer="95" font="vector" rot="R90" xref="yes"/>
+</segment>
+<segment>
+<pinref part="J2" gate="G$1" pin="1"/>
+<wire x1="25.4" y1="-63.5" x2="25.4" y2="-60.96" width="0.1524" layer="91"/>
+<label x="25.4" y="-60.96" size="1.27" layer="95" font="vector" rot="R90" xref="yes"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -978,7 +1016,7 @@ current output</description>
 <wire x1="-48.26" y1="22.86" x2="-48.26" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="-48.26" y1="20.32" x2="-48.26" y2="5.08" width="0.1524" layer="91"/>
 <wire x1="-48.26" y1="5.08" x2="-35.56" y2="5.08" width="0.1524" layer="91"/>
-<label x="-86.36" y="68.58" size="1.778" layer="95"/>
+<label x="-88.9" y="66.04" size="1.778" layer="95"/>
 <pinref part="ATMEGA328" gate="G$1" pin="VCC"/>
 <wire x1="-35.56" y1="22.86" x2="-48.26" y2="22.86" width="0.1524" layer="91"/>
 <junction x="-48.26" y="22.86"/>

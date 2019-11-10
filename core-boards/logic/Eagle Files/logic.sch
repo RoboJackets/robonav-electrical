@@ -23506,7 +23506,6 @@ battery voltage to between 0 to 2.35V
 so mbed can safely monitor that</text>
 <text x="16.51" y="125.73" size="1.778" layer="97">This works without a pull down
 because mbed handles it</text>
-<text x="114.3" y="68.58" size="1.778" layer="97">or Read the PDF manual I wrote</text>
 </plain>
 <instances>
 <instance part="FRAME3" gate="G$1" x="0" y="0" smashed="yes"/>

@@ -22978,13 +22978,6 @@ unequal 5V outputs</text>
 </net>
 <net name="DIAG_RX" class="0">
 <segment>
-<pinref part="A1" gate="G$1" pin="P$27"/>
-<wire x1="177.8" y1="104.14" x2="193.04" y2="104.14" width="0.1524" layer="91"/>
-<label x="193.04" y="104.14" size="1.27" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="DIAG_TX" class="0">
-<segment>
 <wire x1="177.8" y1="106.68" x2="193.04" y2="106.68" width="0.1524" layer="91"/>
 <label x="193.04" y="106.68" size="1.27" layer="95" xref="yes"/>
 <pinref part="A1" gate="G$1" pin="P$28"/>
@@ -23111,6 +23104,13 @@ unequal 5V outputs</text>
 <pinref part="A1" gate="G$1" pin="P$31"/>
 <wire x1="177.8" y1="114.3" x2="193.04" y2="114.3" width="0.1524" layer="91"/>
 <label x="193.04" y="114.3" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="DIAG_TX" class="0">
+<segment>
+<pinref part="A1" gate="G$1" pin="P$27"/>
+<wire x1="177.8" y1="104.14" x2="193.04" y2="104.14" width="0.1524" layer="91"/>
+<label x="193.04" y="104.14" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 </nets>
@@ -24140,18 +24140,11 @@ section on this sheet</text>
 <label x="233.68" y="177.8" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="MBED_CAN_TD" class="0">
+<net name="MBED_CAN_RD" class="0">
 <segment>
 <wire x1="60.96" y1="40.64" x2="55.88" y2="40.64" width="0.1524" layer="91"/>
 <label x="55.88" y="40.64" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="U5" gate="A" pin="TXD"/>
-</segment>
-</net>
-<net name="MBED_CAN_RD" class="0">
-<segment>
-<wire x1="60.96" y1="33.02" x2="58.42" y2="33.02" width="0.1524" layer="91"/>
-<label x="58.42" y="33.02" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="U5" gate="A" pin="RXD"/>
 </segment>
 </net>
 <net name="CAN_P" class="0">
@@ -24356,6 +24349,13 @@ section on this sheet</text>
 <pinref part="J8" gate="G$1" pin="1"/>
 <wire x1="156.845" y1="172.72" x2="147.32" y2="172.72" width="0.1524" layer="91"/>
 <label x="147.32" y="172.72" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="MBED_CAN_TD" class="0">
+<segment>
+<wire x1="60.96" y1="33.02" x2="58.42" y2="33.02" width="0.1524" layer="91"/>
+<label x="58.42" y="33.02" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="U5" gate="A" pin="RXD"/>
 </segment>
 </net>
 </nets>

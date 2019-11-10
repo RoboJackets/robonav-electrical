@@ -14617,18 +14617,11 @@ Power Connector
 <pinref part="U1" gate="A" pin="PK2_(ADC10/PCINT18)"/>
 </segment>
 </net>
-<net name="LOGIC_TX" class="0">
+<net name="DIAG_RX" class="0">
 <segment>
 <wire x1="109.22" y1="71.12" x2="111.76" y2="71.12" width="0.1524" layer="91"/>
 <label x="111.76" y="71.12" size="1.778" layer="95" xref="yes"/>
 <pinref part="U1" gate="A" pin="PJ0_(RXD3/PCINT9)"/>
-</segment>
-</net>
-<net name="LOGIC_RX" class="0">
-<segment>
-<wire x1="109.22" y1="68.58" x2="111.76" y2="68.58" width="0.1524" layer="91"/>
-<label x="111.76" y="68.58" size="1.778" layer="95" xref="yes"/>
-<pinref part="U1" gate="A" pin="PJ1_(TXD3/PCINT10)"/>
 </segment>
 </net>
 <net name="CAN_RX" class="0">
@@ -14687,6 +14680,13 @@ Power Connector
 <label x="111.76" y="45.72" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
+<net name="DIAG_TX" class="0">
+<segment>
+<wire x1="109.22" y1="68.58" x2="111.76" y2="68.58" width="0.1524" layer="91"/>
+<label x="111.76" y="68.58" size="1.778" layer="95" xref="yes"/>
+<pinref part="U1" gate="A" pin="PJ1_(TXD3/PCINT10)"/>
+</segment>
+</net>
 </nets>
 </sheet>
 <sheet>
@@ -14726,7 +14726,7 @@ Power Connector
 <wire x1="266.7" y1="233.68" x2="345.44" y2="233.68" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="345.44" y1="233.68" x2="345.44" y2="271.78" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="345.44" y1="271.78" x2="266.7" y2="271.78" width="0.1524" layer="97" style="shortdash"/>
-<text x="271.78" y="266.7" size="1.778" layer="97">Voltage Regulator (12v -&gt; 3v3 @ 3A)</text>
+<text x="271.78" y="266.7" size="1.778" layer="97">Voltage Regulator (12v -&gt; 5v @ 3A)</text>
 <text x="381" y="269.24" size="1.778" layer="97" rot="R180">Voltage Regulator (5v -&gt; 3v3)</text>
 <wire x1="347.98" y1="271.78" x2="424.18" y2="271.78" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="424.18" y1="271.78" x2="424.18" y2="233.68" width="0.1524" layer="97" style="shortdash"/>
@@ -14752,6 +14752,7 @@ Power Connector
 <wire x1="111.76" y1="238.76" x2="58.42" y2="238.76" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="58.42" y1="238.76" x2="58.42" y2="269.24" width="0.1524" layer="97" style="shortdash"/>
 <text x="60.96" y="266.7" size="1.778" layer="97">Mast Board Connnector</text>
+<text x="27.94" y="81.28" size="1.778" layer="91">ADD RADIO PART LABEL</text>
 </plain>
 <instances>
 <instance part="FRAME2" gate="G$1" x="-2.54" y="-2.54" smashed="yes"/>
@@ -15305,25 +15306,11 @@ Power Connector
 <pinref part="X8" gate="-1" pin="S"/>
 </segment>
 </net>
-<net name="CAN_TX" class="0">
+<net name="CAN_RX" class="0">
 <segment>
 <wire x1="35.56" y1="30.48" x2="25.4" y2="30.48" width="0.1524" layer="91"/>
 <label x="25.4" y="30.48" size="1.778" layer="95" rot="R180" xref="yes"/>
 <pinref part="U3" gate="A" pin="TXD"/>
-</segment>
-</net>
-<net name="CAN_RX" class="0">
-<segment>
-<wire x1="35.56" y1="22.86" x2="25.4" y2="22.86" width="0.1524" layer="91"/>
-<label x="25.4" y="22.86" size="1.778" layer="95" rot="R180" xref="yes"/>
-<pinref part="U3" gate="A" pin="RXD"/>
-</segment>
-</net>
-<net name="LOGIC_RX" class="0">
-<segment>
-<pinref part="X2" gate="G$1" pin="X-4"/>
-<wire x1="27.94" y1="220.98" x2="33.02" y2="220.98" width="0.1524" layer="91"/>
-<label x="33.02" y="220.98" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="ENCODER2_SENSE" class="0">
@@ -15338,13 +15325,6 @@ Power Connector
 <pinref part="X2" gate="G$1" pin="X-1"/>
 <wire x1="27.94" y1="213.36" x2="33.02" y2="213.36" width="0.1524" layer="91"/>
 <label x="33.02" y="213.36" size="1.778" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="LOGIC_TX" class="0">
-<segment>
-<pinref part="X2" gate="G$1" pin="X-3"/>
-<wire x1="27.94" y1="218.44" x2="33.02" y2="218.44" width="0.1524" layer="91"/>
-<label x="33.02" y="218.44" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="ESTOPCONNECTED" class="0">
@@ -15510,6 +15490,27 @@ Power Connector
 <wire x1="132.08" y1="251.46" x2="134.62" y2="251.46" width="0.1524" layer="91"/>
 <label x="134.62" y="251.46" size="1.778" layer="95" xref="yes"/>
 <pinref part="X8" gate="-2" pin="S"/>
+</segment>
+</net>
+<net name="CAN_TX" class="0">
+<segment>
+<wire x1="35.56" y1="22.86" x2="25.4" y2="22.86" width="0.1524" layer="91"/>
+<label x="25.4" y="22.86" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="U3" gate="A" pin="RXD"/>
+</segment>
+</net>
+<net name="DIAG_RX" class="0">
+<segment>
+<pinref part="X2" gate="G$1" pin="X-4"/>
+<wire x1="27.94" y1="220.98" x2="33.02" y2="220.98" width="0.1524" layer="91"/>
+<label x="33.02" y="220.98" size="1.778" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="DIAG_TX" class="0">
+<segment>
+<pinref part="X2" gate="G$1" pin="X-3"/>
+<wire x1="27.94" y1="218.44" x2="33.02" y2="218.44" width="0.1524" layer="91"/>
+<label x="33.02" y="218.44" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 </nets>

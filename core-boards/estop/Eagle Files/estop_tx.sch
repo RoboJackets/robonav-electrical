@@ -17148,13 +17148,12 @@ Power Connector
 Connector</text>
 <text x="421.64" y="289.56" size="3.81" layer="103" font="vector">Power LED</text>
 <text x="264.16" y="287.02" size="3.81" layer="103" font="vector">Microcontroller</text>
-<text x="345.44" y="350.52" size="5.08" layer="95" font="vector">Power</text>
+<text x="345.44" y="350.52" size="3.81" layer="99" font="vector">Power</text>
 <wire x1="424.18" y1="414.02" x2="424.18" y2="365.76" width="0.1524" layer="103" style="shortdash"/>
 <wire x1="424.18" y1="365.76" x2="502.92" y2="365.76" width="0.1524" layer="103" style="shortdash"/>
 <wire x1="502.92" y1="365.76" x2="502.92" y2="414.02" width="0.1524" layer="103" style="shortdash"/>
 <wire x1="502.92" y1="414.02" x2="424.18" y2="414.02" width="0.1524" layer="103" style="shortdash"/>
-<text x="429.26" y="406.4" size="5.08" layer="103" font="vector">3.3V Button IN</text>
-<text x="261.62" y="345.44" size="5.08" layer="103" font="vector">Reset Button</text>
+<text x="261.62" y="345.44" size="3.81" layer="103" font="vector">Reset Button</text>
 <wire x1="462.28" y1="254" x2="462.28" y2="215.9" width="0.1524" layer="103" style="shortdash"/>
 <wire x1="419.1" y1="215.9" x2="419.1" y2="254" width="0.1524" layer="103" style="shortdash"/>
 <wire x1="419.1" y1="254" x2="462.28" y2="254" width="0.1524" layer="103" style="shortdash"/>
@@ -17164,7 +17163,7 @@ Connector</text>
 <wire x1="467.36" y1="259.08" x2="467.36" y2="297.18" width="0.1524" layer="103" style="shortdash"/>
 <wire x1="467.36" y1="297.18" x2="510.54" y2="297.18" width="0.1524" layer="103" style="shortdash"/>
 <text x="469.9" y="289.56" size="3.81" layer="103" font="vector">Wireless LED</text>
-<text x="261.62" y="403.86" size="5.08" layer="97" font="vector">Radio Board</text>
+<text x="261.62" y="403.86" size="3.81" layer="97" font="vector">Radio Board</text>
 <wire x1="259.08" y1="411.48" x2="259.08" y2="355.6" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="259.08" y1="411.48" x2="332.74" y2="411.48" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="332.74" y1="411.48" x2="332.74" y2="355.6" width="0.1524" layer="97" style="shortdash"/>
@@ -17187,6 +17186,7 @@ Connector</text>
 <text x="426.72" y="350.52" size="3.81" layer="97">Level Shifter (5V -&gt; 3V3)</text>
 <wire x1="419.1" y1="215.9" x2="462.28" y2="215.9" width="0.1524" layer="97" style="shortdash"/>
 <text x="510.54" y="411.48" size="3.81" layer="97">LED Connectors</text>
+<text x="426.72" y="406.4" size="3.81" layer="97">Button Input</text>
 </plain>
 <instances>
 <instance part="SUPPLY28" gate="1" x="387.35" y="375.92" smashed="yes">

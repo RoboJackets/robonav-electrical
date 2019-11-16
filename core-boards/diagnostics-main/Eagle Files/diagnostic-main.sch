@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.2.2">
+<eagle version="9.5.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -14678,7 +14678,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="-88.9" y1="185.42" x2="-127" y2="185.42" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="-127" y1="185.42" x2="-127" y2="129.54" width="0.1524" layer="97" style="shortdash"/>
 <text x="-124.46" y="180.34" size="1.778" layer="97">Reset Line</text>
-<text x="-124.46" y="86.36" size="1.778" layer="97">External Clock Circuit</text>
+<text x="-124.46" y="88.9" size="1.778" layer="97">External Clock Circuit</text>
 <wire x1="-127" y1="91.44" x2="-127" y2="48.26" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="-127" y1="48.26" x2="-81.28" y2="48.26" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="-81.28" y1="48.26" x2="-81.28" y2="91.44" width="0.1524" layer="97" style="shortdash"/>
@@ -15209,7 +15209,6 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="104.14" y1="248.92" x2="50.8" y2="248.92" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="50.8" y1="248.92" x2="50.8" y2="279.4" width="0.1524" layer="97" style="shortdash"/>
 <text x="53.34" y="276.86" size="1.778" layer="97">Mast Board Connnector</text>
-<text x="20.32" y="142.24" size="1.778" layer="91">ADD RADIO PART LABEL</text>
 <wire x1="73.66" y1="190.5" x2="73.66" y2="137.16" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="73.66" y1="137.16" x2="190.5" y2="137.16" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="190.5" y1="137.16" x2="190.5" y2="190.5" width="0.1524" layer="97" style="shortdash"/>

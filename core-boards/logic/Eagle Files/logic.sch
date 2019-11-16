@@ -23820,8 +23820,7 @@ handbook/CAN</text>
 <text x="60.96" y="194.564" size="1.27" layer="97">Other Design Specifications, see D.6
 section on this sheet</text>
 <text x="10.16" y="204.47" size="1.778" layer="97">Test this</text>
-<text x="129.54" y="185.42" size="2.54" layer="94">NEW</text>
-<text x="63.5" y="53.34" size="2.54" layer="94">NEW</text>
+<text x="152.4" y="144.78" size="2.54" layer="103" font="vector">External Status LED</text>
 </plain>
 <instances>
 <instance part="FRAME5" gate="G$1" x="0" y="0" smashed="yes"/>
@@ -24399,9 +24398,8 @@ Diagnostic Brd
 <wire x1="149.86" y1="91.44" x2="76.2" y2="91.44" width="0.1524" layer="103" style="shortdash"/>
 <wire x1="76.2" y1="91.44" x2="76.2" y2="139.7" width="0.1524" layer="103" style="shortdash"/>
 <text x="109.22" y="93.98" size="2.54" layer="103" font="vector">mbed reset Circuit</text>
-<text x="101.6" y="132.08" size="1.778" layer="97">Resistor value between +5V and GND is 560~
+<text x="96.52" y="132.08" size="1.778" layer="97">Resistor value between +5V and GND is 560~
 therefore the pull up resistor value 10k</text>
-<text x="81.28" y="127" size="2.54" layer="94">NEW</text>
 </plain>
 <instances>
 <instance part="FRAME4" gate="G$1" x="0" y="0" smashed="yes"/>
@@ -24499,19 +24497,19 @@ therefore the pull up resistor value 10k</text>
 <attribute name="VALUE" x="80.645" y="181.61" size="1.778" layer="96"/>
 <attribute name="NAME" x="80.645" y="168.91" size="1.778" layer="95"/>
 </instance>
-<instance part="R2" gate="G$1" x="99.06" y="121.92" smashed="yes" rot="R90">
-<attribute name="NAME" x="97.5614" y="118.11" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="102.362" y="118.11" size="1.778" layer="96" rot="R90"/>
+<instance part="R2" gate="G$1" x="93.98" y="121.92" smashed="yes" rot="R90">
+<attribute name="NAME" x="92.4814" y="118.11" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="97.282" y="118.11" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="P+4" gate="1" x="99.06" y="134.62" smashed="yes">
-<attribute name="VALUE" x="96.52" y="129.54" size="1.778" layer="96" rot="R90"/>
+<instance part="P+4" gate="1" x="93.98" y="134.62" smashed="yes">
+<attribute name="VALUE" x="91.44" y="129.54" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="GND9" gate="1" x="99.06" y="101.6" smashed="yes">
-<attribute name="VALUE" x="96.52" y="99.06" size="1.778" layer="96"/>
+<instance part="GND9" gate="1" x="93.98" y="101.6" smashed="yes">
+<attribute name="VALUE" x="91.44" y="99.06" size="1.778" layer="96"/>
 </instance>
-<instance part="J7" gate="G$1" x="111.76" y="111.76" smashed="yes" rot="R180">
-<attribute name="NAME" x="116.84" y="104.14" size="1.778" layer="95" font="vector" rot="R180" align="top-left"/>
-<attribute name="VALUE" x="104.14" y="116.84" size="1.778" layer="96" font="vector"/>
+<instance part="J7" gate="G$1" x="106.68" y="111.76" smashed="yes" rot="R180">
+<attribute name="NAME" x="111.76" y="104.14" size="1.778" layer="95" font="vector" rot="R180" align="top-left"/>
+<attribute name="VALUE" x="99.06" y="116.84" size="1.778" layer="96" font="vector"/>
 </instance>
 </instances>
 <busses>
@@ -24573,9 +24571,9 @@ therefore the pull up resistor value 10k</text>
 </segment>
 <segment>
 <pinref part="J7" gate="G$1" pin="1"/>
-<wire x1="106.68" y1="109.22" x2="99.06" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="109.22" x2="93.98" y2="109.22" width="0.1524" layer="91"/>
 <pinref part="GND9" gate="1" pin="GND"/>
-<wire x1="99.06" y1="109.22" x2="99.06" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="109.22" x2="93.98" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="INDICATOR_LED" class="0">
@@ -24642,7 +24640,7 @@ therefore the pull up resistor value 10k</text>
 <segment>
 <pinref part="P+4" gate="1" pin="+5V"/>
 <pinref part="R2" gate="G$1" pin="2"/>
-<wire x1="99.06" y1="132.08" x2="99.06" y2="127" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="132.08" x2="93.98" y2="127" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
@@ -24667,12 +24665,12 @@ therefore the pull up resistor value 10k</text>
 <net name="NR" class="0">
 <segment>
 <pinref part="J7" gate="G$1" pin="2"/>
-<wire x1="106.68" y1="114.3" x2="99.06" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="114.3" x2="93.98" y2="114.3" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="1"/>
-<wire x1="99.06" y1="114.3" x2="99.06" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="99.06" y1="114.3" x2="93.98" y2="114.3" width="0.1524" layer="91"/>
-<junction x="99.06" y="114.3"/>
-<label x="93.98" y="114.3" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="93.98" y1="114.3" x2="93.98" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="114.3" x2="88.9" y2="114.3" width="0.1524" layer="91"/>
+<junction x="93.98" y="114.3"/>
+<label x="88.9" y="114.3" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>

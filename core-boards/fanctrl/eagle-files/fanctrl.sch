@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
@@ -14450,6 +14450,7 @@ Number of pins: &lt;b&gt;5&lt;/b&gt;&lt;b&gt;&lt;P&gt;
 <text x="35.56" y="-22.86" size="6.35" layer="97" font="vector" ratio="12">ON-BOARD TEMP SENSOR</text>
 <wire x1="129.54" y1="-15.24" x2="129.54" y2="-53.34" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="114.3" y1="20.32" x2="114.3" y2="-10.16" width="0.1524" layer="97" style="shortdash"/>
+<text x="91.44" y="30.48" size="1.27" layer="97" font="vector">check with Garrett what this last pin is for.</text>
 </plain>
 <instances>
 <instance part="ATMEGA328" gate="G$1" x="-50.8" y="-73.66" smashed="yes"/>
@@ -15009,30 +15010,6 @@ Number of pins: &lt;b&gt;5&lt;/b&gt;&lt;b&gt;&lt;P&gt;
 <label x="-12.7" y="-60.96" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 </net>
-<net name="CAN-RX" class="0">
-<segment>
-<pinref part="CAN-CONTROLLER" gate="A" pin="RXD"/>
-<wire x1="53.34" y1="73.66" x2="50.8" y2="73.66" width="0.1524" layer="91"/>
-<label x="50.8" y="73.66" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-<segment>
-<pinref part="ATMEGA328" gate="G$1" pin="PD1(TXD/PCINT17)"/>
-<wire x1="-86.36" y1="-96.52" x2="-91.44" y2="-96.52" width="0.1524" layer="91"/>
-<label x="-91.44" y="-96.52" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
-<net name="CAN-TX" class="0">
-<segment>
-<pinref part="CAN-CONTROLLER" gate="A" pin="TXD"/>
-<wire x1="53.34" y1="81.28" x2="50.8" y2="81.28" width="0.1524" layer="91"/>
-<label x="50.8" y="81.28" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-<segment>
-<pinref part="ATMEGA328" gate="G$1" pin="PD0(RXD/PCINT16)"/>
-<wire x1="-86.36" y1="-99.06" x2="-91.44" y2="-99.06" width="0.1524" layer="91"/>
-<label x="-91.44" y="-99.06" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
 <net name="N$6" class="0">
 <segment>
 <pinref part="CAN-CONTROLLER" gate="A" pin="VREF"/>
@@ -15041,28 +15018,52 @@ Number of pins: &lt;b&gt;5&lt;/b&gt;&lt;b&gt;&lt;P&gt;
 <pinref part="C6" gate="G$1" pin="1"/>
 </segment>
 </net>
-<net name="CANH" class="0">
+<net name="CAN_P" class="0">
 <segment>
 <pinref part="CAN-CONTROLLER" gate="A" pin="CANH"/>
 <wire x1="104.14" y1="78.74" x2="106.68" y2="78.74" width="0.1524" layer="91"/>
-<label x="106.68" y="78.74" size="1.27" layer="95" xref="yes"/>
+<label x="106.68" y="78.74" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 <segment>
 <pinref part="X1" gate="-3" pin="S"/>
 <wire x1="96.52" y1="38.1" x2="99.06" y2="38.1" width="0.1524" layer="91"/>
-<label x="99.06" y="38.1" size="1.27" layer="95" xref="yes"/>
+<label x="99.06" y="38.1" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 </net>
-<net name="CANL" class="0">
+<net name="CAN_N" class="0">
 <segment>
 <pinref part="CAN-CONTROLLER" gate="A" pin="CANL"/>
 <wire x1="104.14" y1="76.2" x2="106.68" y2="76.2" width="0.1524" layer="91"/>
-<label x="106.68" y="76.2" size="1.27" layer="95" xref="yes"/>
+<label x="106.68" y="76.2" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 <segment>
 <pinref part="X1" gate="-4" pin="S"/>
 <wire x1="96.52" y1="35.56" x2="99.06" y2="35.56" width="0.1524" layer="91"/>
-<label x="99.06" y="35.56" size="1.27" layer="95" xref="yes"/>
+<label x="99.06" y="35.56" size="1.27" layer="95" font="vector" xref="yes"/>
+</segment>
+</net>
+<net name="CAN_TX" class="0">
+<segment>
+<pinref part="CAN-CONTROLLER" gate="A" pin="TXD"/>
+<wire x1="53.34" y1="81.28" x2="50.8" y2="81.28" width="0.1524" layer="91"/>
+<label x="50.8" y="81.28" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="ATMEGA328" gate="G$1" pin="PD0(RXD/PCINT16)"/>
+<wire x1="-86.36" y1="-99.06" x2="-91.44" y2="-99.06" width="0.1524" layer="91"/>
+<label x="-91.44" y="-99.06" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="CAN_RX" class="0">
+<segment>
+<pinref part="CAN-CONTROLLER" gate="A" pin="RXD"/>
+<wire x1="53.34" y1="73.66" x2="50.8" y2="73.66" width="0.1524" layer="91"/>
+<label x="50.8" y="73.66" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="ATMEGA328" gate="G$1" pin="PD1(TXD/PCINT17)"/>
+<wire x1="-86.36" y1="-96.52" x2="-91.44" y2="-96.52" width="0.1524" layer="91"/>
+<label x="-91.44" y="-96.52" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>

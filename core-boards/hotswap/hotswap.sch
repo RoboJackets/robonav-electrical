@@ -11442,9 +11442,9 @@ In this library you will find frames that can be used to help organize a schemat
 <part name="GND9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="U$1" library="IGVC-Connector" deviceset="6T4AWGLUG" device=""/>
 <part name="U$2" library="IGVC-Connector" deviceset="6T4AWGLUG" device=""/>
-<part name="U$3" library="IGVC-Connector" deviceset="6T4AWGLUG" device=""/>
-<part name="U$4" library="IGVC-Connector" deviceset="6T4AWGLUG" device=""/>
-<part name="U$5" library="IGVC-Connector" deviceset="6T4AWGLUG" device=""/>
+<part name="VCC_BATT" library="IGVC-Connector" deviceset="6T4AWGLUG" device=""/>
+<part name="VCC_WALL" library="IGVC-Connector" deviceset="6T4AWGLUG" device=""/>
+<part name="VCC_COMP" library="IGVC-Connector" deviceset="6T4AWGLUG" device=""/>
 <part name="U$6" library="IGVC-Connector" deviceset="6T4AWGLUG" device=""/>
 </parts>
 <sheets>
@@ -11552,15 +11552,15 @@ In this library you will find frames that can be used to help organize a schemat
 <attribute name="NAME" x="-17.78" y="30.48" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-17.78" y="17.78" size="1.778" layer="96"/>
 </instance>
-<instance part="U$3" gate="6T4AWGLUG" x="12.7" y="-17.78" smashed="yes" rot="R270">
-<attribute name="NAME" x="17.78" y="-12.7" size="1.778" layer="95" rot="R270"/>
-<attribute name="VALUE" x="5.08" y="-12.7" size="1.778" layer="96" rot="R270"/>
+<instance part="VCC_BATT" gate="6T4AWGLUG" x="7.62" y="-17.78" smashed="yes" rot="R270">
+<attribute name="NAME" x="12.7" y="-12.7" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="0" y="-12.7" size="1.778" layer="96" rot="R270"/>
 </instance>
-<instance part="U$4" gate="6T4AWGLUG" x="12.7" y="91.44" smashed="yes" rot="R90">
-<attribute name="NAME" x="7.62" y="86.36" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="20.32" y="86.36" size="1.778" layer="96" rot="R90"/>
+<instance part="VCC_WALL" gate="6T4AWGLUG" x="7.62" y="91.44" smashed="yes" rot="R90">
+<attribute name="NAME" x="2.54" y="86.36" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="15.24" y="86.36" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="U$5" gate="6T4AWGLUG" x="157.48" y="58.42" smashed="yes" rot="R90">
+<instance part="VCC_COMP" gate="6T4AWGLUG" x="157.48" y="58.42" smashed="yes" rot="R90">
 <attribute name="NAME" x="152.4" y="53.34" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="165.1" y="53.34" size="1.778" layer="96" rot="R90"/>
 </instance>
@@ -11620,7 +11620,7 @@ In this library you will find frames that can be used to help organize a schemat
 <segment>
 <pinref part="GND9" gate="1" pin="GND"/>
 <wire x1="157.48" y1="43.18" x2="157.48" y2="48.26" width="0.1524" layer="91"/>
-<pinref part="U$5" gate="6T4AWGLUG" pin="J1"/>
+<pinref part="VCC_COMP" gate="6T4AWGLUG" pin="J1"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -11654,8 +11654,8 @@ In this library you will find frames that can be used to help organize a schemat
 <junction x="35.56" y="76.2"/>
 <pinref part="R2" gate="G$1" pin="2"/>
 <junction x="20.32" y="76.2"/>
-<wire x1="20.32" y1="76.2" x2="12.7" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="12.7" y1="76.2" x2="2.54" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="76.2" x2="7.62" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="7.62" y1="76.2" x2="2.54" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="2.54" y1="76.2" x2="-2.54" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="2.54" y1="76.2" x2="2.54" y2="73.66" width="0.1524" layer="91"/>
 <junction x="2.54" y="76.2"/>
@@ -11667,9 +11667,9 @@ In this library you will find frames that can be used to help organize a schemat
 <pinref part="Q2" gate="G$1" pin="D"/>
 <wire x1="109.22" y1="76.2" x2="99.06" y2="76.2" width="0.1524" layer="91"/>
 <junction x="99.06" y="76.2"/>
-<wire x1="12.7" y1="81.28" x2="12.7" y2="76.2" width="0.1524" layer="91"/>
-<junction x="12.7" y="76.2"/>
-<pinref part="U$4" gate="6T4AWGLUG" pin="J1"/>
+<wire x1="7.62" y1="81.28" x2="7.62" y2="76.2" width="0.1524" layer="91"/>
+<junction x="7.62" y="76.2"/>
+<pinref part="VCC_WALL" gate="6T4AWGLUG" pin="J1"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -11713,8 +11713,8 @@ In this library you will find frames that can be used to help organize a schemat
 <wire x1="88.9" y1="20.32" x2="88.9" y2="-2.54" width="0.1524" layer="91"/>
 <wire x1="88.9" y1="-2.54" x2="33.02" y2="-2.54" width="0.1524" layer="91"/>
 <pinref part="P+1" gate="VCC" pin="VCC"/>
-<wire x1="33.02" y1="-2.54" x2="12.7" y2="-2.54" width="0.1524" layer="91"/>
-<wire x1="12.7" y1="-2.54" x2="-5.08" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="-2.54" x2="7.62" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="7.62" y1="-2.54" x2="-5.08" y2="-2.54" width="0.1524" layer="91"/>
 <wire x1="33.02" y1="-2.54" x2="33.02" y2="-7.62" width="0.1524" layer="91"/>
 <junction x="33.02" y="-2.54"/>
 <pinref part="C2" gate="G$1" pin="1"/>
@@ -11722,9 +11722,9 @@ In this library you will find frames that can be used to help organize a schemat
 <wire x1="81.28" y1="20.32" x2="81.28" y2="17.78" width="0.1524" layer="91"/>
 <junction x="88.9" y="20.32"/>
 <pinref part="C3" gate="G$1" pin="1"/>
-<wire x1="12.7" y1="-7.62" x2="12.7" y2="-2.54" width="0.1524" layer="91"/>
-<junction x="12.7" y="-2.54"/>
-<pinref part="U$3" gate="6T4AWGLUG" pin="J1"/>
+<wire x1="7.62" y1="-7.62" x2="7.62" y2="-2.54" width="0.1524" layer="91"/>
+<junction x="7.62" y="-2.54"/>
+<pinref part="VCC_BATT" gate="6T4AWGLUG" pin="J1"/>
 </segment>
 </net>
 <net name="N$3" class="0">

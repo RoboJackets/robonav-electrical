@@ -1,0 +1,59 @@
+Partlist
+
+Exported from diagnostic-main.sch at 11/17/2019 5:34 PM
+
+EAGLE Version 9.5.0 Copyright (c) 1988-2019 Autodesk, Inc.
+
+Assembly variant: 
+
+Part     Value               Device              Package                  Library                Sheet
+
+C1       .1uF                C-EUC0603           C0603                    rcl                    1
+C2       .1uF                C-EUC0603           C0603                    rcl                    2
+C3       22pF                C-EUC0603           C0603                    rcl                    1
+C4       22pF                C-EUC0603           C0603                    rcl                    1
+C5       .1uF                C-EUC0603           C0603                    rcl                    2
+C6       1uF                 C-EUC0402           C0402                    rcl                    1
+C7       10uF                C-EUC0805           C0805                    rcl                    1
+C8       .1uF                C-EUC0603           C0603                    rcl                    1
+C9       .1uF                C-EUC0603           C0603                    rcl                    2
+C10      1uF                 C-EUC0402           C0402                    rcl                    1
+C11      .1uF                C-EUC0603           C0603                    rcl                    2
+C12      .1uF                C-EUC0603           C0603                    rcl                    2
+C13      2.2uF               C-EUC0603           C0603                    rcl                    3
+C14      .01uF               C-EUC0603           C0603                    rcl                    3
+C15      1uF                 C-EUC0603           C0603                    rcl                    3
+C16      10uF                C-EUC0805           C0805                    rcl                    3
+C17      10uF                C-EUC0805           C0805                    rcl                    3
+C18      10uF                C-EUC0805           C0805                    rcl                    1
+C19      .1uF                C-EUC0603           C0603                    rcl                    1
+C21      1uF                 C-EUC0402           C0402                    rcl                    1
+C22      10uF                C-EUC0805           C0805                    rcl                    1
+C23      .1uF                C-EUC0603           C0603                    rcl                    1
+C25      1uF                 C-EUC0402           C0402                    rcl                    1
+C26      10uF                C-EUC0805           C0805                    rcl                    1
+D1       GREEN               LED-BLUE0603        LED-0603                 SparkFun-LED           1
+D2       GREEN               LED-GREEN0603       LED-0603                 SparkFun-LED           1
+D3       GREEN               LED-GREEN0603       LED-0603                 SparkFun-LED           1
+J1       A118090TR-ND        1939870-1           TE_1939870-1             A118090TR-ND           2
+J2       3M15451-ND          30306-6002HB        3M_30306-6002HB          3M15451-ND             1
+J4       B2PS-VH(LF)(SN)     B2PS-VH(LF)(SN)     B2PS-CENTERED            RoboJackets-Connectors 3
+Q1       16 MHz              CSM-7X-DU           CSM-7X-DU                crystal                1
+R1       120                 R-US_R0402          R0402                    rcl                    2
+R2       10k                 R-US_R0402          R0402                    rcl                    1
+R3       120                 R-US_R0402          R0402                    rcl                    2
+R4       2.2k                R-US_R0603          R0603                    rcl                    1
+R5       1k                  R-US_R0603          R0603                    rcl                    1
+R6       1k                  R-US_R0603          R0603                    rcl                    1
+S1       KMR2                KMR2                KMR2                     RoboJackets-Switches   1
+U1       ATMEGA2560-16AU     ATMEGA2560-16AU     QFP50P1600X1600X120-100N ATMEGA2560-16AU        1
+U2       296-38653-1-ND      LSF0204PWR          SOP65P640X120-14N        296-38653-1-ND         2
+U3       MCP2551T-I/SN       MCP2551T-I/SN       SOIC8-N_MC               MCP2551T               2
+U6       TXB0106PWR          TXB0106PWR          PW16                     TXB0106PWR             2
+U7       LM1085ISX-5.0/NOPB  LM1085ISX-5.0/NOPB  TS3B                     LM1085ISX              3
+U8       LP2985IM5X-3.3/NOPB LP2985IM5X-3.3/NOPB MF05A                    LP2985IM5X             3
+X1       22-23-2031          22-23-2031          22-23-2031               con-molex              2
+X2       B6B-EH-A(LF)(SN)    B6B-EH-A(LF)(SN)    B6BEHALFSN               IGVC-Connector         2
+X3       CC1101              NRF24L01+PA+LNA     NRF24L01+PA+LNA          IGVC-Connector         2
+X5       22-23-2031          22-23-2031          22-23-2031               con-molex              2
+X8       WM4803-ND           22-23-2051          22-23-2051               con-molex              2

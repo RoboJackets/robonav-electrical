@@ -927,9 +927,6 @@ In this library you will find frames that can be used to help organize a schemat
 <packages>
 </packages>
 <symbols>
-<symbol name="FRAME_B_L">
-<frame x1="0" y1="0" x2="431.8" y2="279.4" columns="9" rows="6" layer="94" border-bottom="no"/>
-</symbol>
 <symbol name="DOCFIELD">
 <wire x1="0" y1="0" x2="71.12" y2="0" width="0.1016" layer="94"/>
 <wire x1="101.6" y1="15.24" x2="71.12" y2="15.24" width="0.1016" layer="94"/>
@@ -4190,22 +4187,6 @@ In this library you will find frames that can be used to help organize a schemat
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="FRAME_B_L" prefix="FRAME">
-<description>&lt;b&gt;FRAME&lt;/b&gt; B Size , 11 x 17 INCH, Landscape&lt;p&gt;</description>
-<gates>
-<gate name="G$1" symbol="FRAME_B_L" x="0" y="0" addlevel="always"/>
-<gate name="G$2" symbol="DOCFIELD" x="325.12" y="0" addlevel="always"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name="">
-<attribute name="SCH_DESC" value="insert_description" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="FRAME_A_L" prefix="FRAME">
 <description>&lt;b&gt;FRAME&lt;/b&gt; A Size , 8 1/2 x 11 INCH, Landscape&lt;p&gt;</description>
 <gates>
@@ -14585,7 +14566,6 @@ In this library the device names are the same as the pin names of the symbols, t
 </classes>
 <parts>
 <part name="U1" library="ATMEGA2560-16AU" deviceset="ATMEGA2560-16AU" device=""/>
-<part name="FRAME1" library="RoboJackets-Frames" deviceset="FRAME_B_L" device=""/>
 <part name="S1" library="RoboJackets-Switches" deviceset="KMR2" device=""/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -14688,6 +14668,8 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="GND15" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="C9" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value=".1uF"/>
 <part name="GND16" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="P+12" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+12V" device=""/>
+<part name="GND27" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -14703,9 +14685,9 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="-127" y1="83.82" x2="-81.28" y2="83.82" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="-81.28" y1="83.82" x2="-81.28" y2="127" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="-127" y1="127" x2="-81.28" y2="127" width="0.1524" layer="97" style="shortdash"/>
-<wire x1="-127" y1="81.28" x2="-15.24" y2="81.28" width="0.1524" layer="97" style="shortdash"/>
-<wire x1="-15.24" y1="81.28" x2="-15.24" y2="25.4" width="0.1524" layer="97" style="shortdash"/>
-<wire x1="-15.24" y1="25.4" x2="-127" y2="25.4" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="-127" y1="81.28" x2="-7.62" y2="81.28" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="-7.62" y1="81.28" x2="-7.62" y2="25.4" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="-7.62" y1="25.4" x2="-127" y2="25.4" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="-127" y1="25.4" x2="-127" y2="81.28" width="0.1524" layer="97" style="shortdash"/>
 <text x="-124.46" y="76.2" size="1.778" layer="97">Decoupling Capicaitors</text>
 <wire x1="-86.36" y1="185.42" x2="-12.7" y2="185.42" width="0.1524" layer="97" style="shortdash"/>
@@ -14723,12 +14705,6 @@ In this library the device names are the same as the pin names of the symbols, t
 <instance part="U1" gate="A" x="63.5" y="96.52" smashed="yes">
 <attribute name="NAME" x="57.449190625" y="177.5195" size="2.08473125" layer="95" ratio="10" rot="SR0"/>
 <attribute name="VALUE" x="58.212809375" y="8.5187" size="2.08436875" layer="96" ratio="10" rot="SR0"/>
-</instance>
-<instance part="FRAME1" gate="G$2" x="187.96" y="-86.36" smashed="yes">
-<attribute name="LAST_DATE_TIME" x="200.66" y="-85.09" size="2.54" layer="94" font="vector"/>
-<attribute name="SHEET" x="274.32" y="-85.09" size="2.54" layer="94" font="vector"/>
-<attribute name="DRAWING_NAME" x="203.2" y="-67.31" size="2.54" layer="94" font="vector"/>
-<attribute name="SCH_DESC" x="189.23" y="-80.01" size="2.54" layer="94"/>
 </instance>
 <instance part="S1" gate="G$1" x="-104.14" y="147.32" smashed="yes" rot="R90">
 <attribute name="NAME" x="-107.95" y="142.24" size="2.54" layer="95" font="vector" rot="R90"/>
@@ -14890,6 +14866,12 @@ In this library the device names are the same as the pin names of the symbols, t
 <attribute name="NAME" x="-69.596" y="38.481" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-69.596" y="33.401" size="1.778" layer="96"/>
 </instance>
+<instance part="P+12" gate="1" x="-17.78" y="66.04" smashed="yes">
+<attribute name="VALUE" x="-15.24" y="71.12" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="GND27" gate="1" x="-17.78" y="48.26" smashed="yes">
+<attribute name="VALUE" x="-20.32" y="45.72" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -15006,6 +14988,10 @@ In this library the device names are the same as the pin names of the symbols, t
 <junction x="-63.5" y="30.48"/>
 <pinref part="C25" gate="G$1" pin="2"/>
 <pinref part="C26" gate="G$1" pin="2"/>
+</segment>
+<segment>
+<wire x1="-17.78" y1="53.34" x2="-17.78" y2="50.8" width="0.1524" layer="91"/>
+<pinref part="GND27" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="!RESET" class="0">
@@ -15332,6 +15318,10 @@ In this library the device names are the same as the pin names of the symbols, t
 <pinref part="R4" gate="G$1" pin="2"/>
 <pinref part="SUPPLY3" gate="1" pin="V+"/>
 </segment>
+<segment>
+<wire x1="-17.78" y1="63.5" x2="-17.78" y2="60.96" width="0.1524" layer="91"/>
+<pinref part="P+12" gate="1" pin="+12V"/>
+</segment>
 </net>
 </nets>
 </sheet>
@@ -15474,7 +15464,7 @@ In this library the device names are the same as the pin names of the symbols, t
 </instance>
 <instance part="X3" gate="A" x="35.56" y="165.1" smashed="yes">
 <attribute name="NAME" x="21.59" y="173.355" size="1.778" layer="95"/>
-<attribute name="VALUE" x="21.59" y="157.48" size="1.778" layer="96"/>
+<attribute name="VALUE" x="29.21" y="157.48" size="1.778" layer="96"/>
 </instance>
 <instance part="+3V5" gate="G$1" x="48.26" y="175.26" smashed="yes">
 <attribute name="VALUE" x="50.8" y="177.8" size="1.778" layer="96" rot="R180"/>

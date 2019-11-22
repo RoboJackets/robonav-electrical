@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.2.2">
+<eagle version="9.5.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="mil" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -77,7 +77,6 @@
 <smd name="1" x="-2.54" y="-8.2804" dx="1.016" dy="2.6924" layer="1"/>
 <smd name="2" x="0" y="-8.2804" dx="1.016" dy="2.6924" layer="1"/>
 <smd name="3" x="2.54" y="-8.2804" dx="1.016" dy="2.6924" layer="1"/>
-<smd name="4" x="0" y="0" dx="10.4648" dy="10.8712" layer="1"/>
 <wire x1="-2.0574" y1="-5.08" x2="-3.0226" y2="-5.08" width="0.1524" layer="51"/>
 <wire x1="-3.0226" y1="-5.08" x2="-3.0226" y2="-9.271" width="0.1524" layer="51"/>
 <wire x1="-3.0226" y1="-9.271" x2="-2.0574" y2="-9.271" width="0.1524" layer="51"/>
@@ -120,8 +119,6 @@
 <vertex x="-3.302" y="-9.8806"/>
 <vertex x="-3.302" y="-5.6896"/>
 </polygon>
-<wire x1="-0.254" y1="0" x2="0.254" y2="0" width="0.1524" layer="23"/>
-<wire x1="0" y1="-0.254" x2="0" y2="0.254" width="0.1524" layer="23"/>
 <polygon width="0.1524" layer="41">
 <vertex x="-3.048" y="-5.334"/>
 <vertex x="3.048" y="-5.334"/>
@@ -134,7 +131,6 @@
 <smd name="1" x="-2.54" y="-8.2296" dx="0.9652" dy="2.3876" layer="1"/>
 <smd name="2" x="0" y="-8.2296" dx="0.9652" dy="2.3876" layer="1"/>
 <smd name="3" x="2.54" y="-8.2296" dx="0.9652" dy="2.3876" layer="1"/>
-<smd name="4" x="0" y="-0.0508" dx="10.414" dy="10.5664" layer="1"/>
 <wire x1="-2.0574" y1="-5.08" x2="-3.0226" y2="-5.08" width="0.1524" layer="51"/>
 <wire x1="-3.0226" y1="-5.08" x2="-3.0226" y2="-9.271" width="0.1524" layer="51"/>
 <wire x1="-3.0226" y1="-9.271" x2="-2.0574" y2="-9.271" width="0.1524" layer="51"/>
@@ -177,8 +173,6 @@
 <vertex x="-3.1242" y="-9.525"/>
 <vertex x="-3.1242" y="-5.4356"/>
 </polygon>
-<wire x1="-0.254" y1="0" x2="0.254" y2="0" width="0.1524" layer="23"/>
-<wire x1="0" y1="-0.254" x2="0" y2="0.254" width="0.1524" layer="23"/>
 <polygon width="0.1524" layer="41">
 <vertex x="-3.0226" y="-5.334"/>
 <vertex x="3.0226" y="-5.334"/>
@@ -191,7 +185,6 @@
 <smd name="1" x="-2.54" y="-8.3312" dx="1.0668" dy="2.9972" layer="1"/>
 <smd name="2" x="0" y="-8.3312" dx="1.0668" dy="2.9972" layer="1"/>
 <smd name="3" x="2.54" y="-8.3312" dx="1.0668" dy="2.9972" layer="1"/>
-<smd name="4" x="0" y="0.0508" dx="10.5156" dy="11.176" layer="1"/>
 <wire x1="-2.0574" y1="-5.08" x2="-3.0226" y2="-5.08" width="0.1524" layer="51"/>
 <wire x1="-3.0226" y1="-5.08" x2="-3.0226" y2="-9.271" width="0.1524" layer="51"/>
 <wire x1="-3.0226" y1="-9.271" x2="-2.0574" y2="-9.271" width="0.1524" layer="51"/>
@@ -235,7 +228,6 @@
 <vertex x="-3.5814" y="-6.0452"/>
 </polygon>
 <wire x1="-0.254" y1="0" x2="0.254" y2="0" width="0.1524" layer="23"/>
-<wire x1="0" y1="-0.254" x2="0" y2="0.254" width="0.1524" layer="23"/>
 <polygon width="0.1524" layer="41">
 <vertex x="-3.0734" y="-5.334"/>
 <vertex x="3.0734" y="-5.334"/>
@@ -248,7 +240,6 @@
 <symbols>
 <symbol name="LM1085ISX-5.0/NOPB">
 <pin name="VIN" x="2.54" y="0" length="middle" direction="in"/>
-<pin name="4" x="2.54" y="-5.08" length="middle" direction="pas"/>
 <pin name="ADJ/GND" x="2.54" y="-7.62" length="middle" direction="pas"/>
 <pin name="VOUT" x="43.18" y="0" length="middle" direction="out" rot="R180"/>
 <wire x1="7.62" y1="5.08" x2="7.62" y2="-12.7" width="0.1524" layer="94"/>
@@ -267,7 +258,6 @@
 <devices>
 <device name="" package="TS3B">
 <connects>
-<connect gate="A" pin="4" pad="4"/>
 <connect gate="A" pin="ADJ/GND" pad="1"/>
 <connect gate="A" pin="VIN" pad="3"/>
 <connect gate="A" pin="VOUT" pad="2"/>
@@ -281,7 +271,6 @@
 </device>
 <device name="TS3B-M" package="TS3B-M">
 <connects>
-<connect gate="A" pin="4" pad="4"/>
 <connect gate="A" pin="ADJ/GND" pad="1"/>
 <connect gate="A" pin="VIN" pad="3"/>
 <connect gate="A" pin="VOUT" pad="2"/>
@@ -295,7 +284,6 @@
 </device>
 <device name="TS3B-L" package="TS3B-L">
 <connects>
-<connect gate="A" pin="4" pad="4"/>
 <connect gate="A" pin="ADJ/GND" pad="1"/>
 <connect gate="A" pin="VIN" pad="3"/>
 <connect gate="A" pin="VOUT" pad="2"/>

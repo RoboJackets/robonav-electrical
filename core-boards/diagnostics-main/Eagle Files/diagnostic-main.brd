@@ -1003,6 +1003,7 @@ In this library you will find switches and other mechanical assisted circuit ele
 <text x="-3.81" y="3.81" size="1.016" layer="25" ratio="10">&gt;NAME</text>
 <text x="-3.81" y="-5.08" size="1.016" layer="27" ratio="10">&gt;VALUE</text>
 </package>
+<<<<<<< HEAD
 <package name="22-23-2021" urn="urn:adsk.eagle:footprint:8078259/1" library_version="4">
 <description>&lt;b&gt;KK® 254 Solid Header, Vertical, with Friction Lock, 2 Circuits, Tin (Sn) Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/022232021_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
 <wire x1="-2.54" y1="3.175" x2="2.54" y2="3.175" width="0.254" layer="21"/>
@@ -1017,6 +1018,8 @@ In this library you will find switches and other mechanical assisted circuit ele
 <text x="-2.54" y="3.81" size="1.016" layer="25" ratio="10">&gt;NAME</text>
 <text x="-2.54" y="-5.08" size="1.016" layer="27" ratio="10">&gt;VALUE</text>
 </package>
+=======
+>>>>>>> parent of 7903053... Final Changes
 </packages>
 <packages3d>
 <package3d name="22-23-2051" urn="urn:adsk.eagle:package:8078636/1" type="box" library_version="4">
@@ -1031,12 +1034,15 @@ In this library you will find switches and other mechanical assisted circuit ele
 <packageinstance name="22-23-2031"/>
 </packageinstances>
 </package3d>
+<<<<<<< HEAD
 <package3d name="22-23-2021" urn="urn:adsk.eagle:package:8078633/1" type="box" library_version="4">
 <description>&lt;b&gt;KK® 254 Solid Header, Vertical, with Friction Lock, 2 Circuits, Tin (Sn) Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/022232021_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
 <packageinstances>
 <packageinstance name="22-23-2021"/>
 </packageinstances>
 </package3d>
+=======
+>>>>>>> parent of 7903053... Final Changes
 </packages3d>
 </library>
 <library name="rcl" urn="urn:adsk.eagle:library:334">
@@ -3097,6 +3103,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="60.9854" y="93.091" size="1.27" layer="25" ratio="6" rot="SR0"/>
 <attribute name="VENDOR" value="Texas Instruments" x="64.262" y="93.726" size="1.778" layer="27" display="off"/>
 </element>
+<<<<<<< HEAD
 <element name="R7" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="0" x="60.452" y="59.69" smashed="yes">
 <attribute name="NAME" x="59.563" y="60.579" size="1.27" layer="25"/>
 <attribute name="SPICEPREFIX" value="R" x="60.452" y="59.69" size="1.778" layer="27" display="off"/>
@@ -3110,6 +3117,8 @@ design rules under a new name.</description>
 <attribute name="POPULARITY" value="40" x="74.168" y="62.23" size="1.778" layer="27" display="off"/>
 <attribute name="VALUE" x="71.628" y="57.15" size="1.016" layer="27" ratio="10"/>
 </element>
+=======
+>>>>>>> parent of 7903053... Final Changes
 </elements>
 <signals>
 <signal name="GND" airwireshidden="yes">
@@ -3135,6 +3144,7 @@ design rules under a new name.</description>
 </polygon>
 <contactref element="X4" pad="4"/>
 <contactref element="U4" pad="2"/>
+<contactref element="U4" pad="8"/>
 <contactref element="X2" pad="GND"/>
 <contactref element="U3" pad="9"/>
 <contactref element="C18" pad="2"/>
@@ -3164,6 +3174,9 @@ design rules under a new name.</description>
 <wire x1="45.9232" y1="78.232" x2="45.9232" y2="77.0128" width="0.254" layer="1"/>
 <wire x1="45.9232" y1="77.0128" x2="45.974" y2="76.962" width="0.254" layer="1"/>
 <via x="45.974" y="76.962" extent="1-16" drill="0.35"/>
+<wire x1="56.9722" y1="59.563" x2="58.801" y2="59.563" width="0.8128" layer="1"/>
+<wire x1="58.801" y1="59.563" x2="59.182" y2="59.944" width="0.8128" layer="1"/>
+<via x="59.182" y="59.944" extent="1-16" drill="0.35"/>
 <wire x1="39.4208" y1="61.4172" x2="39.116" y2="61.1124" width="0.254" layer="1"/>
 <wire x1="39.116" y1="61.1124" x2="35.5576625" y2="61.1124" width="0.254" layer="1"/>
 <wire x1="35.5576625" y1="61.1124" x2="34.9146625" y2="60.4694" width="0.254" layer="1"/>
@@ -3283,6 +3296,7 @@ design rules under a new name.</description>
 <wire x1="42.838" y1="59.69" x2="42.838" y2="58.332" width="0.762" layer="1"/>
 <wire x1="42.838" y1="58.332" x2="42.672" y2="58.166" width="0.762" layer="1"/>
 <via x="42.672" y="58.166" extent="1-16" drill="0.35"/>
+<<<<<<< HEAD
 <contactref element="R7" pad="2"/>
 <contactref element="X6" pad="2"/>
 <wire x1="60.952" y1="59.69" x2="62.73" y2="61.468" width="0.254" layer="1"/>
@@ -3315,6 +3329,8 @@ design rules under a new name.</description>
 <wire x1="7.62" y1="68.834" x2="11.049" y2="62.865" width="0" layer="19" extent="1-1"/>
 <wire x1="32.766" y1="38.1" x2="33.948" y2="51.308" width="0" layer="19" extent="1-1"/>
 <wire x1="26.924" y1="96.012" x2="36.068" y2="83.566" width="0" layer="19" extent="1-1"/>
+=======
+>>>>>>> parent of 7903053... Final Changes
 </signal>
 <signal name="!RESET">
 <contactref element="S1" pad="2.1"/>
@@ -3965,6 +3981,7 @@ design rules under a new name.</description>
 <wire x1="40.894" y1="40.386" x2="40.599" y2="40.681" width="0.254" layer="1"/>
 <wire x1="36.912" y1="29.972" x2="35.306" y2="28.366" width="0.254" layer="1"/>
 <wire x1="38.862" y1="29.972" x2="36.912" y2="29.972" width="0.254" layer="1"/>
+<<<<<<< HEAD
 </signal>
 <signal name="N$1">
 <contactref element="U4" pad="8"/>
@@ -3979,6 +3996,8 @@ design rules under a new name.</description>
 <via x="66.04" y="62.484" extent="1-16" drill="0.35"/>
 <wire x1="66.04" y1="62.484" x2="72.644" y2="62.484" width="0.254" layer="16"/>
 <wire x1="72.644" y1="62.484" x2="72.898" y2="62.23" width="0.254" layer="16"/>
+=======
+>>>>>>> parent of 7903053... Final Changes
 </signal>
 </signals>
 <mfgpreviewcolors>

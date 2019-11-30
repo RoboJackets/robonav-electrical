@@ -4469,6 +4469,7 @@ Source: www.ecsxtal.com .. Crystal 3.6864MHz CSM_7X_DU.PDF</description>
 <text x="-3.81" y="3.81" size="1.016" layer="25" ratio="10">&gt;NAME</text>
 <text x="-3.81" y="-5.08" size="1.016" layer="27" ratio="10">&gt;VALUE</text>
 </package>
+<<<<<<< HEAD
 <package name="22-23-2021" urn="urn:adsk.eagle:footprint:8078259/1" library_version="4">
 <description>&lt;b&gt;KK® 254 Solid Header, Vertical, with Friction Lock, 2 Circuits, Tin (Sn) Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/022232021_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
 <wire x1="-2.54" y1="3.175" x2="2.54" y2="3.175" width="0.254" layer="21"/>
@@ -4483,6 +4484,8 @@ Source: www.ecsxtal.com .. Crystal 3.6864MHz CSM_7X_DU.PDF</description>
 <text x="-2.54" y="3.81" size="1.016" layer="25" ratio="10">&gt;NAME</text>
 <text x="-2.54" y="-5.08" size="1.016" layer="27" ratio="10">&gt;VALUE</text>
 </package>
+=======
+>>>>>>> parent of 7903053... Final Changes
 </packages>
 <packages3d>
 <package3d name="22-23-2051" urn="urn:adsk.eagle:package:8078636/1" type="box" library_version="4">
@@ -4497,12 +4500,15 @@ Source: www.ecsxtal.com .. Crystal 3.6864MHz CSM_7X_DU.PDF</description>
 <packageinstance name="22-23-2031"/>
 </packageinstances>
 </package3d>
+<<<<<<< HEAD
 <package3d name="22-23-2021" urn="urn:adsk.eagle:package:8078633/1" type="box" library_version="4">
 <description>&lt;b&gt;KK® 254 Solid Header, Vertical, with Friction Lock, 2 Circuits, Tin (Sn) Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/022232021_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
 <packageinstances>
 <packageinstance name="22-23-2021"/>
 </packageinstances>
 </package3d>
+=======
+>>>>>>> parent of 7903053... Final Changes
 </packages3d>
 <symbols>
 <symbol name="MV" urn="urn:adsk.eagle:symbol:8078125/1" library_version="4">
@@ -4580,6 +4586,7 @@ Source: www.ecsxtal.com .. Crystal 3.6864MHz CSM_7X_DU.PDF</description>
 </device>
 </devices>
 </deviceset>
+<<<<<<< HEAD
 <deviceset name="22-23-2021" urn="urn:adsk.eagle:component:8078938/2" prefix="X" library_version="4">
 <description>.100" (2.54mm) Center Header - 2 Pin</description>
 <gates>
@@ -4607,6 +4614,8 @@ Source: www.ecsxtal.com .. Crystal 3.6864MHz CSM_7X_DU.PDF</description>
 </device>
 </devices>
 </deviceset>
+=======
+>>>>>>> parent of 7903053... Final Changes
 </devicesets>
 </library>
 <library name="A118090TR-ND">
@@ -14708,8 +14717,11 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="P+19" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="GND28" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="U5" library="LM1085ISX" deviceset="LM1085ISX-5.0/NOPB" device=""/>
+<<<<<<< HEAD
 <part name="R7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="0"/>
 <part name="X6" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="22-23-2021" device="" package3d_urn="urn:adsk.eagle:package:8078633/1"/>
+=======
+>>>>>>> parent of 7903053... Final Changes
 </parts>
 <sheets>
 <sheet>
@@ -15455,10 +15467,17 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="154.94" y1="248.92" x2="106.68" y2="248.92" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="106.68" y1="248.92" x2="106.68" y2="279.4" width="0.1524" layer="97" style="shortdash"/>
 <text x="109.22" y="276.86" size="1.778" layer="96">Mini Boards Connector</text>
+<<<<<<< HEAD
 <wire x1="160.02" y1="246.38" x2="261.62" y2="246.38" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="261.62" y1="246.38" x2="261.62" y2="195.58" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="261.62" y1="195.58" x2="160.02" y2="195.58" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="160.02" y1="195.58" x2="160.02" y2="246.38" width="0.1524" layer="97" style="shortdash"/>
+=======
+<wire x1="160.02" y1="243.84" x2="259.08" y2="243.84" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="259.08" y1="243.84" x2="259.08" y2="195.58" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="259.08" y1="195.58" x2="160.02" y2="195.58" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="160.02" y1="195.58" x2="160.02" y2="243.84" width="0.1524" layer="97" style="shortdash"/>
+>>>>>>> parent of 7903053... Final Changes
 <text x="167.64" y="238.76" size="1.778" layer="97">CAN BUS</text>
 <wire x1="-5.08" y1="190.5" x2="71.12" y2="190.5" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="71.12" y1="190.5" x2="71.12" y2="137.16" width="0.1524" layer="97" style="shortdash"/>
@@ -15510,6 +15529,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <instance part="X4" gate="-1" x="121.92" y="259.08" smashed="yes" rot="R180">
 <attribute name="NAME" x="119.38" y="259.842" size="1.524" layer="95" rot="R180"/>
 <attribute name="VALUE" x="122.682" y="257.683" size="1.778" layer="96" rot="R180"/>
+<<<<<<< HEAD
 </instance>
 <instance part="X4" gate="-2" x="121.92" y="261.62" smashed="yes" rot="R180">
 <attribute name="NAME" x="119.38" y="262.382" size="1.524" layer="95" rot="R180"/>
@@ -15549,6 +15569,47 @@ In this library the device names are the same as the pin names of the symbols, t
 </instance>
 <instance part="GND12" gate="1" x="254" y="241.3" smashed="yes">
 <attribute name="VALUE" x="251.46" y="238.76" size="1.778" layer="96"/>
+=======
+</instance>
+<instance part="X4" gate="-2" x="121.92" y="261.62" smashed="yes" rot="R180">
+<attribute name="NAME" x="119.38" y="262.382" size="1.524" layer="95" rot="R180"/>
+</instance>
+<instance part="X4" gate="-3" x="121.92" y="264.16" smashed="yes" rot="R180">
+<attribute name="NAME" x="119.38" y="264.922" size="1.524" layer="95" rot="R180"/>
+</instance>
+<instance part="X4" gate="-4" x="121.92" y="266.7" smashed="yes" rot="R180">
+<attribute name="NAME" x="119.38" y="267.462" size="1.524" layer="95" rot="R180"/>
+</instance>
+<instance part="X4" gate="-5" x="121.92" y="269.24" smashed="yes" rot="R180">
+<attribute name="NAME" x="119.38" y="270.002" size="1.524" layer="95" rot="R180"/>
+</instance>
+<instance part="P+7" gate="1" x="180.34" y="215.9" smashed="yes">
+<attribute name="VALUE" x="182.88" y="218.44" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="GND8" gate="1" x="180.34" y="233.68" smashed="yes">
+<attribute name="VALUE" x="177.8" y="231.14" size="1.778" layer="96"/>
+</instance>
+<instance part="R5" gate="G$1" x="210.82" y="205.74" smashed="yes" rot="R90">
+<attribute name="NAME" x="209.3214" y="201.93" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="214.122" y="204.47" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="R6" gate="G$1" x="220.98" y="205.74" smashed="yes" rot="R90">
+<attribute name="NAME" x="219.4814" y="201.93" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="224.282" y="204.47" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="GND9" gate="1" x="132.08" y="269.24" smashed="yes">
+<attribute name="VALUE" x="129.54" y="266.7" size="1.778" layer="96"/>
+</instance>
+<instance part="P+8" gate="1" x="127" y="271.78" smashed="yes">
+<attribute name="VALUE" x="129.54" y="274.32" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="U4" gate="A" x="187.96" y="228.6" smashed="yes">
+<attribute name="NAME" x="198.4756" y="237.7186" size="2.0828" layer="95" ratio="6" rot="SR0"/>
+<attribute name="VALUE" x="197.8406" y="235.1786" size="2.0828" layer="96" ratio="6" rot="SR0"/>
+</instance>
+<instance part="GND12" gate="1" x="246.38" y="231.14" smashed="yes">
+<attribute name="VALUE" x="243.84" y="228.6" size="1.778" layer="96"/>
+>>>>>>> parent of 7903053... Final Changes
 </instance>
 <instance part="X5" gate="G$1" x="177.8" y="271.78" smashed="yes" rot="R180">
 <attribute name="VALUE" x="180.34" y="254" size="1.778" layer="96" rot="R180"/>
@@ -15631,6 +15692,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <instance part="GND16" gate="1" x="144.78" y="213.36" smashed="yes">
 <attribute name="VALUE" x="147.32" y="213.36" size="1.778" layer="96" rot="R180"/>
 </instance>
+<<<<<<< HEAD
 <instance part="R7" gate="G$1" x="243.84" y="233.68" smashed="yes" rot="R90">
 <attribute name="NAME" x="242.3414" y="232.41" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="247.142" y="232.41" size="1.778" layer="96" rot="R90"/>
@@ -15642,6 +15704,8 @@ In this library the device names are the same as the pin names of the symbols, t
 <instance part="X6" gate="-2" x="251.46" y="236.22" smashed="yes">
 <attribute name="NAME" x="254" y="235.458" size="1.524" layer="95"/>
 </instance>
+=======
+>>>>>>> parent of 7903053... Final Changes
 </instances>
 <busses>
 </busses>
@@ -15711,6 +15775,16 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="129.54" y1="266.7" x2="129.54" y2="271.78" width="0.1524" layer="91"/>
 <wire x1="129.54" y1="271.78" x2="132.08" y2="271.78" width="0.1524" layer="91"/>
 <pinref part="GND9" gate="1" pin="GND"/>
+<<<<<<< HEAD
+=======
+</segment>
+<segment>
+<pinref part="U4" gate="A" pin="RS"/>
+<wire x1="241.3" y1="228.6" x2="243.84" y2="228.6" width="0.1524" layer="91"/>
+<wire x1="243.84" y1="228.6" x2="243.84" y2="233.68" width="0.1524" layer="91"/>
+<wire x1="243.84" y1="233.68" x2="246.38" y2="233.68" width="0.1524" layer="91"/>
+<pinref part="GND12" gate="1" pin="GND"/>
+>>>>>>> parent of 7903053... Final Changes
 </segment>
 <segment>
 <pinref part="X2" gate="A" pin="GND"/>
@@ -15746,6 +15820,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="144.78" y1="218.44" x2="144.78" y2="215.9" width="0.1524" layer="91"/>
 <pinref part="GND16" gate="1" pin="GND"/>
 </segment>
+<<<<<<< HEAD
 <segment>
 <pinref part="R7" gate="G$1" pin="2"/>
 <wire x1="243.84" y1="238.76" x2="248.92" y2="238.76" width="0.1524" layer="91"/>
@@ -15756,6 +15831,8 @@ In this library the device names are the same as the pin names of the symbols, t
 <pinref part="GND12" gate="1" pin="GND"/>
 <wire x1="248.92" y1="243.84" x2="254" y2="243.84" width="0.1524" layer="91"/>
 </segment>
+=======
+>>>>>>> parent of 7903053... Final Changes
 </net>
 <net name="SD_MISO_3V3" class="0">
 <segment>
@@ -15968,6 +16045,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="10.16" y1="266.7" x2="12.7" y2="266.7" width="0.1524" layer="91"/>
 <label x="12.7" y="266.7" size="1.27" layer="95" xref="yes"/>
 <pinref part="X1" gate="-2" pin="S"/>
+<<<<<<< HEAD
 </segment>
 <segment>
 <wire x1="66.04" y1="266.7" x2="68.58" y2="266.7" width="0.1524" layer="91"/>
@@ -15975,6 +16053,15 @@ In this library the device names are the same as the pin names of the symbols, t
 <pinref part="X3" gate="-2" pin="S"/>
 </segment>
 <segment>
+=======
+</segment>
+<segment>
+<wire x1="66.04" y1="266.7" x2="68.58" y2="266.7" width="0.1524" layer="91"/>
+<label x="68.58" y="266.7" size="1.27" layer="95" xref="yes"/>
+<pinref part="X3" gate="-2" pin="S"/>
+</segment>
+<segment>
+>>>>>>> parent of 7903053... Final Changes
 <wire x1="124.46" y1="261.62" x2="127" y2="261.62" width="0.1524" layer="91"/>
 <label x="127" y="261.62" size="1.27" layer="95" xref="yes"/>
 <pinref part="X4" gate="-2" pin="S"/>
@@ -16125,6 +16212,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <pinref part="U3" gate="A" pin="B4"/>
 </segment>
 </net>
+<<<<<<< HEAD
 <net name="N$1" class="0">
 <segment>
 <pinref part="U4" gate="A" pin="RS"/>
@@ -16136,6 +16224,8 @@ In this library the device names are the same as the pin names of the symbols, t
 <pinref part="X6" gate="-1" pin="S"/>
 </segment>
 </net>
+=======
+>>>>>>> parent of 7903053... Final Changes
 </nets>
 </sheet>
 <sheet>

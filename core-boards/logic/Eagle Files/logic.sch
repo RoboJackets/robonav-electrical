@@ -24826,6 +24826,19 @@ therefore the pull up resistor value 10k</text>
 <junction x="22.86" y="119.38"/>
 <pinref part="SUPPLY6" gate="1" pin="V+"/>
 </segment>
+<segment>
+<pinref part="J4" gate="G$1" pin="2"/>
+<wire x1="93.345" y1="179.07" x2="81.28" y2="179.07" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="185.42" x2="81.28" y2="179.07" width="0.1524" layer="91"/>
+<pinref part="SUPPLY5" gate="1" pin="V+"/>
+<wire x1="66.04" y1="187.96" x2="66.04" y2="185.42" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="185.42" x2="81.28" y2="185.42" width="0.1524" layer="91"/>
+<pinref part="U6" gate="A" pin="EPAD_2"/>
+<wire x1="48.26" y1="175.26" x2="50.8" y2="175.26" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="185.42" x2="48.26" y2="175.26" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="185.42" x2="48.26" y2="185.42" width="0.1524" layer="91"/>
+<junction x="66.04" y="185.42"/>
+</segment>
 </net>
 <net name="+5V" class="0">
 <segment>
@@ -24892,21 +24905,6 @@ therefore the pull up resistor value 10k</text>
 <wire x1="101.6" y1="109.22" x2="93.98" y2="109.22" width="0.1524" layer="91"/>
 <pinref part="C3" gate="G$1" pin="1"/>
 <wire x1="93.98" y1="106.68" x2="93.98" y2="109.22" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="V+" class="0">
-<segment>
-<pinref part="J4" gate="G$1" pin="2"/>
-<wire x1="93.345" y1="179.07" x2="81.28" y2="179.07" width="0.1524" layer="91"/>
-<wire x1="81.28" y1="185.42" x2="81.28" y2="179.07" width="0.1524" layer="91"/>
-<pinref part="SUPPLY5" gate="1" pin="V+"/>
-<wire x1="66.04" y1="187.96" x2="66.04" y2="185.42" width="0.1524" layer="91"/>
-<wire x1="66.04" y1="185.42" x2="81.28" y2="185.42" width="0.1524" layer="91"/>
-<pinref part="U6" gate="A" pin="EPAD_2"/>
-<wire x1="48.26" y1="175.26" x2="50.8" y2="175.26" width="0.1524" layer="91"/>
-<wire x1="48.26" y1="185.42" x2="48.26" y2="175.26" width="0.1524" layer="91"/>
-<wire x1="66.04" y1="185.42" x2="48.26" y2="185.42" width="0.1524" layer="91"/>
-<junction x="66.04" y="185.42"/>
 </segment>
 </net>
 </nets>

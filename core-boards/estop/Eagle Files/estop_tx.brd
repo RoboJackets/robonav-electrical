@@ -1282,6 +1282,22 @@ for trimmer refence see : &lt;u&gt;www.electrospec-inc.com/cross_references/trim
 <rectangle x1="-0.8382" y1="-0.4318" x2="-0.4318" y2="0.4318" layer="51"/>
 <rectangle x1="-0.1999" y1="-0.4001" x2="0.1999" y2="0.4001" layer="35"/>
 </package>
+<package name="C0805" urn="urn:adsk.eagle:footprint:23124/1" library_version="1">
+<description>&lt;b&gt;CAPACITOR&lt;/b&gt;&lt;p&gt;</description>
+<wire x1="-1.973" y1="0.983" x2="1.973" y2="0.983" width="0.0508" layer="39"/>
+<wire x1="1.973" y1="-0.983" x2="-1.973" y2="-0.983" width="0.0508" layer="39"/>
+<wire x1="-1.973" y1="-0.983" x2="-1.973" y2="0.983" width="0.0508" layer="39"/>
+<wire x1="-0.381" y1="0.66" x2="0.381" y2="0.66" width="0.1016" layer="51"/>
+<wire x1="-0.356" y1="-0.66" x2="0.381" y2="-0.66" width="0.1016" layer="51"/>
+<wire x1="1.973" y1="0.983" x2="1.973" y2="-0.983" width="0.0508" layer="39"/>
+<smd name="1" x="-0.95" y="0" dx="1.3" dy="1.5" layer="1"/>
+<smd name="2" x="0.95" y="0" dx="1.3" dy="1.5" layer="1"/>
+<text x="-1.27" y="1.27" size="1.27" layer="25">&gt;NAME</text>
+<text x="-1.27" y="-2.54" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-1.0922" y1="-0.7239" x2="-0.3421" y2="0.7262" layer="51"/>
+<rectangle x1="0.3556" y1="-0.7239" x2="1.1057" y2="0.7262" layer="51"/>
+<rectangle x1="-0.1001" y1="-0.4001" x2="0.1001" y2="0.4001" layer="35"/>
+</package>
 </packages>
 <packages3d>
 <package3d name="C0603" urn="urn:adsk.eagle:package:23616/2" type="model" library_version="3">
@@ -1294,6 +1310,12 @@ for trimmer refence see : &lt;u&gt;www.electrospec-inc.com/cross_references/trim
 <description>RESISTOR</description>
 <packageinstances>
 <packageinstance name="R0603"/>
+</packageinstances>
+</package3d>
+<package3d name="C0805" urn="urn:adsk.eagle:package:23617/2" type="model" library_version="3">
+<description>CAPACITOR</description>
+<packageinstances>
+<packageinstance name="C0805"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -6253,15 +6275,15 @@ design rules under a new name.</description>
 <attribute name="NAME" x="65.786" y="14.224" size="0.5" layer="25" rot="R90"/>
 <attribute name="VALUE" x="75.946" y="14.224" size="1.27" layer="27" rot="R90" align="top-left"/>
 </element>
-<element name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="10uF" x="65.405" y="10.922" smashed="yes" rot="R90">
+<element name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="10uF" x="65.405" y="10.922" smashed="yes" rot="R90">
 <attribute name="NAME" x="64.77" y="10.287" size="0.5" layer="25" rot="R90"/>
-<attribute name="POPULARITY" value="37" x="65.405" y="10.922" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="POPULARITY" value="63" x="65.405" y="10.922" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="SPICEPREFIX" value="C" x="65.405" y="10.922" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="67.31" y="10.287" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="C7" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="10uF" x="64.187" y="21.66" smashed="yes" rot="R90">
+<element name="C7" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="10uF" x="64.187" y="21.66" smashed="yes" rot="R90">
 <attribute name="NAME" x="63.552" y="21.025" size="0.5" layer="25" rot="R90"/>
-<attribute name="POPULARITY" value="37" x="64.187" y="21.66" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="POPULARITY" value="63" x="64.187" y="21.66" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="SPICEPREFIX" value="C" x="64.187" y="21.66" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="66.092" y="21.025" size="1.27" layer="27" rot="R90"/>
 </element>
@@ -6390,7 +6412,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="10.615" y="7.815" size="1.27" layer="27"/>
 </element>
 <element name="R11" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k" x="31.65" y="31.27" smashed="yes" rot="R270">
-<attribute name="NAME" x="32.285" y="31.905" size="1.27" layer="25" rot="R270"/>
+<attribute name="NAME" x="32.285" y="31.905" size="0.5" layer="25" rot="R270"/>
 <attribute name="POPULARITY" value="77" x="31.65" y="31.27" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="SPICEPREFIX" value="R" x="31.65" y="31.27" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="VALUE" x="29.745" y="31.905" size="1.27" layer="27" rot="R270"/>
@@ -6437,9 +6459,6 @@ design rules under a new name.</description>
 <wire x1="73.227" y1="7.747" x2="73.227" y2="9.227" width="0.4064" layer="1"/>
 <wire x1="73.227" y1="9.227" x2="74" y2="10" width="0.4064" layer="1"/>
 <via x="74" y="10" extent="1-16" drill="0.35"/>
-<wire x1="65.405" y1="11.772" x2="65.633" y2="12" width="0.4064" layer="1"/>
-<wire x1="65.633" y1="12" x2="67" y2="12" width="0.4064" layer="1"/>
-<via x="67" y="12" extent="1-16" drill="0.35"/>
 <wire x1="73.116" y1="19.939" x2="71.061" y2="19.939" width="0.4064" layer="1"/>
 <wire x1="71.061" y1="19.939" x2="71" y2="20" width="0.4064" layer="1"/>
 <via x="71" y="20" extent="1-16" drill="0.35"/>
@@ -6449,9 +6468,6 @@ design rules under a new name.</description>
 <wire x1="58.209" y1="45.394" x2="58.209" y2="44.209" width="0.4064" layer="1"/>
 <wire x1="58.209" y1="44.209" x2="58" y2="44" width="0.4064" layer="1"/>
 <via x="58" y="44" extent="1-16" drill="0.35"/>
-<wire x1="64.187" y1="23.6188" x2="63.8058" y2="24" width="0.4064" layer="1"/>
-<wire x1="64.187" y1="23.6188" x2="64.187" y2="22.51" width="0.4064" layer="1"/>
-<via x="63.8058" y="24" extent="1-16" drill="0.35"/>
 <wire x1="50.752" y1="48.006" x2="52.006" y2="48.006" width="0.4064" layer="1"/>
 <wire x1="52.006" y1="48.006" x2="53" y2="49" width="0.4064" layer="1"/>
 <via x="53" y="49" extent="1-16" drill="0.35"/>
@@ -6548,6 +6564,12 @@ design rules under a new name.</description>
 <wire x1="22.785" y1="14.515" x2="22.7" y2="14.6" width="0.254" layer="1"/>
 <wire x1="23.434996875" y1="12.4906" x2="23.434996875" y2="13.350003125" width="0.254" layer="1"/>
 <wire x1="23.434996875" y1="13.350003125" x2="22.785" y2="14" width="0.254" layer="1"/>
+<wire x1="65.405" y1="11.872" x2="66.128" y2="11.872" width="0.4064" layer="1"/>
+<wire x1="66.128" y1="11.872" x2="67" y2="11" width="0.4064" layer="1"/>
+<via x="67" y="11" extent="1-16" drill="0.35"/>
+<wire x1="64.187" y1="22.61" x2="62.61" y2="22.61" width="0.4064" layer="1"/>
+<wire x1="62.61" y1="22.61" x2="62" y2="22" width="0.4064" layer="1"/>
+<via x="62" y="22" extent="1-16" drill="0.35"/>
 </signal>
 <signal name="MISO">
 <contactref element="U4" pad="16"/>

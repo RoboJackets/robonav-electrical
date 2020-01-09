@@ -14161,119 +14161,6 @@ Created by Upverter.com</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="Rembrandt Electronics - JST XH Connectors v1-0">
-<packages>
-<package name="JST-XH-05-PACKAGE-LONG-PAD">
-<description>&lt;b&gt;JST XH Connector Long Pads (Package)&lt;/b&gt;&lt;p&gt;
-
-Wire to board connector.
-
-Pitch: 2,54 mm, (0.100")&lt;p&gt;
-Number of pins: &lt;b&gt;5&lt;/b&gt;&lt;b&gt;&lt;P&gt;
-
-&lt;b&gt;Created by Rembrandt Electronics&lt;/b&gt;&lt;p&gt;
-&lt;b&gt;www.rembrandtelectronics.com&lt;/b&gt;&lt;p&gt;</description>
-<wire x1="7.45" y1="-2.3575" x2="7.45" y2="3.3925" width="0.254" layer="21"/>
-<wire x1="7.45" y1="3.3925" x2="-7.45" y2="3.3925" width="0.254" layer="21"/>
-<wire x1="-7.45" y1="3.3925" x2="-7.45" y2="-2.3575" width="0.254" layer="21"/>
-<wire x1="-7.45" y1="-2.3575" x2="7.45" y2="-2.3575" width="0.254" layer="21"/>
-<pad name="3" x="0" y="0" drill="1.016" shape="long" rot="R90"/>
-<pad name="2" x="-2.54" y="0" drill="1.016" shape="long" rot="R90"/>
-<pad name="1" x="-5.08" y="0" drill="1.016" shape="long" rot="R90"/>
-<pad name="4" x="2.54" y="0" drill="1.016" shape="long" rot="R90"/>
-<pad name="5" x="5.08" y="0" drill="1.016" shape="long" rot="R90"/>
-<text x="-8.055" y="-2.14" size="1.016" layer="25" ratio="10" rot="R90">&gt;NAME</text>
-<text x="-7.2025" y="3.8925" size="0.8128" layer="27" ratio="10">&gt;VALUE</text>
-<text x="-6.6675" y="-1.5875" size="1.016" layer="51" ratio="10">1</text>
-<wire x1="-5.1" y1="-2.3" x2="-5.1" y2="-1.8" width="0.254" layer="21"/>
-<wire x1="5.1" y1="-2.3" x2="5.1" y2="-1.8" width="0.254" layer="21"/>
-</package>
-<package name="JST-XH-05-PACKAGE-ROUND-PAD">
-<description>&lt;b&gt;JST XH Connector Round Pads (Package)&lt;/b&gt;&lt;p&gt;
-
-Wire to board connector.
-
-Pitch: 2,54 mm, (0.100")&lt;p&gt;
-Number of pins: &lt;b&gt;5&lt;/b&gt;&lt;b&gt;&lt;P&gt;
-
-&lt;b&gt;Created by Rembrandt Electronics&lt;/b&gt;&lt;p&gt;
-&lt;b&gt;www.rembrandtelectronics.com&lt;/b&gt;&lt;p&gt;</description>
-<wire x1="7.45" y1="-2.3575" x2="7.45" y2="3.3925" width="0.254" layer="21"/>
-<wire x1="7.45" y1="3.3925" x2="-7.45" y2="3.3925" width="0.254" layer="21"/>
-<wire x1="-7.45" y1="3.3925" x2="-7.45" y2="-2.3575" width="0.254" layer="21"/>
-<wire x1="-7.45" y1="-2.3575" x2="7.45" y2="-2.3575" width="0.254" layer="21"/>
-<pad name="3" x="0" y="0" drill="1.016" rot="R90"/>
-<pad name="2" x="-2.54" y="0" drill="1.016" rot="R90"/>
-<pad name="1" x="-5.08" y="0" drill="1.016" rot="R90"/>
-<pad name="4" x="2.54" y="0" drill="1.016" rot="R90"/>
-<pad name="5" x="5.08" y="0" drill="1.016" rot="R90"/>
-<text x="-8.055" y="-2.14" size="1.016" layer="25" ratio="10" rot="R90">&gt;NAME</text>
-<text x="-7.2025" y="3.8925" size="0.8128" layer="27" ratio="10">&gt;VALUE</text>
-<text x="-6.6675" y="-1.5875" size="1.016" layer="51" ratio="10">1</text>
-<wire x1="-5.1" y1="-2.3" x2="-5.1" y2="-1.8" width="0.254" layer="21"/>
-<wire x1="5.1" y1="-2.3" x2="5.1" y2="-1.8" width="0.254" layer="21"/>
-</package>
-</packages>
-<symbols>
-<symbol name="MV">
-<wire x1="1.27" y1="0" x2="0" y2="0" width="0.6096" layer="94"/>
-<text x="2.54" y="-0.762" size="1.524" layer="95">&gt;NAME</text>
-<text x="-0.762" y="1.397" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="S" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
-</symbol>
-<symbol name="M">
-<wire x1="1.27" y1="0" x2="0" y2="0" width="0.6096" layer="94"/>
-<text x="2.54" y="-0.762" size="1.524" layer="95">&gt;NAME</text>
-<pin name="S" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="JST-XH-05-PIN" prefix="X">
-<description>&lt;b&gt;JST XH Connector 2 Pin&lt;/b&gt;&lt;p&gt;
-
-Wire to board connector.
-
-Pitch: 2,54 mm, (0.100")&lt;p&gt;
-Number of pins: &lt;b&gt;5&lt;/b&gt;&lt;b&gt;&lt;P&gt;
-
-&lt;b&gt;Created by Rembrandt Electronics&lt;/b&gt;&lt;p&gt;
-&lt;b&gt;www.rembrandtelectronics.com&lt;/b&gt;&lt;p&gt;</description>
-<gates>
-<gate name="-1" symbol="MV" x="2.54" y="0" addlevel="always" swaplevel="1"/>
-<gate name="-2" symbol="M" x="2.54" y="-2.54" addlevel="always" swaplevel="1"/>
-<gate name="-3" symbol="M" x="2.54" y="-5.08" addlevel="always" swaplevel="1"/>
-<gate name="-4" symbol="M" x="2.54" y="-7.62" addlevel="always" swaplevel="1"/>
-<gate name="-5" symbol="M" x="2.54" y="-10.16" addlevel="always" swaplevel="1"/>
-</gates>
-<devices>
-<device name="-LONG-PAD" package="JST-XH-05-PACKAGE-LONG-PAD">
-<connects>
-<connect gate="-1" pin="S" pad="1"/>
-<connect gate="-2" pin="S" pad="2"/>
-<connect gate="-3" pin="S" pad="3"/>
-<connect gate="-4" pin="S" pad="4"/>
-<connect gate="-5" pin="S" pad="5"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="-ROUND-PAD" package="JST-XH-05-PACKAGE-ROUND-PAD">
-<connects>
-<connect gate="-1" pin="S" pad="1"/>
-<connect gate="-2" pin="S" pad="2"/>
-<connect gate="-3" pin="S" pad="3"/>
-<connect gate="-4" pin="S" pad="4"/>
-<connect gate="-5" pin="S" pad="5"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="adafruit" urn="urn:adsk.eagle:library:420">
 <packages>
 <package name="R0402" urn="urn:adsk.eagle:footprint:6239918/1" library_version="2">
@@ -17541,12 +17428,12 @@ type 0309, grid 2.5 mm</description>
 </part>
 <part name="P+6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="GND11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="CAN-CONTROLLER" library="IGVC-Microcontroller" deviceset="MCP2551T-I/SN" device=""/>
 <part name="C5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1µF"/>
 <part name="GND12" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="C6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1µF"/>
 <part name="GND13" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="X1" library="Rembrandt Electronics - JST XH Connectors v1-0" deviceset="JST-XH-05-PIN" device="-LONG-PAD"/>
 <part name="GND14" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND15" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
@@ -17560,7 +17447,7 @@ type 0309, grid 2.5 mm</description>
 <part name="JP1" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-2X3" device="" package3d_urn="urn:adsk.eagle:package:22462/2" value="ISCP"/>
 <part name="P+10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="GND17" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="U2" library="IGVC-Microcontroller" deviceset="MCP2551T-I/SN" device=""/>
+<part name="F3" library="RoboJackets-Connectors" deviceset="4-PIN_2MM-*" device="H"/>
 </parts>
 <sheets>
 <sheet>
@@ -17762,6 +17649,10 @@ Max Current: 5mA</text>
 <instance part="GND11" gate="1" x="45.72" y="167.64" smashed="yes">
 <attribute name="VALUE" x="43.18" y="165.1" size="1.778" layer="96"/>
 </instance>
+<instance part="CAN-CONTROLLER" gate="A" x="190.5" y="187.96" smashed="yes">
+<attribute name="NAME" x="213.7156" y="197.0786" size="1.778" layer="95" rot="SR0"/>
+<attribute name="VALUE" x="213.0806" y="194.5386" size="1.778" layer="96" rot="SR0"/>
+</instance>
 <instance part="C5" gate="G$1" x="170.18" y="185.42" smashed="yes">
 <attribute name="NAME" x="171.196" y="186.055" size="1.778" layer="95"/>
 <attribute name="VALUE" x="171.196" y="181.229" size="1.778" layer="96"/>
@@ -17778,22 +17669,6 @@ Max Current: 5mA</text>
 </instance>
 <instance part="GND13" gate="1" x="246.38" y="165.1" smashed="yes">
 <attribute name="VALUE" x="243.84" y="162.56" size="1.778" layer="96"/>
-</instance>
-<instance part="X1" gate="-1" x="233.68" y="149.86" smashed="yes" rot="R180">
-<attribute name="NAME" x="231.14" y="150.622" size="1.524" layer="95" rot="R180"/>
-<attribute name="VALUE" x="234.442" y="153.543" size="1.778" layer="96" rot="R180"/>
-</instance>
-<instance part="X1" gate="-2" x="233.68" y="147.32" smashed="yes" rot="R180">
-<attribute name="NAME" x="231.14" y="148.082" size="1.524" layer="95" rot="R180"/>
-</instance>
-<instance part="X1" gate="-3" x="233.68" y="144.78" smashed="yes" rot="R180">
-<attribute name="NAME" x="231.14" y="145.542" size="1.524" layer="95" rot="R180"/>
-</instance>
-<instance part="X1" gate="-4" x="233.68" y="142.24" smashed="yes" rot="R180">
-<attribute name="NAME" x="231.14" y="143.002" size="1.524" layer="95" rot="R180"/>
-</instance>
-<instance part="X1" gate="-5" x="233.68" y="139.7" smashed="yes" rot="R180">
-<attribute name="NAME" x="231.14" y="140.462" size="1.524" layer="95" rot="R180"/>
 </instance>
 <instance part="GND14" gate="1" x="251.46" y="193.04" smashed="yes">
 <attribute name="VALUE" x="248.92" y="190.5" size="1.778" layer="96"/>
@@ -17841,9 +17716,8 @@ Max Current: 5mA</text>
 <instance part="GND17" gate="1" x="180.34" y="101.6" smashed="yes">
 <attribute name="VALUE" x="177.8" y="99.06" size="1.778" layer="96"/>
 </instance>
-<instance part="U2" gate="A" x="190.5" y="187.96" smashed="yes">
-<attribute name="NAME" x="213.7156" y="197.0786" size="2.0828" layer="95" ratio="6" rot="SR0"/>
-<attribute name="VALUE" x="213.0806" y="194.5386" size="2.0828" layer="96" ratio="6" rot="SR0"/>
+<instance part="F3" gate="G$1" x="231.14" y="149.86" smashed="yes">
+<attribute name="NAME" x="228.6" y="154.94" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
 </instances>
 <busses>
@@ -17955,6 +17829,7 @@ Max Current: 5mA</text>
 <wire x1="45.72" y1="180.34" x2="45.72" y2="170.18" width="0.1524" layer="91"/>
 </segment>
 <segment>
+<pinref part="CAN-CONTROLLER" gate="A" pin="VSS"/>
 <wire x1="193.04" y1="185.42" x2="180.34" y2="185.42" width="0.1524" layer="91"/>
 <wire x1="180.34" y1="185.42" x2="180.34" y2="177.8" width="0.1524" layer="91"/>
 <wire x1="180.34" y1="177.8" x2="170.18" y2="177.8" width="0.1524" layer="91"/>
@@ -17963,7 +17838,6 @@ Max Current: 5mA</text>
 <wire x1="170.18" y1="177.8" x2="170.18" y2="175.26" width="0.1524" layer="91"/>
 <junction x="170.18" y="177.8"/>
 <pinref part="GND12" gate="1" pin="GND"/>
-<pinref part="U2" gate="A" pin="VSS"/>
 </segment>
 <segment>
 <pinref part="C6" gate="G$1" pin="2"/>
@@ -17971,11 +17845,19 @@ Max Current: 5mA</text>
 <wire x1="246.38" y1="170.18" x2="246.38" y2="167.64" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="X1" gate="-2" pin="S"/>
+<pinref part="CAN-CONTROLLER" gate="A" pin="RS"/>
+<wire x1="243.84" y1="187.96" x2="246.38" y2="187.96" width="0.1524" layer="91"/>
+<wire x1="246.38" y1="187.96" x2="246.38" y2="198.12" width="0.1524" layer="91"/>
+<wire x1="246.38" y1="198.12" x2="251.46" y2="198.12" width="0.1524" layer="91"/>
+<wire x1="251.46" y1="198.12" x2="251.46" y2="195.58" width="0.1524" layer="91"/>
+<pinref part="GND14" gate="1" pin="GND"/>
+</segment>
+<segment>
 <wire x1="236.22" y1="147.32" x2="241.3" y2="147.32" width="0.1524" layer="91"/>
 <wire x1="241.3" y1="147.32" x2="241.3" y2="154.94" width="0.1524" layer="91"/>
 <pinref part="GND15" gate="1" pin="GND"/>
 <wire x1="241.3" y1="154.94" x2="246.38" y2="154.94" width="0.1524" layer="91"/>
+<pinref part="F3" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <pinref part="C7" gate="G$1" pin="2"/>
@@ -18060,6 +17942,7 @@ Max Current: 5mA</text>
 <wire x1="132.08" y1="193.04" x2="132.08" y2="190.5" width="0.1524" layer="91"/>
 </segment>
 <segment>
+<pinref part="CAN-CONTROLLER" gate="A" pin="VDD"/>
 <wire x1="193.04" y1="182.88" x2="177.8" y2="182.88" width="0.1524" layer="91"/>
 <wire x1="177.8" y1="182.88" x2="177.8" y2="190.5" width="0.1524" layer="91"/>
 <wire x1="177.8" y1="190.5" x2="170.18" y2="190.5" width="0.1524" layer="91"/>
@@ -18068,13 +17951,12 @@ Max Current: 5mA</text>
 <wire x1="170.18" y1="190.5" x2="170.18" y2="193.04" width="0.1524" layer="91"/>
 <junction x="170.18" y="190.5"/>
 <pinref part="P+8" gate="1" pin="+5V"/>
-<pinref part="U2" gate="A" pin="VDD"/>
 </segment>
 <segment>
-<pinref part="X1" gate="-1" pin="S"/>
 <wire x1="236.22" y1="149.86" x2="238.76" y2="149.86" width="0.1524" layer="91"/>
 <wire x1="238.76" y1="149.86" x2="238.76" y2="152.4" width="0.1524" layer="91"/>
 <pinref part="P+9" gate="1" pin="+5V"/>
+<pinref part="F3" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <pinref part="R7" gate="G$1" pin="2"/>
@@ -18246,22 +18128,22 @@ Max Current: 5mA</text>
 </net>
 <net name="N$6" class="0">
 <segment>
+<pinref part="CAN-CONTROLLER" gate="A" pin="VREF"/>
 <wire x1="243.84" y1="180.34" x2="246.38" y2="180.34" width="0.1524" layer="91"/>
 <wire x1="246.38" y1="180.34" x2="246.38" y2="177.8" width="0.1524" layer="91"/>
 <pinref part="C6" gate="G$1" pin="1"/>
-<pinref part="U2" gate="A" pin="VREF"/>
 </segment>
 </net>
 <net name="CAN_P" class="0">
 <segment>
+<pinref part="CAN-CONTROLLER" gate="A" pin="CANH"/>
 <wire x1="243.84" y1="185.42" x2="246.38" y2="185.42" width="0.1524" layer="91"/>
 <label x="246.38" y="185.42" size="1.27" layer="95" font="vector" xref="yes"/>
-<pinref part="U2" gate="A" pin="CANH"/>
 </segment>
 <segment>
-<pinref part="X1" gate="-3" pin="S"/>
 <wire x1="236.22" y1="144.78" x2="238.76" y2="144.78" width="0.1524" layer="91"/>
 <label x="238.76" y="144.78" size="1.27" layer="95" font="vector" xref="yes"/>
+<pinref part="F3" gate="G$1" pin="3"/>
 </segment>
 <segment>
 <pinref part="R10" gate="G$1" pin="2"/>
@@ -18276,14 +18158,14 @@ Max Current: 5mA</text>
 </net>
 <net name="CAN_N" class="0">
 <segment>
+<pinref part="CAN-CONTROLLER" gate="A" pin="CANL"/>
 <wire x1="243.84" y1="182.88" x2="246.38" y2="182.88" width="0.1524" layer="91"/>
 <label x="246.38" y="182.88" size="1.27" layer="95" font="vector" xref="yes"/>
-<pinref part="U2" gate="A" pin="CANL"/>
 </segment>
 <segment>
-<pinref part="X1" gate="-4" pin="S"/>
 <wire x1="236.22" y1="142.24" x2="238.76" y2="142.24" width="0.1524" layer="91"/>
 <label x="238.76" y="142.24" size="1.27" layer="95" font="vector" xref="yes"/>
+<pinref part="F3" gate="G$1" pin="4"/>
 </segment>
 <segment>
 <pinref part="R10" gate="G$1" pin="1"/>
@@ -18298,9 +18180,9 @@ Max Current: 5mA</text>
 </net>
 <net name="CAN_TX" class="0">
 <segment>
-<wire x1="193.04" y1="187.96" x2="190.5" y2="187.96" width="0.1524" layer="91"/>
-<label x="190.5" y="187.96" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
-<pinref part="U2" gate="A" pin="TXD"/>
+<pinref part="CAN-CONTROLLER" gate="A" pin="TXD"/>
+<wire x1="193.04" y1="187.96" x2="187.96" y2="187.96" width="0.1524" layer="91"/>
+<label x="187.96" y="187.96" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="ATMEGA328" gate="G$1" pin="PD0(RXD/PCINT16)"/>
@@ -18310,26 +18192,14 @@ Max Current: 5mA</text>
 </net>
 <net name="CAN_RX" class="0">
 <segment>
+<pinref part="CAN-CONTROLLER" gate="A" pin="RXD"/>
 <wire x1="193.04" y1="180.34" x2="190.5" y2="180.34" width="0.1524" layer="91"/>
 <label x="190.5" y="180.34" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
-<pinref part="U2" gate="A" pin="RXD"/>
 </segment>
 <segment>
 <pinref part="ATMEGA328" gate="G$1" pin="PD1(TXD/PCINT17)"/>
 <wire x1="48.26" y1="10.16" x2="43.18" y2="10.16" width="0.1524" layer="91"/>
 <label x="43.18" y="10.16" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
-<net name="CONNECTED" class="0">
-<segment>
-<pinref part="X1" gate="-5" pin="S"/>
-<wire x1="236.22" y1="139.7" x2="238.76" y2="139.7" width="0.1524" layer="91"/>
-<label x="238.76" y="139.7" size="1.27" layer="95" font="vector" xref="yes"/>
-</segment>
-<segment>
-<pinref part="ATMEGA328" gate="G$1" pin="(PCINT2/SS/OC1B)PB2"/>
-<wire x1="116.84" y1="12.7" x2="121.92" y2="12.7" width="0.1524" layer="91"/>
-<label x="121.92" y="12.7" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 </net>
 <net name="MOSI" class="0">
@@ -18366,16 +18236,6 @@ Max Current: 5mA</text>
 <pinref part="ATMEGA328" gate="G$1" pin="(SCK/PCINT5)PB5"/>
 <wire x1="116.84" y1="20.32" x2="121.92" y2="20.32" width="0.1524" layer="91"/>
 <label x="121.92" y="20.32" size="1.27" layer="95" font="vector" xref="yes"/>
-</segment>
-</net>
-<net name="N$7" class="0">
-<segment>
-<wire x1="243.84" y1="187.96" x2="246.38" y2="187.96" width="0.1524" layer="91"/>
-<wire x1="246.38" y1="187.96" x2="246.38" y2="198.12" width="0.1524" layer="91"/>
-<wire x1="246.38" y1="198.12" x2="251.46" y2="198.12" width="0.1524" layer="91"/>
-<wire x1="251.46" y1="198.12" x2="251.46" y2="195.58" width="0.1524" layer="91"/>
-<pinref part="GND14" gate="1" pin="GND"/>
-<pinref part="U2" gate="A" pin="RS"/>
 </segment>
 </net>
 </nets>

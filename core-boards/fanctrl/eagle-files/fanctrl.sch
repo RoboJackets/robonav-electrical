@@ -17423,7 +17423,7 @@ type 0309, grid 2.5 mm</description>
 <part name="R6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1K"/>
 <part name="GND10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="LED4" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIPLED_0603" package3d_urn="urn:adsk.eagle:package:15822/2" value="BLUE"/>
-<part name="RESET" library="RoboJackets-Switches" deviceset="PTS645" device="">
+<part name="B1" library="RoboJackets-Switches" deviceset="PTS645" device="">
 <attribute name="FUNCTION" value="RESET µCONTROLLER"/>
 </part>
 <part name="P+6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
@@ -17504,6 +17504,8 @@ Max Current: 5mA</text>
 <wire x1="187.96" y1="129.54" x2="187.96" y2="96.52" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="187.96" y1="96.52" x2="154.94" y2="96.52" width="0.1524" layer="97" style="shortdash"/>
 <text x="157.48" y="121.92" size="6.35" layer="97" font="vector" ratio="12">ISCP</text>
+<text x="10.16" y="111.76" size="1.778" layer="97">IN = Write to the fan</text>
+<text x="10.16" y="109.22" size="1.778" layer="97">OUT = Read from the fan</text>
 </plain>
 <instances>
 <instance part="ATMEGA328" gate="G$1" x="83.82" y="33.02" smashed="yes">
@@ -17638,7 +17640,7 @@ Max Current: 5mA</text>
 <attribute name="NAME" x="97.536" y="170.688" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="99.695" y="170.688" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="RESET" gate="G$1" x="35.56" y="180.34" smashed="yes">
+<instance part="B1" gate="G$1" x="35.56" y="180.34" smashed="yes">
 <attribute name="NAME" x="30.48" y="186.69" size="1.778" layer="95" font="vector" align="top-left"/>
 <attribute name="VALUE" x="35.56" y="179.07" size="2.54" layer="96" font="vector" ratio="15" align="top-center"/>
 <attribute name="FUNCTION" x="33.02" y="176.022" size="1.27" layer="97" ratio="10" align="top-center"/>
@@ -17823,7 +17825,7 @@ Max Current: 5mA</text>
 <wire x1="93.98" y1="170.18" x2="93.98" y2="167.64" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="RESET" gate="G$1" pin="2"/>
+<pinref part="B1" gate="G$1" pin="2"/>
 <wire x1="40.64" y1="180.34" x2="45.72" y2="180.34" width="0.1524" layer="91"/>
 <pinref part="GND11" gate="1" pin="GND"/>
 <wire x1="45.72" y1="180.34" x2="45.72" y2="170.18" width="0.1524" layer="91"/>
@@ -18111,7 +18113,7 @@ Max Current: 5mA</text>
 <label x="121.92" y="45.72" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 <segment>
-<pinref part="RESET" gate="G$1" pin="1"/>
+<pinref part="B1" gate="G$1" pin="1"/>
 <pinref part="C7" gate="G$1" pin="1"/>
 <wire x1="17.78" y1="180.34" x2="30.48" y2="180.34" width="0.1524" layer="91"/>
 <label x="15.24" y="180.34" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>

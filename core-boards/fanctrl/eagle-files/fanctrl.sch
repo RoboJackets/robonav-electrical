@@ -18042,7 +18042,7 @@ Max Current: 5mA</text>
 <label x="43.18" y="12.7" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="N$1" class="0">
+<net name="AREF" class="0">
 <segment>
 <pinref part="ATMEGA328" gate="G$1" pin="AREF"/>
 <wire x1="48.26" y1="33.02" x2="15.24" y2="33.02" width="0.1524" layer="91"/>
@@ -18126,7 +18126,7 @@ Max Current: 5mA</text>
 <label x="162.56" y="106.68" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="N$6" class="0">
+<net name="VREF" class="0">
 <segment>
 <pinref part="CAN-CONTROLLER" gate="A" pin="VREF"/>
 <wire x1="243.84" y1="180.34" x2="246.38" y2="180.34" width="0.1524" layer="91"/>

@@ -95,7 +95,10 @@
 <layer number="114" name="Badge_Outline" color="7" fill="1" visible="no" active="yes"/>
 <layer number="115" name="ReferenceISLANDS" color="7" fill="1" visible="no" active="yes"/>
 <layer number="116" name="Patch_BOT" color="9" fill="4" visible="yes" active="yes"/>
+<layer number="117" name="BACKMAAT1" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="118" name="Rect_Pads" color="7" fill="1" visible="no" active="yes"/>
+<layer number="119" name="KAP_TEKEN" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="120" name="KAP_MAAT1" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="121" name="_tsilk" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="122" name="_bsilk" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="123" name="tTestmark" color="7" fill="1" visible="yes" active="yes"/>
@@ -105,6 +108,7 @@
 <layer number="127" name="_tValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="128" name="_bValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="129" name="Mask" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="130" name="SMDSTROOK" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="131" name="tAdjust" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="132" name="bAdjust" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="144" name="Drill_legend" color="7" fill="1" visible="yes" active="yes"/>
@@ -147,6 +151,8 @@
 <layer number="229" name="229bmp" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="230" name="230bmp" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="231" name="231bmp" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="232" name="Eagle3D_PG2" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="233" name="Eagle3D_PG3" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="248" name="Housing" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="249" name="Edge" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="250" name="Descript" color="3" fill="1" visible="no" active="no"/>
@@ -266,6 +272,23 @@
 <vertex x="2.5654" y="3.937"/>
 </polygon>
 </package>
+<package name="TLP2745">
+<wire x1="-3.75" y1="1.92" x2="-3.75" y2="-1.92" width="0.1524" layer="21"/>
+<wire x1="-3.75" y1="-1.92" x2="3.75" y2="-1.92" width="0.1524" layer="21"/>
+<wire x1="3.75" y1="-1.92" x2="3.75" y2="1.92" width="0.1524" layer="21"/>
+<wire x1="3.75" y1="1.92" x2="-3.75" y2="1.92" width="0.1524" layer="21"/>
+<smd name="5" x="4.375" y="0" dx="1.25" dy="0.38" layer="1" rot="R180"/>
+<smd name="4" x="4.375" y="1.27" dx="1.25" dy="0.38" layer="1" rot="R180"/>
+<smd name="6" x="4.375" y="-1.27" dx="1.25" dy="0.38" layer="1" rot="R180"/>
+<smd name="2" x="-4.375" y="0" dx="1.25" dy="0.38" layer="1" rot="R180"/>
+<smd name="1" x="-4.375" y="1.27" dx="1.25" dy="0.38" layer="1" rot="R180"/>
+<smd name="3" x="-4.375" y="-1.27" dx="1.25" dy="0.38" layer="1" rot="R180"/>
+<circle x="-3" y="1.25" radius="0.22" width="0.1524" layer="21"/>
+<wire x1="-6.35" y1="2.54" x2="-6.35" y2="-2.54" width="0.1524" layer="39"/>
+<wire x1="-6.35" y1="-2.54" x2="6.35" y2="-2.54" width="0.1524" layer="39"/>
+<wire x1="6.35" y1="-2.54" x2="6.35" y2="2.54" width="0.1524" layer="39"/>
+<wire x1="6.35" y1="2.54" x2="-6.35" y2="2.54" width="0.1524" layer="39"/>
+</package>
 </packages>
 <symbols>
 <symbol name="700-MAX5902ACEUTT">
@@ -337,6 +360,20 @@
 <vertex x="4.318" y="-0.254"/>
 </polygon>
 </symbol>
+<symbol name="TLP2745">
+<pin name="P$1" x="-15.24" y="0" length="middle"/>
+<pin name="P$2" x="-15.24" y="-5.08" length="middle"/>
+<pin name="P$3" x="-15.24" y="5.08" length="middle"/>
+<pin name="P$4" x="15.24" y="5.08" length="middle" rot="R180"/>
+<pin name="P$5" x="15.24" y="0" length="middle" rot="R180"/>
+<pin name="P$6" x="15.24" y="-5.08" length="middle" rot="R180"/>
+<wire x1="-10.16" y1="7.62" x2="-10.16" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-7.62" x2="10.16" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-7.62" x2="10.16" y2="7.62" width="0.254" layer="94"/>
+<wire x1="10.16" y1="7.62" x2="-10.16" y2="7.62" width="0.254" layer="94"/>
+<text x="-10.16" y="7.62" size="1.778" layer="125">&gt;NAME</text>
+<text x="-10.16" y="-10.16" size="1.778" layer="127">&gt;Value</text>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="700-MAX5902ACEUTT">
@@ -400,6 +437,26 @@
 <connect gate="G$1" pin="D" pad="D"/>
 <connect gate="G$1" pin="G" pad="G"/>
 <connect gate="G$1" pin="S" pad="S"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TLP2745" prefix="Z">
+<gates>
+<gate name="TLP2745" symbol="TLP2745" x="-15.24" y="12.7"/>
+</gates>
+<devices>
+<device name="" package="TLP2745">
+<connects>
+<connect gate="TLP2745" pin="P$1" pad="1"/>
+<connect gate="TLP2745" pin="P$2" pad="2"/>
+<connect gate="TLP2745" pin="P$3" pad="3"/>
+<connect gate="TLP2745" pin="P$4" pad="4"/>
+<connect gate="TLP2745" pin="P$5" pad="5"/>
+<connect gate="TLP2745" pin="P$6" pad="6"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -11402,6 +11459,81 @@ In this library you will find frames that can be used to help organize a schemat
 </deviceset>
 </devicesets>
 </library>
+<library name="RoboJackets-Connectors">
+<description>&lt;img src="http://www.robojackets.org/wp-content/themes/RoboJackets-3.0/img/banner.png" width="600"&gt;
+&lt;hr&gt;
+&lt;h1&gt;RoboJackets EAGLE Libraries - Connectors&lt;/h1&gt;&lt;/br&gt;
+&lt;p&gt;
+In this library you will find all the connectors used on any of our boards.
+&lt;/p&gt;</description>
+<packages>
+<package name="2MM-2-H">
+<wire x1="-3" y1="2" x2="-3" y2="-8" width="0.127" layer="21"/>
+<wire x1="-3" y1="-8" x2="5" y2="-8" width="0.127" layer="21"/>
+<wire x1="5" y1="-8" x2="5" y2="2" width="0.127" layer="21"/>
+<wire x1="5" y1="2" x2="-3" y2="2" width="0.127" layer="21"/>
+<pad name="2" x="2" y="0" drill="0.8" rot="R180"/>
+<pad name="1" x="0" y="0" drill="0.8" shape="square" rot="R180"/>
+<text x="1" y="2.5" size="1" layer="25" font="vector" ratio="10" align="bottom-center">&gt;NAME</text>
+</package>
+<package name="2MM-2-V">
+<wire x1="-4" y1="3" x2="-4" y2="-3" width="0.127" layer="21"/>
+<wire x1="-4" y1="-3" x2="4" y2="-3" width="0.127" layer="21"/>
+<wire x1="4" y1="-3" x2="4" y2="3" width="0.127" layer="21"/>
+<wire x1="4" y1="3" x2="-4" y2="3" width="0.127" layer="21"/>
+<pad name="2" x="1" y="0" drill="0.8" rot="R180"/>
+<pad name="1" x="-1" y="0" drill="0.8" shape="square" rot="R180"/>
+<text x="-4" y="3.5" size="1" layer="25" font="vector">&gt;NAME</text>
+</package>
+</packages>
+<symbols>
+<symbol name="2-PIN_CONN">
+<circle x="-0.762" y="2.54" radius="0.762" width="0.254" layer="94"/>
+<circle x="-0.762" y="-2.54" radius="0.762" width="0.254" layer="94"/>
+<text x="-5.08" y="7.62" size="1.778" layer="95" font="vector" align="top-left">&gt;NAME</text>
+<text x="-5.08" y="-7.62" size="1.778" layer="96" font="vector">&gt;VALUE</text>
+<pin name="1" x="5.08" y="2.54" visible="pin" length="middle" rot="R180"/>
+<pin name="2" x="5.08" y="-2.54" visible="pin" length="middle" rot="R180"/>
+<wire x1="-5.08" y1="5.08" x2="-5.08" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-5.08" x2="2.54" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-5.08" x2="2.54" y2="5.08" width="0.254" layer="94"/>
+<wire x1="2.54" y1="5.08" x2="-5.08" y2="5.08" width="0.254" layer="94"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="2-PIN_2MM-*" prefix="J">
+<gates>
+<gate name="G$1" symbol="2-PIN_CONN" x="0" y="0" swaplevel="1"/>
+</gates>
+<devices>
+<device name="H" package="2MM-2-H">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PINS" value="2"/>
+<attribute name="PIN_PITCH" value="2.0 mm"/>
+</technology>
+</technologies>
+</device>
+<device name="V" package="2MM-2-V">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PINS" value="2"/>
+<attribute name="PIN_PITCH" value="2.0 mm"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 <attribute name="TEAM" value="IGVC"/>
@@ -11446,6 +11578,11 @@ In this library you will find frames that can be used to help organize a schemat
 <part name="VCC_WALL" library="IGVC-Connector" deviceset="6T4AWGLUG" device=""/>
 <part name="VCC_COMP" library="IGVC-Connector" deviceset="6T4AWGLUG" device=""/>
 <part name="U$6" library="IGVC-Connector" deviceset="6T4AWGLUG" device=""/>
+<part name="Z1" library="IGVC-Discrete" deviceset="TLP2745" device=""/>
+<part name="P+4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
+<part name="GND10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="J1" library="RoboJackets-Connectors" deviceset="2-PIN_2MM-*" device="V"/>
 </parts>
 <sheets>
 <sheet>
@@ -11568,6 +11705,23 @@ In this library you will find frames that can be used to help organize a schemat
 <attribute name="NAME" x="162.56" y="22.86" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="149.86" y="22.86" size="1.778" layer="96" rot="R270"/>
 </instance>
+<instance part="Z1" gate="TLP2745" x="66.04" y="96.52" smashed="yes">
+<attribute name="NAME" x="55.88" y="104.14" size="1.778" layer="125"/>
+<attribute name="VALUE" x="55.88" y="86.36" size="1.778" layer="127"/>
+</instance>
+<instance part="P+4" gate="VCC" x="88.9" y="101.6" smashed="yes" rot="R270">
+<attribute name="VALUE" x="86.36" y="104.14" size="1.778" layer="96"/>
+</instance>
+<instance part="GND10" gate="1" x="88.9" y="91.44" smashed="yes" rot="R90">
+<attribute name="VALUE" x="91.44" y="88.9" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="GND11" gate="1" x="43.18" y="101.6" smashed="yes" rot="R270">
+<attribute name="VALUE" x="40.64" y="104.14" size="1.778" layer="96" rot="R270"/>
+</instance>
+<instance part="J1" gate="G$1" x="119.38" y="99.06" smashed="yes" rot="R180">
+<attribute name="NAME" x="124.46" y="91.44" size="1.778" layer="95" font="vector" rot="R180" align="top-left"/>
+<attribute name="VALUE" x="124.46" y="106.68" size="1.778" layer="96" font="vector" rot="R180"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -11622,6 +11776,16 @@ In this library you will find frames that can be used to help organize a schemat
 <wire x1="157.48" y1="43.18" x2="157.48" y2="48.26" width="0.1524" layer="91"/>
 <pinref part="VCC_COMP" gate="6T4AWGLUG" pin="J1"/>
 </segment>
+<segment>
+<pinref part="Z1" gate="TLP2745" pin="P$6"/>
+<pinref part="GND10" gate="1" pin="GND"/>
+<wire x1="81.28" y1="91.44" x2="86.36" y2="91.44" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND11" gate="1" pin="GND"/>
+<pinref part="Z1" gate="TLP2745" pin="P$3"/>
+<wire x1="45.72" y1="101.6" x2="50.8" y2="101.6" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="N$4" class="0">
 <segment>
@@ -11643,7 +11807,8 @@ In this library you will find frames that can be used to help organize a schemat
 <segment>
 <pinref part="P+2" gate="VCC" pin="VCC"/>
 <wire x1="20.32" y1="76.2" x2="35.56" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="76.2" x2="99.06" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="76.2" x2="38.1" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="76.2" x2="99.06" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="99.06" y1="76.2" x2="99.06" y2="71.12" width="0.1524" layer="91"/>
 <pinref part="U1" gate="A" pin="V1"/>
 <wire x1="99.06" y1="71.12" x2="99.06" y2="35.56" width="0.1524" layer="91"/>
@@ -11670,6 +11835,10 @@ In this library you will find frames that can be used to help organize a schemat
 <wire x1="7.62" y1="81.28" x2="7.62" y2="76.2" width="0.1524" layer="91"/>
 <junction x="7.62" y="76.2"/>
 <pinref part="VCC_WALL" gate="6T4AWGLUG" pin="J1"/>
+<pinref part="Z1" gate="TLP2745" pin="P$1"/>
+<wire x1="38.1" y1="76.2" x2="38.1" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="96.52" x2="50.8" y2="96.52" width="0.1524" layer="91"/>
+<junction x="38.1" y="76.2"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -11757,6 +11926,20 @@ In this library you will find frames that can be used to help organize a schemat
 <wire x1="20.32" y1="53.34" x2="22.86" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="20.32" y1="66.04" x2="20.32" y2="53.34" width="0.1524" layer="91"/>
 <junction x="20.32" y="53.34"/>
+</segment>
+</net>
+<net name="VCC" class="0">
+<segment>
+<pinref part="Z1" gate="TLP2745" pin="P$4"/>
+<pinref part="P+4" gate="VCC" pin="VCC"/>
+<wire x1="81.28" y1="101.6" x2="86.36" y2="101.6" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="Z1" gate="TLP2745" pin="P$5"/>
+<pinref part="J1" gate="G$1" pin="1"/>
+<wire x1="81.28" y1="96.52" x2="114.3" y2="96.52" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

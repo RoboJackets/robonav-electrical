@@ -4920,10 +4920,10 @@ design rules under a new name.</description>
 <element name="VCC_COMP" library="IGVC-Connector" package="6T4AWGLUG" value="6T4AWGLUG" x="84" y="35" smashed="yes" rot="R180"/>
 <element name="U$6" library="IGVC-Connector" package="6T4AWGLUG" value="6T4AWGLUG" x="84" y="20" smashed="yes" rot="R180"/>
 <element name="Z1" library="IGVC-Discrete" package="TLP2745" value="TLP2745" x="50" y="59" smashed="yes"/>
-<element name="J1" library="RoboJackets-Connectors" package="2MM-2-V" value="2-PIN_2MM-V" x="86" y="59" smashed="yes">
-<attribute name="NAME" x="82" y="62.5" size="1" layer="25" font="vector"/>
-<attribute name="PINS" value="2" x="86" y="59" size="1.778" layer="27" display="off"/>
-<attribute name="PIN_PITCH" value="2.0 mm" x="86" y="59" size="1.778" layer="27" display="off"/>
+<element name="J1" library="RoboJackets-Connectors" package="2MM-2-V" value="2-PIN_2MM-V" x="65" y="59" smashed="yes">
+<attribute name="NAME" x="61" y="62.5" size="1" layer="25" font="vector"/>
+<attribute name="PINS" value="2" x="65" y="59" size="1.778" layer="27" display="off"/>
+<attribute name="PIN_PITCH" value="2.0 mm" x="65" y="59" size="1.778" layer="27" display="off"/>
 </element>
 </elements>
 <signals>
@@ -5130,7 +5130,7 @@ design rules under a new name.</description>
 <signal name="N$2">
 <contactref element="Z1" pad="5"/>
 <contactref element="J1" pad="1"/>
-<wire x1="54.375" y1="59" x2="85" y2="59" width="0.254" layer="1"/>
+<wire x1="54.375" y1="59" x2="64" y2="59" width="0.254" layer="1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>

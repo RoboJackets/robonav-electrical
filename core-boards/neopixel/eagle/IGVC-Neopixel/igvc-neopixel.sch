@@ -8,34 +8,34 @@
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
-<layer number="2" name="Route2" color="16" fill="1" visible="yes" active="no"/>
-<layer number="3" name="Route3" color="17" fill="1" visible="yes" active="no"/>
-<layer number="4" name="Route4" color="18" fill="1" visible="yes" active="no"/>
-<layer number="5" name="Route5" color="19" fill="1" visible="yes" active="no"/>
-<layer number="6" name="Route6" color="25" fill="1" visible="yes" active="no"/>
-<layer number="7" name="Route7" color="26" fill="1" visible="yes" active="no"/>
-<layer number="8" name="Route8" color="27" fill="1" visible="yes" active="no"/>
-<layer number="9" name="Route9" color="28" fill="1" visible="yes" active="no"/>
-<layer number="10" name="Route10" color="29" fill="1" visible="yes" active="no"/>
-<layer number="11" name="Route11" color="30" fill="1" visible="yes" active="no"/>
-<layer number="12" name="Route12" color="20" fill="1" visible="yes" active="no"/>
-<layer number="13" name="Route13" color="21" fill="1" visible="yes" active="no"/>
-<layer number="14" name="Route14" color="22" fill="1" visible="yes" active="no"/>
-<layer number="15" name="Route15" color="23" fill="1" visible="yes" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
-<layer number="20" name="Dimension" color="24" fill="1" visible="yes" active="no"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="no"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="no"/>
+<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
+<layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
+<layer number="3" name="Route3" color="17" fill="1" visible="no" active="no"/>
+<layer number="4" name="Route4" color="18" fill="1" visible="no" active="no"/>
+<layer number="5" name="Route5" color="19" fill="1" visible="no" active="no"/>
+<layer number="6" name="Route6" color="25" fill="1" visible="no" active="no"/>
+<layer number="7" name="Route7" color="26" fill="1" visible="no" active="no"/>
+<layer number="8" name="Route8" color="27" fill="1" visible="no" active="no"/>
+<layer number="9" name="Route9" color="28" fill="1" visible="no" active="no"/>
+<layer number="10" name="Route10" color="29" fill="1" visible="no" active="no"/>
+<layer number="11" name="Route11" color="30" fill="1" visible="no" active="no"/>
+<layer number="12" name="Route12" color="20" fill="1" visible="no" active="no"/>
+<layer number="13" name="Route13" color="21" fill="1" visible="no" active="no"/>
+<layer number="14" name="Route14" color="22" fill="1" visible="no" active="no"/>
+<layer number="15" name="Route15" color="23" fill="1" visible="no" active="no"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
+<layer number="20" name="Dimension" color="24" fill="1" visible="no" active="no"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
@@ -44,8 +44,8 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
@@ -53,19 +53,19 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
-<layer number="50" name="dxf" color="12" fill="1" visible="yes" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
-<layer number="53" name="tGND_GNDA" color="7" fill="1" visible="yes" active="no"/>
-<layer number="54" name="bGND_GNDA" color="7" fill="1" visible="yes" active="no"/>
-<layer number="56" name="wert" color="7" fill="1" visible="yes" active="no"/>
-<layer number="57" name="tCAD" color="7" fill="1" visible="yes" active="no"/>
-<layer number="59" name="tCarbon" color="7" fill="1" visible="yes" active="no"/>
-<layer number="60" name="bCarbon" color="7" fill="1" visible="yes" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
+<layer number="50" name="dxf" color="12" fill="1" visible="no" active="no"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="53" name="tGND_GNDA" color="7" fill="1" visible="no" active="no"/>
+<layer number="54" name="bGND_GNDA" color="7" fill="1" visible="no" active="no"/>
+<layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
+<layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
+<layer number="59" name="tCarbon" color="7" fill="1" visible="no" active="no"/>
+<layer number="60" name="bCarbon" color="7" fill="1" visible="no" active="no"/>
 <layer number="88" name="SimResults" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="89" name="SimProbes" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
@@ -176,247 +176,6 @@
 </layers>
 <schematic xreflabel="%F%N/%S.%C%R" xrefpart="/%S.%C%R">
 <libraries>
-<library name="atmel">
-<packages>
-<package name="DIL28-3">
-<description>&lt;B&gt;Dual In Line&lt;/B&gt; 0.3 inch</description>
-<wire x1="-18.542" y1="-0.635" x2="-18.542" y2="-2.794" width="0.1524" layer="21"/>
-<wire x1="-18.542" y1="0.635" x2="-18.542" y2="-0.635" width="0.1524" layer="21" curve="-180"/>
-<wire x1="-18.542" y1="-2.794" x2="18.542" y2="-2.794" width="0.1524" layer="21"/>
-<wire x1="-18.542" y1="2.794" x2="-18.542" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="-18.542" y1="2.794" x2="18.542" y2="2.794" width="0.1524" layer="21"/>
-<wire x1="18.542" y1="2.794" x2="18.542" y2="-2.794" width="0.1524" layer="21"/>
-<pad name="1" x="-16.51" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
-<pad name="2" x="-13.97" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
-<pad name="3" x="-11.43" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
-<pad name="4" x="-8.89" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
-<pad name="5" x="-6.35" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
-<pad name="6" x="-3.81" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
-<pad name="7" x="-1.27" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
-<pad name="8" x="1.27" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
-<pad name="9" x="3.81" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
-<pad name="10" x="6.35" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
-<pad name="11" x="8.89" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
-<pad name="12" x="11.43" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
-<pad name="13" x="13.97" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
-<pad name="14" x="16.51" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
-<pad name="15" x="16.51" y="3.81" drill="0.8128" shape="long" rot="R90"/>
-<pad name="16" x="13.97" y="3.81" drill="0.8128" shape="long" rot="R90"/>
-<pad name="17" x="11.43" y="3.81" drill="0.8128" shape="long" rot="R90"/>
-<pad name="18" x="8.89" y="3.81" drill="0.8128" shape="long" rot="R90"/>
-<pad name="19" x="6.35" y="3.81" drill="0.8128" shape="long" rot="R90"/>
-<pad name="20" x="3.81" y="3.81" drill="0.8128" shape="long" rot="R90"/>
-<pad name="21" x="1.27" y="3.81" drill="0.8128" shape="long" rot="R90"/>
-<pad name="22" x="-1.27" y="3.81" drill="0.8128" shape="long" rot="R90"/>
-<pad name="23" x="-3.81" y="3.81" drill="0.8128" shape="long" rot="R90"/>
-<pad name="24" x="-6.35" y="3.81" drill="0.8128" shape="long" rot="R90"/>
-<pad name="25" x="-8.89" y="3.81" drill="0.8128" shape="long" rot="R90"/>
-<pad name="26" x="-11.43" y="3.81" drill="0.8128" shape="long" rot="R90"/>
-<pad name="27" x="-13.97" y="3.81" drill="0.8128" shape="long" rot="R90"/>
-<pad name="28" x="-16.51" y="3.81" drill="0.8128" shape="long" rot="R90"/>
-<text x="-19.2024" y="-2.54" size="1.778" layer="25" ratio="10" rot="R90">&gt;NAME</text>
-<text x="-15.875" y="-0.635" size="1.778" layer="27" ratio="10">&gt;VALUE</text>
-</package>
-<package name="TQFP32-08">
-<description>&lt;B&gt;Thin Plasic Quad Flat Package&lt;/B&gt; Grid 0.8 mm</description>
-<wire x1="3.505" y1="3.505" x2="3.505" y2="-3.505" width="0.1524" layer="21"/>
-<wire x1="3.505" y1="-3.505" x2="-3.505" y2="-3.505" width="0.1524" layer="21"/>
-<wire x1="-3.505" y1="-3.505" x2="-3.505" y2="3.15" width="0.1524" layer="21"/>
-<wire x1="-3.15" y1="3.505" x2="3.505" y2="3.505" width="0.1524" layer="21"/>
-<wire x1="-3.15" y1="3.505" x2="-3.505" y2="3.15" width="0.1524" layer="21"/>
-<circle x="-2.7432" y="2.7432" radius="0.3592" width="0.1524" layer="21"/>
-<smd name="1" x="-4.2926" y="2.8" dx="1.27" dy="0.5588" layer="1"/>
-<smd name="2" x="-4.2926" y="2" dx="1.27" dy="0.5588" layer="1"/>
-<smd name="3" x="-4.2926" y="1.2" dx="1.27" dy="0.5588" layer="1"/>
-<smd name="4" x="-4.2926" y="0.4" dx="1.27" dy="0.5588" layer="1"/>
-<smd name="5" x="-4.2926" y="-0.4" dx="1.27" dy="0.5588" layer="1"/>
-<smd name="6" x="-4.2926" y="-1.2" dx="1.27" dy="0.5588" layer="1"/>
-<smd name="7" x="-4.2926" y="-2" dx="1.27" dy="0.5588" layer="1"/>
-<smd name="8" x="-4.2926" y="-2.8" dx="1.27" dy="0.5588" layer="1"/>
-<smd name="9" x="-2.8" y="-4.2926" dx="0.5588" dy="1.27" layer="1"/>
-<smd name="10" x="-2" y="-4.2926" dx="0.5588" dy="1.27" layer="1"/>
-<smd name="11" x="-1.2" y="-4.2926" dx="0.5588" dy="1.27" layer="1"/>
-<smd name="12" x="-0.4" y="-4.2926" dx="0.5588" dy="1.27" layer="1"/>
-<smd name="13" x="0.4" y="-4.2926" dx="0.5588" dy="1.27" layer="1"/>
-<smd name="14" x="1.2" y="-4.2926" dx="0.5588" dy="1.27" layer="1"/>
-<smd name="15" x="2" y="-4.2926" dx="0.5588" dy="1.27" layer="1"/>
-<smd name="16" x="2.8" y="-4.2926" dx="0.5588" dy="1.27" layer="1"/>
-<smd name="17" x="4.2926" y="-2.8" dx="1.27" dy="0.5588" layer="1"/>
-<smd name="18" x="4.2926" y="-2" dx="1.27" dy="0.5588" layer="1"/>
-<smd name="19" x="4.2926" y="-1.2" dx="1.27" dy="0.5588" layer="1"/>
-<smd name="20" x="4.2926" y="-0.4" dx="1.27" dy="0.5588" layer="1"/>
-<smd name="21" x="4.2926" y="0.4" dx="1.27" dy="0.5588" layer="1"/>
-<smd name="22" x="4.2926" y="1.2" dx="1.27" dy="0.5588" layer="1"/>
-<smd name="23" x="4.2926" y="2" dx="1.27" dy="0.5588" layer="1"/>
-<smd name="24" x="4.2926" y="2.8" dx="1.27" dy="0.5588" layer="1"/>
-<smd name="25" x="2.8" y="4.2926" dx="0.5588" dy="1.27" layer="1"/>
-<smd name="26" x="2" y="4.2926" dx="0.5588" dy="1.27" layer="1"/>
-<smd name="27" x="1.2" y="4.2926" dx="0.5588" dy="1.27" layer="1"/>
-<smd name="28" x="0.4" y="4.2926" dx="0.5588" dy="1.27" layer="1"/>
-<smd name="29" x="-0.4" y="4.2926" dx="0.5588" dy="1.27" layer="1"/>
-<smd name="30" x="-1.2" y="4.2926" dx="0.5588" dy="1.27" layer="1"/>
-<smd name="31" x="-2" y="4.2926" dx="0.5588" dy="1.27" layer="1"/>
-<smd name="32" x="-2.8" y="4.2926" dx="0.5588" dy="1.27" layer="1"/>
-<text x="-2.7686" y="5.08" size="0.8128" layer="25">&gt;NAME</text>
-<text x="-3.0226" y="-1.27" size="0.8128" layer="27">&gt;VALUE</text>
-<rectangle x1="-4.5466" y1="2.5714" x2="-3.556" y2="3.0286" layer="51"/>
-<rectangle x1="-4.5466" y1="1.7714" x2="-3.556" y2="2.2286" layer="51"/>
-<rectangle x1="-4.5466" y1="0.9714" x2="-3.556" y2="1.4286" layer="51"/>
-<rectangle x1="-4.5466" y1="0.1714" x2="-3.556" y2="0.6286" layer="51"/>
-<rectangle x1="-4.5466" y1="-0.6286" x2="-3.556" y2="-0.1714" layer="51"/>
-<rectangle x1="-4.5466" y1="-1.4286" x2="-3.556" y2="-0.9714" layer="51"/>
-<rectangle x1="-4.5466" y1="-2.2286" x2="-3.556" y2="-1.7714" layer="51"/>
-<rectangle x1="-4.5466" y1="-3.0286" x2="-3.556" y2="-2.5714" layer="51"/>
-<rectangle x1="-3.0286" y1="-4.5466" x2="-2.5714" y2="-3.556" layer="51"/>
-<rectangle x1="-2.2286" y1="-4.5466" x2="-1.7714" y2="-3.556" layer="51"/>
-<rectangle x1="-1.4286" y1="-4.5466" x2="-0.9714" y2="-3.556" layer="51"/>
-<rectangle x1="-0.6286" y1="-4.5466" x2="-0.1714" y2="-3.556" layer="51"/>
-<rectangle x1="0.1714" y1="-4.5466" x2="0.6286" y2="-3.556" layer="51"/>
-<rectangle x1="0.9714" y1="-4.5466" x2="1.4286" y2="-3.556" layer="51"/>
-<rectangle x1="1.7714" y1="-4.5466" x2="2.2286" y2="-3.556" layer="51"/>
-<rectangle x1="2.5714" y1="-4.5466" x2="3.0286" y2="-3.556" layer="51"/>
-<rectangle x1="3.556" y1="-3.0286" x2="4.5466" y2="-2.5714" layer="51"/>
-<rectangle x1="3.556" y1="-2.2286" x2="4.5466" y2="-1.7714" layer="51"/>
-<rectangle x1="3.556" y1="-1.4286" x2="4.5466" y2="-0.9714" layer="51"/>
-<rectangle x1="3.556" y1="-0.6286" x2="4.5466" y2="-0.1714" layer="51"/>
-<rectangle x1="3.556" y1="0.1714" x2="4.5466" y2="0.6286" layer="51"/>
-<rectangle x1="3.556" y1="0.9714" x2="4.5466" y2="1.4286" layer="51"/>
-<rectangle x1="3.556" y1="1.7714" x2="4.5466" y2="2.2286" layer="51"/>
-<rectangle x1="3.556" y1="2.5714" x2="4.5466" y2="3.0286" layer="51"/>
-<rectangle x1="2.5714" y1="3.556" x2="3.0286" y2="4.5466" layer="51"/>
-<rectangle x1="1.7714" y1="3.556" x2="2.2286" y2="4.5466" layer="51"/>
-<rectangle x1="0.9714" y1="3.556" x2="1.4286" y2="4.5466" layer="51"/>
-<rectangle x1="0.1714" y1="3.556" x2="0.6286" y2="4.5466" layer="51"/>
-<rectangle x1="-0.6286" y1="3.556" x2="-0.1714" y2="4.5466" layer="51"/>
-<rectangle x1="-1.4286" y1="3.556" x2="-0.9714" y2="4.5466" layer="51"/>
-<rectangle x1="-2.2286" y1="3.556" x2="-1.7714" y2="4.5466" layer="51"/>
-<rectangle x1="-3.0286" y1="3.556" x2="-2.5714" y2="4.5466" layer="51"/>
-</package>
-</packages>
-<symbols>
-<symbol name="20-I/O-2">
-<wire x1="-15.24" y1="27.94" x2="12.7" y2="27.94" width="0.254" layer="94"/>
-<wire x1="12.7" y1="27.94" x2="12.7" y2="-30.48" width="0.254" layer="94"/>
-<wire x1="12.7" y1="-30.48" x2="-15.24" y2="-30.48" width="0.254" layer="94"/>
-<wire x1="-15.24" y1="-30.48" x2="-15.24" y2="27.94" width="0.254" layer="94"/>
-<text x="-15.24" y="-33.02" size="1.778" layer="96">&gt;VALUE</text>
-<text x="-15.24" y="28.702" size="1.778" layer="95">&gt;NAME</text>
-<pin name="(ADC5)PC5" x="17.78" y="7.62" length="middle" rot="R180"/>
-<pin name="(ADC4)PC4" x="17.78" y="5.08" length="middle" rot="R180"/>
-<pin name="(ADC3)PC3" x="17.78" y="2.54" length="middle" rot="R180"/>
-<pin name="(ADC2)PC2" x="17.78" y="0" length="middle" rot="R180"/>
-<pin name="(ADC1)PC1" x="17.78" y="-2.54" length="middle" rot="R180"/>
-<pin name="(ADC0)PC0)" x="17.78" y="-5.08" length="middle" rot="R180"/>
-<pin name="(SCK)PB5" x="17.78" y="25.4" length="middle" rot="R180"/>
-<pin name="(MISO)PB4" x="17.78" y="22.86" length="middle" rot="R180"/>
-<pin name="(MOSI)PB3" x="17.78" y="20.32" length="middle" rot="R180"/>
-<pin name="(SS)PB2" x="17.78" y="17.78" length="middle" rot="R180"/>
-<pin name="(OC1)PB1" x="17.78" y="15.24" length="middle" rot="R180"/>
-<pin name="(ICP)PB0" x="17.78" y="12.7" length="middle" rot="R180"/>
-<pin name="(AIN1)PD7" x="17.78" y="-10.16" length="middle" rot="R180"/>
-<pin name="(AIN0)PD6" x="17.78" y="-12.7" length="middle" rot="R180"/>
-<pin name="(T1)PD5" x="17.78" y="-15.24" length="middle" rot="R180"/>
-<pin name="(T0)PD4" x="17.78" y="-17.78" length="middle" rot="R180"/>
-<pin name="(INT1)PD3" x="17.78" y="-20.32" length="middle" rot="R180"/>
-<pin name="(INT0)PD2" x="17.78" y="-22.86" length="middle" rot="R180"/>
-<pin name="(TXD)PD1" x="17.78" y="-25.4" length="middle" rot="R180"/>
-<pin name="(RXD)PD0" x="17.78" y="-27.94" length="middle" rot="R180"/>
-<pin name="GND" x="-20.32" y="-5.08" length="middle" direction="pwr"/>
-<pin name="VCC" x="-20.32" y="-2.54" length="middle" direction="pwr"/>
-<pin name="AVCC" x="-20.32" y="5.08" length="middle" direction="pwr"/>
-<pin name="AREF" x="-20.32" y="7.62" length="middle" direction="pas"/>
-<pin name="XTAL1" x="-20.32" y="12.7" length="middle"/>
-<pin name="XTAL2" x="-20.32" y="17.78" length="middle"/>
-<pin name="RESET" x="-20.32" y="25.4" length="middle" direction="in" function="dot"/>
-<pin name="AGND" x="-20.32" y="2.54" length="middle" direction="pwr"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="AT90S4433" prefix="IC">
-<description>&lt;b&gt;MICROCONTROLLER&lt;/b&gt;&lt;p&gt;
-4 Kbytes FLASH&lt;p&gt;
-128 bytes SRAM&lt;p&gt;
-256 bytes EEPROM&lt;p&gt;
-UART&lt;p&gt;
-6-channel 10 bit ADC</description>
-<gates>
-<gate name="G$1" symbol="20-I/O-2" x="0" y="0"/>
-</gates>
-<devices>
-<device name="P" package="DIL28-3">
-<connects>
-<connect gate="G$1" pin="(ADC0)PC0)" pad="23"/>
-<connect gate="G$1" pin="(ADC1)PC1" pad="24"/>
-<connect gate="G$1" pin="(ADC2)PC2" pad="25"/>
-<connect gate="G$1" pin="(ADC3)PC3" pad="26"/>
-<connect gate="G$1" pin="(ADC4)PC4" pad="27"/>
-<connect gate="G$1" pin="(ADC5)PC5" pad="28"/>
-<connect gate="G$1" pin="(AIN0)PD6" pad="12"/>
-<connect gate="G$1" pin="(AIN1)PD7" pad="13"/>
-<connect gate="G$1" pin="(ICP)PB0" pad="14"/>
-<connect gate="G$1" pin="(INT0)PD2" pad="4"/>
-<connect gate="G$1" pin="(INT1)PD3" pad="5"/>
-<connect gate="G$1" pin="(MISO)PB4" pad="18"/>
-<connect gate="G$1" pin="(MOSI)PB3" pad="17"/>
-<connect gate="G$1" pin="(OC1)PB1" pad="15"/>
-<connect gate="G$1" pin="(RXD)PD0" pad="2"/>
-<connect gate="G$1" pin="(SCK)PB5" pad="19"/>
-<connect gate="G$1" pin="(SS)PB2" pad="16"/>
-<connect gate="G$1" pin="(T0)PD4" pad="6"/>
-<connect gate="G$1" pin="(T1)PD5" pad="11"/>
-<connect gate="G$1" pin="(TXD)PD1" pad="3"/>
-<connect gate="G$1" pin="AGND" pad="22"/>
-<connect gate="G$1" pin="AREF" pad="21"/>
-<connect gate="G$1" pin="AVCC" pad="20"/>
-<connect gate="G$1" pin="GND" pad="8"/>
-<connect gate="G$1" pin="RESET" pad="1"/>
-<connect gate="G$1" pin="VCC" pad="7"/>
-<connect gate="G$1" pin="XTAL1" pad="9"/>
-<connect gate="G$1" pin="XTAL2" pad="10"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="A" package="TQFP32-08">
-<connects>
-<connect gate="G$1" pin="(ADC0)PC0)" pad="23"/>
-<connect gate="G$1" pin="(ADC1)PC1" pad="24"/>
-<connect gate="G$1" pin="(ADC2)PC2" pad="25"/>
-<connect gate="G$1" pin="(ADC3)PC3" pad="26"/>
-<connect gate="G$1" pin="(ADC4)PC4" pad="27"/>
-<connect gate="G$1" pin="(ADC5)PC5" pad="28"/>
-<connect gate="G$1" pin="(AIN0)PD6" pad="10"/>
-<connect gate="G$1" pin="(AIN1)PD7" pad="11"/>
-<connect gate="G$1" pin="(ICP)PB0" pad="12"/>
-<connect gate="G$1" pin="(INT0)PD2" pad="32"/>
-<connect gate="G$1" pin="(INT1)PD3" pad="1"/>
-<connect gate="G$1" pin="(MISO)PB4" pad="16"/>
-<connect gate="G$1" pin="(MOSI)PB3" pad="15"/>
-<connect gate="G$1" pin="(OC1)PB1" pad="13"/>
-<connect gate="G$1" pin="(RXD)PD0" pad="30"/>
-<connect gate="G$1" pin="(SCK)PB5" pad="17"/>
-<connect gate="G$1" pin="(SS)PB2" pad="14"/>
-<connect gate="G$1" pin="(T0)PD4" pad="2"/>
-<connect gate="G$1" pin="(T1)PD5" pad="9"/>
-<connect gate="G$1" pin="(TXD)PD1" pad="31"/>
-<connect gate="G$1" pin="AGND" pad="21"/>
-<connect gate="G$1" pin="AREF" pad="20"/>
-<connect gate="G$1" pin="AVCC" pad="18"/>
-<connect gate="G$1" pin="GND" pad="5"/>
-<connect gate="G$1" pin="RESET" pad="29"/>
-<connect gate="G$1" pin="VCC" pad="4"/>
-<connect gate="G$1" pin="XTAL1" pad="7"/>
-<connect gate="G$1" pin="XTAL2" pad="8"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="pinhead">
 <packages>
 <package name="2X03">
@@ -50839,6 +50598,338 @@ In this library you will find logos and images specific to RoboJackets. The part
 </deviceset>
 </devicesets>
 </library>
+<library name="atmel" urn="urn:adsk.eagle:library:105">
+<description>&lt;b&gt;AVR Devices&lt;/b&gt;&lt;p&gt;
+Configurable logic, microcontrollers, nonvolatile memories&lt;p&gt;
+Based on the following sources:&lt;p&gt;
+&lt;ul&gt;
+&lt;li&gt;www.atmel.com
+&lt;li&gt;CD-ROM : Configurable Logic Microcontroller Nonvolatile Memory
+&lt;li&gt;CadSoft download site, www.cadsoft.de or www.cadsoftusa.com , file at90smcu_v400.zip
+&lt;li&gt;avr.lbr
+&lt;/ul&gt;
+&lt;author&gt;Revised by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="MLF32" urn="urn:adsk.eagle:footprint:4210/1" library_version="5">
+<description>&lt;b&gt;32M1-A&lt;/b&gt; Micro Lead Frame package (MLF)</description>
+<wire x1="-2.35" y1="2.05" x2="-2.05" y2="2.35" width="0.254" layer="21"/>
+<wire x1="-2.05" y1="2.35" x2="2.05" y2="2.35" width="0.254" layer="51"/>
+<wire x1="2.05" y1="2.35" x2="2.35" y2="2.05" width="0.254" layer="21"/>
+<wire x1="2.35" y1="2.05" x2="2.35" y2="-2.05" width="0.254" layer="51"/>
+<wire x1="2.35" y1="-2.05" x2="2.05" y2="-2.35" width="0.254" layer="21"/>
+<wire x1="2.05" y1="-2.35" x2="-2.05" y2="-2.35" width="0.254" layer="51"/>
+<wire x1="-2.05" y1="-2.35" x2="-2.35" y2="-2.05" width="0.254" layer="21"/>
+<wire x1="-2.35" y1="-2.05" x2="-2.35" y2="2.05" width="0.254" layer="51"/>
+<circle x="-1.55" y="1.55" radius="0.15" width="0.254" layer="21"/>
+<smd name="1" x="-2.35" y="1.75" dx="0.7" dy="0.3" layer="1" roundness="50"/>
+<smd name="2" x="-2.35" y="1.25" dx="0.7" dy="0.3" layer="1" roundness="50"/>
+<smd name="3" x="-2.35" y="0.75" dx="0.7" dy="0.3" layer="1" roundness="50"/>
+<smd name="4" x="-2.35" y="0.25" dx="0.7" dy="0.3" layer="1" roundness="50"/>
+<smd name="5" x="-2.35" y="-0.25" dx="0.7" dy="0.3" layer="1" roundness="50"/>
+<smd name="6" x="-2.35" y="-0.75" dx="0.7" dy="0.3" layer="1" roundness="50"/>
+<smd name="7" x="-2.35" y="-1.25" dx="0.7" dy="0.3" layer="1" roundness="50"/>
+<smd name="8" x="-2.35" y="-1.75" dx="0.7" dy="0.3" layer="1" roundness="50"/>
+<smd name="9" x="-1.75" y="-2.35" dx="0.3" dy="0.7" layer="1" roundness="50"/>
+<smd name="10" x="-1.25" y="-2.35" dx="0.3" dy="0.7" layer="1" roundness="50"/>
+<smd name="11" x="-0.75" y="-2.35" dx="0.3" dy="0.7" layer="1" roundness="50"/>
+<smd name="12" x="-0.25" y="-2.35" dx="0.3" dy="0.7" layer="1" roundness="50"/>
+<smd name="13" x="0.25" y="-2.35" dx="0.3" dy="0.7" layer="1" roundness="50"/>
+<smd name="14" x="0.75" y="-2.35" dx="0.3" dy="0.7" layer="1" roundness="50"/>
+<smd name="15" x="1.25" y="-2.35" dx="0.3" dy="0.7" layer="1" roundness="50"/>
+<smd name="16" x="1.75" y="-2.35" dx="0.3" dy="0.7" layer="1" roundness="50"/>
+<smd name="17" x="2.35" y="-1.75" dx="0.7" dy="0.3" layer="1" roundness="50"/>
+<smd name="18" x="2.35" y="-1.25" dx="0.7" dy="0.3" layer="1" roundness="50"/>
+<smd name="19" x="2.35" y="-0.75" dx="0.7" dy="0.3" layer="1" roundness="50"/>
+<smd name="20" x="2.35" y="-0.25" dx="0.7" dy="0.3" layer="1" roundness="50"/>
+<smd name="21" x="2.35" y="0.25" dx="0.7" dy="0.3" layer="1" roundness="50"/>
+<smd name="22" x="2.35" y="0.75" dx="0.7" dy="0.3" layer="1" roundness="50"/>
+<smd name="23" x="2.35" y="1.25" dx="0.7" dy="0.3" layer="1" roundness="50"/>
+<smd name="24" x="2.35" y="1.75" dx="0.7" dy="0.3" layer="1" roundness="50"/>
+<smd name="25" x="1.75" y="2.35" dx="0.3" dy="0.7" layer="1" roundness="50"/>
+<smd name="26" x="1.25" y="2.35" dx="0.3" dy="0.7" layer="1" roundness="50"/>
+<smd name="27" x="0.75" y="2.35" dx="0.3" dy="0.7" layer="1" roundness="50"/>
+<smd name="28" x="0.25" y="2.35" dx="0.3" dy="0.7" layer="1" roundness="50"/>
+<smd name="29" x="-0.25" y="2.35" dx="0.3" dy="0.7" layer="1" roundness="50"/>
+<smd name="30" x="-0.75" y="2.35" dx="0.3" dy="0.7" layer="1" roundness="50"/>
+<smd name="31" x="-1.25" y="2.35" dx="0.3" dy="0.7" layer="1" roundness="50"/>
+<smd name="32" x="-1.75" y="2.35" dx="0.3" dy="0.7" layer="1" roundness="50"/>
+<text x="-2.54" y="3.175" size="1.27" layer="25">&gt;NAME</text>
+<text x="-2.54" y="-4.445" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-2.5" y1="1.6" x2="-2.05" y2="1.9" layer="51"/>
+<rectangle x1="-2.5" y1="1.1" x2="-2.05" y2="1.4" layer="51"/>
+<rectangle x1="-2.5" y1="0.6" x2="-2.05" y2="0.9" layer="51"/>
+<rectangle x1="-2.5" y1="0.1" x2="-2.05" y2="0.4" layer="51"/>
+<rectangle x1="-2.5" y1="-0.4" x2="-2.05" y2="-0.1" layer="51"/>
+<rectangle x1="-2.5" y1="-0.9" x2="-2.05" y2="-0.6" layer="51"/>
+<rectangle x1="-2.5" y1="-1.4" x2="-2.05" y2="-1.1" layer="51"/>
+<rectangle x1="-2.5" y1="-1.9" x2="-2.05" y2="-1.6" layer="51"/>
+<rectangle x1="-1.9" y1="-2.5" x2="-1.6" y2="-2.05" layer="51"/>
+<rectangle x1="-1.4" y1="-2.5" x2="-1.1" y2="-2.05" layer="51"/>
+<rectangle x1="-0.9" y1="-2.5" x2="-0.6" y2="-2.05" layer="51"/>
+<rectangle x1="-0.4" y1="-2.5" x2="-0.1" y2="-2.05" layer="51"/>
+<rectangle x1="0.1" y1="-2.5" x2="0.4" y2="-2.05" layer="51"/>
+<rectangle x1="0.6" y1="-2.5" x2="0.9" y2="-2.05" layer="51"/>
+<rectangle x1="1.1" y1="-2.5" x2="1.4" y2="-2.05" layer="51"/>
+<rectangle x1="1.6" y1="-2.5" x2="1.9" y2="-2.05" layer="51"/>
+<rectangle x1="2.05" y1="-1.9" x2="2.5" y2="-1.6" layer="51"/>
+<rectangle x1="2.05" y1="-1.4" x2="2.5" y2="-1.1" layer="51"/>
+<rectangle x1="2.05" y1="-0.9" x2="2.5" y2="-0.6" layer="51"/>
+<rectangle x1="2.05" y1="-0.4" x2="2.5" y2="-0.1" layer="51"/>
+<rectangle x1="2.05" y1="0.1" x2="2.5" y2="0.4" layer="51"/>
+<rectangle x1="2.05" y1="0.6" x2="2.5" y2="0.9" layer="51"/>
+<rectangle x1="2.05" y1="1.1" x2="2.5" y2="1.4" layer="51"/>
+<rectangle x1="2.05" y1="1.6" x2="2.5" y2="1.9" layer="51"/>
+<rectangle x1="1.6" y1="2.05" x2="1.9" y2="2.5" layer="51"/>
+<rectangle x1="1.1" y1="2.05" x2="1.4" y2="2.5" layer="51"/>
+<rectangle x1="0.6" y1="2.05" x2="0.9" y2="2.5" layer="51"/>
+<rectangle x1="0.1" y1="2.05" x2="0.4" y2="2.5" layer="51"/>
+<rectangle x1="-0.4" y1="2.05" x2="-0.1" y2="2.5" layer="51"/>
+<rectangle x1="-0.9" y1="2.05" x2="-0.6" y2="2.5" layer="51"/>
+<rectangle x1="-1.4" y1="2.05" x2="-1.1" y2="2.5" layer="51"/>
+<rectangle x1="-1.9" y1="2.05" x2="-1.6" y2="2.5" layer="51"/>
+</package>
+<package name="TQFP32-08" urn="urn:adsk.eagle:footprint:4160/1" library_version="5">
+<description>&lt;B&gt;Thin Plasic Quad Flat Package&lt;/B&gt; Grid 0.8 mm</description>
+<wire x1="3.505" y1="3.505" x2="3.505" y2="-3.505" width="0.1524" layer="21"/>
+<wire x1="3.505" y1="-3.505" x2="-3.505" y2="-3.505" width="0.1524" layer="21"/>
+<wire x1="-3.505" y1="-3.505" x2="-3.505" y2="3.15" width="0.1524" layer="21"/>
+<wire x1="-3.15" y1="3.505" x2="3.505" y2="3.505" width="0.1524" layer="21"/>
+<wire x1="-3.15" y1="3.505" x2="-3.505" y2="3.15" width="0.1524" layer="21"/>
+<circle x="-2.7432" y="2.7432" radius="0.3592" width="0.1524" layer="21"/>
+<smd name="1" x="-4.2926" y="2.8" dx="1.27" dy="0.5588" layer="1"/>
+<smd name="2" x="-4.2926" y="2" dx="1.27" dy="0.5588" layer="1"/>
+<smd name="3" x="-4.2926" y="1.2" dx="1.27" dy="0.5588" layer="1"/>
+<smd name="4" x="-4.2926" y="0.4" dx="1.27" dy="0.5588" layer="1"/>
+<smd name="5" x="-4.2926" y="-0.4" dx="1.27" dy="0.5588" layer="1"/>
+<smd name="6" x="-4.2926" y="-1.2" dx="1.27" dy="0.5588" layer="1"/>
+<smd name="7" x="-4.2926" y="-2" dx="1.27" dy="0.5588" layer="1"/>
+<smd name="8" x="-4.2926" y="-2.8" dx="1.27" dy="0.5588" layer="1"/>
+<smd name="9" x="-2.8" y="-4.2926" dx="0.5588" dy="1.27" layer="1"/>
+<smd name="10" x="-2" y="-4.2926" dx="0.5588" dy="1.27" layer="1"/>
+<smd name="11" x="-1.2" y="-4.2926" dx="0.5588" dy="1.27" layer="1"/>
+<smd name="12" x="-0.4" y="-4.2926" dx="0.5588" dy="1.27" layer="1"/>
+<smd name="13" x="0.4" y="-4.2926" dx="0.5588" dy="1.27" layer="1"/>
+<smd name="14" x="1.2" y="-4.2926" dx="0.5588" dy="1.27" layer="1"/>
+<smd name="15" x="2" y="-4.2926" dx="0.5588" dy="1.27" layer="1"/>
+<smd name="16" x="2.8" y="-4.2926" dx="0.5588" dy="1.27" layer="1"/>
+<smd name="17" x="4.2926" y="-2.8" dx="1.27" dy="0.5588" layer="1"/>
+<smd name="18" x="4.2926" y="-2" dx="1.27" dy="0.5588" layer="1"/>
+<smd name="19" x="4.2926" y="-1.2" dx="1.27" dy="0.5588" layer="1"/>
+<smd name="20" x="4.2926" y="-0.4" dx="1.27" dy="0.5588" layer="1"/>
+<smd name="21" x="4.2926" y="0.4" dx="1.27" dy="0.5588" layer="1"/>
+<smd name="22" x="4.2926" y="1.2" dx="1.27" dy="0.5588" layer="1"/>
+<smd name="23" x="4.2926" y="2" dx="1.27" dy="0.5588" layer="1"/>
+<smd name="24" x="4.2926" y="2.8" dx="1.27" dy="0.5588" layer="1"/>
+<smd name="25" x="2.8" y="4.2926" dx="0.5588" dy="1.27" layer="1"/>
+<smd name="26" x="2" y="4.2926" dx="0.5588" dy="1.27" layer="1"/>
+<smd name="27" x="1.2" y="4.2926" dx="0.5588" dy="1.27" layer="1"/>
+<smd name="28" x="0.4" y="4.2926" dx="0.5588" dy="1.27" layer="1"/>
+<smd name="29" x="-0.4" y="4.2926" dx="0.5588" dy="1.27" layer="1"/>
+<smd name="30" x="-1.2" y="4.2926" dx="0.5588" dy="1.27" layer="1"/>
+<smd name="31" x="-2" y="4.2926" dx="0.5588" dy="1.27" layer="1"/>
+<smd name="32" x="-2.8" y="4.2926" dx="0.5588" dy="1.27" layer="1"/>
+<text x="-2.7686" y="5.08" size="0.8128" layer="25">&gt;NAME</text>
+<text x="-3.0226" y="-1.27" size="0.8128" layer="27">&gt;VALUE</text>
+<rectangle x1="-4.5466" y1="2.5714" x2="-3.556" y2="3.0286" layer="51"/>
+<rectangle x1="-4.5466" y1="1.7714" x2="-3.556" y2="2.2286" layer="51"/>
+<rectangle x1="-4.5466" y1="0.9714" x2="-3.556" y2="1.4286" layer="51"/>
+<rectangle x1="-4.5466" y1="0.1714" x2="-3.556" y2="0.6286" layer="51"/>
+<rectangle x1="-4.5466" y1="-0.6286" x2="-3.556" y2="-0.1714" layer="51"/>
+<rectangle x1="-4.5466" y1="-1.4286" x2="-3.556" y2="-0.9714" layer="51"/>
+<rectangle x1="-4.5466" y1="-2.2286" x2="-3.556" y2="-1.7714" layer="51"/>
+<rectangle x1="-4.5466" y1="-3.0286" x2="-3.556" y2="-2.5714" layer="51"/>
+<rectangle x1="-3.0286" y1="-4.5466" x2="-2.5714" y2="-3.556" layer="51"/>
+<rectangle x1="-2.2286" y1="-4.5466" x2="-1.7714" y2="-3.556" layer="51"/>
+<rectangle x1="-1.4286" y1="-4.5466" x2="-0.9714" y2="-3.556" layer="51"/>
+<rectangle x1="-0.6286" y1="-4.5466" x2="-0.1714" y2="-3.556" layer="51"/>
+<rectangle x1="0.1714" y1="-4.5466" x2="0.6286" y2="-3.556" layer="51"/>
+<rectangle x1="0.9714" y1="-4.5466" x2="1.4286" y2="-3.556" layer="51"/>
+<rectangle x1="1.7714" y1="-4.5466" x2="2.2286" y2="-3.556" layer="51"/>
+<rectangle x1="2.5714" y1="-4.5466" x2="3.0286" y2="-3.556" layer="51"/>
+<rectangle x1="3.556" y1="-3.0286" x2="4.5466" y2="-2.5714" layer="51"/>
+<rectangle x1="3.556" y1="-2.2286" x2="4.5466" y2="-1.7714" layer="51"/>
+<rectangle x1="3.556" y1="-1.4286" x2="4.5466" y2="-0.9714" layer="51"/>
+<rectangle x1="3.556" y1="-0.6286" x2="4.5466" y2="-0.1714" layer="51"/>
+<rectangle x1="3.556" y1="0.1714" x2="4.5466" y2="0.6286" layer="51"/>
+<rectangle x1="3.556" y1="0.9714" x2="4.5466" y2="1.4286" layer="51"/>
+<rectangle x1="3.556" y1="1.7714" x2="4.5466" y2="2.2286" layer="51"/>
+<rectangle x1="3.556" y1="2.5714" x2="4.5466" y2="3.0286" layer="51"/>
+<rectangle x1="2.5714" y1="3.556" x2="3.0286" y2="4.5466" layer="51"/>
+<rectangle x1="1.7714" y1="3.556" x2="2.2286" y2="4.5466" layer="51"/>
+<rectangle x1="0.9714" y1="3.556" x2="1.4286" y2="4.5466" layer="51"/>
+<rectangle x1="0.1714" y1="3.556" x2="0.6286" y2="4.5466" layer="51"/>
+<rectangle x1="-0.6286" y1="3.556" x2="-0.1714" y2="4.5466" layer="51"/>
+<rectangle x1="-1.4286" y1="3.556" x2="-0.9714" y2="4.5466" layer="51"/>
+<rectangle x1="-2.2286" y1="3.556" x2="-1.7714" y2="4.5466" layer="51"/>
+<rectangle x1="-3.0286" y1="3.556" x2="-2.5714" y2="4.5466" layer="51"/>
+</package>
+</packages>
+<packages3d>
+<package3d name="MLF32" urn="urn:adsk.eagle:package:4334/3" type="model" library_version="5">
+<description>32M1-A Micro Lead Frame package (MLF)</description>
+<packageinstances>
+<packageinstance name="MLF32"/>
+</packageinstances>
+</package3d>
+<package3d name="TQFP32-08" urn="urn:adsk.eagle:package:4313/2" type="model" library_version="5">
+<description>Thin Plasic Quad Flat Package Grid 0.8 mm</description>
+<packageinstances>
+<packageinstance name="TQFP32-08"/>
+</packageinstances>
+</package3d>
+</packages3d>
+<symbols>
+<symbol name="23-I/O" urn="urn:adsk.eagle:symbol:4241/1" library_version="5">
+<wire x1="-17.78" y1="27.94" x2="20.32" y2="27.94" width="0.254" layer="94"/>
+<wire x1="20.32" y1="27.94" x2="20.32" y2="-35.56" width="0.254" layer="94"/>
+<wire x1="20.32" y1="-35.56" x2="-17.78" y2="-35.56" width="0.254" layer="94"/>
+<wire x1="-17.78" y1="-35.56" x2="-17.78" y2="27.94" width="0.254" layer="94"/>
+<text x="-17.78" y="-38.1" size="1.778" layer="95">&gt;NAME</text>
+<text x="-17.78" y="29.21" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="PB5(SCK)" x="25.4" y="-33.02" length="middle" rot="R180"/>
+<pin name="PB7(XTAL2/TOSC2)" x="-22.86" y="2.54" length="middle"/>
+<pin name="PB6(XTAL1/TOSC1)" x="-22.86" y="7.62" length="middle"/>
+<pin name="GND@1" x="-22.86" y="-5.08" length="middle" direction="pwr"/>
+<pin name="GND@2" x="-22.86" y="-7.62" length="middle" direction="pwr"/>
+<pin name="VCC@1" x="-22.86" y="-10.16" length="middle" direction="pwr"/>
+<pin name="VCC@2" x="-22.86" y="-12.7" length="middle" direction="pwr"/>
+<pin name="GND" x="-22.86" y="20.32" length="middle" direction="pwr"/>
+<pin name="AREF" x="-22.86" y="17.78" length="middle" direction="pas"/>
+<pin name="AVCC" x="-22.86" y="15.24" length="middle" direction="pwr"/>
+<pin name="PB4(MISO)" x="25.4" y="-30.48" length="middle" rot="R180"/>
+<pin name="PB3(MOSI/OC2)" x="25.4" y="-27.94" length="middle" rot="R180"/>
+<pin name="PB2(SS/OC1B)" x="25.4" y="-25.4" length="middle" rot="R180"/>
+<pin name="PB1(OC1A)" x="25.4" y="-22.86" length="middle" rot="R180"/>
+<pin name="PB0(ICP)" x="25.4" y="-20.32" length="middle" rot="R180"/>
+<pin name="PD7(AIN1)" x="25.4" y="-15.24" length="middle" rot="R180"/>
+<pin name="PD6(AIN0)" x="25.4" y="-12.7" length="middle" rot="R180"/>
+<pin name="PD5(T1)" x="25.4" y="-10.16" length="middle" rot="R180"/>
+<pin name="PD4(XCK/T0)" x="25.4" y="-7.62" length="middle" rot="R180"/>
+<pin name="PD3(INT1)" x="25.4" y="-5.08" length="middle" rot="R180"/>
+<pin name="PD2(INT0)" x="25.4" y="-2.54" length="middle" rot="R180"/>
+<pin name="PD1(TXD)" x="25.4" y="0" length="middle" rot="R180"/>
+<pin name="PD0(RXD)" x="25.4" y="2.54" length="middle" rot="R180"/>
+<pin name="ADC7" x="25.4" y="7.62" length="middle" rot="R180"/>
+<pin name="ADC6" x="25.4" y="10.16" length="middle" rot="R180"/>
+<pin name="PC5(ADC5/SCL)" x="25.4" y="12.7" length="middle" rot="R180"/>
+<pin name="PC4(ADC4/SDA)" x="25.4" y="15.24" length="middle" rot="R180"/>
+<pin name="PC3(ADC3)" x="25.4" y="17.78" length="middle" rot="R180"/>
+<pin name="PC2(ADC2)" x="25.4" y="20.32" length="middle" rot="R180"/>
+<pin name="PC1(ADC1)" x="25.4" y="22.86" length="middle" rot="R180"/>
+<pin name="PC0(ADC0)" x="25.4" y="25.4" length="middle" rot="R180"/>
+<pin name="PC6(/RESET)" x="-22.86" y="25.4" length="middle" function="dot"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="MEGA8" urn="urn:adsk.eagle:component:4417/3" prefix="IC" library_version="5">
+<description>&lt;b&gt;MICROCONTROLLER&lt;/b&gt;&lt;p&gt;
+8 Kbytes FLASH, 1 kbytes SRAM, 512 bytes EEPROM, USART, 6-channel 10 bit ADC, 2-channel 8 bit ADC&lt;br&gt;
+Pin compatible with Atmega48, ATMega88, ATMega168&lt;br&gt;
+Source: avr.lbr</description>
+<gates>
+<gate name="G$1" symbol="23-I/O" x="0" y="2.54"/>
+</gates>
+<devices>
+<device name="-MI" package="MLF32">
+<connects>
+<connect gate="G$1" pin="ADC6" pad="19"/>
+<connect gate="G$1" pin="ADC7" pad="22"/>
+<connect gate="G$1" pin="AREF" pad="20"/>
+<connect gate="G$1" pin="AVCC" pad="18"/>
+<connect gate="G$1" pin="GND" pad="21"/>
+<connect gate="G$1" pin="GND@1" pad="3"/>
+<connect gate="G$1" pin="GND@2" pad="5"/>
+<connect gate="G$1" pin="PB0(ICP)" pad="12"/>
+<connect gate="G$1" pin="PB1(OC1A)" pad="13"/>
+<connect gate="G$1" pin="PB2(SS/OC1B)" pad="14"/>
+<connect gate="G$1" pin="PB3(MOSI/OC2)" pad="15"/>
+<connect gate="G$1" pin="PB4(MISO)" pad="16"/>
+<connect gate="G$1" pin="PB5(SCK)" pad="17"/>
+<connect gate="G$1" pin="PB6(XTAL1/TOSC1)" pad="7"/>
+<connect gate="G$1" pin="PB7(XTAL2/TOSC2)" pad="8"/>
+<connect gate="G$1" pin="PC0(ADC0)" pad="23"/>
+<connect gate="G$1" pin="PC1(ADC1)" pad="24"/>
+<connect gate="G$1" pin="PC2(ADC2)" pad="25"/>
+<connect gate="G$1" pin="PC3(ADC3)" pad="26"/>
+<connect gate="G$1" pin="PC4(ADC4/SDA)" pad="27"/>
+<connect gate="G$1" pin="PC5(ADC5/SCL)" pad="28"/>
+<connect gate="G$1" pin="PC6(/RESET)" pad="29"/>
+<connect gate="G$1" pin="PD0(RXD)" pad="30"/>
+<connect gate="G$1" pin="PD1(TXD)" pad="31"/>
+<connect gate="G$1" pin="PD2(INT0)" pad="32"/>
+<connect gate="G$1" pin="PD3(INT1)" pad="1"/>
+<connect gate="G$1" pin="PD4(XCK/T0)" pad="2"/>
+<connect gate="G$1" pin="PD5(T1)" pad="9"/>
+<connect gate="G$1" pin="PD6(AIN0)" pad="10"/>
+<connect gate="G$1" pin="PD7(AIN1)" pad="11"/>
+<connect gate="G$1" pin="VCC@1" pad="4"/>
+<connect gate="G$1" pin="VCC@2" pad="6"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:4334/3"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="ATMEGA88PA-MU" constant="no"/>
+<attribute name="OC_FARNELL" value="1715491" constant="no"/>
+<attribute name="OC_NEWARK" value="15R0272" constant="no"/>
+<attribute name="POPULARITY" value="0" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="-AI" package="TQFP32-08">
+<connects>
+<connect gate="G$1" pin="ADC6" pad="19"/>
+<connect gate="G$1" pin="ADC7" pad="22"/>
+<connect gate="G$1" pin="AREF" pad="20"/>
+<connect gate="G$1" pin="AVCC" pad="18"/>
+<connect gate="G$1" pin="GND" pad="21"/>
+<connect gate="G$1" pin="GND@1" pad="3"/>
+<connect gate="G$1" pin="GND@2" pad="5"/>
+<connect gate="G$1" pin="PB0(ICP)" pad="12"/>
+<connect gate="G$1" pin="PB1(OC1A)" pad="13"/>
+<connect gate="G$1" pin="PB2(SS/OC1B)" pad="14"/>
+<connect gate="G$1" pin="PB3(MOSI/OC2)" pad="15"/>
+<connect gate="G$1" pin="PB4(MISO)" pad="16"/>
+<connect gate="G$1" pin="PB5(SCK)" pad="17"/>
+<connect gate="G$1" pin="PB6(XTAL1/TOSC1)" pad="7"/>
+<connect gate="G$1" pin="PB7(XTAL2/TOSC2)" pad="8"/>
+<connect gate="G$1" pin="PC0(ADC0)" pad="23"/>
+<connect gate="G$1" pin="PC1(ADC1)" pad="24"/>
+<connect gate="G$1" pin="PC2(ADC2)" pad="25"/>
+<connect gate="G$1" pin="PC3(ADC3)" pad="26"/>
+<connect gate="G$1" pin="PC4(ADC4/SDA)" pad="27"/>
+<connect gate="G$1" pin="PC5(ADC5/SCL)" pad="28"/>
+<connect gate="G$1" pin="PC6(/RESET)" pad="29"/>
+<connect gate="G$1" pin="PD0(RXD)" pad="30"/>
+<connect gate="G$1" pin="PD1(TXD)" pad="31"/>
+<connect gate="G$1" pin="PD2(INT0)" pad="32"/>
+<connect gate="G$1" pin="PD3(INT1)" pad="1"/>
+<connect gate="G$1" pin="PD4(XCK/T0)" pad="2"/>
+<connect gate="G$1" pin="PD5(T1)" pad="9"/>
+<connect gate="G$1" pin="PD6(AIN0)" pad="10"/>
+<connect gate="G$1" pin="PD7(AIN1)" pad="11"/>
+<connect gate="G$1" pin="VCC@1" pad="4"/>
+<connect gate="G$1" pin="VCC@2" pad="6"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:4313/2"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="ATMEGA8-16AU" constant="no"/>
+<attribute name="OC_FARNELL" value="9171371" constant="no"/>
+<attribute name="OC_NEWARK" value="73M8863" constant="no"/>
+<attribute name="POPULARITY" value="11" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -50851,7 +50942,6 @@ In this library you will find logos and images specific to RoboJackets. The part
 </class>
 </classes>
 <groups>
-<schematic_group name="MICROCONTROLLER"/>
 <schematic_group name="ICSP-HEADER"/>
 <schematic_group name="NEOPIXEL-OUT"/>
 <schematic_group name="5V-REGULATOR"/>
@@ -50859,9 +50949,9 @@ In this library you will find logos and images specific to RoboJackets. The part
 <schematic_group name="RESET-SWITCH"/>
 <schematic_group name="CAN-CONTROLLER"/>
 <schematic_group name="CAN-CONNECTOR"/>
+<schematic_group name="MICROCONTROLLER"/>
 </groups>
 <parts>
-<part name="IC2" library="atmel" deviceset="AT90S4433" device="A" value="ATMEGA8"/>
 <part name="IC1" library="misc" deviceset="RT8289" device=""/>
 <part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="C1" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="10n"/>
@@ -50887,17 +50977,6 @@ In this library you will find logos and images specific to RoboJackets. The part
 <part name="ICSP" library="pinhead" deviceset="PINHD-2X3" device="" value="ICSP"/>
 <part name="P+7" library="supply1" deviceset="+5V" device=""/>
 <part name="GND12" library="supply1" deviceset="GND" device=""/>
-<part name="X2" library="IGVC-Remote" deviceset="OSC_CSTCE16M0V53-R0" device="" value="16MHz"/>
-<part name="GND11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R5" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="1M"/>
-<part name="C7" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1uF"/>
-<part name="GND13" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="GND14" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="L2" library="IGVC-Remote" deviceset="L" device="-0805" value="10uH"/>
-<part name="P+6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
-<part name="C9" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1uF"/>
-<part name="C10" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1uF"/>
-<part name="GND15" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="FRAME1" library="RoboJackets-Frames" deviceset="FRAME_A_L" device="">
 <attribute name="REVISION" value="1.0"/>
 <attribute name="SCH_DESC" value="Neopixel Controller"/>
@@ -50928,33 +51007,43 @@ In this library you will find logos and images specific to RoboJackets. The part
 <part name="R10" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="120R"/>
 <part name="J1" library="RoboJackets-Connectors" deviceset="B2P?-VH(LF)(SN)" device="S"/>
 <part name="U$1" library="RoboJackets-Aesthetics" deviceset="ROBOBUZZ" device="1.0X" value="ROBOBUZZ1.0X"/>
+<part name="IC4" library="atmel" library_urn="urn:adsk.eagle:library:105" deviceset="MEGA8" device="-AI" package3d_urn="urn:adsk.eagle:package:4313/2"/>
+<part name="C8" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1uF"/>
+<part name="GND18" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND21" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="L3" library="IGVC-Remote" deviceset="L" device="-0805" value="10uH"/>
+<part name="P+9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
+<part name="C12" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1uF"/>
+<part name="C13" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1uF"/>
+<part name="GND22" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="X3" library="IGVC-Remote" deviceset="OSC_CSTCE16M0V53-R0" device="" value="16MHz"/>
+<part name="GND23" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="R12" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="1M"/>
+<part name="C14" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1uF"/>
+<part name="GND24" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
-<text x="147.32" y="124.46" size="1.778" layer="97" grouprefs="MICROCONTROLLER">D9</text>
-<text x="147.32" y="127" size="1.778" layer="97" grouprefs="MICROCONTROLLER">D10</text>
-<text x="147.32" y="121.92" size="1.778" layer="97" grouprefs="MICROCONTROLLER">D8</text>
-<text x="147.32" y="116.84" size="1.778" layer="97" grouprefs="MICROCONTROLLER">A5</text>
-<text x="147.32" y="114.3" size="1.778" layer="97" grouprefs="MICROCONTROLLER">A4</text>
-<text x="147.32" y="111.76" size="1.778" layer="97" grouprefs="MICROCONTROLLER">A3</text>
-<text x="147.32" y="109.22" size="1.778" layer="97" grouprefs="MICROCONTROLLER">A2</text>
-<text x="147.32" y="106.68" size="1.778" layer="97" grouprefs="MICROCONTROLLER">A1</text>
-<text x="147.32" y="104.14" size="1.778" layer="97" grouprefs="MICROCONTROLLER">A0</text>
-<text x="147.32" y="99.06" size="1.778" layer="97" grouprefs="MICROCONTROLLER">D7</text>
-<text x="147.32" y="96.52" size="1.778" layer="97" grouprefs="MICROCONTROLLER">D6</text>
-<text x="147.32" y="93.98" size="1.778" layer="97" grouprefs="MICROCONTROLLER">D5</text>
-<text x="147.32" y="91.44" size="1.778" layer="97" grouprefs="MICROCONTROLLER">D4</text>
-<text x="147.32" y="88.9" size="1.778" layer="97" grouprefs="MICROCONTROLLER">D3</text>
-<text x="147.32" y="86.36" size="1.778" layer="97" grouprefs="MICROCONTROLLER">D2</text>
-<text x="147.32" y="83.82" size="1.778" layer="97" grouprefs="MICROCONTROLLER">D1</text>
-<text x="147.32" y="81.28" size="1.778" layer="97" grouprefs="MICROCONTROLLER">D0</text>
+<text x="177.8" y="121.92" size="1.778" layer="97" grouprefs="MICROCONTROLLER">A5</text>
+<text x="177.8" y="124.46" size="1.778" layer="97" grouprefs="MICROCONTROLLER">A4</text>
+<text x="177.8" y="127" size="1.778" layer="97" grouprefs="MICROCONTROLLER">A3</text>
+<text x="177.8" y="129.54" size="1.778" layer="97" grouprefs="MICROCONTROLLER">A2</text>
+<text x="177.8" y="132.08" size="1.778" layer="97" grouprefs="MICROCONTROLLER">A1</text>
+<text x="177.8" y="134.62" size="1.778" layer="97" grouprefs="MICROCONTROLLER">A0</text>
+<text x="177.8" y="93.98" size="1.778" layer="97" grouprefs="MICROCONTROLLER">D7</text>
+<text x="177.8" y="96.52" size="1.778" layer="97" grouprefs="MICROCONTROLLER">D6</text>
+<text x="177.8" y="99.06" size="1.778" layer="97" grouprefs="MICROCONTROLLER">D5</text>
+<text x="177.8" y="101.6" size="1.778" layer="97" grouprefs="MICROCONTROLLER">D4</text>
+<text x="177.8" y="104.14" size="1.778" layer="97" grouprefs="MICROCONTROLLER">D3</text>
+<text x="177.8" y="106.68" size="1.778" layer="97" grouprefs="MICROCONTROLLER">D2</text>
+<text x="177.8" y="109.22" size="1.778" layer="97" grouprefs="MICROCONTROLLER">D1</text>
+<text x="177.8" y="111.76" size="1.778" layer="97" grouprefs="MICROCONTROLLER">D0</text>
+<text x="177.8" y="86.36" size="1.778" layer="97" grouprefs="MICROCONTROLLER">D9</text>
+<text x="177.8" y="83.82" size="1.778" layer="97" grouprefs="MICROCONTROLLER">D10</text>
+<text x="177.8" y="88.9" size="1.778" layer="97" grouprefs="MICROCONTROLLER">D8</text>
 </plain>
 <instances>
-<instance part="IC2" gate="G$1" x="127" y="109.22" smashed="yes" grouprefs="MICROCONTROLLER">
-<attribute name="VALUE" x="111.76" y="76.2" size="1.778" layer="96"/>
-<attribute name="NAME" x="111.76" y="137.922" size="1.778" layer="95"/>
-</instance>
 <instance part="IC1" gate="G$1" x="88.9" y="180.34" smashed="yes" grouprefs="5V-REGULATOR">
 <attribute name="VALUE" x="78.74" y="165.1" size="1.524" layer="96"/>
 <attribute name="NAME" x="78.994" y="193.802" size="1.524" layer="95"/>
@@ -51013,75 +51102,36 @@ In this library you will find logos and images specific to RoboJackets. The part
 <instance part="P+1" gate="1" x="180.34" y="185.42" smashed="yes" grouprefs="5V-REGULATOR">
 <attribute name="VALUE" x="177.8" y="180.34" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="JP1" gate="A" x="228.6" y="99.06" smashed="yes" grouprefs="NEOPIXEL-OUT">
-<attribute name="NAME" x="222.25" y="104.775" size="1.778" layer="95"/>
-<attribute name="VALUE" x="222.25" y="91.44" size="1.778" layer="96"/>
+<instance part="JP1" gate="A" x="251.46" y="185.42" smashed="yes" grouprefs="NEOPIXEL-OUT">
+<attribute name="NAME" x="245.11" y="191.135" size="1.778" layer="95"/>
+<attribute name="VALUE" x="245.11" y="177.8" size="1.778" layer="96"/>
 </instance>
-<instance part="P+5" gate="1" x="218.44" y="114.3" smashed="yes" grouprefs="NEOPIXEL-OUT">
-<attribute name="VALUE" x="215.9" y="109.22" size="1.778" layer="96" rot="R90"/>
+<instance part="P+5" gate="1" x="241.3" y="200.66" smashed="yes" grouprefs="NEOPIXEL-OUT">
+<attribute name="VALUE" x="238.76" y="195.58" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="GND10" gate="1" x="218.44" y="86.36" smashed="yes" grouprefs="NEOPIXEL-OUT">
-<attribute name="VALUE" x="215.9" y="83.82" size="1.778" layer="96"/>
+<instance part="GND10" gate="1" x="241.3" y="172.72" smashed="yes" grouprefs="NEOPIXEL-OUT">
+<attribute name="VALUE" x="238.76" y="170.18" size="1.778" layer="96"/>
 </instance>
 <instance part="GND1" gate="1" x="45.72" y="180.34" smashed="yes" grouprefs="5V-REGULATOR">
 <attribute name="VALUE" x="43.18" y="177.8" size="1.778" layer="96"/>
 </instance>
-<instance part="C6" gate="G$1" x="236.22" y="99.06" smashed="yes" grouprefs="NEOPIXEL-OUT">
-<attribute name="NAME" x="237.236" y="99.695" size="1.778" layer="95"/>
-<attribute name="VALUE" x="237.236" y="94.869" size="1.778" layer="96"/>
+<instance part="C6" gate="G$1" x="259.08" y="185.42" smashed="yes" grouprefs="NEOPIXEL-OUT">
+<attribute name="NAME" x="260.096" y="186.055" size="1.778" layer="95"/>
+<attribute name="VALUE" x="260.096" y="181.229" size="1.778" layer="96"/>
 </instance>
-<instance part="R7" gate="G$1" x="210.82" y="99.06" smashed="yes" grouprefs="NEOPIXEL-OUT">
-<attribute name="NAME" x="207.01" y="100.5586" size="1.778" layer="95"/>
-<attribute name="VALUE" x="207.01" y="95.758" size="1.778" layer="96"/>
+<instance part="R7" gate="G$1" x="233.68" y="185.42" smashed="yes" grouprefs="NEOPIXEL-OUT">
+<attribute name="NAME" x="229.87" y="186.9186" size="1.778" layer="95"/>
+<attribute name="VALUE" x="229.87" y="182.118" size="1.778" layer="96"/>
 </instance>
-<instance part="ICSP" gate="A" x="213.36" y="134.62" smashed="yes" grouprefs="ICSP-HEADER">
-<attribute name="NAME" x="207.01" y="140.335" size="1.778" layer="95"/>
-<attribute name="VALUE" x="207.01" y="127" size="1.778" layer="96"/>
+<instance part="ICSP" gate="A" x="241.3" y="147.32" smashed="yes" grouprefs="ICSP-HEADER">
+<attribute name="NAME" x="234.95" y="153.035" size="1.778" layer="95"/>
+<attribute name="VALUE" x="234.95" y="139.7" size="1.778" layer="96"/>
 </instance>
-<instance part="P+7" gate="1" x="226.06" y="142.24" smashed="yes" grouprefs="ICSP-HEADER">
-<attribute name="VALUE" x="227.965" y="144.78" size="1.778" layer="96" rot="R180"/>
+<instance part="P+7" gate="1" x="254" y="154.94" smashed="yes" grouprefs="ICSP-HEADER">
+<attribute name="VALUE" x="255.905" y="157.48" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="GND12" gate="1" x="226.06" y="129.54" smashed="yes" grouprefs="ICSP-HEADER">
-<attribute name="VALUE" x="223.52" y="127" size="1.778" layer="96"/>
-</instance>
-<instance part="X2" gate="G$1" x="78.74" y="124.46" smashed="yes" grouprefs="MICROCONTROLLER">
-<attribute name="NAME" x="73.66" y="129.032" size="1.778" layer="95"/>
-<attribute name="VALUE" x="73.66" y="118.872" size="1.778" layer="96"/>
-</instance>
-<instance part="GND11" gate="1" x="68.58" y="119.38" smashed="yes" grouprefs="MICROCONTROLLER">
-<attribute name="VALUE" x="66.04" y="116.84" size="1.778" layer="96"/>
-</instance>
-<instance part="R5" gate="G$1" x="88.9" y="124.46" smashed="yes" rot="R90" grouprefs="MICROCONTROLLER">
-<attribute name="NAME" x="87.4014" y="120.65" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="92.202" y="120.65" size="1.778" layer="96" rot="R90"/>
-</instance>
-<instance part="C7" gate="G$1" x="76.2" y="101.6" smashed="yes" grouprefs="MICROCONTROLLER">
-<attribute name="NAME" x="77.724" y="101.981" size="1.778" layer="95"/>
-<attribute name="VALUE" x="77.724" y="96.901" size="1.778" layer="96"/>
-</instance>
-<instance part="GND13" gate="1" x="83.82" y="88.9" smashed="yes" grouprefs="MICROCONTROLLER">
-<attribute name="VALUE" x="81.28" y="86.36" size="1.778" layer="96"/>
-</instance>
-<instance part="GND14" gate="1" x="101.6" y="81.28" smashed="yes" grouprefs="MICROCONTROLLER">
-<attribute name="VALUE" x="99.06" y="78.74" size="1.778" layer="96"/>
-</instance>
-<instance part="L2" gate="G$1" x="71.12" y="111.76" smashed="yes" rot="R270" grouprefs="MICROCONTROLLER">
-<attribute name="NAME" x="67.31" y="113.2586" size="1.778" layer="95"/>
-<attribute name="VALUE" x="67.31" y="108.458" size="1.778" layer="96"/>
-</instance>
-<instance part="P+6" gate="1" x="60.96" y="116.84" smashed="yes" grouprefs="MICROCONTROLLER">
-<attribute name="VALUE" x="58.42" y="111.76" size="1.778" layer="96" rot="R90"/>
-</instance>
-<instance part="C9" gate="G$1" x="86.36" y="101.6" smashed="yes" grouprefs="MICROCONTROLLER">
-<attribute name="NAME" x="87.884" y="101.981" size="1.778" layer="95"/>
-<attribute name="VALUE" x="87.884" y="96.901" size="1.778" layer="96"/>
-</instance>
-<instance part="C10" gate="G$1" x="68.58" y="93.98" smashed="yes" grouprefs="MICROCONTROLLER">
-<attribute name="NAME" x="70.104" y="94.361" size="1.778" layer="95"/>
-<attribute name="VALUE" x="70.104" y="89.281" size="1.778" layer="96"/>
-</instance>
-<instance part="GND15" gate="1" x="68.58" y="81.28" smashed="yes" grouprefs="MICROCONTROLLER">
-<attribute name="VALUE" x="66.04" y="78.74" size="1.778" layer="96"/>
+<instance part="GND12" gate="1" x="254" y="142.24" smashed="yes" grouprefs="ICSP-HEADER">
+<attribute name="VALUE" x="251.46" y="139.7" size="1.778" layer="96"/>
 </instance>
 <instance part="FRAME1" gate="G$1" x="0" y="0" smashed="yes"/>
 <instance part="FRAME1" gate="G$2" x="172.72" y="0" smashed="yes">
@@ -51092,35 +51142,35 @@ In this library you will find logos and images specific to RoboJackets. The part
 <attribute name="SCH_DESC" x="173.99" y="6.35" size="2.54" layer="94"/>
 <attribute name="TEAM" x="173.99" y="34.29" size="3.048" layer="94" ratio="10" align="top-left"/>
 </instance>
-<instance part="ON" gate="G$1" x="218.44" y="190.5" smashed="yes" rot="R90" grouprefs="LEDS">
-<attribute name="NAME" x="223.012" y="194.056" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="223.012" y="196.215" size="1.778" layer="96" rot="R180"/>
+<instance part="ON" gate="G$1" x="246.38" y="121.92" smashed="yes" rot="R90" grouprefs="LEDS">
+<attribute name="NAME" x="250.952" y="125.476" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="250.952" y="127.635" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="R3" gate="G$1" x="205.74" y="190.5" smashed="yes" grouprefs="LEDS">
-<attribute name="NAME" x="201.93" y="191.9986" size="1.778" layer="95"/>
-<attribute name="VALUE" x="201.93" y="187.198" size="1.778" layer="96"/>
+<instance part="R3" gate="G$1" x="233.68" y="121.92" smashed="yes" grouprefs="LEDS">
+<attribute name="NAME" x="229.87" y="123.4186" size="1.778" layer="95"/>
+<attribute name="VALUE" x="229.87" y="118.618" size="1.778" layer="96"/>
 </instance>
-<instance part="P+2" gate="1" x="195.58" y="195.58" smashed="yes" grouprefs="LEDS">
-<attribute name="VALUE" x="193.04" y="190.5" size="1.778" layer="96" rot="R90"/>
+<instance part="P+2" gate="1" x="223.52" y="127" smashed="yes" grouprefs="LEDS">
+<attribute name="VALUE" x="220.98" y="121.92" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="D2" gate="G$1" x="218.44" y="177.8" smashed="yes" rot="R90" grouprefs="LEDS">
-<attribute name="NAME" x="223.012" y="181.356" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="223.012" y="183.515" size="1.778" layer="96" rot="R180"/>
+<instance part="D2" gate="G$1" x="246.38" y="109.22" smashed="yes" rot="R90" grouprefs="LEDS">
+<attribute name="NAME" x="250.952" y="112.776" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="250.952" y="114.935" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="R6" gate="G$1" x="205.74" y="177.8" smashed="yes" grouprefs="LEDS">
-<attribute name="NAME" x="201.93" y="179.2986" size="1.778" layer="95"/>
-<attribute name="VALUE" x="201.93" y="174.498" size="1.778" layer="96"/>
+<instance part="R6" gate="G$1" x="233.68" y="109.22" smashed="yes" grouprefs="LEDS">
+<attribute name="NAME" x="229.87" y="110.7186" size="1.778" layer="95"/>
+<attribute name="VALUE" x="229.87" y="105.918" size="1.778" layer="96"/>
 </instance>
-<instance part="D3" gate="G$1" x="218.44" y="165.1" smashed="yes" rot="R90" grouprefs="LEDS">
-<attribute name="NAME" x="223.012" y="168.656" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="223.012" y="170.815" size="1.778" layer="96" rot="R180"/>
+<instance part="D3" gate="G$1" x="246.38" y="96.52" smashed="yes" rot="R90" grouprefs="LEDS">
+<attribute name="NAME" x="250.952" y="100.076" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="250.952" y="102.235" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="R8" gate="G$1" x="205.74" y="165.1" smashed="yes" grouprefs="LEDS">
-<attribute name="NAME" x="201.93" y="166.5986" size="1.778" layer="95"/>
-<attribute name="VALUE" x="201.93" y="161.798" size="1.778" layer="96"/>
+<instance part="R8" gate="G$1" x="233.68" y="96.52" smashed="yes" grouprefs="LEDS">
+<attribute name="NAME" x="229.87" y="98.0186" size="1.778" layer="95"/>
+<attribute name="VALUE" x="229.87" y="93.218" size="1.778" layer="96"/>
 </instance>
-<instance part="GND19" gate="1" x="228.6" y="160.02" smashed="yes" grouprefs="LEDS">
-<attribute name="VALUE" x="226.06" y="157.48" size="1.778" layer="96"/>
+<instance part="GND19" gate="1" x="256.54" y="91.44" smashed="yes" grouprefs="LEDS">
+<attribute name="VALUE" x="254" y="88.9" size="1.778" layer="96"/>
 </instance>
 <instance part="SW1" gate="G$1" x="22.86" y="124.46" smashed="yes" rot="R270" grouprefs="RESET-SWITCH">
 <attribute name="NAME" x="20.32" y="130.81" size="1.778" layer="95"/>
@@ -51142,9 +51192,9 @@ In this library you will find logos and images specific to RoboJackets. The part
 <instance part="GND8" gate="1" x="35.56" y="106.68" smashed="yes" grouprefs="RESET-SWITCH">
 <attribute name="VALUE" x="33.02" y="104.14" size="1.778" layer="96"/>
 </instance>
-<instance part="IC3" gate="A" x="33.02" y="53.34" smashed="yes" grouprefs="CAN-CONTROLLER">
-<attribute name="NAME" x="56.2356" y="62.4586" size="2.0828" layer="95" ratio="6" rot="SR0"/>
-<attribute name="VALUE" x="55.6006" y="59.9186" size="2.0828" layer="96" ratio="6" rot="SR0"/>
+<instance part="IC3" gate="A" x="33.02" y="48.26" smashed="yes" grouprefs="CAN-CONTROLLER">
+<attribute name="NAME" x="56.2356" y="57.3786" size="2.0828" layer="95" ratio="6" rot="SR0"/>
+<attribute name="VALUE" x="55.6006" y="54.8386" size="2.0828" layer="96" ratio="6" rot="SR0"/>
 </instance>
 <instance part="J4" gate="G$1" x="15.24" y="86.36" smashed="yes" grouprefs="CAN-CONNECTOR">
 <attribute name="NAME" x="10.16" y="91.44" size="1.778" layer="95" font="vector" align="top-left"/>
@@ -51156,28 +51206,78 @@ In this library you will find logos and images specific to RoboJackets. The part
 <instance part="GND20" gate="1" x="38.1" y="78.74" smashed="yes" grouprefs="CAN-CONNECTOR">
 <attribute name="VALUE" x="36.83" y="76.2" size="1.778" layer="96"/>
 </instance>
-<instance part="GND9" gate="1" x="33.02" y="40.64" smashed="yes" grouprefs="CAN-CONTROLLER">
-<attribute name="VALUE" x="30.48" y="38.1" size="1.778" layer="96"/>
+<instance part="GND9" gate="1" x="33.02" y="35.56" smashed="yes" grouprefs="CAN-CONTROLLER">
+<attribute name="VALUE" x="30.48" y="33.02" size="1.778" layer="96"/>
 </instance>
-<instance part="P+8" gate="1" x="30.48" y="60.96" smashed="yes" grouprefs="CAN-CONTROLLER">
-<attribute name="VALUE" x="27.94" y="55.88" size="1.778" layer="96" rot="R90"/>
+<instance part="P+8" gate="1" x="30.48" y="55.88" smashed="yes" grouprefs="CAN-CONTROLLER">
+<attribute name="VALUE" x="27.94" y="50.8" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="GND16" gate="1" x="88.9" y="40.64" smashed="yes" grouprefs="CAN-CONTROLLER">
-<attribute name="VALUE" x="86.36" y="38.1" size="1.778" layer="96"/>
+<instance part="GND16" gate="1" x="88.9" y="35.56" smashed="yes" grouprefs="CAN-CONTROLLER">
+<attribute name="VALUE" x="86.36" y="33.02" size="1.778" layer="96"/>
 </instance>
-<instance part="R9" gate="G$1" x="99.06" y="50.8" smashed="yes" rot="R90" grouprefs="CAN-CONTROLLER">
-<attribute name="NAME" x="97.5614" y="46.99" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="102.362" y="46.99" size="1.778" layer="96" rot="R90"/>
+<instance part="R9" gate="G$1" x="99.06" y="45.72" smashed="yes" rot="R90" grouprefs="CAN-CONTROLLER">
+<attribute name="NAME" x="97.5614" y="41.91" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="102.362" y="41.91" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="R10" gate="G$1" x="106.68" y="50.8" smashed="yes" rot="R90" grouprefs="CAN-CONTROLLER">
-<attribute name="NAME" x="105.1814" y="46.99" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="109.982" y="46.99" size="1.778" layer="96" rot="R90"/>
+<instance part="R10" gate="G$1" x="106.68" y="45.72" smashed="yes" rot="R90" grouprefs="CAN-CONTROLLER">
+<attribute name="NAME" x="105.1814" y="41.91" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="109.982" y="41.91" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="J1" gate="G$1" x="27.94" y="193.04" smashed="yes" grouprefs="5V-REGULATOR">
 <attribute name="NAME" x="22.86" y="200.66" size="1.778" layer="95" font="vector" align="top-left"/>
 <attribute name="VALUE" x="30.226" y="186.944" size="1.778" layer="96" font="vector" rot="R180"/>
 </instance>
 <instance part="U$1" gate="G$1" x="271.78" y="45.72" smashed="yes"/>
+<instance part="IC4" gate="G$1" x="149.86" y="109.22" smashed="yes" grouprefs="MICROCONTROLLER">
+<attribute name="NAME" x="132.08" y="71.12" size="1.778" layer="95"/>
+<attribute name="VALUE" x="132.08" y="138.43" size="1.778" layer="96"/>
+</instance>
+<instance part="C8" gate="G$1" x="93.98" y="93.98" smashed="yes" grouprefs="MICROCONTROLLER">
+<attribute name="NAME" x="95.504" y="94.361" size="1.778" layer="95"/>
+<attribute name="VALUE" x="95.504" y="89.281" size="1.778" layer="96"/>
+</instance>
+<instance part="GND18" gate="1" x="99.06" y="81.28" smashed="yes" grouprefs="MICROCONTROLLER">
+<attribute name="VALUE" x="96.52" y="78.74" size="1.778" layer="96"/>
+</instance>
+<instance part="GND21" gate="1" x="119.38" y="73.66" smashed="yes" grouprefs="MICROCONTROLLER">
+<attribute name="VALUE" x="116.84" y="71.12" size="1.778" layer="96"/>
+</instance>
+<instance part="L3" gate="G$1" x="88.9" y="124.46" smashed="yes" rot="R270" grouprefs="MICROCONTROLLER">
+<attribute name="NAME" x="85.09" y="125.9586" size="1.778" layer="95"/>
+<attribute name="VALUE" x="85.09" y="121.158" size="1.778" layer="96"/>
+</instance>
+<instance part="P+9" gate="1" x="78.74" y="129.54" smashed="yes" grouprefs="MICROCONTROLLER">
+<attribute name="VALUE" x="76.2" y="124.46" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="C12" gate="G$1" x="104.14" y="93.98" smashed="yes" grouprefs="MICROCONTROLLER">
+<attribute name="NAME" x="105.664" y="94.361" size="1.778" layer="95"/>
+<attribute name="VALUE" x="105.664" y="89.281" size="1.778" layer="96"/>
+</instance>
+<instance part="C13" gate="G$1" x="86.36" y="86.36" smashed="yes" grouprefs="MICROCONTROLLER">
+<attribute name="NAME" x="87.884" y="86.741" size="1.778" layer="95"/>
+<attribute name="VALUE" x="87.884" y="81.661" size="1.778" layer="96"/>
+</instance>
+<instance part="GND22" gate="1" x="86.36" y="73.66" smashed="yes" grouprefs="MICROCONTROLLER">
+<attribute name="VALUE" x="83.82" y="71.12" size="1.778" layer="96"/>
+</instance>
+<instance part="X3" gate="G$1" x="96.52" y="114.3" smashed="yes" grouprefs="MICROCONTROLLER">
+<attribute name="NAME" x="91.44" y="106.172" size="1.778" layer="95"/>
+<attribute name="VALUE" x="91.44" y="108.712" size="1.778" layer="96"/>
+</instance>
+<instance part="GND23" gate="1" x="86.36" y="109.22" smashed="yes" grouprefs="MICROCONTROLLER">
+<attribute name="VALUE" x="83.82" y="106.68" size="1.778" layer="96"/>
+</instance>
+<instance part="R12" gate="G$1" x="106.68" y="114.3" smashed="yes" rot="R90" grouprefs="MICROCONTROLLER">
+<attribute name="NAME" x="105.1814" y="110.49" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="109.982" y="110.49" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="C14" gate="G$1" x="68.58" y="86.36" smashed="yes" grouprefs="MICROCONTROLLER">
+<attribute name="NAME" x="70.104" y="86.741" size="1.778" layer="95"/>
+<attribute name="VALUE" x="70.104" y="81.661" size="1.778" layer="96"/>
+</instance>
+<instance part="GND24" gate="1" x="68.58" y="73.66" smashed="yes" grouprefs="MICROCONTROLLER">
+<attribute name="VALUE" x="66.04" y="71.12" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -51203,37 +51303,23 @@ In this library you will find logos and images specific to RoboJackets. The part
 <segment>
 <pinref part="JP1" gate="A" pin="1"/>
 <pinref part="P+5" gate="1" pin="+5V"/>
-<wire x1="226.06" y1="101.6" x2="218.44" y2="101.6" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
-<wire x1="218.44" y1="101.6" x2="218.44" y2="109.22" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
+<wire x1="248.92" y1="187.96" x2="241.3" y2="187.96" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
+<wire x1="241.3" y1="187.96" x2="241.3" y2="195.58" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
 <pinref part="C6" gate="G$1" pin="+"/>
-<wire x1="218.44" y1="109.22" x2="218.44" y2="111.76" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
-<wire x1="236.22" y1="101.6" x2="236.22" y2="109.22" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
-<wire x1="236.22" y1="109.22" x2="218.44" y2="109.22" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
-<junction x="218.44" y="109.22" grouprefs="NEOPIXEL-OUT"/>
+<wire x1="241.3" y1="195.58" x2="241.3" y2="198.12" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
+<wire x1="259.08" y1="187.96" x2="259.08" y2="195.58" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
+<wire x1="259.08" y1="195.58" x2="241.3" y2="195.58" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
+<junction x="241.3" y="195.58" grouprefs="NEOPIXEL-OUT"/>
 </segment>
 <segment>
-<wire x1="226.06" y1="139.7" x2="226.06" y2="137.16" width="0.1524" layer="91" grouprefs="ICSP-HEADER"/>
-<wire x1="226.06" y1="137.16" x2="218.44" y2="137.16" width="0.1524" layer="91" grouprefs="ICSP-HEADER"/>
+<wire x1="254" y1="152.4" x2="254" y2="149.86" width="0.1524" layer="91" grouprefs="ICSP-HEADER"/>
+<wire x1="254" y1="149.86" x2="246.38" y2="149.86" width="0.1524" layer="91" grouprefs="ICSP-HEADER"/>
 <pinref part="P+7" gate="1" pin="+5V"/>
 <pinref part="ICSP" gate="A" pin="2"/>
 </segment>
 <segment>
-<pinref part="P+6" gate="1" pin="+5V"/>
-<pinref part="L2" gate="G$1" pin="2"/>
-<wire x1="60.96" y1="114.3" x2="60.96" y2="111.76" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
-<wire x1="60.96" y1="111.76" x2="66.04" y2="111.76" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
-<pinref part="C7" gate="G$1" pin="1"/>
-<wire x1="76.2" y1="104.14" x2="76.2" y2="106.68" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
-<wire x1="76.2" y1="106.68" x2="106.68" y2="106.68" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
-<wire x1="60.96" y1="111.76" x2="60.96" y2="106.68" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
-<wire x1="60.96" y1="106.68" x2="76.2" y2="106.68" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
-<junction x="60.96" y="111.76" grouprefs="MICROCONTROLLER"/>
-<junction x="76.2" y="106.68" grouprefs="MICROCONTROLLER"/>
-<pinref part="IC2" gate="G$1" pin="VCC"/>
-</segment>
-<segment>
-<wire x1="195.58" y1="193.04" x2="195.58" y2="190.5" width="0.1524" layer="91" grouprefs="LEDS"/>
-<wire x1="195.58" y1="190.5" x2="200.66" y2="190.5" width="0.1524" layer="91" grouprefs="LEDS"/>
+<wire x1="223.52" y1="124.46" x2="223.52" y2="121.92" width="0.1524" layer="91" grouprefs="LEDS"/>
+<wire x1="223.52" y1="121.92" x2="228.6" y2="121.92" width="0.1524" layer="91" grouprefs="LEDS"/>
 <pinref part="R3" gate="G$1" pin="1"/>
 <pinref part="P+2" gate="1" pin="+5V"/>
 </segment>
@@ -51250,9 +51336,32 @@ In this library you will find logos and images specific to RoboJackets. The part
 </segment>
 <segment>
 <pinref part="IC3" gate="A" pin="VDD"/>
-<wire x1="35.56" y1="48.26" x2="30.48" y2="48.26" width="0.1524" layer="91" grouprefs="CAN-CONTROLLER"/>
-<wire x1="30.48" y1="48.26" x2="30.48" y2="58.42" width="0.1524" layer="91" grouprefs="CAN-CONTROLLER"/>
+<wire x1="35.56" y1="43.18" x2="30.48" y2="43.18" width="0.1524" layer="91" grouprefs="CAN-CONTROLLER"/>
+<wire x1="30.48" y1="43.18" x2="30.48" y2="53.34" width="0.1524" layer="91" grouprefs="CAN-CONTROLLER"/>
 <pinref part="P+8" gate="1" pin="+5V"/>
+</segment>
+<segment>
+<pinref part="P+9" gate="1" pin="+5V"/>
+<pinref part="L3" gate="G$1" pin="2"/>
+<wire x1="78.74" y1="127" x2="78.74" y2="124.46" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<wire x1="78.74" y1="124.46" x2="83.82" y2="124.46" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<pinref part="C8" gate="G$1" pin="1"/>
+<wire x1="93.98" y1="96.52" x2="93.98" y2="99.06" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<wire x1="93.98" y1="99.06" x2="104.14" y2="99.06" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<wire x1="104.14" y1="99.06" x2="124.46" y2="99.06" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<wire x1="124.46" y1="99.06" x2="127" y2="99.06" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<wire x1="78.74" y1="124.46" x2="78.74" y2="99.06" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<wire x1="78.74" y1="99.06" x2="93.98" y2="99.06" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<junction x="78.74" y="124.46" grouprefs="MICROCONTROLLER"/>
+<junction x="93.98" y="99.06" grouprefs="MICROCONTROLLER"/>
+<pinref part="C12" gate="G$1" pin="1"/>
+<wire x1="104.14" y1="96.52" x2="104.14" y2="99.06" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<junction x="104.14" y="99.06" grouprefs="MICROCONTROLLER"/>
+<pinref part="IC4" gate="G$1" pin="VCC@1"/>
+<pinref part="IC4" gate="G$1" pin="VCC@2"/>
+<wire x1="127" y1="96.52" x2="124.46" y2="96.52" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<wire x1="124.46" y1="96.52" x2="124.46" y2="99.06" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<junction x="124.46" y="99.06" grouprefs="MICROCONTROLLER"/>
 </segment>
 </net>
 <net name="GND" class="1">
@@ -51297,13 +51406,13 @@ In this library you will find logos and images specific to RoboJackets. The part
 <segment>
 <pinref part="GND10" gate="1" pin="GND"/>
 <pinref part="JP1" gate="A" pin="3"/>
-<wire x1="218.44" y1="88.9" x2="218.44" y2="91.44" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
-<wire x1="218.44" y1="91.44" x2="218.44" y2="96.52" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
-<wire x1="218.44" y1="96.52" x2="226.06" y2="96.52" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
+<wire x1="241.3" y1="175.26" x2="241.3" y2="177.8" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
+<wire x1="241.3" y1="177.8" x2="241.3" y2="182.88" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
+<wire x1="241.3" y1="182.88" x2="248.92" y2="182.88" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
 <pinref part="C6" gate="G$1" pin="-"/>
-<wire x1="218.44" y1="91.44" x2="236.22" y2="91.44" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
-<wire x1="236.22" y1="91.44" x2="236.22" y2="93.98" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
-<junction x="218.44" y="91.44" grouprefs="NEOPIXEL-OUT"/>
+<wire x1="241.3" y1="177.8" x2="259.08" y2="177.8" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
+<wire x1="259.08" y1="177.8" x2="259.08" y2="180.34" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
+<junction x="241.3" y="177.8" grouprefs="NEOPIXEL-OUT"/>
 </segment>
 <segment>
 <pinref part="GND1" gate="1" pin="GND"/>
@@ -51312,55 +51421,23 @@ In this library you will find logos and images specific to RoboJackets. The part
 <wire x1="45.72" y1="195.58" x2="45.72" y2="182.88" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<wire x1="226.06" y1="132.08" x2="218.44" y2="132.08" width="0.1524" layer="91" grouprefs="ICSP-HEADER"/>
+<wire x1="254" y1="144.78" x2="246.38" y2="144.78" width="0.1524" layer="91" grouprefs="ICSP-HEADER"/>
 <pinref part="GND12" gate="1" pin="GND"/>
 <pinref part="ICSP" gate="A" pin="6"/>
 </segment>
 <segment>
-<pinref part="X2" gate="G$1" pin="2"/>
-<wire x1="71.12" y1="124.46" x2="68.58" y2="124.46" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
-<wire x1="68.58" y1="124.46" x2="68.58" y2="121.92" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
-<pinref part="GND11" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="C7" gate="G$1" pin="2"/>
-<wire x1="76.2" y1="96.52" x2="76.2" y2="93.98" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
-<wire x1="76.2" y1="93.98" x2="83.82" y2="93.98" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
-<wire x1="83.82" y1="93.98" x2="86.36" y2="93.98" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
-<wire x1="83.82" y1="93.98" x2="83.82" y2="91.44" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
-<junction x="83.82" y="93.98" grouprefs="MICROCONTROLLER"/>
-<pinref part="GND13" gate="1" pin="GND"/>
-<pinref part="C9" gate="G$1" pin="2"/>
-<wire x1="86.36" y1="96.52" x2="86.36" y2="93.98" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
-</segment>
-<segment>
-<pinref part="GND14" gate="1" pin="GND"/>
-<wire x1="101.6" y1="83.82" x2="101.6" y2="104.14" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
-<wire x1="101.6" y1="104.14" x2="101.6" y2="111.76" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
-<wire x1="101.6" y1="111.76" x2="106.68" y2="111.76" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
-<wire x1="106.68" y1="104.14" x2="101.6" y2="104.14" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
-<junction x="101.6" y="104.14" grouprefs="MICROCONTROLLER"/>
-<pinref part="IC2" gate="G$1" pin="GND"/>
-<pinref part="IC2" gate="G$1" pin="AGND"/>
-</segment>
-<segment>
-<pinref part="C10" gate="G$1" pin="2"/>
-<pinref part="GND15" gate="1" pin="GND"/>
-<wire x1="68.58" y1="83.82" x2="68.58" y2="88.9" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
-</segment>
-<segment>
-<wire x1="223.52" y1="165.1" x2="228.6" y2="165.1" width="0.1524" layer="91" grouprefs="LEDS"/>
-<wire x1="228.6" y1="165.1" x2="228.6" y2="162.56" width="0.1524" layer="91" grouprefs="LEDS"/>
-<wire x1="223.52" y1="177.8" x2="228.6" y2="177.8" width="0.1524" layer="91" grouprefs="LEDS"/>
-<wire x1="223.52" y1="190.5" x2="228.6" y2="190.5" width="0.1524" layer="91" grouprefs="LEDS"/>
+<wire x1="251.46" y1="96.52" x2="256.54" y2="96.52" width="0.1524" layer="91" grouprefs="LEDS"/>
+<wire x1="256.54" y1="96.52" x2="256.54" y2="93.98" width="0.1524" layer="91" grouprefs="LEDS"/>
+<wire x1="251.46" y1="109.22" x2="256.54" y2="109.22" width="0.1524" layer="91" grouprefs="LEDS"/>
+<wire x1="251.46" y1="121.92" x2="256.54" y2="121.92" width="0.1524" layer="91" grouprefs="LEDS"/>
 <pinref part="ON" gate="G$1" pin="C"/>
 <pinref part="D2" gate="G$1" pin="C"/>
 <pinref part="D3" gate="G$1" pin="C"/>
 <pinref part="GND19" gate="1" pin="GND"/>
-<wire x1="228.6" y1="165.1" x2="228.6" y2="177.8" width="0.1524" layer="91"/>
-<junction x="228.6" y="165.1"/>
-<junction x="228.6" y="177.8"/>
-<wire x1="228.6" y1="177.8" x2="228.6" y2="190.5" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="96.52" x2="256.54" y2="109.22" width="0.1524" layer="91"/>
+<junction x="256.54" y="96.52"/>
+<junction x="256.54" y="109.22"/>
+<wire x1="256.54" y1="109.22" x2="256.54" y2="121.92" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <wire x1="12.7" y1="109.22" x2="12.7" y2="121.92" width="0.1524" layer="91" grouprefs="RESET-SWITCH"/>
@@ -51380,8 +51457,8 @@ In this library you will find logos and images specific to RoboJackets. The part
 </segment>
 <segment>
 <pinref part="IC3" gate="A" pin="RS"/>
-<wire x1="86.36" y1="53.34" x2="88.9" y2="53.34" width="0.1524" layer="91" grouprefs="CAN-CONTROLLER"/>
-<wire x1="88.9" y1="53.34" x2="88.9" y2="43.18" width="0.1524" layer="91" grouprefs="CAN-CONTROLLER"/>
+<wire x1="86.36" y1="48.26" x2="88.9" y2="48.26" width="0.1524" layer="91" grouprefs="CAN-CONTROLLER"/>
+<wire x1="88.9" y1="48.26" x2="88.9" y2="38.1" width="0.1524" layer="91" grouprefs="CAN-CONTROLLER"/>
 <pinref part="GND16" gate="1" pin="GND"/>
 </segment>
 <segment>
@@ -51393,47 +51470,94 @@ In this library you will find logos and images specific to RoboJackets. The part
 <segment>
 <pinref part="GND9" gate="1" pin="GND"/>
 <pinref part="IC3" gate="A" pin="VSS"/>
-<wire x1="33.02" y1="43.18" x2="33.02" y2="50.8" width="0.1524" layer="91" grouprefs="CAN-CONTROLLER"/>
-<wire x1="33.02" y1="50.8" x2="35.56" y2="50.8" width="0.1524" layer="91" grouprefs="CAN-CONTROLLER"/>
+<wire x1="33.02" y1="38.1" x2="33.02" y2="45.72" width="0.1524" layer="91" grouprefs="CAN-CONTROLLER"/>
+<wire x1="33.02" y1="45.72" x2="35.56" y2="45.72" width="0.1524" layer="91" grouprefs="CAN-CONTROLLER"/>
+</segment>
+<segment>
+<pinref part="C8" gate="G$1" pin="2"/>
+<wire x1="93.98" y1="88.9" x2="93.98" y2="86.36" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<wire x1="93.98" y1="86.36" x2="99.06" y2="86.36" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<wire x1="99.06" y1="86.36" x2="99.06" y2="83.82" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<junction x="99.06" y="86.36" grouprefs="MICROCONTROLLER"/>
+<pinref part="GND18" gate="1" pin="GND"/>
+<pinref part="C12" gate="G$1" pin="2"/>
+<wire x1="104.14" y1="88.9" x2="104.14" y2="86.36" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<wire x1="104.14" y1="86.36" x2="99.06" y2="86.36" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+</segment>
+<segment>
+<pinref part="GND21" gate="1" pin="GND"/>
+<pinref part="IC4" gate="G$1" pin="GND"/>
+<wire x1="119.38" y1="76.2" x2="119.38" y2="101.6" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<wire x1="119.38" y1="101.6" x2="119.38" y2="104.14" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<wire x1="119.38" y1="104.14" x2="119.38" y2="129.54" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<wire x1="119.38" y1="129.54" x2="127" y2="129.54" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<pinref part="IC4" gate="G$1" pin="GND@2"/>
+<wire x1="119.38" y1="101.6" x2="127" y2="101.6" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<junction x="119.38" y="101.6" grouprefs="MICROCONTROLLER"/>
+<pinref part="IC4" gate="G$1" pin="GND@1"/>
+<wire x1="119.38" y1="104.14" x2="127" y2="104.14" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<junction x="119.38" y="104.14" grouprefs="MICROCONTROLLER"/>
+</segment>
+<segment>
+<pinref part="C13" gate="G$1" pin="2"/>
+<pinref part="GND22" gate="1" pin="GND"/>
+<wire x1="86.36" y1="76.2" x2="86.36" y2="81.28" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+</segment>
+<segment>
+<pinref part="X3" gate="G$1" pin="2"/>
+<wire x1="88.9" y1="114.3" x2="86.36" y2="114.3" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<wire x1="86.36" y1="114.3" x2="86.36" y2="111.76" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<pinref part="GND23" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="C14" gate="G$1" pin="2"/>
+<pinref part="GND24" gate="1" pin="GND"/>
+<wire x1="68.58" y1="76.2" x2="68.58" y2="81.28" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
 </segment>
 </net>
 <net name="SCK" class="0">
 <segment>
-<wire x1="165.1" y1="134.62" x2="144.78" y2="134.62" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
-<pinref part="IC2" gate="G$1" pin="(SCK)PB5"/>
-<label x="147.32" y="134.62" size="1.778" layer="97" grouprefs="MICROCONTROLLER"/>
-<label x="165.1" y="134.62" size="1.27" layer="95" xref="yes" grouprefs="MICROCONTROLLER"/>
+<wire x1="238.76" y1="147.32" x2="226.06" y2="147.32" width="0.1524" layer="91" grouprefs="ICSP-HEADER"/>
+<pinref part="ICSP" gate="A" pin="3"/>
+<label x="226.06" y="147.32" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="ICSP-HEADER"/>
 </segment>
 <segment>
-<wire x1="210.82" y1="134.62" x2="198.12" y2="134.62" width="0.1524" layer="91" grouprefs="ICSP-HEADER"/>
-<pinref part="ICSP" gate="A" pin="3"/>
-<label x="198.12" y="134.62" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="ICSP-HEADER"/>
+<label x="177.8" y="76.2" size="1.778" layer="97" grouprefs="MICROCONTROLLER"/>
+</segment>
+<segment>
+<wire x1="195.58" y1="76.2" x2="175.26" y2="76.2" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<label x="195.58" y="76.2" size="1.27" layer="95" xref="yes" grouprefs="MICROCONTROLLER"/>
+<pinref part="IC4" gate="G$1" pin="PB5(SCK)"/>
 </segment>
 </net>
 <net name="MISO" class="0">
 <segment>
-<wire x1="165.1" y1="132.08" x2="144.78" y2="132.08" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
-<pinref part="IC2" gate="G$1" pin="(MISO)PB4"/>
-<label x="147.32" y="132.08" size="1.778" layer="97" grouprefs="MICROCONTROLLER"/>
-<label x="165.1" y="132.08" size="1.27" layer="95" xref="yes" grouprefs="MICROCONTROLLER"/>
+<wire x1="238.76" y1="149.86" x2="226.06" y2="149.86" width="0.1524" layer="91" grouprefs="ICSP-HEADER"/>
+<pinref part="ICSP" gate="A" pin="1"/>
+<label x="226.06" y="149.86" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="ICSP-HEADER"/>
 </segment>
 <segment>
-<wire x1="210.82" y1="137.16" x2="198.12" y2="137.16" width="0.1524" layer="91" grouprefs="ICSP-HEADER"/>
-<pinref part="ICSP" gate="A" pin="1"/>
-<label x="198.12" y="137.16" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="ICSP-HEADER"/>
+<label x="177.8" y="78.74" size="1.778" layer="97" grouprefs="MICROCONTROLLER"/>
+</segment>
+<segment>
+<wire x1="195.58" y1="78.74" x2="175.26" y2="78.74" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<label x="195.58" y="78.74" size="1.27" layer="95" xref="yes" grouprefs="MICROCONTROLLER"/>
+<pinref part="IC4" gate="G$1" pin="PB4(MISO)"/>
 </segment>
 </net>
 <net name="MOSI" class="0">
 <segment>
-<wire x1="165.1" y1="129.54" x2="144.78" y2="129.54" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
-<pinref part="IC2" gate="G$1" pin="(MOSI)PB3"/>
-<label x="147.32" y="129.54" size="1.778" layer="97" grouprefs="MICROCONTROLLER"/>
-<label x="165.1" y="129.54" size="1.27" layer="95" xref="yes" grouprefs="MICROCONTROLLER"/>
+<wire x1="246.38" y1="147.32" x2="261.62" y2="147.32" width="0.1524" layer="91" grouprefs="ICSP-HEADER"/>
+<pinref part="ICSP" gate="A" pin="4"/>
+<label x="261.62" y="147.32" size="1.27" layer="95" xref="yes" grouprefs="ICSP-HEADER"/>
 </segment>
 <segment>
-<wire x1="218.44" y1="134.62" x2="233.68" y2="134.62" width="0.1524" layer="91" grouprefs="ICSP-HEADER"/>
-<pinref part="ICSP" gate="A" pin="4"/>
-<label x="233.68" y="134.62" size="1.27" layer="95" xref="yes" grouprefs="ICSP-HEADER"/>
+<label x="177.8" y="81.28" size="1.778" layer="97" grouprefs="MICROCONTROLLER"/>
+</segment>
+<segment>
+<wire x1="195.58" y1="81.28" x2="175.26" y2="81.28" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<label x="195.58" y="81.28" size="1.27" layer="95" xref="yes" grouprefs="MICROCONTROLLER"/>
+<pinref part="IC4" gate="G$1" pin="PB3(MOSI/OC2)"/>
 </segment>
 </net>
 <net name="BOOT" class="0">
@@ -51468,14 +51592,14 @@ In this library you will find logos and images specific to RoboJackets. The part
 </net>
 <net name="LED_DATA" class="0">
 <segment>
-<label x="200.66" y="99.06" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="NEOPIXEL-OUT"/>
+<label x="223.52" y="185.42" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="NEOPIXEL-OUT"/>
 <pinref part="R7" gate="G$1" pin="1"/>
-<wire x1="200.8124" y1="99.06" x2="205.74" y2="99.06" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
+<wire x1="223.6724" y1="185.42" x2="228.6" y2="185.42" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
 </segment>
 <segment>
-<pinref part="IC2" gate="G$1" pin="(OC1)PB1"/>
-<wire x1="144.78" y1="124.46" x2="164.9476" y2="124.46" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
-<label x="165.1" y="124.46" size="1.27" layer="95" xref="yes" grouprefs="MICROCONTROLLER"/>
+<wire x1="175.26" y1="132.08" x2="185.2676" y2="132.08" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<label x="185.42" y="132.08" size="1.27" layer="95" xref="yes" grouprefs="MICROCONTROLLER"/>
+<pinref part="IC4" gate="G$1" pin="PC1(ADC1)"/>
 </segment>
 </net>
 <net name="+12V" class="1">
@@ -51497,48 +51621,15 @@ In this library you will find logos and images specific to RoboJackets. The part
 <net name="N$1" class="0">
 <segment>
 <pinref part="JP1" gate="A" pin="2"/>
-<wire x1="215.9" y1="99.06" x2="226.06" y2="99.06" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
+<wire x1="238.76" y1="185.42" x2="248.92" y2="185.42" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
 <pinref part="R7" gate="G$1" pin="2"/>
-</segment>
-</net>
-<net name="XTAL2" class="0">
-<segment>
-<pinref part="X2" gate="G$1" pin="1"/>
-<wire x1="106.68" y1="127" x2="93.98" y2="127" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
-<pinref part="R5" gate="G$1" pin="2"/>
-<wire x1="83.82" y1="127" x2="78.74" y2="127" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
-<wire x1="83.82" y1="127" x2="83.82" y2="129.54" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
-<wire x1="83.82" y1="129.54" x2="88.9" y2="129.54" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
-<wire x1="88.9" y1="129.54" x2="93.98" y2="129.54" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
-<wire x1="93.98" y1="129.54" x2="93.98" y2="127" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
-<junction x="88.9" y="129.54" grouprefs="MICROCONTROLLER"/>
-<pinref part="IC2" gate="G$1" pin="XTAL2"/>
-</segment>
-</net>
-<net name="XTAL1" class="0">
-<segment>
-<pinref part="X2" gate="G$1" pin="3"/>
-<wire x1="78.74" y1="121.92" x2="83.82" y2="121.92" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
-<pinref part="R5" gate="G$1" pin="1"/>
-<wire x1="93.98" y1="121.92" x2="106.68" y2="121.92" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
-<wire x1="93.98" y1="121.92" x2="93.98" y2="119.38" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
-<wire x1="93.98" y1="119.38" x2="88.9" y2="119.38" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
-<wire x1="88.9" y1="119.38" x2="83.82" y2="119.38" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
-<wire x1="83.82" y1="119.38" x2="83.82" y2="121.92" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
-<junction x="88.9" y="119.38" grouprefs="MICROCONTROLLER"/>
-<pinref part="IC2" gate="G$1" pin="XTAL1"/>
 </segment>
 </net>
 <net name="!RESET" class="0">
 <segment>
-<wire x1="106.68" y1="134.62" x2="96.52" y2="134.62" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
-<label x="96.52" y="134.62" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="MICROCONTROLLER"/>
-<pinref part="IC2" gate="G$1" pin="RESET"/>
-</segment>
-<segment>
-<wire x1="210.82" y1="132.08" x2="198.12" y2="132.08" width="0.1524" layer="91" grouprefs="ICSP-HEADER"/>
+<wire x1="238.76" y1="144.78" x2="226.06" y2="144.78" width="0.1524" layer="91" grouprefs="ICSP-HEADER"/>
 <pinref part="ICSP" gate="A" pin="5"/>
-<label x="198.12" y="132.08" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="ICSP-HEADER"/>
+<label x="226.06" y="144.78" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="ICSP-HEADER"/>
 </segment>
 <segment>
 <wire x1="27.94" y1="121.92" x2="30.48" y2="121.92" width="0.1524" layer="91" grouprefs="RESET-SWITCH"/>
@@ -51556,116 +51647,120 @@ In this library you will find logos and images specific to RoboJackets. The part
 <pinref part="R4" gate="G$1" pin="1"/>
 <pinref part="C11" gate="G$1" pin="2"/>
 </segment>
+<segment>
+<wire x1="127" y1="134.62" x2="116.84" y2="134.62" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<label x="116.84" y="134.62" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="MICROCONTROLLER"/>
+<pinref part="IC4" gate="G$1" pin="PC6(/RESET)"/>
+</segment>
 </net>
 <net name="AREF" class="0">
 <segment>
-<wire x1="106.68" y1="116.84" x2="96.52" y2="116.84" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
-<label x="96.52" y="116.84" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="MICROCONTROLLER"/>
-<pinref part="IC2" gate="G$1" pin="AREF"/>
+<pinref part="C13" gate="G$1" pin="1"/>
+<wire x1="86.36" y1="88.9" x2="86.36" y2="91.44" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<wire x1="86.36" y1="91.44" x2="81.28" y2="91.44" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<label x="81.28" y="91.44" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="MICROCONTROLLER"/>
 </segment>
 <segment>
-<pinref part="C10" gate="G$1" pin="1"/>
-<wire x1="68.58" y1="96.52" x2="68.58" y2="99.06" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
-<wire x1="68.58" y1="99.06" x2="63.5" y2="99.06" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
-<label x="63.5" y="99.06" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="MICROCONTROLLER"/>
+<wire x1="127" y1="127" x2="116.84" y2="127" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<label x="116.84" y="127" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="MICROCONTROLLER"/>
+<pinref part="IC4" gate="G$1" pin="AREF"/>
 </segment>
 </net>
 <net name="AVCC" class="0">
 <segment>
-<pinref part="C9" gate="G$1" pin="1"/>
-<pinref part="L2" gate="G$1" pin="1"/>
-<wire x1="86.36" y1="104.14" x2="86.36" y2="111.76" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
-<wire x1="86.36" y1="111.76" x2="76.2" y2="111.76" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
-<wire x1="86.36" y1="111.76" x2="96.52" y2="111.76" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
-<wire x1="96.52" y1="111.76" x2="96.52" y2="114.3" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
-<junction x="86.36" y="111.76" grouprefs="MICROCONTROLLER"/>
-<wire x1="96.52" y1="114.3" x2="106.68" y2="114.3" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
-<label x="96.52" y="114.3" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="MICROCONTROLLER"/>
-<pinref part="IC2" gate="G$1" pin="AVCC"/>
+<pinref part="L3" gate="G$1" pin="1"/>
+<wire x1="93.98" y1="124.46" x2="127" y2="124.46" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<pinref part="IC4" gate="G$1" pin="AVCC"/>
+</segment>
+<segment>
+<pinref part="C14" gate="G$1" pin="1"/>
+<wire x1="68.58" y1="88.9" x2="68.58" y2="91.44" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<wire x1="68.58" y1="91.44" x2="63.5" y2="91.44" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<label x="63.5" y="91.44" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="MICROCONTROLLER"/>
 </segment>
 </net>
 <net name="PWR_LED" class="0">
 <segment>
-<wire x1="215.9" y1="190.5" x2="210.82" y2="190.5" width="0.1524" layer="91" grouprefs="LEDS"/>
+<wire x1="243.84" y1="121.92" x2="238.76" y2="121.92" width="0.1524" layer="91" grouprefs="LEDS"/>
 <pinref part="ON" gate="G$1" pin="A"/>
 <pinref part="R3" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="STAT1_LED" class="0">
 <segment>
-<wire x1="215.9" y1="177.8" x2="210.82" y2="177.8" width="0.1524" layer="91" grouprefs="LEDS"/>
+<wire x1="243.84" y1="109.22" x2="238.76" y2="109.22" width="0.1524" layer="91" grouprefs="LEDS"/>
 <pinref part="D2" gate="G$1" pin="A"/>
 <pinref part="R6" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="STAT2_LED" class="0">
 <segment>
-<wire x1="215.9" y1="165.1" x2="210.82" y2="165.1" width="0.1524" layer="91" grouprefs="LEDS"/>
+<wire x1="243.84" y1="96.52" x2="238.76" y2="96.52" width="0.1524" layer="91" grouprefs="LEDS"/>
 <pinref part="D3" gate="G$1" pin="A"/>
 <pinref part="R8" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="STAT1" class="1">
 <segment>
-<wire x1="195.58" y1="177.8" x2="200.66" y2="177.8" width="0.1524" layer="91" grouprefs="LEDS"/>
-<label x="195.58" y="177.8" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="LEDS"/>
+<wire x1="223.52" y1="109.22" x2="228.6" y2="109.22" width="0.1524" layer="91" grouprefs="LEDS"/>
+<label x="223.52" y="109.22" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="LEDS"/>
 <pinref part="R6" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<wire x1="144.78" y1="91.44" x2="152.4" y2="91.44" width="0.1524" layer="91"/>
-<label x="152.4" y="91.44" size="1.27" layer="95" xref="yes"/>
-<pinref part="IC2" gate="G$1" pin="(T0)PD4"/>
+<wire x1="175.26" y1="129.54" x2="185.42" y2="129.54" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<label x="185.42" y="129.54" size="1.27" layer="95" xref="yes" grouprefs="MICROCONTROLLER"/>
+<pinref part="IC4" gate="G$1" pin="PC2(ADC2)"/>
 </segment>
 </net>
 <net name="STAT2" class="1">
 <segment>
-<wire x1="195.58" y1="165.1" x2="200.66" y2="165.1" width="0.1524" layer="91" grouprefs="LEDS"/>
-<label x="195.58" y="165.1" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="LEDS"/>
+<wire x1="223.52" y1="96.52" x2="228.6" y2="96.52" width="0.1524" layer="91" grouprefs="LEDS"/>
+<label x="223.52" y="96.52" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="LEDS"/>
 <pinref part="R8" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<wire x1="144.78" y1="88.9" x2="152.4" y2="88.9" width="0.1524" layer="91"/>
-<label x="152.4" y="88.9" size="1.27" layer="95" xref="yes"/>
-<pinref part="IC2" gate="G$1" pin="(INT1)PD3"/>
+<wire x1="175.26" y1="127" x2="185.42" y2="127" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<label x="185.42" y="127" size="1.27" layer="95" xref="yes" grouprefs="MICROCONTROLLER"/>
+<pinref part="IC4" gate="G$1" pin="PC3(ADC3)"/>
 </segment>
 </net>
 <net name="MBED_CAN_RD/1.5C" class="0">
 <segment>
 <pinref part="IC3" gate="A" pin="TXD"/>
-<wire x1="35.56" y1="53.34" x2="27.94" y2="53.34" width="0.1524" layer="91" grouprefs="CAN-CONTROLLER"/>
-<label x="27.94" y="53.34" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="CAN-CONTROLLER"/>
+<wire x1="35.56" y1="48.26" x2="27.94" y2="48.26" width="0.1524" layer="91" grouprefs="CAN-CONTROLLER"/>
+<label x="27.94" y="48.26" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="CAN-CONTROLLER"/>
 </segment>
 <segment>
-<wire x1="144.78" y1="81.28" x2="152.4" y2="81.28" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
-<label x="152.4" y="81.28" size="1.27" layer="95" xref="yes" grouprefs="MICROCONTROLLER"/>
-<pinref part="IC2" gate="G$1" pin="(RXD)PD0"/>
+<wire x1="175.26" y1="111.76" x2="185.42" y2="111.76" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<label x="185.42" y="111.76" size="1.27" layer="95" xref="yes" grouprefs="MICROCONTROLLER"/>
+<pinref part="IC4" gate="G$1" pin="PD0(RXD)"/>
 </segment>
 </net>
 <net name="MBED_CAN_TD/1.5C" class="0">
 <segment>
 <pinref part="IC3" gate="A" pin="RXD"/>
-<wire x1="35.56" y1="45.72" x2="27.94" y2="45.72" width="0.1524" layer="91" grouprefs="CAN-CONTROLLER"/>
-<label x="27.94" y="45.72" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="CAN-CONTROLLER"/>
+<wire x1="35.56" y1="40.64" x2="27.94" y2="40.64" width="0.1524" layer="91" grouprefs="CAN-CONTROLLER"/>
+<label x="27.94" y="40.64" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="CAN-CONTROLLER"/>
 </segment>
 <segment>
-<wire x1="144.78" y1="83.82" x2="152.4" y2="83.82" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
-<label x="152.4" y="83.82" size="1.27" layer="95" xref="yes" grouprefs="MICROCONTROLLER"/>
-<pinref part="IC2" gate="G$1" pin="(TXD)PD1"/>
+<wire x1="175.26" y1="109.22" x2="185.42" y2="109.22" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<label x="185.42" y="109.22" size="1.27" layer="95" xref="yes" grouprefs="MICROCONTROLLER"/>
+<pinref part="IC4" gate="G$1" pin="PD1(TXD)"/>
 </segment>
 </net>
 <net name="CAN_P" class="0">
 <segment>
 <pinref part="IC3" gate="A" pin="CANH"/>
-<wire x1="86.36" y1="50.8" x2="91.44" y2="50.8" width="0.1524" layer="91" grouprefs="CAN-CONTROLLER"/>
-<label x="114.3" y="55.88" size="1.27" layer="95" xref="yes" grouprefs="CAN-CONTROLLER"/>
+<wire x1="86.36" y1="45.72" x2="91.44" y2="45.72" width="0.1524" layer="91" grouprefs="CAN-CONTROLLER"/>
+<label x="114.3" y="50.8" size="1.27" layer="95" xref="yes" grouprefs="CAN-CONTROLLER"/>
 <pinref part="R9" gate="G$1" pin="2"/>
-<wire x1="91.44" y1="50.8" x2="91.44" y2="55.88" width="0.1524" layer="91" grouprefs="CAN-CONTROLLER"/>
-<wire x1="91.44" y1="55.88" x2="99.06" y2="55.88" width="0.1524" layer="91" grouprefs="CAN-CONTROLLER"/>
+<wire x1="91.44" y1="45.72" x2="91.44" y2="50.8" width="0.1524" layer="91" grouprefs="CAN-CONTROLLER"/>
+<wire x1="91.44" y1="50.8" x2="99.06" y2="50.8" width="0.1524" layer="91" grouprefs="CAN-CONTROLLER"/>
 <pinref part="R10" gate="G$1" pin="2"/>
-<wire x1="99.06" y1="55.88" x2="106.68" y2="55.88" width="0.1524" layer="91" grouprefs="CAN-CONTROLLER"/>
-<junction x="99.06" y="55.88" grouprefs="CAN-CONTROLLER"/>
-<wire x1="106.68" y1="55.88" x2="114.3" y2="55.88" width="0.1524" layer="91" grouprefs="CAN-CONTROLLER"/>
-<junction x="106.68" y="55.88" grouprefs="CAN-CONTROLLER"/>
+<wire x1="99.06" y1="50.8" x2="106.68" y2="50.8" width="0.1524" layer="91" grouprefs="CAN-CONTROLLER"/>
+<junction x="99.06" y="50.8" grouprefs="CAN-CONTROLLER"/>
+<wire x1="106.68" y1="50.8" x2="114.3" y2="50.8" width="0.1524" layer="91" grouprefs="CAN-CONTROLLER"/>
+<junction x="106.68" y="50.8" grouprefs="CAN-CONTROLLER"/>
 </segment>
 <segment>
 <pinref part="J4" gate="G$1" pin="3"/>
@@ -51676,21 +51771,49 @@ In this library you will find logos and images specific to RoboJackets. The part
 <net name="CAN_N" class="0">
 <segment>
 <pinref part="IC3" gate="A" pin="CANL"/>
-<wire x1="86.36" y1="48.26" x2="91.44" y2="48.26" width="0.1524" layer="91" grouprefs="CAN-CONTROLLER"/>
-<label x="114.3" y="45.72" size="1.27" layer="95" xref="yes" grouprefs="CAN-CONTROLLER"/>
-<wire x1="91.44" y1="48.26" x2="91.44" y2="45.72" width="0.1524" layer="91" grouprefs="CAN-CONTROLLER"/>
+<wire x1="86.36" y1="43.18" x2="91.44" y2="43.18" width="0.1524" layer="91" grouprefs="CAN-CONTROLLER"/>
+<label x="114.3" y="40.64" size="1.27" layer="95" xref="yes" grouprefs="CAN-CONTROLLER"/>
+<wire x1="91.44" y1="43.18" x2="91.44" y2="40.64" width="0.1524" layer="91" grouprefs="CAN-CONTROLLER"/>
 <pinref part="R9" gate="G$1" pin="1"/>
-<wire x1="91.44" y1="45.72" x2="99.06" y2="45.72" width="0.1524" layer="91" grouprefs="CAN-CONTROLLER"/>
+<wire x1="91.44" y1="40.64" x2="99.06" y2="40.64" width="0.1524" layer="91" grouprefs="CAN-CONTROLLER"/>
 <pinref part="R10" gate="G$1" pin="1"/>
-<wire x1="99.06" y1="45.72" x2="106.68" y2="45.72" width="0.1524" layer="91" grouprefs="CAN-CONTROLLER"/>
-<junction x="99.06" y="45.72" grouprefs="CAN-CONTROLLER"/>
-<wire x1="106.68" y1="45.72" x2="114.3" y2="45.72" width="0.1524" layer="91" grouprefs="CAN-CONTROLLER"/>
-<junction x="106.68" y="45.72" grouprefs="CAN-CONTROLLER"/>
+<wire x1="99.06" y1="40.64" x2="106.68" y2="40.64" width="0.1524" layer="91" grouprefs="CAN-CONTROLLER"/>
+<junction x="99.06" y="40.64" grouprefs="CAN-CONTROLLER"/>
+<wire x1="106.68" y1="40.64" x2="114.3" y2="40.64" width="0.1524" layer="91" grouprefs="CAN-CONTROLLER"/>
+<junction x="106.68" y="40.64" grouprefs="CAN-CONTROLLER"/>
 </segment>
 <segment>
 <pinref part="J4" gate="G$1" pin="4"/>
 <wire x1="20.32" y1="78.74" x2="22.86" y2="78.74" width="0.1524" layer="91" grouprefs="CAN-CONNECTOR"/>
 <label x="22.86" y="78.74" size="1.27" layer="95" xref="yes" grouprefs="CAN-CONNECTOR"/>
+</segment>
+</net>
+<net name="XTAL5" class="0">
+<segment>
+<pinref part="X3" gate="G$1" pin="1"/>
+<wire x1="127" y1="116.84" x2="111.76" y2="116.84" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<pinref part="R12" gate="G$1" pin="2"/>
+<wire x1="101.6" y1="116.84" x2="96.52" y2="116.84" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<wire x1="101.6" y1="116.84" x2="101.6" y2="119.38" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<wire x1="101.6" y1="119.38" x2="106.68" y2="119.38" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<wire x1="106.68" y1="119.38" x2="111.76" y2="119.38" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<wire x1="111.76" y1="119.38" x2="111.76" y2="116.84" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<junction x="106.68" y="119.38" grouprefs="MICROCONTROLLER"/>
+<pinref part="IC4" gate="G$1" pin="PB6(XTAL1/TOSC1)"/>
+</segment>
+</net>
+<net name="XTAL6" class="0">
+<segment>
+<pinref part="X3" gate="G$1" pin="3"/>
+<wire x1="96.52" y1="111.76" x2="101.6" y2="111.76" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<pinref part="R12" gate="G$1" pin="1"/>
+<wire x1="111.76" y1="111.76" x2="127" y2="111.76" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<wire x1="111.76" y1="111.76" x2="111.76" y2="109.22" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<wire x1="111.76" y1="109.22" x2="106.68" y2="109.22" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<wire x1="106.68" y1="109.22" x2="101.6" y2="109.22" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<wire x1="101.6" y1="109.22" x2="101.6" y2="111.76" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
+<junction x="106.68" y="109.22" grouprefs="MICROCONTROLLER"/>
+<pinref part="IC4" gate="G$1" pin="PB7(XTAL2/TOSC2)"/>
 </segment>
 </net>
 </nets>

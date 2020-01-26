@@ -111,34 +111,13 @@
 <layer number="130" name="SMDSTROOK" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="131" name="tAdjust" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="132" name="bAdjust" color="7" fill="1" visible="yes" active="yes"/>
-<<<<<<< Updated upstream
 <layer number="144" name="Drill_legend" color="7" fill="1" visible="yes" active="yes"/>
-=======
-<layer number="133" name="bottom_silk" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="134" name="silk_top" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="135" name="silk_bottom" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="136" name="silktop" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="137" name="silkbottom" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="138" name="EEE" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="139" name="_tKeepout" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="141" name="ASSEMBLY_TOP" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="143" name="PLACE_BOUND_TOP" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="144" name="Drill_legend" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="145" name="DrillLegend_01-16" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="146" name="DrillLegend_01-20" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="147" name="PIN_NUMBER" color="7" fill="1" visible="yes" active="yes"/>
->>>>>>> Stashed changes
 <layer number="150" name="Notes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="151" name="HeatSink" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="152" name="_bDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="153" name="FabDoc1" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="154" name="FabDoc2" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="155" name="FabDoc3" color="7" fill="1" visible="yes" active="yes"/>
-<<<<<<< Updated upstream
-=======
-<layer number="166" name="AntennaArea" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="168" name="4mmHeightArea" color="7" fill="1" visible="yes" active="yes"/>
->>>>>>> Stashed changes
 <layer number="199" name="Contour" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="200" name="200bmp" color="1" fill="10" visible="yes" active="yes"/>
 <layer number="201" name="201bmp" color="2" fill="10" visible="yes" active="yes"/>
@@ -10647,277 +10626,6 @@ In this library you will find all the connectors used on any of our boards.
 </deviceset>
 </devicesets>
 </library>
-<<<<<<< Updated upstream
-=======
-<library name="IGVC-Remote">
-<packages>
-<package name="ST7920-LCD">
-<circle x="2.5" y="2.5" radius="1.25" width="0.1524" layer="21"/>
-<circle x="2.5" y="52.2" radius="1.25" width="0.1524" layer="21"/>
-<circle x="72.5" y="52.2" radius="1.25" width="0.1524" layer="21"/>
-<circle x="72.5" y="2.5" radius="1.25" width="0.1524" layer="21"/>
-<wire x1="75" y1="52.7" x2="75" y2="0" width="0.1524" layer="21"/>
-<wire x1="75" y1="52.7" x2="0" y2="52.7" width="0.1524" layer="21"/>
-<wire x1="0" y1="52.7" x2="0" y2="0" width="0.1524" layer="21"/>
-<wire x1="0" y1="0" x2="75" y2="0" width="0.1524" layer="21"/>
-<wire x1="14.005" y1="1.23" x2="12.735" y2="1.23" width="0.1524" layer="21"/>
-<wire x1="12.735" y1="1.23" x2="12.1" y2="1.865" width="0.1524" layer="21"/>
-<wire x1="12.1" y1="1.865" x2="12.1" y2="3.135" width="0.1524" layer="21"/>
-<wire x1="12.1" y1="3.135" x2="12.735" y2="3.77" width="0.1524" layer="21"/>
-<wire x1="22.26" y1="1.865" x2="21.625" y2="1.23" width="0.1524" layer="21"/>
-<wire x1="21.625" y1="1.23" x2="20.355" y2="1.23" width="0.1524" layer="21"/>
-<wire x1="14.64" y1="1.865" x2="14.64" y2="3.135" width="0.1524" layer="21"/>
-<wire x1="20.355" y1="3.77" x2="21.625" y2="3.77" width="0.1524" layer="21"/>
-<wire x1="21.625" y1="3.77" x2="22.26" y2="3.135" width="0.1524" layer="21"/>
-<wire x1="14.005" y1="1.23" x2="14.64" y2="1.865" width="0.1524" layer="21"/>
-<wire x1="14.64" y1="3.135" x2="14.005" y2="3.77" width="0.1524" layer="21"/>
-<wire x1="12.735" y1="3.77" x2="14.005" y2="3.77" width="0.1524" layer="21"/>
-<wire x1="26.705" y1="1.23" x2="25.435" y2="1.23" width="0.1524" layer="21"/>
-<wire x1="25.435" y1="1.23" x2="24.8" y2="1.865" width="0.1524" layer="21"/>
-<wire x1="24.8" y1="1.865" x2="24.8" y2="3.135" width="0.1524" layer="21"/>
-<wire x1="24.8" y1="3.135" x2="25.435" y2="3.77" width="0.1524" layer="21"/>
-<wire x1="24.8" y1="1.865" x2="24.165" y2="1.23" width="0.1524" layer="21"/>
-<wire x1="24.165" y1="1.23" x2="22.895" y2="1.23" width="0.1524" layer="21"/>
-<wire x1="22.895" y1="1.23" x2="22.26" y2="1.865" width="0.1524" layer="21"/>
-<wire x1="22.26" y1="1.865" x2="22.26" y2="3.135" width="0.1524" layer="21"/>
-<wire x1="22.26" y1="3.135" x2="22.895" y2="3.77" width="0.1524" layer="21"/>
-<wire x1="22.895" y1="3.77" x2="24.165" y2="3.77" width="0.1524" layer="21"/>
-<wire x1="24.165" y1="3.77" x2="24.8" y2="3.135" width="0.1524" layer="21"/>
-<wire x1="29.88" y1="1.865" x2="29.245" y2="1.23" width="0.1524" layer="21"/>
-<wire x1="29.245" y1="1.23" x2="27.975" y2="1.23" width="0.1524" layer="21"/>
-<wire x1="27.975" y1="1.23" x2="27.34" y2="1.865" width="0.1524" layer="21"/>
-<wire x1="27.34" y1="1.865" x2="27.34" y2="3.135" width="0.1524" layer="21"/>
-<wire x1="27.34" y1="3.135" x2="27.975" y2="3.77" width="0.1524" layer="21"/>
-<wire x1="27.975" y1="3.77" x2="29.245" y2="3.77" width="0.1524" layer="21"/>
-<wire x1="29.245" y1="3.77" x2="29.88" y2="3.135" width="0.1524" layer="21"/>
-<wire x1="26.705" y1="1.23" x2="27.34" y2="1.865" width="0.1524" layer="21"/>
-<wire x1="27.34" y1="3.135" x2="26.705" y2="3.77" width="0.1524" layer="21"/>
-<wire x1="25.435" y1="3.77" x2="26.705" y2="3.77" width="0.1524" layer="21"/>
-<wire x1="34.325" y1="1.23" x2="33.055" y2="1.23" width="0.1524" layer="21"/>
-<wire x1="33.055" y1="1.23" x2="32.42" y2="1.865" width="0.1524" layer="21"/>
-<wire x1="32.42" y1="1.865" x2="32.42" y2="3.135" width="0.1524" layer="21"/>
-<wire x1="32.42" y1="3.135" x2="33.055" y2="3.77" width="0.1524" layer="21"/>
-<wire x1="32.42" y1="1.865" x2="31.785" y2="1.23" width="0.1524" layer="21"/>
-<wire x1="31.785" y1="1.23" x2="30.515" y2="1.23" width="0.1524" layer="21"/>
-<wire x1="30.515" y1="1.23" x2="29.88" y2="1.865" width="0.1524" layer="21"/>
-<wire x1="29.88" y1="1.865" x2="29.88" y2="3.135" width="0.1524" layer="21"/>
-<wire x1="29.88" y1="3.135" x2="30.515" y2="3.77" width="0.1524" layer="21"/>
-<wire x1="30.515" y1="3.77" x2="31.785" y2="3.77" width="0.1524" layer="21"/>
-<wire x1="31.785" y1="3.77" x2="32.42" y2="3.135" width="0.1524" layer="21"/>
-<wire x1="37.5" y1="1.865" x2="36.865" y2="1.23" width="0.1524" layer="21"/>
-<wire x1="36.865" y1="1.23" x2="35.595" y2="1.23" width="0.1524" layer="21"/>
-<wire x1="35.595" y1="1.23" x2="34.96" y2="1.865" width="0.1524" layer="21"/>
-<wire x1="34.96" y1="1.865" x2="34.96" y2="3.135" width="0.1524" layer="21"/>
-<wire x1="34.96" y1="3.135" x2="35.595" y2="3.77" width="0.1524" layer="21"/>
-<wire x1="35.595" y1="3.77" x2="36.865" y2="3.77" width="0.1524" layer="21"/>
-<wire x1="36.865" y1="3.77" x2="37.5" y2="3.135" width="0.1524" layer="21"/>
-<wire x1="34.325" y1="1.23" x2="34.96" y2="1.865" width="0.1524" layer="21"/>
-<wire x1="34.96" y1="3.135" x2="34.325" y2="3.77" width="0.1524" layer="21"/>
-<wire x1="33.055" y1="3.77" x2="34.325" y2="3.77" width="0.1524" layer="21"/>
-<wire x1="41.945" y1="1.23" x2="40.675" y2="1.23" width="0.1524" layer="21"/>
-<wire x1="40.675" y1="1.23" x2="40.04" y2="1.865" width="0.1524" layer="21"/>
-<wire x1="40.04" y1="1.865" x2="40.04" y2="3.135" width="0.1524" layer="21"/>
-<wire x1="40.04" y1="3.135" x2="40.675" y2="3.77" width="0.1524" layer="21"/>
-<wire x1="40.04" y1="1.865" x2="39.405" y2="1.23" width="0.1524" layer="21"/>
-<wire x1="39.405" y1="1.23" x2="38.135" y2="1.23" width="0.1524" layer="21"/>
-<wire x1="38.135" y1="1.23" x2="37.5" y2="1.865" width="0.1524" layer="21"/>
-<wire x1="37.5" y1="1.865" x2="37.5" y2="3.135" width="0.1524" layer="21"/>
-<wire x1="37.5" y1="3.135" x2="38.135" y2="3.77" width="0.1524" layer="21"/>
-<wire x1="38.135" y1="3.77" x2="39.405" y2="3.77" width="0.1524" layer="21"/>
-<wire x1="39.405" y1="3.77" x2="40.04" y2="3.135" width="0.1524" layer="21"/>
-<wire x1="45.12" y1="1.865" x2="44.485" y2="1.23" width="0.1524" layer="21"/>
-<wire x1="44.485" y1="1.23" x2="43.215" y2="1.23" width="0.1524" layer="21"/>
-<wire x1="43.215" y1="1.23" x2="42.58" y2="1.865" width="0.1524" layer="21"/>
-<wire x1="42.58" y1="1.865" x2="42.58" y2="3.135" width="0.1524" layer="21"/>
-<wire x1="42.58" y1="3.135" x2="43.215" y2="3.77" width="0.1524" layer="21"/>
-<wire x1="43.215" y1="3.77" x2="44.485" y2="3.77" width="0.1524" layer="21"/>
-<wire x1="44.485" y1="3.77" x2="45.12" y2="3.135" width="0.1524" layer="21"/>
-<wire x1="41.945" y1="1.23" x2="42.58" y2="1.865" width="0.1524" layer="21"/>
-<wire x1="42.58" y1="3.135" x2="41.945" y2="3.77" width="0.1524" layer="21"/>
-<wire x1="40.675" y1="3.77" x2="41.945" y2="3.77" width="0.1524" layer="21"/>
-<wire x1="49.565" y1="1.23" x2="48.295" y2="1.23" width="0.1524" layer="21"/>
-<wire x1="48.295" y1="1.23" x2="47.66" y2="1.865" width="0.1524" layer="21"/>
-<wire x1="47.66" y1="1.865" x2="47.66" y2="3.135" width="0.1524" layer="21"/>
-<wire x1="47.66" y1="3.135" x2="48.295" y2="3.77" width="0.1524" layer="21"/>
-<wire x1="47.66" y1="1.865" x2="47.025" y2="1.23" width="0.1524" layer="21"/>
-<wire x1="47.025" y1="1.23" x2="45.755" y2="1.23" width="0.1524" layer="21"/>
-<wire x1="45.755" y1="1.23" x2="45.12" y2="1.865" width="0.1524" layer="21"/>
-<wire x1="45.12" y1="1.865" x2="45.12" y2="3.135" width="0.1524" layer="21"/>
-<wire x1="45.12" y1="3.135" x2="45.755" y2="3.77" width="0.1524" layer="21"/>
-<wire x1="45.755" y1="3.77" x2="47.025" y2="3.77" width="0.1524" layer="21"/>
-<wire x1="47.025" y1="3.77" x2="47.66" y2="3.135" width="0.1524" layer="21"/>
-<wire x1="52.74" y1="1.865" x2="52.105" y2="1.23" width="0.1524" layer="21"/>
-<wire x1="52.105" y1="1.23" x2="50.835" y2="1.23" width="0.1524" layer="21"/>
-<wire x1="50.835" y1="1.23" x2="50.2" y2="1.865" width="0.1524" layer="21"/>
-<wire x1="50.2" y1="1.865" x2="50.2" y2="3.135" width="0.1524" layer="21"/>
-<wire x1="50.2" y1="3.135" x2="50.835" y2="3.77" width="0.1524" layer="21"/>
-<wire x1="50.835" y1="3.77" x2="52.105" y2="3.77" width="0.1524" layer="21"/>
-<wire x1="52.105" y1="3.77" x2="52.74" y2="3.135" width="0.1524" layer="21"/>
-<wire x1="49.565" y1="1.23" x2="50.2" y2="1.865" width="0.1524" layer="21"/>
-<wire x1="50.2" y1="3.135" x2="49.565" y2="3.77" width="0.1524" layer="21"/>
-<wire x1="48.295" y1="3.77" x2="49.565" y2="3.77" width="0.1524" layer="21"/>
-<wire x1="57.185" y1="1.23" x2="55.915" y2="1.23" width="0.1524" layer="21"/>
-<wire x1="55.915" y1="1.23" x2="55.28" y2="1.865" width="0.1524" layer="21"/>
-<wire x1="55.28" y1="1.865" x2="55.28" y2="3.135" width="0.1524" layer="21"/>
-<wire x1="55.28" y1="3.135" x2="55.915" y2="3.77" width="0.1524" layer="21"/>
-<wire x1="55.28" y1="1.865" x2="54.645" y2="1.23" width="0.1524" layer="21"/>
-<wire x1="54.645" y1="1.23" x2="53.375" y2="1.23" width="0.1524" layer="21"/>
-<wire x1="53.375" y1="1.23" x2="52.74" y2="1.865" width="0.1524" layer="21"/>
-<wire x1="52.74" y1="1.865" x2="52.74" y2="3.135" width="0.1524" layer="21"/>
-<wire x1="52.74" y1="3.135" x2="53.375" y2="3.77" width="0.1524" layer="21"/>
-<wire x1="53.375" y1="3.77" x2="54.645" y2="3.77" width="0.1524" layer="21"/>
-<wire x1="54.645" y1="3.77" x2="55.28" y2="3.135" width="0.1524" layer="21"/>
-<wire x1="60.36" y1="1.865" x2="59.725" y2="1.23" width="0.1524" layer="21"/>
-<wire x1="59.725" y1="1.23" x2="58.455" y2="1.23" width="0.1524" layer="21"/>
-<wire x1="58.455" y1="1.23" x2="57.82" y2="1.865" width="0.1524" layer="21"/>
-<wire x1="57.82" y1="1.865" x2="57.82" y2="3.135" width="0.1524" layer="21"/>
-<wire x1="57.82" y1="3.135" x2="58.455" y2="3.77" width="0.1524" layer="21"/>
-<wire x1="58.455" y1="3.77" x2="59.725" y2="3.77" width="0.1524" layer="21"/>
-<wire x1="59.725" y1="3.77" x2="60.36" y2="3.135" width="0.1524" layer="21"/>
-<wire x1="57.185" y1="1.23" x2="57.82" y2="1.865" width="0.1524" layer="21"/>
-<wire x1="57.82" y1="3.135" x2="57.185" y2="3.77" width="0.1524" layer="21"/>
-<wire x1="55.915" y1="3.77" x2="57.185" y2="3.77" width="0.1524" layer="21"/>
-<wire x1="64.805" y1="1.23" x2="63.535" y2="1.23" width="0.1524" layer="21"/>
-<wire x1="63.535" y1="1.23" x2="62.9" y2="1.865" width="0.1524" layer="21"/>
-<wire x1="62.9" y1="1.865" x2="62.9" y2="3.135" width="0.1524" layer="21"/>
-<wire x1="62.9" y1="3.135" x2="63.535" y2="3.77" width="0.1524" layer="21"/>
-<wire x1="62.9" y1="1.865" x2="62.265" y2="1.23" width="0.1524" layer="21"/>
-<wire x1="62.265" y1="1.23" x2="60.995" y2="1.23" width="0.1524" layer="21"/>
-<wire x1="60.995" y1="1.23" x2="60.36" y2="1.865" width="0.1524" layer="21"/>
-<wire x1="60.36" y1="1.865" x2="60.36" y2="3.135" width="0.1524" layer="21"/>
-<wire x1="60.36" y1="3.135" x2="60.995" y2="3.77" width="0.1524" layer="21"/>
-<wire x1="60.995" y1="3.77" x2="62.265" y2="3.77" width="0.1524" layer="21"/>
-<wire x1="62.265" y1="3.77" x2="62.9" y2="3.135" width="0.1524" layer="21"/>
-<wire x1="65.44" y1="1.865" x2="65.44" y2="3.135" width="0.1524" layer="21"/>
-<wire x1="64.805" y1="1.23" x2="65.44" y2="1.865" width="0.1524" layer="21"/>
-<wire x1="65.44" y1="3.135" x2="64.805" y2="3.77" width="0.1524" layer="21"/>
-<wire x1="63.535" y1="3.77" x2="64.805" y2="3.77" width="0.1524" layer="21"/>
-<wire x1="11.465" y1="1.23" x2="10.195" y2="1.23" width="0.1524" layer="21"/>
-<wire x1="10.195" y1="1.23" x2="9.56" y2="1.865" width="0.1524" layer="21"/>
-<wire x1="9.56" y1="1.865" x2="9.56" y2="3.135" width="0.1524" layer="21"/>
-<wire x1="9.56" y1="3.135" x2="10.195" y2="3.77" width="0.1524" layer="21"/>
-<wire x1="11.465" y1="1.23" x2="12.1" y2="1.865" width="0.1524" layer="21"/>
-<wire x1="12.1" y1="3.135" x2="11.465" y2="3.77" width="0.1524" layer="21"/>
-<wire x1="10.195" y1="3.77" x2="11.465" y2="3.77" width="0.1524" layer="21"/>
-<pad name="1" x="64.17" y="2.5" drill="1.016" shape="long" rot="R270"/>
-<pad name="2" x="61.63" y="2.5" drill="1.016" shape="long" rot="R270"/>
-<pad name="3" x="59.09" y="2.5" drill="1.016" shape="long" rot="R270"/>
-<pad name="4" x="56.55" y="2.5" drill="1.016" shape="long" rot="R270"/>
-<pad name="5" x="54.01" y="2.5" drill="1.016" shape="long" rot="R270"/>
-<pad name="6" x="51.47" y="2.5" drill="1.016" shape="long" rot="R270"/>
-<pad name="7" x="48.93" y="2.5" drill="1.016" shape="long" rot="R270"/>
-<pad name="8" x="46.39" y="2.5" drill="1.016" shape="long" rot="R270"/>
-<pad name="9" x="43.85" y="2.5" drill="1.016" shape="long" rot="R270"/>
-<pad name="10" x="41.31" y="2.5" drill="1.016" shape="long" rot="R270"/>
-<pad name="11" x="38.77" y="2.5" drill="1.016" shape="long" rot="R270"/>
-<pad name="12" x="36.23" y="2.5" drill="1.016" shape="long" rot="R270"/>
-<pad name="13" x="33.69" y="2.5" drill="1.016" shape="long" rot="R270"/>
-<pad name="14" x="31.15" y="2.5" drill="1.016" shape="long" rot="R270"/>
-<pad name="15" x="28.61" y="2.5" drill="1.016" shape="long" rot="R270"/>
-<pad name="16" x="26.07" y="2.5" drill="1.016" shape="long" rot="R270"/>
-<pad name="17" x="23.53" y="2.5" drill="1.016" shape="long" rot="R270"/>
-<pad name="18" x="20.99" y="2.5" drill="1.016" shape="long" rot="R270"/>
-<pad name="19" x="13.37" y="2.5" drill="1.016" shape="long" rot="R270"/>
-<pad name="20" x="10.83" y="2.5" drill="1.016" shape="long" rot="R270"/>
-<text x="-0.1762" y="-2.0212" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="-0.1" y="-4.485" size="1.27" layer="27">&gt;VALUE</text>
-<rectangle x1="13.116" y1="2.246" x2="13.624" y2="2.754" layer="51" rot="R180"/>
-<rectangle x1="20.736" y1="2.246" x2="21.244" y2="2.754" layer="51" rot="R180"/>
-<rectangle x1="23.276" y1="2.246" x2="23.784" y2="2.754" layer="51" rot="R180"/>
-<rectangle x1="25.816" y1="2.246" x2="26.324" y2="2.754" layer="51" rot="R180"/>
-<rectangle x1="28.356" y1="2.246" x2="28.864" y2="2.754" layer="51" rot="R180"/>
-<rectangle x1="30.896" y1="2.246" x2="31.404" y2="2.754" layer="51" rot="R180"/>
-<rectangle x1="33.436" y1="2.246" x2="33.944" y2="2.754" layer="51" rot="R180"/>
-<rectangle x1="35.976" y1="2.246" x2="36.484" y2="2.754" layer="51" rot="R180"/>
-<rectangle x1="38.516" y1="2.246" x2="39.024" y2="2.754" layer="51" rot="R180"/>
-<rectangle x1="41.056" y1="2.246" x2="41.564" y2="2.754" layer="51" rot="R180"/>
-<rectangle x1="43.596" y1="2.246" x2="44.104" y2="2.754" layer="51" rot="R180"/>
-<rectangle x1="46.136" y1="2.246" x2="46.644" y2="2.754" layer="51" rot="R180"/>
-<rectangle x1="48.676" y1="2.246" x2="49.184" y2="2.754" layer="51" rot="R180"/>
-<rectangle x1="51.216" y1="2.246" x2="51.724" y2="2.754" layer="51" rot="R180"/>
-<rectangle x1="53.756" y1="2.246" x2="54.264" y2="2.754" layer="51" rot="R180"/>
-<rectangle x1="56.296" y1="2.246" x2="56.804" y2="2.754" layer="51" rot="R180"/>
-<rectangle x1="58.836" y1="2.246" x2="59.344" y2="2.754" layer="51" rot="R180"/>
-<rectangle x1="61.376" y1="2.246" x2="61.884" y2="2.754" layer="51" rot="R180"/>
-<rectangle x1="63.916" y1="2.246" x2="64.424" y2="2.754" layer="51" rot="R180"/>
-<rectangle x1="10.576" y1="2.246" x2="11.084" y2="2.754" layer="51" rot="R180"/>
-<wire x1="2.2" y1="49.8" x2="2.2" y2="5.2" width="0.127" layer="21"/>
-<wire x1="2.2" y1="5.2" x2="72.8" y2="5.2" width="0.127" layer="21"/>
-<wire x1="72.8" y1="5.2" x2="72.8" y2="49.8" width="0.127" layer="21"/>
-<wire x1="72.8" y1="49.8" x2="2.2" y2="49.8" width="0.127" layer="21"/>
-<wire x1="20.355" y1="1.23" x2="19.72" y2="1.865" width="0.1524" layer="21"/>
-<wire x1="19.72" y1="1.865" x2="19.72" y2="3.135" width="0.1524" layer="21"/>
-<wire x1="19.72" y1="3.135" x2="20.355" y2="3.77" width="0.1524" layer="21"/>
-</package>
-</packages>
-<symbols>
-<symbol name="PINHD20">
-<wire x1="-6.35" y1="-27.94" x2="1.27" y2="-27.94" width="0.4064" layer="94"/>
-<wire x1="1.27" y1="-27.94" x2="1.27" y2="25.4" width="0.4064" layer="94"/>
-<wire x1="1.27" y1="25.4" x2="-6.35" y2="25.4" width="0.4064" layer="94"/>
-<wire x1="-6.35" y1="25.4" x2="-6.35" y2="-27.94" width="0.4064" layer="94"/>
-<text x="-6.35" y="26.035" size="1.778" layer="95">&gt;NAME</text>
-<text x="-6.35" y="-30.48" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="1" x="-2.54" y="22.86" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="2" x="-2.54" y="20.32" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="3" x="-2.54" y="17.78" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="4" x="-2.54" y="15.24" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="5" x="-2.54" y="12.7" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="6" x="-2.54" y="10.16" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="7" x="-2.54" y="7.62" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="8" x="-2.54" y="5.08" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="9" x="-2.54" y="2.54" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="10" x="-2.54" y="0" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="11" x="-2.54" y="-2.54" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="12" x="-2.54" y="-5.08" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="13" x="-2.54" y="-7.62" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="14" x="-2.54" y="-10.16" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="15" x="-2.54" y="-12.7" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="16" x="-2.54" y="-15.24" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="17" x="-2.54" y="-17.78" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="18" x="-2.54" y="-20.32" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="19" x="-2.54" y="-22.86" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="20" x="-2.54" y="-25.4" visible="pad" length="short" direction="pas" function="dot"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="ST7920" prefix="U">
-<gates>
-<gate name="G$1" symbol="PINHD20" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="ST7920-LCD">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="10" pad="10"/>
-<connect gate="G$1" pin="11" pad="11"/>
-<connect gate="G$1" pin="12" pad="12"/>
-<connect gate="G$1" pin="13" pad="13"/>
-<connect gate="G$1" pin="14" pad="14"/>
-<connect gate="G$1" pin="15" pad="15"/>
-<connect gate="G$1" pin="16" pad="16"/>
-<connect gate="G$1" pin="17" pad="17"/>
-<connect gate="G$1" pin="18" pad="18"/>
-<connect gate="G$1" pin="19" pad="19"/>
-<connect gate="G$1" pin="2" pad="2"/>
-<connect gate="G$1" pin="20" pad="20"/>
-<connect gate="G$1" pin="3" pad="3"/>
-<connect gate="G$1" pin="4" pad="4"/>
-<connect gate="G$1" pin="5" pad="5"/>
-<connect gate="G$1" pin="6" pad="6"/>
-<connect gate="G$1" pin="7" pad="7"/>
-<connect gate="G$1" pin="8" pad="8"/>
-<connect gate="G$1" pin="9" pad="9"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
->>>>>>> Stashed changes
 </libraries>
 <attributes>
 </attributes>
@@ -10931,7 +10639,6 @@ In this library you will find all the connectors used on any of our boards.
 <part name="J1" library="MastPanel" deviceset="HRS-1B-14-GA" device=""/>
 <part name="P+3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="P+2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
-<<<<<<< Updated upstream
 <part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="20kOh"/>
 <part name="P+4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="P+5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
@@ -10945,11 +10652,6 @@ In this library you will find all the connectors used on any of our boards.
 <part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-=======
-<part name="P+11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
-<part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="GND3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
->>>>>>> Stashed changes
 <part name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="10uF"/>
 <part name="C2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="10uF"/>
 <part name="C3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="10uF"/>
@@ -10976,32 +10678,14 @@ In this library you will find all the connectors used on any of our boards.
 <part name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="120"/>
 <part name="R4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="120"/>
 <part name="U1" library="MastPanel" deviceset="ATMEGA328P-AUR" device=""/>
-<<<<<<< Updated upstream
 <part name="J2" library="MastPanel" deviceset="HRS-1B-14-GA" device=""/>
 <part name="J3" library="MastPanel" deviceset="HRS-1B-14-GA" device=""/>
-=======
->>>>>>> Stashed changes
 <part name="R5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="100"/>
 <part name="R6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="100"/>
 <part name="R7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="100"/>
 <part name="R8" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="100"/>
 <part name="R9" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="100"/>
 <part name="R10" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="100"/>
-<<<<<<< Updated upstream
-=======
-<part name="U2" library="IGVC-Remote" deviceset="ST7920" device=""/>
-<part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
-<part name="R11" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="20kOh"/>
-<part name="P+6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
-<part name="GND8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="U4" library="IGVC-Remote" deviceset="ST7920" device=""/>
-<part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="P+8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
-<part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="20kOh"/>
-<part name="P+9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
-<part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
->>>>>>> Stashed changes
 </parts>
 <sheets>
 <sheet>
@@ -11018,7 +10702,6 @@ In this library you will find all the connectors used on any of our boards.
 <instance part="P+2" gate="1" x="-50.8" y="-6.35" smashed="yes">
 <attribute name="VALUE" x="-46.99" y="-8.89" size="1.778" layer="96" rot="R90"/>
 </instance>
-<<<<<<< Updated upstream
 <instance part="R1" gate="G$1" x="-114.3" y="-35.56" smashed="yes">
 <attribute name="NAME" x="-118.11" y="-34.0614" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-118.11" y="-38.862" size="1.778" layer="96"/>
@@ -11042,18 +10725,12 @@ In this library you will find all the connectors used on any of our boards.
 <attribute name="NAME" x="-118.11" y="18.0086" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-118.11" y="13.208" size="1.778" layer="96"/>
 </instance>
-=======
-<instance part="P+11" gate="1" x="152.4" y="-41.91" smashed="yes">
-<attribute name="VALUE" x="156.21" y="-46.99" size="1.778" layer="96" rot="R90"/>
-</instance>
->>>>>>> Stashed changes
 <instance part="GND2" gate="1" x="-12.7" y="-21.59" smashed="yes">
 <attribute name="VALUE" x="-15.24" y="-24.13" size="1.778" layer="96"/>
 </instance>
 <instance part="GND3" gate="1" x="147.32" y="-40.64" smashed="yes">
 <attribute name="VALUE" x="144.78" y="-43.18" size="1.778" layer="96"/>
 </instance>
-<<<<<<< Updated upstream
 <instance part="GND4" gate="1" x="-111.76" y="8.89" smashed="yes">
 <attribute name="VALUE" x="-114.3" y="6.35" size="1.778" layer="96"/>
 </instance>
@@ -11119,61 +10796,6 @@ In this library you will find all the connectors used on any of our boards.
 </instance>
 <instance part="GND11" gate="1" x="-39.37" y="38.1" smashed="yes">
 <attribute name="VALUE" x="-40.64" y="35.56" size="1.778" layer="96"/>
-=======
-<instance part="C1" gate="G$1" x="-48.26" y="46.99" smashed="yes">
-<attribute name="NAME" x="-46.736" y="47.371" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-46.736" y="42.291" size="1.778" layer="96"/>
-</instance>
-<instance part="C2" gate="G$1" x="-48.26" y="30.48" smashed="yes">
-<attribute name="NAME" x="-46.736" y="30.861" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-46.736" y="25.781" size="1.778" layer="96"/>
-</instance>
-<instance part="C3" gate="G$1" x="-48.26" y="13.97" smashed="yes">
-<attribute name="NAME" x="-46.736" y="14.351" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-46.736" y="9.271" size="1.778" layer="96"/>
-</instance>
-<instance part="C4" gate="G$1" x="-36.83" y="46.99" smashed="yes">
-<attribute name="NAME" x="-35.306" y="47.371" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-35.306" y="42.291" size="1.778" layer="96"/>
-</instance>
-<instance part="C5" gate="G$1" x="-36.83" y="30.48" smashed="yes">
-<attribute name="NAME" x="-35.306" y="30.861" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-35.306" y="25.781" size="1.778" layer="96"/>
-</instance>
-<instance part="C6" gate="G$1" x="-36.83" y="13.97" smashed="yes">
-<attribute name="NAME" x="-35.306" y="14.351" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-35.306" y="9.271" size="1.778" layer="96"/>
-</instance>
-<instance part="C7" gate="G$1" x="-25.4" y="46.99" smashed="yes">
-<attribute name="NAME" x="-23.876" y="47.371" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-23.876" y="42.291" size="1.778" layer="96"/>
-</instance>
-<instance part="C8" gate="G$1" x="-25.4" y="30.48" smashed="yes">
-<attribute name="NAME" x="-23.876" y="30.861" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-23.876" y="25.781" size="1.778" layer="96"/>
-</instance>
-<instance part="C9" gate="G$1" x="-25.4" y="13.97" smashed="yes">
-<attribute name="NAME" x="-23.876" y="14.351" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-23.876" y="9.271" size="1.778" layer="96"/>
-</instance>
-<instance part="P+13" gate="1" x="-13.97" y="52.07" smashed="yes">
-<attribute name="VALUE" x="-10.16" y="46.99" size="1.778" layer="96" rot="R90"/>
-</instance>
-<instance part="P+14" gate="1" x="-13.97" y="35.56" smashed="yes">
-<attribute name="VALUE" x="-10.16" y="30.48" size="1.778" layer="96" rot="R90"/>
-</instance>
-<instance part="P+15" gate="1" x="-13.97" y="19.05" smashed="yes">
-<attribute name="VALUE" x="-10.16" y="13.97" size="1.778" layer="96" rot="R90"/>
-</instance>
-<instance part="GND9" gate="1" x="-13.97" y="6.35" smashed="yes">
-<attribute name="VALUE" x="-15.24" y="3.81" size="1.778" layer="96"/>
-</instance>
-<instance part="GND10" gate="1" x="-13.97" y="22.86" smashed="yes">
-<attribute name="VALUE" x="-15.24" y="20.32" size="1.778" layer="96"/>
-</instance>
-<instance part="GND11" gate="1" x="-13.97" y="39.37" smashed="yes">
-<attribute name="VALUE" x="-15.24" y="36.83" size="1.778" layer="96"/>
->>>>>>> Stashed changes
 </instance>
 <instance part="GND17" gate="1" x="-35.56" y="-44.45" smashed="yes">
 <attribute name="VALUE" x="-36.83" y="-46.99" size="1.778" layer="96"/>
@@ -11213,7 +10835,6 @@ In this library you will find all the connectors used on any of our boards.
 <attribute name="NAME" x="66.3956" y="0.2286" size="2.0828" layer="95" ratio="6" rot="SR0"/>
 <attribute name="VALUE" x="65.7606" y="-2.3114" size="2.0828" layer="96" ratio="6" rot="SR0"/>
 </instance>
-<<<<<<< Updated upstream
 <instance part="J2" gate="HRS-1B-14-GA" x="-120.65" y="27.94" smashed="yes" rot="R180">
 <attribute name="NAME" x="-120.65" y="8.89" size="1.27" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-120.65" y="49.53" size="1.27" layer="96" rot="R180"/>
@@ -11222,8 +10843,6 @@ In this library you will find all the connectors used on any of our boards.
 <attribute name="NAME" x="-120.65" y="-43.18" size="1.27" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-120.65" y="-2.54" size="1.27" layer="96" rot="R180"/>
 </instance>
-=======
->>>>>>> Stashed changes
 <instance part="R5" gate="G$1" x="-58.42" y="-13.97" smashed="yes">
 <attribute name="NAME" x="-62.23" y="-12.4714" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-57.15" y="-16.002" size="1.778" layer="96"/>
@@ -11248,47 +10867,6 @@ In this library you will find all the connectors used on any of our boards.
 <attribute name="NAME" x="-62.23" y="-37.8714" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-62.23" y="-42.672" size="1.778" layer="96"/>
 </instance>
-<<<<<<< Updated upstream
-=======
-<instance part="U2" gate="G$1" x="-121.92" y="33.02" smashed="yes">
-<attribute name="NAME" x="-128.27" y="59.055" size="1.778" layer="95"/>
-</instance>
-<instance part="GND1" gate="1" x="-102.87" y="53.34" smashed="yes">
-<attribute name="VALUE" x="-105.41" y="50.8" size="1.778" layer="96"/>
-</instance>
-<instance part="P+1" gate="1" x="-110.49" y="55.88" smashed="yes">
-<attribute name="VALUE" x="-106.68" y="50.8" size="1.778" layer="96" rot="R90"/>
-</instance>
-<instance part="R11" gate="G$1" x="-113.03" y="12.7" smashed="yes">
-<attribute name="NAME" x="-116.84" y="14.1986" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-116.84" y="9.398" size="1.778" layer="96"/>
-</instance>
-<instance part="P+6" gate="1" x="-106.68" y="12.7" smashed="yes">
-<attribute name="VALUE" x="-102.87" y="7.62" size="1.778" layer="96" rot="R90"/>
-</instance>
-<instance part="GND8" gate="1" x="-113.03" y="5.08" smashed="yes">
-<attribute name="VALUE" x="-115.57" y="2.54" size="1.778" layer="96"/>
-</instance>
-<instance part="U4" gate="G$1" x="-121.92" y="-25.4" smashed="yes">
-<attribute name="NAME" x="-128.27" y="0.635" size="1.778" layer="95"/>
-</instance>
-<instance part="GND4" gate="1" x="-100.33" y="-5.08" smashed="yes">
-<attribute name="VALUE" x="-102.87" y="-7.62" size="1.778" layer="96"/>
-</instance>
-<instance part="P+8" gate="1" x="-107.95" y="-2.54" smashed="yes">
-<attribute name="VALUE" x="-104.14" y="-7.62" size="1.778" layer="96" rot="R90"/>
-</instance>
-<instance part="R2" gate="G$1" x="-113.03" y="-45.72" smashed="yes">
-<attribute name="NAME" x="-116.84" y="-44.2214" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-116.84" y="-49.022" size="1.778" layer="96"/>
-</instance>
-<instance part="P+9" gate="1" x="-106.68" y="-45.72" smashed="yes">
-<attribute name="VALUE" x="-102.87" y="-50.8" size="1.778" layer="96" rot="R90"/>
-</instance>
-<instance part="GND5" gate="1" x="-111.76" y="-54.61" smashed="yes">
-<attribute name="VALUE" x="-114.3" y="-57.15" size="1.778" layer="96"/>
-</instance>
->>>>>>> Stashed changes
 </instances>
 <busses>
 </busses>
@@ -11300,7 +10878,6 @@ In this library you will find all the connectors used on any of our boards.
 <wire x1="-68.58" y1="-8.89" x2="-50.8" y2="-8.89" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<<<<<<< Updated upstream
 <pinref part="P+5" gate="1" pin="+5V"/>
 <pinref part="J3" gate="HRS-1B-14-GA" pin="2"/>
 <wire x1="-123.19" y1="-10.16" x2="-111.76" y2="-10.16" width="0.1524" layer="91"/>
@@ -11316,15 +10893,12 @@ In this library you will find all the connectors used on any of our boards.
 <pinref part="J2" gate="HRS-1B-14-GA" pin="13"/>
 </segment>
 <segment>
-=======
->>>>>>> Stashed changes
 <pinref part="P+11" gate="1" pin="+5V"/>
 <wire x1="139.7" y1="-44.45" x2="152.4" y2="-44.45" width="0.1524" layer="91"/>
 <pinref part="U1" gate="A" pin="AVCC"/>
 </segment>
 <segment>
 <pinref part="C1" gate="G$1" pin="1"/>
-<<<<<<< Updated upstream
 <wire x1="-73.66" y1="48.26" x2="-62.23" y2="48.26" width="0.1524" layer="91"/>
 <pinref part="P+13" gate="1" pin="+5V"/>
 <pinref part="C4" gate="G$1" pin="1"/>
@@ -11343,31 +10917,10 @@ In this library you will find all the connectors used on any of our boards.
 <pinref part="C8" gate="G$1" pin="1"/>
 <wire x1="-50.8" y1="31.75" x2="-39.37" y2="31.75" width="0.1524" layer="91"/>
 <junction x="-50.8" y="31.75"/>
-=======
-<wire x1="-48.26" y1="49.53" x2="-36.83" y2="49.53" width="0.1524" layer="91"/>
-<pinref part="P+13" gate="1" pin="+5V"/>
-<pinref part="C4" gate="G$1" pin="1"/>
-<wire x1="-36.83" y1="49.53" x2="-25.4" y2="49.53" width="0.1524" layer="91"/>
-<junction x="-36.83" y="49.53"/>
-<pinref part="C7" gate="G$1" pin="1"/>
-<wire x1="-25.4" y1="49.53" x2="-13.97" y2="49.53" width="0.1524" layer="91"/>
-<junction x="-25.4" y="49.53"/>
-</segment>
-<segment>
-<pinref part="C2" gate="G$1" pin="1"/>
-<wire x1="-48.26" y1="33.02" x2="-36.83" y2="33.02" width="0.1524" layer="91"/>
-<pinref part="C5" gate="G$1" pin="1"/>
-<wire x1="-36.83" y1="33.02" x2="-25.4" y2="33.02" width="0.1524" layer="91"/>
-<junction x="-36.83" y="33.02"/>
-<pinref part="C8" gate="G$1" pin="1"/>
-<wire x1="-25.4" y1="33.02" x2="-13.97" y2="33.02" width="0.1524" layer="91"/>
-<junction x="-25.4" y="33.02"/>
->>>>>>> Stashed changes
 <pinref part="P+14" gate="1" pin="+5V"/>
 </segment>
 <segment>
 <pinref part="C3" gate="G$1" pin="1"/>
-<<<<<<< Updated upstream
 <wire x1="-73.66" y1="15.24" x2="-62.23" y2="15.24" width="0.1524" layer="91"/>
 <pinref part="C6" gate="G$1" pin="1"/>
 <wire x1="-62.23" y1="15.24" x2="-50.8" y2="15.24" width="0.1524" layer="91"/>
@@ -11375,15 +10928,6 @@ In this library you will find all the connectors used on any of our boards.
 <pinref part="C9" gate="G$1" pin="1"/>
 <wire x1="-50.8" y1="15.24" x2="-39.37" y2="15.24" width="0.1524" layer="91"/>
 <junction x="-50.8" y="15.24"/>
-=======
-<wire x1="-48.26" y1="16.51" x2="-36.83" y2="16.51" width="0.1524" layer="91"/>
-<pinref part="C6" gate="G$1" pin="1"/>
-<wire x1="-36.83" y1="16.51" x2="-25.4" y2="16.51" width="0.1524" layer="91"/>
-<junction x="-36.83" y="16.51"/>
-<pinref part="C9" gate="G$1" pin="1"/>
-<wire x1="-25.4" y1="16.51" x2="-13.97" y2="16.51" width="0.1524" layer="91"/>
-<junction x="-25.4" y="16.51"/>
->>>>>>> Stashed changes
 <pinref part="P+15" gate="1" pin="+5V"/>
 </segment>
 <segment>
@@ -11399,14 +10943,11 @@ In this library you will find all the connectors used on any of our boards.
 <pinref part="P+7" gate="1" pin="+5V"/>
 </segment>
 <segment>
-<<<<<<< Updated upstream
 <pinref part="P+8" gate="1" pin="+5V"/>
 <wire x1="-111.76" y1="41.91" x2="-123.19" y2="41.91" width="0.1524" layer="91"/>
 <pinref part="J2" gate="HRS-1B-14-GA" pin="2"/>
 </segment>
 <segment>
-=======
->>>>>>> Stashed changes
 <pinref part="U1" gate="A" pin="VCC"/>
 <wire x1="2.54" y1="-21.59" x2="-5.08" y2="-21.59" width="0.1524" layer="91"/>
 <pinref part="P+3" gate="1" pin="+5V"/>
@@ -11416,7 +10957,6 @@ In this library you will find all the connectors used on any of our boards.
 <pinref part="U1" gate="A" pin="VCC_2"/>
 <wire x1="2.54" y1="-16.51" x2="-5.08" y2="-16.51" width="0.1524" layer="91"/>
 </segment>
-<<<<<<< Updated upstream
 </net>
 <net name="GND" class="0">
 <segment>
@@ -11443,44 +10983,10 @@ In this library you will find all the connectors used on any of our boards.
 <pinref part="C9" gate="G$1" pin="2"/>
 <wire x1="-50.8" y1="7.62" x2="-39.37" y2="7.62" width="0.1524" layer="91"/>
 <junction x="-50.8" y="7.62"/>
-=======
-<segment>
-<pinref part="U2" gate="G$1" pin="2"/>
-<pinref part="P+1" gate="1" pin="+5V"/>
-<wire x1="-124.46" y1="53.34" x2="-110.49" y2="53.34" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="U2" gate="G$1" pin="19"/>
-<pinref part="P+6" gate="1" pin="+5V"/>
-<wire x1="-124.46" y1="10.16" x2="-106.68" y2="10.16" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="U4" gate="G$1" pin="2"/>
-<pinref part="P+8" gate="1" pin="+5V"/>
-<wire x1="-124.46" y1="-5.08" x2="-107.95" y2="-5.08" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="U4" gate="G$1" pin="19"/>
-<wire x1="-124.46" y1="-48.26" x2="-106.68" y2="-48.26" width="0.1524" layer="91"/>
-<pinref part="P+9" gate="1" pin="+5V"/>
-</segment>
-</net>
-<net name="GND" class="0">
-<segment>
-<pinref part="C3" gate="G$1" pin="2"/>
-<wire x1="-48.26" y1="8.89" x2="-36.83" y2="8.89" width="0.1524" layer="91"/>
-<pinref part="C6" gate="G$1" pin="2"/>
-<wire x1="-36.83" y1="8.89" x2="-25.4" y2="8.89" width="0.1524" layer="91"/>
-<junction x="-36.83" y="8.89"/>
-<pinref part="C9" gate="G$1" pin="2"/>
-<wire x1="-25.4" y1="8.89" x2="-13.97" y2="8.89" width="0.1524" layer="91"/>
-<junction x="-25.4" y="8.89"/>
->>>>>>> Stashed changes
 <pinref part="GND9" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="C2" gate="G$1" pin="2"/>
-<<<<<<< Updated upstream
 <wire x1="-73.66" y1="24.13" x2="-62.23" y2="24.13" width="0.1524" layer="91"/>
 <pinref part="C5" gate="G$1" pin="2"/>
 <wire x1="-62.23" y1="24.13" x2="-50.8" y2="24.13" width="0.1524" layer="91"/>
@@ -11488,20 +10994,10 @@ In this library you will find all the connectors used on any of our boards.
 <pinref part="C8" gate="G$1" pin="2"/>
 <wire x1="-50.8" y1="24.13" x2="-39.37" y2="24.13" width="0.1524" layer="91"/>
 <junction x="-50.8" y="24.13"/>
-=======
-<wire x1="-48.26" y1="25.4" x2="-36.83" y2="25.4" width="0.1524" layer="91"/>
-<pinref part="C5" gate="G$1" pin="2"/>
-<wire x1="-36.83" y1="25.4" x2="-25.4" y2="25.4" width="0.1524" layer="91"/>
-<junction x="-36.83" y="25.4"/>
-<pinref part="C8" gate="G$1" pin="2"/>
-<wire x1="-25.4" y1="25.4" x2="-13.97" y2="25.4" width="0.1524" layer="91"/>
-<junction x="-25.4" y="25.4"/>
->>>>>>> Stashed changes
 <pinref part="GND10" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="C1" gate="G$1" pin="2"/>
-<<<<<<< Updated upstream
 <wire x1="-73.66" y1="40.64" x2="-62.23" y2="40.64" width="0.1524" layer="91"/>
 <pinref part="C4" gate="G$1" pin="2"/>
 <wire x1="-62.23" y1="40.64" x2="-50.8" y2="40.64" width="0.1524" layer="91"/>
@@ -11509,15 +11005,6 @@ In this library you will find all the connectors used on any of our boards.
 <pinref part="C7" gate="G$1" pin="2"/>
 <wire x1="-50.8" y1="40.64" x2="-39.37" y2="40.64" width="0.1524" layer="91"/>
 <junction x="-50.8" y="40.64"/>
-=======
-<wire x1="-48.26" y1="41.91" x2="-36.83" y2="41.91" width="0.1524" layer="91"/>
-<pinref part="C4" gate="G$1" pin="2"/>
-<wire x1="-36.83" y1="41.91" x2="-25.4" y2="41.91" width="0.1524" layer="91"/>
-<junction x="-36.83" y="41.91"/>
-<pinref part="C7" gate="G$1" pin="2"/>
-<wire x1="-25.4" y1="41.91" x2="-13.97" y2="41.91" width="0.1524" layer="91"/>
-<junction x="-25.4" y="41.91"/>
->>>>>>> Stashed changes
 <pinref part="GND11" gate="1" pin="GND"/>
 </segment>
 <segment>
@@ -11570,14 +11057,11 @@ In this library you will find all the connectors used on any of our boards.
 <pinref part="GND3" gate="1" pin="GND"/>
 </segment>
 <segment>
-<<<<<<< Updated upstream
 <pinref part="GND5" gate="1" pin="GND"/>
 <pinref part="J2" gate="HRS-1B-14-GA" pin="1"/>
 <wire x1="-102.87" y1="44.45" x2="-123.19" y2="44.45" width="0.1524" layer="91"/>
 </segment>
 <segment>
-=======
->>>>>>> Stashed changes
 <pinref part="U1" gate="A" pin="GND_2"/>
 <wire x1="2.54" y1="-13.97" x2="-12.7" y2="-13.97" width="0.1524" layer="91"/>
 <pinref part="GND2" gate="1" pin="GND"/>
@@ -11586,30 +11070,6 @@ In this library you will find all the connectors used on any of our boards.
 <wire x1="2.54" y1="-19.05" x2="-12.7" y2="-19.05" width="0.1524" layer="91"/>
 <junction x="-12.7" y="-19.05"/>
 </segment>
-<<<<<<< Updated upstream
-=======
-<segment>
-<pinref part="U2" gate="G$1" pin="1"/>
-<pinref part="GND1" gate="1" pin="GND"/>
-<wire x1="-124.46" y1="55.88" x2="-102.87" y2="55.88" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="U2" gate="G$1" pin="20"/>
-<wire x1="-124.46" y1="7.62" x2="-113.03" y2="7.62" width="0.1524" layer="91"/>
-<pinref part="GND8" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="U4" gate="G$1" pin="1"/>
-<wire x1="-124.46" y1="-2.54" x2="-100.33" y2="-2.54" width="0.1524" layer="91"/>
-<pinref part="GND4" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="U4" gate="G$1" pin="20"/>
-<wire x1="-124.46" y1="-50.8" x2="-111.76" y2="-50.8" width="0.1524" layer="91"/>
-<wire x1="-111.76" y1="-50.8" x2="-111.76" y2="-52.07" width="0.1524" layer="91"/>
-<pinref part="GND5" gate="1" pin="GND"/>
-</segment>
->>>>>>> Stashed changes
 </net>
 <net name="BUTTON" class="0">
 <segment>
@@ -11623,7 +11083,6 @@ In this library you will find all the connectors used on any of our boards.
 <pinref part="U1" gate="A" pin="PC0_(ADC0/PCINT8)"/>
 </segment>
 </net>
-<<<<<<< Updated upstream
 <net name="N$4" class="0">
 <segment>
 <pinref part="R2" gate="G$1" pin="1"/>
@@ -11638,15 +11097,10 @@ In this library you will find all the connectors used on any of our boards.
 <wire x1="-101.6" y1="19.05" x2="-123.19" y2="19.05" width="0.1524" layer="91"/>
 </segment>
 <segment>
-=======
-<net name="LCD1_RST" class="0">
-<segment>
->>>>>>> Stashed changes
 <pinref part="U1" gate="A" pin="(PCINT1/OC1A)_PB1"/>
 <wire x1="2.54" y1="-39.37" x2="1.27" y2="-39.37" width="0.1524" layer="91"/>
 <label x="1.27" y="-39.37" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
-<<<<<<< Updated upstream
 </net>
 <net name="LCD2_RST" class="0">
 <segment>
@@ -11654,38 +11108,21 @@ In this library you will find all the connectors used on any of our boards.
 <pinref part="J3" gate="HRS-1B-14-GA" pin="11"/>
 <wire x1="-100.33" y1="-33.02" x2="-123.19" y2="-33.02" width="0.1524" layer="91"/>
 </segment>
-=======
-<segment>
-<pinref part="U2" gate="G$1" pin="17"/>
-<label x="-105.41" y="15.24" size="1.27" layer="95" xref="yes"/>
-<wire x1="-124.46" y1="15.24" x2="-105.41" y2="15.24" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="LCD2_RST" class="0">
->>>>>>> Stashed changes
 <segment>
 <pinref part="U1" gate="A" pin="(PCINT7/XTAL2/TOSC2)_PB7"/>
 <wire x1="2.54" y1="-26.67" x2="1.27" y2="-26.67" width="0.1524" layer="91"/>
 <label x="1.27" y="-26.67" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
-<<<<<<< Updated upstream
 </net>
 <net name="N$9" class="0">
 <segment>
 <pinref part="R1" gate="G$1" pin="1"/>
 <pinref part="J3" gate="HRS-1B-14-GA" pin="12"/>
 <wire x1="-119.38" y1="-35.56" x2="-123.19" y2="-35.56" width="0.1524" layer="91"/>
-=======
-<segment>
-<pinref part="U4" gate="G$1" pin="17"/>
-<wire x1="-124.46" y1="-43.18" x2="-105.41" y2="-43.18" width="0.1524" layer="91"/>
-<label x="-105.41" y="-43.18" size="1.27" layer="95" xref="yes"/>
->>>>>>> Stashed changes
 </segment>
 </net>
 <net name="LCD2_V0" class="0">
 <segment>
-<<<<<<< Updated upstream
 <pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="-109.22" y1="-35.56" x2="-99.06" y2="-35.56" width="0.1524" layer="91"/>
 <label x="-99.06" y="-35.56" size="1.27" layer="95" xref="yes"/>
@@ -11694,21 +11131,10 @@ In this library you will find all the connectors used on any of our boards.
 <label x="-119.38" y="-12.7" size="1.27" layer="95" xref="yes"/>
 <pinref part="J3" gate="HRS-1B-14-GA" pin="3"/>
 <wire x1="-119.38" y1="-12.7" x2="-123.19" y2="-12.7" width="0.1524" layer="91"/>
-=======
-<pinref part="U4" gate="G$1" pin="3"/>
-<wire x1="-124.46" y1="-7.62" x2="-119.38" y2="-7.62" width="0.1524" layer="91"/>
-<label x="-119.38" y="-7.62" size="1.27" layer="95" xref="yes"/>
-</segment>
-<segment>
-<pinref part="R2" gate="G$1" pin="2"/>
-<wire x1="-107.95" y1="-45.72" x2="-104.14" y2="-45.72" width="0.1524" layer="91"/>
-<label x="-104.14" y="-45.72" size="1.27" layer="95" xref="yes"/>
->>>>>>> Stashed changes
 </segment>
 </net>
 <net name="LCD1_V0" class="0">
 <segment>
-<<<<<<< Updated upstream
 <pinref part="R2" gate="G$1" pin="2"/>
 <wire x1="-109.22" y1="16.51" x2="-100.33" y2="16.51" width="0.1524" layer="91"/>
 <label x="-100.33" y="16.51" size="1.27" layer="95" xref="yes"/>
@@ -11717,16 +11143,6 @@ In this library you will find all the connectors used on any of our boards.
 <label x="-119.38" y="39.37" size="1.27" layer="95" xref="yes"/>
 <pinref part="J2" gate="HRS-1B-14-GA" pin="3"/>
 <wire x1="-119.38" y1="39.37" x2="-123.19" y2="39.37" width="0.1524" layer="91"/>
-=======
-<pinref part="U2" gate="G$1" pin="3"/>
-<wire x1="-124.46" y1="50.8" x2="-119.38" y2="50.8" width="0.1524" layer="91"/>
-<label x="-119.38" y="50.8" size="1.27" layer="95" xref="yes"/>
-</segment>
-<segment>
-<pinref part="R11" gate="G$1" pin="2"/>
-<wire x1="-107.95" y1="12.7" x2="-104.14" y2="12.7" width="0.1524" layer="91"/>
-<label x="-104.14" y="12.7" size="1.27" layer="95" xref="yes"/>
->>>>>>> Stashed changes
 </segment>
 </net>
 <net name="LED_CTRL1" class="0">
@@ -11909,19 +11325,15 @@ In this library you will find all the connectors used on any of our boards.
 </net>
 <net name="LCD1_SCLK" class="0">
 <segment>
-<<<<<<< Updated upstream
 <label x="-119.38" y="31.75" size="1.27" layer="95" xref="yes"/>
 <pinref part="J2" gate="HRS-1B-14-GA" pin="6"/>
 <wire x1="-119.38" y1="31.75" x2="-123.19" y2="31.75" width="0.1524" layer="91"/>
 </segment>
 <segment>
-=======
->>>>>>> Stashed changes
 <wire x1="139.7" y1="-46.99" x2="140.97" y2="-46.99" width="0.1524" layer="91"/>
 <label x="140.97" y="-46.99" size="1.27" layer="95" xref="yes"/>
 <pinref part="U1" gate="A" pin="PB5_(SCK/PCINT5)"/>
 </segment>
-<<<<<<< Updated upstream
 </net>
 <net name="LCD2_SCLK" class="0">
 <segment>
@@ -11929,21 +11341,11 @@ In this library you will find all the connectors used on any of our boards.
 <pinref part="J3" gate="HRS-1B-14-GA" pin="6"/>
 <wire x1="-119.38" y1="-20.32" x2="-123.19" y2="-20.32" width="0.1524" layer="91"/>
 </segment>
-=======
-<segment>
-<pinref part="U2" gate="G$1" pin="6"/>
-<wire x1="-124.46" y1="43.18" x2="-119.38" y2="43.18" width="0.1524" layer="91"/>
-<label x="-119.38" y="43.18" size="1.27" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="LCD2_SCLK" class="0">
->>>>>>> Stashed changes
 <segment>
 <wire x1="2.54" y1="-29.21" x2="1.27" y2="-29.21" width="0.1524" layer="91"/>
 <pinref part="U1" gate="A" pin="(PCINT21/OC0B/T1)_PD5"/>
 <label x="1.27" y="-29.21" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
-<<<<<<< Updated upstream
 </net>
 <net name="LCD1_MOSI" class="0">
 <segment>
@@ -11951,21 +11353,11 @@ In this library you will find all the connectors used on any of our boards.
 <pinref part="J2" gate="HRS-1B-14-GA" pin="5"/>
 <wire x1="-119.38" y1="34.29" x2="-123.19" y2="34.29" width="0.1524" layer="91"/>
 </segment>
-=======
-<segment>
-<pinref part="U4" gate="G$1" pin="6"/>
-<wire x1="-124.46" y1="-15.24" x2="-119.38" y2="-15.24" width="0.1524" layer="91"/>
-<label x="-119.38" y="-15.24" size="1.27" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="LCD1_MOSI" class="0">
->>>>>>> Stashed changes
 <segment>
 <pinref part="U1" gate="A" pin="(PCINT3/OC2A/MOSI)_PB3"/>
 <wire x1="2.54" y1="-44.45" x2="1.27" y2="-44.45" width="0.1524" layer="91"/>
 <label x="1.27" y="-44.45" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
-<<<<<<< Updated upstream
 </net>
 <net name="LCD1_SS" class="0">
 <segment>
@@ -11973,21 +11365,11 @@ In this library you will find all the connectors used on any of our boards.
 <pinref part="J2" gate="HRS-1B-14-GA" pin="4"/>
 <wire x1="-119.38" y1="36.83" x2="-123.19" y2="36.83" width="0.1524" layer="91"/>
 </segment>
-=======
-<segment>
-<pinref part="U2" gate="G$1" pin="5"/>
-<wire x1="-124.46" y1="45.72" x2="-119.38" y2="45.72" width="0.1524" layer="91"/>
-<label x="-119.38" y="45.72" size="1.27" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="LCD1_SS" class="0">
->>>>>>> Stashed changes
 <segment>
 <pinref part="U1" gate="A" pin="(PCINT2/SS/OC1B)_PB2"/>
 <wire x1="2.54" y1="-41.91" x2="1.27" y2="-41.91" width="0.1524" layer="91"/>
 <label x="1.27" y="-41.91" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
-<<<<<<< Updated upstream
 </net>
 <net name="LCD2_MOSI" class="0">
 <segment>
@@ -11995,21 +11377,11 @@ In this library you will find all the connectors used on any of our boards.
 <pinref part="J3" gate="HRS-1B-14-GA" pin="5"/>
 <wire x1="-119.38" y1="-17.78" x2="-123.19" y2="-17.78" width="0.1524" layer="91"/>
 </segment>
-=======
-<segment>
-<pinref part="U2" gate="G$1" pin="4"/>
-<wire x1="-124.46" y1="48.26" x2="-119.38" y2="48.26" width="0.1524" layer="91"/>
-<label x="-119.38" y="48.26" size="1.27" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="LCD2_MOSI" class="0">
->>>>>>> Stashed changes
 <segment>
 <pinref part="U1" gate="A" pin="(PCINT22/OC0A/AIN0)_PD6"/>
 <wire x1="2.54" y1="-31.75" x2="1.27" y2="-31.75" width="0.1524" layer="91"/>
 <label x="1.27" y="-31.75" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
-<<<<<<< Updated upstream
 </net>
 <net name="LCD2_SS" class="0">
 <segment>
@@ -12017,42 +11389,11 @@ In this library you will find all the connectors used on any of our boards.
 <pinref part="J3" gate="HRS-1B-14-GA" pin="4"/>
 <wire x1="-119.38" y1="-15.24" x2="-123.19" y2="-15.24" width="0.1524" layer="91"/>
 </segment>
-=======
-<segment>
-<pinref part="U4" gate="G$1" pin="5"/>
-<wire x1="-124.46" y1="-12.7" x2="-119.38" y2="-12.7" width="0.1524" layer="91"/>
-<label x="-119.38" y="-12.7" size="1.27" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="LCD2_SS" class="0">
->>>>>>> Stashed changes
 <segment>
 <pinref part="U1" gate="A" pin="(PCINT23/AIN1)_PD7"/>
 <wire x1="2.54" y1="-34.29" x2="1.27" y2="-34.29" width="0.1524" layer="91"/>
 <label x="1.27" y="-34.29" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
-<<<<<<< Updated upstream
-=======
-<segment>
-<pinref part="U4" gate="G$1" pin="4"/>
-<wire x1="-124.46" y1="-10.16" x2="-119.38" y2="-10.16" width="0.1524" layer="91"/>
-<label x="-119.38" y="-10.16" size="1.27" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="N$1" class="0">
-<segment>
-<pinref part="U2" gate="G$1" pin="18"/>
-<pinref part="R11" gate="G$1" pin="1"/>
-<wire x1="-124.46" y1="12.7" x2="-118.11" y2="12.7" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$2" class="0">
-<segment>
-<pinref part="U4" gate="G$1" pin="18"/>
-<pinref part="R2" gate="G$1" pin="1"/>
-<wire x1="-124.46" y1="-45.72" x2="-118.11" y2="-45.72" width="0.1524" layer="91"/>
-</segment>
->>>>>>> Stashed changes
 </net>
 </nets>
 </sheet>

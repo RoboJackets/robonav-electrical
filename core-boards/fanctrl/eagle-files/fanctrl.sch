@@ -518,6 +518,26 @@ In this library you will find all the connectors used on any of our boards.
 <pad name="4" x="4" y="0" drill="0.8" rot="R180"/>
 <text x="1.11" y="3.42" size="1" layer="25" font="vector" ratio="10" align="bottom-center">&gt;NAME</text>
 </package>
+<package name="2MM-3-H">
+<wire x1="-5" y1="2" x2="-5" y2="-8" width="0.127" layer="21"/>
+<wire x1="-5" y1="-8" x2="5" y2="-8" width="0.127" layer="21"/>
+<wire x1="5" y1="-8" x2="5" y2="2" width="0.127" layer="21"/>
+<wire x1="5" y1="2" x2="-5" y2="2" width="0.127" layer="21"/>
+<pad name="2" x="0" y="0" drill="0.8" rot="R180"/>
+<pad name="1" x="-2" y="0" drill="0.8" shape="square" rot="R180"/>
+<pad name="3" x="2" y="0" drill="0.8" rot="R180"/>
+<text x="0" y="2.5" size="1" layer="25" font="vector" ratio="10" align="bottom-center">&gt;NAME</text>
+</package>
+<package name="2MM-3-V">
+<wire x1="-5" y1="3" x2="-5" y2="-3" width="0.127" layer="21"/>
+<wire x1="-5" y1="-3" x2="5" y2="-3" width="0.127" layer="21"/>
+<wire x1="5" y1="-3" x2="5" y2="3" width="0.127" layer="21"/>
+<wire x1="5" y1="3" x2="-5" y2="3" width="0.127" layer="21"/>
+<pad name="2" x="0" y="0" drill="0.8" rot="R180"/>
+<pad name="1" x="-2" y="0" drill="0.8" shape="square" rot="R180"/>
+<pad name="3" x="2" y="0" drill="0.8" rot="R180"/>
+<text x="-5" y="3.5" size="1" layer="25" font="vector">&gt;NAME</text>
+</package>
 </packages>
 <symbols>
 <symbol name="4-PIN_CONN">
@@ -535,6 +555,20 @@ In this library you will find all the connectors used on any of our boards.
 <wire x1="-5.08" y1="-10.16" x2="2.54" y2="-10.16" width="0.254" layer="94"/>
 <wire x1="2.54" y1="-10.16" x2="2.54" y2="2.54" width="0.254" layer="94"/>
 <wire x1="2.54" y1="2.54" x2="-5.08" y2="2.54" width="0.254" layer="94"/>
+</symbol>
+<symbol name="3-PIN_CONN">
+<circle x="-0.762" y="5.08" radius="0.762" width="0.254" layer="94"/>
+<circle x="-0.762" y="0" radius="0.762" width="0.254" layer="94"/>
+<circle x="-0.762" y="-5.08" radius="0.762" width="0.254" layer="94"/>
+<text x="-5.08" y="10.16" size="1.778" layer="95" font="vector" align="top-left">&gt;NAME</text>
+<text x="-5.08" y="-10.16" size="1.778" layer="96" font="vector">&gt;VALUE</text>
+<pin name="1" x="5.08" y="5.08" visible="pin" length="middle" rot="R180"/>
+<pin name="2" x="5.08" y="0" visible="pin" length="middle" rot="R180"/>
+<pin name="3" x="5.08" y="-5.08" visible="pin" length="middle" rot="R180"/>
+<wire x1="-5.08" y1="-7.62" x2="2.54" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-7.62" x2="2.54" y2="7.62" width="0.254" layer="94"/>
+<wire x1="2.54" y1="7.62" x2="-5.08" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="7.62" x2="-5.08" y2="-7.62" width="0.254" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -574,74 +608,34 @@ In this library you will find all the connectors used on any of our boards.
 </device>
 </devices>
 </deviceset>
-</devicesets>
-</library>
-<library name="con-molex" urn="urn:adsk.eagle:library:165">
-<description>&lt;b&gt;Molex Connectors&lt;/b&gt;&lt;p&gt;
-&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
-<packages>
-<package name="22-23-2031" urn="urn:adsk.eagle:footprint:8078260/1" library_version="4">
-<description>&lt;b&gt;KK® 254 Solid Header, Vertical, with Friction Lock, 3 Circuits, Tin (Sn) Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/022232031_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
-<wire x1="-3.81" y1="3.175" x2="3.81" y2="3.175" width="0.254" layer="21"/>
-<wire x1="3.81" y1="3.175" x2="3.81" y2="1.27" width="0.254" layer="21"/>
-<wire x1="3.81" y1="1.27" x2="3.81" y2="-3.175" width="0.254" layer="21"/>
-<wire x1="3.81" y1="-3.175" x2="-3.81" y2="-3.175" width="0.254" layer="21"/>
-<wire x1="-3.81" y1="-3.175" x2="-3.81" y2="1.27" width="0.254" layer="21"/>
-<wire x1="-3.81" y1="1.27" x2="-3.81" y2="3.175" width="0.254" layer="21"/>
-<wire x1="-3.81" y1="1.27" x2="3.81" y2="1.27" width="0.254" layer="21"/>
-<pad name="1" x="-2.54" y="0" drill="1" shape="long" rot="R90"/>
-<pad name="2" x="0" y="0" drill="1" shape="long" rot="R90"/>
-<pad name="3" x="2.54" y="0" drill="1" shape="long" rot="R90"/>
-<text x="-3.81" y="3.81" size="1.016" layer="25" ratio="10">&gt;NAME</text>
-<text x="-3.81" y="-5.08" size="1.016" layer="27" ratio="10">&gt;VALUE</text>
-</package>
-</packages>
-<packages3d>
-<package3d name="22-23-2031" urn="urn:adsk.eagle:package:8078634/1" type="box" library_version="4">
-<description>&lt;b&gt;KK® 254 Solid Header, Vertical, with Friction Lock, 3 Circuits, Tin (Sn) Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/022232031_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
-<packageinstances>
-<packageinstance name="22-23-2031"/>
-</packageinstances>
-</package3d>
-</packages3d>
-<symbols>
-<symbol name="MV" urn="urn:adsk.eagle:symbol:8078125/1" library_version="4">
-<wire x1="1.27" y1="0" x2="0" y2="0" width="0.6096" layer="94"/>
-<text x="2.54" y="-0.762" size="1.524" layer="95">&gt;NAME</text>
-<text x="-0.762" y="1.397" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="S" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
-</symbol>
-<symbol name="M" urn="urn:adsk.eagle:symbol:8078124/1" library_version="4">
-<wire x1="1.27" y1="0" x2="0" y2="0" width="0.6096" layer="94"/>
-<text x="2.54" y="-0.762" size="1.524" layer="95">&gt;NAME</text>
-<pin name="S" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="22-23-2031" urn="urn:adsk.eagle:component:8078937/2" prefix="X" library_version="4">
-<description>.100" (2.54mm) Center Header - 3 Pin</description>
+<deviceset name="3-PIN_2MM-*" prefix="J">
 <gates>
-<gate name="-1" symbol="MV" x="0" y="2.54" addlevel="always" swaplevel="1"/>
-<gate name="-2" symbol="M" x="0" y="0" addlevel="always" swaplevel="1"/>
-<gate name="-3" symbol="M" x="0" y="-2.54" addlevel="always" swaplevel="1"/>
+<gate name="G$1" symbol="3-PIN_CONN" x="0" y="0" swaplevel="1"/>
 </gates>
 <devices>
-<device name="" package="22-23-2031">
+<device name="H" package="2MM-3-H">
 <connects>
-<connect gate="-1" pin="S" pad="1"/>
-<connect gate="-2" pin="S" pad="2"/>
-<connect gate="-3" pin="S" pad="3"/>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
 </connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:8078634/1"/>
-</package3dinstances>
 <technologies>
 <technology name="">
-<attribute name="MF" value="MOLEX" constant="no"/>
-<attribute name="MPN" value="22-23-2031" constant="no"/>
-<attribute name="OC_FARNELL" value="1462950" constant="no"/>
-<attribute name="OC_NEWARK" value="30C0862" constant="no"/>
-<attribute name="POPULARITY" value="35" constant="no"/>
+<attribute name="PINS" value="3"/>
+<attribute name="PIN_PITCH" value="2.0 mm"/>
+</technology>
+</technologies>
+</device>
+<device name="V" package="2MM-3-V">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PINS" value="3"/>
+<attribute name="PIN_PITCH" value="2.0 mm"/>
 </technology>
 </technologies>
 </device>
@@ -17385,7 +17379,6 @@ type 0309, grid 2.5 mm</description>
 </classes>
 <parts>
 <part name="ATMEGA328" library="Microcontroller" library_urn="urn:adsk.eagle:library:14522412" deviceset="ATMEGA328P-AU" device="" package3d_urn="urn:adsk.eagle:package:10882639/5"/>
-<part name="TEMP-PROBE" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="22-23-2031" device="" package3d_urn="urn:adsk.eagle:package:8078634/1"/>
 <part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
@@ -17448,6 +17441,7 @@ type 0309, grid 2.5 mm</description>
 <part name="P+10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="GND17" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="F3" library="RoboJackets-Connectors" deviceset="4-PIN_2MM-*" device="H"/>
+<part name="J1" library="RoboJackets-Connectors" deviceset="3-PIN_2MM-*" device="H"/>
 </parts>
 <sheets>
 <sheet>
@@ -17487,7 +17481,8 @@ type 0309, grid 2.5 mm</description>
 <text x="177.8" y="83.82" size="6.35" layer="97" font="vector" ratio="12">ON-BOARD TEMP SENSOR</text>
 <wire x1="271.78" y1="91.44" x2="271.78" y2="60.96" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="271.78" y1="129.54" x2="271.78" y2="96.52" width="0.1524" layer="97" style="shortdash"/>
-<text x="193.04" y="119.38" size="1.778" layer="97">4.7K pull-up resistor from data to VCC required by sensor.</text>
+<text x="193.04" y="116.84" size="1.778" layer="97">4.7K pull-up resistor from data
+to VCC required by sensor.</text>
 <text x="10.16" y="137.16" size="1.778" layer="97">2.5K pull-up resistor required
  to read fan tachometer output.</text>
 <text x="10.16" y="116.84" size="1.778" layer="97">12V power splits off from
@@ -17510,16 +17505,6 @@ Max Current: 5mA</text>
 <instances>
 <instance part="ATMEGA328" gate="G$1" x="83.82" y="33.02" smashed="yes">
 <attribute name="MPN" x="53.34" y="60.96" size="1.778" layer="96" font="vector"/>
-</instance>
-<instance part="TEMP-PROBE" gate="-1" x="243.84" y="111.76" smashed="yes">
-<attribute name="NAME" x="246.38" y="110.998" size="1.524" layer="95"/>
-<attribute name="VALUE" x="243.078" y="113.157" size="1.778" layer="96"/>
-</instance>
-<instance part="TEMP-PROBE" gate="-2" x="243.84" y="109.22" smashed="yes">
-<attribute name="NAME" x="246.38" y="108.458" size="1.524" layer="95"/>
-</instance>
-<instance part="TEMP-PROBE" gate="-3" x="243.84" y="106.68" smashed="yes">
-<attribute name="NAME" x="246.38" y="105.918" size="1.524" layer="95"/>
 </instance>
 <instance part="GND2" gate="1" x="238.76" y="101.6" smashed="yes">
 <attribute name="VALUE" x="236.22" y="99.06" size="1.778" layer="96"/>
@@ -17721,6 +17706,10 @@ Max Current: 5mA</text>
 <instance part="F3" gate="G$1" x="231.14" y="149.86" smashed="yes">
 <attribute name="NAME" x="228.6" y="154.94" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
+<instance part="J1" gate="G$1" x="251.46" y="109.22" smashed="yes" rot="R180">
+<attribute name="NAME" x="248.92" y="119.38" size="1.778" layer="95" font="vector" align="top-left"/>
+<attribute name="VALUE" x="248.92" y="99.06" size="1.778" layer="96" font="vector"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -17757,9 +17746,11 @@ Max Current: 5mA</text>
 <net name="GND" class="0">
 <segment>
 <pinref part="GND2" gate="1" pin="GND"/>
-<pinref part="TEMP-PROBE" gate="-3" pin="S"/>
 <wire x1="238.76" y1="104.14" x2="238.76" y2="106.68" width="0.1524" layer="91"/>
-<wire x1="238.76" y1="106.68" x2="241.3" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="238.76" y1="106.68" x2="243.84" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="243.84" y1="106.68" x2="243.84" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="J1" gate="G$1" pin="1"/>
+<wire x1="243.84" y1="104.14" x2="246.38" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="F1" gate="G$1" pin="1"/>
@@ -17898,13 +17889,15 @@ Max Current: 5mA</text>
 </net>
 <net name="+5V" class="0">
 <segment>
-<pinref part="TEMP-PROBE" gate="-1" pin="S"/>
-<wire x1="241.3" y1="111.76" x2="238.76" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="238.76" y1="111.76" x2="238.76" y2="114.3" width="0.1524" layer="91"/>
 <pinref part="P+3" gate="1" pin="+5V"/>
 <pinref part="R8" gate="G$1" pin="2"/>
 <wire x1="236.22" y1="111.76" x2="238.76" y2="111.76" width="0.1524" layer="91"/>
 <junction x="238.76" y="111.76"/>
+<wire x1="238.76" y1="111.76" x2="243.84" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="243.84" y1="111.76" x2="243.84" y2="114.3" width="0.1524" layer="91"/>
+<pinref part="J1" gate="G$1" pin="3"/>
+<wire x1="243.84" y1="114.3" x2="246.38" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="P+4" gate="1" pin="+5V"/>
@@ -18035,8 +18028,8 @@ Max Current: 5mA</text>
 <wire x1="223.52" y1="106.68" x2="236.22" y2="106.68" width="0.1524" layer="91"/>
 <junction x="223.52" y="106.68"/>
 <wire x1="236.22" y1="106.68" x2="236.22" y2="109.22" width="0.1524" layer="91"/>
-<pinref part="TEMP-PROBE" gate="-2" pin="S"/>
-<wire x1="236.22" y1="109.22" x2="241.3" y2="109.22" width="0.1524" layer="91"/>
+<pinref part="J1" gate="G$1" pin="2"/>
+<wire x1="236.22" y1="109.22" x2="246.38" y2="109.22" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="ATMEGA328" gate="G$1" pin="PD2(INT0/PCINT18)"/>

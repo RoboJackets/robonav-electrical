@@ -11621,9 +11621,7 @@ In this library you will find all the connectors used on any of our boards.
 <instance part="P+2" gate="VCC" x="7.62" y="93.98" smashed="yes" rot="R90">
 <attribute name="VALUE" x="10.16" y="91.44" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="P+3" gate="VCC" x="180.34" y="50.8" smashed="yes" rot="R270">
-<attribute name="VALUE" x="180.34" y="53.34" size="1.778" layer="96"/>
-</instance>
+<instance part="P+3" gate="VCC" x="180.34" y="50.8" smashed="yes" rot="R270"/>
 <instance part="FRAME1" gate="G$1" x="-48.26" y="-71.12" smashed="yes"/>
 <instance part="FRAME1" gate="G$2" x="124.46" y="-71.12" smashed="yes">
 <attribute name="LAST_DATE_TIME" x="137.16" y="-69.85" size="2.54" layer="94" font="vector"/>
@@ -11848,7 +11846,7 @@ In this library you will find all the connectors used on any of our boards.
 <wire x1="111.76" y1="15.24" x2="121.92" y2="15.24" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="VCC_COMP" class="0">
+<net name="VCC_ROBOT" class="0">
 <segment>
 <pinref part="U1" gate="A" pin="VS"/>
 <wire x1="106.68" y1="50.8" x2="132.08" y2="50.8" width="0.1524" layer="91"/>
@@ -11868,6 +11866,7 @@ In this library you will find all the connectors used on any of our boards.
 <wire x1="170.18" y1="43.18" x2="170.18" y2="50.8" width="0.1524" layer="91"/>
 <junction x="170.18" y="50.8"/>
 <pinref part="U$6" gate="6T4AWGLUG" pin="J1"/>
+<label x="182.88" y="50.8" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VCC_BATT" class="0">

@@ -168,7 +168,7 @@
 <wire x1="0" y1="63.09" x2="0" y2="0.27" width="0" layer="20"/>
 <text x="30.51" y="51.53" size="1.778" layer="25" rot="R270">WALL</text>
 <text x="37.78" y="23.51" size="1.778" layer="25" rot="R90">BATTERY</text>
-<text x="56.91" y="42.56" size="1.778" layer="25" rot="R270">COMPUTER
+<text x="56.91" y="39.56" size="1.778" layer="25" rot="R270">ROBOT
 </text>
 <text x="51.02" y="51.07" size="1.778" layer="25">RoboJackets IGVC
 Hotswap Board v.1.0</text>
@@ -4995,9 +4995,10 @@ design rules under a new name.</description>
 <wire x1="23.65" y1="21" x2="23.65" y2="26.35" width="0.254" layer="1"/>
 <wire x1="23.65" y1="26.35" x2="23" y2="27" width="0.254" layer="1"/>
 <wire x1="23" y1="27" x2="21" y2="27" width="0.254" layer="1"/>
-<via x="68" y="28" extent="1-16" drill="0.381"/>
-<wire x1="68.35" y1="35" x2="68.35" y2="28.35" width="0.254" layer="1"/>
-<wire x1="68.35" y1="28.35" x2="68" y2="28" width="0.254" layer="1"/>
+<via x="65" y="29" extent="1-16" drill="0.381"/>
+<wire x1="68.35" y1="35" x2="68.35" y2="30.35" width="0.254" layer="1"/>
+<wire x1="68.35" y1="30.35" x2="67" y2="29" width="0.254" layer="1"/>
+<wire x1="67" y1="29" x2="65" y2="29" width="0.254" layer="1"/>
 </signal>
 <signal name="N$4">
 <contactref element="U1" pad="10"/>
@@ -5050,7 +5051,7 @@ design rules under a new name.</description>
 <wire x1="45.585" y1="14.754" x2="45.66" y2="14.679" width="0.1524" layer="1"/>
 <wire x1="45.66" y1="14.679" x2="45.66" y2="10.17" width="0.254" layer="1"/>
 </signal>
-<signal name="VCC_COMP">
+<signal name="VCC_ROBOT">
 <contactref element="U1" pad="8"/>
 <polygon width="0.254" layer="1" thermals="no">
 <vertex x="91" y="54.88"/>

@@ -14295,16 +14295,12 @@ In this library you will find frames that can be used to help organize a schemat
 <part name="P+3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="P+2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="20kOh"/>
-<part name="P+4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
-<part name="P+5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="P+10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="P+11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="20kOh"/>
 <part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="C2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="10uF"/>
 <part name="C3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="10uF"/>
 <part name="C5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="1uF"/>
@@ -14313,10 +14309,8 @@ In this library you will find frames that can be used to help organize a schemat
 <part name="C8" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="0.1uF"/>
 <part name="C9" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="0.1uF"/>
 <part name="P+13" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
-<part name="P+14" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="P+15" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="GND9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="GND10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND17" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="U3" library="MCP2551T" deviceset="MCP2551T-I/SN" device=""/>
@@ -14356,6 +14350,12 @@ In this library you will find frames that can be used to help organize a schemat
 <part name="D3" library="RoboJackets-LEDs" deviceset="LED-SMD" device="" technology="-BLUE" value="BLUE"/>
 <part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
+<part name="P+8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
+<part name="GND10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="P+5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
+<part name="P+4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
+<part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -14371,12 +14371,6 @@ In this library you will find frames that can be used to help organize a schemat
 <instance part="R1" gate="G$1" x="-44.45" y="-40.64" smashed="yes">
 <attribute name="NAME" x="-48.26" y="-39.1414" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-48.26" y="-43.942" size="1.778" layer="96"/>
-</instance>
-<instance part="P+4" gate="1" x="-36.83" y="-40.64" smashed="yes">
-<attribute name="VALUE" x="-33.02" y="-45.72" size="1.778" layer="96" rot="R90"/>
-</instance>
-<instance part="P+5" gate="1" x="-41.91" y="-12.7" smashed="yes">
-<attribute name="VALUE" x="-38.1" y="-17.78" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="P+10" gate="1" x="-36.83" y="8.89" smashed="yes">
 <attribute name="VALUE" x="-33.02" y="3.81" size="1.778" layer="96" rot="R90"/>
@@ -14396,12 +14390,6 @@ In this library you will find frames that can be used to help organize a schemat
 </instance>
 <instance part="GND4" gate="1" x="-41.91" y="1.27" smashed="yes">
 <attribute name="VALUE" x="-44.45" y="-1.27" size="1.778" layer="96"/>
-</instance>
-<instance part="GND6" gate="1" x="-41.91" y="-48.26" smashed="yes">
-<attribute name="VALUE" x="-44.45" y="-50.8" size="1.778" layer="96"/>
-</instance>
-<instance part="GND7" gate="1" x="-33.02" y="-15.24" smashed="yes">
-<attribute name="VALUE" x="-35.56" y="-17.78" size="1.778" layer="96"/>
 </instance>
 <instance part="C2" gate="G$1" x="19.05" y="-76.2" smashed="yes">
 <attribute name="NAME" x="20.574" y="-75.819" size="1.778" layer="95"/>
@@ -14434,17 +14422,11 @@ In this library you will find frames that can be used to help organize a schemat
 <instance part="P+13" gate="1" x="53.34" y="-54.61" smashed="yes">
 <attribute name="VALUE" x="57.15" y="-59.69" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="P+14" gate="1" x="53.34" y="-71.12" smashed="yes">
-<attribute name="VALUE" x="57.15" y="-76.2" size="1.778" layer="96" rot="R90"/>
-</instance>
 <instance part="P+15" gate="1" x="53.34" y="-87.63" smashed="yes">
 <attribute name="VALUE" x="57.15" y="-92.71" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="GND9" gate="1" x="53.34" y="-100.33" smashed="yes">
 <attribute name="VALUE" x="52.07" y="-102.87" size="1.778" layer="96"/>
-</instance>
-<instance part="GND10" gate="1" x="53.34" y="-83.82" smashed="yes">
-<attribute name="VALUE" x="52.07" y="-86.36" size="1.778" layer="96"/>
 </instance>
 <instance part="GND11" gate="1" x="53.34" y="-67.31" smashed="yes">
 <attribute name="VALUE" x="52.07" y="-69.85" size="1.778" layer="96"/>
@@ -14588,6 +14570,24 @@ In this library you will find frames that can be used to help organize a schemat
 <instance part="P+6" gate="1" x="-41.91" y="36.83" smashed="yes">
 <attribute name="VALUE" x="-38.1" y="31.75" size="1.778" layer="96" rot="R90"/>
 </instance>
+<instance part="P+8" gate="1" x="53.34" y="-71.12" smashed="yes">
+<attribute name="VALUE" x="57.15" y="-76.2" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="GND10" gate="1" x="53.34" y="-83.82" smashed="yes">
+<attribute name="VALUE" x="52.07" y="-86.36" size="1.778" layer="96"/>
+</instance>
+<instance part="GND7" gate="1" x="-33.02" y="-15.24" smashed="yes">
+<attribute name="VALUE" x="-35.56" y="-17.78" size="1.778" layer="96"/>
+</instance>
+<instance part="P+5" gate="1" x="-41.91" y="-12.7" smashed="yes">
+<attribute name="VALUE" x="-38.1" y="-17.78" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="P+4" gate="1" x="-36.83" y="-40.64" smashed="yes">
+<attribute name="VALUE" x="-33.02" y="-45.72" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="GND6" gate="1" x="-41.91" y="-48.26" smashed="yes">
+<attribute name="VALUE" x="-44.45" y="-50.8" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -14597,11 +14597,6 @@ In this library you will find frames that can be used to help organize a schemat
 <pinref part="P+2" gate="1" pin="+5V"/>
 <wire x1="-57.15" y1="-64.77" x2="-38.1" y2="-64.77" width="0.1524" layer="91"/>
 <pinref part="JP3" gate="A" pin="1"/>
-</segment>
-<segment>
-<pinref part="P+5" gate="1" pin="+5V"/>
-<wire x1="-57.15" y1="-15.24" x2="-41.91" y2="-15.24" width="0.1524" layer="91"/>
-<pinref part="JP2" gate="A" pin="2"/>
 </segment>
 <segment>
 <pinref part="P+10" gate="1" pin="+5V"/>
@@ -14617,17 +14612,6 @@ In this library you will find frames that can be used to help organize a schemat
 <pinref part="P+13" gate="1" pin="+5V"/>
 <pinref part="C7" gate="G$1" pin="1"/>
 <wire x1="41.91" y1="-57.15" x2="53.34" y2="-57.15" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="C2" gate="G$1" pin="1"/>
-<wire x1="19.05" y1="-73.66" x2="30.48" y2="-73.66" width="0.1524" layer="91"/>
-<pinref part="C5" gate="G$1" pin="1"/>
-<wire x1="30.48" y1="-73.66" x2="41.91" y2="-73.66" width="0.1524" layer="91"/>
-<junction x="30.48" y="-73.66"/>
-<pinref part="C8" gate="G$1" pin="1"/>
-<wire x1="41.91" y1="-73.66" x2="53.34" y2="-73.66" width="0.1524" layer="91"/>
-<junction x="41.91" y="-73.66"/>
-<pinref part="P+14" gate="1" pin="+5V"/>
 </segment>
 <segment>
 <pinref part="C3" gate="G$1" pin="1"/>
@@ -14682,17 +14666,33 @@ In this library you will find frames that can be used to help organize a schemat
 <pinref part="JP1" gate="A" pin="2"/>
 <pinref part="P+6" gate="1" pin="+5V"/>
 </segment>
+<segment>
+<pinref part="C2" gate="G$1" pin="1"/>
+<wire x1="19.05" y1="-73.66" x2="30.48" y2="-73.66" width="0.1524" layer="91"/>
+<pinref part="C5" gate="G$1" pin="1"/>
+<wire x1="30.48" y1="-73.66" x2="41.91" y2="-73.66" width="0.1524" layer="91"/>
+<junction x="30.48" y="-73.66"/>
+<pinref part="C8" gate="G$1" pin="1"/>
+<wire x1="41.91" y1="-73.66" x2="53.34" y2="-73.66" width="0.1524" layer="91"/>
+<junction x="41.91" y="-73.66"/>
+<pinref part="P+8" gate="1" pin="+5V"/>
+</segment>
+<segment>
+<wire x1="-57.15" y1="-15.24" x2="-41.91" y2="-15.24" width="0.1524" layer="91"/>
+<pinref part="JP2" gate="A" pin="2"/>
+<pinref part="P+5" gate="1" pin="+5V"/>
+</segment>
+<segment>
+<wire x1="-57.15" y1="-43.18" x2="-36.83" y2="-43.18" width="0.1524" layer="91"/>
+<pinref part="JP2" gate="A" pin="13"/>
+<pinref part="P+4" gate="1" pin="+5V"/>
+</segment>
 </net>
 <net name="GND" class="0">
 <segment>
 <pinref part="GND4" gate="1" pin="GND"/>
 <wire x1="-57.15" y1="3.81" x2="-41.91" y2="3.81" width="0.1524" layer="91"/>
 <pinref part="JP1" gate="A" pin="14"/>
-</segment>
-<segment>
-<pinref part="GND6" gate="1" pin="GND"/>
-<wire x1="-57.15" y1="-45.72" x2="-41.91" y2="-45.72" width="0.1524" layer="91"/>
-<pinref part="JP2" gate="A" pin="14"/>
 </segment>
 <segment>
 <pinref part="C3" gate="G$1" pin="2"/>
@@ -14704,17 +14704,6 @@ In this library you will find frames that can be used to help organize a schemat
 <wire x1="41.91" y1="-97.79" x2="53.34" y2="-97.79" width="0.1524" layer="91"/>
 <junction x="41.91" y="-97.79"/>
 <pinref part="GND9" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="C2" gate="G$1" pin="2"/>
-<wire x1="19.05" y1="-81.28" x2="30.48" y2="-81.28" width="0.1524" layer="91"/>
-<pinref part="C5" gate="G$1" pin="2"/>
-<wire x1="30.48" y1="-81.28" x2="41.91" y2="-81.28" width="0.1524" layer="91"/>
-<junction x="30.48" y="-81.28"/>
-<pinref part="C8" gate="G$1" pin="2"/>
-<wire x1="41.91" y1="-81.28" x2="53.34" y2="-81.28" width="0.1524" layer="91"/>
-<junction x="41.91" y="-81.28"/>
-<pinref part="GND10" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="C7" gate="G$1" pin="2"/>
@@ -14803,6 +14792,27 @@ In this library you will find frames that can be used to help organize a schemat
 <wire x1="-33.02" y1="36.83" x2="-57.15" y2="36.83" width="0.1524" layer="91"/>
 <pinref part="JP1" gate="A" pin="1"/>
 <pinref part="GND5" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="C2" gate="G$1" pin="2"/>
+<wire x1="19.05" y1="-81.28" x2="30.48" y2="-81.28" width="0.1524" layer="91"/>
+<pinref part="C5" gate="G$1" pin="2"/>
+<wire x1="30.48" y1="-81.28" x2="41.91" y2="-81.28" width="0.1524" layer="91"/>
+<junction x="30.48" y="-81.28"/>
+<pinref part="C8" gate="G$1" pin="2"/>
+<wire x1="41.91" y1="-81.28" x2="53.34" y2="-81.28" width="0.1524" layer="91"/>
+<junction x="41.91" y="-81.28"/>
+<pinref part="GND10" gate="1" pin="GND"/>
+</segment>
+<segment>
+<wire x1="-57.15" y1="-12.7" x2="-33.02" y2="-12.7" width="0.1524" layer="91"/>
+<pinref part="JP2" gate="A" pin="1"/>
+<pinref part="GND7" gate="1" pin="GND"/>
+</segment>
+<segment>
+<wire x1="-57.15" y1="-45.72" x2="-41.91" y2="-45.72" width="0.1524" layer="91"/>
+<pinref part="JP2" gate="A" pin="14"/>
+<pinref part="GND6" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="BUTTON" class="0">
@@ -15127,20 +15137,6 @@ In this library you will find frames that can be used to help organize a schemat
 <pinref part="U1" gate="A" pin="(PCINT23/AIN1)_PD7"/>
 <wire x1="2.54" y1="-34.29" x2="1.27" y2="-34.29" width="0.1524" layer="91"/>
 <label x="1.27" y="-34.29" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
-<net name="N$3" class="0">
-<segment>
-<wire x1="-57.15" y1="-43.18" x2="-36.83" y2="-43.18" width="0.1524" layer="91"/>
-<pinref part="P+4" gate="1" pin="+5V"/>
-<pinref part="JP2" gate="A" pin="13"/>
-</segment>
-</net>
-<net name="N$5" class="0">
-<segment>
-<pinref part="GND7" gate="1" pin="GND"/>
-<wire x1="-57.15" y1="-12.7" x2="-33.02" y2="-12.7" width="0.1524" layer="91"/>
-<pinref part="JP2" gate="A" pin="1"/>
 </segment>
 </net>
 <net name="N$7" class="0">

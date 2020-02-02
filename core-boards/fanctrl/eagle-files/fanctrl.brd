@@ -5684,23 +5684,6 @@ design rules under a new name.</description>
 <contactref element="J1" pad="1"/>
 <wire x1="3.86" y1="27" x2="6" y2="27" width="0.3" layer="1"/>
 <via x="6" y="27" extent="1-16" drill="0.381"/>
-<wire x1="31.045" y1="48.16" x2="40.91" y2="46.17" width="0" layer="19" extent="1-1"/>
-<wire x1="24.66" y1="48.16" x2="29.56" y2="48.16" width="0" layer="19" extent="1-1"/>
-<wire x1="26.9" y1="38.1" x2="24.66" y2="48.16" width="0" layer="19" extent="1-1"/>
-<wire x1="31.027" y1="32.98" x2="26.9" y2="38.1" width="0" layer="19" extent="1-1"/>
-<wire x1="30" y1="26.02" x2="32" y2="32" width="0" layer="19" extent="1-1"/>
-<wire x1="23.6" y1="26.02" x2="28" y2="26" width="0" layer="19" extent="1-1"/>
-<wire x1="18.245" y1="24.95" x2="21.74" y2="25.22" width="0" layer="19" extent="1-1"/>
-<wire x1="35.315" y1="25.81" x2="30" y2="26.02" width="0" layer="19" extent="1-1"/>
-<wire x1="41.4152" y1="26.925" x2="36.63" y2="25.81" width="0" layer="19" extent="1-1"/>
-<wire x1="43.57" y1="24.74" x2="43.1" y2="26.93" width="0" layer="19" extent="1-1"/>
-<wire x1="18.13" y1="31.48" x2="21.74" y2="26.82" width="0" layer="19" extent="1-1"/>
-<wire x1="17.325" y1="39.0222" x2="18.595" y2="34.2978" width="0" layer="19" extent="1-1"/>
-<wire x1="6" y1="27" x2="13.425" y2="24.865" width="0" layer="19" extent="1-1"/>
-<wire x1="5.3" y1="39.7" x2="15.9" y2="39.5" width="0" layer="19" extent="1-1"/>
-<wire x1="4.8" y1="15.6" x2="3.86" y2="27" width="0" layer="19" extent="1-1"/>
-<wire x1="3.77" y1="3.92" x2="3.87" y2="15.09" width="0" layer="19" extent="1-1"/>
-<wire x1="17.09" y1="2.49" x2="4.18" y2="2.92" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="FAN2-PWM-OUT">
 <contactref element="F2" pad="3"/>
@@ -5739,19 +5722,6 @@ design rules under a new name.</description>
 <wire x1="19.865" y1="34.2978" x2="19.865" y2="31.515" width="0.3" layer="1"/>
 <wire x1="19.865" y1="31.515" x2="19.83" y2="31.48" width="0.3" layer="1"/>
 <contactref element="J1" pad="3"/>
-<wire x1="27.555" y1="34.595" x2="35.65" y2="46.18" width="0" layer="19" extent="1-1"/>
-<wire x1="19.865" y1="34.2978" x2="27.555" y2="34.595" width="0" layer="19" extent="1-1"/>
-<wire x1="18.175" y1="26.58" x2="19.83" y2="31.48" width="0" layer="19" extent="1-1"/>
-<wire x1="15.8" y1="26.575" x2="18.175" y2="26.58" width="0" layer="19" extent="1-1"/>
-<wire x1="13.425" y1="26.565" x2="15.8" y2="26.575" width="0" layer="19" extent="1-1"/>
-<wire x1="21.74" y1="26.02" x2="18.175" y2="26.58" width="0" layer="19" extent="1-1"/>
-<wire x1="21.74" y1="24.42" x2="21.74" y2="26.02" width="0" layer="19" extent="1-1"/>
-<wire x1="17.153" y1="28.408" x2="13.425" y2="26.565" width="0" layer="19" extent="1-1"/>
-<wire x1="30" y1="23.62" x2="21.74" y2="24.42" width="0" layer="19" extent="1-1"/>
-<wire x1="4.09" y1="37.155" x2="17.153" y2="28.408" width="0" layer="19" extent="1-1"/>
-<wire x1="39.3848" y1="27.875" x2="30" y2="23.62" width="0" layer="19" extent="1-1"/>
-<wire x1="45.73" y1="19.06" x2="39.3848" y2="27.875" width="0" layer="19" extent="1-1"/>
-<wire x1="3.86" y1="31" x2="13.425" y2="26.565" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="ANALOG-TEMP-READING">
 <contactref element="ATMEGA328" pad="19"/>

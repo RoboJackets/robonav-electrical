@@ -54754,10 +54754,9 @@ unconnected.</text>
 </segment>
 <segment>
 <pinref part="GND1" gate="1" pin="GND"/>
-<wire x1="45.72" y1="185.42" x2="45.72" y2="187.96" width="0.1524" layer="91"/>
 <pinref part="J1" gate="G$1" pin="1"/>
-<wire x1="33.1724" y1="185.42" x2="45.72" y2="185.42" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="190.5" x2="33.1724" y2="185.42" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="190.5" x2="45.72" y2="190.5" width="0.1524" layer="91"/>
+<wire x1="45.72" y1="190.5" x2="45.72" y2="187.96" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <wire x1="254" y1="109.22" x2="246.38" y2="109.22" width="0.1524" layer="91" grouprefs="ICSP-HEADER"/>

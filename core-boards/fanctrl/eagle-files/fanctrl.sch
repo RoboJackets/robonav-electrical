@@ -17470,6 +17470,92 @@ type 0309, grid 2.5 mm</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="RoboJackets-Fuses">
+<packages>
+<package name="F1812">
+<wire x1="-1.4732" y1="1.6002" x2="1.4732" y2="1.6002" width="0.1016" layer="51"/>
+<wire x1="-1.4478" y1="-1.6002" x2="1.4732" y2="-1.6002" width="0.1016" layer="51"/>
+<rectangle x1="-2.3876" y1="-1.651" x2="-1.4376" y2="1.649" layer="51"/>
+<rectangle x1="1.4478" y1="-1.651" x2="2.3978" y2="1.649" layer="51"/>
+<smd name="1" x="-1.95" y="0" dx="1.9" dy="3.4" layer="1"/>
+<smd name="2" x="1.95" y="0" dx="1.9" dy="3.4" layer="1"/>
+<text x="-1.905" y="1.905" size="1.27" layer="25">&gt;NAME</text>
+<text x="-1.905" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="F1206">
+<wire x1="0.9525" y1="-0.8128" x2="-0.9652" y2="-0.8128" width="0.1524" layer="51"/>
+<wire x1="0.9525" y1="0.8128" x2="-0.9652" y2="0.8128" width="0.1524" layer="51"/>
+<wire x1="-2.473" y1="0.983" x2="2.473" y2="0.983" width="0.0508" layer="39"/>
+<wire x1="2.473" y1="0.983" x2="2.473" y2="-0.983" width="0.0508" layer="39"/>
+<wire x1="2.473" y1="-0.983" x2="-2.473" y2="-0.983" width="0.0508" layer="39"/>
+<wire x1="-2.473" y1="-0.983" x2="-2.473" y2="0.983" width="0.0508" layer="39"/>
+<smd name="2" x="1.422" y="0" dx="1.6" dy="1.803" layer="1"/>
+<smd name="1" x="-1.422" y="0" dx="1.6" dy="1.803" layer="1"/>
+<text x="-2" y="1.5" size="1" layer="25">&gt;NAME</text>
+<rectangle x1="-1.6891" y1="-0.8763" x2="-0.9525" y2="0.8763" layer="51"/>
+<rectangle x1="0.9525" y1="-0.8763" x2="1.6891" y2="0.8763" layer="51"/>
+</package>
+<package name="F0603">
+<wire x1="-0.432" y1="-0.356" x2="0.432" y2="-0.356" width="0.1524" layer="51"/>
+<wire x1="0.432" y1="0.356" x2="-0.432" y2="0.356" width="0.1524" layer="51"/>
+<wire x1="-1.473" y1="0.983" x2="1.473" y2="0.983" width="0.0508" layer="39"/>
+<wire x1="1.473" y1="0.983" x2="1.473" y2="-0.983" width="0.0508" layer="39"/>
+<wire x1="1.473" y1="-0.983" x2="-1.473" y2="-0.983" width="0.0508" layer="39"/>
+<wire x1="-1.473" y1="-0.983" x2="-1.473" y2="0.983" width="0.0508" layer="39"/>
+<smd name="1" x="-0.85" y="0" dx="1" dy="1.1" layer="1"/>
+<smd name="2" x="0.85" y="0" dx="1" dy="1.1" layer="1"/>
+<text x="-1.5" y="1" size="1" layer="25">&gt;NAME</text>
+<rectangle x1="0.4318" y1="-0.4318" x2="0.8382" y2="0.4318" layer="51"/>
+<rectangle x1="-0.8382" y1="-0.4318" x2="-0.4318" y2="0.4318" layer="51"/>
+</package>
+</packages>
+<symbols>
+<symbol name="FUSE">
+<pin name="1" x="-2.54" y="0" visible="off" length="point"/>
+<pin name="2" x="2.54" y="0" visible="off" length="point" rot="R180"/>
+<wire x1="2.54" y1="0" x2="0" y2="0" width="0.254" layer="94" curve="180"/>
+<wire x1="0" y1="0" x2="-2.54" y2="0" width="0.254" layer="94" curve="-180"/>
+<text x="-2.54" y="2.54" size="1.778" layer="95">&gt;NAME</text>
+<text x="-2.54" y="-2.54" size="1.778" layer="96" align="top-left">&gt;VALUE</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="CHIP_FUSE" prefix="F" uservalue="yes">
+<gates>
+<gate name="G$1" symbol="FUSE" x="0" y="0"/>
+</gates>
+<devices>
+<device name="1812" package="F1812">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="1206" package="F1206">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="0603" package="F0603">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -17546,6 +17632,7 @@ type 0309, grid 2.5 mm</description>
 <part name="JP2" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X2" device="" package3d_urn="urn:adsk.eagle:package:22435/2">
 <attribute name="SPICEPREFIX" value="B"/>
 </part>
+<part name="F4" library="RoboJackets-Fuses" deviceset="CHIP_FUSE" device="1206" value="3A"/>
 </parts>
 <sheets>
 <sheet>
@@ -17747,15 +17834,15 @@ last board on the CAN bus. </text>
 <attribute name="NAME" x="213.7156" y="197.0786" size="1.778" layer="95" rot="SR0"/>
 <attribute name="VALUE" x="213.0806" y="194.5386" size="1.778" layer="96" rot="SR0"/>
 </instance>
-<instance part="C5" gate="G$1" x="170.18" y="185.42" smashed="yes">
-<attribute name="NAME" x="171.196" y="186.055" size="1.778" layer="95"/>
-<attribute name="VALUE" x="171.196" y="181.229" size="1.778" layer="96"/>
+<instance part="C5" gate="G$1" x="162.56" y="185.42" smashed="yes">
+<attribute name="NAME" x="163.576" y="186.055" size="1.778" layer="95"/>
+<attribute name="VALUE" x="163.576" y="181.229" size="1.778" layer="96"/>
 </instance>
-<instance part="GND12" gate="1" x="170.18" y="172.72" smashed="yes">
-<attribute name="VALUE" x="167.64" y="170.18" size="1.778" layer="96"/>
+<instance part="GND12" gate="1" x="162.56" y="172.72" smashed="yes">
+<attribute name="VALUE" x="160.02" y="170.18" size="1.778" layer="96"/>
 </instance>
-<instance part="P+8" gate="1" x="170.18" y="195.58" smashed="yes">
-<attribute name="VALUE" x="167.64" y="195.58" size="1.778" layer="96"/>
+<instance part="P+8" gate="1" x="162.56" y="195.58" smashed="yes">
+<attribute name="VALUE" x="160.02" y="195.58" size="1.778" layer="96"/>
 </instance>
 <instance part="C6" gate="G$1" x="246.38" y="175.26" smashed="yes">
 <attribute name="NAME" x="247.396" y="175.895" size="1.778" layer="95"/>
@@ -17816,6 +17903,10 @@ last board on the CAN bus. </text>
 <instance part="JP2" gate="G$1" x="167.64" y="142.24" smashed="yes">
 <attribute name="NAME" x="161.29" y="147.955" size="1.778" layer="95"/>
 <attribute name="VALUE" x="161.29" y="137.16" size="1.778" layer="96"/>
+</instance>
+<instance part="F4" gate="G$1" x="172.72" y="190.5" smashed="yes">
+<attribute name="NAME" x="170.18" y="193.04" size="1.778" layer="95"/>
+<attribute name="VALUE" x="170.18" y="187.96" size="1.778" layer="96" align="top-left"/>
 </instance>
 </instances>
 <busses>
@@ -17932,11 +18023,11 @@ last board on the CAN bus. </text>
 <pinref part="CAN-CONTROLLER" gate="A" pin="VSS"/>
 <wire x1="193.04" y1="185.42" x2="180.34" y2="185.42" width="0.1524" layer="91"/>
 <wire x1="180.34" y1="185.42" x2="180.34" y2="177.8" width="0.1524" layer="91"/>
-<wire x1="180.34" y1="177.8" x2="170.18" y2="177.8" width="0.1524" layer="91"/>
+<wire x1="180.34" y1="177.8" x2="162.56" y2="177.8" width="0.1524" layer="91"/>
 <pinref part="C5" gate="G$1" pin="2"/>
-<wire x1="170.18" y1="177.8" x2="170.18" y2="180.34" width="0.1524" layer="91"/>
-<wire x1="170.18" y1="177.8" x2="170.18" y2="175.26" width="0.1524" layer="91"/>
-<junction x="170.18" y="177.8"/>
+<wire x1="162.56" y1="177.8" x2="162.56" y2="180.34" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="177.8" x2="162.56" y2="175.26" width="0.1524" layer="91"/>
+<junction x="162.56" y="177.8"/>
 <pinref part="GND12" gate="1" pin="GND"/>
 </segment>
 <segment>
@@ -18044,15 +18135,13 @@ last board on the CAN bus. </text>
 <wire x1="132.08" y1="193.04" x2="132.08" y2="190.5" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="CAN-CONTROLLER" gate="A" pin="VDD"/>
-<wire x1="193.04" y1="182.88" x2="177.8" y2="182.88" width="0.1524" layer="91"/>
-<wire x1="177.8" y1="182.88" x2="177.8" y2="190.5" width="0.1524" layer="91"/>
-<wire x1="177.8" y1="190.5" x2="170.18" y2="190.5" width="0.1524" layer="91"/>
-<pinref part="C5" gate="G$1" pin="1"/>
-<wire x1="170.18" y1="190.5" x2="170.18" y2="187.96" width="0.1524" layer="91"/>
-<wire x1="170.18" y1="190.5" x2="170.18" y2="193.04" width="0.1524" layer="91"/>
-<junction x="170.18" y="190.5"/>
 <pinref part="P+8" gate="1" pin="+5V"/>
+<pinref part="C5" gate="G$1" pin="1"/>
+<wire x1="162.56" y1="187.96" x2="162.56" y2="190.5" width="0.1524" layer="91"/>
+<pinref part="F4" gate="G$1" pin="1"/>
+<wire x1="162.56" y1="190.5" x2="162.56" y2="193.04" width="0.1524" layer="91"/>
+<wire x1="170.18" y1="190.5" x2="162.56" y2="190.5" width="0.1524" layer="91"/>
+<junction x="162.56" y="190.5"/>
 </segment>
 <segment>
 <wire x1="236.22" y1="149.86" x2="238.76" y2="149.86" width="0.1524" layer="91"/>
@@ -18336,6 +18425,15 @@ last board on the CAN bus. </text>
 <wire x1="165.1" y1="144.78" x2="172.72" y2="144.78" width="0.1524" layer="91"/>
 <pinref part="R9" gate="G$1" pin="1"/>
 <wire x1="172.72" y1="144.78" x2="172.72" y2="152.4" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$6" class="0">
+<segment>
+<pinref part="CAN-CONTROLLER" gate="A" pin="VDD"/>
+<wire x1="193.04" y1="182.88" x2="177.8" y2="182.88" width="0.1524" layer="91"/>
+<wire x1="177.8" y1="182.88" x2="177.8" y2="190.5" width="0.1524" layer="91"/>
+<pinref part="F4" gate="G$1" pin="2"/>
+<wire x1="177.8" y1="190.5" x2="175.26" y2="190.5" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

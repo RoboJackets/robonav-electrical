@@ -5550,7 +5550,7 @@ design rules under a new name.</description>
 <element name="B1" library="RoboJackets-Switches" package="PTS645" value="PTS645" x="27.07" y="45.91" smashed="yes" rot="R180">
 <attribute name="FUNCTION" value="RESET µCONTROLLER" x="27.07" y="45.91" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="CAN-CONTROLLER" library="IGVC-Microcontroller" package="SOIC8-N_MC" value="MCP2551T-I/SN" x="19.23" y="36.66" smashed="yes" rot="R90">
+<element name="MCP2551" library="IGVC-Microcontroller" package="SOIC8-N_MC" value="MCP2551T-I/SN" x="19.23" y="36.66" smashed="yes" rot="R90">
 <attribute name="MANUFACTURER_PART_NUMBER" value="MCP2551TISN" x="19.23" y="36.66" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="15.865" y="33.3834" size="0.6096" layer="25" ratio="6" rot="SR90"/>
 <attribute name="VENDOR" value="Microchip" x="19.23" y="36.66" size="1.778" layer="27" rot="R90" display="off"/>
@@ -5640,10 +5640,10 @@ design rules under a new name.</description>
 <contactref element="LED2" pad="C"/>
 <contactref element="LED3" pad="C"/>
 <contactref element="LED4" pad="C"/>
-<contactref element="CAN-CONTROLLER" pad="2"/>
+<contactref element="MCP2551" pad="2"/>
 <contactref element="C5" pad="2"/>
 <contactref element="C6" pad="2"/>
-<contactref element="CAN-CONTROLLER" pad="8"/>
+<contactref element="MCP2551" pad="8"/>
 <contactref element="B1" pad="P$3"/>
 <contactref element="B1" pad="P$4"/>
 <contactref element="C7" pad="2"/>
@@ -5906,13 +5906,13 @@ design rules under a new name.</description>
 <wire x1="31.027" y1="34.68" x2="37.73" y2="34.68" width="0.3" layer="1"/>
 </signal>
 <signal name="VREF">
-<contactref element="CAN-CONTROLLER" pad="5"/>
+<contactref element="MCP2551" pad="5"/>
 <contactref element="C6" pad="1"/>
 <wire x1="21.135" y1="39.0222" x2="21.8028" y2="39.69" width="0.3" layer="1"/>
 <wire x1="21.8028" y1="39.69" x2="23.69" y2="39.69" width="0.3" layer="1"/>
 </signal>
 <signal name="CAN_P">
-<contactref element="CAN-CONTROLLER" pad="7"/>
+<contactref element="MCP2551" pad="7"/>
 <contactref element="F3" pad="3"/>
 <contactref element="R9" pad="2"/>
 <wire x1="13.4139875" y1="41.9" x2="18.375" y2="41.9" width="0.3" layer="1"/>
@@ -5932,7 +5932,7 @@ design rules under a new name.</description>
 <wire x1="18.375" y1="41.9" x2="18.375" y2="40.73265" width="0.3" layer="1"/>
 </signal>
 <signal name="CAN_N">
-<contactref element="CAN-CONTROLLER" pad="6"/>
+<contactref element="MCP2551" pad="6"/>
 <contactref element="F3" pad="4"/>
 <contactref element="JP2" pad="2"/>
 <wire x1="11.2378" y1="40.6397625" x2="14.3280375" y2="43.73" width="0.3" layer="1"/>
@@ -5950,7 +5950,7 @@ design rules under a new name.</description>
 <wire x1="15" y1="43.73" x2="15.762" y2="43.73" width="0.3" layer="1"/>
 </signal>
 <signal name="CAN_TX">
-<contactref element="CAN-CONTROLLER" pad="1"/>
+<contactref element="MCP2551" pad="1"/>
 <contactref element="ATMEGA328" pad="30"/>
 <wire x1="24.67" y1="33.07" x2="21.95" y2="35.79" width="0.3" layer="1"/>
 <wire x1="21.95" y1="35.79" x2="17.96" y2="35.79" width="0.3" layer="1"/>
@@ -5959,7 +5959,7 @@ design rules under a new name.</description>
 <wire x1="24.67" y1="29.75" x2="24.67" y2="33.07" width="0.3" layer="1"/>
 </signal>
 <signal name="CAN_RX">
-<contactref element="CAN-CONTROLLER" pad="4"/>
+<contactref element="MCP2551" pad="4"/>
 <contactref element="ATMEGA328" pad="31"/>
 <wire x1="21.135" y1="34.2978" x2="23.87" y2="31.5628" width="0.3" layer="1"/>
 <wire x1="23.87" y1="31.5628" x2="23.87" y2="29.75" width="0.3" layer="1"/>
@@ -5997,7 +5997,7 @@ design rules under a new name.</description>
 <wire x1="17.67" y1="43.6" x2="18.375" y2="43.6" width="0.3" layer="1"/>
 </signal>
 <signal name="+5V_UNFUSED">
-<contactref element="CAN-CONTROLLER" pad="3"/>
+<contactref element="MCP2551" pad="3"/>
 <contactref element="F4" pad="2"/>
 <wire x1="19.865" y1="34.2978" x2="19.865" y2="31.917" width="0.3" layer="1"/>
 <wire x1="19.865" y1="31.917" x2="20.622" y2="31.16" width="0.3" layer="1"/>

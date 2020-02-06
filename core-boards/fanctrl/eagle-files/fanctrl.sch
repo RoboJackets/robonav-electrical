@@ -17609,7 +17609,7 @@ type 0309, grid 2.5 mm</description>
 </part>
 <part name="P+6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="GND11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="CAN-CONTROLLER" library="IGVC-Microcontroller" deviceset="MCP2551T-I/SN" device=""/>
+<part name="MCP2551" library="IGVC-Microcontroller" deviceset="MCP2551T-I/SN" device=""/>
 <part name="C5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1µF"/>
 <part name="GND12" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
@@ -17830,9 +17830,8 @@ last board on the CAN bus. </text>
 <instance part="GND11" gate="1" x="45.72" y="167.64" smashed="yes">
 <attribute name="VALUE" x="43.18" y="165.1" size="1.778" layer="96"/>
 </instance>
-<instance part="CAN-CONTROLLER" gate="A" x="190.5" y="187.96" smashed="yes">
-<attribute name="NAME" x="213.7156" y="197.0786" size="1.778" layer="95" rot="SR0"/>
-<attribute name="VALUE" x="213.0806" y="194.5386" size="1.778" layer="96" rot="SR0"/>
+<instance part="MCP2551" gate="A" x="190.5" y="187.96" smashed="yes">
+<attribute name="NAME" x="198.4756" y="194.5386" size="1.778" layer="95" rot="SR0"/>
 </instance>
 <instance part="C5" gate="G$1" x="162.56" y="185.42" smashed="yes">
 <attribute name="NAME" x="163.576" y="186.055" size="1.778" layer="95"/>
@@ -18020,7 +18019,7 @@ last board on the CAN bus. </text>
 <wire x1="45.72" y1="180.34" x2="45.72" y2="170.18" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="CAN-CONTROLLER" gate="A" pin="VSS"/>
+<pinref part="MCP2551" gate="A" pin="VSS"/>
 <wire x1="193.04" y1="185.42" x2="180.34" y2="185.42" width="0.1524" layer="91"/>
 <wire x1="180.34" y1="185.42" x2="180.34" y2="177.8" width="0.1524" layer="91"/>
 <wire x1="180.34" y1="177.8" x2="162.56" y2="177.8" width="0.1524" layer="91"/>
@@ -18036,7 +18035,7 @@ last board on the CAN bus. </text>
 <wire x1="246.38" y1="170.18" x2="246.38" y2="167.64" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="CAN-CONTROLLER" gate="A" pin="RS"/>
+<pinref part="MCP2551" gate="A" pin="RS"/>
 <wire x1="243.84" y1="187.96" x2="246.38" y2="187.96" width="0.1524" layer="91"/>
 <wire x1="246.38" y1="187.96" x2="246.38" y2="198.12" width="0.1524" layer="91"/>
 <wire x1="246.38" y1="198.12" x2="251.46" y2="198.12" width="0.1524" layer="91"/>
@@ -18318,7 +18317,7 @@ last board on the CAN bus. </text>
 </net>
 <net name="VREF" class="0">
 <segment>
-<pinref part="CAN-CONTROLLER" gate="A" pin="VREF"/>
+<pinref part="MCP2551" gate="A" pin="VREF"/>
 <wire x1="243.84" y1="180.34" x2="246.38" y2="180.34" width="0.1524" layer="91"/>
 <wire x1="246.38" y1="180.34" x2="246.38" y2="177.8" width="0.1524" layer="91"/>
 <pinref part="C6" gate="G$1" pin="1"/>
@@ -18326,7 +18325,7 @@ last board on the CAN bus. </text>
 </net>
 <net name="CAN_P" class="0">
 <segment>
-<pinref part="CAN-CONTROLLER" gate="A" pin="CANH"/>
+<pinref part="MCP2551" gate="A" pin="CANH"/>
 <wire x1="243.84" y1="185.42" x2="246.38" y2="185.42" width="0.1524" layer="91"/>
 <label x="246.38" y="185.42" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
@@ -18344,7 +18343,7 @@ last board on the CAN bus. </text>
 </net>
 <net name="CAN_N" class="0">
 <segment>
-<pinref part="CAN-CONTROLLER" gate="A" pin="CANL"/>
+<pinref part="MCP2551" gate="A" pin="CANL"/>
 <wire x1="243.84" y1="182.88" x2="246.38" y2="182.88" width="0.1524" layer="91"/>
 <label x="246.38" y="182.88" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
@@ -18361,7 +18360,7 @@ last board on the CAN bus. </text>
 </net>
 <net name="CAN_TX" class="0">
 <segment>
-<pinref part="CAN-CONTROLLER" gate="A" pin="TXD"/>
+<pinref part="MCP2551" gate="A" pin="TXD"/>
 <wire x1="193.04" y1="187.96" x2="187.96" y2="187.96" width="0.1524" layer="91"/>
 <label x="187.96" y="187.96" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
@@ -18373,7 +18372,7 @@ last board on the CAN bus. </text>
 </net>
 <net name="CAN_RX" class="0">
 <segment>
-<pinref part="CAN-CONTROLLER" gate="A" pin="RXD"/>
+<pinref part="MCP2551" gate="A" pin="RXD"/>
 <wire x1="193.04" y1="180.34" x2="190.5" y2="180.34" width="0.1524" layer="91"/>
 <label x="190.5" y="180.34" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
@@ -18429,7 +18428,7 @@ last board on the CAN bus. </text>
 </net>
 <net name="+5V_UNFUSED" class="0">
 <segment>
-<pinref part="CAN-CONTROLLER" gate="A" pin="VDD"/>
+<pinref part="MCP2551" gate="A" pin="VDD"/>
 <wire x1="193.04" y1="182.88" x2="177.8" y2="182.88" width="0.1524" layer="91"/>
 <wire x1="177.8" y1="182.88" x2="177.8" y2="190.5" width="0.1524" layer="91"/>
 <pinref part="F4" gate="G$1" pin="2"/>

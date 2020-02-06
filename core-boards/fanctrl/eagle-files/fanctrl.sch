@@ -17709,8 +17709,8 @@ last board on the CAN bus. </text>
 <instance part="P+3" gate="1" x="238.76" y="116.84" smashed="yes">
 <attribute name="VALUE" x="236.22" y="116.84" size="1.778" layer="96"/>
 </instance>
-<instance part="P+4" gate="1" x="195.58" y="81.28" smashed="yes">
-<attribute name="VALUE" x="193.04" y="81.28" size="1.778" layer="96"/>
+<instance part="P+4" gate="1" x="198.12" y="78.74" smashed="yes">
+<attribute name="VALUE" x="195.58" y="78.74" size="1.778" layer="96"/>
 </instance>
 <instance part="P+5" gate="1" x="15.24" y="60.96" smashed="yes">
 <attribute name="VALUE" x="12.7" y="60.96" size="1.778" layer="96"/>
@@ -17853,11 +17853,11 @@ last board on the CAN bus. </text>
 <instance part="GND14" gate="1" x="251.46" y="193.04" smashed="yes">
 <attribute name="VALUE" x="248.92" y="190.5" size="1.778" layer="96"/>
 </instance>
-<instance part="GND15" gate="1" x="246.38" y="152.4" smashed="yes">
-<attribute name="VALUE" x="243.84" y="149.86" size="1.778" layer="96"/>
+<instance part="GND15" gate="1" x="259.08" y="144.78" smashed="yes">
+<attribute name="VALUE" x="256.54" y="142.24" size="1.778" layer="96"/>
 </instance>
-<instance part="P+9" gate="1" x="238.76" y="154.94" smashed="yes">
-<attribute name="VALUE" x="236.22" y="157.48" size="1.778" layer="96"/>
+<instance part="P+9" gate="1" x="259.08" y="154.94" smashed="yes">
+<attribute name="VALUE" x="256.54" y="157.48" size="1.778" layer="96"/>
 </instance>
 <instance part="R7" gate="G$1" x="17.78" y="187.96" smashed="yes" rot="R90">
 <attribute name="NAME" x="16.2814" y="184.15" size="1.778" layer="95" rot="R90"/>
@@ -17903,9 +17903,9 @@ last board on the CAN bus. </text>
 <attribute name="NAME" x="161.29" y="147.955" size="1.778" layer="95"/>
 <attribute name="VALUE" x="161.29" y="137.16" size="1.778" layer="96"/>
 </instance>
-<instance part="F4" gate="G$1" x="172.72" y="190.5" smashed="yes">
-<attribute name="NAME" x="170.18" y="193.04" size="1.778" layer="95"/>
-<attribute name="VALUE" x="170.18" y="187.96" size="1.778" layer="96" align="top-left"/>
+<instance part="F4" gate="G$1" x="246.38" y="152.4" smashed="yes">
+<attribute name="NAME" x="243.84" y="154.94" size="1.778" layer="95"/>
+<attribute name="VALUE" x="243.84" y="149.86" size="1.778" layer="96" align="top-left"/>
 </instance>
 </instances>
 <busses>
@@ -18043,10 +18043,8 @@ last board on the CAN bus. </text>
 <pinref part="GND14" gate="1" pin="GND"/>
 </segment>
 <segment>
-<wire x1="236.22" y1="147.32" x2="241.3" y2="147.32" width="0.1524" layer="91"/>
-<wire x1="241.3" y1="147.32" x2="241.3" y2="154.94" width="0.1524" layer="91"/>
 <pinref part="GND15" gate="1" pin="GND"/>
-<wire x1="241.3" y1="154.94" x2="246.38" y2="154.94" width="0.1524" layer="91"/>
+<wire x1="236.22" y1="147.32" x2="259.08" y2="147.32" width="0.1524" layer="91"/>
 <pinref part="F3" gate="G$1" pin="2"/>
 </segment>
 <segment>
@@ -18099,8 +18097,7 @@ last board on the CAN bus. </text>
 <segment>
 <pinref part="P+4" gate="1" pin="+5V"/>
 <pinref part="U1" gate="MCP9701" pin="VDD"/>
-<wire x1="198.12" y1="73.66" x2="195.58" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="195.58" y1="73.66" x2="195.58" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="73.66" x2="198.12" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="ATMEGA328" gate="G$1" pin="AVCC"/>
@@ -18137,16 +18134,12 @@ last board on the CAN bus. </text>
 <pinref part="P+8" gate="1" pin="+5V"/>
 <pinref part="C5" gate="G$1" pin="1"/>
 <wire x1="162.56" y1="187.96" x2="162.56" y2="190.5" width="0.1524" layer="91"/>
-<pinref part="F4" gate="G$1" pin="1"/>
 <wire x1="162.56" y1="190.5" x2="162.56" y2="193.04" width="0.1524" layer="91"/>
-<wire x1="170.18" y1="190.5" x2="162.56" y2="190.5" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="190.5" x2="175.26" y2="190.5" width="0.1524" layer="91"/>
 <junction x="162.56" y="190.5"/>
-</segment>
-<segment>
-<wire x1="236.22" y1="149.86" x2="238.76" y2="149.86" width="0.1524" layer="91"/>
-<wire x1="238.76" y1="149.86" x2="238.76" y2="152.4" width="0.1524" layer="91"/>
-<pinref part="P+9" gate="1" pin="+5V"/>
-<pinref part="F3" gate="G$1" pin="1"/>
+<wire x1="175.26" y1="190.5" x2="175.26" y2="182.88" width="0.1524" layer="91"/>
+<pinref part="MCP2551" gate="A" pin="VDD"/>
+<wire x1="175.26" y1="182.88" x2="193.04" y2="182.88" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R7" gate="G$1" pin="2"/>
@@ -18158,6 +18151,14 @@ last board on the CAN bus. </text>
 <wire x1="175.26" y1="111.76" x2="180.34" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="180.34" y1="111.76" x2="180.34" y2="119.38" width="0.1524" layer="91"/>
 <pinref part="P+10" gate="1" pin="+5V"/>
+</segment>
+<segment>
+<pinref part="P+9" gate="1" pin="+5V"/>
+<wire x1="259.08" y1="152.4" x2="259.08" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="259.08" y1="149.86" x2="254" y2="149.86" width="0.1524" layer="91"/>
+<pinref part="F4" gate="G$1" pin="2"/>
+<wire x1="248.92" y1="152.4" x2="254" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="254" y1="152.4" x2="254" y2="149.86" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="ANALOG-TEMP-READING" class="0">
@@ -18174,11 +18175,6 @@ last board on the CAN bus. </text>
 </net>
 <net name="FAN1-TACH" class="0">
 <segment>
-<pinref part="ATMEGA328" gate="G$1" pin="(PCINT1/OC1A)PB1"/>
-<wire x1="116.84" y1="10.16" x2="121.92" y2="10.16" width="0.1524" layer="91"/>
-<label x="121.92" y="10.16" size="1.27" layer="95" font="vector" xref="yes"/>
-</segment>
-<segment>
 <pinref part="F1" gate="G$1" pin="3"/>
 <wire x1="93.98" y1="99.06" x2="73.66" y2="99.06" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="2"/>
@@ -18186,6 +18182,11 @@ last board on the CAN bus. </text>
 <wire x1="73.66" y1="99.06" x2="73.66" y2="106.68" width="0.1524" layer="91"/>
 <junction x="73.66" y="99.06"/>
 <label x="73.66" y="106.68" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="ATMEGA328" gate="G$1" pin="PD2(INT0/PCINT18)"/>
+<wire x1="48.26" y1="12.7" x2="43.18" y2="12.7" width="0.1524" layer="91"/>
+<label x="43.18" y="12.7" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="FAN2-PWM-OUT" class="0">
@@ -18212,7 +18213,7 @@ last board on the CAN bus. </text>
 <label x="91.44" y="101.6" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="PROBE-PWM-OUT" class="0">
+<net name="PROBE-PWM-IN" class="0">
 <segment>
 <label x="215.9" y="106.68" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 <wire x1="223.52" y1="106.68" x2="215.9" y2="106.68" width="0.1524" layer="91"/>
@@ -18226,9 +18227,9 @@ last board on the CAN bus. </text>
 <wire x1="236.22" y1="109.22" x2="246.38" y2="109.22" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="ATMEGA328" gate="G$1" pin="PD2(INT0/PCINT18)"/>
-<wire x1="48.26" y1="12.7" x2="43.18" y2="12.7" width="0.1524" layer="91"/>
-<label x="43.18" y="12.7" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
+<pinref part="ATMEGA328" gate="G$1" pin="(PCINT1/OC1A)PB1"/>
+<wire x1="116.84" y1="10.16" x2="121.92" y2="10.16" width="0.1524" layer="91"/>
+<label x="121.92" y="10.16" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 </net>
 <net name="AREF" class="0">
@@ -18426,13 +18427,13 @@ last board on the CAN bus. </text>
 <wire x1="172.72" y1="144.78" x2="172.72" y2="152.4" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="+5V_UNFUSED" class="0">
+<net name="+5_UNFUSED" class="0">
 <segment>
-<pinref part="MCP2551" gate="A" pin="VDD"/>
-<wire x1="193.04" y1="182.88" x2="177.8" y2="182.88" width="0.1524" layer="91"/>
-<wire x1="177.8" y1="182.88" x2="177.8" y2="190.5" width="0.1524" layer="91"/>
-<pinref part="F4" gate="G$1" pin="2"/>
-<wire x1="177.8" y1="190.5" x2="175.26" y2="190.5" width="0.1524" layer="91"/>
+<wire x1="236.22" y1="149.86" x2="238.76" y2="149.86" width="0.1524" layer="91"/>
+<pinref part="F3" gate="G$1" pin="1"/>
+<wire x1="238.76" y1="149.86" x2="238.76" y2="152.4" width="0.1524" layer="91"/>
+<pinref part="F4" gate="G$1" pin="1"/>
+<wire x1="238.76" y1="152.4" x2="243.84" y2="152.4" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

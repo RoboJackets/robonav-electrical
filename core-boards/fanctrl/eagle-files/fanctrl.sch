@@ -17690,8 +17690,8 @@ Max Current: 5mA</text>
 <wire x1="187.96" y1="129.54" x2="187.96" y2="96.52" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="187.96" y1="96.52" x2="154.94" y2="96.52" width="0.1524" layer="97" style="shortdash"/>
 <text x="157.48" y="121.92" size="6.35" layer="97" font="vector" ratio="12">ICSP</text>
-<text x="10.16" y="111.76" size="1.778" layer="97">IN = Write to the fan</text>
-<text x="10.16" y="109.22" size="1.778" layer="97">OUT = Read from the fan</text>
+<text x="10.16" y="111.76" size="1.778" layer="97">OUT = Write to the fan</text>
+<text x="10.16" y="109.22" size="1.778" layer="97">TACH = Read from the fan</text>
 <text x="180.34" y="152.4" size="1.778" layer="97" font="vector">Use a jumper to connect this
 resistor if this board is the 
 last board on the CAN bus. </text>
@@ -18069,7 +18069,7 @@ last board on the CAN bus. </text>
 <pinref part="GND17" gate="1" pin="GND"/>
 </segment>
 </net>
-<net name="FAN2-PWM-OUT" class="0">
+<net name="FAN2-TACH" class="0">
 <segment>
 <pinref part="F2" gate="G$1" pin="3"/>
 <wire x1="93.98" y1="129.54" x2="73.66" y2="129.54" width="0.1524" layer="91"/>
@@ -18173,7 +18173,7 @@ last board on the CAN bus. </text>
 <label x="121.92" y="55.88" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 </net>
-<net name="FAN1-PWM-OUT" class="0">
+<net name="FAN1-TACH" class="0">
 <segment>
 <pinref part="ATMEGA328" gate="G$1" pin="(PCINT1/OC1A)PB1"/>
 <wire x1="116.84" y1="10.16" x2="121.92" y2="10.16" width="0.1524" layer="91"/>
@@ -18189,7 +18189,7 @@ last board on the CAN bus. </text>
 <label x="73.66" y="106.68" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="FAN2-PWM-IN" class="0">
+<net name="FAN2-PWM-OUT" class="0">
 <segment>
 <pinref part="ATMEGA328" gate="G$1" pin="PD6(PCINT22/OC0A/AIN0)"/>
 <wire x1="43.18" y1="22.86" x2="48.26" y2="22.86" width="0.1524" layer="91"/>
@@ -18201,7 +18201,7 @@ last board on the CAN bus. </text>
 <label x="91.44" y="132.08" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="FAN1-PWM-IN" class="0">
+<net name="FAN1-PWM-OUT" class="0">
 <segment>
 <pinref part="ATMEGA328" gate="G$1" pin="PD5(PCINT21/OC0B/T1)"/>
 <wire x1="48.26" y1="20.32" x2="43.18" y2="20.32" width="0.1524" layer="91"/>
@@ -18213,7 +18213,7 @@ last board on the CAN bus. </text>
 <label x="91.44" y="101.6" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="TEMP-PROBE-PWM-OUT" class="0">
+<net name="PROBE-PWM-OUT" class="0">
 <segment>
 <label x="215.9" y="106.68" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 <wire x1="223.52" y1="106.68" x2="215.9" y2="106.68" width="0.1524" layer="91"/>
@@ -18427,7 +18427,7 @@ last board on the CAN bus. </text>
 <wire x1="172.72" y1="144.78" x2="172.72" y2="152.4" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$6" class="0">
+<net name="+5V_UNFUSED" class="0">
 <segment>
 <pinref part="CAN-CONTROLLER" gate="A" pin="VDD"/>
 <wire x1="193.04" y1="182.88" x2="177.8" y2="182.88" width="0.1524" layer="91"/>

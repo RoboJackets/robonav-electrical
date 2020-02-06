@@ -17329,139 +17329,6 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="pinhead" urn="urn:adsk.eagle:library:325">
-<description>&lt;b&gt;Pin Header Connectors&lt;/b&gt;&lt;p&gt;
-&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
-<packages>
-<package name="1X03" urn="urn:adsk.eagle:footprint:22340/1" library_version="4">
-<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
-<wire x1="-3.175" y1="1.27" x2="-1.905" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="-1.905" y1="1.27" x2="-1.27" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="-1.27" y1="0.635" x2="-1.27" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="-1.27" y1="-0.635" x2="-1.905" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="-1.27" y1="0.635" x2="-0.635" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="-0.635" y1="1.27" x2="0.635" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="0.635" y1="1.27" x2="1.27" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="1.27" y1="0.635" x2="1.27" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="1.27" y1="-0.635" x2="0.635" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="0.635" y1="-1.27" x2="-0.635" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="-0.635" y1="-1.27" x2="-1.27" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="-3.81" y1="0.635" x2="-3.81" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="-3.175" y1="1.27" x2="-3.81" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="-3.81" y1="-0.635" x2="-3.175" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="-1.905" y1="-1.27" x2="-3.175" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="1.27" y1="0.635" x2="1.905" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="1.905" y1="1.27" x2="3.175" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="3.175" y1="1.27" x2="3.81" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="3.81" y1="0.635" x2="3.81" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="3.81" y1="-0.635" x2="3.175" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="3.175" y1="-1.27" x2="1.905" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="1.905" y1="-1.27" x2="1.27" y2="-0.635" width="0.1524" layer="21"/>
-<pad name="1" x="-2.54" y="0" drill="1.016" shape="long" rot="R90"/>
-<pad name="2" x="0" y="0" drill="1.016" shape="long" rot="R90"/>
-<pad name="3" x="2.54" y="0" drill="1.016" shape="long" rot="R90"/>
-<text x="-3.8862" y="1.8288" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="-3.81" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
-<rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
-<rectangle x1="-2.794" y1="-0.254" x2="-2.286" y2="0.254" layer="51"/>
-<rectangle x1="2.286" y1="-0.254" x2="2.794" y2="0.254" layer="51"/>
-</package>
-<package name="1X03/90" urn="urn:adsk.eagle:footprint:22341/1" library_version="4">
-<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
-<wire x1="-3.81" y1="-1.905" x2="-1.27" y2="-1.905" width="0.1524" layer="21"/>
-<wire x1="-1.27" y1="-1.905" x2="-1.27" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="-1.27" y1="0.635" x2="-3.81" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="-3.81" y1="0.635" x2="-3.81" y2="-1.905" width="0.1524" layer="21"/>
-<wire x1="-2.54" y1="6.985" x2="-2.54" y2="1.27" width="0.762" layer="21"/>
-<wire x1="-1.27" y1="-1.905" x2="1.27" y2="-1.905" width="0.1524" layer="21"/>
-<wire x1="1.27" y1="-1.905" x2="1.27" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="1.27" y1="0.635" x2="-1.27" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="0" y1="6.985" x2="0" y2="1.27" width="0.762" layer="21"/>
-<wire x1="1.27" y1="-1.905" x2="3.81" y2="-1.905" width="0.1524" layer="21"/>
-<wire x1="3.81" y1="-1.905" x2="3.81" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="3.81" y1="0.635" x2="1.27" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="2.54" y1="6.985" x2="2.54" y2="1.27" width="0.762" layer="21"/>
-<pad name="1" x="-2.54" y="-3.81" drill="1.016" shape="long" rot="R90"/>
-<pad name="2" x="0" y="-3.81" drill="1.016" shape="long" rot="R90"/>
-<pad name="3" x="2.54" y="-3.81" drill="1.016" shape="long" rot="R90"/>
-<text x="-4.445" y="-3.81" size="1.27" layer="25" ratio="10" rot="R90">&gt;NAME</text>
-<text x="5.715" y="-3.81" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
-<rectangle x1="-2.921" y1="0.635" x2="-2.159" y2="1.143" layer="21"/>
-<rectangle x1="-0.381" y1="0.635" x2="0.381" y2="1.143" layer="21"/>
-<rectangle x1="2.159" y1="0.635" x2="2.921" y2="1.143" layer="21"/>
-<rectangle x1="-2.921" y1="-2.921" x2="-2.159" y2="-1.905" layer="21"/>
-<rectangle x1="-0.381" y1="-2.921" x2="0.381" y2="-1.905" layer="21"/>
-<rectangle x1="2.159" y1="-2.921" x2="2.921" y2="-1.905" layer="21"/>
-</package>
-</packages>
-<packages3d>
-<package3d name="1X03" urn="urn:adsk.eagle:package:22458/2" type="model" library_version="4">
-<description>PIN HEADER</description>
-<packageinstances>
-<packageinstance name="1X03"/>
-</packageinstances>
-</package3d>
-<package3d name="1X03/90" urn="urn:adsk.eagle:package:22459/2" type="model" library_version="4">
-<description>PIN HEADER</description>
-<packageinstances>
-<packageinstance name="1X03/90"/>
-</packageinstances>
-</package3d>
-</packages3d>
-<symbols>
-<symbol name="PINHD3" urn="urn:adsk.eagle:symbol:22339/1" library_version="4">
-<wire x1="-6.35" y1="-5.08" x2="1.27" y2="-5.08" width="0.4064" layer="94"/>
-<wire x1="1.27" y1="-5.08" x2="1.27" y2="5.08" width="0.4064" layer="94"/>
-<wire x1="1.27" y1="5.08" x2="-6.35" y2="5.08" width="0.4064" layer="94"/>
-<wire x1="-6.35" y1="5.08" x2="-6.35" y2="-5.08" width="0.4064" layer="94"/>
-<text x="-6.35" y="5.715" size="1.778" layer="95">&gt;NAME</text>
-<text x="-6.35" y="-7.62" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="1" x="-2.54" y="2.54" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="2" x="-2.54" y="0" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="3" x="-2.54" y="-2.54" visible="pad" length="short" direction="pas" function="dot"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="PINHD-1X3" urn="urn:adsk.eagle:component:22524/4" prefix="JP" uservalue="yes" library_version="4">
-<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
-<gates>
-<gate name="A" symbol="PINHD3" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="1X03">
-<connects>
-<connect gate="A" pin="1" pad="1"/>
-<connect gate="A" pin="2" pad="2"/>
-<connect gate="A" pin="3" pad="3"/>
-</connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:22458/2"/>
-</package3dinstances>
-<technologies>
-<technology name="">
-<attribute name="POPULARITY" value="92" constant="no"/>
-</technology>
-</technologies>
-</device>
-<device name="/90" package="1X03/90">
-<connects>
-<connect gate="A" pin="1" pad="1"/>
-<connect gate="A" pin="2" pad="2"/>
-<connect gate="A" pin="3" pad="3"/>
-</connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:22459/2"/>
-</package3dinstances>
-<technologies>
-<technology name="">
-<attribute name="POPULARITY" value="17" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="rcl" urn="urn:adsk.eagle:library:334">
 <description>&lt;b&gt;Resistors, Capacitors, Inductors&lt;/b&gt;&lt;p&gt;
 Based on the previous libraries:
@@ -54245,6 +54112,55 @@ Source: avr.lbr</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="IGVC-Connector">
+<packages>
+<package name="S3B-VH">
+<wire x1="0" y1="0" x2="0" y2="3.2" width="0.127" layer="21"/>
+<wire x1="0" y1="3.2" x2="0" y2="7.2" width="0.127" layer="21"/>
+<wire x1="0" y1="0" x2="11.82" y2="0" width="0.127" layer="21"/>
+<wire x1="11.82" y1="0" x2="11.82" y2="3.2" width="0.127" layer="21"/>
+<wire x1="11.82" y1="3.2" x2="11.82" y2="7.2" width="0.127" layer="21"/>
+<wire x1="0" y1="3.2" x2="11.82" y2="3.2" width="0.127" layer="21"/>
+<pad name="1" x="1.95" y="7.2" drill="1.5" shape="octagon"/>
+<pad name="2" x="5.91" y="7.2" drill="1.5" shape="octagon"/>
+<pad name="3" x="9.87" y="7.2" drill="1.5" shape="octagon"/>
+<text x="0" y="9" size="1.27" layer="25">&gt;Name</text>
+<text x="0" y="10.3" size="1.27" layer="27">&gt;Value</text>
+</package>
+</packages>
+<symbols>
+<symbol name="S3B-VH">
+<wire x1="0" y1="0" x2="12.7" y2="0" width="0.254" layer="94"/>
+<wire x1="12.7" y1="0" x2="12.7" y2="10.16" width="0.254" layer="94"/>
+<wire x1="12.7" y1="10.16" x2="0" y2="10.16" width="0.254" layer="94"/>
+<wire x1="0" y1="10.16" x2="0" y2="0" width="0.254" layer="94"/>
+<pin name="X-1" x="-5.08" y="7.62" length="middle"/>
+<pin name="X-2" x="-5.08" y="5.08" length="middle"/>
+<pin name="X-3" x="-5.08" y="2.54" length="middle"/>
+<text x="0" y="10.16" size="1.778" layer="96">&gt;Value</text>
+<text x="0" y="-2.54" size="1.778" layer="95">&gt;Name</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="S3B-VH" prefix="J">
+<gates>
+<gate name="A" symbol="S3B-VH" x="0" y="-7.62"/>
+</gates>
+<devices>
+<device name="" package="S3B-VH">
+<connects>
+<connect gate="A" pin="X-1" pad="1"/>
+<connect gate="A" pin="X-2" pad="2"/>
+<connect gate="A" pin="X-3" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -54283,7 +54199,6 @@ Source: avr.lbr</description>
 <part name="C5" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="CPOL-US" device="D" package3d_urn="urn:adsk.eagle:package:23424/2" value="47u"/>
 <part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
-<part name="JP1" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="" package3d_urn="urn:adsk.eagle:package:22458/2"/>
 <part name="P+5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="GND10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -54300,9 +54215,9 @@ Source: avr.lbr</description>
 <part name="ON" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIP-LED0805" package3d_urn="urn:adsk.eagle:package:15818/2" value="GREEN"/>
 <part name="R3" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="470R"/>
 <part name="P+2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
-<part name="D2" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIP-LED0805" package3d_urn="urn:adsk.eagle:package:15818/2" value="RED"/>
+<part name="DEBUG1" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIP-LED0805" package3d_urn="urn:adsk.eagle:package:15818/2" value="BLUE"/>
 <part name="R6" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="470R"/>
-<part name="D3" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIP-LED0805" package3d_urn="urn:adsk.eagle:package:15818/2" value="RED"/>
+<part name="DEBUG2" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIP-LED0805" package3d_urn="urn:adsk.eagle:package:15818/2" value="BLUE"/>
 <part name="R8" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="470R"/>
 <part name="GND19" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="SW1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="SPST_TACT" device="-EVQQ2" package3d_urn="urn:adsk.eagle:package:6240643/1"/>
@@ -54338,6 +54253,7 @@ Source: avr.lbr</description>
 <part name="J2" library="RoboJackets-Connectors" deviceset="4-PIN_2MM-*" device="H"/>
 <part name="GND11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="C7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="100nF"/>
+<part name="J3" library="IGVC-Connector" deviceset="S3B-VH" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -54360,7 +54276,7 @@ Source: avr.lbr</description>
 <text x="177.8" y="83.82" size="1.778" layer="97" grouprefs="MICROCONTROLLER">D10</text>
 <text x="177.8" y="88.9" size="1.778" layer="97" grouprefs="MICROCONTROLLER">D8</text>
 <text x="147.32" y="187.96" size="1.778" layer="97" grouprefs="5V-REGULATOR">Max. Current = 5A</text>
-<text x="210.82" y="182.88" size="1.27" layer="97" grouprefs="NEOPIXEL-OUT">From Neopixel Best Practices:
+<text x="195.58" y="182.88" size="1.27" layer="97" grouprefs="NEOPIXEL-OUT">From Neopixel Best Practices:
 "Before connecting NeoPixels
 to any large power source (DC
 “wall wart” or even a large
@@ -54373,7 +54289,6 @@ current drawn by the strip."</text>
 <text x="81.026" y="178.816" size="1.27" layer="97">For automatic
 startup, leave EN
 unconnected.</text>
-<text x="238.76" y="177.8" size="1.27" layer="97">NOTE: Consider changing this connector</text>
 </plain>
 <instances>
 <instance part="IC1" gate="G$1" x="88.9" y="185.42" smashed="yes" grouprefs="5V-REGULATOR">
@@ -54434,26 +54349,22 @@ unconnected.</text>
 <instance part="P+1" gate="1" x="180.34" y="190.5" smashed="yes" grouprefs="5V-REGULATOR">
 <attribute name="VALUE" x="177.8" y="185.42" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="JP1" gate="A" x="246.38" y="165.1" smashed="yes" grouprefs="NEOPIXEL-OUT">
-<attribute name="NAME" x="240.03" y="170.815" size="1.778" layer="95"/>
-<attribute name="VALUE" x="240.03" y="157.48" size="1.778" layer="96"/>
+<instance part="P+5" gate="1" x="220.98" y="180.34" smashed="yes" grouprefs="NEOPIXEL-OUT">
+<attribute name="VALUE" x="218.44" y="175.26" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="P+5" gate="1" x="236.22" y="180.34" smashed="yes" grouprefs="NEOPIXEL-OUT">
-<attribute name="VALUE" x="233.68" y="175.26" size="1.778" layer="96" rot="R90"/>
-</instance>
-<instance part="GND10" gate="1" x="236.22" y="152.4" smashed="yes" grouprefs="NEOPIXEL-OUT">
-<attribute name="VALUE" x="233.68" y="149.86" size="1.778" layer="96"/>
+<instance part="GND10" gate="1" x="220.98" y="152.4" smashed="yes" grouprefs="NEOPIXEL-OUT">
+<attribute name="VALUE" x="218.44" y="149.86" size="1.778" layer="96"/>
 </instance>
 <instance part="GND1" gate="1" x="45.72" y="185.42" smashed="yes" grouprefs="5V-REGULATOR">
 <attribute name="VALUE" x="43.18" y="182.88" size="1.778" layer="96"/>
 </instance>
-<instance part="C6" gate="G$1" x="254" y="165.1" smashed="yes" grouprefs="NEOPIXEL-OUT">
-<attribute name="NAME" x="255.016" y="165.735" size="1.778" layer="95"/>
-<attribute name="VALUE" x="255.016" y="160.909" size="1.778" layer="96"/>
+<instance part="C6" gate="G$1" x="248.92" y="165.1" smashed="yes" grouprefs="NEOPIXEL-OUT">
+<attribute name="NAME" x="249.936" y="165.735" size="1.778" layer="95"/>
+<attribute name="VALUE" x="249.936" y="160.909" size="1.778" layer="96"/>
 </instance>
-<instance part="R7" gate="G$1" x="228.6" y="165.1" smashed="yes" grouprefs="NEOPIXEL-OUT">
-<attribute name="NAME" x="224.79" y="166.5986" size="1.778" layer="95"/>
-<attribute name="VALUE" x="224.79" y="161.798" size="1.778" layer="96"/>
+<instance part="R7" gate="G$1" x="213.36" y="165.1" smashed="yes" grouprefs="NEOPIXEL-OUT">
+<attribute name="NAME" x="209.55" y="166.5986" size="1.778" layer="95"/>
+<attribute name="VALUE" x="209.55" y="161.798" size="1.778" layer="96"/>
 </instance>
 <instance part="ICSP" gate="A" x="241.3" y="111.76" smashed="yes" grouprefs="ICSP-HEADER">
 <attribute name="NAME" x="234.95" y="117.475" size="1.778" layer="95"/>
@@ -54485,7 +54396,7 @@ unconnected.</text>
 <instance part="P+2" gate="1" x="231.14" y="91.44" smashed="yes" grouprefs="LEDS">
 <attribute name="VALUE" x="228.6" y="86.36" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="D2" gate="G$1" x="254" y="73.66" smashed="yes" rot="R90" grouprefs="LEDS">
+<instance part="DEBUG1" gate="G$1" x="254" y="73.66" smashed="yes" rot="R90" grouprefs="LEDS">
 <attribute name="NAME" x="258.572" y="77.216" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="258.572" y="79.375" size="1.778" layer="96" rot="R180"/>
 </instance>
@@ -54493,7 +54404,7 @@ unconnected.</text>
 <attribute name="NAME" x="237.49" y="75.1586" size="1.778" layer="95"/>
 <attribute name="VALUE" x="237.49" y="70.358" size="1.778" layer="96"/>
 </instance>
-<instance part="D3" gate="G$1" x="254" y="60.96" smashed="yes" rot="R90" grouprefs="LEDS">
+<instance part="DEBUG2" gate="G$1" x="254" y="60.96" smashed="yes" rot="R90" grouprefs="LEDS">
 <attribute name="NAME" x="258.572" y="64.516" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="258.572" y="66.675" size="1.778" layer="96" rot="R180"/>
 </instance>
@@ -54618,6 +54529,10 @@ unconnected.</text>
 <attribute name="NAME" x="75.184" y="33.401" size="1.778" layer="95"/>
 <attribute name="VALUE" x="75.184" y="28.321" size="1.778" layer="96"/>
 </instance>
+<instance part="J3" gate="A" x="243.84" y="160.02" smashed="yes">
+<attribute name="VALUE" x="243.84" y="170.18" size="1.778" layer="96"/>
+<attribute name="NAME" x="243.84" y="157.48" size="1.778" layer="95"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -54641,15 +54556,15 @@ unconnected.</text>
 <junction x="172.72" y="185.42" grouprefs="5V-REGULATOR"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="A" pin="1"/>
 <pinref part="P+5" gate="1" pin="+5V"/>
-<wire x1="243.84" y1="167.64" x2="236.22" y2="167.64" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
-<wire x1="236.22" y1="167.64" x2="236.22" y2="175.26" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
+<wire x1="238.76" y1="167.64" x2="220.98" y2="167.64" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
+<wire x1="220.98" y1="167.64" x2="220.98" y2="175.26" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
 <pinref part="C6" gate="G$1" pin="+"/>
-<wire x1="236.22" y1="175.26" x2="236.22" y2="177.8" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
-<wire x1="254" y1="167.64" x2="254" y2="175.26" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
-<wire x1="254" y1="175.26" x2="236.22" y2="175.26" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
-<junction x="236.22" y="175.26" grouprefs="NEOPIXEL-OUT"/>
+<wire x1="220.98" y1="175.26" x2="220.98" y2="177.8" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
+<wire x1="248.92" y1="167.64" x2="248.92" y2="175.26" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
+<wire x1="248.92" y1="175.26" x2="220.98" y2="175.26" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
+<junction x="220.98" y="175.26" grouprefs="NEOPIXEL-OUT"/>
+<pinref part="J3" gate="A" pin="X-1"/>
 </segment>
 <segment>
 <wire x1="254" y1="116.84" x2="254" y2="114.3" width="0.1524" layer="91" grouprefs="ICSP-HEADER"/>
@@ -54743,14 +54658,14 @@ unconnected.</text>
 </segment>
 <segment>
 <pinref part="GND10" gate="1" pin="GND"/>
-<pinref part="JP1" gate="A" pin="3"/>
-<wire x1="236.22" y1="154.94" x2="236.22" y2="157.48" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
-<wire x1="236.22" y1="157.48" x2="236.22" y2="162.56" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
-<wire x1="236.22" y1="162.56" x2="243.84" y2="162.56" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
+<wire x1="220.98" y1="154.94" x2="220.98" y2="157.48" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
+<wire x1="220.98" y1="157.48" x2="220.98" y2="162.56" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
+<wire x1="220.98" y1="162.56" x2="238.76" y2="162.56" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
 <pinref part="C6" gate="G$1" pin="-"/>
-<wire x1="236.22" y1="157.48" x2="254" y2="157.48" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
-<wire x1="254" y1="157.48" x2="254" y2="160.02" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
-<junction x="236.22" y="157.48" grouprefs="NEOPIXEL-OUT"/>
+<wire x1="220.98" y1="157.48" x2="248.92" y2="157.48" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
+<wire x1="248.92" y1="157.48" x2="248.92" y2="160.02" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
+<junction x="220.98" y="157.48" grouprefs="NEOPIXEL-OUT"/>
+<pinref part="J3" gate="A" pin="X-3"/>
 </segment>
 <segment>
 <pinref part="GND1" gate="1" pin="GND"/>
@@ -54769,8 +54684,8 @@ unconnected.</text>
 <wire x1="259.08" y1="73.66" x2="264.16" y2="73.66" width="0.1524" layer="91" grouprefs="LEDS"/>
 <wire x1="259.08" y1="86.36" x2="264.16" y2="86.36" width="0.1524" layer="91" grouprefs="LEDS"/>
 <pinref part="ON" gate="G$1" pin="C"/>
-<pinref part="D2" gate="G$1" pin="C"/>
-<pinref part="D3" gate="G$1" pin="C"/>
+<pinref part="DEBUG1" gate="G$1" pin="C"/>
+<pinref part="DEBUG2" gate="G$1" pin="C"/>
 <pinref part="GND19" gate="1" pin="GND"/>
 <wire x1="264.16" y1="60.96" x2="264.16" y2="73.66" width="0.1524" layer="91"/>
 <junction x="264.16" y="60.96"/>
@@ -54941,9 +54856,9 @@ unconnected.</text>
 </net>
 <net name="LED_DATA" class="0">
 <segment>
-<label x="218.44" y="165.1" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="NEOPIXEL-OUT"/>
+<label x="203.2" y="165.1" size="1.27" layer="95" rot="R180" xref="yes" grouprefs="NEOPIXEL-OUT"/>
 <pinref part="R7" gate="G$1" pin="1"/>
-<wire x1="218.5924" y1="165.1" x2="223.52" y2="165.1" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
+<wire x1="203.3524" y1="165.1" x2="208.28" y2="165.1" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
 </segment>
 <segment>
 <wire x1="175.26" y1="132.08" x2="185.2676" y2="132.08" width="0.1524" layer="91" grouprefs="MICROCONTROLLER"/>
@@ -54969,9 +54884,9 @@ unconnected.</text>
 </net>
 <net name="NEOPIXEL" class="0">
 <segment>
-<pinref part="JP1" gate="A" pin="2"/>
-<wire x1="233.68" y1="165.1" x2="243.84" y2="165.1" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
+<wire x1="218.44" y1="165.1" x2="238.76" y2="165.1" width="0.1524" layer="91" grouprefs="NEOPIXEL-OUT"/>
 <pinref part="R7" gate="G$1" pin="2"/>
+<pinref part="J3" gate="A" pin="X-2"/>
 </segment>
 </net>
 <net name="!RESET" class="0">
@@ -55039,14 +54954,14 @@ unconnected.</text>
 <net name="STAT1_LED" class="0">
 <segment>
 <wire x1="251.46" y1="73.66" x2="246.38" y2="73.66" width="0.1524" layer="91" grouprefs="LEDS"/>
-<pinref part="D2" gate="G$1" pin="A"/>
+<pinref part="DEBUG1" gate="G$1" pin="A"/>
 <pinref part="R6" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="STAT2_LED" class="0">
 <segment>
 <wire x1="251.46" y1="60.96" x2="246.38" y2="60.96" width="0.1524" layer="91" grouprefs="LEDS"/>
-<pinref part="D3" gate="G$1" pin="A"/>
+<pinref part="DEBUG2" gate="G$1" pin="A"/>
 <pinref part="R8" gate="G$1" pin="2"/>
 </segment>
 </net>

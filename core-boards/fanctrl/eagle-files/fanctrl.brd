@@ -5545,7 +5545,7 @@ design rules under a new name.</description>
 <attribute name="POPULARITY" value="77" x="16.875" y="42.75" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="SPICEPREFIX" value="R" x="16.875" y="42.75" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="JP1" library="pinhead" library_urn="urn:adsk.eagle:library:325" package="2X03" package3d_urn="urn:adsk.eagle:package:22462/2" value="ISCP" x="47" y="21.6" smashed="yes" rot="R90">
+<element name="JP1" library="pinhead" library_urn="urn:adsk.eagle:library:325" package="2X03" package3d_urn="urn:adsk.eagle:package:22462/2" value="ICSP" x="47" y="21.6" smashed="yes" rot="R90">
 <attribute name="NAME" x="44.32" y="25.905" size="0.6096" layer="25" ratio="10"/>
 <attribute name="POPULARITY" value="62" x="47" y="21.6" size="1.778" layer="27" rot="R90" display="off"/>
 </element>

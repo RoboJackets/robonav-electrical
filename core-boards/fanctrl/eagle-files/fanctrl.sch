@@ -17437,7 +17437,7 @@ type 0309, grid 2.5 mm</description>
 <part name="R8" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="4.7K"/>
 <part name="R9" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="120Ω"/>
 <part name="R10" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="120Ω"/>
-<part name="JP1" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-2X3" device="" package3d_urn="urn:adsk.eagle:package:22462/2" value="ISCP"/>
+<part name="JP1" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-2X3" device="" package3d_urn="urn:adsk.eagle:package:22462/2" value="ICSP"/>
 <part name="P+10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="GND17" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="F3" library="RoboJackets-Connectors" deviceset="4-PIN_2MM-*" device="H"/>
@@ -17498,7 +17498,7 @@ Max Current: 5mA</text>
 <wire x1="154.94" y1="129.54" x2="187.96" y2="129.54" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="187.96" y1="129.54" x2="187.96" y2="96.52" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="187.96" y1="96.52" x2="154.94" y2="96.52" width="0.1524" layer="97" style="shortdash"/>
-<text x="157.48" y="121.92" size="6.35" layer="97" font="vector" ratio="12">ISCP</text>
+<text x="157.48" y="121.92" size="6.35" layer="97" font="vector" ratio="12">ICSP</text>
 <text x="10.16" y="111.76" size="1.778" layer="97">IN = Write to the fan</text>
 <text x="10.16" y="109.22" size="1.778" layer="97">OUT = Read from the fan</text>
 </plain>

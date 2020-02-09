@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.0">
+<eagle version="9.5.1">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="mm" altunit="mm"/>
@@ -202,7 +202,7 @@
 <wire x1="22.99" y1="3.47" x2="22.99" y2="1.47" width="0.2" layer="21"/>
 <wire x1="22.99" y1="1.47" x2="14.99" y2="1.47" width="0.2" layer="21"/>
 <text x="44" y="18" size="1" layer="51" font="vector" rot="R90">ISCP</text>
-<text x="13.26" y="24.02" size="1" layer="21" font="vector" rot="R90">PROBE</text>
+<text x="44.26" y="25.02" size="1" layer="21" font="vector" rot="R90">PROBE</text>
 <text x="6" y="49" size="1" layer="21" font="vector">3A FUSE (+5V)</text>
 </plain>
 <libraries>
@@ -5598,10 +5598,10 @@ design rules under a new name.</description>
 <attribute name="NAME" x="1.59" y="35.155" size="0.6096" layer="25" font="vector" ratio="10" rot="R90" align="bottom-center"/>
 </element>
 <element name="U$1" library="RoboJackets-Aesthetics" package="ROBOBUZZ_1.0X2" value="" x="41" y="2" smashed="yes"/>
-<element name="J1" library="RoboJackets-Connectors" package="2MM-3-H" value="3-PIN_2MM-H" x="9.88" y="29" smashed="yes" rot="R270">
-<attribute name="NAME" x="1.62" y="24" size="1" layer="25" font="vector" ratio="10" rot="R90" align="bottom-center"/>
-<attribute name="PINS" value="3" x="9.88" y="29" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="PIN_PITCH" value="2.0 mm" x="9.88" y="29" size="1.778" layer="27" rot="R270" display="off"/>
+<element name="J1" library="RoboJackets-Connectors" package="2MM-3-H" value="3-PIN_2MM-H" x="39.88" y="35" smashed="yes" rot="R90">
+<attribute name="NAME" x="48.14" y="40" size="1" layer="25" font="vector" ratio="10" rot="R270" align="bottom-center"/>
+<attribute name="PINS" value="3" x="39.88" y="35" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="PIN_PITCH" value="2.0 mm" x="39.88" y="35" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="JP2" library="pinhead" library_urn="urn:adsk.eagle:library:325" package="1X02" package3d_urn="urn:adsk.eagle:package:22435/2" value="" x="15" y="45" smashed="yes" rot="R270">
 <attribute name="NAME" x="16.6162" y="47.1712" size="1" layer="21" rot="R270"/>
@@ -5611,6 +5611,11 @@ design rules under a new name.</description>
 </element>
 <element name="F4" library="RoboJackets-Fuses" package="F1206" value="3A" x="9.49" y="47.5" smashed="yes" rot="R180">
 <attribute name="NAME" x="11.45" y="46.41" size="1" layer="25" rot="R180"/>
+</element>
+<element name="F5" library="RoboJackets-Connectors" package="2MM-4-H" value="4-PIN_2MM-H" x="10" y="29" smashed="yes" rot="R270">
+<attribute name="DIGIKEY" value="WM18933-ND" x="23" y="40" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MPN" value="0353630460" x="23" y="40" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="NAME" x="12.5" y="29" size="1" layer="25" font="vector" ratio="10" rot="R270" align="bottom-center"/>
 </element>
 </elements>
 <signals>
@@ -5719,6 +5724,30 @@ design rules under a new name.</description>
 <wire x1="18.595" y1="34.2978" x2="18.595" y2="33.5255" width="0.3" layer="1"/>
 <wire x1="18.595" y1="33.5255" x2="18.03475" y2="32.96525" width="0.3" layer="1"/>
 <via x="18.03475" y="32.96525" extent="1-16" drill="0.381"/>
+<contactref element="F5" pad="2"/>
+<wire x1="10" y1="30" x2="10.28" y2="30.28" width="0.1524" layer="1"/>
+<wire x1="10.28" y1="30.28" x2="15.64" y2="30.28" width="0.1524" layer="1"/>
+<wire x1="39.88" y1="33" x2="41" y2="40" width="0" layer="19" extent="1-1"/>
+<wire x1="36" y1="28" x2="39.88" y2="33" width="0" layer="19" extent="1-1"/>
+<wire x1="35.06" y1="24.125" x2="35.055" y2="27.56" width="0" layer="19" extent="1-1"/>
+<wire x1="40.4152" y1="25.925" x2="36" y2="24" width="0" layer="19" extent="1-1"/>
+<wire x1="45.73" y1="24.14" x2="42.1" y2="25.93" width="0" layer="19" extent="1-1"/>
+<wire x1="30" y1="26.02" x2="35.055" y2="27.56" width="0" layer="19" extent="1-1"/>
+<wire x1="23.365" y1="25.235" x2="28" y2="26" width="0" layer="19" extent="1-1"/>
+<wire x1="23.35" y1="26.83" x2="23.365" y2="25.235" width="0" layer="19" extent="1-1"/>
+<wire x1="17.135" y1="25.435" x2="21.74" y2="25.22" width="0" layer="19" extent="1-1"/>
+<wire x1="17.125" y1="23.24" x2="17.135" y2="25.435" width="0" layer="19" extent="1-1"/>
+<wire x1="15.64" y1="30.26" x2="15.95" y2="25.42" width="0" layer="19" extent="1-1"/>
+<wire x1="18.03475" y1="32.96525" x2="17.16" y2="31.28" width="0" layer="19" extent="1-1"/>
+<wire x1="17.325" y1="39.0222" x2="18.595" y2="34.2978" width="0" layer="19" extent="1-1"/>
+<wire x1="23.3" y1="36.84" x2="18.595" y2="34.2978" width="0" layer="19" extent="1-1"/>
+<wire x1="29.327" y1="37.97" x2="23.69" y2="37.99" width="0" layer="19" extent="1-1"/>
+<wire x1="9.91" y1="40.845" x2="15.9" y2="39.5" width="0" layer="19" extent="1-1"/>
+<wire x1="9.92" y1="21.01" x2="15.95" y2="23.24" width="0" layer="19" extent="1-1"/>
+<wire x1="29" y1="48" x2="29.327" y2="37.97" width="0" layer="19" extent="1-1"/>
+<wire x1="25" y1="48" x2="29" y2="48" width="0" layer="19" extent="1-1"/>
+<wire x1="9.93" y1="9.82" x2="9.92" y2="21.01" width="0" layer="19" extent="1-1"/>
+<wire x1="17.69" y1="4.03" x2="9.93" y2="9.82" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="FAN2-TACH">
 <contactref element="F2" pad="3"/>
@@ -5756,6 +5785,22 @@ design rules under a new name.</description>
 <contactref element="J1" pad="3"/>
 <contactref element="F4" pad="2"/>
 <contactref element="MCP2551" pad="3"/>
+<contactref element="F5" pad="1"/>
+<wire x1="39.88" y1="37" x2="35.65" y2="46.18" width="0" layer="19" extent="1-1"/>
+<wire x1="38.3848" y1="26.875" x2="39.88" y2="37" width="0" layer="19" extent="1-1"/>
+<wire x1="33.36" y1="24.125" x2="38.3848" y2="26.875" width="0" layer="19" extent="1-1"/>
+<wire x1="30" y1="23.62" x2="33.36" y2="24.125" width="0" layer="19" extent="1-1"/>
+<wire x1="21.74" y1="24.42" x2="30" y2="23.62" width="0" layer="19" extent="1-1"/>
+<wire x1="21.74" y1="26.02" x2="21.74" y2="24.42" width="0" layer="19" extent="1-1"/>
+<wire x1="18.835" y1="25.435" x2="21.74" y2="26.02" width="0" layer="19" extent="1-1"/>
+<wire x1="18.825" y1="23.24" x2="18.835" y2="25.435" width="0" layer="19" extent="1-1"/>
+<wire x1="18.853" y1="28.458" x2="18.835" y2="25.435" width="0" layer="19" extent="1-1"/>
+<wire x1="18.86" y1="31.28" x2="18.853" y2="28.458" width="0" layer="19" extent="1-1"/>
+<wire x1="19.865" y1="34.2978" x2="18.86" y2="31.28" width="0" layer="19" extent="1-1"/>
+<wire x1="26.615" y1="39.655" x2="19.865" y2="34.2978" width="0" layer="19" extent="1-1"/>
+<wire x1="10" y1="32" x2="18.86" y2="31.28" width="0" layer="19" extent="1-1"/>
+<wire x1="45.73" y1="19.06" x2="38.3848" y2="26.875" width="0" layer="19" extent="1-1"/>
+<wire x1="8.068" y1="47.5" x2="10" y2="32" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="ANALOG-TEMP-READING">
 <contactref element="ATMEGA328" pad="19"/>
@@ -5806,20 +5851,34 @@ design rules under a new name.</description>
 <signal name="PROBE-PWM-IN">
 <contactref element="R8" pad="1"/>
 <contactref element="J1" pad="2"/>
-<wire x1="9.88" y1="29" x2="10.422" y2="28.458" width="0.3" layer="1"/>
 <contactref element="ATMEGA328" pad="13"/>
-<wire x1="15.01" y1="28.458" x2="17.153" y2="28.458" width="0.3" layer="1"/>
-<wire x1="10.422" y1="28.458" x2="15.01" y2="28.458" width="0.3" layer="1"/>
 <via x="15.01" y="28.458" extent="1-16" drill="0.381"/>
-<wire x1="15.01" y1="28.458" x2="15.01" y2="19.01" width="0.3" layer="16"/>
 <wire x1="15.01" y1="19.01" x2="15" y2="19" width="0.3" layer="16"/>
 <via x="15" y="19" extent="1-16" drill="0.381"/>
 <wire x1="15" y1="19" x2="17" y2="17" width="0.3" layer="1"/>
 <via x="17" y="17" extent="1-16" drill="0.381"/>
-<wire x1="17" y1="17" x2="20.3" y2="13.7" width="0.3" layer="16"/>
 <via x="20.3" y="13.7" extent="1-16" drill="0.381"/>
-<wire x1="20.3" y1="13.7" x2="26.27" y2="19.67" width="0.3" layer="1"/>
-<wire x1="26.27" y1="19.67" x2="26.27" y2="21.49" width="0.3" layer="1"/>
+<wire x1="39.88" y1="35" x2="41" y2="35" width="0.1524" layer="1"/>
+<wire x1="41" y1="35" x2="48" y2="28" width="0.1524" layer="1"/>
+<wire x1="48" y1="28" x2="48" y2="26" width="0.1524" layer="1"/>
+<via x="48" y="26" extent="1-16" drill="0.381"/>
+<wire x1="46.7206" y1="23.729675" x2="46.140325" y2="23.1494" width="0.1524" layer="16"/>
+<wire x1="43.00170625" y1="20.9682" x2="42.9682" y2="20.9682" width="0.1524" layer="16"/>
+<wire x1="42.9682" y1="20.9682" x2="42" y2="20" width="0.1524" layer="16"/>
+<wire x1="48" y1="26" x2="46.7206" y2="24.7206" width="0.1524" layer="16"/>
+<wire x1="46.7206" y1="24.7206" x2="46.7206" y2="23.729675" width="0.1524" layer="16"/>
+<wire x1="46.140325" y1="23.1494" x2="45.18290625" y2="23.1494" width="0.1524" layer="16"/>
+<wire x1="45.18290625" y1="23.1494" x2="43.00170625" y2="20.9682" width="0.1524" layer="16"/>
+<wire x1="42" y1="20" x2="42" y2="19.8395" width="0.1524" layer="16"/>
+<via x="42" y="19.8395" extent="1-16" drill="0.381"/>
+<wire x1="26.5564" y1="20.72711875" x2="26.5564" y2="21.2036" width="0.1524" layer="1"/>
+<wire x1="26.5564" y1="21.2036" x2="26.27" y2="21.49" width="0.1524" layer="1"/>
+<wire x1="42" y1="19.8395" x2="27.44401875" y2="19.8395" width="0.1524" layer="1"/>
+<wire x1="27.44401875" y1="19.8395" x2="26.5564" y2="20.72711875" width="0.1524" layer="1"/>
+<wire x1="15.01" y1="28.458" x2="17.153" y2="28.458" width="0" layer="19" extent="1-1"/>
+<wire x1="15.01" y1="19.01" x2="15.01" y2="28.458" width="0" layer="19" extent="16-16"/>
+<wire x1="20.3" y1="13.7" x2="17" y2="17" width="0" layer="19" extent="1-1"/>
+<wire x1="26.27" y1="21.49" x2="20.3" y2="13.7" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="AREF">
 <contactref element="ATMEGA328" pad="20"/>
@@ -5926,6 +5985,15 @@ design rules under a new name.</description>
 <wire x1="18.60765" y1="40.5" x2="18.60765" y2="40.31450625" width="0.3" layer="1"/>
 <wire x1="18.375" y1="40.73265" x2="18.60765" y2="40.5" width="0.3" layer="1"/>
 <wire x1="18.375" y1="41.9" x2="18.375" y2="40.73265" width="0.3" layer="1"/>
+<contactref element="F5" pad="3"/>
+<wire x1="10" y1="28" x2="8" y2="30" width="0.1524" layer="1"/>
+<wire x1="8" y1="30" x2="8" y2="38" width="0.1524" layer="1"/>
+<wire x1="8.931159375" y1="38.845" x2="9.91" y2="38.845" width="0.1524" layer="1"/>
+<wire x1="8.909615625" y1="38.86654375" x2="8.931159375" y2="38.845" width="0.1524" layer="1"/>
+<wire x1="8.866534375" y1="38.86654375" x2="8.909615625" y2="38.86654375" width="0.1524" layer="1"/>
+<wire x1="8.31404375" y1="38.31405" x2="8.866534375" y2="38.86654375" width="0.1524" layer="1"/>
+<wire x1="8.31404375" y1="38.31404375" x2="8.31404375" y2="38.31405" width="0.1524" layer="1"/>
+<wire x1="8" y1="38" x2="8.31404375" y2="38.31404375" width="0.1524" layer="1"/>
 </signal>
 <signal name="CAN_N">
 <contactref element="MCP2551" pad="6"/>
@@ -5944,6 +6012,14 @@ design rules under a new name.</description>
 <wire x1="15.762" y1="43.73" x2="16.742" y2="42.75" width="0.3" layer="1"/>
 <wire x1="15" y1="43.73" x2="14.3280375" y2="43.73" width="0.3" layer="1"/>
 <wire x1="15" y1="43.73" x2="15.762" y2="43.73" width="0.3" layer="1"/>
+<contactref element="F5" pad="4"/>
+<wire x1="10" y1="26" x2="7.6952" y2="28.3048" width="0.1524" layer="1"/>
+<wire x1="10.792603125" y1="37.727603125" x2="9.91" y2="36.845" width="0.1524" layer="1"/>
+<wire x1="10.792603125" y1="39.21059375" x2="10.792603125" y2="37.727603125" width="0.1524" layer="1"/>
+<wire x1="10.27559375" y1="39.727603125" x2="10.792603125" y2="39.21059375" width="0.1524" layer="1"/>
+<wire x1="9.2965375" y1="39.727603125" x2="10.27559375" y2="39.727603125" width="0.1524" layer="1"/>
+<wire x1="7.6952" y1="38.126265625" x2="9.2965375" y2="39.727603125" width="0.1524" layer="1"/>
+<wire x1="7.6952" y1="28.3048" x2="7.6952" y2="38.126265625" width="0.1524" layer="1"/>
 </signal>
 <signal name="CAN_TX">
 <contactref element="MCP2551" pad="1"/>

@@ -11583,6 +11583,7 @@ In this library you will find all the connectors used on any of our boards.
 <part name="GND10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="J1" library="RoboJackets-Connectors" deviceset="2-PIN_2MM-*" device="V"/>
+<part name="GND12" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -11720,6 +11721,9 @@ In this library you will find all the connectors used on any of our boards.
 <attribute name="NAME" x="137.16" y="109.22" size="1.778" layer="95" font="vector" rot="R180" align="top-left"/>
 <attribute name="VALUE" x="137.16" y="124.46" size="1.778" layer="96" font="vector" rot="R180"/>
 </instance>
+<instance part="GND12" gate="1" x="119.38" y="119.38" smashed="yes" rot="R270">
+<attribute name="VALUE" x="116.84" y="121.92" size="1.778" layer="96" rot="R270"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -11783,6 +11787,11 @@ In this library you will find all the connectors used on any of our boards.
 <pinref part="GND11" gate="1" pin="GND"/>
 <pinref part="Z1" gate="TLP2745" pin="P$3"/>
 <wire x1="58.42" y1="119.38" x2="63.5" y2="119.38" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND12" gate="1" pin="GND"/>
+<pinref part="J1" gate="G$1" pin="2"/>
+<wire x1="121.92" y1="119.38" x2="127" y2="119.38" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$4" class="0">

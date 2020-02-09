@@ -3,7 +3,7 @@
 <eagle version="9.5.2">
 <drawing>
 <settings>
-<setting alwaysvectorfont="no"/>
+<setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="1" altunitdist="mm" altunit="mm"/>
@@ -36,7 +36,7 @@
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
-<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
 <layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
@@ -170,11 +170,12 @@
 <text x="37.78" y="23.51" size="1.778" layer="25" rot="R90">BATTERY</text>
 <text x="56.91" y="39.56" size="1.778" layer="25" rot="R270">ROBOT
 </text>
-<text x="51.02" y="51.07" size="1.778" layer="25">RoboJackets IGVC
+<text x="55.02" y="47.07" size="1.778" layer="25">RoboJackets IGVC
 Hotswap Board v.1.0</text>
 <text x="13.51" y="26.53" size="1.778" layer="25">GND</text>
 <dimension x1="93" y1="63" x2="90" y2="0" x3="97" y3="31.5" textsize="1.778" layer="1" dtype="vertical"/>
 <dimension x1="0" y1="63" x2="93" y2="61" x3="46.5" y3="67" textsize="1.778" layer="1" dtype="horizontal"/>
+<text x="44" y="55" size="1.25" layer="25">Optical Isolator</text>
 </plain>
 <libraries>
 <library name="rcl" urn="urn:adsk.eagle:library:334">
@@ -4923,7 +4924,7 @@ design rules under a new name.</description>
 <element name="U$6" library="IGVC-Connector" package="6T4AWGLUG" value="6T4AWGLUG" x="84" y="20" smashed="yes" rot="R180"/>
 <element name="Z1" library="IGVC-Discrete" package="TLP2745" value="TLP2745" x="50" y="59" smashed="yes"/>
 <element name="J1" library="RoboJackets-Connectors" package="2MM-2-V" value="2-PIN_2MM-V" x="65" y="59" smashed="yes">
-<attribute name="NAME" x="61" y="62.5" size="1" layer="25" font="vector"/>
+<attribute name="NAME" x="70" y="60.5" size="1" layer="25" font="vector"/>
 <attribute name="PINS" value="2" x="65" y="59" size="1.778" layer="27" display="off"/>
 <attribute name="PIN_PITCH" value="2.0 mm" x="65" y="59" size="1.778" layer="27" display="off"/>
 </element>
@@ -4988,17 +4989,18 @@ design rules under a new name.</description>
 <wire x1="23.65" y1="34" x2="11.5" y2="34" width="0.254" layer="1"/>
 <wire x1="23.65" y1="21" x2="11.5" y2="21" width="0.254" layer="1"/>
 <wire x1="45.625" y1="57.73" x2="54.375" y2="57.73" width="0.254" layer="1"/>
-<via x="26" y="28" extent="1-16" drill="0.381"/>
-<via x="21" y="27" extent="1-16" drill="0.381"/>
-<wire x1="23.65" y1="34" x2="26" y2="31.65" width="0.254" layer="1"/>
-<wire x1="26" y1="31.65" x2="26" y2="28" width="0.254" layer="1"/>
-<wire x1="23.65" y1="21" x2="23.65" y2="26.35" width="0.254" layer="1"/>
-<wire x1="23.65" y1="26.35" x2="23" y2="27" width="0.254" layer="1"/>
-<wire x1="23" y1="27" x2="21" y2="27" width="0.254" layer="1"/>
-<via x="65" y="29" extent="1-16" drill="0.381"/>
-<wire x1="68.35" y1="35" x2="68.35" y2="30.35" width="0.254" layer="1"/>
-<wire x1="68.35" y1="30.35" x2="67" y2="29" width="0.254" layer="1"/>
-<wire x1="67" y1="29" x2="65" y2="29" width="0.254" layer="1"/>
+<contactref element="J1" pad="2"/>
+<wire x1="54.375" y1="57.73" x2="66" y2="59" width="0" layer="19" extent="1-1"/>
+<wire x1="40.99" y1="49.8" x2="42" y2="57" width="0" layer="19" extent="1-1"/>
+<wire x1="39.21" y1="43.61" x2="40.99" y2="49.8" width="0" layer="19" extent="1-1"/>
+<wire x1="48.8356" y1="29.48" x2="47.21" y2="32.02" width="0" layer="19" extent="1-1"/>
+<wire x1="45.94" y1="27.36" x2="48.8356" y2="29.48" width="0" layer="19" extent="1-1"/>
+<wire x1="47.21" y1="25.0576" x2="45.94" y2="27.36" width="0" layer="19" extent="1-1"/>
+<wire x1="52.29" y1="25.67" x2="51.02" y2="29.099" width="0" layer="19" extent="1-1"/>
+<wire x1="43.4" y1="18.05" x2="45.62" y2="24.4" width="0" layer="19" extent="1-1"/>
+<wire x1="68.35" y1="35" x2="54.7" y2="25.67" width="0" layer="19" extent="1-1"/>
+<wire x1="23.65" y1="21" x2="40.99" y2="18.05" width="0" layer="19" extent="1-1"/>
+<wire x1="23.65" y1="34" x2="23.65" y2="21" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$4">
 <contactref element="U1" pad="10"/>
@@ -5049,7 +5051,7 @@ design rules under a new name.</description>
 <contactref element="Q1" pad="S"/>
 <contactref element="Q3" pad="S"/>
 <wire x1="45.585" y1="14.754" x2="45.66" y2="14.679" width="0.1524" layer="1"/>
-<wire x1="45.66" y1="14.679" x2="45.66" y2="10.17" width="0.254" layer="1"/>
+<wire x1="45.66" y1="14.679" x2="45.66" y2="10.17" width="1.5" layer="1"/>
 </signal>
 <signal name="VCC_ROBOT">
 <contactref element="U1" pad="8"/>

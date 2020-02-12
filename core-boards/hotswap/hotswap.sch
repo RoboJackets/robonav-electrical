@@ -11426,7 +11426,7 @@ In this library you will find frames that can be used to help organize a schemat
 <wire x1="22" y1="4.75" x2="22" y2="-4.75" width="0.1524" layer="51"/>
 <wire x1="-5" y1="4.75" x2="-5" y2="-4.75" width="0.1524" layer="51"/>
 <wire x1="-5" y1="-4.75" x2="22" y2="-4.75" width="0.1524" layer="51"/>
-<pad name="P$2" x="15.65" y="0" drill="4.9" shape="square"/>
+<pad name="P$2" x="15.65" y="0" drill="4.9022" diameter="6.985"/>
 <smd name="P$1" x="3.5" y="0" dx="17" dy="9.5" layer="1"/>
 </package>
 </packages>

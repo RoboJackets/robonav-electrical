@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.1">
+<eagle version="9.5.0">
 <drawing>
 <settings>
-<setting alwaysvectorfont="no"/>
+<setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
@@ -659,14 +659,6 @@ In this library you will find all the connectors used on any of our boards.
 <text x="-2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
 </symbol>
-<symbol name="+12V" urn="urn:adsk.eagle:symbol:26931/1" library_version="1">
-<wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
-<wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
-<wire x1="1.27" y1="-0.635" x2="0" y2="1.27" width="0.254" layer="94"/>
-<wire x1="0" y1="1.27" x2="-1.27" y2="-0.635" width="0.254" layer="94"/>
-<text x="-2.54" y="-5.08" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
-<pin name="+12V" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
-</symbol>
 <symbol name="+5V" urn="urn:adsk.eagle:symbol:26929/1" library_version="1">
 <wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
 <wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
@@ -679,19 +671,6 @@ In this library you will find all the connectors used on any of our boards.
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
 <gate name="1" symbol="GND" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="+12V" urn="urn:adsk.eagle:component:26959/1" prefix="P+" library_version="1">
-<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
-<gates>
-<gate name="1" symbol="+12V" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -17576,9 +17555,8 @@ type 0309, grid 2.5 mm</description>
 <part name="F1" library="RoboJackets-Connectors" deviceset="4-PIN_2MM-*" device="H"/>
 <part name="F2" library="RoboJackets-Connectors" deviceset="4-PIN_2MM-*" device="H"/>
 <part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="P+7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+12V" device=""/>
-<part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="2.5K"/>
-<part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="2.5K"/>
+<part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1K"/>
+<part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1K"/>
 <part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="FRAME1" library="RoboJackets-Frames" deviceset="FRAME_A_L" device="">
 <attribute name="REVISION" value="1.0"/>
@@ -17590,13 +17568,9 @@ type 0309, grid 2.5 mm</description>
 <part name="C3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1µF"/>
 <part name="C4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1µF"/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="470Ω"/>
 <part name="R4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="470Ω"/>
-<part name="LED1" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIPLED_0603" package3d_urn="urn:adsk.eagle:package:15822/2" value="GREEN"/>
-<part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+12V" device=""/>
 <part name="P+2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="GND3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="GND8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="LED2" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIPLED_0603" package3d_urn="urn:adsk.eagle:package:15822/2" value="GREEN"/>
 <part name="R5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="470Ω"/>
 <part name="GND9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -17636,6 +17610,8 @@ type 0309, grid 2.5 mm</description>
 <part name="GND18" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="F5" library="RoboJackets-Connectors" deviceset="4-PIN_2MM-*" device="H"/>
+<part name="P+7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
+<part name="P+12" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -17652,9 +17628,9 @@ type 0309, grid 2.5 mm</description>
 <wire x1="50.8" y1="208.28" x2="7.62" y2="208.28" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="7.62" y1="208.28" x2="7.62" y2="160.02" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="53.34" y1="160.02" x2="53.34" y2="208.28" width="0.1524" layer="97" style="shortdash"/>
-<wire x1="53.34" y1="208.28" x2="149.86" y2="208.28" width="0.1524" layer="97" style="shortdash"/>
-<wire x1="149.86" y1="208.28" x2="149.86" y2="160.02" width="0.1524" layer="97" style="shortdash"/>
-<wire x1="149.86" y1="160.02" x2="53.34" y2="160.02" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="53.34" y1="208.28" x2="134.62" y2="208.28" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="134.62" y1="208.28" x2="134.62" y2="160.02" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="134.62" y1="160.02" x2="53.34" y2="160.02" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="154.94" y1="116.84" x2="271.78" y2="116.84" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="271.78" y1="116.84" x2="271.78" y2="208.28" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="271.78" y1="208.28" x2="154.94" y2="208.28" width="0.1524" layer="97" style="shortdash"/>
@@ -17677,27 +17653,43 @@ type 0309, grid 2.5 mm</description>
 <wire x1="271.78" y1="114.3" x2="271.78" y2="81.28" width="0.1524" layer="97" style="shortdash"/>
 <text x="193.04" y="101.6" size="1.778" layer="97">4.7K pull-up resistor from data
 to VCC required by sensor.</text>
-<text x="10.16" y="137.16" size="1.778" layer="97">2.5K pull-up resistor required
+<text x="10.16" y="137.16" size="1.778" layer="97">1K pull-up resistor required
  to read fan tachometer output.</text>
-<text x="10.16" y="116.84" size="1.778" layer="97">12V power splits off from
-the 12V line connecting
-the fans to the 12V rail</text>
+<text x="10.16" y="116.84" size="1.778" layer="97"></text>
 <text x="83.82" y="66.04" size="1.778" layer="97" font="vector" ratio="12">The symbol for pin 29 on the
 atmega328 should probably
 say !RESET instead of RESET</text>
 <text x="10.16" y="127" size="1.778" layer="97" font="vector">V / I = R
-12V / 4.8mA = 2.5K
+5V / 5mA = 1K
 Max Current: 5mA</text>
 <wire x1="154.94" y1="81.28" x2="154.94" y2="114.3" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="154.94" y1="114.3" x2="187.96" y2="114.3" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="187.96" y1="114.3" x2="187.96" y2="81.28" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="187.96" y1="81.28" x2="154.94" y2="81.28" width="0.1524" layer="97" style="shortdash"/>
 <text x="157.48" y="106.68" size="6.35" layer="97" font="vector" ratio="12">ICSP</text>
-<text x="10.16" y="111.76" size="1.778" layer="97">OUT = Write to the fan</text>
-<text x="10.16" y="109.22" size="1.778" layer="97">TACH = Read from the fan</text>
+<text x="10.16" y="121.92" size="1.778" layer="97">OUT = Write to the fan</text>
+<text x="10.16" y="119.38" size="1.778" layer="97">TACH = Read from the fan</text>
 <text x="180.34" y="152.4" size="1.778" layer="97" font="vector">Use a jumper to connect this
 resistor if this board is the 
 last board on the CAN bus. </text>
+<text x="185.42" y="121.92" size="1.778" layer="97">CAN bus connectors. F3 is input 
+to this board, F5 is output.</text>
+<text x="10.16" y="96.52" size="1.778" layer="97">Pin 2 is connected to RAW fan 
+power and is intentionally 
+not connected to this board.
+
+The fans are powered directly
+from the +12V or +24V rail in
+the electronics tray.</text>
+<text x="109.22" y="187.96" size="1.778" layer="97">+5V Power</text>
+<text x="55.88" y="177.8" size="1.778" layer="97">Turns on if
+temperature
+reading is
+too high or
+too low.</text>
+<text x="83.82" y="182.88" size="1.778" layer="97">Turn on if
+main loop is
+running.</text>
 </plain>
 <instances>
 <instance part="ATMEGA328" gate="G$1" x="83.82" y="33.02" smashed="yes">
@@ -17730,16 +17722,13 @@ last board on the CAN bus. </text>
 <instance part="GND6" gate="1" x="86.36" y="88.9" smashed="yes">
 <attribute name="VALUE" x="83.82" y="86.36" size="1.778" layer="96"/>
 </instance>
-<instance part="P+7" gate="1" x="53.34" y="137.16" smashed="yes">
-<attribute name="VALUE" x="50.8" y="139.7" size="1.778" layer="96"/>
+<instance part="R1" gate="G$1" x="71.12" y="134.62" smashed="yes" rot="R270">
+<attribute name="NAME" x="67.5386" y="138.43" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="72.898" y="138.43" size="1.778" layer="96" rot="R270"/>
 </instance>
-<instance part="R1" gate="G$1" x="63.5" y="129.54" smashed="yes">
-<attribute name="NAME" x="59.69" y="131.0386" size="1.778" layer="95"/>
-<attribute name="VALUE" x="59.69" y="126.238" size="1.778" layer="96"/>
-</instance>
-<instance part="R2" gate="G$1" x="66.04" y="99.06" smashed="yes">
-<attribute name="NAME" x="62.23" y="100.5586" size="1.778" layer="95"/>
-<attribute name="VALUE" x="62.23" y="95.758" size="1.778" layer="96"/>
+<instance part="R2" gate="G$1" x="71.12" y="104.14" smashed="yes" rot="R270">
+<attribute name="NAME" x="67.5386" y="107.95" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="72.898" y="107.95" size="1.778" layer="96" rot="R270"/>
 </instance>
 <instance part="GND7" gate="1" x="86.36" y="119.38" smashed="yes">
 <attribute name="VALUE" x="83.82" y="116.84" size="1.778" layer="96"/>
@@ -17772,33 +17761,19 @@ last board on the CAN bus. </text>
 <instance part="GND1" gate="1" x="15.24" y="17.78" smashed="yes">
 <attribute name="VALUE" x="12.7" y="15.24" size="1.778" layer="96"/>
 </instance>
-<instance part="R3" gate="G$1" x="121.92" y="185.42" smashed="yes" rot="R90">
-<attribute name="NAME" x="120.4214" y="181.61" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="125.222" y="181.61" size="1.778" layer="96" rot="R90"/>
+<instance part="R4" gate="G$1" x="124.46" y="185.42" smashed="yes" rot="R90">
+<attribute name="NAME" x="122.9614" y="181.61" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="127.762" y="181.61" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="R4" gate="G$1" x="139.7" y="185.42" smashed="yes" rot="R90">
-<attribute name="NAME" x="138.2014" y="181.61" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="143.002" y="181.61" size="1.778" layer="96" rot="R90"/>
+<instance part="P+2" gate="1" x="124.46" y="195.58" smashed="yes">
+<attribute name="VALUE" x="121.92" y="198.12" size="1.778" layer="96"/>
 </instance>
-<instance part="LED1" gate="G$1" x="121.92" y="175.26" smashed="yes">
-<attribute name="NAME" x="125.476" y="170.688" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="127.635" y="170.688" size="1.778" layer="96" rot="R90"/>
+<instance part="GND3" gate="1" x="124.46" y="165.1" smashed="yes">
+<attribute name="VALUE" x="121.92" y="162.56" size="1.778" layer="96"/>
 </instance>
-<instance part="P+1" gate="1" x="121.92" y="195.58" smashed="yes">
-<attribute name="VALUE" x="119.38" y="198.12" size="1.778" layer="96"/>
-</instance>
-<instance part="P+2" gate="1" x="139.7" y="195.58" smashed="yes">
-<attribute name="VALUE" x="137.16" y="198.12" size="1.778" layer="96"/>
-</instance>
-<instance part="GND3" gate="1" x="139.7" y="165.1" smashed="yes">
-<attribute name="VALUE" x="137.16" y="162.56" size="1.778" layer="96"/>
-</instance>
-<instance part="GND8" gate="1" x="121.92" y="165.1" smashed="yes">
-<attribute name="VALUE" x="119.38" y="162.56" size="1.778" layer="96"/>
-</instance>
-<instance part="LED2" gate="G$1" x="139.7" y="175.26" smashed="yes">
-<attribute name="NAME" x="143.256" y="170.688" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="145.415" y="170.688" size="1.778" layer="96" rot="R90"/>
+<instance part="LED2" gate="G$1" x="124.46" y="175.26" smashed="yes">
+<attribute name="NAME" x="128.016" y="170.688" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="130.175" y="170.688" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="R5" gate="G$1" x="76.2" y="185.42" smashed="yes" rot="R90">
 <attribute name="NAME" x="74.7014" y="181.61" size="1.778" layer="95" rot="R90"/>
@@ -17919,39 +17894,16 @@ last board on the CAN bus. </text>
 <instance part="F5" gate="G$1" x="231.14" y="129.54" smashed="yes">
 <attribute name="NAME" x="228.6" y="134.62" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
+<instance part="P+7" gate="1" x="71.12" y="144.78" smashed="yes">
+<attribute name="VALUE" x="71.12" y="147.32" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="P+12" gate="1" x="71.12" y="114.3" smashed="yes">
+<attribute name="VALUE" x="71.12" y="116.84" size="1.778" layer="96" rot="R180"/>
+</instance>
 </instances>
 <busses>
 </busses>
 <nets>
-<net name="+12V" class="0">
-<segment>
-<pinref part="P+7" gate="1" pin="+12V"/>
-<wire x1="53.34" y1="134.62" x2="53.34" y2="129.54" width="0.1524" layer="91"/>
-<wire x1="53.34" y1="129.54" x2="53.34" y2="124.46" width="0.1524" layer="91"/>
-<wire x1="53.34" y1="124.46" x2="53.34" y2="99.06" width="0.1524" layer="91"/>
-<pinref part="R1" gate="G$1" pin="1"/>
-<wire x1="58.42" y1="129.54" x2="53.34" y2="129.54" width="0.1524" layer="91"/>
-<junction x="53.34" y="129.54"/>
-<pinref part="R2" gate="G$1" pin="1"/>
-<wire x1="60.96" y1="99.06" x2="53.34" y2="99.06" width="0.1524" layer="91"/>
-<junction x="53.34" y="99.06"/>
-<pinref part="F2" gate="G$1" pin="2"/>
-<wire x1="93.98" y1="127" x2="73.66" y2="127" width="0.1524" layer="91"/>
-<wire x1="73.66" y1="127" x2="73.66" y2="124.46" width="0.1524" layer="91"/>
-<wire x1="73.66" y1="124.46" x2="53.34" y2="124.46" width="0.1524" layer="91"/>
-<junction x="53.34" y="124.46"/>
-<pinref part="F1" gate="G$1" pin="2"/>
-<wire x1="93.98" y1="96.52" x2="73.66" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="73.66" y1="96.52" x2="73.66" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="73.66" y1="93.98" x2="53.34" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="53.34" y1="93.98" x2="53.34" y2="99.06" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="P+1" gate="1" pin="+12V"/>
-<pinref part="R3" gate="G$1" pin="2"/>
-<wire x1="121.92" y1="193.04" x2="121.92" y2="190.5" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="GND" class="0">
 <segment>
 <pinref part="GND2" gate="1" pin="GND"/>
@@ -18005,14 +17957,9 @@ last board on the CAN bus. </text>
 <junction x="15.24" y="43.18"/>
 </segment>
 <segment>
-<pinref part="LED1" gate="G$1" pin="C"/>
-<wire x1="121.92" y1="170.18" x2="121.92" y2="167.64" width="0.1524" layer="91"/>
-<pinref part="GND8" gate="1" pin="GND"/>
-</segment>
-<segment>
 <pinref part="LED2" gate="G$1" pin="C"/>
 <pinref part="GND3" gate="1" pin="GND"/>
-<wire x1="139.7" y1="170.18" x2="139.7" y2="167.64" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="170.18" x2="124.46" y2="167.64" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="LED3" gate="G$1" pin="C"/>
@@ -18086,12 +18033,11 @@ last board on the CAN bus. </text>
 <net name="FAN2-TACH" class="0">
 <segment>
 <pinref part="F2" gate="G$1" pin="3"/>
-<wire x1="93.98" y1="129.54" x2="73.66" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="129.54" x2="71.12" y2="129.54" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="2"/>
-<wire x1="73.66" y1="129.54" x2="68.58" y2="129.54" width="0.1524" layer="91"/>
-<wire x1="73.66" y1="129.54" x2="73.66" y2="137.16" width="0.1524" layer="91"/>
-<junction x="73.66" y="129.54"/>
-<label x="73.66" y="137.16" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
+<wire x1="71.12" y1="129.54" x2="66.04" y2="129.54" width="0.1524" layer="91"/>
+<junction x="71.12" y="129.54"/>
+<label x="66.04" y="129.54" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="ATMEGA328" gate="G$1" pin="PD3(PCINT19/OC2B/INT1)"/>
@@ -18145,7 +18091,7 @@ last board on the CAN bus. </text>
 <segment>
 <pinref part="P+2" gate="1" pin="+5V"/>
 <pinref part="R4" gate="G$1" pin="2"/>
-<wire x1="139.7" y1="193.04" x2="139.7" y2="190.5" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="193.04" x2="124.46" y2="190.5" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="P+8" gate="1" pin="+5V"/>
@@ -18180,12 +18126,18 @@ last board on the CAN bus. </text>
 <segment>
 <pinref part="P+11" gate="1" pin="+5V"/>
 <wire x1="259.08" y1="132.08" x2="259.08" y2="129.54" width="0.1524" layer="91"/>
-<wire x1="259.08" y1="129.54" x2="254" y2="129.54" width="0.1524" layer="91"/>
-<wire x1="254" y1="132.08" x2="254" y2="129.54" width="0.1524" layer="91"/>
-<wire x1="236.22" y1="129.54" x2="238.76" y2="129.54" width="0.1524" layer="91"/>
 <pinref part="F5" gate="G$1" pin="1"/>
-<wire x1="238.76" y1="129.54" x2="238.76" y2="132.08" width="0.1524" layer="91"/>
-<wire x1="238.76" y1="132.08" x2="254" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="236.22" y1="129.54" x2="259.08" y2="129.54" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="R1" gate="G$1" pin="1"/>
+<pinref part="P+7" gate="1" pin="+5V"/>
+<wire x1="71.12" y1="139.7" x2="71.12" y2="142.24" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="P+12" gate="1" pin="+5V"/>
+<pinref part="R2" gate="G$1" pin="1"/>
+<wire x1="71.12" y1="111.76" x2="71.12" y2="109.22" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="ANALOG-TEMP-READING" class="0">
@@ -18203,12 +18155,11 @@ last board on the CAN bus. </text>
 <net name="FAN1-TACH" class="0">
 <segment>
 <pinref part="F1" gate="G$1" pin="3"/>
-<wire x1="93.98" y1="99.06" x2="73.66" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="99.06" x2="71.12" y2="99.06" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="2"/>
-<wire x1="73.66" y1="99.06" x2="71.12" y2="99.06" width="0.1524" layer="91"/>
-<wire x1="73.66" y1="99.06" x2="73.66" y2="106.68" width="0.1524" layer="91"/>
-<junction x="73.66" y="99.06"/>
-<label x="73.66" y="106.68" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
+<wire x1="71.12" y1="99.06" x2="66.04" y2="99.06" width="0.1524" layer="91"/>
+<junction x="71.12" y="99.06"/>
+<label x="66.04" y="99.06" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="ATMEGA328" gate="G$1" pin="PD2(INT0/PCINT18)"/>
@@ -18267,18 +18218,11 @@ last board on the CAN bus. </text>
 <wire x1="15.24" y1="33.02" x2="15.24" y2="30.48" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$2" class="0">
-<segment>
-<pinref part="R3" gate="G$1" pin="1"/>
-<pinref part="LED1" gate="G$1" pin="A"/>
-<wire x1="121.92" y1="180.34" x2="121.92" y2="177.8" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$3" class="0">
 <segment>
 <pinref part="R4" gate="G$1" pin="1"/>
 <pinref part="LED2" gate="G$1" pin="A"/>
-<wire x1="139.7" y1="180.34" x2="139.7" y2="177.8" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="180.34" x2="124.46" y2="177.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="INVALID-TEMP-LED" class="0">

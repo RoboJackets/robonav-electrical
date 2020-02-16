@@ -11583,7 +11583,6 @@ In this library you will find all the connectors used on any of our boards.
 <part name="GND10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="J1" library="RoboJackets-Connectors" deviceset="2-PIN_2MM-*" device="V"/>
-<part name="GND12" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -11717,12 +11716,9 @@ In this library you will find all the connectors used on any of our boards.
 <instance part="GND11" gate="1" x="55.88" y="119.38" smashed="yes" rot="R270">
 <attribute name="VALUE" x="53.34" y="121.92" size="1.778" layer="96" rot="R270"/>
 </instance>
-<instance part="J1" gate="G$1" x="132.08" y="116.84" smashed="yes" rot="R180">
-<attribute name="NAME" x="137.16" y="109.22" size="1.778" layer="95" font="vector" rot="R180" align="top-left"/>
-<attribute name="VALUE" x="137.16" y="124.46" size="1.778" layer="96" font="vector" rot="R180"/>
-</instance>
-<instance part="GND12" gate="1" x="119.38" y="119.38" smashed="yes" rot="R270">
-<attribute name="VALUE" x="116.84" y="121.92" size="1.778" layer="96" rot="R270"/>
+<instance part="J1" gate="G$1" x="132.08" y="111.76" smashed="yes" rot="R180">
+<attribute name="NAME" x="137.16" y="104.14" size="1.778" layer="95" font="vector" rot="R180" align="top-left"/>
+<attribute name="VALUE" x="137.16" y="119.38" size="1.778" layer="96" font="vector" rot="R180"/>
 </instance>
 </instances>
 <busses>
@@ -11788,11 +11784,6 @@ In this library you will find all the connectors used on any of our boards.
 <pinref part="Z1" gate="TLP2745" pin="P$3"/>
 <wire x1="58.42" y1="119.38" x2="63.5" y2="119.38" width="0.1524" layer="91"/>
 </segment>
-<segment>
-<pinref part="GND12" gate="1" pin="GND"/>
-<pinref part="J1" gate="G$1" pin="2"/>
-<wire x1="121.92" y1="119.38" x2="127" y2="119.38" width="0.1524" layer="91"/>
-</segment>
 </net>
 <net name="N$4" class="0">
 <segment>
@@ -11813,17 +11804,17 @@ In this library you will find all the connectors used on any of our boards.
 <net name="VCC_WALL" class="0">
 <segment>
 <pinref part="P+2" gate="VCC" pin="VCC"/>
-<wire x1="33.02" y1="93.98" x2="48.26" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="48.26" y1="93.98" x2="50.8" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="50.8" y1="93.98" x2="111.76" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="93.98" x2="45.72" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="45.72" y1="93.98" x2="60.96" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="93.98" x2="111.76" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="111.76" y1="93.98" x2="111.76" y2="88.9" width="0.1524" layer="91"/>
 <pinref part="U1" gate="A" pin="V1"/>
 <wire x1="111.76" y1="88.9" x2="111.76" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="111.76" y1="53.34" x2="106.68" y2="53.34" width="0.1524" layer="91"/>
 <pinref part="U1" gate="A" pin="E1"/>
-<wire x1="50.8" y1="53.34" x2="48.26" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="48.26" y1="53.34" x2="48.26" y2="93.98" width="0.1524" layer="91"/>
-<junction x="48.26" y="93.98"/>
+<wire x1="50.8" y1="53.34" x2="45.72" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="45.72" y1="53.34" x2="45.72" y2="93.98" width="0.1524" layer="91"/>
+<junction x="45.72" y="93.98"/>
 <pinref part="R2" gate="G$1" pin="2"/>
 <junction x="33.02" y="93.98"/>
 <wire x1="33.02" y1="93.98" x2="20.32" y2="93.98" width="0.1524" layer="91"/>
@@ -11843,9 +11834,9 @@ In this library you will find all the connectors used on any of our boards.
 <junction x="20.32" y="93.98"/>
 <pinref part="VCC_WALL" gate="6T4AWGLUG" pin="J1"/>
 <pinref part="Z1" gate="TLP2745" pin="P$1"/>
-<wire x1="50.8" y1="93.98" x2="50.8" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="50.8" y1="114.3" x2="63.5" y2="114.3" width="0.1524" layer="91"/>
-<junction x="50.8" y="93.98"/>
+<wire x1="60.96" y1="93.98" x2="60.96" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="114.3" x2="63.5" y2="114.3" width="0.1524" layer="91"/>
+<junction x="60.96" y="93.98"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -11948,6 +11939,13 @@ In this library you will find all the connectors used on any of our boards.
 <pinref part="Z1" gate="TLP2745" pin="P$5"/>
 <pinref part="J1" gate="G$1" pin="1"/>
 <wire x1="93.98" y1="114.3" x2="127" y2="114.3" width="0.1524" layer="91"/>
+<pinref part="J1" gate="G$1" pin="2"/>
+<wire x1="127" y1="109.22" x2="106.68" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="109.22" x2="106.68" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="99.06" x2="48.26" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="99.06" x2="48.26" y2="55.88" width="0.1524" layer="91"/>
+<pinref part="U1" gate="A" pin="H1"/>
+<wire x1="48.26" y1="55.88" x2="50.8" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

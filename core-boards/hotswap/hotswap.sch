@@ -11436,7 +11436,7 @@ In this library you will find frames that can be used to help organize a schemat
 <wire x1="12.7" y1="5.08" x2="12.7" y2="-5.08" width="0.1524" layer="94"/>
 <wire x1="12.7" y1="-5.08" x2="-5.08" y2="-5.08" width="0.1524" layer="94"/>
 <wire x1="-5.08" y1="-5.08" x2="-5.08" y2="5.08" width="0.1524" layer="94"/>
-<pin name="J1" x="-10.16" y="0" length="middle"/>
+<pin name="1" x="-10.16" y="0" length="middle"/>
 <text x="-5.08" y="5.08" size="1.778" layer="95">&gt;NAME</text>
 <text x="-5.08" y="-7.62" size="1.778" layer="96">&gt;VALUE</text>
 </symbol>
@@ -11449,7 +11449,7 @@ In this library you will find frames that can be used to help organize a schemat
 <devices>
 <device name="" package="6T4AWGLUG">
 <connects>
-<connect gate="6T4AWGLUG" pin="J1" pad="P$1 P$2"/>
+<connect gate="6T4AWGLUG" pin="1" pad="P$1 P$2"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -11762,17 +11762,17 @@ In this library you will find all the connectors used on any of our boards.
 <segment>
 <pinref part="GND1" gate="1" pin="GND"/>
 <wire x1="-27.94" y1="60.96" x2="-17.78" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="6T4AWGLUG" pin="J1"/>
+<pinref part="U$1" gate="6T4AWGLUG" pin="1"/>
 </segment>
 <segment>
 <pinref part="GND2" gate="1" pin="GND"/>
-<pinref part="U$2" gate="6T4AWGLUG" pin="J1"/>
+<pinref part="U$2" gate="6T4AWGLUG" pin="1"/>
 <wire x1="-27.94" y1="43.18" x2="-17.78" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND9" gate="1" pin="GND"/>
 <wire x1="162.56" y1="71.12" x2="162.56" y2="78.74" width="0.1524" layer="91"/>
-<pinref part="VCC_COMP" gate="6T4AWGLUG" pin="J1"/>
+<pinref part="VCC_COMP" gate="6T4AWGLUG" pin="1"/>
 </segment>
 <segment>
 <pinref part="Z1" gate="TLP2745" pin="P$6"/>
@@ -11832,7 +11832,7 @@ In this library you will find all the connectors used on any of our boards.
 <junction x="111.76" y="93.98"/>
 <wire x1="20.32" y1="106.68" x2="20.32" y2="93.98" width="0.1524" layer="91"/>
 <junction x="20.32" y="93.98"/>
-<pinref part="VCC_WALL" gate="6T4AWGLUG" pin="J1"/>
+<pinref part="VCC_WALL" gate="6T4AWGLUG" pin="1"/>
 <pinref part="Z1" gate="TLP2745" pin="P$1"/>
 <wire x1="60.96" y1="93.98" x2="60.96" y2="114.3" width="0.1524" layer="91"/>
 <wire x1="60.96" y1="114.3" x2="63.5" y2="114.3" width="0.1524" layer="91"/>
@@ -11865,7 +11865,7 @@ In this library you will find all the connectors used on any of our boards.
 <wire x1="132.08" y1="93.98" x2="132.08" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="170.18" y1="43.18" x2="170.18" y2="50.8" width="0.1524" layer="91"/>
 <junction x="170.18" y="50.8"/>
-<pinref part="U$6" gate="6T4AWGLUG" pin="J1"/>
+<pinref part="U$6" gate="6T4AWGLUG" pin="1"/>
 <label x="182.88" y="50.8" size="1.778" layer="95"/>
 </segment>
 </net>
@@ -11892,7 +11892,7 @@ In this library you will find all the connectors used on any of our boards.
 <pinref part="C3" gate="G$1" pin="1"/>
 <wire x1="20.32" y1="10.16" x2="20.32" y2="15.24" width="0.1524" layer="91"/>
 <junction x="20.32" y="15.24"/>
-<pinref part="VCC_BATT" gate="6T4AWGLUG" pin="J1"/>
+<pinref part="VCC_BATT" gate="6T4AWGLUG" pin="1"/>
 </segment>
 </net>
 <net name="N$3" class="0">

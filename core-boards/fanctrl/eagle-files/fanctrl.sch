@@ -17780,7 +17780,7 @@ type 0309, grid 2.5 mm</description>
 <part name="GND17" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="F3" library="RoboJackets-Connectors" deviceset="4-PIN_2MM-*" device="H"/>
 <part name="J1" library="RoboJackets-Connectors" deviceset="3-PIN_2MM-*" device="H"/>
-<part name="JP2" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X2" device="" package3d_urn="urn:adsk.eagle:package:22435/2">
+<part name="JP2" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X2" device="" package3d_urn="urn:adsk.eagle:package:22435/2" value="CAN_JUMPER">
 <attribute name="SPICEPREFIX" value="B"/>
 </part>
 <part name="F4" library="RoboJackets-Fuses" deviceset="CHIP_FUSE" device="1206" value="3A"/>
@@ -17789,7 +17789,7 @@ type 0309, grid 2.5 mm</description>
 <part name="F5" library="RoboJackets-Connectors" deviceset="4-PIN_2MM-*" device="H"/>
 <part name="P+7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="P+12" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
-<part name="JP3" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X6" device="/90" package3d_urn="urn:adsk.eagle:package:22475/2"/>
+<part name="JP3" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X6" device="/90" package3d_urn="urn:adsk.eagle:package:22475/2" value="FTDI"/>
 <part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="GND8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>

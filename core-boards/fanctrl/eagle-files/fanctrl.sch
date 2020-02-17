@@ -17765,8 +17765,6 @@ type 0309, grid 2.5 mm</description>
 <part name="C5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1µF"/>
 <part name="GND12" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
-<part name="C6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1µF"/>
-<part name="GND13" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND14" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND15" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
@@ -17875,6 +17873,8 @@ running.</text>
 <wire x1="149.86" y1="114.3" x2="149.86" y2="81.28" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="149.86" y1="81.28" x2="116.84" y2="81.28" width="0.1524" layer="97" style="shortdash"/>
 <text x="119.38" y="106.68" size="6.35" layer="97" font="vector" ratio="12">FTDI</text>
+<text x="243.84" y="172.72" size="1.778" layer="97">Leave VREF 
+not connected</text>
 </plain>
 <instances>
 <instance part="ATMEGA328" gate="G$1" x="83.82" y="33.02" smashed="yes">
@@ -18005,13 +18005,6 @@ running.</text>
 </instance>
 <instance part="P+8" gate="1" x="162.56" y="195.58" smashed="yes">
 <attribute name="VALUE" x="160.02" y="195.58" size="1.778" layer="96"/>
-</instance>
-<instance part="C6" gate="G$1" x="246.38" y="175.26" smashed="yes">
-<attribute name="NAME" x="247.396" y="175.895" size="1.778" layer="95"/>
-<attribute name="VALUE" x="247.396" y="171.069" size="1.778" layer="96"/>
-</instance>
-<instance part="GND13" gate="1" x="246.38" y="165.1" smashed="yes">
-<attribute name="VALUE" x="243.84" y="162.56" size="1.778" layer="96"/>
 </instance>
 <instance part="GND14" gate="1" x="251.46" y="193.04" smashed="yes">
 <attribute name="VALUE" x="248.92" y="190.5" size="1.778" layer="96"/>
@@ -18179,11 +18172,6 @@ running.</text>
 <wire x1="162.56" y1="177.8" x2="162.56" y2="175.26" width="0.1524" layer="91"/>
 <junction x="162.56" y="177.8"/>
 <pinref part="GND12" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="C6" gate="G$1" pin="2"/>
-<pinref part="GND13" gate="1" pin="GND"/>
-<wire x1="246.38" y1="170.18" x2="246.38" y2="167.64" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="MCP2551" gate="A" pin="RS"/>
@@ -18491,14 +18479,6 @@ running.</text>
 <label x="162.56" y="91.44" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="VREF" class="0">
-<segment>
-<pinref part="MCP2551" gate="A" pin="VREF"/>
-<wire x1="243.84" y1="180.34" x2="246.38" y2="180.34" width="0.1524" layer="91"/>
-<wire x1="246.38" y1="180.34" x2="246.38" y2="177.8" width="0.1524" layer="91"/>
-<pinref part="C6" gate="G$1" pin="1"/>
-</segment>
-</net>
 <net name="CAN_P" class="0">
 <segment>
 <pinref part="MCP2551" gate="A" pin="CANH"/>
@@ -18564,8 +18544,8 @@ running.</text>
 <net name="TX" class="0">
 <segment>
 <pinref part="MCP2551" gate="A" pin="RXD"/>
-<wire x1="193.04" y1="180.34" x2="190.5" y2="180.34" width="0.1524" layer="91"/>
-<label x="190.5" y="180.34" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
+<wire x1="193.04" y1="180.34" x2="187.96" y2="180.34" width="0.1524" layer="91"/>
+<label x="187.96" y="180.34" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="ATMEGA328" gate="G$1" pin="PD1(TXD/PCINT17)"/>

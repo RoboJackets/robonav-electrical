@@ -17749,13 +17749,13 @@ type 0309, grid 2.5 mm</description>
 <part name="R4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="470Ω"/>
 <part name="P+2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="GND3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="LED2" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIPLED_0603" package3d_urn="urn:adsk.eagle:package:15822/2" value="GREEN"/>
+<part name="+5V" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIPLED_0603" package3d_urn="urn:adsk.eagle:package:15822/2" value="GREEN"/>
 <part name="R5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="470Ω"/>
 <part name="GND9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="LED3" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIPLED_0603" package3d_urn="urn:adsk.eagle:package:15822/2" value="RED"/>
+<part name="BAD-TEMP" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIPLED_0603" package3d_urn="urn:adsk.eagle:package:15822/2" value="RED"/>
 <part name="R6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="470Ω"/>
 <part name="GND10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="LED4" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIPLED_0603" package3d_urn="urn:adsk.eagle:package:15822/2" value="BLUE"/>
+<part name="READY" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIPLED_0603" package3d_urn="urn:adsk.eagle:package:15822/2" value="BLUE"/>
 <part name="B1" library="RoboJackets-Switches" deviceset="PTS645" device="">
 <attribute name="FUNCTION" value="RESET µCONTROLLER"/>
 </part>
@@ -17956,7 +17956,7 @@ running.</text>
 <instance part="GND3" gate="1" x="124.46" y="165.1" smashed="yes">
 <attribute name="VALUE" x="121.92" y="162.56" size="1.778" layer="96"/>
 </instance>
-<instance part="LED2" gate="G$1" x="124.46" y="175.26" smashed="yes">
+<instance part="+5V" gate="G$1" x="124.46" y="175.26" smashed="yes">
 <attribute name="NAME" x="128.016" y="170.688" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="130.175" y="170.688" size="1.778" layer="96" rot="R90"/>
 </instance>
@@ -17967,7 +17967,7 @@ running.</text>
 <instance part="GND9" gate="1" x="76.2" y="165.1" smashed="yes">
 <attribute name="VALUE" x="73.66" y="162.56" size="1.778" layer="96"/>
 </instance>
-<instance part="LED3" gate="G$1" x="76.2" y="175.26" smashed="yes">
+<instance part="BAD-TEMP" gate="G$1" x="76.2" y="175.26" smashed="yes">
 <attribute name="NAME" x="79.756" y="170.688" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="81.915" y="170.688" size="1.778" layer="96" rot="R90"/>
 </instance>
@@ -17978,7 +17978,7 @@ running.</text>
 <instance part="GND10" gate="1" x="101.6" y="165.1" smashed="yes">
 <attribute name="VALUE" x="99.06" y="162.56" size="1.778" layer="96"/>
 </instance>
-<instance part="LED4" gate="G$1" x="101.6" y="175.26" smashed="yes">
+<instance part="READY" gate="G$1" x="101.6" y="175.26" smashed="yes">
 <attribute name="NAME" x="105.156" y="170.688" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="107.315" y="170.688" size="1.778" layer="96" rot="R90"/>
 </instance>
@@ -18149,17 +18149,17 @@ running.</text>
 <junction x="15.24" y="43.18"/>
 </segment>
 <segment>
-<pinref part="LED2" gate="G$1" pin="C"/>
+<pinref part="+5V" gate="G$1" pin="C"/>
 <pinref part="GND3" gate="1" pin="GND"/>
 <wire x1="124.46" y1="170.18" x2="124.46" y2="167.64" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="LED3" gate="G$1" pin="C"/>
+<pinref part="BAD-TEMP" gate="G$1" pin="C"/>
 <pinref part="GND9" gate="1" pin="GND"/>
 <wire x1="76.2" y1="170.18" x2="76.2" y2="167.64" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="LED4" gate="G$1" pin="C"/>
+<pinref part="READY" gate="G$1" pin="C"/>
 <pinref part="GND10" gate="1" pin="GND"/>
 <wire x1="101.6" y1="170.18" x2="101.6" y2="167.64" width="0.1524" layer="91"/>
 </segment>
@@ -18395,7 +18395,7 @@ running.</text>
 <label x="91.44" y="101.6" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="PROBE-PWM-IN" class="0">
+<net name="PROBE-1WIRE" class="0">
 <segment>
 <label x="215.9" y="91.44" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 <wire x1="223.52" y1="91.44" x2="215.9" y2="91.44" width="0.1524" layer="91"/>
@@ -18425,7 +18425,7 @@ running.</text>
 <net name="N$3" class="0">
 <segment>
 <pinref part="R4" gate="G$1" pin="1"/>
-<pinref part="LED2" gate="G$1" pin="A"/>
+<pinref part="+5V" gate="G$1" pin="A"/>
 <wire x1="124.46" y1="180.34" x2="124.46" y2="177.8" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -18445,14 +18445,14 @@ running.</text>
 <net name="N$4" class="0">
 <segment>
 <pinref part="R5" gate="G$1" pin="1"/>
-<pinref part="LED3" gate="G$1" pin="A"/>
+<pinref part="BAD-TEMP" gate="G$1" pin="A"/>
 <wire x1="76.2" y1="180.34" x2="76.2" y2="177.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$5" class="0">
 <segment>
 <pinref part="R6" gate="G$1" pin="1"/>
-<pinref part="LED4" gate="G$1" pin="A"/>
+<pinref part="READY" gate="G$1" pin="A"/>
 <wire x1="101.6" y1="180.34" x2="101.6" y2="177.8" width="0.1524" layer="91"/>
 </segment>
 </net>

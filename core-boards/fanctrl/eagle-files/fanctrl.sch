@@ -17790,6 +17790,7 @@ type 0309, grid 2.5 mm</description>
 <part name="JP3" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X6" device="/90" package3d_urn="urn:adsk.eagle:package:22475/2" value="FTDI"/>
 <part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="GND8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="RS" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="60K"/>
 </parts>
 <sheets>
 <sheet>
@@ -17873,8 +17874,7 @@ running.</text>
 <wire x1="149.86" y1="114.3" x2="149.86" y2="81.28" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="149.86" y1="81.28" x2="116.84" y2="81.28" width="0.1524" layer="97" style="shortdash"/>
 <text x="119.38" y="106.68" size="6.35" layer="97" font="vector" ratio="12">FTDI</text>
-<text x="243.84" y="172.72" size="1.778" layer="97">Leave VREF 
-not connected</text>
+<text x="246.38" y="198.12" size="1.778" layer="97" font="vector">SLOPE CONTROL</text>
 </plain>
 <instances>
 <instance part="ATMEGA328" gate="G$1" x="83.82" y="33.02" smashed="yes">
@@ -17960,9 +17960,9 @@ not connected</text>
 <attribute name="NAME" x="128.016" y="170.688" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="130.175" y="170.688" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="R5" gate="G$1" x="76.2" y="185.42" smashed="yes" rot="R90">
-<attribute name="NAME" x="74.7014" y="181.61" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="79.502" y="181.61" size="1.778" layer="96" rot="R90"/>
+<instance part="R5" gate="G$1" x="76.2" y="187.96" smashed="yes" rot="R90">
+<attribute name="NAME" x="74.7014" y="184.15" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="79.502" y="184.15" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="GND9" gate="1" x="76.2" y="165.1" smashed="yes">
 <attribute name="VALUE" x="73.66" y="162.56" size="1.778" layer="96"/>
@@ -18006,8 +18006,8 @@ not connected</text>
 <instance part="P+8" gate="1" x="162.56" y="195.58" smashed="yes">
 <attribute name="VALUE" x="160.02" y="195.58" size="1.778" layer="96"/>
 </instance>
-<instance part="GND14" gate="1" x="251.46" y="193.04" smashed="yes">
-<attribute name="VALUE" x="248.92" y="190.5" size="1.778" layer="96"/>
+<instance part="GND14" gate="1" x="261.62" y="190.5" smashed="yes">
+<attribute name="VALUE" x="259.08" y="187.96" size="1.778" layer="96"/>
 </instance>
 <instance part="GND15" gate="1" x="259.08" y="144.78" smashed="yes">
 <attribute name="VALUE" x="256.54" y="142.24" size="1.778" layer="96"/>
@@ -18084,6 +18084,10 @@ not connected</text>
 </instance>
 <instance part="GND8" gate="1" x="132.08" y="99.06" smashed="yes">
 <attribute name="VALUE" x="129.54" y="96.52" size="1.778" layer="96"/>
+</instance>
+<instance part="RS" gate="G$1" x="254" y="193.04" smashed="yes">
+<attribute name="NAME" x="250.19" y="194.5386" size="1.778" layer="95"/>
+<attribute name="VALUE" x="250.19" y="189.738" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -18174,14 +18178,6 @@ not connected</text>
 <pinref part="GND12" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="MCP2551" gate="A" pin="RS"/>
-<wire x1="243.84" y1="187.96" x2="246.38" y2="187.96" width="0.1524" layer="91"/>
-<wire x1="246.38" y1="187.96" x2="246.38" y2="198.12" width="0.1524" layer="91"/>
-<wire x1="246.38" y1="198.12" x2="251.46" y2="198.12" width="0.1524" layer="91"/>
-<wire x1="251.46" y1="198.12" x2="251.46" y2="195.58" width="0.1524" layer="91"/>
-<pinref part="GND14" gate="1" pin="GND"/>
-</segment>
-<segment>
 <pinref part="GND15" gate="1" pin="GND"/>
 <wire x1="236.22" y1="147.32" x2="259.08" y2="147.32" width="0.1524" layer="91"/>
 <pinref part="F3" gate="G$1" pin="2"/>
@@ -18214,6 +18210,11 @@ not connected</text>
 <wire x1="144.78" y1="96.52" x2="137.16" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="137.16" y1="99.06" x2="137.16" y2="96.52" width="0.1524" layer="91"/>
 <junction x="137.16" y="99.06"/>
+</segment>
+<segment>
+<pinref part="RS" gate="G$1" pin="2"/>
+<pinref part="GND14" gate="1" pin="GND"/>
+<wire x1="259.08" y1="193.04" x2="261.62" y2="193.04" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="FAN2-TACH" class="0">
@@ -18425,7 +18426,7 @@ not connected</text>
 </segment>
 <segment>
 <pinref part="R5" gate="G$1" pin="2"/>
-<wire x1="76.2" y1="190.5" x2="76.2" y2="195.58" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="193.04" x2="76.2" y2="195.58" width="0.1524" layer="91"/>
 <wire x1="73.66" y1="195.58" x2="76.2" y2="195.58" width="0.1524" layer="91"/>
 <label x="73.66" y="195.58" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
@@ -18434,7 +18435,7 @@ not connected</text>
 <segment>
 <pinref part="R5" gate="G$1" pin="1"/>
 <pinref part="BAD-TEMP" gate="G$1" pin="A"/>
-<wire x1="76.2" y1="180.34" x2="76.2" y2="177.8" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="182.88" x2="76.2" y2="177.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -18594,7 +18595,7 @@ not connected</text>
 <label x="121.92" y="20.32" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 </net>
-<net name="N$1" class="0">
+<net name="R_JUMPER" class="0">
 <segment>
 <pinref part="JP2" gate="G$1" pin="1"/>
 <wire x1="165.1" y1="144.78" x2="172.72" y2="144.78" width="0.1524" layer="91"/>
@@ -18624,6 +18625,15 @@ not connected</text>
 <label x="15.24" y="167.64" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 <wire x1="17.78" y1="172.72" x2="17.78" y2="167.64" width="0.1524" layer="91"/>
 <wire x1="17.78" y1="167.64" x2="15.24" y2="167.64" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="CAN_RS" class="0">
+<segment>
+<pinref part="MCP2551" gate="A" pin="RS"/>
+<wire x1="243.84" y1="187.96" x2="246.38" y2="187.96" width="0.1524" layer="91"/>
+<wire x1="246.38" y1="187.96" x2="246.38" y2="193.04" width="0.1524" layer="91"/>
+<pinref part="RS" gate="G$1" pin="1"/>
+<wire x1="246.38" y1="193.04" x2="248.92" y2="193.04" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.0">
+<eagle version="9.4.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -93,6 +93,9 @@
 </module>
 <module name="POWER_SWITCH" prefix="" dx="63.5" dy="63.5">
 <ports>
+<port name="GND" side="bottom" coord="0" direction="io"/>
+<port name="INPUT" side="left" coord="-15.24" direction="io"/>
+<port name="OUTPUT" side="left" coord="15.24" direction="io"/>
 </ports>
 <variantdefs>
 </variantdefs>
@@ -180,6 +183,12 @@
 </module>
 <module name="SOLENOID" prefix="" dx="117.475" dy="85.725">
 <ports>
+<port name="POWER" side="left" coord="17.78" direction="io"/>
+<port name="IS_ENGAGED" side="left" coord="-17.78" direction="io"/>
+<port name="INPUT" side="right" coord="-17.78" direction="io"/>
+<port name="OUTPUT" side="right" coord="17.78" direction="io"/>
+<port name="CONTROL_1" side="right" coord="-5.08" direction="io"/>
+<port name="CONTROL_2" side="right" coord="0" direction="io"/>
 </ports>
 <variantdefs>
 </variantdefs>
@@ -283,6 +292,7 @@
 <port name="USB_CAMERA_3" side="left" coord="-27.94" direction="io"/>
 <port name="USB_IMU_TOP" side="left" coord="81.28" direction="io"/>
 <port name="USB_IMU_BOTTOM" side="left" coord="76.2" direction="io"/>
+<port name="12V_POWER" side="left" coord="30.48" direction="io"/>
 </ports>
 <variantdefs>
 </variantdefs>
@@ -411,6 +421,31 @@
 <port name="CAN" side="top" coord="-22.86" direction="io"/>
 <port name="DIODE_MAGIC_SOLENOID" side="bottom" coord="-40.64" direction="io"/>
 <port name="DIODE_MAGIC_24V" side="bottom" coord="-38.1" direction="io"/>
+<port name="MOTOR_POWER" side="bottom" coord="-2.54" direction="io"/>
+<port name="24V_ESTOP_SIGNAL" side="bottom" coord="15.24" direction="io"/>
+<port name="DIODE1_TO_GREEN_BUTTON_IN" side="left" coord="25.4" direction="io"/>
+<port name="ESTOP_TO_RED_BUTTON_IN" side="left" coord="20.32" direction="io"/>
+<port name="ESTOP_IN_RED_BUTTON_OUT" side="left" coord="15.24" direction="io"/>
+</ports>
+<variantdefs>
+</variantdefs>
+<parts>
+</parts>
+<sheets>
+<sheet>
+<plain>
+</plain>
+<instances>
+</instances>
+<busses>
+</busses>
+<nets>
+</nets>
+</sheet>
+</sheets>
+</module>
+<module name="LIDAR_LITES" prefix="" dx="30.48" dy="20.32">
+<ports>
 </ports>
 <variantdefs>
 </variantdefs>
@@ -437,20 +472,20 @@
 <plain>
 </plain>
 <moduleinsts>
-<moduleinst name="12V_FUSE_BOX1" module="12V_FUSE_BOX" x="-152.4" y="-254" rot="R90">
-<attribute name="NAME" x="-152.4" y="-254" size="2.032" layer="95" rot="R90" align="bottom-center"/>
+<moduleinst name="12V_FUSE_BOX1" module="12V_FUSE_BOX" x="-165.1" y="-254" rot="R90">
+<attribute name="NAME" x="-170.18" y="-254" size="2.032" layer="95" rot="R90" align="bottom-center"/>
 </moduleinst>
 <moduleinst name="HOTSWAP1" module="HOTSWAP" x="-69.85" y="-250.825" rot="R90">
 <attribute name="NAME" x="-69.85" y="-250.825" size="2.032" layer="95" rot="R90" align="bottom-center"/>
 </moduleinst>
-<moduleinst name="POWER_SWITCH1" module="POWER_SWITCH" x="0" y="-254">
-<attribute name="NAME" x="0" y="-254" size="2.032" layer="95" align="bottom-center"/>
+<moduleinst name="POWER_SWITCH1" module="POWER_SWITCH" x="17.78" y="-254">
+<attribute name="NAME" x="17.78" y="-254" size="2.032" layer="95" align="bottom-center"/>
 </moduleinst>
-<moduleinst name="CURRENT_SENSOR1" module="CURRENT_SENSOR" x="60.325" y="-260.35" rot="R90">
-<attribute name="NAME" x="60.325" y="-260.35" size="2.032" layer="95" rot="R90" align="bottom-center"/>
+<moduleinst name="CURRENT_SENSOR1" module="CURRENT_SENSOR" x="73.025" y="-285.75" rot="R90">
+<attribute name="NAME" x="70.485" y="-288.29" size="2.032" layer="95" rot="R90" align="bottom-center"/>
 </moduleinst>
-<moduleinst name="24V_FUSE_BOX1" module="24V_FUSE_BOX" x="120.65" y="-247.65">
-<attribute name="NAME" x="120.65" y="-247.65" size="2.032" layer="95" align="bottom-center"/>
+<moduleinst name="24V_FUSE_BOX1" module="24V_FUSE_BOX" x="166.37" y="-255.27">
+<attribute name="NAME" x="168.91" y="-252.73" size="2.032" layer="95" align="bottom-center"/>
 </moduleinst>
 <moduleinst name="24V_TO_12V_CONVERTER1" module="24V_TO_12V_CONVERTER" x="152.4" y="-152.4">
 <attribute name="NAME" x="152.4" y="-152.4" size="2.032" layer="95" align="bottom-center"/>
@@ -485,7 +520,232 @@
 <moduleinst name="ESTOP1" module="ESTOP" x="-200.66" y="35.56">
 <attribute name="NAME" x="-200.66" y="35.56" size="2.032" layer="95" align="bottom-center"/>
 </moduleinst>
+<moduleinst name="LIDAR_LITES1" module="LIDAR_LITES" x="243.84" y="91.44">
+<attribute name="NAME" x="243.84" y="91.44" size="2.032" layer="95" align="bottom-center"/>
+</moduleinst>
+<moduleinst name="LIDAR_LITES2" module="LIDAR_LITES" x="243.84" y="60.96">
+<attribute name="NAME" x="243.84" y="60.96" size="2.032" layer="95" align="bottom-center"/>
+</moduleinst>
+<moduleinst name="LIDAR_LITES3" module="LIDAR_LITES" x="243.84" y="30.48">
+<attribute name="NAME" x="243.84" y="30.48" size="2.032" layer="95" align="bottom-center"/>
+</moduleinst>
 </moduleinsts>
+<instances>
+</instances>
+<busses>
+</busses>
+<nets>
+<net name="COMPUTER_POWER_40A" class="0">
+<segment>
+<label x="215.9" y="-254" size="1.778" layer="95"/>
+<portref moduleinst="24V_FUSE_BOX1" port="6"/>
+<wire x1="212.725" y1="-248.92" x2="243.84" y2="-248.92" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="LIGHT_BAR_3A" class="0">
+<segment>
+<label x="223.52" y="-238.76" size="1.778" layer="95"/>
+<portref moduleinst="24V_FUSE_BOX1" port="5"/>
+<wire x1="212.725" y1="-236.22" x2="238.76" y2="-236.22" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="BATTERY_MONITOR_40A" class="0">
+<segment>
+<label x="223.52" y="-226.06" size="1.778" layer="95"/>
+<portref moduleinst="24V_FUSE_BOX1" port="4"/>
+<wire x1="212.725" y1="-223.52" x2="238.76" y2="-223.52" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="12V_CONVERTER_40A" class="0">
+<segment>
+<label x="88.9" y="-223.52" size="1.778" layer="95"/>
+<portref moduleinst="24V_FUSE_BOX1" port="3"/>
+<wire x1="120.015" y1="-220.98" x2="88.9" y2="-220.98" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="ESTOP_3A" class="0">
+<segment>
+<label x="88.9" y="-236.22" size="1.778" layer="95"/>
+<portref moduleinst="24V_FUSE_BOX1" port="2"/>
+<wire x1="120.015" y1="-233.68" x2="88.9" y2="-233.68" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<portref moduleinst="ESTOP1" port="24V_ESTOP_SIGNAL"/>
+<wire x1="-185.42" y1="-7.62" x2="-185.42" y2="-22.86" width="0.1524" layer="91"/>
+<label x="-182.88" y="-22.86" size="1.778" layer="95" rot="R90"/>
+</segment>
+</net>
+<net name="FANS_UNDECIDED_AMP" class="0">
+<segment>
+<label x="88.9" y="-248.92" size="1.778" layer="95"/>
+<portref moduleinst="24V_FUSE_BOX1" port="1"/>
+<wire x1="120.015" y1="-246.38" x2="88.9" y2="-246.38" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="SAFETYLIGHT_3A" class="0">
+<segment>
+<label x="-236.22" y="-279.4" size="1.778" layer="95"/>
+<portref moduleinst="12V_FUSE_BOX1" port="1"/>
+<wire x1="-213.0425" y1="-276.86" x2="-236.22" y2="-276.86" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="GPS_2A" class="0">
+<segment>
+<label x="-236.22" y="-264.16" size="1.778" layer="95"/>
+<portref moduleinst="12V_FUSE_BOX1" port="2"/>
+<wire x1="-213.0425" y1="-261.62" x2="-236.22" y2="-261.62" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<wire x1="-142.24" y1="119.38" x2="-142.24" y2="109.22" width="0.1524" layer="91"/>
+<label x="-139.7" y="109.22" size="1.778" layer="95" rot="R90"/>
+</segment>
+</net>
+<net name="LIDAR_2A" class="0">
+<segment>
+<label x="-236.22" y="-246.38" size="1.778" layer="95"/>
+<portref moduleinst="12V_FUSE_BOX1" port="3"/>
+<wire x1="-213.0425" y1="-243.84" x2="-236.22" y2="-243.84" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<wire x1="119.38" y1="-5.08" x2="119.38" y2="15.24" width="0.1524" layer="91"/>
+<label x="121.92" y="7.62" size="1.778" layer="95" rot="R90"/>
+</segment>
+</net>
+<net name="ESTOP_POWER_3A" class="0">
+<segment>
+<label x="-236.22" y="-228.6" size="1.778" layer="95"/>
+<portref moduleinst="12V_FUSE_BOX1" port="4"/>
+<wire x1="-213.0425" y1="-226.06" x2="-236.22" y2="-226.06" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<portref moduleinst="ESTOP1" port="POWER_IN"/>
+<wire x1="-160.02" y1="-7.62" x2="-160.02" y2="-17.78" width="0.1524" layer="91"/>
+<wire x1="-160.02" y1="-17.78" x2="-132.08" y2="-17.78" width="0.1524" layer="91"/>
+<label x="-152.4" y="-20.32" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="LOGIC_3A" class="0">
+<segment>
+<label x="-236.22" y="-210.82" size="1.778" layer="95"/>
+<portref moduleinst="12V_FUSE_BOX1" port="5"/>
+<wire x1="-213.0425" y1="-208.28" x2="-236.22" y2="-208.28" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="COMPUTER_MONITOR" class="0">
+<segment>
+<label x="-236.22" y="-195.58" size="1.778" layer="95"/>
+<portref moduleinst="12V_FUSE_BOX1" port="6"/>
+<wire x1="-213.0425" y1="-193.04" x2="-236.22" y2="-193.04" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<portref moduleinst="LOGIC_BOARD1" port="ETHERNET"/>
+<wire x1="-114.3" y1="-167.64" x2="-83.82" y2="-167.64" width="0.1524" layer="91"/>
+<wire x1="-83.82" y1="-167.64" x2="-83.82" y2="0" width="0.1524" layer="91"/>
+<portref moduleinst="COMPUTER_BOX1" port="ETHERNET_LOGIC"/>
+<wire x1="-83.82" y1="0" x2="10.16" y2="0" width="0.1524" layer="91"/>
+<wire x1="10.16" y1="0" x2="10.16" y2="7.62" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<portref moduleinst="COMPUTER_BOX1" port="USB_MBED"/>
+<wire x1="-96.52" y1="-111.76" x2="-91.44" y2="-111.76" width="0.1524" layer="91"/>
+<wire x1="-91.44" y1="-111.76" x2="-91.44" y2="7.62" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$3" class="0">
+<segment>
+<wire x1="-96.52" y1="-101.6" x2="58.42" y2="-101.6" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="-101.6" x2="58.42" y2="-50.8" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="-50.8" x2="48.26" y2="-50.8" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="TO_SAFETY_LIGHT" class="0">
+<segment>
+<portref moduleinst="LOGIC_BOARD1" port="LOGIC_SAFETY"/>
+<wire x1="-106.68" y1="-55.88" x2="-106.68" y2="-38.1" width="0.1524" layer="91"/>
+<label x="-104.14" y="-55.88" size="1.778" layer="95" rot="R90"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<portref moduleinst="LOGIC_BOARD1" port="ESTOP"/>
+<wire x1="-127" y1="-55.88" x2="-127" y2="-48.26" width="0.1524" layer="91"/>
+<wire x1="-127" y1="-48.26" x2="-78.74" y2="-48.26" width="0.1524" layer="91"/>
+<wire x1="-78.74" y1="-48.26" x2="-78.74" y2="-106.68" width="0.1524" layer="91"/>
+<wire x1="-78.74" y1="-106.68" x2="68.58" y2="-106.68" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="-106.68" x2="68.58" y2="-144.78" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="-144.78" x2="58.42" y2="-144.78" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$6" class="0">
+<segment>
+<portref moduleinst="COMPUTER_BOX1" port="ETHERNET_LIDAR"/>
+<wire x1="-10.16" y1="7.62" x2="-10.16" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="-10.16" y1="5.08" x2="144.78" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="5.08" x2="144.78" y2="-5.08" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$7" class="0">
+<segment>
+<portref moduleinst="LOGIC_BOARD1" port="LIDAR_1"/>
+<wire x1="-165.1" y1="-55.88" x2="-165.1" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="-165.1" y1="30.48" x2="228.6" y2="30.48" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$8" class="0">
+<segment>
+<portref moduleinst="LOGIC_BOARD1" port="LIDAR_2"/>
+<wire x1="-177.8" y1="-55.88" x2="-177.8" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="-177.8" y1="60.96" x2="228.6" y2="60.96" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$9" class="0">
+<segment>
+<wire x1="-193.04" y1="-76.2" x2="-193.04" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="-193.04" y1="91.44" x2="228.6" y2="91.44" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="LOGIC_12V_POWER" class="0">
+<segment>
+<portref moduleinst="LOGIC_BOARD1" port="12V"/>
+<wire x1="-114.3" y1="-55.88" x2="-114.3" y2="-38.1" width="0.1524" layer="91"/>
+<label x="-111.76" y="-55.88" size="1.778" layer="95" rot="R90"/>
+</segment>
+</net>
+<net name="N$5" class="0">
+<segment>
+<portref moduleinst="ESTOP1" port="MOTOR_POWER"/>
+<wire x1="-203.2" y1="-7.62" x2="-203.2" y2="-157.48" width="0.1524" layer="91"/>
+<wire x1="-203.2" y1="-157.48" x2="63.5" y2="-157.48" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$10" class="0">
+<segment>
+<wire x1="-17.78" y1="-238.76" x2="-17.78" y2="-208.28" width="0.1524" layer="91"/>
+<wire x1="-17.78" y1="-208.28" x2="71.12" y2="-208.28" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="-208.28" x2="71.12" y2="-170.18" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="-170.18" x2="63.5" y2="-170.18" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="USB_GPS" class="0">
+<segment>
+<wire x1="-162.56" y1="119.38" x2="-162.56" y2="109.22" width="0.1524" layer="91"/>
+<label x="-160.02" y="109.22" size="1.778" layer="95" rot="R90"/>
+</segment>
+<segment>
+<portref moduleinst="COMPUTER_BOX1" port="USB_GPS"/>
+<wire x1="-96.52" y1="7.62" x2="-96.52" y2="-5.08" width="0.1524" layer="91"/>
+<label x="-93.98" y="-5.08" size="1.778" layer="95" rot="R90"/>
+</segment>
+</net>
+</nets>
+</sheet>
+<sheet>
+<plain>
+</plain>
 <instances>
 </instances>
 <busses>

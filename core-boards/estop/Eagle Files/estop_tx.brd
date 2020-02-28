@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.2">
+<eagle version="9.4.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -182,8 +182,6 @@
 <wire x1="0" y1="50.8" x2="0" y2="0" width="0" layer="20"/>
 <text x="2.54" y="54.61" size="2.54" layer="27" font="vector">IGVC E-Stop Board
 v1.1</text>
-<hole x="73" y="48" drill="4"/>
-<hole x="3" y="3" drill="4"/>
 <text x="46.7" y="19" size="1.5" layer="21" font="vector" align="center-left">WIRELESS</text>
 <text x="46.8" y="14.9" size="1.5" layer="21" font="vector" align="center-left">BUTTON</text>
 <text x="46.8" y="11" size="1.5" layer="21" font="vector" align="center-left">5V</text>
@@ -215,6 +213,7 @@ v1.1</text>
 <wire x1="51" y1="9" x2="41" y2="9" width="0.254" layer="21"/>
 <text x="75.1" y="29.6" size="1" layer="21" font="vector" align="top-right">ICSP</text>
 <text x="31" y="49.5" size="3" layer="21" font="vector" align="top-left">TX</text>
+<dimension x1="0" y1="50.8" x2="0" y2="0" x3="-5" y3="25.4" textsize="1.778" layer="20"/>
 </plain>
 <libraries>
 <library name="rcl" urn="urn:adsk.eagle:library:334">
@@ -6101,6 +6100,16 @@ In this library you will find logos and images specific to RoboJackets. The part
 </package>
 </packages>
 </library>
+<library name="MotorBoardDev">
+<description>Generated from &lt;b&gt;MotorBoardDev.sch&lt;/b&gt;&lt;p&gt;
+by exp-lbrs.ulp</description>
+<packages>
+<package name="STANDOFF-HOLE">
+<circle x="0" y="0" radius="3.6" width="0" layer="39"/>
+<hole x="0" y="0" drill="3.9"/>
+</package>
+</packages>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -6491,6 +6500,8 @@ design rules under a new name.</description>
 <attribute name="SPICEPREFIX" value="C" x="58.6" y="28.9" size="1.5" layer="27" font="vector" ratio="10" display="off"/>
 <attribute name="VALUE" x="57.965" y="26.995" size="1.27" layer="27"/>
 </element>
+<element name="U$3" library="MotorBoardDev" package="STANDOFF-HOLE" value="" x="73" y="48" smashed="yes"/>
+<element name="U$2" library="MotorBoardDev" package="STANDOFF-HOLE" value="" x="3" y="3" smashed="yes"/>
 </elements>
 <signals>
 <signal name="GND">

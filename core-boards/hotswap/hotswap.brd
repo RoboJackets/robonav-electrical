@@ -3,10 +3,10 @@
 <eagle version="9.5.2">
 <drawing>
 <settings>
-<setting alwaysvectorfont="no"/>
+<setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="1" altunitdist="mm" altunit="mm"/>
+<grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.1" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
@@ -162,10 +162,10 @@
 </layers>
 <board>
 <plain>
-<wire x1="-1" y1="-1.73" x2="93.67" y2="-1.73" width="0" layer="20"/>
-<wire x1="93.67" y1="-1.73" x2="93.67" y2="58.09" width="0" layer="20"/>
-<wire x1="93.67" y1="58.09" x2="-1" y2="58.09" width="0" layer="20"/>
-<wire x1="-1" y1="58.09" x2="-1" y2="-1.73" width="0" layer="20"/>
+<wire x1="-7" y1="-6.73" x2="98.67" y2="-6.73" width="0" layer="20"/>
+<wire x1="98.67" y1="-6.73" x2="98.67" y2="62.09" width="0" layer="20"/>
+<wire x1="98.67" y1="62.09" x2="-7" y2="62.09" width="0" layer="20"/>
+<wire x1="-7" y1="62.09" x2="-7" y2="-6.73" width="0" layer="20"/>
 <text x="30.51" y="51.53" size="1.778" layer="25" rot="R270">WALL</text>
 <text x="32.78" y="1.51" size="1.778" layer="25" rot="R90">BATTERY</text>
 <text x="63.91" y="15.56" size="1.778" layer="25" rot="R90">ROBOT
@@ -177,10 +177,6 @@ Hotswap Board v.2.0</text>
 <text x="32.78" y="31.51" size="1.778" layer="25" rot="R90">GND</text>
 <text x="89.51" y="47.53" size="1.778" layer="25" rot="R180">OUTPUT</text>
 <text x="59.51" y="37.53" size="1.778" layer="25" rot="R270">GND</text>
-<hole x="92" y="0" drill="2"/>
-<hole x="1" y="56" drill="2"/>
-<hole x="91" y="56" drill="2"/>
-<hole x="1" y="0" drill="2"/>
 </plain>
 <libraries>
 <library name="rcl" urn="urn:adsk.eagle:library:334">
@@ -4684,6 +4680,14 @@ In this library you will find all the connectors used on any of our boards.
 </package>
 </packages>
 </library>
+<library name="IGVC-Misc">
+<packages>
+<package name="STANDOFF-HOLE">
+<circle x="0" y="0" radius="3.6" width="0" layer="39"/>
+<hole x="0" y="0" drill="3.9"/>
+</package>
+</packages>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -4933,14 +4937,18 @@ design rules under a new name.</description>
 <attribute name="PINS" value="2" x="84" y="52" size="1.778" layer="27" display="off"/>
 <attribute name="PIN_PITCH" value="2.0 mm" x="84" y="52" size="1.778" layer="27" display="off"/>
 </element>
+<element name="U$3" library="IGVC-Misc" package="STANDOFF-HOLE" value="" x="-2" y="57" smashed="yes"/>
+<element name="U$4" library="IGVC-Misc" package="STANDOFF-HOLE" value="" x="94" y="57" smashed="yes"/>
+<element name="U$5" library="IGVC-Misc" package="STANDOFF-HOLE" value="" x="94" y="-2" smashed="yes"/>
+<element name="U$7" library="IGVC-Misc" package="STANDOFF-HOLE" value="" x="-2" y="-2" smashed="yes"/>
 </elements>
 <signals>
 <signal name="GND">
 <polygon width="0.254" layer="16" thermals="no">
-<vertex x="-1.127" y="58.039"/>
-<vertex x="93.563" y="58.039"/>
-<vertex x="93.563" y="-2.111"/>
-<vertex x="-1.127" y="-2.111"/>
+<vertex x="-7.127" y="62.039"/>
+<vertex x="98.563" y="62.039"/>
+<vertex x="98.563" y="-7.111"/>
+<vertex x="-7.127" y="-7.111"/>
 </polygon>
 <contactref element="C1" pad="2"/>
 <contactref element="C2" pad="2"/>
@@ -4984,10 +4992,10 @@ design rules under a new name.</description>
 <contactref element="Z1" pad="3"/>
 <via x="53" y="50" extent="1-16" drill="0.381"/>
 <polygon width="0.1524" layer="16">
-<vertex x="-1" y="58"/>
-<vertex x="-1" y="-2"/>
-<vertex x="94" y="-2"/>
-<vertex x="94" y="58"/>
+<vertex x="-7" y="62"/>
+<vertex x="-7" y="-7"/>
+<vertex x="99" y="-7"/>
+<vertex x="99" y="62"/>
 </polygon>
 <wire x1="23.65" y1="34" x2="11.5" y2="34" width="0.254" layer="1"/>
 <wire x1="23.65" y1="21" x2="11.5" y2="21" width="0.254" layer="1"/>

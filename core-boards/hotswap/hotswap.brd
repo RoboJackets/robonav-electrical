@@ -3,7 +3,7 @@
 <eagle version="9.5.2">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.1" altunitdist="mm" altunit="mm"/>
@@ -162,21 +162,23 @@
 </layers>
 <board>
 <plain>
-<wire x1="-7" y1="-6.73" x2="98.67" y2="-6.73" width="0" layer="20"/>
-<wire x1="98.67" y1="-6.73" x2="98.67" y2="62.09" width="0" layer="20"/>
-<wire x1="98.67" y1="62.09" x2="-7" y2="62.09" width="0" layer="20"/>
+<wire x1="-7" y1="-6.73" x2="92.67" y2="-6.73" width="0" layer="20"/>
+<wire x1="92.67" y1="-6.73" x2="92.67" y2="62.09" width="0" layer="20"/>
+<wire x1="92.67" y1="62.09" x2="-7" y2="62.09" width="0" layer="20"/>
 <wire x1="-7" y1="62.09" x2="-7" y2="-6.73" width="0" layer="20"/>
 <text x="30.51" y="51.53" size="1.778" layer="25" rot="R270">WALL</text>
 <text x="32.78" y="1.51" size="1.778" layer="25" rot="R90">BATTERY</text>
 <text x="63.91" y="15.56" size="1.778" layer="25" rot="R90">ROBOT
 </text>
-<text x="52.02" y="5.07" size="2" layer="25">RoboJackets IGVC
+<text x="52.02" y="9.07" size="1" layer="25">RoboJackets IGVC
 Hotswap Board v.2.0</text>
 <text x="32.51" y="17.53" size="1.778" layer="25" rot="R90">GND</text>
 <text x="56" y="46" size="1.778" layer="25">OP_ISOLATOR</text>
 <text x="32.78" y="31.51" size="1.778" layer="25" rot="R90">GND</text>
 <text x="89.51" y="47.53" size="1.778" layer="25" rot="R180">OUTPUT</text>
 <text x="59.51" y="37.53" size="1.778" layer="25" rot="R270">GND</text>
+<dimension x1="-7" y1="62" x2="-7" y2="-7" x3="-12" y3="27.5" textsize="1.778" layer="1"/>
+<dimension x1="93" y1="62" x2="-7" y2="62" x3="43" y3="65" textsize="1.778" layer="1"/>
 </plain>
 <libraries>
 <library name="rcl" urn="urn:adsk.eagle:library:334">
@@ -4920,7 +4922,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="37.305" y="43.798" size="0.75" layer="25" rot="R270"/>
 <attribute name="SPICEPREFIX" value="C" x="39.21" y="44.56" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="E$1" library="RoboJackets-Aesthetics" package="ROBOBUZZ_0.8X" value="" x="84.45" y="-0.46" smashed="yes"/>
+<element name="E$1" library="RoboJackets-Aesthetics" package="ROBOBUZZ_0.8X" value="" x="56.45" y="0.54" smashed="yes" rot="MR0"/>
 <element name="C3" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value=".1uF" x="44.67" y="24.4" smashed="yes">
 <attribute name="NAME" x="42.765" y="22.495" size="0.75" layer="25"/>
 <attribute name="SPICEPREFIX" value="C" x="44.67" y="24.4" size="1.778" layer="27" display="off"/>
@@ -4931,23 +4933,23 @@ design rules under a new name.</description>
 <element name="VCC_WALL" library="IGVC-Connector" package="6T4AWGLUG" value="6T4AWGLUG" x="8" y="48" smashed="yes"/>
 <element name="VCC_COMP" library="IGVC-Connector" package="6T4AWGLUG" value="6T4AWGLUG" x="84" y="35" smashed="yes" rot="R180"/>
 <element name="U$6" library="IGVC-Connector" package="6T4AWGLUG" value="6T4AWGLUG" x="84" y="20" smashed="yes" rot="R180"/>
-<element name="Z1" library="IGVC-Discrete" package="TLP2745" value="TLP2745" x="64" y="52" smashed="yes"/>
-<element name="J1" library="RoboJackets-Connectors" package="2MM-2-V" value="2-PIN_2MM-V" x="84" y="52" smashed="yes">
-<attribute name="NAME" x="89" y="51.5" size="1" layer="25" font="vector"/>
-<attribute name="PINS" value="2" x="84" y="52" size="1.778" layer="27" display="off"/>
-<attribute name="PIN_PITCH" value="2.0 mm" x="84" y="52" size="1.778" layer="27" display="off"/>
+<element name="Z1" library="IGVC-Discrete" package="TLP2745" value="TLP2745" x="61" y="52" smashed="yes"/>
+<element name="J1" library="RoboJackets-Connectors" package="2MM-2-V" value="2-PIN_2MM-V" x="76" y="52" smashed="yes">
+<attribute name="NAME" x="81" y="51.5" size="1" layer="25" font="vector"/>
+<attribute name="PINS" value="2" x="76" y="52" size="1.778" layer="27" display="off"/>
+<attribute name="PIN_PITCH" value="2.0 mm" x="76" y="52" size="1.778" layer="27" display="off"/>
 </element>
 <element name="U$3" library="IGVC-Misc" package="STANDOFF-HOLE" value="" x="-2" y="57" smashed="yes"/>
-<element name="U$4" library="IGVC-Misc" package="STANDOFF-HOLE" value="" x="94" y="57" smashed="yes"/>
-<element name="U$5" library="IGVC-Misc" package="STANDOFF-HOLE" value="" x="94" y="-2" smashed="yes"/>
+<element name="U$4" library="IGVC-Misc" package="STANDOFF-HOLE" value="" x="87" y="52" smashed="yes"/>
+<element name="U$5" library="IGVC-Misc" package="STANDOFF-HOLE" value="" x="87" y="6" smashed="yes"/>
 <element name="U$7" library="IGVC-Misc" package="STANDOFF-HOLE" value="" x="-2" y="-2" smashed="yes"/>
 </elements>
 <signals>
 <signal name="GND">
 <polygon width="0.254" layer="16" thermals="no">
 <vertex x="-7.127" y="62.039"/>
-<vertex x="98.563" y="62.039"/>
-<vertex x="98.563" y="-7.111"/>
+<vertex x="92.563" y="62.039"/>
+<vertex x="92.563" y="-7.111"/>
 <vertex x="-7.127" y="-7.111"/>
 </polygon>
 <contactref element="C1" pad="2"/>
@@ -4994,14 +4996,20 @@ design rules under a new name.</description>
 <polygon width="0.1524" layer="16">
 <vertex x="-7" y="62"/>
 <vertex x="-7" y="-7"/>
-<vertex x="99" y="-7"/>
-<vertex x="99" y="62"/>
+<vertex x="93" y="-7"/>
+<vertex x="93" y="62"/>
 </polygon>
 <wire x1="23.65" y1="34" x2="11.5" y2="34" width="0.254" layer="1"/>
 <wire x1="23.65" y1="21" x2="11.5" y2="21" width="0.254" layer="1"/>
-<wire x1="59.625" y1="50.73" x2="68.375" y2="50.73" width="0.254" layer="1"/>
-<wire x1="59.625" y1="50.73" x2="53.73" y2="50.73" width="0.254" layer="1"/>
+<wire x1="56.625" y1="50.73" x2="65.375" y2="50.73" width="0.254" layer="1"/>
+<wire x1="56.625" y1="50.73" x2="53.73" y2="50.73" width="0.254" layer="1"/>
 <wire x1="53.73" y1="50.73" x2="53" y2="50" width="0.254" layer="1"/>
+<polygon width="0.1524" layer="1" thermals="no">
+<vertex x="62" y="40"/>
+<vertex x="62" y="30"/>
+<vertex x="89" y="30"/>
+<vertex x="89" y="40"/>
+</polygon>
 </signal>
 <signal name="N$4">
 <contactref element="U1" pad="10"/>
@@ -5045,7 +5053,7 @@ design rules under a new name.</description>
 <wire x1="36" y1="41" x2="47.01961875" y2="29.98038125" width="0.254" layer="1"/>
 <wire x1="47.01961875" y1="29.98038125" x2="48.8356" y2="29.98038125" width="0.254" layer="1"/>
 <contactref element="Z1" pad="1"/>
-<wire x1="59.625" y1="53.27" x2="46.27" y2="53.27" width="0.254" layer="1"/>
+<wire x1="56.625" y1="53.27" x2="46.27" y2="53.27" width="0.254" layer="1"/>
 <wire x1="46.27" y1="53.27" x2="46" y2="53" width="0.254" layer="1"/>
 </signal>
 <signal name="N$1">
@@ -5124,7 +5132,7 @@ design rules under a new name.</description>
 <signal name="N$2">
 <contactref element="Z1" pad="5"/>
 <contactref element="J1" pad="1"/>
-<wire x1="83" y1="52" x2="68.375" y2="52" width="0.254" layer="1"/>
+<wire x1="75" y1="52" x2="65.375" y2="52" width="0.254" layer="1"/>
 <contactref element="J1" pad="2"/>
 <contactref element="U1" pad="1"/>
 <via x="47" y="36" extent="1-16" drill="0.381"/>
@@ -5133,15 +5141,14 @@ design rules under a new name.</description>
 <wire x1="47.8926" y1="31.423759375" x2="47.8926" y2="32.30274375" width="0.254" layer="1"/>
 <wire x1="47" y1="33.19534375" x2="47" y2="36" width="0.254" layer="1"/>
 <wire x1="47.8926" y1="32.30274375" x2="47" y2="33.19534375" width="0.254" layer="1"/>
-<wire x1="85" y1="50" x2="85" y2="52" width="0.254" layer="1"/>
+<wire x1="77" y1="50" x2="77" y2="52" width="0.254" layer="1"/>
 <wire x1="47" y1="36" x2="53" y2="36" width="0.254" layer="16"/>
 <wire x1="53" y1="36" x2="58" y2="41" width="0.1524" layer="1"/>
 <wire x1="58" y1="41" x2="58" y2="44" width="0.1524" layer="1"/>
 <wire x1="58" y1="44" x2="76" y2="44" width="0.1524" layer="1"/>
 <wire x1="76" y1="44" x2="76" y2="49" width="0.1524" layer="1"/>
 <wire x1="76" y1="49" x2="77" y2="50" width="0.1524" layer="1"/>
-<wire x1="77" y1="50" x2="85" y2="50" width="0.1524" layer="1"/>
-<wire x1="85" y1="52" x2="83" y2="52" width="0" layer="19" extent="1-1"/>
+<wire x1="77" y1="52" x2="75" y2="52" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>

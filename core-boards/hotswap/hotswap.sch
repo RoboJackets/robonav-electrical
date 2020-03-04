@@ -11569,17 +11569,14 @@ In this library you will find all the connectors used on any of our boards.
 <part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="C3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value=".1uF"/>
-<part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="U$1" library="IGVC-Connector" deviceset="6T4AWGLUG" device=""/>
 <part name="U$2" library="IGVC-Connector" deviceset="6T4AWGLUG" device=""/>
 <part name="VCC_BATT" library="IGVC-Connector" deviceset="6T4AWGLUG" device=""/>
 <part name="VCC_WALL" library="IGVC-Connector" deviceset="6T4AWGLUG" device=""/>
 <part name="VCC_COMP" library="IGVC-Connector" deviceset="6T4AWGLUG" device=""/>
 <part name="U$6" library="IGVC-Connector" deviceset="6T4AWGLUG" device=""/>
 <part name="Z1" library="IGVC-Discrete" deviceset="TLP2745" device=""/>
-<part name="P+4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="GND10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="J1" library="RoboJackets-Connectors" deviceset="2-PIN_2MM-*" device="V"/>
@@ -11587,7 +11584,9 @@ In this library you will find all the connectors used on any of our boards.
 <sheets>
 <sheet>
 <plain>
-<text x="142.24" y="-40.64" size="1.778" layer="91">IGVC</text>
+<text x="106.68" y="127" size="1.27" layer="97">This is reasonably separated from the rest of the power
+system, it should not backfire to the input and cause
+damage to the read</text>
 </plain>
 <instances>
 <instance part="U1" gate="A" x="50.8" y="55.88" smashed="yes">
@@ -11670,18 +11669,11 @@ In this library you will find all the connectors used on any of our boards.
 <attribute name="NAME" x="94.996" y="33.655" size="1.778" layer="95"/>
 <attribute name="VALUE" x="94.996" y="28.829" size="1.778" layer="96"/>
 </instance>
-<instance part="GND1" gate="1" x="-30.48" y="60.96" smashed="yes" rot="R270">
-<attribute name="VALUE" x="-33.02" y="63.5" size="1.778" layer="96" rot="R270"/>
-</instance>
 <instance part="GND2" gate="1" x="-30.48" y="43.18" smashed="yes" rot="R270">
 <attribute name="VALUE" x="-33.02" y="45.72" size="1.778" layer="96" rot="R270"/>
 </instance>
 <instance part="GND9" gate="1" x="162.56" y="68.58" smashed="yes">
 <attribute name="VALUE" x="160.02" y="66.04" size="1.778" layer="96"/>
-</instance>
-<instance part="U$1" gate="6T4AWGLUG" x="-7.62" y="60.96" smashed="yes">
-<attribute name="NAME" x="-12.7" y="66.04" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-12.7" y="53.34" size="1.778" layer="96"/>
 </instance>
 <instance part="U$2" gate="6T4AWGLUG" x="-7.62" y="43.18" smashed="yes">
 <attribute name="NAME" x="-12.7" y="48.26" size="1.778" layer="95"/>
@@ -11707,18 +11699,15 @@ In this library you will find all the connectors used on any of our boards.
 <attribute name="NAME" x="68.58" y="121.92" size="1.778" layer="125"/>
 <attribute name="VALUE" x="68.58" y="104.14" size="1.778" layer="127"/>
 </instance>
-<instance part="P+4" gate="VCC" x="101.6" y="119.38" smashed="yes" rot="R270">
-<attribute name="VALUE" x="99.06" y="121.92" size="1.778" layer="96"/>
-</instance>
 <instance part="GND10" gate="1" x="101.6" y="109.22" smashed="yes" rot="R90">
 <attribute name="VALUE" x="104.14" y="106.68" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="GND11" gate="1" x="55.88" y="119.38" smashed="yes" rot="R270">
 <attribute name="VALUE" x="53.34" y="121.92" size="1.778" layer="96" rot="R270"/>
 </instance>
-<instance part="J1" gate="G$1" x="132.08" y="111.76" smashed="yes" rot="R180">
-<attribute name="NAME" x="137.16" y="104.14" size="1.778" layer="95" font="vector" rot="R180" align="top-left"/>
-<attribute name="VALUE" x="137.16" y="119.38" size="1.778" layer="96" font="vector" rot="R180"/>
+<instance part="J1" gate="G$1" x="144.78" y="111.76" smashed="yes" rot="R180">
+<attribute name="NAME" x="149.86" y="104.14" size="1.778" layer="95" font="vector" rot="R180" align="top-left"/>
+<attribute name="VALUE" x="149.86" y="119.38" size="1.778" layer="96" font="vector" rot="R180"/>
 </instance>
 </instances>
 <busses>
@@ -11758,11 +11747,6 @@ In this library you will find all the connectors used on any of our boards.
 <wire x1="93.98" y1="27.94" x2="93.98" y2="25.4" width="0.1524" layer="91"/>
 <pinref part="GND6" gate="1" pin="GND"/>
 <pinref part="C3" gate="G$1" pin="2"/>
-</segment>
-<segment>
-<pinref part="GND1" gate="1" pin="GND"/>
-<wire x1="-27.94" y1="60.96" x2="-17.78" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="6T4AWGLUG" pin="1"/>
 </segment>
 <segment>
 <pinref part="GND2" gate="1" pin="GND"/>
@@ -11927,25 +11911,23 @@ In this library you will find all the connectors used on any of our boards.
 <junction x="33.02" y="71.12"/>
 </segment>
 </net>
-<net name="VCC" class="0">
+<net name="N$6" class="0">
 <segment>
-<pinref part="Z1" gate="TLP2745" pin="P$4"/>
-<pinref part="P+4" gate="VCC" pin="VCC"/>
-<wire x1="93.98" y1="119.38" x2="99.06" y2="119.38" width="0.1524" layer="91"/>
+<pinref part="J1" gate="G$1" pin="2"/>
+<pinref part="Z1" gate="TLP2745" pin="P$5"/>
+<wire x1="93.98" y1="114.3" x2="139.7" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$2" class="0">
+<net name="INPUT_SIGNAL_VALUE" class="0">
 <segment>
-<pinref part="Z1" gate="TLP2745" pin="P$5"/>
 <pinref part="J1" gate="G$1" pin="1"/>
-<wire x1="93.98" y1="114.3" x2="127" y2="114.3" width="0.1524" layer="91"/>
-<pinref part="J1" gate="G$1" pin="2"/>
-<wire x1="127" y1="109.22" x2="106.68" y2="109.22" width="0.1524" layer="91"/>
-<wire x1="106.68" y1="109.22" x2="106.68" y2="99.06" width="0.1524" layer="91"/>
-<wire x1="106.68" y1="99.06" x2="48.26" y2="99.06" width="0.1524" layer="91"/>
-<wire x1="48.26" y1="99.06" x2="48.26" y2="55.88" width="0.1524" layer="91"/>
-<pinref part="U1" gate="A" pin="H1"/>
-<wire x1="48.26" y1="55.88" x2="50.8" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="109.22" x2="137.16" y2="109.22" width="0.1524" layer="91"/>
+<label x="137.16" y="109.22" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="Z1" gate="TLP2745" pin="P$4"/>
+<wire x1="93.98" y1="119.38" x2="99.06" y2="119.38" width="0.1524" layer="91"/>
+<label x="99.06" y="119.38" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 </nets>
@@ -11954,6 +11936,10 @@ In this library you will find all the connectors used on any of our boards.
 </schematic>
 </drawing>
 <compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
 <note version="8.2" severity="warning">
 Since Version 8.2, EAGLE supports online libraries. The ids
 of those online libraries will not be understood (or retained)

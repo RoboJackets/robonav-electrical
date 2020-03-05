@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.2">
+<eagle version="9.3.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -11546,10 +11546,9 @@ In this library you will find all the connectors used on any of our boards.
 </classes>
 <parts>
 <part name="U1" library="IGVC-Discrete" deviceset="LTC4416EMS#PBF" device=""/>
-<part name="Q2" library="IGVC-Discrete" deviceset="SUP75P03_07" device=""/>
 <part name="Q1" library="IGVC-Discrete" deviceset="SUP75P03_07" device=""/>
-<part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="105k"/>
-<part name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="11.5k"/>
+<part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="64.14k"/>
+<part name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="10.28k"/>
 <part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="158k"/>
 <part name="Q3" library="IGVC-Discrete" deviceset="SUP75P03_07" device=""/>
 <part name="P+2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device="" value="VCC_WALL"/>
@@ -11580,6 +11579,8 @@ In this library you will find all the connectors used on any of our boards.
 <part name="GND10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="J1" library="RoboJackets-Connectors" deviceset="2-PIN_2MM-*" device="V"/>
+<part name="Q5" library="IGVC-Discrete" deviceset="SUP75P03_07" device=""/>
+<part name="Q6" library="IGVC-Discrete" deviceset="SUP75P03_07" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -11587,15 +11588,28 @@ In this library you will find all the connectors used on any of our boards.
 <text x="106.68" y="127" size="1.27" layer="97">This is reasonably separated from the rest of the power
 system, it should not backfire to the input and cause
 damage to the read</text>
+<text x="-35.56" y="104.14" size="1.27" layer="97">While we use Load sharing context for the Hotswap
+we still need VCC_BATT as primary supply,</text>
+<text x="-35.56" y="81.28" size="1.27" layer="97">V_fail = 20V
+V_ETH * (R2 + R3) = 20 * (R3)
+R3 = V_ETH * R2 / (20 - V_ETH)
+R3 = 1.222 * 158 / (20 - 1.222)
+R3 = 10.28</text>
+<text x="-35.56" y="68.58" size="1.27" layer="97">V_restore = 23V
+Let R_p = resistence of parallel of R1 and R3
+V_ETH * (R2 + R_p) = 23 * (R_p)
+R_p = V_ETH * R2 / (23- V_ETH)
+R_p = 1.222 * 158 / (23 - 1.222)
+R_p = 8.86</text>
+<text x="-35.56" y="58.42" size="1.27" layer="97">R_p = R1 * R3 / (R1 + R3)
+R_p R1 + R_p R3 = R1 * R3
+R1 = - R_p R3 / (R_p - R3)
+R1 = 64.14</text>
 </plain>
 <instances>
 <instance part="U1" gate="A" x="50.8" y="55.88" smashed="yes">
 <attribute name="NAME" x="74.0536" y="65.0135" size="2.0862" layer="95" ratio="6" rot="SR0"/>
 <attribute name="VALUE" x="73.4431" y="62.47681875" size="2.08856875" layer="96" ratio="6" rot="SR0"/>
-</instance>
-<instance part="Q2" gate="G$1" x="127" y="91.44" smashed="yes" rot="MR90">
-<attribute name="NAME" x="123.19" y="99.06" size="1.778" layer="95" rot="MR180"/>
-<attribute name="VALUE" x="118.11" y="101.6" size="1.778" layer="96" rot="MR180"/>
 </instance>
 <instance part="Q1" gate="G$1" x="106.68" y="17.78" smashed="yes" rot="R270">
 <attribute name="NAME" x="105.41" y="10.16" size="1.778" layer="95"/>
@@ -11709,6 +11723,14 @@ damage to the read</text>
 <attribute name="NAME" x="149.86" y="104.14" size="1.778" layer="95" font="vector" rot="R180" align="top-left"/>
 <attribute name="VALUE" x="149.86" y="119.38" size="1.778" layer="96" font="vector" rot="R180"/>
 </instance>
+<instance part="Q5" gate="G$1" x="127" y="91.44" smashed="yes" rot="R90">
+<attribute name="NAME" x="133.35" y="99.06" size="1.778" layer="95" rot="MR180"/>
+<attribute name="VALUE" x="140.97" y="101.6" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="Q6" gate="G$1" x="119.38" y="91.44" smashed="yes" rot="MR90">
+<attribute name="NAME" x="113.03" y="99.06" size="1.778" layer="95" rot="MR180"/>
+<attribute name="VALUE" x="105.41" y="101.6" size="1.778" layer="96" rot="MR180"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -11772,9 +11794,13 @@ damage to the read</text>
 <net name="N$4" class="0">
 <segment>
 <pinref part="U1" gate="A" pin="G1"/>
-<wire x1="106.68" y1="55.88" x2="129.54" y2="55.88" width="0.1524" layer="91"/>
-<pinref part="Q2" gate="G$1" pin="G"/>
-<wire x1="129.54" y1="88.9" x2="129.54" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="55.88" x2="124.46" y2="55.88" width="0.1524" layer="91"/>
+<pinref part="Q5" gate="G$1" pin="G"/>
+<wire x1="124.46" y1="55.88" x2="124.46" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="76.2" x2="124.46" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="76.2" x2="121.92" y2="76.2" width="0.1524" layer="91"/>
+<pinref part="Q6" gate="G$1" pin="G"/>
+<wire x1="121.92" y1="76.2" x2="121.92" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$9" class="0">
@@ -11811,9 +11837,8 @@ damage to the read</text>
 <junction x="111.76" y="88.9"/>
 <pinref part="C4" gate="G$1" pin="1"/>
 <wire x1="106.68" y1="86.36" x2="106.68" y2="88.9" width="0.1524" layer="91"/>
-<pinref part="Q2" gate="G$1" pin="D"/>
-<wire x1="121.92" y1="93.98" x2="111.76" y2="93.98" width="0.1524" layer="91"/>
 <junction x="111.76" y="93.98"/>
+<wire x1="114.3" y1="93.98" x2="111.76" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="20.32" y1="106.68" x2="20.32" y2="93.98" width="0.1524" layer="91"/>
 <junction x="20.32" y="93.98"/>
 <pinref part="VCC_WALL" gate="6T4AWGLUG" pin="1"/>
@@ -11821,6 +11846,7 @@ damage to the read</text>
 <wire x1="60.96" y1="93.98" x2="60.96" y2="114.3" width="0.1524" layer="91"/>
 <wire x1="60.96" y1="114.3" x2="63.5" y2="114.3" width="0.1524" layer="91"/>
 <junction x="60.96" y="93.98"/>
+<pinref part="Q6" gate="G$1" pin="D"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -11845,12 +11871,12 @@ damage to the read</text>
 <pinref part="Q3" gate="G$1" pin="D"/>
 <wire x1="132.08" y1="50.8" x2="132.08" y2="15.24" width="0.1524" layer="91"/>
 <junction x="132.08" y="15.24"/>
-<pinref part="Q2" gate="G$1" pin="S"/>
 <wire x1="132.08" y1="93.98" x2="132.08" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="170.18" y1="43.18" x2="170.18" y2="50.8" width="0.1524" layer="91"/>
 <junction x="170.18" y="50.8"/>
 <pinref part="U$6" gate="6T4AWGLUG" pin="1"/>
 <label x="182.88" y="50.8" size="1.778" layer="95"/>
+<pinref part="Q5" gate="G$1" pin="D"/>
 </segment>
 </net>
 <net name="VCC_BATT" class="0">

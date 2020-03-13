@@ -9313,14 +9313,14 @@ In this library you will find LEDs and other visual output devices.
 </class>
 </classes>
 <parts>
-<part name="U1" library="Microcontroller" library_urn="urn:adsk.eagle:library:14522412" deviceset="ATMEGA328P-AU" device="" package3d_urn="urn:adsk.eagle:package:10882639/5"/>
+<part name="MICROCONTR" library="Microcontroller" library_urn="urn:adsk.eagle:library:14522412" deviceset="ATMEGA328P-AU" device="" package3d_urn="urn:adsk.eagle:package:10882639/5"/>
 <part name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1 µF"/>
 <part name="C2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1 µF"/>
 <part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
-<part name="U2" library="RoboJackets-ICs" deviceset="MCP2551-I/SN" device=""/>
+<part name="MCP2551-I/SN" library="RoboJackets-ICs" deviceset="MCP2551-I/SN" device=""/>
 <part name="GND3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="C3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1 µF"/>
 <part name="C4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1 µF"/>
@@ -9343,7 +9343,7 @@ In this library you will find LEDs and other visual output devices.
 <part name="GND8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="C6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1 µF"/>
-<part name="U4" library="SparkFun-DigitalIC" deviceset="MCP2510" device="SO" value="MCP2515"/>
+<part name="MCP2515" library="SparkFun-DigitalIC" deviceset="MCP2510" device="SO" value="MCP2515"/>
 <part name="Q1" library="SparkFun-FreqCtrl" deviceset="CRYSTAL" device="5X3" value="16MHz"/>
 <part name="C5" library="SparkFun-Capacitors" deviceset="22PF-50V-5%(0603)" device="" value="22pF"/>
 <part name="C7" library="SparkFun-Capacitors" deviceset="22PF-50V-5%(0603)" device="" value="22pF"/>
@@ -9354,15 +9354,15 @@ In this library you will find LEDs and other visual output devices.
 <part name="R6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
 <part name="P+10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="J3" library="RoboJackets-Connectors" deviceset="2-PIN_2MM-*" device="H"/>
-<part name="D1" library="RoboJackets-LEDs" deviceset="LED-SMD" device="" technology="-GREEN" value="GREEN"/>
-<part name="D2" library="RoboJackets-LEDs" deviceset="LED-SMD" device="" technology="-BLUE" value="BLUE"/>
+<part name="DATA_LED" library="RoboJackets-LEDs" deviceset="LED-SMD" device="" technology="-GREEN" value="GREEN"/>
+<part name="POWER_LED" library="RoboJackets-LEDs" deviceset="LED-SMD" device="" technology="-BLUE" value="BLUE"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 </plain>
 <instances>
-<instance part="U1" gate="G$1" x="101.6" y="40.64" smashed="yes"/>
+<instance part="MICROCONTR" gate="G$1" x="101.6" y="40.64" smashed="yes"/>
 <instance part="C1" gate="G$1" x="177.8" y="50.8" smashed="yes">
 <attribute name="NAME" x="178.816" y="51.435" size="1.778" layer="95"/>
 <attribute name="VALUE" x="178.816" y="46.609" size="1.778" layer="96"/>
@@ -9383,7 +9383,7 @@ In this library you will find LEDs and other visual output devices.
 <instance part="P+2" gate="1" x="45.72" y="71.12" smashed="yes">
 <attribute name="VALUE" x="43.18" y="66.04" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="U2" gate="A" x="76.2" y="0" smashed="yes">
+<instance part="MCP2551-I/SN" gate="A" x="76.2" y="0" smashed="yes">
 <attribute name="NAME" x="80.9244" y="6.1214" size="2.0828" layer="95" ratio="6" rot="SR180"/>
 <attribute name="VALUE" x="98.7806" y="4.0386" size="2.0828" layer="96" ratio="6" rot="SR0"/>
 </instance>
@@ -9462,7 +9462,7 @@ In this library you will find LEDs and other visual output devices.
 <attribute name="NAME" x="130.556" y="-14.605" size="1.778" layer="95"/>
 <attribute name="VALUE" x="130.556" y="-19.431" size="1.778" layer="96"/>
 </instance>
-<instance part="U4" gate="&gt;NAME" x="101.6" y="-48.26" smashed="yes">
+<instance part="MCP2515" gate="&gt;NAME" x="101.6" y="-48.26" smashed="yes">
 <attribute name="NAME" x="91.44" y="-31.75" size="1.778" layer="95"/>
 <attribute name="VALUE" x="91.44" y="-77.47" size="1.778" layer="96"/>
 </instance>
@@ -9517,11 +9517,11 @@ In this library you will find LEDs and other visual output devices.
 <attribute name="NAME" x="43.18" y="7.62" size="1.778" layer="95" font="vector" rot="R90" align="top-left"/>
 <attribute name="VALUE" x="58.42" y="7.62" size="1.778" layer="96" font="vector" rot="R90"/>
 </instance>
-<instance part="D1" gate="G$1" x="17.78" y="15.24" smashed="yes">
+<instance part="DATA_LED" gate="G$1" x="17.78" y="15.24" smashed="yes">
 <attribute name="NAME" x="20.32" y="17.78" size="1.778" layer="95"/>
 <attribute name="VALUE" x="20.32" y="15.24" size="1.778" layer="96"/>
 </instance>
-<instance part="D2" gate="G$1" x="5.08" y="7.62" smashed="yes">
+<instance part="POWER_LED" gate="G$1" x="5.08" y="7.62" smashed="yes">
 <attribute name="NAME" x="7.62" y="10.16" size="1.778" layer="95"/>
 <attribute name="VALUE" x="7.62" y="7.62" size="1.778" layer="96"/>
 </instance>
@@ -9556,10 +9556,10 @@ In this library you will find LEDs and other visual output devices.
 <junction x="45.72" y="68.58"/>
 <wire x1="45.72" y1="63.5" x2="45.72" y2="68.58" width="0.1524" layer="91"/>
 <junction x="45.72" y="63.5"/>
-<pinref part="U1" gate="G$1" pin="VCC"/>
+<pinref part="MICROCONTR" gate="G$1" pin="VCC"/>
 <wire x1="66.04" y1="63.5" x2="45.72" y2="63.5" width="0.1524" layer="91"/>
 <wire x1="45.72" y1="63.5" x2="45.72" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="VCC1"/>
+<pinref part="MICROCONTR" gate="G$1" pin="VCC1"/>
 <wire x1="66.04" y1="60.96" x2="45.72" y2="60.96" width="0.1524" layer="91"/>
 <label x="55.88" y="63.5" size="1.778" layer="95"/>
 <label x="55.88" y="60.96" size="1.778" layer="95"/>
@@ -9572,12 +9572,12 @@ In this library you will find LEDs and other visual output devices.
 <wire x1="48.26" y1="20.32" x2="48.26" y2="17.78" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U2" gate="A" pin="VDD"/>
+<pinref part="MCP2551-I/SN" gate="A" pin="VDD"/>
 <wire x1="78.74" y1="-5.08" x2="66.04" y2="-5.08" width="0.1524" layer="91"/>
 <pinref part="P+5" gate="1" pin="+5V"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="AVCC"/>
+<pinref part="MICROCONTR" gate="G$1" pin="AVCC"/>
 <wire x1="66.04" y1="45.72" x2="45.72" y2="45.72" width="0.1524" layer="91"/>
 <pinref part="P+7" gate="1" pin="+5V"/>
 </segment>
@@ -9631,15 +9631,15 @@ In this library you will find LEDs and other visual output devices.
 <segment>
 <pinref part="GND6" gate="1" pin="GND"/>
 <wire x1="5.08" y1="2.54" x2="5.08" y2="5.08" width="0.1524" layer="91"/>
-<pinref part="D2" gate="G$1" pin="K"/>
+<pinref part="POWER_LED" gate="G$1" pin="K"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="GND1"/>
+<pinref part="MICROCONTR" gate="G$1" pin="GND1"/>
 <wire x1="66.04" y1="53.34" x2="53.34" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="53.34" x2="53.34" y2="50.8" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="GND2"/>
+<pinref part="MICROCONTR" gate="G$1" pin="GND2"/>
 <wire x1="66.04" y1="50.8" x2="53.34" y2="50.8" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="GND"/>
+<pinref part="MICROCONTR" gate="G$1" pin="GND"/>
 <wire x1="53.34" y1="55.88" x2="66.04" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="55.88" x2="53.34" y2="53.34" width="0.1524" layer="91"/>
 <junction x="53.34" y="53.34"/>
@@ -9657,7 +9657,7 @@ In this library you will find LEDs and other visual output devices.
 <pinref part="C6" gate="G$1" pin="2"/>
 </segment>
 <segment>
-<pinref part="U2" gate="A" pin="RS"/>
+<pinref part="MCP2551-I/SN" gate="A" pin="RS"/>
 <wire x1="129.54" y1="0" x2="144.78" y2="0" width="0.1524" layer="91"/>
 <pinref part="GND3" gate="1" pin="GND"/>
 <wire x1="144.78" y1="0" x2="144.78" y2="-2.54" width="0.1524" layer="91"/>
@@ -9665,7 +9665,7 @@ In this library you will find LEDs and other visual output devices.
 <segment>
 <pinref part="GND9" gate="1" pin="GND"/>
 <wire x1="17.78" y1="12.7" x2="17.78" y2="10.16" width="0.1524" layer="91"/>
-<pinref part="D1" gate="G$1" pin="K"/>
+<pinref part="DATA_LED" gate="G$1" pin="K"/>
 </segment>
 <segment>
 <wire x1="55.88" y1="-30.48" x2="53.34" y2="-30.48" width="0.1524" layer="91"/>
@@ -9685,13 +9685,13 @@ In this library you will find LEDs and other visual output devices.
 </net>
 <net name="CAN_RX" class="0">
 <segment>
-<pinref part="U2" gate="A" pin="RXD"/>
+<pinref part="MCP2551-I/SN" gate="A" pin="RXD"/>
 <label x="76.2" y="-12.7" size="1.27" layer="95" font="vector" rot="R270" xref="yes"/>
 <wire x1="78.74" y1="-7.62" x2="76.2" y2="-7.62" width="0.1524" layer="91"/>
 <wire x1="76.2" y1="-7.62" x2="76.2" y2="-12.7" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U4" gate="&gt;NAME" pin="RXCAN"/>
+<pinref part="MCP2515" gate="&gt;NAME" pin="RXCAN"/>
 <label x="134.62" y="-43.18" size="1.27" layer="95" xref="yes"/>
 <wire x1="119.38" y1="-43.18" x2="134.62" y2="-43.18" width="0.1524" layer="91"/>
 </segment>
@@ -9699,7 +9699,7 @@ In this library you will find LEDs and other visual output devices.
 <net name="N$6" class="0">
 <segment>
 <pinref part="C4" gate="G$1" pin="1"/>
-<pinref part="U1" gate="G$1" pin="AREF"/>
+<pinref part="MICROCONTR" gate="G$1" pin="AREF"/>
 <wire x1="63.5" y1="40.64" x2="66.04" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -9707,12 +9707,12 @@ In this library you will find LEDs and other visual output devices.
 <segment>
 <pinref part="R2" gate="G$1" pin="1"/>
 <wire x1="17.78" y1="20.32" x2="17.78" y2="22.86" width="0.1524" layer="91"/>
-<pinref part="D1" gate="G$1" pin="A"/>
+<pinref part="DATA_LED" gate="G$1" pin="A"/>
 </segment>
 </net>
 <net name="CAN_P" class="0">
 <segment>
-<pinref part="U2" gate="A" pin="CANH"/>
+<pinref part="MCP2551-I/SN" gate="A" pin="CANH"/>
 <wire x1="129.54" y1="-2.54" x2="132.08" y2="-2.54" width="0.1524" layer="91"/>
 <label x="132.08" y="-2.54" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
@@ -9734,7 +9734,7 @@ In this library you will find LEDs and other visual output devices.
 </net>
 <net name="CAN_N" class="0">
 <segment>
-<pinref part="U2" gate="A" pin="CANL"/>
+<pinref part="MCP2551-I/SN" gate="A" pin="CANL"/>
 <wire x1="129.54" y1="-5.08" x2="132.08" y2="-5.08" width="0.1524" layer="91"/>
 <label x="132.08" y="-5.08" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
@@ -9756,19 +9756,19 @@ In this library you will find LEDs and other visual output devices.
 </net>
 <net name="N$4" class="0">
 <segment>
-<pinref part="U2" gate="A" pin="VREF"/>
+<pinref part="MCP2551-I/SN" gate="A" pin="VREF"/>
 <wire x1="129.54" y1="-7.62" x2="129.54" y2="-12.7" width="0.1524" layer="91"/>
 <pinref part="C6" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="CAN_TX" class="0">
 <segment>
-<pinref part="U2" gate="A" pin="TXD"/>
+<pinref part="MCP2551-I/SN" gate="A" pin="TXD"/>
 <wire x1="73.66" y1="0" x2="78.74" y2="0" width="0.1524" layer="91"/>
 <label x="73.66" y="0" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U4" gate="&gt;NAME" pin="TXCAN"/>
+<pinref part="MCP2515" gate="&gt;NAME" pin="TXCAN"/>
 <label x="134.62" y="-48.26" size="1.27" layer="95" xref="yes"/>
 <wire x1="119.38" y1="-48.26" x2="134.62" y2="-48.26" width="0.1524" layer="91"/>
 </segment>
@@ -9785,7 +9785,7 @@ In this library you will find LEDs and other visual output devices.
 <label x="5.08" y="27.94" size="1.27" layer="95" font="vector" rot="R90" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="PD2(INT0/PCINT18)"/>
+<pinref part="MICROCONTR" gate="G$1" pin="PD2(INT0/PCINT18)"/>
 <wire x1="66.04" y1="20.32" x2="63.5" y2="20.32" width="0.1524" layer="91"/>
 <label x="50.8" y="25.4" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 <wire x1="63.5" y1="20.32" x2="63.5" y2="25.4" width="0.1524" layer="91"/>
@@ -9806,7 +9806,7 @@ In this library you will find LEDs and other visual output devices.
 <pinref part="Q1" gate="G$1" pin="2"/>
 <pinref part="C7" gate="G$1" pin="2"/>
 <wire x1="78.74" y1="-35.56" x2="78.74" y2="-33.02" width="0.1524" layer="91"/>
-<pinref part="U4" gate="&gt;NAME" pin="OSC1"/>
+<pinref part="MCP2515" gate="&gt;NAME" pin="OSC1"/>
 <wire x1="78.74" y1="-35.56" x2="86.36" y2="-35.56" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -9819,19 +9819,19 @@ In this library you will find LEDs and other visual output devices.
 <junction x="66.04" y="-43.18"/>
 <pinref part="Q1" gate="G$1" pin="1"/>
 <pinref part="C5" gate="G$1" pin="2"/>
-<pinref part="U4" gate="&gt;NAME" pin="OSC2"/>
+<pinref part="MCP2515" gate="&gt;NAME" pin="OSC2"/>
 <wire x1="78.74" y1="-43.18" x2="78.74" y2="-38.1" width="0.1524" layer="91"/>
 <wire x1="78.74" y1="-38.1" x2="86.36" y2="-38.1" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="CAN_CS" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="(PCINT2/SS/OC1B)PB2"/>
+<pinref part="MICROCONTR" gate="G$1" pin="(PCINT2/SS/OC1B)PB2"/>
 <wire x1="134.62" y1="20.32" x2="144.78" y2="20.32" width="0.1524" layer="91"/>
 <label x="144.78" y="20.32" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U4" gate="&gt;NAME" pin="CS"/>
+<pinref part="MCP2515" gate="&gt;NAME" pin="CS"/>
 <wire x1="86.36" y1="-45.72" x2="83.82" y2="-45.72" width="0.1524" layer="91"/>
 <label x="78.74" y="-45.72" size="1.27" layer="95" rot="R180" xref="yes"/>
 <wire x1="83.82" y1="-45.72" x2="78.74" y2="-45.72" width="0.1524" layer="91"/>
@@ -9842,12 +9842,12 @@ In this library you will find LEDs and other visual output devices.
 </net>
 <net name="MOSI" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="(PCINT3/OC2A/MOSI)PB3"/>
+<pinref part="MICROCONTR" gate="G$1" pin="(PCINT3/OC2A/MOSI)PB3"/>
 <wire x1="134.62" y1="22.86" x2="160.02" y2="22.86" width="0.1524" layer="91"/>
 <label x="160.02" y="22.86" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U4" gate="&gt;NAME" pin="SI"/>
+<pinref part="MCP2515" gate="&gt;NAME" pin="SI"/>
 <wire x1="86.36" y1="-50.8" x2="76.2" y2="-50.8" width="0.1524" layer="91"/>
 <label x="76.2" y="-50.8" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -9858,12 +9858,12 @@ In this library you will find LEDs and other visual output devices.
 </net>
 <net name="MISO" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="(PCINT4/MISO)PB4"/>
+<pinref part="MICROCONTR" gate="G$1" pin="(PCINT4/MISO)PB4"/>
 <wire x1="134.62" y1="25.4" x2="149.86" y2="25.4" width="0.1524" layer="91"/>
 <label x="149.86" y="25.4" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U4" gate="&gt;NAME" pin="SO"/>
+<pinref part="MCP2515" gate="&gt;NAME" pin="SO"/>
 <wire x1="86.36" y1="-53.34" x2="76.2" y2="-53.34" width="0.1524" layer="91"/>
 <label x="76.2" y="-53.34" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -9875,12 +9875,12 @@ In this library you will find LEDs and other visual output devices.
 </net>
 <net name="!RS" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="(RESET/PCINT14)PC6"/>
+<pinref part="MICROCONTR" gate="G$1" pin="(RESET/PCINT14)PC6"/>
 <wire x1="134.62" y1="53.34" x2="139.7" y2="53.34" width="0.1524" layer="91"/>
 <label x="139.7" y="53.34" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U4" gate="&gt;NAME" pin="RESET"/>
+<pinref part="MCP2515" gate="&gt;NAME" pin="RESET"/>
 <wire x1="86.36" y1="-58.42" x2="76.2" y2="-58.42" width="0.1524" layer="91"/>
 <label x="76.2" y="-58.42" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -9892,25 +9892,25 @@ In this library you will find LEDs and other visual output devices.
 </net>
 <net name="CAN_INT" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="PD3(PCINT19/OC2B/INT1)"/>
+<pinref part="MICROCONTR" gate="G$1" pin="PD3(PCINT19/OC2B/INT1)"/>
 <wire x1="66.04" y1="22.86" x2="60.96" y2="17.78" width="0.1524" layer="91"/>
 <wire x1="60.96" y1="17.78" x2="60.96" y2="10.16" width="0.1524" layer="91"/>
 <label x="60.96" y="10.16" size="1.27" layer="95" rot="R270" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U4" gate="&gt;NAME" pin="INT"/>
+<pinref part="MCP2515" gate="&gt;NAME" pin="INT"/>
 <wire x1="119.38" y1="-58.42" x2="132.08" y2="-58.42" width="0.1524" layer="91"/>
 <label x="132.08" y="-58.42" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="SCK" class="0">
 <segment>
-<pinref part="U4" gate="&gt;NAME" pin="SCK"/>
+<pinref part="MCP2515" gate="&gt;NAME" pin="SCK"/>
 <wire x1="86.36" y1="-48.26" x2="76.2" y2="-48.26" width="0.1524" layer="91"/>
 <label x="76.2" y="-48.26" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="(SCK/PCINT5)PB5"/>
+<pinref part="MICROCONTR" gate="G$1" pin="(SCK/PCINT5)PB5"/>
 <wire x1="134.62" y1="27.94" x2="139.7" y2="27.94" width="0.1524" layer="91"/>
 <label x="139.7" y="27.94" size="1.27" layer="95" xref="yes"/>
 </segment>
@@ -9922,7 +9922,7 @@ In this library you will find LEDs and other visual output devices.
 </net>
 <net name="N$2" class="0">
 <segment>
-<pinref part="D2" gate="G$1" pin="A"/>
+<pinref part="POWER_LED" gate="G$1" pin="A"/>
 <pinref part="R3" gate="G$1" pin="1"/>
 <wire x1="5.08" y1="12.7" x2="5.08" y2="15.24" width="0.1524" layer="91"/>
 </segment>

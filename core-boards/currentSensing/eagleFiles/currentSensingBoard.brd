@@ -164,8 +164,12 @@
 <board>
 <plain>
 <wire x1="0" y1="0" x2="50.8" y2="0" width="0" layer="20"/>
-<wire x1="50.8" y1="0" x2="50.8" y2="63.5" width="0" layer="20"/>
-<wire x1="50.8" y1="63.5" x2="0" y2="63.5" width="0" layer="20"/>
+<wire x1="50.8" y1="0" x2="50.9" y2="0.1" width="0" layer="20" curve="90"/>
+<wire x1="50.9" y1="0.1" x2="50.9" y2="63.4" width="0" layer="20"/>
+<wire x1="50.9" y1="63.4" x2="50.8" y2="63.5" width="0" layer="20" curve="90"/>
+<wire x1="50.8" y1="63.5" x2="0.5" y2="63.6" width="0" layer="20"/>
+<wire x1="0.5" y1="63.6" x2="0.1" y2="63.6" width="0" layer="20"/>
+<wire x1="0.1" y1="63.6" x2="0" y2="63.5" width="0" layer="20" curve="90"/>
 <wire x1="0" y1="63.5" x2="0" y2="0" width="0" layer="20"/>
 <text x="-13" y="65" size="1.778" layer="1">Round teh Cornelr</text>
 <text x="-11" y="60" size="1.778" layer="1">Labels</text>
@@ -2139,10 +2143,10 @@ design rules under a new name.</description>
 <contactref element="J1" pad="1"/>
 <contactref element="R6" pad="2"/>
 <polygon width="0.1524" layer="1">
-<vertex x="0" y="63.8"/>
+<vertex x="0" y="63.79411875"/>
 <vertex x="0" y="0"/>
 <vertex x="51" y="0"/>
-<vertex x="51" y="63.5"/>
+<vertex x="51" y="63.49411875"/>
 </polygon>
 </signal>
 <signal name="GND">
@@ -2221,10 +2225,10 @@ design rules under a new name.</description>
 <wire x1="7.93" y1="40.52" x2="7.45351875" y2="40.52" width="0.1524" layer="1"/>
 <wire x1="7.45351875" y1="40.52" x2="6.9514" y2="41.02211875" width="0.1524" layer="1"/>
 <polygon width="0.1524" layer="16">
-<vertex x="-0.2" y="63.8"/>
+<vertex x="-0.199059375" y="63.5"/>
 <vertex x="0" y="0"/>
 <vertex x="51" y="0"/>
-<vertex x="51" y="63.8"/>
+<vertex x="51" y="63.5"/>
 </polygon>
 </signal>
 <signal name="CAN_RX">
@@ -2235,9 +2239,8 @@ design rules under a new name.</description>
 <via x="41" y="33" extent="1-16" drill="0.35"/>
 <wire x1="41" y1="33" x2="43" y2="35" width="0.1524" layer="16"/>
 <via x="43" y="35" extent="1-16" drill="0.35"/>
-<wire x1="43" y1="35" x2="42" y2="36" width="0.1524" layer="1"/>
-<wire x1="42" y1="36" x2="41" y2="36" width="0.1524" layer="1"/>
-<wire x1="41" y1="36" x2="40.8979" y2="36.41" width="0" layer="19" extent="1-1"/>
+<wire x1="41.59" y1="36.41" x2="40.8979" y2="36.41" width="0.1524" layer="1"/>
+<wire x1="43" y1="35" x2="41.59" y2="36.41" width="0.1524" layer="1"/>
 </signal>
 <signal name="N$6">
 <contactref element="C4" pad="1"/>
@@ -2450,10 +2453,10 @@ design rules under a new name.</description>
 <via x="28" y="42" extent="1-16" drill="0.35"/>
 <wire x1="28" y1="42" x2="28" y2="48" width="0.1524" layer="16"/>
 <via x="28" y="48" extent="1-16" drill="0.35"/>
-<wire x1="22.39" y1="58.59960625" x2="22.39" y2="59.75" width="0.1524" layer="1"/>
-<wire x1="21.4074" y1="57.61700625" x2="22.39" y2="58.59960625" width="0.1524" layer="1"/>
-<wire x1="28" y1="48" x2="21.4074" y2="54.5926" width="0.1524" layer="1"/>
-<wire x1="21.4074" y1="54.5926" x2="21.4074" y2="57.61700625" width="0.1524" layer="1"/>
+<wire x1="22.39" y1="59.75" x2="22.39" y2="58.59960625" width="0.1524" layer="1"/>
+<wire x1="22.39" y1="58.59960625" x2="23.3726" y2="57.61700625" width="0.1524" layer="1"/>
+<wire x1="23.3726" y1="52.6274" x2="28" y2="48" width="0.1524" layer="1"/>
+<wire x1="23.3726" y1="57.61700625" x2="23.3726" y2="52.6274" width="0.1524" layer="1"/>
 </signal>
 <signal name="N$2">
 <contactref element="D2" pad="A"/>

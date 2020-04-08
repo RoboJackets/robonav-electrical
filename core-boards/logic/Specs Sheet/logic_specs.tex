@@ -5,6 +5,10 @@
 \usepackage{booktabs}
 \usepackage[explicit]{titlesec}
 \usepackage{fancyhdr}
+\usepackage{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{calc}
 \pagestyle{fancy}
 
 \titleformat{\section}
@@ -41,23 +45,37 @@
 \tableofcontents
 
 \pagebreak
+\section*{Todo Lists}
+\begin{itemize}
+  \item Update system diagram
+  \item Update relevant info
+  \item mbed pinout mapping
+  \item Schematics?
+  \item Sabertooth pinout
+  \item Indicator meaning
+  \item Lidar lites
+  \item Firmware
+  \item Estop system
+\end{itemize}
+
+\pagebreak
 
 \section{Overview}
-This document explained the function of the Motor and Light Control Board (referred as \emph{motor board} in the following) on \textbf{RoboJackets} IGVC subteam robot \textbf{Jessi} in the year 2017 - 2018 and showed how the board is designed with regards to its need, capability and limitation. This document is created in the hope that future RJ members can have a good understanding of the robot without unnecessary effort such as staring into the void and cursing whoever did the board without leaving a documentation. \vspace{6pt}\\
-The motor board is the interface between Jessi's software control and her motor. IGVC software team completes path-planning on the onboard Intel NUC computing unit and will send driving command to the motor board. The motor board will tune the value according to PID and encoder value and then send it to the sabertooth motor controller, which will eventually power the motor.\\
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.7\textwidth]{UpandLow.png}
-\caption{motor board's Data Input and Output}
-\end{figure}
+This document documents the functionality of the Logic Board (previously referred as \emph{motor board},
+or Motor and Light Control Board in the year 2017 - 2018) in the IGVC subteam in \emph{RoboJackets}.
+This document aims at providing the reader with the board's capability and limitation. \vspace{6pt}\\
+The logic board is the interface between IGVC's software team and her actuators. Software team completes
+path and motion planning in the onboard computer and sends driving commands via Ethernet to mbed on the Logic
+Board, which then converts to Serial message to the Sabetooth motor controller.\\
+\input{system_diagram.tex}
 
 The primary function of the motor board is to ensure the DC motors are operating at the speed desired by the NUC. Secondary functions include controlling the LED under-glow, monitoring battery voltage, E-stop status as well as Safety Light. The board also contained two ports for interfacing with OSMCs, a legacy motor controller module RJ IGVC team used in the past. Each functioning circuits can operate independently from each other. \vspace{6pt}\\
 
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.5\textwidth]{ARMLogo.png}
-\caption{ARM logo}
-\end{figure}
+% \begin{figure}[h]
+% \centering
+% \includegraphics[width=0.5\textwidth]{ARMLogo.png}
+% \caption{ARM logo}
+% \end{figure}
 
 The motor board is controlled by an mbed NXP LPC1768 microcontroller development board (referred as mbed in the following). More details here: \url{https://os.mbed.com/platforms/mbed-LPC1768/} \vspace{6pt}\\
 \pagebreak
@@ -87,11 +105,11 @@ Level ($V$)  & Direct Input Source & Maximum Ampere \\
 
 5V plane powers the mbed, encoder and the USB port to the NUC. 5V plane powers the 3V3 plane via the 5V-3V3 regulator, while the 3V3 plane only powers the imu and the ethernet port. \\
 
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.8\textwidth]{LED_Indicator.png}
-\caption{Power Indictor Circled Out}
-\end{figure}
+% \begin{figure}[h]
+% \centering
+% \includegraphics[width=0.8\textwidth]{LED_Indicator.png}
+% \caption{Power Indictor Circled Out}
+% \end{figure}
 
 Each power plane has a dedicated LED indicator, indicating that this specific power plane has been powered up. Notice that when \textbf{only} USB(either to mbed or X1 port) is connected, without 12V power, 12V LED may still light up. This is caused by the internal design of 12-5 regulator. The fact that 12V LED will light up only dimly suggest that 12V plane does not run 12V at this point. It is discouraged to power the motor board solely by the mbed or USB port.
 

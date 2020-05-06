@@ -5490,9 +5490,6 @@ design rules under a new name.</description>
 <wire x1="3.1126" y1="7.0944125" x2="3.1126" y2="8.1126" width="0.1524" layer="16"/>
 <wire x1="4" y1="9" x2="4" y2="21.98" width="0.1524" layer="16"/>
 <wire x1="4" y1="21.98" x2="2.27" y2="23.71" width="0.1524" layer="16"/>
-<wire x1="45.54" y1="38.87" x2="45" y2="45" width="0" layer="19" extent="1-1"/>
-<wire x1="21.25" y1="42.75" x2="43.17" y2="45.65" width="0" layer="19" extent="1-1"/>
-<wire x1="7.93" y1="42.12" x2="16.19" y2="41.32" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="CAN_RX">
 <contactref element="MCP2551-I/SN" pad="4"/>

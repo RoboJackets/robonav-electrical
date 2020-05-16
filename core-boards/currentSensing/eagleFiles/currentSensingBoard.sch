@@ -9326,11 +9326,11 @@ In this library you will find LEDs and other visual output devices.
 <part name="C4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1 µF"/>
 <part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1k"/>
 <part name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1k"/>
-<part name="J1" library="RoboJackets-Connectors" deviceset="4-PIN_2MM-*" device="H"/>
+<part name="CAN_IN/OUT" library="RoboJackets-Connectors" deviceset="4-PIN_2MM-*" device="H"/>
 <part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="120 Ω"/>
 <part name="R5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="120 Ω"/>
-<part name="J2" library="RoboJackets-Connectors" deviceset="3-PIN_2MM-*" device="H"/>
+<part name="SENSOR_OUTPUT" library="RoboJackets-Connectors" deviceset="3-PIN_2MM-*" device="H"/>
 <part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
@@ -9348,14 +9348,14 @@ In this library you will find LEDs and other visual output devices.
 <part name="C5" library="SparkFun-Capacitors" deviceset="22PF-50V-5%(0603)" device="" value="22pF"/>
 <part name="C7" library="SparkFun-Capacitors" deviceset="22PF-50V-5%(0603)" device="" value="22pF"/>
 <part name="GND12" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="X1" library="con-panduit" library_urn="urn:adsk.eagle:library:169" deviceset="057-006-" device="1" package3d_urn="urn:adsk.eagle:package:9198/1"/>
+<part name="ICSP" library="con-panduit" library_urn="urn:adsk.eagle:library:169" deviceset="057-006-" device="1" package3d_urn="urn:adsk.eagle:package:9198/1"/>
 <part name="GND10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="R6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
 <part name="P+10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
-<part name="J3" library="RoboJackets-Connectors" deviceset="2-PIN_2MM-*" device="H"/>
-<part name="DATA_LED" library="RoboJackets-LEDs" deviceset="LED-SMD" device="" technology="-GREEN" value="GREEN"/>
-<part name="POWER_LED" library="RoboJackets-LEDs" deviceset="LED-SMD" device="" technology="-BLUE" value="BLUE"/>
+<part name="HEADER_PINS" library="RoboJackets-Connectors" deviceset="2-PIN_2MM-*" device="H"/>
+<part name="DATA" library="RoboJackets-LEDs" deviceset="LED-SMD" device="" technology="-GREEN" value="GREEN"/>
+<part name="POWER" library="RoboJackets-LEDs" deviceset="LED-SMD" device="" technology="-BLUE" value="BLUE"/>
 </parts>
 <sheets>
 <sheet>
@@ -9406,7 +9406,7 @@ In this library you will find LEDs and other visual output devices.
 <attribute name="NAME" x="3.5814" y="19.05" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="8.382" y="19.05" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="J1" gate="G$1" x="177.8" y="-7.62" smashed="yes" rot="R180">
+<instance part="CAN_IN/OUT" gate="G$1" x="177.8" y="-7.62" smashed="yes" rot="R180">
 <attribute name="NAME" x="182.88" y="-12.7" size="1.778" layer="95" font="vector" rot="R180" align="top-left"/>
 <attribute name="VALUE" x="182.88" y="5.08" size="1.778" layer="96" font="vector" rot="R180"/>
 </instance>
@@ -9421,7 +9421,7 @@ In this library you will find LEDs and other visual output devices.
 <attribute name="NAME" x="31.5214" y="-21.59" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="36.322" y="-21.59" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="J2" gate="G$1" x="5.08" y="60.96" smashed="yes">
+<instance part="SENSOR_OUTPUT" gate="G$1" x="5.08" y="60.96" smashed="yes">
 <attribute name="NAME" x="0" y="71.12" size="1.778" layer="95" font="vector" align="top-left"/>
 <attribute name="VALUE" x="0" y="50.8" size="1.778" layer="96" font="vector"/>
 </instance>
@@ -9481,23 +9481,23 @@ In this library you will find LEDs and other visual output devices.
 <instance part="GND12" gate="1" x="53.34" y="-53.34" smashed="yes">
 <attribute name="VALUE" x="50.8" y="-55.88" size="1.778" layer="96"/>
 </instance>
-<instance part="X1" gate="-1" x="175.26" y="-33.02" smashed="yes">
+<instance part="ICSP" gate="-1" x="175.26" y="-33.02" smashed="yes">
 <attribute name="NAME" x="176.276" y="-33.782" size="1.524" layer="95"/>
 <attribute name="VALUE" x="172.72" y="-31.115" size="1.778" layer="96"/>
 </instance>
-<instance part="X1" gate="-2" x="198.12" y="-33.02" smashed="yes">
+<instance part="ICSP" gate="-2" x="198.12" y="-33.02" smashed="yes">
 <attribute name="NAME" x="199.136" y="-33.782" size="1.524" layer="95"/>
 </instance>
-<instance part="X1" gate="-3" x="175.26" y="-38.1" smashed="yes">
+<instance part="ICSP" gate="-3" x="175.26" y="-38.1" smashed="yes">
 <attribute name="NAME" x="176.276" y="-38.862" size="1.524" layer="95"/>
 </instance>
-<instance part="X1" gate="-4" x="198.12" y="-38.1" smashed="yes">
+<instance part="ICSP" gate="-4" x="198.12" y="-38.1" smashed="yes">
 <attribute name="NAME" x="199.136" y="-38.862" size="1.524" layer="95"/>
 </instance>
-<instance part="X1" gate="-5" x="175.26" y="-43.18" smashed="yes">
+<instance part="ICSP" gate="-5" x="175.26" y="-43.18" smashed="yes">
 <attribute name="NAME" x="176.276" y="-43.942" size="1.524" layer="95"/>
 </instance>
-<instance part="X1" gate="-6" x="198.12" y="-43.18" smashed="yes">
+<instance part="ICSP" gate="-6" x="198.12" y="-43.18" smashed="yes">
 <attribute name="NAME" x="199.136" y="-43.942" size="1.524" layer="95"/>
 </instance>
 <instance part="GND10" gate="1" x="208.28" y="-50.8" smashed="yes">
@@ -9513,15 +9513,15 @@ In this library you will find LEDs and other visual output devices.
 <instance part="P+10" gate="1" x="83.82" y="-15.24" smashed="yes">
 <attribute name="VALUE" x="81.28" y="-20.32" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="J3" gate="G$1" x="50.8" y="12.7" smashed="yes" rot="R90">
+<instance part="HEADER_PINS" gate="G$1" x="50.8" y="12.7" smashed="yes" rot="R90">
 <attribute name="NAME" x="43.18" y="7.62" size="1.778" layer="95" font="vector" rot="R90" align="top-left"/>
 <attribute name="VALUE" x="58.42" y="7.62" size="1.778" layer="96" font="vector" rot="R90"/>
 </instance>
-<instance part="DATA_LED" gate="G$1" x="17.78" y="15.24" smashed="yes">
+<instance part="DATA" gate="G$1" x="17.78" y="15.24" smashed="yes">
 <attribute name="NAME" x="20.32" y="17.78" size="1.778" layer="95"/>
 <attribute name="VALUE" x="20.32" y="15.24" size="1.778" layer="96"/>
 </instance>
-<instance part="POWER_LED" gate="G$1" x="5.08" y="7.62" smashed="yes">
+<instance part="POWER" gate="G$1" x="5.08" y="7.62" smashed="yes">
 <attribute name="NAME" x="7.62" y="10.16" size="1.778" layer="95"/>
 <attribute name="VALUE" x="7.62" y="7.62" size="1.778" layer="96"/>
 </instance>
@@ -9568,7 +9568,7 @@ In this library you will find LEDs and other visual output devices.
 <pinref part="P+6" gate="1" pin="+5V"/>
 <wire x1="43.18" y1="20.32" x2="48.26" y2="20.32" width="0.1524" layer="91"/>
 <label x="48.26" y="-5.08" size="1.778" layer="95"/>
-<pinref part="J3" gate="G$1" pin="1"/>
+<pinref part="HEADER_PINS" gate="G$1" pin="1"/>
 <wire x1="48.26" y1="20.32" x2="48.26" y2="17.78" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -9582,7 +9582,7 @@ In this library you will find LEDs and other visual output devices.
 <pinref part="P+7" gate="1" pin="+5V"/>
 </segment>
 <segment>
-<pinref part="J1" gate="G$1" pin="1"/>
+<pinref part="CAN_IN/OUT" gate="G$1" pin="1"/>
 <wire x1="172.72" y1="-7.62" x2="167.64" y2="-7.62" width="0.1524" layer="91"/>
 <wire x1="167.64" y1="-7.62" x2="167.64" y2="-15.24" width="0.1524" layer="91"/>
 <pinref part="P+8" gate="1" pin="+5V"/>
@@ -9622,7 +9622,7 @@ In this library you will find LEDs and other visual output devices.
 <wire x1="55.88" y1="40.64" x2="53.34" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="J2" gate="G$1" pin="1"/>
+<pinref part="SENSOR_OUTPUT" gate="G$1" pin="1"/>
 <wire x1="10.16" y1="66.04" x2="17.78" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="GND5" gate="1" pin="GND"/>
 <wire x1="17.78" y1="66.04" x2="17.78" y2="78.74" width="0.1524" layer="91"/>
@@ -9631,7 +9631,7 @@ In this library you will find LEDs and other visual output devices.
 <segment>
 <pinref part="GND6" gate="1" pin="GND"/>
 <wire x1="5.08" y1="2.54" x2="5.08" y2="5.08" width="0.1524" layer="91"/>
-<pinref part="POWER_LED" gate="G$1" pin="K"/>
+<pinref part="POWER" gate="G$1" pin="K"/>
 </segment>
 <segment>
 <pinref part="MICROCONTR" gate="G$1" pin="GND1"/>
@@ -9648,7 +9648,7 @@ In this library you will find LEDs and other visual output devices.
 </segment>
 <segment>
 <pinref part="GND8" gate="1" pin="GND"/>
-<pinref part="J1" gate="G$1" pin="2"/>
+<pinref part="CAN_IN/OUT" gate="G$1" pin="2"/>
 <wire x1="157.48" y1="-5.08" x2="172.72" y2="-5.08" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -9665,7 +9665,7 @@ In this library you will find LEDs and other visual output devices.
 <segment>
 <pinref part="GND9" gate="1" pin="GND"/>
 <wire x1="17.78" y1="12.7" x2="17.78" y2="10.16" width="0.1524" layer="91"/>
-<pinref part="DATA_LED" gate="G$1" pin="K"/>
+<pinref part="DATA" gate="G$1" pin="K"/>
 </segment>
 <segment>
 <wire x1="55.88" y1="-30.48" x2="53.34" y2="-30.48" width="0.1524" layer="91"/>
@@ -9707,7 +9707,7 @@ In this library you will find LEDs and other visual output devices.
 <segment>
 <pinref part="R2" gate="G$1" pin="1"/>
 <wire x1="17.78" y1="20.32" x2="17.78" y2="22.86" width="0.1524" layer="91"/>
-<pinref part="DATA_LED" gate="G$1" pin="A"/>
+<pinref part="DATA" gate="G$1" pin="A"/>
 </segment>
 </net>
 <net name="CAN_P" class="0">
@@ -9717,7 +9717,7 @@ In this library you will find LEDs and other visual output devices.
 <label x="132.08" y="-2.54" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 <segment>
-<pinref part="J1" gate="G$1" pin="3"/>
+<pinref part="CAN_IN/OUT" gate="G$1" pin="3"/>
 <wire x1="172.72" y1="-2.54" x2="162.56" y2="-2.54" width="0.1524" layer="91"/>
 <label x="162.56" y="-2.54" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
@@ -9739,7 +9739,7 @@ In this library you will find LEDs and other visual output devices.
 <label x="132.08" y="-5.08" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 <segment>
-<pinref part="J1" gate="G$1" pin="4"/>
+<pinref part="CAN_IN/OUT" gate="G$1" pin="4"/>
 <wire x1="172.72" y1="0" x2="162.56" y2="0" width="0.1524" layer="91"/>
 <label x="162.56" y="0" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
@@ -9775,7 +9775,7 @@ In this library you will find LEDs and other visual output devices.
 </net>
 <net name="SENSOR_OUTPUT" class="0">
 <segment>
-<pinref part="J2" gate="G$1" pin="3"/>
+<pinref part="SENSOR_OUTPUT" gate="G$1" pin="3"/>
 <wire x1="10.16" y1="55.88" x2="15.24" y2="55.88" width="0.1524" layer="91"/>
 <label x="15.24" y="55.88" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
@@ -9791,7 +9791,7 @@ In this library you will find LEDs and other visual output devices.
 <wire x1="63.5" y1="20.32" x2="63.5" y2="25.4" width="0.1524" layer="91"/>
 <wire x1="63.5" y1="25.4" x2="50.8" y2="25.4" width="0.1524" layer="91"/>
 <junction x="63.5" y="20.32"/>
-<pinref part="J3" gate="G$1" pin="2"/>
+<pinref part="HEADER_PINS" gate="G$1" pin="2"/>
 <wire x1="63.5" y1="20.32" x2="53.34" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="20.32" x2="53.34" y2="17.78" width="0.1524" layer="91"/>
 </segment>
@@ -9868,7 +9868,7 @@ In this library you will find LEDs and other visual output devices.
 <label x="76.2" y="-53.34" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="X1" gate="-1" pin="S"/>
+<pinref part="ICSP" gate="-1" pin="S"/>
 <wire x1="170.18" y1="-33.02" x2="165.1" y2="-33.02" width="0.1524" layer="91"/>
 <label x="165.1" y="-33.02" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -9887,7 +9887,7 @@ In this library you will find LEDs and other visual output devices.
 <segment>
 <wire x1="170.18" y1="-43.18" x2="165.1" y2="-43.18" width="0.1524" layer="91"/>
 <label x="165.1" y="-43.18" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="X1" gate="-5" pin="S"/>
+<pinref part="ICSP" gate="-5" pin="S"/>
 </segment>
 </net>
 <net name="CAN_INT" class="0">
@@ -9915,14 +9915,14 @@ In this library you will find LEDs and other visual output devices.
 <label x="139.7" y="27.94" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="X1" gate="-3" pin="S"/>
+<pinref part="ICSP" gate="-3" pin="S"/>
 <wire x1="170.18" y1="-38.1" x2="165.1" y2="-38.1" width="0.1524" layer="91"/>
 <label x="165.1" y="-38.1" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="N$2" class="0">
 <segment>
-<pinref part="POWER_LED" gate="G$1" pin="A"/>
+<pinref part="POWER" gate="G$1" pin="A"/>
 <pinref part="R3" gate="G$1" pin="1"/>
 <wire x1="5.08" y1="12.7" x2="5.08" y2="15.24" width="0.1524" layer="91"/>
 </segment>

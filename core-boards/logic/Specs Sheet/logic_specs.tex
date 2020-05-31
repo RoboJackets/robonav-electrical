@@ -59,7 +59,7 @@
 
 \tableofcontents
 
-% \pagebreak
+\pagebreak
 % \section*{Todo Lists}
 % \begin{todolist}
 %   \item[\done] Update system diagram
@@ -213,46 +213,9 @@ Be advised that the design of other board would require both a CAN controller an
 \pagebreak
 
 \section{Firmware}
-Logic board communicates with the custom built onboard computer via Ethernet. 
-
-% \subsection{Interacting with Computer}
-% Motor board communicates with NUC via Serial communication emulated by USBSerial interface.
-% For more details, please see mbed OS 5 API. Serial communication via the onboard USB port \\
-
-% Motor board accepts a number of commands from NUC. At the startup of ROS, NUC would set
-% parameters for PID algorithm and for most of the time, ($20Hz$ and nonstop), NUC will be
-% sending motor commands.The list of commands can be found in the following table, any
-% character in parenthesis is optional. When the source is NUC, it's always setting the
-% value in motor board. When the source is motor board, it's always returning a value to
-% the NUC.\\
-
-% Motor board abbreviated as MB
-% \begin{table}[h]
-% \caption{Summary of Serial Communication}
-% \centering
-%     \begin{tabular}{ c  c  c  c  c}
-%     \toprule
-%     Preamble & Format & Example & Source & Function \\
-%     \midrule
-%     \textdollar & \textdollar(-)X.X,(-)X.X & \textdollar-1.2,1.3 & NUC & Motor speed \\ 
-%     \#L & \#LX & \#L1 & NUC & Indicator light \\
-%     \#P & \#PX.X,X.X & \#P8.0,8.0 & NUC & PID P value \\
-%     \#D & \#DX.X,X.X & \#D8.0,8.0 & NUC & PID D value \\
-%     \textdollar & 
-%     \begin{tabular}{@{}c@{}}
-%         \textdollar(-)X.XX,\\(-)X.XX,0.XXX 
-%     \end{tabular}
-%     & 
-%     \begin{tabular}{@{}c@{}}
-%         \textdollar-1.25,1.13\\,0.051 
-%     \end{tabular}
-%     & MB & Actual speed \& $dT$ \\
-%     \#V & \#VXX.XX,X & \#V24.23,1 & MB & Battery and Estop\\
-%     \bottomrule
-%     \end{tabular}
-% \end{table}
-
-% When the communication is directly related to motor, the first value will always be for left motor and second for right. For example \textdollar1.2,-1.3 from NUC means the NUC want to set left motor be at $1.2 m/s$ and right motor at reverse $-1.3 m/s$. \\
+Logic board firmware is currently undergoing an overhaul lead by Dallas Downing. You can find the code in 
+\url{https://github.com/RoboJackets/igvc-firmware/tree/master/src/mbed}. mbed communicates with the computer via Ethernet
+and Google's Protobuf library. 
 
 \section{Control}
 \subsection{PID Algorithm}

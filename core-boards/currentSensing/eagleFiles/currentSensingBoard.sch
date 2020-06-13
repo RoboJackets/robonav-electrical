@@ -9377,8 +9377,8 @@ In this library you will find LEDs and other visual output devices.
 <instance part="GND1" gate="1" x="170.18" y="35.56" smashed="yes">
 <attribute name="VALUE" x="167.64" y="33.02" size="1.778" layer="96"/>
 </instance>
-<instance part="GND2" gate="1" x="53.34" y="30.48" smashed="yes">
-<attribute name="VALUE" x="50.8" y="27.94" size="1.778" layer="96"/>
+<instance part="GND2" gate="1" x="50.8" y="38.1" smashed="yes">
+<attribute name="VALUE" x="48.26" y="35.56" size="1.778" layer="96"/>
 </instance>
 <instance part="P+2" gate="1" x="45.72" y="71.12" smashed="yes">
 <attribute name="VALUE" x="43.18" y="66.04" size="1.778" layer="96" rot="R90"/>
@@ -9617,9 +9617,8 @@ In this library you will find LEDs and other visual output devices.
 </segment>
 <segment>
 <pinref part="GND2" gate="1" pin="GND"/>
-<wire x1="53.34" y1="33.02" x2="53.34" y2="40.64" width="0.1524" layer="91"/>
 <pinref part="C4" gate="G$1" pin="2"/>
-<wire x1="55.88" y1="40.64" x2="53.34" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="40.64" x2="50.8" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="SENSOR_OUTPUT" gate="G$1" pin="1"/>
@@ -9893,9 +9892,9 @@ In this library you will find LEDs and other visual output devices.
 <net name="CAN_INT" class="0">
 <segment>
 <pinref part="MICROCONTR" gate="G$1" pin="PD3(PCINT19/OC2B/INT1)"/>
-<wire x1="66.04" y1="22.86" x2="60.96" y2="17.78" width="0.1524" layer="91"/>
-<wire x1="60.96" y1="17.78" x2="60.96" y2="10.16" width="0.1524" layer="91"/>
-<label x="60.96" y="10.16" size="1.27" layer="95" rot="R270" xref="yes"/>
+<wire x1="66.04" y1="22.86" x2="63.5" y2="30.48" width="0.1524" layer="91"/>
+<label x="60.96" y="30.48" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="63.5" y1="30.48" x2="60.96" y2="30.48" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="MCP2515" gate="&gt;NAME" pin="INT"/>

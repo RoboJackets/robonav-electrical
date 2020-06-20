@@ -192,6 +192,9 @@
 <wire x1="31.1" y1="16.7" x2="31.1" y2="21.7" width="0.3048" layer="21"/>
 <text x="13" y="6" size="0.9" layer="51" font="vector">CAN_P</text>
 <text x="13" y="2" size="0.9" layer="51" font="vector">CAN_N</text>
+<wire x1="18.1" y1="11.7" x2="31.1" y2="11.7" width="0.3048" layer="21"/>
+<wire x1="18.1" y1="16.7" x2="18.1" y2="11.7" width="0.3048" layer="21"/>
+<wire x1="31.1" y1="16.7" x2="31.1" y2="11.7" width="0.3048" layer="21"/>
 </plain>
 <libraries>
 <library name="rcl" urn="urn:adsk.eagle:library:334">
@@ -5292,7 +5295,7 @@ design rules under a new name.</description>
 <attribute name="PIN_PITCH" value="2.0 mm" x="9.27" y="25.71" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="HEADER_PINS" library="RoboJackets-Connectors" package="2MM-2-H" value="2-PIN_2MM-H" x="9.13" y="17.28" smashed="yes" rot="R270">
-<attribute name="NAME" x="16.22" y="13.53" size="1" layer="25" font="vector" ratio="10" align="bottom-center"/>
+<attribute name="NAME" x="13.47" y="16.22" size="1" layer="25" font="vector" ratio="10" rot="R90" align="bottom-center"/>
 <attribute name="PINS" value="2" x="9.13" y="17.28" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="PIN_PITCH" value="2.0 mm" x="9.13" y="17.28" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
@@ -5325,13 +5328,13 @@ design rules under a new name.</description>
 <attribute name="SPICEPREFIX" value="R" x="27.13" y="7.88" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="VALUE" x="25.225" y="8.515" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="R6" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k" x="27.26" y="31.37" smashed="yes" rot="R270">
-<attribute name="NAME" x="24.195" y="31.195" size="1" layer="25" font="vector"/>
-<attribute name="POPULARITY" value="77" x="27.26" y="31.37" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="SPICEPREFIX" value="R" x="27.26" y="31.37" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="VALUE" x="25.355" y="32.005" size="1.27" layer="27" rot="R270"/>
+<element name="R6" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k" x="27.26" y="28.37" smashed="yes" rot="R270">
+<attribute name="NAME" x="24.195" y="28.195" size="1" layer="25" font="vector"/>
+<attribute name="POPULARITY" value="77" x="27.26" y="28.37" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="SPICEPREFIX" value="R" x="27.26" y="28.37" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="VALUE" x="25.355" y="29.005" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="MICROCONTR" library="Microcontroller" library_urn="urn:adsk.eagle:library:14522412" package="TQFP-32" package3d_urn="urn:adsk.eagle:package:10882639/5" value="ATMEGA328P-AU" x="12.06" y="40.92" smashed="yes">
+<element name="IC_MCU_8BIT" library="Microcontroller" library_urn="urn:adsk.eagle:library:14522412" package="TQFP-32" package3d_urn="urn:adsk.eagle:package:10882639/5" value="ATMEGA328P-AU" x="12.06" y="40.92" smashed="yes">
 <attribute name="CREATED_BY" value="PCBLayout.com" x="12.06" y="40.92" size="1.778" layer="27" display="off"/>
 <attribute name="DIGIKEY_PART_NUMBER" value="ATMEGA328P-AU-ND" x="12.06" y="40.92" size="1.778" layer="27" display="off"/>
 <attribute name="MANUFACTURER" value="Microchip Technology" x="12.06" y="40.92" size="1.778" layer="27" display="off"/>
@@ -5361,16 +5364,28 @@ design rules under a new name.</description>
 <element name="POWER" library="RoboJackets-LEDs" package="CHIP-LED0603" value="GREEN" x="20.1" y="18.7" smashed="yes">
 <attribute name="DIGIKEY" value="160-1446-1-ND" x="20.1" y="18.7" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="LTST-C191KGKT" x="20.1" y="18.7" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="25.565" y="17.635" size="1" layer="25"/>
+<attribute name="NAME" x="25.565" y="17.635" size="1" layer="25" font="vector"/>
 <attribute name="VALUE" x="22.005" y="18.065" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="DATA" library="RoboJackets-LEDs" package="CHIP-LED0603" value="BLUE" x="20.1" y="24.7" smashed="yes">
+<element name="OUTPUT" library="RoboJackets-LEDs" package="CHIP-LED0603" value="BLUE" x="20.1" y="24.7" smashed="yes">
 <attribute name="DIGIKEY" value="160-1647-1-ND" x="20.1" y="24.7" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="LTST-C191TBKT" x="20.1" y="24.7" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="29.535" y="24.265" size="1" layer="25" rot="R180"/>
+<attribute name="NAME" x="30.535" y="23.265" size="1" layer="25" font="vector" rot="R180"/>
 <attribute name="VALUE" x="22.005" y="24.065" size="1.27" layer="27" rot="R90"/>
 </element>
 <element name="U$1" library="RoboJackets-Aesthetics" package="ROBOBUZZ_0.4X" value="" x="47.87789375" y="55.109728125" smashed="yes"/>
+<element name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1k" x="24.2" y="14.4" smashed="yes" rot="R90">
+<attribute name="NAME" x="29.235" y="15.565" size="1" layer="25" font="vector" rot="R180"/>
+<attribute name="POPULARITY" value="77" x="14.2" y="14.4" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="SPICEPREFIX" value="R" x="14.2" y="14.4" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="VALUE" x="26.105" y="13.765" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="DEBUG" library="RoboJackets-LEDs" package="CHIP-LED0603" value="RED" x="20" y="14" smashed="yes">
+<attribute name="DIGIKEY" value="160-1447-1-ND" x="20" y="14" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="LTST-C191KRKT" x="20" y="14" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="30.635" y="13.365" size="1" layer="25" font="vector" rot="R180"/>
+<attribute name="VALUE" x="21.905" y="13.365" size="1.27" layer="27" rot="R90"/>
+</element>
 </elements>
 <signals>
 <signal name="VDD">
@@ -5386,11 +5401,11 @@ design rules under a new name.</description>
 <contactref element="C2" pad="1"/>
 <contactref element="C3" pad="1"/>
 <contactref element="R2" pad="2"/>
-<contactref element="MICROCONTR" pad="4"/>
-<contactref element="MICROCONTR" pad="6"/>
+<contactref element="IC_MCU_8BIT" pad="4"/>
+<contactref element="IC_MCU_8BIT" pad="6"/>
 <contactref element="HEADER_PINS" pad="1"/>
 <contactref element="MCP2551-I/SN" pad="3"/>
-<contactref element="MICROCONTR" pad="18"/>
+<contactref element="IC_MCU_8BIT" pad="18"/>
 <contactref element="CAN_IN/OUT" pad="1"/>
 <contactref element="R6" pad="2"/>
 <polygon width="0.1524" layer="1">
@@ -5406,9 +5421,9 @@ design rules under a new name.</description>
 <contactref element="C3" pad="2"/>
 <contactref element="C4" pad="2"/>
 <contactref element="SENSOR_OUTPUT" pad="1"/>
-<contactref element="MICROCONTR" pad="5"/>
-<contactref element="MICROCONTR" pad="21"/>
-<contactref element="MICROCONTR" pad="3"/>
+<contactref element="IC_MCU_8BIT" pad="5"/>
+<contactref element="IC_MCU_8BIT" pad="21"/>
+<contactref element="IC_MCU_8BIT" pad="3"/>
 <contactref element="CAN_IN/OUT" pad="2"/>
 <contactref element="C6" pad="2"/>
 <contactref element="MCP2551-I/SN" pad="8"/>
@@ -5425,7 +5440,7 @@ design rules under a new name.</description>
 <wire x1="3.75" y1="45.75" x2="3.75" y2="43.97" width="0.3048" layer="1"/>
 <via x="4" y="46" extent="1-16" drill="0.35"/>
 <contactref element="POWER" pad="C"/>
-<contactref element="DATA" pad="C"/>
+<contactref element="OUTPUT" pad="C"/>
 <wire x1="19.85" y1="25.7" x2="20.1" y2="25.45" width="0.1524" layer="1"/>
 <wire x1="45.54" y1="38.87" x2="46.87" y2="38.87" width="0.3048" layer="1"/>
 <wire x1="46.87" y1="38.87" x2="47" y2="39" width="0.3048" layer="1"/>
@@ -5469,6 +5484,10 @@ design rules under a new name.</description>
 <wire x1="18.35" y1="19.45" x2="18.3" y2="19.4" width="0.3048" layer="1"/>
 <wire x1="18.3" y1="19.4" x2="18.25" y2="19.45" width="0.3048" layer="1"/>
 <via x="18.25" y="19.45" extent="1-16" drill="0.35"/>
+<contactref element="DEBUG" pad="C"/>
+<wire x1="20" y1="14.75" x2="18.1" y2="14.75" width="0.3048" layer="1"/>
+<wire x1="18.1" y1="14.75" x2="18.1" y2="14.7" width="0.1524" layer="1"/>
+<via x="18.1" y="14.7" extent="1-16" drill="0.35"/>
 </signal>
 <signal name="CAN_RX">
 <contactref element="MCP2551-I/SN" pad="4"/>
@@ -5483,7 +5502,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="N$6">
 <contactref element="C4" pad="1"/>
-<contactref element="MICROCONTR" pad="20"/>
+<contactref element="IC_MCU_8BIT" pad="20"/>
 <wire x1="16.19" y1="40.52" x2="19.04" y2="40.52" width="0.3048" layer="1"/>
 <wire x1="19.04" y1="40.52" x2="19.55" y2="41.03" width="0.1524" layer="1"/>
 </signal>
@@ -5505,13 +5524,11 @@ design rules under a new name.</description>
 <wire x1="43.5" y1="24.6" x2="43.535" y2="24.635" width="0.1524" layer="1"/>
 <wire x1="43.535" y1="25.5878" x2="43.535" y2="24.635" width="0.3048" layer="1"/>
 <wire x1="43.535" y1="25.5878" x2="44.035" y2="26.0878" width="0.3048" layer="1"/>
-<wire x1="28.5" y1="8.66894375" x2="28.5" y2="7.7" width="0.3048" layer="1"/>
-<wire x1="28.5" y1="7.7" x2="27.83" y2="7.03" width="0.3048" layer="1"/>
 <wire x1="27.83" y1="7.03" x2="27.13" y2="7.03" width="0.1524" layer="1"/>
-<wire x1="39.915528125" y1="20.084471875" x2="28.5" y2="8.66894375" width="0.3048" layer="1"/>
+<wire x1="40.884471875" y1="20.084471875" x2="27.83" y2="7.03" width="0.3048" layer="1"/>
 <wire x1="27.25" y1="2.54" x2="26.25" y2="2.54" width="0.3048" layer="1"/>
 <wire x1="26.25" y1="2.54" x2="24.895" y2="3.895" width="0.3048" layer="1"/>
-<wire x1="39.915528125" y1="20.084471875" x2="43.915528125" y2="20.084471875" width="0.3048" layer="1"/>
+<wire x1="40.884471875" y1="20.084471875" x2="43.915528125" y2="20.084471875" width="0.3048" layer="1"/>
 <wire x1="43.915528125" y1="20.084471875" x2="44" y2="20" width="0.3048" layer="1"/>
 <via x="44" y="20" extent="1-16" drill="0.35"/>
 <wire x1="44" y1="20" x2="43" y2="21" width="0.3048" layer="16"/>
@@ -5538,13 +5555,18 @@ design rules under a new name.</description>
 <wire x1="26.86" y1="9" x2="27.13" y2="8.73" width="0.1524" layer="1"/>
 <wire x1="25.76" y1="4.24" x2="27.25" y2="4.24" width="0.3048" layer="1"/>
 <wire x1="27.13" y1="8.73" x2="27.13" y2="9.73" width="0.3048" layer="1"/>
-<wire x1="27.13" y1="9.73" x2="42.2" y2="24.8" width="0.3048" layer="1"/>
-<wire x1="42.2" y1="24.8" x2="42.22566875" y2="24.82566875" width="0.3048" layer="1"/>
+<wire x1="42.22566875" y1="24.82566875" x2="42.2" y2="24.8" width="0.3048" layer="1"/>
 <wire x1="42.2" y1="24.8" x2="42.2" y2="25.5228" width="0.3048" layer="1"/>
 <wire x1="42.2" y1="25.5228" x2="42.765" y2="26.0878" width="0.3048" layer="1"/>
 <wire x1="10.215" y1="4.785" x2="9.07" y2="3.64" width="0.3048" layer="1"/>
 <wire x1="10.215" y1="4.785" x2="25.215" y2="4.785" width="0.3048" layer="1"/>
 <wire x1="25.215" y1="4.785" x2="25.76" y2="4.24" width="0.3048" layer="1"/>
+<wire x1="27.13" y1="9.73" x2="27.4" y2="10" width="0.3048" layer="1"/>
+<wire x1="27.4" y1="10" x2="30" y2="10" width="0.3048" layer="1"/>
+<wire x1="30" y1="10" x2="40" y2="20" width="0.3048" layer="1"/>
+<wire x1="42.2" y1="24.2" x2="42.2" y2="24.8" width="0.3048" layer="1"/>
+<wire x1="40" y1="20" x2="40" y2="22" width="0.3048" layer="1"/>
+<wire x1="40" y1="22" x2="42.2" y2="24.2" width="0.3048" layer="1"/>
 </signal>
 <signal name="N$4">
 <contactref element="MCP2551-I/SN" pad="5"/>
@@ -5570,12 +5592,8 @@ design rules under a new name.</description>
 <signal name="SENSOR_OUTPUT">
 <contactref element="SENSOR_OUTPUT" pad="3"/>
 <contactref element="R3" pad="2"/>
-<contactref element="MICROCONTR" pad="32"/>
+<contactref element="IC_MCU_8BIT" pad="32"/>
 <contactref element="HEADER_PINS" pad="2"/>
-<wire x1="6.31" y1="48" x2="9.26" y2="45.05" width="0.3048" layer="1"/>
-<wire x1="2" y1="46" x2="2" y2="35" width="0.3048" layer="1"/>
-<wire x1="2" y1="46" x2="4" y2="48" width="0.3048" layer="1"/>
-<wire x1="4" y1="48" x2="6.31" y2="48" width="0.3048" layer="1"/>
 <wire x1="24.17" y1="25.47" x2="24.4" y2="25.7" width="0.3048" layer="1"/>
 <wire x1="24.4" y1="25.7" x2="26.1" y2="25.7" width="0.3048" layer="1"/>
 <via x="26.1" y="25.7" extent="1-16" drill="0.35"/>
@@ -5583,14 +5601,21 @@ design rules under a new name.</description>
 <wire x1="9.27" y1="18.87905" x2="10.0888" y2="18.06025" width="0.3048" layer="1"/>
 <wire x1="10.0888" y1="18.06025" x2="10.0888" y2="16.2388" width="0.3048" layer="1"/>
 <wire x1="10.0888" y1="16.2388" x2="9.13" y2="15.28" width="0.3048" layer="1"/>
-<wire x1="2" y1="35" x2="4" y2="33" width="0.3048" layer="1"/>
 <wire x1="9.27" y1="23.71" x2="16.29" y2="23.71" width="0.3048" layer="1"/>
 <wire x1="16.29" y1="23.71" x2="17" y2="23" width="0.3048" layer="1"/>
 <via x="17" y="23" extent="1-16" drill="0.35"/>
 <wire x1="17" y1="23" x2="23.4" y2="23" width="0.3048" layer="16"/>
 <wire x1="23.4" y1="23" x2="26.1" y2="25.7" width="0.3048" layer="16"/>
-<wire x1="16.64" y1="33" x2="24.17" y2="25.47" width="0.3048" layer="1"/>
-<wire x1="4" y1="33" x2="16.64" y2="33" width="0.3048" layer="1"/>
+<wire x1="21.82" y1="27.82" x2="24.17" y2="25.47" width="0.3048" layer="1"/>
+<wire x1="9.26" y1="45.05" x2="9.26" y2="44.34" width="0.1524" layer="1"/>
+<wire x1="9.26" y1="44.34" x2="11" y2="42.6" width="0.3048" layer="1"/>
+<wire x1="11" y1="42.6" x2="11" y2="39" width="0.3048" layer="1"/>
+<via x="11" y="39" extent="1-16" drill="0.35"/>
+<wire x1="11" y1="39" x2="11" y2="34" width="0.3048" layer="16"/>
+<via x="11" y="34" extent="1-16" drill="0.35"/>
+<wire x1="16.18" y1="27.82" x2="21.82" y2="27.82" width="0.3048" layer="1"/>
+<wire x1="11" y1="34" x2="11" y2="33" width="0.3048" layer="1"/>
+<wire x1="16.18" y1="27.82" x2="11" y2="33" width="0.3048" layer="1"/>
 </signal>
 <signal name="N$17">
 <contactref element="Q1" pad="3"/>
@@ -5616,18 +5641,19 @@ design rules under a new name.</description>
 <wire x1="43.31486875" y1="41.34881875" x2="41.9036875" y2="42.76" width="0.3048" layer="1"/>
 </signal>
 <signal name="CAN_CS">
-<contactref element="MICROCONTR" pad="14"/>
+<contactref element="IC_MCU_8BIT" pad="14"/>
 <contactref element="MCP2515" pad="16"/>
 <contactref element="R6" pad="1"/>
 <wire x1="30.68" y1="37.68" x2="31.3221" y2="37.68" width="0.1524" layer="1"/>
 <wire x1="30.68" y1="37.68" x2="27.26" y2="34.26" width="0.3048" layer="1"/>
-<wire x1="27.26" y1="32.22" x2="27.26" y2="34.26" width="0.3048" layer="1"/>
-<wire x1="13.26" y1="36.79" x2="13.26" y2="35.31351875" width="0.3048" layer="1"/>
-<wire x1="14.31351875" y1="34.26" x2="27.26" y2="34.26" width="0.3048" layer="1"/>
-<wire x1="13.26" y1="35.31351875" x2="14.31351875" y2="34.26" width="0.3048" layer="1"/>
+<wire x1="27.26" y1="29.22" x2="27.26" y2="32.26" width="0.3048" layer="1"/>
+<wire x1="27.26" y1="32.26" x2="27.26" y2="34.26" width="0.3048" layer="1"/>
+<wire x1="13.26" y1="36.79" x2="13.26" y2="34.31351875" width="0.3048" layer="1"/>
+<wire x1="15.31351875" y1="32.26" x2="27.26" y2="32.26" width="0.3048" layer="1"/>
+<wire x1="13.26" y1="34.31351875" x2="15.31351875" y2="32.26" width="0.3048" layer="1"/>
 </signal>
 <signal name="MOSI">
-<contactref element="MICROCONTR" pad="15"/>
+<contactref element="IC_MCU_8BIT" pad="15"/>
 <contactref element="MCP2515" pad="14"/>
 <via x="28" y="36" extent="1-16" drill="0.35"/>
 <wire x1="28" y1="36" x2="28" y2="38" width="0.3048" layer="16"/>
@@ -5641,7 +5667,7 @@ design rules under a new name.</description>
 <wire x1="15.26575" y1="35" x2="27" y2="35" width="0.3048" layer="1"/>
 </signal>
 <signal name="MISO">
-<contactref element="MICROCONTR" pad="16"/>
+<contactref element="IC_MCU_8BIT" pad="16"/>
 <contactref element="MCP2515" pad="15"/>
 <contactref element="ICSP" pad="1"/>
 <wire x1="31.3221" y1="38.95" x2="30.05" y2="38.95" width="0.3048" layer="1"/>
@@ -5664,7 +5690,7 @@ design rules under a new name.</description>
 <wire x1="28" y1="37" x2="30" y2="39" width="0.3048" layer="1"/>
 </signal>
 <signal name="!RS">
-<contactref element="MICROCONTR" pad="29"/>
+<contactref element="IC_MCU_8BIT" pad="29"/>
 <contactref element="MCP2515" pad="17"/>
 <contactref element="ICSP" pad="5"/>
 <wire x1="31.3221" y1="36.41" x2="30.9121" y2="36" width="0.3048" layer="1"/>
@@ -5675,22 +5701,18 @@ design rules under a new name.</description>
 <wire x1="13.66" y1="57.56" x2="15.85" y2="59.75" width="0.3048" layer="1"/>
 <wire x1="30" y1="36" x2="29.6068" y2="36.3932" width="0.3048" layer="16"/>
 <wire x1="29.6068" y1="36.3932" x2="29.6068" y2="38.25135" width="0.3048" layer="16"/>
-<wire x1="27" y1="40.85815" x2="27" y2="45" width="0.3048" layer="16"/>
+<wire x1="27" y1="40.85815" x2="27" y2="47" width="0.3048" layer="16"/>
 <wire x1="29.6068" y1="38.25135" x2="27" y2="40.85815" width="0.3048" layer="16"/>
-<via x="27" y="45" extent="1-16" drill="0.35"/>
-<wire x1="27" y1="45" x2="25" y2="47" width="0.3048" layer="1"/>
-<wire x1="25" y1="47" x2="13.66" y2="47" width="0.3048" layer="1"/>
+<via x="27" y="47" extent="1-16" drill="0.35"/>
+<wire x1="27" y1="47" x2="13.66" y2="47" width="0.3048" layer="1"/>
 <wire x1="13.66" y1="47" x2="11.66" y2="47" width="0.3048" layer="1"/>
 </signal>
 <signal name="CAN_INT">
-<contactref element="MICROCONTR" pad="1"/>
+<contactref element="IC_MCU_8BIT" pad="1"/>
 <contactref element="MCP2515" pad="12"/>
-<wire x1="7.93" y1="43.72" x2="10.38" y2="43.72" width="0.3048" layer="1"/>
-<wire x1="10.38" y1="43.72" x2="10.6" y2="43.5" width="0.3048" layer="1"/>
-<wire x1="10.6" y1="43.5" x2="10.55" y2="43.45" width="0.3048" layer="1"/>
-<via x="10.55" y="43.45" extent="1-16" drill="0.35"/>
-<wire x1="10.55" y1="43.45" x2="14.45" y2="43.45" width="0.3048" layer="16"/>
-<wire x1="14.45" y1="43.45" x2="16" y2="45" width="0.3048" layer="16"/>
+<via x="9.55" y="41.45" extent="1-16" drill="0.35"/>
+<wire x1="9.55" y1="41.45" x2="12.45" y2="41.45" width="0.3048" layer="16"/>
+<wire x1="12.45" y1="41.45" x2="16" y2="45" width="0.3048" layer="16"/>
 <via x="16" y="45" extent="1-16" drill="0.35"/>
 <wire x1="16" y1="45" x2="25" y2="45" width="0.3048" layer="1"/>
 <wire x1="25" y1="45" x2="26" y2="44" width="0.3048" layer="1"/>
@@ -5698,10 +5720,13 @@ design rules under a new name.</description>
 <wire x1="30.7379" y1="43.3442" x2="31.3221" y2="42.76" width="0.3048" layer="1"/>
 <wire x1="29.96855" y1="44" x2="30.62435" y2="43.3442" width="0.3048" layer="1"/>
 <wire x1="26" y1="44" x2="29.96855" y2="44" width="0.3048" layer="1"/>
+<wire x1="9.55" y1="41.45" x2="9.55" y2="42.68425" width="0.3048" layer="1"/>
+<wire x1="9.55" y1="42.68425" x2="8.51425" y2="43.72" width="0.3048" layer="1"/>
+<wire x1="8.51425" y1="43.72" x2="7.93" y2="43.72" width="0.3048" layer="1"/>
 </signal>
 <signal name="SCK">
 <contactref element="MCP2515" pad="13"/>
-<contactref element="MICROCONTR" pad="17"/>
+<contactref element="IC_MCU_8BIT" pad="17"/>
 <contactref element="ICSP" pad="3"/>
 <wire x1="28" y1="42" x2="30.8121" y2="42" width="0.3048" layer="1"/>
 <via x="28" y="42" extent="1-16" drill="0.35"/>
@@ -5720,10 +5745,33 @@ design rules under a new name.</description>
 <wire x1="24" y1="58" x2="24" y2="52" width="0.3048" layer="1"/>
 </signal>
 <signal name="N$2">
-<contactref element="DATA" pad="A"/>
+<contactref element="OUTPUT" pad="A"/>
 <contactref element="R3" pad="1"/>
 <wire x1="24.17" y1="23.77" x2="20.28" y2="23.77" width="0.3048" layer="1"/>
 <wire x1="20.28" y1="23.77" x2="20.1" y2="23.95" width="0.1524" layer="1"/>
+</signal>
+<signal name="DEBUG">
+<contactref element="IC_MCU_8BIT" pad="30"/>
+<contactref element="R1" pad="2"/>
+<wire x1="14" y1="38.0706" x2="14" y2="41.43351875" width="0.3048" layer="1"/>
+<wire x1="14" y1="38.0706" x2="14" y2="38" width="0.1524" layer="1"/>
+<via x="14" y="38.0706" extent="1-16" drill="0.35"/>
+<wire x1="14" y1="38.0706" x2="14" y2="20" width="0.3048" layer="16"/>
+<wire x1="14" y1="20" x2="18" y2="16" width="0.3048" layer="16"/>
+<wire x1="18" y1="16" x2="21" y2="16" width="0.3048" layer="16"/>
+<via x="21" y="16" extent="1-16" drill="0.35"/>
+<wire x1="21" y1="16" x2="23.45" y2="16" width="0.3048" layer="1"/>
+<wire x1="23.45" y1="16" x2="24.2" y2="15.25" width="0.3048" layer="1"/>
+<wire x1="14" y1="41.43351875" x2="12.43351875" y2="43" width="0.3048" layer="1"/>
+<wire x1="12.43351875" y1="43" x2="12" y2="43" width="0.3048" layer="1"/>
+<wire x1="12" y1="43" x2="10.86" y2="44.14" width="0.3048" layer="1"/>
+<wire x1="10.86" y1="44.14" x2="10.86" y2="45.05" width="0.3048" layer="1"/>
+</signal>
+<signal name="N$1">
+<contactref element="R1" pad="1"/>
+<contactref element="DEBUG" pad="A"/>
+<wire x1="24.2" y1="13.55" x2="20.3" y2="13.55" width="0.3048" layer="1"/>
+<wire x1="20.3" y1="13.55" x2="20" y2="13.25" width="0.1524" layer="1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>

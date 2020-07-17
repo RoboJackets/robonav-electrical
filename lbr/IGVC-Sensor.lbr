@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.4.2">
+<eagle version="9.6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -538,14 +538,6 @@
 <smd name="P$14" x="3.25" y="0.335" dx="0.25" dy="0.475" layer="1" rot="R180"/>
 <smd name="P$15" x="3.75" y="0.335" dx="0.25" dy="0.475" layer="1" rot="R180"/>
 <smd name="P$16" x="4.165" y="1.5" dx="0.25" dy="0.475" layer="1" rot="R270"/>
-</package>
-<package name="RFM95W-3072">
-<wire x1="-12.7" y1="-14.605" x2="12.7" y2="-14.605" width="0.127" layer="21"/>
-<wire x1="12.7" y1="-14.605" x2="12.7" y2="14.605" width="0.127" layer="21"/>
-<wire x1="12.7" y1="14.605" x2="-12.7" y2="14.605" width="0.127" layer="21"/>
-<wire x1="-12.7" y1="14.605" x2="-12.7" y2="-14.605" width="0.127" layer="21"/>
-<pad name="P$1" x="-8" y="13" drill="0.6"/>
-<pad name="P$2" x="-10" y="13" drill="0.6"/>
 </package>
 </packages>
 <symbols>

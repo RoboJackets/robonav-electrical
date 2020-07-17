@@ -1,0 +1,212 @@
+\documentclass[letterpaper]{article}
+\usepackage[letterpaper,margin=1.5in]{geometry}
+\usepackage[english]{babel}
+\usepackage{amsmath} 
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage[explicit]{titlesec}
+\usepackage{fancyhdr}
+\usepackage{inputenc}
+\usepackage{enumitem,amssymb}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{calc}
+\pagestyle{fancy}
+\linespread{1.2}
+
+\titleformat{\section}
+  {\normalfont\Large\bfseries}{\thesection}{1em}{\hyperlink{sec-\thesection}{#1}
+\addtocontents{toc}{\protect\hypertarget{sec-\thesection}{}}}
+\titleformat{name=\section,numberless}
+  {\normalfont\Large\bfseries}{}{0pt}{#1}
+  
+\titleformat{\subsection}
+  {\normalfont\large\bfseries}{\thesubsection}{1em}{\hyperlink{subsec-\thesubsection}{#1}
+\addtocontents{toc}{\protect\hypertarget{subsec-\thesubsection}{}}}
+\titleformat{name=\subsection,numberless}
+  {\normalfont\large\bfseries}{\thesubsection}{0pt}{#1}
+
+\titleformat{\subsubsection}
+  {\normalfont\large\bfseries}{\thesubsubsection}{1em}{\hyperlink{subsec-\thesubsubsection}{#1}
+\addtocontents{toc}{\protect\hypertarget{subsec-\thesubsubsection}{}}}
+\titleformat{name=\subsubsection,numberless}
+  {\normalfont\large\bfseries}{\thesubsubsection}{0pt}{#1}
+
+
+\newlist{todolist}{itemize}{2}
+\setlist[todolist]{label=$\square$}
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\newcommand{\done}{\rlap{$\square$}{\raisebox{2pt}{\large\hspace{1pt}\cmark}}%
+\hspace{-2.5pt}}
+\newcommand{\wontfix}{\rlap{$\square$}{\large\hspace{1pt}\xmark}}
+
+
+
+\begin{document}
+
+
+\begin{titlepage}
+\centering
+	{\LARGE RoboJackets RoboNav}\\
+	\vspace{1cm}
+	{\Large URC Manipulation - From an Electrical Viewpoint}\\
+	\vfill
+	{\large Created at July 16, 2020}\\
+	\vspace{1cm}
+	{\large Last Edited at \today\par}
+\end{titlepage}
+\pagebreak
+
+\tableofcontents
+
+\pagebreak
+
+\section{Introduction}
+As RoboNav moves away from IGVC and towards URC, understanding of the underlying principles for manipulation 
+would be important for the electrical team. The study of manipulation has a long history in ECE and is arguably
+one of the most well-studied types of robot due to the ability to model the robot and the environment it operates
+in. Whether the task of planning (and / or) control of the manipulators eventually falls on the electrical team
+or not, a good grasp of the underlying principles of manipulation would always be a handy tool at hand for any
+unexpected happenings. 
+
+This guide borrowed much from the book ``A Mathematical Introduction to Robotic Manipulation'' by
+Dr. Richard Murray, Dr. Zexiang Li, and Dr. S. Shankar Sastry. It is meant to provide a simplified introduction
+to manipulation that freshmen wouldn't need to spent more than a semester understanding the basis
+of manipulation. We will start from rigid body motion, the right representation for rigid body motion and how it
+applies to the representation and planning of a manipulator.
+
+\section{Rigid Body Motions}
+The study of robot kinematics and controls has its core in the study of rigid body motions
+\footnote{think that the position of each joint on the manipulator is a movement away from the last joint}
+, and we will attempt to approach rigid body motion using linear algebra and screw theory.
+
+Michel Chases proved that a rigid body can be moved from any position to any other by a movement consisting of:\vspace{-0.5em}
+\begin{itemize}
+    \item A movement consisting of rotation about a straight line\vspace{-1em}
+    \item followed by translation parallel to that line. \vspace{-0.5em}
+\end{itemize}
+One such motion is called a \textbf{screw motion}. The time derivative version of screw motion is called a
+\textbf{Twist}. Screw motion and twist play the central roles in the formulation of robot kinematics. 
+
+\subsection{Rotational Motion in $\mathbb{R}^3$}
+
+\subsubsection{Representation}
+\textbf{Rotation Matrices}
+
+We begin the study by considering only the rotation aspect of rigid body motion. 
+One of the most common method to describe the orientation of coordinate frame $\mathcal{B}$ relative to
+inertial frame $\mathcal{A}$ is to sequentially rotate about the z-axis of $\mathcal{B}$ by $\alpha$, 
+then y-axis of $\mathcal{B}$ by $\beta$, and finally along z-axis by $\gamma$. This yields a net rotation
+of $R(\alpha, \beta, \gamma)$ and $\alpha, \gamma, \beta$ are called the ZYZ Euler angles. 
+
+We use rotation matrix to represent a, well, rotation of coordinates. 
+
+$R_{\mathbf{x}} = \begin{bmatrix}
+  1 & 0 & 0\\
+  0 &\cos & -\sin\\
+  0 &\sin & \cos
+\end{bmatrix}, 
+$
+$
+R_{\mathbf{y}} = \begin{bmatrix}
+\cos & 0 & \sin\\
+0 & 1 & 0\\
+-\sin & 0 & \cos
+\end{bmatrix}, 
+$
+$
+R_{\mathbf{z}} = \begin{bmatrix}
+  \cos & -\sin & 0\\
+  \sin & \cos & 0\\
+  0 & 0 & 1
+\end{bmatrix}$
+\vspace{6pt}
+
+A ZYZ Euler angle rotation would result in
+$$ R_{ab} = R_{\mathbf{z}}(\alpha) R_{\mathbf{y}}(\beta) R_{\mathbf{z}}(\gamma) $$
+We use $R_{ab}$ in the sense that it can transform coorindate points such that for point $q$ currently attached
+on coordinate frame $\mathcal{A}$, and represented as $\mathbf{q}_a = [x, y ,z]$. When coordinate frame $\mathcal{B}$
+rotate to frame $\mathcal{B}$, point q's relative position in the frame $\mathcal{B}$ is still $\mathbf{q}_b = [x, y, z]$, since the point
+moved with the reference frame. However the current location of $\mathbf{q}_a = R_{ab} \mathbf{q}_b$
+
+If point q rotates with frame $\mathcal{B}$ to a new frame $\mathcal{C}$, then 
+$$\mathbf{q}_a = R_{ab}\mathbf{q}_b = R_{ab}R_{bc}\mathbf{q}_c$$
+
+There exists other types of euler angle parameterizations by using different ordered sets of rotation axes,
+including ZYX\footnote{roll pitch yaw} and YZX. They avoided singularity at identity orientation, however do contain
+singularity at other orientations. We do not cover the details of singularity at this point, but more info at gimbal
+lock\footnote{\url{https://en.wikipedia.org/wiki/Gimbal_lock}}. \vspace{1em}\\
+\textbf{Quaternion}
+
+Quaternion works in a similar way that complex number works on the unit circle to represent planar rotations. They 
+give a global parameterization of $\emph{SO}(3)$ at the cost of using 4 numbers. 
+$$Q = w + x\mathbf{i} + y\mathbf{j} + z\mathbf{k}$$
+$w$ is the scalar component and $\mathbf{q} = (x, y, z)$ being vector component, a convenient shorthand notation being
+$Q = (w, \mathbf{q})$. Vector component satisfies the following relationship
+$$\mathbf{i} \cdot \mathbf{i} = \mathbf{j} \cdot \mathbf{j} = \mathbf{k} \cdot \mathbf{k} = -1$$
+$$\mathbf{i} \cdot \mathbf{j} = -\mathbf{j} \cdot \mathbf{i} = \mathbf{k}, 
+\mathbf{j} \cdot \mathbf{k} = -\mathbf{k} \cdot \mathbf{j} = \mathbf{i},
+\mathbf{k} \cdot \mathbf{i} = -\mathbf{i} \cdot \mathbf{k} = \mathbf{j}$$
+
+\subsubsection{Understanding}
+\textbf{Figure here}
+
+Consider that we have a inertial frame $\mathcal{A}$, and a body frame $\mathcal{B}$ that has undergone a rotation
+about the origin point in inertial frame and no translation. $\mathbf{x}_{ab}, \mathbf{y}_{ab}, \mathbf{z}_{ab}$ are
+the coordinates of the principle axes of $\mathcal{B}$ in the inertial frame. Three vectors be vertical vector
+and the concatenation coordinate vectors obtain
+$$R_{ab} = [\mathbf{x}_{ab}, \mathbf{y}_{ab}, \mathbf{z}_{ab}]$$
+
+Since the column vectors of $R_{ab}$ are from principle axes, dot product of the column vector with
+itself is 1, otherwise 0, yielding
+
+$$R^TR = RR^T = 1 \Rightarrow \det R = \pm 1$$
+
+Since $\det R = \mathbf{x}^T(\mathbf{y} \times \mathbf{z})$ and that $\mathbf{x} = \mathbf{y} \times \mathbf{z}$ under
+right-handed coordinate system, $\det R$ = 1. 
+
+Therefore \textbf{right-handed coordinate frame are represented by orthogonal matrices with determinant 1}. 
+The set of all matrices in $n \times n$ dimension are denoted by $\emph{SO}(n)$, as special orthogonal.
+$\emph{SO}(3) \in \mathbb{R}^{3\times 3}$ is a \textbf{group} under matrix multiplication. A set $G$, with a binary
+operation $\circ$ defined on elements of $G$ is considered a group if it satisfies the following axioms:
+\begin{itemize}
+  \item Closure: $g_1 \circ g_2 \in G$ if $g_1, g_2 \in G$
+  \item Identity: exists $e$ for every $g \in G$ that $g\circ e = e\circ g = g$
+  \item Inverse: for each $g \in G$ there exists a unique inverse, $g^{-1} \in G$ that $g \circ g^{-1} = g^{-1} \circ g = e$
+  \item Associativity. 
+\end{itemize}
+
+In the case of $\emph{SO}(3)$, it satiefies the above criteria in that
+\begin{itemize}
+  \item $AB=C$ where $A, B \in \mathbb{R}^3$ gives $C\in \mathbb{R}^3$ by definition.
+  \item $IR = RI = R$.
+  \item $R^TR = RR^T = I$.
+  \item Associativity from matrix multiplication.
+\end{itemize}
+
+Special orthogonal group satisfies the above criterion 
+
+Rodrigue's formula.
+
+Relate back to Rotation matrix. 
+
+\subsubsection{Application}
+
+\subsection{Rigid Motion in $\mathbb{R}^3$}
+
+\subsection{Velocity of a Rigid Body}
+
+\section{Manipulator Kinematics}
+
+\subsection{Forward Kinematics}
+
+\subsection{Inverse Kinematics}
+
+\subsection{Manipulator Jacobian}
+
+\section{Building A Manipulator in MATLAB}
+
+\end{document}

@@ -93,7 +93,7 @@ One such motion is called a \textbf{screw motion}. The time derivative version o
 
 \subsection{Rotational Motion in $\mathbb{R}^3$}
 
-\subsubsection{Representation}
+\subsubsection{Representation} \label{sec:rotmat}
 \textbf{Rotation Matrices}
 
 We begin the study by considering only the rotation aspect of rigid body motion. 
@@ -102,27 +102,30 @@ inertial frame $\mathcal{A}$ is to sequentially rotate about the z-axis of $\mat
 then y-axis of $\mathcal{B}$ by $\beta$, and finally along z-axis by $\gamma$. This yields a net rotation
 of $R(\alpha, \beta, \gamma)$ and $\alpha, \gamma, \beta$ are called the ZYZ Euler angles. 
 
-We use rotation matrix to represent a, well, rotation of coordinates. 
-
-$R_{\mathbf{x}} = \begin{bmatrix}
+We use rotation matrix to represent a, well, rotation of coordinates. There are a number of reasons we want
+to use matrices to represent such transformation:
+\begin{itemize}
+  \item Modern computers are highly optimized for linear algebras. \vspace{-0.5em}
+  \item Rotation matrix is the cononical form for special orthogonal groups, which has proven properties
+    that are useful to the representation, which we will briefly go over in section \ref{sec:so}.
+\end{itemize}
+\begin{equation} \label{eqn:rotmat_init}
+R_{\mathbf{x}} = \begin{bmatrix}
   1 & 0 & 0\\
   0 &\cos & -\sin\\
   0 &\sin & \cos
 \end{bmatrix}, 
-$
-$
 R_{\mathbf{y}} = \begin{bmatrix}
 \cos & 0 & \sin\\
 0 & 1 & 0\\
 -\sin & 0 & \cos
 \end{bmatrix}, 
-$
-$
 R_{\mathbf{z}} = \begin{bmatrix}
   \cos & -\sin & 0\\
   \sin & \cos & 0\\
   0 & 0 & 1
-\end{bmatrix}$
+\end{bmatrix}
+\end{equation}
 \vspace{6pt}
 
 A ZYZ Euler angle rotation would result in
@@ -151,7 +154,19 @@ $$\mathbf{i} \cdot \mathbf{j} = -\mathbf{j} \cdot \mathbf{i} = \mathbf{k},
 \mathbf{j} \cdot \mathbf{k} = -\mathbf{k} \cdot \mathbf{j} = \mathbf{i},
 \mathbf{k} \cdot \mathbf{i} = -\mathbf{i} \cdot \mathbf{k} = \mathbf{j}$$
 
-\subsubsection{Understanding}
+The \emph{conjugate} of a quaternion (recall imaginery numbers) $Q = (w, \mathbf{q})$ is $Q^{*} = (w, -\mathbf{q})$,
+and that the magnitude of a quaternion satisfies $||Q|| = Q \cdot Q^{*}$, and the inverse of a quaternion is 
+$$Q^{-1} = Q^{*} / ||Q||^{2}$$
+
+Unit quaternions are the subset of $Q \in \mathbb{Q}$ that $||Q|| = 1$, and typically are the only type of quaternion 
+we operate on. 
+
+Similar to rotation matrices, if $Q_{ab}$, $Q_{bc}$, and $Q_{ac}$ represents rotation between frame $\mathcal{AB}$,
+$\mathcal{BC}$, and $\mathcal{AC}$ respectively, the following equation holds.
+
+$$Q_{ac} = Q_{ab} \cdot Q_{bc}$$
+
+\subsubsection{Understanding} \label{sec:so}
 \textbf{Figure here}
 
 Consider that we have a inertial frame $\mathcal{A}$, and a body frame $\mathcal{B}$ that has undergone a rotation
@@ -173,6 +188,7 @@ The set of all matrices in $n \times n$ dimension are denoted by $\emph{SO}(n)$,
 $\emph{SO}(3) \in \mathbb{R}^{3\times 3}$ is a \textbf{group} under matrix multiplication. A set $G$, with a binary
 operation $\circ$ defined on elements of $G$ is considered a group if it satisfies the following axioms:
 \begin{itemize}
+  \setlength\itemsep{0pt}
   \item Closure: $g_1 \circ g_2 \in G$ if $g_1, g_2 \in G$
   \item Identity: exists $e$ for every $g \in G$ that $g\circ e = e\circ g = g$
   \item Inverse: for each $g \in G$ there exists a unique inverse, $g^{-1} \in G$ that $g \circ g^{-1} = g^{-1} \circ g = e$
@@ -181,27 +197,136 @@ operation $\circ$ defined on elements of $G$ is considered a group if it satisfi
 
 In the case of $\emph{SO}(3)$, it satiefies the above criteria in that
 \begin{itemize}
+  \setlength\itemsep{0pt}
   \item $AB=C$ where $A, B \in \mathbb{R}^3$ gives $C\in \mathbb{R}^3$ by definition.
   \item $IR = RI = R$.
   \item $R^TR = RR^T = I$.
   \item Associativity from matrix multiplication.
 \end{itemize}
 
-Special orthogonal group satisfies the above criterion 
+\textbf{Figure 2.2 here}
 
-Rodrigue's formula.
+Consider the above scenario that $\mathbf{\omega} \in \mathbb{R}^{3}$ be a unit vector specifying direction of rotation
+(rotation axis) and $\theta\in \mathbb{R}$ be the angle of rotation (Rad). The velocity of the point can be written as
+\begin{equation*}
+  \begin{split}
+    \dot{q}(t) = \omega \times q(t) = & \widehat{w}q(t)\\
+    w = [w_1, w_2, w_3] \Rightarrow \widehat{w} = & \begin{bmatrix}
+      0 & -w_3 & w_2 \\ w_3 & 0 & -w_1 \\ -w_2 & w_1 & 0
+    \end{bmatrix}
+  \end{split}
+\end{equation*}
+$\widehat{\omega}$ is a conversion for cross product to be represented as a typical matrix multiplication, and the equation
+is a time-invariant linear differential that can be integrated to:
+\begin{equation}
+  \begin{split}
+    q(t) = e^{\widehat{\omega}t}q(0) \\
+    \therefore R(\omega, \theta) = e^{\widehat{\omega}\theta}
+  \end{split}
+\end{equation}
+$R{\omega, \theta}$ denotes rotation about axis $\omega$ at unit velocity for $\omega$ units of time. Expand $e^{\widehat{\omega}\theta}$
+using taylor expansion: 
 
-Relate back to Rotation matrix. 
+\begin{equation} \label{eqn:tyex}
+  e^{\widehat{\omega}\theta} = I + \widehat{\omega}\theta + \frac{(\widehat{\omega}\theta)^2}{2!} + \frac{(\widehat{\omega}\theta)^3}{3!} + ... 
+\end{equation}
+
+Since $\widehat{\omega}$ are skew-symmetric matrices, denote such matrices for $\mathbb{R}^3$ as $so(3), \forall S \in so(3): S^{T} = -S$. 
+Through this property, $\forall \widehat{a} \in so(3)$:
+\begin{equation*}
+  \begin{split}
+    \widehat{a}^2 = aa^T - ||a||^2I\\
+    \widehat{a}^3 = -||a||^2\widehat{a}
+  \end{split}
+\end{equation*}
+Apply the above to equation \ref{eqn:tyex}:
+\begin{equation*}
+  e^{\widehat{\omega}\theta} = I + \left(\theta - \frac{\theta^3}{3!} + \frac{\theta^5}{5!} - ...\right)\widehat{\omega} +
+    \left(\frac{\theta^2}{2!} - \frac{\omega^4}{4!} + \frac{\omega^6}{6!} - ... \right)\widehat{\omega}^2
+\end{equation*}
+and hence
+\begin{equation}
+  \boxed{e^{\widehat{\omega}\theta} = I + \widehat{\omega}\sin\theta + \widehat{\omega}^2\left(1 - \cos\theta\right)}
+\end{equation}
+Commonly known as \emph{Rodrigue's formula}, we may relate this back to the rotation matrix in equation \ref{eqn:rotmat_init} of section \ref{sec:rotmat} that
+\begin{equation}
+  R_{\mathbf{x}}(\theta) = e^{\widehat{\mathbf{x}}\theta} = I + \left(
+    \begin{bmatrix}
+    0&0&0\\0&0&-1\\0&1&0
+  \end{bmatrix} \sin\theta +
+  \begin{bmatrix}
+    0&0&0\\0&-1&0\\0&0&-1
+  \end{bmatrix} (1-\cos\theta)
+  \right) = \begin{bmatrix}
+    1 & 0 & 0\\
+    0 &\cos & -\sin\\
+    0 &\sin & \cos
+  \end{bmatrix}
+\end{equation}
+This similarly holds for rotation along other axis.
 
 \subsubsection{Application}
+Have people write MATLAB code that transforms coordinates between frames, rotation only. 
 
 \subsection{Rigid Motion in $\mathbb{R}^3$}
 
+\subsubsection{Representation}
+As a screw motion requires a rotation and a translation component, we denote the pair of 
+$(p_{ab}, R_{ab})$ as $SE(3)$ (special euclidean group) that $p\in \mathbb{R}^3, R\in SO(3)$.
+Similar to the case of rotation, for $q_a, q_b$ be coordinate of $q$ in frame 
+A and B, 
+\begin{equation} \label{eqn:qtrans}
+  {q}_a = p_{ab} + R_{ab}q_b
+\end{equation}
+We represent transformation in equation \ref{eqn:qtrans} in its homogenous form that
+\begin{equation}
+  g = \begin{bmatrix}
+    R & p \\ 0 & 1
+  \end{bmatrix}
+\end{equation}
+and if we append 1 to the coordinate of a point to yield the \emph{homogeneous coordinates}
+\begin{equation}
+  \bar{q} = \begin{bmatrix}
+    q_1\\q_2\\q_3\\1
+  \end{bmatrix}
+\end{equation}
+\begin{equation}
+  \bar{q}_a = \begin{bmatrix} q_a\\1 \end{bmatrix}
+   = \begin{bmatrix}
+    p_{ab} + R_{ab}q_b\\
+    1
+   \end{bmatrix}
+   = \begin{bmatrix} R_{ab} & p_{ab}\\0&1 \end{bmatrix}
+  \begin{bmatrix}
+    q_b \\ 1
+  \end{bmatrix} = g_{ab}\bar{q}_b
+\end{equation}
+
+Similar to rotation components, given $g_{ab}, g_{ac}$, $g_{ac}$ can be given by the following equation
+\begin{equation}
+  g_{ac} = g_{ab} g_{bc} = \begin{bmatrix}
+    R_{ab}R_{bc} & R_{ab}p_{bc} + p_{ab}\\0 & 1
+  \end{bmatrix}
+\end{equation}
+
+\subsubsection{Understanding}
+We will first show that the set of rigid transformation is a group, and then link 
+rigid motions and twists through exponential coordinates. 
+
+\subsubsection{Application}
+Similar to rotation subsection. 
+
 \subsection{Velocity of a Rigid Body}
+Adjoint Transformation, but questionable applicability. 
+
 
 \section{Manipulator Kinematics}
 
 \subsection{Forward Kinematics}
+Products of exponential formula
+1. Uniform treatment of revolute and prismatic joints
+2. Only two reference frame (base and tool)
+3. Easy geometric intepretation
 
 \subsection{Inverse Kinematics}
 

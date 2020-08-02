@@ -72,13 +72,13 @@ in. Whether the task of planning (and / or) control of the manipulators eventual
 or not, a good grasp of the underlying principles of manipulation would always be a handy tool at hand for any
 unexpected happenings. 
 
-This guide borrowed much from the book ``A Mathematical Introduction to Robotic Manipulation'' by
-Dr. Richard Murray, Dr. Zexiang Li, and Dr. S. Shankar Sastry. It is meant to provide a simplified introduction
+\textbf{This guide borrowed much from the book} ``A Mathematical Introduction to Robotic Manipulation'' by
+Dr. Richard Murray, Dr. Zexiang Li, and Dr. S. Shankar Sastry. \emph{It is meant to provide a simplified introduction
 to manipulation that freshmen wouldn't need to spent more than a semester understanding the basis
-of manipulation. We will start from rigid body motion, the right representation for rigid body motion and how it
+of manipulation.} We will start from rigid body motion, the right representation for rigid body motion and how it
 applies to the representation and planning of a manipulator.
 
-\section{Rigid Body Motions}
+\section{Rigid Body Motions} \label{sec:rbm}
 The study of robot kinematics and controls has its core in the study of rigid body motions
 \footnote{think that the position of each joint on the manipulator is a movement away from the last joint}
 , and we will attempt to approach rigid body motion using linear algebra and screw theory.
@@ -301,36 +301,195 @@ and if we append 1 to the coordinate of a point to yield the \emph{homogeneous c
     q_b \\ 1
   \end{bmatrix} = g_{ab}\bar{q}_b
 \end{equation}
-
 Similar to rotation components, given $g_{ab}, g_{ac}$, $g_{ac}$ can be given by the following equation
 \begin{equation}
   g_{ac} = g_{ab} g_{bc} = \begin{bmatrix}
     R_{ab}R_{bc} & R_{ab}p_{bc} + p_{ab}\\0 & 1
   \end{bmatrix}
 \end{equation}
+This relationship can be expanded to additional reference frames. 
 
 \subsubsection{Understanding}
 We will first show that the set of rigid transformation is a group, and then link 
 rigid motions and twists through exponential coordinates. 
 
+Similar to $SO$ groups, this representation satisfies the following conditions:
+\begin{itemize}
+  \setlength\itemsep{0pt}
+  \item If $g_1, g_2 \in SE(3)$, then $g_1g_2 \in SE(3)$
+  \item The $4\times 4$ identity matrix is a member of $SE(3)$
+  \item For $\bar{g} \in SE(3)$, the inverse of $\bar{g}$ is simply its matrix inversion
+    \begin{equation*}
+      \bar{g}^{-1} = \begin{bmatrix}
+        R^{T} & -R^Tp\\0 & 1
+      \end{bmatrix} = 
+        \begin{bmatrix}
+          R & p \\ 0 & 1
+        \end{bmatrix}^{-1}
+    \end{equation*}
+  \item The composition rule is associative.
+\end{itemize}
+It is therefore a group.
+
+Consider the scenario with the following joint that is translating and
+rotating at the same time, the velocity at the tip would be
+\begin{equation*}
+    \dot{p}(t) = \omega \times (p(t) - q)
+\end{equation*}
+we can rewrite this as
+\begin{equation*}
+  \begin{bmatrix}
+    \dot{p} \\ 0
+  \end{bmatrix} = 
+  \begin{bmatrix}
+    \widehat{\omega} & -\omega \times q \\ 0 & 0
+  \end{bmatrix}
+  \begin{bmatrix}
+    p \\ 1  
+  \end{bmatrix} = 
+  \begin{bmatrix}
+    \widehat{\omega} & v \\ 0 & 0
+  \end{bmatrix}
+  \begin{bmatrix}
+    p \\ 1  
+  \end{bmatrix} = 
+\end{equation*}
+If we define $\xi$ as body velocity, then
+\begin{equation*}
+  \widehat{\xi} = \begin{bmatrix}
+    \widehat{\omega} & v \\ 0 & 0
+  \end{bmatrix}
+\end{equation*}
+therefore $\dot{p} = \widehat{\xi} p$ and differential equation solves to
+\begin{equation*}
+  p(t) = e^{\widehat{\xi}t}p(0)
+\end{equation*}
+which we may proceed similarly through taylor expansion as we did for $SO(3)$
+
 \subsubsection{Application}
 Similar to rotation subsection. 
 
 \subsection{Velocity of a Rigid Body}
-Adjoint Transformation, but questionable applicability. 
+Decided to not cover this at the moment, but for interested look up
+\emph{Adjoint Transformation}
 
+\textbf{Edit:} we actually have to cover this because:
+\begin{enumerate}
+  \item Adjoint transformation is needed for showing product of exponential.
+  \item Body vs Spatial velocity is needed for showing manipulator jacobian.
+\end{enumerate}
 
 \section{Manipulator Kinematics}
+In this section we will briefly talks about how to utilize the knowledge in
+Section \ref{sec:rbm} to simulate a manipulator. There are typically six types of
+manipulator joints:
+\begin{itemize}
+  \setlength\itemsep{0pt}
+  \item Revolute: pure rotation along a single axis
+  \item Prismatic: pure linear motion along a single axis
+  \item Helical: allows linear and rotation motion that are fixed to each other along the same single axis\footnote{\url{https://www.youtube.com/watch?v=fZqJopEL-k0}}. 
+  \item Cylindrical: allows independent linear and rotation motion along the same single axis
+  \item Spherical: allows arbitrary rotation, also refered to as \emph{ball and socket} joints
+  \item Planar: allows for arbitrary translation and rotation in the plane. This is rarely used and they are typically constructed
+    from a revolute joint attached to two independent prismatic joints. 
+\end{itemize}
+Modern manipulators are typically formulated by connecting different joints together
+using rigid links. The core of the formulation is the \textbf{product of exponential}
+formula, which represents the kinematics as the product of exponential of twists. 
+
+This approach works uniformly regardless of the type of the joints and provides a global and
+geometric representation of the kinematics of a manipulator which greatly simplfies
+the analysis and parameterization process of a manipulator. Compared to its alternative,
+\emph{Denavit–Hartenberg parameters}, it further has the advantage of only needing to
+define two reference frame and easier geometric intepretation of screw axis at each joint. 
 
 \subsection{Forward Kinematics}
-Products of exponential formula
-1. Uniform treatment of revolute and prismatic joints
-2. Only two reference frame (base and tool)
-3. Easy geometric intepretation
+The forward kinematics of a manipulator determines the configuration of the end effector
+given the parameters of each joint in the manipulator. We attach
+two frames, the base frame $S$\footnote{Not using $B$ to avoid confusion with body frame} and
+tool frame $T$. Given a set of angles $\theta \in Q$, the forward kinematics
+is a mapping $g_{st}:= Q \rightarrow SE(3)$
+
+Typically, to compute the configuration of the end-effector, we concatenate the
+rigid motion between frames.
+In the example below, the transformation can be represented as 
+\begin{equation*}
+  g_{s,t}(\theta_1, \theta_2) = g_{s, l_1}\left(\theta_1\right)g_{l_1, l_2}(\theta_2)g_{l_2, T}
+\end{equation*}
+
+This can be extended to arbitrary number of joints on any manipulator and is a 
+general formula for forward kinematics. 
+
+\paragraph{A more generalized approach}
+product of exponential equations should go here, but it requires a adjoint transformation.
+
+\paragraph{Manipulator Workspace}
+reachable space
 
 \subsection{Inverse Kinematics}
+\subsubsection{Example IK Problem}
+Inverse kinematics looks at obtaining a feasible set of parameters for joints
+given a end-effector configuration. This is important since very often we receive
+manipulator problems with only start and goal configurations of the end effector.
+Inverse kinematics bridges the gap between the goal and our actuator. 
+However note that inverse kinematics is a hard problem and general solution to
+inverse kinematics, especially given high number of joints and high DoF manipulators
+are active area of research and typically you won't be implementing one for yourself.
 
-\subsection{Manipulator Jacobian}
+\textbf{Fig 3.7.}
+
+We here provide a simple 2D example of inverse kinematics of a RR manipulator (two revolute joints).
+The end effector locaiton can be obtained by:
+\begin{equation*}
+  \begin{split}
+    x & = l_1\cos\theta_1 + l_2\cos(\theta_1 + \theta_2)\\
+    y & = l_1\sin\theta_1 + l_2\sin(\theta_1 + \theta_2)
+  \end{split}
+\end{equation*}
+The inverse problem would be to given $x$, and $y$ to solve for $\theta$s. 
+Typically we approach the problem using polar coordinates and angles, because
+trignometry. From the configuration visualized in above, we obtain $\theta_2$ as following
+\begin{equation*}
+  \theta_2 = \pi \pm \alpha, \alpha = \cos^{-1}\left(\frac{l_1^2+l_2^2-r^2}{2l_1l_2}\right)
+\end{equation*}
+
+If $\alpha \neq 0$, then there are two configurations of the manipulator that would give the radius.
+The second is referreed to as the "flip solution". The value of $\theta_1$ need to be solved
+for each possible value for $\theta_2$, giving
+\begin{equation*}
+  \theta_1 = \arctan2(y,x) \pm \beta, \beta = \cos^{-1}\left(\frac{r^2+l_1^2-l_2^2}{2l_1r}\right)
+\end{equation*}
+This example illustrates several important aspect of IK (inverse kinematics) problems.
+\begin{enumerate}
+  \item One usually first divide the problem into specific subproblems. 
+  \item Multiple solution occur when the desired configuration is within the workspace that
+  maps to the same end-effector location. 
+\end{enumerate}
+
+There are typically two families of approach, closed-form and numeric solutions. 
+Closed-form solutions are fast, analytical, and efficient calculators while numeric
+requires a back-and-forth process in determine the best solution configuration. 
+Yet at the heart of both, they looks at the same set of equations that defines the 
+inverse kinematics problem and solve them using geometric and algebraic identities. 
+
+\iffalse
+
+\subsubsection{Divide into subproblems}
+We here briefly introduce the \emph{Paden-Kahn} subporblems, a technique
+to solve inverse kinematics problem. To solve the IK problem, the method first solve 
+a number of subproblems which occur frequently in inverse solutions for common maninpulato
+designs, then seek to reduce the full inverse kinematics problem into subproblems
+whose solutions are known. 
+
+\fi
+
+\subsection{Planning Manipulator Trajectory}
+
+\subsubsection{Spline Trajectory}
+
+\subsubsection{Manipulator Jacobian}
+
+In addition to 
 
 \section{Building A Manipulator in MATLAB}
 

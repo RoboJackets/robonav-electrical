@@ -24,7 +24,7 @@ cd desired-location
 Now its time to clone:
 
 ```
-git clone https://github.com/RoboJackets/igvc-electrical.git
+git clone https://github.com/RoboJackets/robonav-electrical.git
 ```
 
 You now have all you need to start contributing to the RoboNav Electrical team!

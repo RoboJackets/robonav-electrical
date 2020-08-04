@@ -370,14 +370,87 @@ which we may proceed similarly through taylor expansion as we did for $SO(3)$
 Similar to rotation subsection. 
 
 \subsection{Velocity of a Rigid Body}
-Decided to not cover this at the moment, but for interested look up
-\emph{Adjoint Transformation}
+We will primarily show the process of calculating and transforming, 
+velocity of particles in $SE(3)$ through the use of Twists in this section.
 
-\textbf{Edit:} we actually have to cover this because:
-\begin{enumerate}
-  \item Adjoint transformation is needed for showing product of exponential.
-  \item Body vs Spatial velocity is needed for showing manipulator jacobian.
-\end{enumerate}
+We will start from the rotation only situation. Consider point $q$ is fixed in
+frame $B$ that is rotating along the origin of frame $A$:
+\begin{equation*}
+  q_A = R(t)q_B
+\end{equation*}
+We may describe the velocity as following
+\begin{equation*}
+  \begin{split}
+    v_{q_a} = \omega^{s}_{ab}(t) \times q_a\\
+    v_{q_b} = \omega^{b}_{ab}(t) \times q_b
+  \end{split}
+\end{equation*}
+Where $\omega^{s}, \omega^{b}$ represents the spatial and body velocity between
+frame A and B, where we may obtain them as follows.
+\begin{equation*}
+  \begin{split}
+    \widehat{\omega}^{s}_{ab} = \dot{R}_{ab}R^{-1}_{ab}\\
+    \widehat{\omega}^{b}_{ab} = R^{-1}_{ab}\dot{R}_{ab}
+  \end{split}
+\end{equation*}
+Now we consider the general case where the motion is defined by a rigid body
+transformation $g(t) \in SE(3)$. 
+\begin{equation*}
+  \begin{split}
+    \widehat{V}^s_{ab} = \dot{g}_{ab}g^{-1}_{ab}\\
+    \widehat{V}^b_{ab} = g^{-1}_{ab}\dot{g}_{ab}
+  \end{split}
+\end{equation*}
+By doing the vee (unhat) operation, we may get the individual components of
+spatial velocity
+\begin{equation*}
+  V^s_{ab} = \begin{bmatrix}
+    v^s_{ab}\\\omega^s_{ab}
+  \end{bmatrix}
+\end{equation*}
+And we may get the velocity of point q in frame A and B by
+\begin{equation*}
+  \begin{split}
+    v_{q_a} = \widehat{V}^s_{ab}q_a\\
+    v_{q_b} = \widehat{V}^b_{ab}q_b
+  \end{split}
+\end{equation*}
+Further note that since both $V^{s}_{ab}$ and $V^{b}_{ab}$ are twists, 
+they are related by the following relationship
+\begin{equation*}
+  \widehat{V}^s_{ab} = \dot{g}_{ab}g^{-1}_{ab} = g_{ab}g^{-1}_{ab}\dot{g}_{ab}g^{-1}_{ab} = g_{ab}\widehat{V}^{b}_{ab}g^{-1}_{ab}
+\end{equation*}
+Alternatively, 
+\begin{equation*}
+  V^{s}_{ab} = \begin{bmatrix}
+    v^{s}_{ab}\\\omega^{s}_{ab}
+  \end{bmatrix} = 
+  \begin{bmatrix}
+    R_{ab} & \widehat{p}_{ab}R_{ab}\\
+    0 & R_{ab}
+  \end{bmatrix}
+  \left.\begin{bmatrix}
+    v^{b}_{ab}\\\omega^b_{ab}
+  \end{bmatrix}\right\}\rightarrow V^{b}_{ab}
+\end{equation*}
+The transformation that transforms twists from one coordiante frame to another is called
+\emph{Adjoint transformation}, for one associated with $g$, denote $Ad_g$.
+By one of the following methods
+\begin{equation*}
+  \begin{split}
+    \widehat{\xi}^s & = g_{ab}\widehat{\xi}^bg^{-1}_{ab}\\
+    \xi^s & = \begin{bmatrix}
+      R & \widehat{p}R \\ 0 & R
+    \end{bmatrix} \xi^b
+  \end{split}
+\end{equation*}
+$Ad_g$ is invertible, and is given by the following
+\begin{equation*}
+  Ad_{g^{-1}} = \begin{bmatrix}
+    R^T & -R^T\widehat{p} \\ 0 & R^T
+  \end{bmatrix}
+\end{equation*}
+Knowing the velocity sets us up for planning manipulators later in the section. 
 
 \section{Manipulator Kinematics}
 In this section we will briefly talks about how to utilize the knowledge in
@@ -413,15 +486,19 @@ is a mapping $g_{st}:= Q \rightarrow SE(3)$
 Typically, to compute the configuration of the end-effector, we concatenate the
 rigid motion between frames.
 In the example below, the transformation can be represented as 
-\begin{equation*}
+\begin{equation} \label{eqn:fk}
   g_{s,t}(\theta_1, \theta_2) = g_{s, l_1}\left(\theta_1\right)g_{l_1, l_2}(\theta_2)g_{l_2, T}
-\end{equation*}
+\end{equation}
 
 This can be extended to arbitrary number of joints on any manipulator and is a 
 general formula for forward kinematics. 
 
-\paragraph{A more generalized approach}
-product of exponential equations should go here, but it requires a adjoint transformation.
+\paragraph{A more generalized approach - questionable is we need this atm}
+Equation \ref{eqn:fk} seems to rely on moving joint $\theta_2$ first and then $\theta_1$.
+Using product of exponential formula we can prove that this is not the case.\textbf{Not Finished}
+\begin{equation*}
+  g_{st}(\theta_1, \theta_2) = e^{\widehat{\xi}_1\theta_1} e^{\widehat{\xi}_2\theta_2} g_{st}(0)
+\end{equation*}
 
 \paragraph{Manipulator Workspace}
 reachable space
@@ -484,12 +561,42 @@ whose solutions are known.
 \fi
 
 \subsection{Planning Manipulator Trajectory}
-
+We are near the end of this guide and we now consider the proper planning of manipulator
+via joint configuration given a end-effector trajectory.
 \subsubsection{Spline Trajectory}
+Spline trajectory fits the manipulator by considering the pose and twist of start
+and end location. 
 
 \subsubsection{Manipulator Jacobian}
+Manipulators often make use of the relationship between the joint and end-effector
+velocities. This has the significance that once we know desired path of the 
+end-effector, we may obtain a differential of joint angles to be added onto
+initial joint configuration and therefore an actionable path for the manipulator.
 
-In addition to 
+\begin{equation*}
+  V^{s}_{st} = J^{s}_{st}(\theta)\dot{\theta}
+\end{equation*}
+where,
+\begin{equation*}
+  J^s_{st}(\theta) = \begin{bmatrix}
+    \left(\frac{\partial g_{st}}{\partial \theta_1}g^{-1}_st\right) & \dots
+    \left(\frac{\partial g_{st}}{\partial \theta_n}g^{-1}_st\right)
+  \end{bmatrix}
+\end{equation*}
+$J^s_{st}$ is called a spatial manipulator jacobian that at each configuration $\theta$
+it maps the joint velocity vector into the corresponding velocity of the
+end-effector. 
+
+This relationship between joint velocity and end-effector velocity can be used
+to move end-effector from one configuration to another, without calculating the
+inverse kinematics for the manipulator at all configuration. If $J_{st}$ is invertible,
+then
+\begin{equation*}
+  \dot{\theta}(t) = \left(J^{s}_{st}(\theta)\right)^{-1}V^{s}_{st}(t)
+\end{equation*}
+And we would be able to do integration over $\theta$ to obtain a trajectory for 
+$\theta$ given a known current end-effector location $g_{st}$ and known
+current joint configuration $\theta$
 
 \section{Building A Manipulator in MATLAB}
 

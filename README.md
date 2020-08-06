@@ -1,7 +1,6 @@
-<img src="https://dl.dropboxusercontent.com/s/ao3pe3n8npuxrfo/robobuzz-header.svg" height="100px" width="100px" style="float:left"/>IGVC Electrical
+<img src="https://dl.dropboxusercontent.com/s/ao3pe3n8npuxrfo/robobuzz-header.svg" height="100px" width="100px" style="float:left"/>RoboNav Electrical
 ==========
-Welcome to the electrcial repository of the Intelligent Ground Vehicle
-Competition! 
+Welcome to the electrcial repository of the RoboNav team! 
 
 ## Recommended Software (free)
 - a [github account](https://github.com/join?source=header-home) 
@@ -25,7 +24,7 @@ cd desired-location
 Now its time to clone:
 
 ```
-git clone https://github.com/RoboJackets/igvc-electrical.git
+git clone https://github.com/RoboJackets/robonav-electrical.git
 ```
 
-You now have all you need to start contributing to the IGVC Electrical team!
+You now have all you need to start contributing to the RoboNav Electrical team!

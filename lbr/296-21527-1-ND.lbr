@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.2.2">
+<eagle version="9.5.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -209,20 +209,6 @@
 <wire x1="2.4892" y1="-3.556" x2="-2.4892" y2="-3.556" width="0.1524" layer="51"/>
 <wire x1="-2.4892" y1="-3.556" x2="-2.4892" y2="-3.3528" width="0.1524" layer="51"/>
 <wire x1="-3.9116" y1="-3.3528" x2="-2.4892" y2="-3.3528" width="0.1524" layer="51"/>
-<polygon width="0.1524" layer="51">
-<vertex x="-3.9116" y="-3.3568"/>
-<vertex x="-3.9116" y="3.3568"/>
-<vertex x="-2.5019" y="3.3568"/>
-<vertex x="-2.5019" y="3.556"/>
-<vertex x="2.5019" y="3.556"/>
-<vertex x="2.5019" y="3.3568"/>
-<vertex x="3.9116" y="3.3568"/>
-<vertex x="3.9116" y="-3.3568"/>
-<vertex x="2.5019" y="-3.3568"/>
-<vertex x="2.5019" y="-3.556"/>
-<vertex x="-2.5019" y="-3.556"/>
-<vertex x="-2.5019" y="-3.3568"/>
-</polygon>
 <wire x1="-0.254" y1="0" x2="0.254" y2="0" width="0.1524" layer="23"/>
 <wire x1="0" y1="-0.254" x2="0" y2="0.254" width="0.1524" layer="23"/>
 <text x="-3.2766" y="-0.635" size="1.27" layer="25" ratio="6" rot="SR0">&gt;Name</text>

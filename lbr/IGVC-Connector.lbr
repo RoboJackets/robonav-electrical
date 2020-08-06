@@ -880,21 +880,6 @@
 <technology name=""/>
 </technologies>
 </device>
-<device name="TI-CC1101" package="TI-CC1101">
-<connects>
-<connect gate="A" pin="CE" pad="GD0"/>
-<connect gate="A" pin="CSN" pad="CSN"/>
-<connect gate="A" pin="GND" pad="GND1 GND2"/>
-<connect gate="A" pin="IRQ" pad="GD2"/>
-<connect gate="A" pin="MISO" pad="SO"/>
-<connect gate="A" pin="MOSI" pad="SI"/>
-<connect gate="A" pin="SCK" pad="SCK"/>
-<connect gate="A" pin="VCC" pad="VCC1 VCC2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
 </devices>
 </deviceset>
 <deviceset name="S4B-EH">

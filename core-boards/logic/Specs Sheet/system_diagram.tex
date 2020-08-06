@@ -1,0 +1,43 @@
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.7\textwidth]{UpandLow.png}
+%     \caption{motor board's Data Input and Output}
+%     \end{figure}
+
+\begin{figure*}[th]
+    \centering
+    \begin{tikzpicture}[inner sep=1em]
+        \node[anchor=center, draw=black, rounded corners,] (pc) at (0in, 0in) {Computer};
+        \node[anchor=center, draw=black, rounded corners,] (logic) at (0in, -1in) {Logic Board};
+        \draw[{Latex[length=3mm]}-{Latex[length=3mm]}](pc.south)--(logic.north);
+        \node[anchor=west] (ethernet) at (-0.5in, -0.5in) {Ethernet};
+
+        \node[anchor=center, draw=black, rounded corners,] (sabertooth) at (-2in, -1in) {Sabertooth};
+        \draw[{Latex[length=3mm]}-{Latex[length=3mm]}] (sabertooth.east)--(logic.west);
+        \node[anchor=south] (serial) at (-1in, -1in) {Serial};
+        \node[anchor=center, draw=black, rounded corners,] (motor) at (-2in, 0in) {Motor};
+        \draw[{Latex[length=3mm]}-{Latex[length=3mm]}] (sabertooth.north)--(motor.south);
+        \draw[{Latex[length=3mm]}-{Latex[length=3mm]}] (motor.south east) -- (logic.north west);
+        \node[anchor=center, rotate=-27] at (-1in, -0.35in) {Encoder};
+ 
+        \node[anchor=center, draw=black, rounded corners,] (safety) at (2in, 0in) {Safety Light};
+        \draw[{Latex[length=3mm]}-] (safety.south west)--(logic.north east);
+
+        \node[anchor=center, draw=black, rounded corners,] (estop) at (2in, -1in) {Estop Status};
+        \draw[-{Latex[length=3mm]}] (estop.west)--(logic.east);
+
+        \node[anchor=center, draw=black, rounded corners,] (diag) at (2in, -2in) {Diagnostic Board};
+        \draw[{Latex[length=3mm]}-{Latex[length=3mm]}] (logic.south east)--(diag.north west);
+        \node[anchor=center, rotate=-40] at (1in, -1.4in) {CAN};
+
+        \node[anchor=center, draw=black, rounded corners,] (vrail) at (0in, -2in) {24V Rail};
+        \draw[-{Latex[length=3mm]}] (vrail.north)--(logic.south);
+
+        \node[anchor=center, draw=black, rounded corners,] (lidar) at (-2in, -2in) {Lidar Lites};
+        \draw[{Latex[length=3mm]}-{Latex[length=3mm]}] (lidar.north east)--(logic.south west);
+        \node[anchor=center, rotate=27] at (-1in, -1.35in) {I$^2$C};
+
+    \end{tikzpicture}
+    \caption{Logic board's Data Input and Output}
+\end{figure*}
+    

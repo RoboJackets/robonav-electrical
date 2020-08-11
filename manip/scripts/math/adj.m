@@ -4,5 +4,7 @@ function adjT = adj(base, trans)
 % Syntax: adjT = adj(base, trans)
 %
 % Perform adjoint transformation for trans based on base
-    
+   
+adjT = base * trans / base;
+
 end

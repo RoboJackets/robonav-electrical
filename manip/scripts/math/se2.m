@@ -1,9 +1,10 @@
 function mat = se2(d, theta)
-% plotFrame - Plots a frame
+% se2 - compose transformation matrix
 %
-% Syntax: plotFrame(mat)
+% Syntax: rotMat = se2(theta)
 %
-% Plots a coordinate frame based on its transformation from the base
-% frame
+% Composes a 2D transformation rotation matrix
+
+mat = [so2(theta), d; 0,0,1];
 
 end

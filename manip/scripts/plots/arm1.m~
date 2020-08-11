@@ -3,6 +3,6 @@ function arm1(thetas, lengths)
 %
 % Syntax: arm1(array_of_angle, array_of_armlength)
 %
-% Plot a robotic arm, make this the three revolute joint manipulator
+% Plot a robotic arm, make this the three revolute joint mani
     
 end

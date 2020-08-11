@@ -1,7 +1,7 @@
-function rotMat = R(theta)
-% R - compose rotation matrix
+function rotMat = so2(theta)
+% so2 - compose rotation matrix
 %
-% Syntax: rotMat = R(theta)
+% Syntax: rotMat = so2(theta)
 %
 % Composes a 2D orthogonal rotation matrix
 

@@ -3,7 +3,8 @@ function ef = arm2fk(thetas, lengths)
 %
 % Syntax: ef = arm2fk(array_of_angle, array_of_armlength)
 %
-% Calculate end-effector coordinates for manipulator2
+% Calculate end-effector coordinates for manipulator2, make this two
+% revolute + one prismatic joint
 
     
 end

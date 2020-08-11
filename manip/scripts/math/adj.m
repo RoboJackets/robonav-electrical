@@ -1,8 +1,8 @@
-function adjT = adj(input)
-%myFun - Description
+function adjT = adj(base, trans)
+%adj - Adjoint transformation
 %
-% Syntax: adjT = adj(input)
+% Syntax: adjT = adj(base, trans)
 %
-% Long description
+% Perform adjoint transformation for trans based on base
     
 end

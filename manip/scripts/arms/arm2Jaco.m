@@ -4,7 +4,7 @@ function J = arm2Jaco(thetas)
 % Syntax: J = arm2Jaco(array_of_angle)
 %
 % Calculate jacobian matrix between end-effector configuration in spatial
-% frame and joint angle
+% frame and joint angle, make this two revolute + one prismatic joint
 
     
 end

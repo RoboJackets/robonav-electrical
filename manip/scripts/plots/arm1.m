@@ -35,9 +35,9 @@ function arm1(thetas, lengths)
     ef = p4(1:2, 1:2) * ef;
     ef = p4(1:2, 3) + ef;
     hold on;
-    plot(ef(1, 1:end-1), ef(2, 1:end-1), 'g', 'LineWidth', 6);
+    plot(ef(1, end), ef(2, end), 'x', ...
+        ef(1, 1:end-1), ef(2, 1:end-1), 'g', 'LineWidth', 6);
     hold on;
-    plot(ef(1, end), ef(2, end), 'x');
     hold off;
     axis equal;
 end

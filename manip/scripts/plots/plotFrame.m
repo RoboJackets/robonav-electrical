@@ -10,7 +10,7 @@ function plotFrame(mat, label, color)
         label = '';
     end
 
-    if ( (nargin < 3) || isempty(lcol) )
+    if ( (nargin < 3) || isempty(color) )
         color = 'b';
     end
   

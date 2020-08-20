@@ -448,12 +448,7 @@ The transformation that transforms twists from one coordiante frame to another i
 \emph{Adjoint transformation}, for one associated with $g$, denote $Ad_g$.
 By one of the following methods
 \begin{equation*}
-  \begin{split}
-    \widehat{\xi}^s & = g_{ab}\widehat{\xi}^bg^{-1}_{ab}\\
-    \xi^s & = \begin{bmatrix}
-      R & \widehat{p}R \\ 0 & R
-    \end{bmatrix} \xi^b
-  \end{split}
+    Ad_g\left(h\right) = g h g^{-1}
 \end{equation*}
 $Ad_g$ is invertible, and is given by the following
 \begin{equation*}
@@ -462,6 +457,16 @@ $Ad_g$ is invertible, and is given by the following
   \end{bmatrix}
 \end{equation*}
 Knowing the velocity sets us up for planning manipulators later in the section. 
+
+\paragraph{Velocity transforming in 2D}
+Changing the coordinate frames in 2D is a lot different and simplified than in 3D. In general, we follow the following rules.
+\begin{equation*}
+  \begin{split}
+    Ad_g\left(\xi\right) = g \xi g^{-1} \text{ where } \xi = \begin{bmatrix}
+      R(\omega) & v \\ 0 & 1
+    \end{bmatrix}
+  \end{split}
+\end{equation*}
 
 \subsection{Application}
 Use the MATLAB scripts to confirm you understanding of the above material. \texttt{coordinate\_frame.m}
@@ -640,5 +645,42 @@ current joint configuration $\theta$
 Use MATLAB scripts to confirm your understanding. Use \texttt{jacobian\_planning.m}
 to perform a simple planning of manipulator. \texttt{theta\_dot.m} is required for performing integration
 and you would need to fill that out as well.
+
+\pagebreak
+\appendix
+\section{Reference Output FIgures for MATLAB practice}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.5\textwidth]{figs/coor-1.png}
+  \caption{First Figure for \texttt{coordinate\_frame.m}}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.5\textwidth]{figs/coor-2.png}
+  \caption{Second Figure for \texttt{coordinate\_frame.m}}
+\end{figure}
+\pagebreak
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{figs/ir-1.png}
+  \caption{First Figure for \texttt{ik\_rr.m}}
+\end{figure}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{figs/ir-2.png}
+  \caption{Second Figure for \texttt{ik\_rr.m}}
+\end{figure}
+\pagebreak
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{figs/jaco-1.png}
+  \caption{First Figure for \texttt{jacobian\_planning.m}}
+\end{figure}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{figs/jaco-2.png}
+  \caption{Second Figure for \texttt{jacobian\_planning.m}}
+\end{figure}
 
 \end{document}

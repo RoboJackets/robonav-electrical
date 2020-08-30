@@ -36,8 +36,6 @@ plotFrame(se2([3; 5], pi/8));
 figure;
 plotFrame(eye(3), 'Base');
 plotFrame([0.5000, -0.8660, -6.4282; 0.8660, 0.5000, 4.6699; 0,0,1], 'Reference C', 'g');
-% Your code here
-% plotFrame(se2(args), 'C', 'b');
 
 %% 
 % Given Frame A, B, C. A is the base frame. Frame C is fixed at point [2;4]
@@ -49,5 +47,3 @@ plotFrame([0.5000, -0.8660, -6.4282; 0.8660, 0.5000, 4.6699; 0,0,1], 'Reference 
 figure;
 plotFrame(eye(3), 'Base');
 plotFrame([-0.4339, 0.9010, 0.2639; -0.9010, -0.4339, 10.5375; 0, 0, 1], 'Reference B', 'g');
-% Your code here
-% plotFrame(se2(args), 'B', 'b')

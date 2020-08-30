@@ -14,7 +14,6 @@
 \usetikzlibrary{calc}
 \pagestyle{fancy}
 \linespread{1.2}
-\graphicspath{figs}
 
 \titleformat{\section}
   {\normalfont\Large\bfseries}{\thesection}{1em}{\hyperlink{sec-\thesection}{#1}
@@ -73,6 +72,13 @@ in. Whether the task of planning (and / or) control of the manipulators eventual
 or not, a good grasp of the underlying principles of manipulation would always be a handy tool at hand for any
 unexpected happenings. 
 
+The basic idea of what we are trying to do is to rotate a set of hinges in such a way that the end is moved to a 
+specific spot. Think of your arm. How many degrees do you rotate about your shoulder, elbow, and wrist to move your 
+hand from your head to your hip. This is the essential question we want the answer to--given the final position, how 
+many degrees do we rotate about each of the joints. The simplest way to approach this is to actually answer the 
+opposite question first--if I give you the degrees, you give me the final position. This type of problem is known 
+as kinematics. Once we understand this problem, we will invert the process and start doing inverse kinematics.
+
 \textbf{This guide borrowed much from the book} ``A Mathematical Introduction to Robotic Manipulation'' by
 Dr. Richard Murray, Dr. Zexiang Li, and Dr. S. Shankar Sastry. \emph{It is meant to provide a simplified introduction
 to manipulation that freshmen wouldn't need to spent more than a semester understanding the basis
@@ -94,18 +100,12 @@ One such motion is called a \textbf{screw motion}. The time derivative version o
 
 \subsection{Rotational Motion in $\mathbb{R}^3$}
 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.3\textwidth]{figs/Rotation_of_a_coordinate_system.png}
-    \caption{Example of Rotated Frames} \label{fig:rot_fme}
-\end{figure}
-
 \subsubsection{Representation} \label{sec:rotmat}
 \textbf{Rotation Matrices}
 
 We begin the study by considering only the rotation aspect of rigid body motion. 
 One of the most common method to describe the orientation of coordinate frame $\mathcal{B}$ relative to
-inertial frame $\mathcal{A}$ (as illustrated in Fig. \ref{fig:rot_fme}) is to sequentially rotate about the z-axis of $\mathcal{B}$ by $\alpha$, 
+inertial frame $\mathcal{A}$ is to sequentially rotate about the z-axis of $\mathcal{B}$ by $\alpha$, 
 then y-axis of $\mathcal{B}$ by $\beta$, and finally along z-axis by $\gamma$. This yields a net rotation
 of $R(\alpha, \beta, \gamma)$ and $\alpha, \gamma, \beta$ are called the ZYZ Euler angles. 
 
@@ -174,16 +174,10 @@ $\mathcal{BC}$, and $\mathcal{AC}$ respectively, the following equation holds.
 $$Q_{ac} = Q_{ab} \cdot Q_{bc}$$
 
 \subsubsection{Understanding} \label{sec:so}
-
-\begin{figure}
-  \centering
-  \includegraphics[width=0.5\textwidth]{figs/rot-under.png}
-  \caption{Rotated Reference Frame} \label{fig:rot_showing}
-\end{figure}
+\textbf{Figure here}
 
 Consider that we have a inertial frame $\mathcal{A}$, and a body frame $\mathcal{B}$ that has undergone a rotation
-about the origin point in inertial frame and no translation (Fig. \ref{fig:rot_showing}).
-$\mathbf{x}_{ab}, \mathbf{y}_{ab}, \mathbf{z}_{ab}$ are
+about the origin point in inertial frame and no translation. $\mathbf{x}_{ab}, \mathbf{y}_{ab}, \mathbf{z}_{ab}$ are
 the coordinates of the principle axes of $\mathcal{B}$ in the inertial frame. Three vectors be vertical vector
 and the concatenation coordinate vectors obtain
 $$R_{ab} = [\mathbf{x}_{ab}, \mathbf{y}_{ab}, \mathbf{z}_{ab}]$$
@@ -217,13 +211,9 @@ In the case of $\emph{SO}(3)$, it satiefies the above criteria in that
   \item Associativity from matrix multiplication.
 \end{itemize}
 
-\begin{figure}
-  \centering
-  \includegraphics[width=0.5\textwidth]{figs/expo-v.png}
-  \caption{Showing rotation with exponential of $\xi$} \label{fig:rot-xi}
-\end{figure}
+\textbf{Figure 2.2 here}
 
-Consider the scenario in Fig. \ref{fig:rot-xi} that $\mathbf{\omega} \in \mathbb{R}^{3}$ be a unit vector specifying direction of rotation
+Consider the above scenario that $\mathbf{\omega} \in \mathbb{R}^{3}$ be a unit vector specifying direction of rotation
 (rotation axis) and $\theta\in \mathbb{R}$ be the angle of rotation (Rad). The velocity of the point can be written as
 \begin{equation*}
   \begin{split}
@@ -281,6 +271,9 @@ Commonly known as \emph{Rodrigue's formula}, we may relate this back to the rota
   \end{bmatrix}
 \end{equation}
 This similarly holds for rotation along other axis.
+
+\subsubsection{Application}
+Have people write MATLAB code that transforms coordinates between frames, rotation only. 
 
 \subsection{Rigid Motion in $\mathbb{R}^3$}
 
@@ -380,6 +373,9 @@ therefore $\dot{p} = \widehat{\xi} p$ and differential equation solves to
 \end{equation*}
 which we may proceed similarly through taylor expansion as we did for $SO(3)$
 
+\subsubsection{Application}
+Similar to rotation subsection. 
+
 \subsection{Velocity of a Rigid Body}
 We will primarily show the process of calculating and transforming, 
 velocity of particles in $SE(3)$ through the use of Twists in this section.
@@ -448,7 +444,12 @@ The transformation that transforms twists from one coordiante frame to another i
 \emph{Adjoint transformation}, for one associated with $g$, denote $Ad_g$.
 By one of the following methods
 \begin{equation*}
-    Ad_g\left(h\right) = g h g^{-1}
+  \begin{split}
+    \widehat{\xi}^s & = g_{ab}\widehat{\xi}^bg^{-1}_{ab}\\
+    \xi^s & = \begin{bmatrix}
+      R & \widehat{p}R \\ 0 & R
+    \end{bmatrix} \xi^b
+  \end{split}
 \end{equation*}
 $Ad_g$ is invertible, and is given by the following
 \begin{equation*}
@@ -457,21 +458,6 @@ $Ad_g$ is invertible, and is given by the following
   \end{bmatrix}
 \end{equation*}
 Knowing the velocity sets us up for planning manipulators later in the section. 
-
-\paragraph{Velocity transforming in 2D}
-Changing the coordinate frames in 2D is a lot different and simplified than in 3D. In general, we follow the following rules.
-\begin{equation*}
-  \begin{split}
-    Ad_g\left(\xi\right) = g \xi g^{-1} \text{ where } \xi = \begin{bmatrix}
-      R(\omega) & v \\ 0 & 1
-    \end{bmatrix}
-  \end{split}
-\end{equation*}
-
-\subsection{Application}
-Use the MATLAB scripts to confirm you understanding of the above material. \texttt{coordinate\_frame.m}
-is intended for understanding of SO2 and SE2 groups, and \texttt{velocity\_spatial\_body.m} is for the
-section on body and spatial velocity. 
 
 \section{Manipulator Kinematics}
 In this section we will briefly talks about how to utilize the knowledge in
@@ -514,8 +500,6 @@ In the example below, the transformation can be represented as
 This can be extended to arbitrary number of joints on any manipulator and is a 
 general formula for forward kinematics. 
 
-\iffalse
-
 \paragraph{A more generalized approach - questionable is we need this atm}
 Equation \ref{eqn:fk} seems to rely on moving joint $\theta_2$ first and then $\theta_1$.
 Using product of exponential formula we can prove that this is not the case.\textbf{Not Finished}
@@ -525,8 +509,6 @@ Using product of exponential formula we can prove that this is not the case.\tex
 
 \paragraph{Manipulator Workspace}
 reachable space
-
-\fi
 
 \subsection{Inverse Kinematics}
 \subsubsection{Example IK Problem}
@@ -538,14 +520,9 @@ However note that inverse kinematics is a hard problem and general solution to
 inverse kinematics, especially given high number of joints and high DoF manipulators
 are active area of research and typically you won't be implementing one for yourself.
 
-\begin{figure}
-  \centering
-  \includegraphics[width=0.4\textwidth]{figs/ik-1.png}
-  \caption{Example Revolute-Revolue Manipulator} \label{fig:rrik-1}
-\end{figure}
+\textbf{Fig 3.7.}
 
-We here provide a simple 2D example of inverse kinematics of a RR manipulator (two revolute joints)
-in Fig \ref{fig:rrik-1}.
+We here provide a simple 2D example of inverse kinematics of a RR manipulator (two revolute joints).
 The end effector locaiton can be obtained by:
 \begin{equation*}
   \begin{split}
@@ -554,17 +531,11 @@ The end effector locaiton can be obtained by:
   \end{split}
 \end{equation*}
 The inverse problem would be to given $x$, and $y$ to solve for $\theta$s. 
-Typically we approach the problem using polar coordinates and angles (see Fig \ref{fig:rrik-2}), because
+Typically we approach the problem using polar coordinates and angles, because
 trignometry. From the configuration visualized in above, we obtain $\theta_2$ as following
 \begin{equation*}
   \theta_2 = \pi \pm \alpha, \alpha = \cos^{-1}\left(\frac{l_1^2+l_2^2-r^2}{2l_1l_2}\right)
 \end{equation*}
-
-\begin{figure}
-  \centering
-  \includegraphics[width=0.4\textwidth]{figs/ik-2.png}
-  \caption{RR Manipulator in Polar Coordinates} \label{fig:rrik-2}
-\end{figure}
 
 If $\alpha \neq 0$, then there are two configurations of the manipulator that would give the radius.
 The second is referreed to as the "flip solution". The value of $\theta_1$ need to be solved
@@ -585,29 +556,23 @@ requires a back-and-forth process in determine the best solution configuration.
 Yet at the heart of both, they looks at the same set of equations that defines the 
 inverse kinematics problem and solve them using geometric and algebraic identities. 
 
-\subsubsection{Application}
-Use MATLAB scripts to confirm your understanding. \texttt{ik\_rr.m} is an application
-of the above material. 
-
 \iffalse
+
 \subsubsection{Divide into subproblems}
 We here briefly introduce the \emph{Paden-Kahn} subporblems, a technique
 to solve inverse kinematics problem. To solve the IK problem, the method first solve 
 a number of subproblems which occur frequently in inverse solutions for common maninpulato
 designs, then seek to reduce the full inverse kinematics problem into subproblems
 whose solutions are known. 
+
 \fi
 
 \subsection{Planning Manipulator Trajectory}
 We are near the end of this guide and we now consider the proper planning of manipulator
 via joint configuration given a end-effector trajectory.
-
 \subsubsection{Spline Trajectory}
 Spline trajectory fits the manipulator by considering the pose and twist of start
-and end location. A common approach to this technique involves fitting the value of manipulator
-along the curve of a spline and its first and second order derivatives trajectories. We will not be covering
-this and would instead focus on the Jacobian methods as Jacobians takes an important role in robotics in
-general. 
+and end location. 
 
 \subsubsection{Manipulator Jacobian}
 Manipulators often make use of the relationship between the joint and end-effector
@@ -621,14 +586,13 @@ initial joint configuration and therefore an actionable path for the manipulator
 where,
 \begin{equation*}
   J^s_{st}(\theta) = \begin{bmatrix}
-    \left(\frac{\partial g_{st}}{\partial \theta_1}\right)^\vee & \dots
-    \left(\frac{\partial g_{st}}{\partial \theta_n}\right)^\vee
+    \left(\frac{\partial g_{st}}{\partial \theta_1}g^{-1}_{st}\right)^\vee & \dots
+    \left(\frac{\partial g_{st}}{\partial \theta_n}g^{-1}_{st}\right)^\vee
   \end{bmatrix}
 \end{equation*}
 $J^s_{st}$ is called a spatial manipulator jacobian that at each configuration $\theta$
 it maps the joint velocity vector into the corresponding velocity of the
-end-effector. Jacobian in general shows the relationship between two variables in how
-the change of one affect the other.
+end-effector. 
 
 This relationship between joint velocity and end-effector velocity can be used
 to move end-effector from one configuration to another, without calculating the
@@ -641,46 +605,6 @@ And we would be able to do integration over $\theta$ to obtain a trajectory for
 $\theta$ given a known current end-effector location $g_{st}$ and known
 current joint configuration $\theta$
 
-\subsubsection{Application}
-Use MATLAB scripts to confirm your understanding. Use \texttt{jacobian\_planning.m}
-to perform a simple planning of manipulator. \texttt{theta\_dot.m} is required for performing integration
-and you would need to fill that out as well.
-
-\pagebreak
-\appendix
-\section{Reference Output FIgures for MATLAB practice}
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=0.5\textwidth]{figs/coor-1.png}
-  \caption{First Figure for \texttt{coordinate\_frame.m}}
-\end{figure}
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=0.5\textwidth]{figs/coor-2.png}
-  \caption{Second Figure for \texttt{coordinate\_frame.m}}
-\end{figure}
-\pagebreak
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=0.6\textwidth]{figs/ir-1.png}
-  \caption{First Figure for \texttt{ik\_rr.m}}
-\end{figure}
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=0.6\textwidth]{figs/ir-2.png}
-  \caption{Second Figure for \texttt{ik\_rr.m}}
-\end{figure}
-\pagebreak
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=0.6\textwidth]{figs/jaco-1.png}
-  \caption{First Figure for \texttt{jacobian\_planning.m}}
-\end{figure}
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=0.6\textwidth]{figs/jaco-2.png}
-  \caption{Second Figure for \texttt{jacobian\_planning.m}}
-\end{figure}
+\section{Building A Manipulator in MATLAB}
 
 \end{document}

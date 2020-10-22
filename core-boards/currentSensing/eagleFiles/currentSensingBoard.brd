@@ -187,12 +187,17 @@
 <wire x1="18.1" y1="21.7" x2="18.1" y2="16.7" width="0.3048" layer="21"/>
 <wire x1="18.1" y1="16.7" x2="31.1" y2="16.7" width="0.3048" layer="21"/>
 <wire x1="31.1" y1="16.7" x2="31.1" y2="21.7" width="0.3048" layer="21"/>
-<text x="13" y="6" size="0.9" layer="51" font="vector">CAN_P</text>
-<text x="13" y="2" size="0.9" layer="51" font="vector">CAN_N</text>
+<text x="13" y="6" size="0.5" layer="51" font="vector">CAN_P</text>
+<text x="13" y="3" size="0.5" layer="51" font="vector">CAN_N</text>
 <wire x1="18.1" y1="11.7" x2="31.1" y2="11.7" width="0.3048" layer="21"/>
 <wire x1="18.1" y1="16.7" x2="18.1" y2="11.7" width="0.3048" layer="21"/>
 <wire x1="31.1" y1="16.7" x2="31.1" y2="11.7" width="0.3048" layer="21"/>
 <text x="4" y="58" size="1" layer="51">4mm</text>
+<text x="12" y="15" size="0.5" layer="51" font="vector">Sensor Output</text>
+<text x="12" y="23" size="0.5" layer="51" font="vector">Sensor Output</text>
+<text x="15" y="63" size="0.5" layer="51" font="vector">!RS</text>
+<text x="18" y="63" size="0.5" layer="51" font="vector">SCK</text>
+<text x="21" y="63" size="0.5" layer="51" font="vector">MISO</text>
 </plain>
 <libraries>
 <library name="rcl" urn="urn:adsk.eagle:library:334">
@@ -5297,7 +5302,7 @@ design rules under a new name.</description>
 <element name="X3" library="RoboJackets-Connectors" package="2MM-4-H" value="4-PIN_2MM-H" x="9.07" y="6.64" smashed="yes" rot="R270">
 <attribute name="DIGIKEY" value="WM18933-ND" x="9.07" y="6.64" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="0353630460" x="9.07" y="6.64" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="NAME" x="13.66" y="8.17" size="1" layer="25" font="vector" ratio="10" align="bottom-center"/>
+<attribute name="NAME" x="12.66" y="8.17" size="1" layer="25" font="vector" ratio="10" align="bottom-center"/>
 </element>
 <element name="X1" library="RoboJackets-Connectors" package="2MM-3-H" value="3-PIN_2MM-H" x="9.27" y="25.71" smashed="yes" rot="R270">
 <attribute name="NAME" x="6.75" y="31.15" size="1" layer="25" font="vector" ratio="10" align="bottom-center"/>
@@ -5305,7 +5310,7 @@ design rules under a new name.</description>
 <attribute name="PIN_PITCH" value="2.0 mm" x="9.27" y="25.71" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="X2" library="RoboJackets-Connectors" package="2MM-2-H" value="2-PIN_2MM-H" x="9.13" y="17.28" smashed="yes" rot="R270">
-<attribute name="NAME" x="13.47" y="16.22" size="1" layer="25" font="vector" ratio="10" align="bottom-center"/>
+<attribute name="NAME" x="12.53" y="17.78" size="1" layer="25" font="vector" ratio="10" rot="R180" align="bottom-center"/>
 <attribute name="PINS" value="2" x="9.13" y="17.28" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="PIN_PITCH" value="2.0 mm" x="9.13" y="17.28" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
@@ -5389,8 +5394,6 @@ design rules under a new name.</description>
 <signals>
 <signal name="VDD">
 <contactref element="MCP2515" pad="18"/>
-<wire x1="31.3221" y1="35.14" x2="31.86" y2="35.14" width="0.1524" layer="1"/>
-<wire x1="31.86" y1="35.14" x2="32" y2="35" width="0.1524" layer="1"/>
 </signal>
 <signal name="VSS">
 <contactref element="MCP2515" pad="9"/>
@@ -5514,16 +5517,12 @@ design rules under a new name.</description>
 <wire x1="43.5" y1="24.6" x2="43.535" y2="24.635" width="0.1524" layer="1"/>
 <wire x1="43.535" y1="25.5878" x2="43.535" y2="24.635" width="0.3048" layer="1"/>
 <wire x1="43.535" y1="25.5878" x2="44.035" y2="26.0878" width="0.3048" layer="1"/>
-<wire x1="43" y1="24" x2="43.535" y2="24.535" width="0.3048" layer="1"/>
-<wire x1="43.535" y1="24.535" x2="43.535" y2="24.635" width="0.3048" layer="1"/>
-<wire x1="12.105" y1="3.895" x2="12" y2="4" width="0.3048" layer="1"/>
 <via x="12" y="4" extent="1-16" drill="0.35"/>
 <wire x1="12" y1="4" x2="12" y2="6" width="0.3048" layer="16"/>
 <via x="12" y="6" extent="1-16" drill="0.35"/>
 <wire x1="12" y1="6" x2="11.64" y2="5.64" width="0.3048" layer="1"/>
 <wire x1="11.64" y1="5.64" x2="9.07" y2="5.64" width="0.3048" layer="1"/>
 <wire x1="28.08" y1="6.28" x2="28.08" y2="7.28" width="0.3048" layer="1"/>
-<wire x1="43" y1="22.2" x2="43" y2="24" width="0.3048" layer="1"/>
 <wire x1="28.08" y1="7.28" x2="43" y2="22.2" width="0.3048" layer="1"/>
 <wire x1="28.08" y1="6.28" x2="28.08" y2="3.41" width="0.3048" layer="1"/>
 <wire x1="28.08" y1="3.41" x2="28.1" y2="3.39" width="0.3048" layer="1"/>
@@ -5532,18 +5531,18 @@ design rules under a new name.</description>
 <wire x1="25" y1="2" x2="27" y2="2" width="0.3048" layer="1"/>
 <wire x1="27" y1="2" x2="28.08" y2="3.08" width="0.3048" layer="1"/>
 <wire x1="28.08" y1="3.08" x2="28.08" y2="3.41" width="0.3048" layer="1"/>
+<wire x1="43" y1="24.1" x2="43.5" y2="24.6" width="0.3048" layer="1"/>
+<wire x1="43" y1="22.2" x2="43" y2="24.1" width="0.3048" layer="1"/>
 </signal>
 <signal name="CAN_N">
 <contactref element="MCP2551-I/SN" pad="6"/>
 <contactref element="X3" pad="4"/>
 <contactref element="R4" pad="1"/>
 <contactref element="R5" pad="1"/>
-<wire x1="42.22566875" y1="24.82566875" x2="42.2" y2="24.8" width="0.3048" layer="1"/>
 <wire x1="42.2" y1="24.8" x2="42.2" y2="25.5228" width="0.3048" layer="1"/>
 <wire x1="42.2" y1="25.5228" x2="42.765" y2="26.0878" width="0.3048" layer="1"/>
 <wire x1="10.215" y1="4.785" x2="9.07" y2="3.64" width="0.3048" layer="1"/>
 <wire x1="10.215" y1="4.785" x2="25" y2="4.785" width="0.3048" layer="1"/>
-<wire x1="25.215" y1="4.785" x2="25" y2="4.785" width="0.3048" layer="1"/>
 <wire x1="42.2" y1="24.2" x2="42.2" y2="24.8" width="0.3048" layer="1"/>
 <wire x1="40" y1="22" x2="40" y2="20" width="0.3048" layer="1"/>
 <wire x1="40" y1="22" x2="42.2" y2="24.2" width="0.3048" layer="1"/>
@@ -5564,7 +5563,6 @@ design rules under a new name.</description>
 <signal name="CAN_TX">
 <contactref element="MCP2551-I/SN" pad="1"/>
 <contactref element="MCP2515" pad="1"/>
-<wire x1="45.305" y1="30.8122" x2="45.1878" y2="30.8122" width="0.3048" layer="1"/>
 <wire x1="40.8979" y1="35.14" x2="42.0379" y2="34" width="0.3048" layer="1"/>
 <wire x1="42.0379" y1="34" x2="43" y2="34" width="0.3048" layer="1"/>
 <wire x1="45.305" y1="31.695" x2="45.305" y2="30.8122" width="0.3048" layer="1"/>
@@ -5573,7 +5571,6 @@ design rules under a new name.</description>
 <signal name="SENSOR_OUTPUT">
 <contactref element="X1" pad="3"/>
 <contactref element="X2" pad="2"/>
-<wire x1="9.13" y1="15.28" x2="9.0888" y2="15.3212" width="0.3048" layer="1"/>
 <wire x1="9.13" y1="15.28" x2="9.13" y2="15.54095" width="0.3048" layer="1"/>
 <wire x1="9.13" y1="15.54095" x2="8.1712" y2="16.49975" width="0.3048" layer="1"/>
 <wire x1="8.1712" y1="16.49975" x2="8.1712" y2="22.6112" width="0.3048" layer="1"/>
@@ -5589,15 +5586,15 @@ design rules under a new name.</description>
 <contactref element="Q1" pad="3"/>
 <contactref element="C7" pad="2"/>
 <contactref element="MCP2515" pad="8"/>
-<wire x1="43.17" y1="47.35" x2="44.100646875" y2="47.35" width="0.3048" layer="1"/>
-<wire x1="43.17" y1="47.35" x2="43.02" y2="47.2" width="0.3048" layer="1"/>
 <wire x1="41.4821" y1="44.6142" x2="41.59565" y2="44.6142" width="0.3048" layer="1"/>
 <wire x1="41.4821" y1="44.6142" x2="40.8979" y2="44.03" width="0.3048" layer="1"/>
-<wire x1="42.12" y1="46.3" x2="43.17" y2="47.35" width="0.3048" layer="1"/>
-<wire x1="42.12" y1="45.13855" x2="42.12" y2="46.3" width="0.3048" layer="1"/>
-<wire x1="41.59565" y1="44.6142" x2="42.12" y2="45.13855" width="0.3048" layer="1"/>
+<wire x1="42" y1="45.01855" x2="42" y2="46.12" width="0.3048" layer="1"/>
+<wire x1="41.59565" y1="44.6142" x2="42" y2="45.01855" width="0.3048" layer="1"/>
 <wire x1="40.8979" y1="44.03" x2="42.14" y2="44.03" width="0.3048" layer="1"/>
 <wire x1="42.14" y1="44.03" x2="43.87" y2="42.3" width="0.3048" layer="1"/>
+<wire x1="42" y1="46.12" x2="42" y2="47" width="0.3048" layer="1"/>
+<wire x1="42" y1="47" x2="42.35" y2="47.35" width="0.3048" layer="1"/>
+<wire x1="42.35" y1="47.35" x2="43.17" y2="47.35" width="0.3048" layer="1"/>
 </signal>
 <signal name="N$18">
 <contactref element="Q1" pad="1"/>

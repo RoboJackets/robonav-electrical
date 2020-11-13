@@ -13612,16 +13612,9 @@ seperately.</text>
 <label x="342.9" y="152.4" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 <segment>
-<label x="198.12" y="220.98" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
-<wire x1="210.82" y1="220.98" x2="205.74" y2="220.98" width="0.1524" layer="91"/>
-<pinref part="X2" gate="G$1" pin="2"/>
-<wire x1="205.74" y1="220.98" x2="198.12" y2="220.98" width="0.1524" layer="91"/>
-<wire x1="193.04" y1="218.44" x2="205.74" y2="218.44" width="0.1524" layer="91"/>
-<wire x1="205.74" y1="218.44" x2="205.74" y2="220.98" width="0.1524" layer="91"/>
-<junction x="205.74" y="220.98"/>
 <pinref part="ATMEGA328P-AU(V1)" gate="G$1" pin="ADC7"/>
-<wire x1="193.04" y1="218.44" x2="193.04" y2="205.74" width="0.1524" layer="91"/>
 <wire x1="193.04" y1="205.74" x2="190.5" y2="205.74" width="0.1524" layer="91"/>
+<label x="193.04" y="205.74" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="N$17" class="0">
@@ -13765,6 +13758,18 @@ seperately.</text>
 <pinref part="R1" gate="G$1" pin="1"/>
 <wire x1="109.22" y1="106.68" x2="109.22" y2="109.22" width="0.1524" layer="91"/>
 <pinref part="DEBUG" gate="G$1" pin="A"/>
+</segment>
+</net>
+<net name="SENSOR_OUTPUT_R" class="0">
+<segment>
+<pinref part="X2" gate="G$1" pin="2"/>
+<wire x1="210.82" y1="220.98" x2="205.74" y2="220.98" width="0.1524" layer="91"/>
+<label x="205.74" y="220.98" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="X1" gate="G$1" pin="2"/>
+<wire x1="337.82" y1="157.48" x2="345.44" y2="157.48" width="0.1524" layer="91"/>
+<label x="345.44" y="157.48" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 </nets>
